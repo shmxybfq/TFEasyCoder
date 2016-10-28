@@ -130,23 +130,22 @@ return weakSelf;\
  *
  *  @return 属性
  */
-#if TF_LAZYLOAD_OBJC
+
 #define TF_LAZYLOAD_OBJC(__CLASS,__PROPERTY)\
 TF_SYNTHESIZE(__PROPERTY);\
 -(__CLASS *)__PROPERTY{\
 if (!_##__PROPERTY)\
 _##__PROPERTY = [[__CLASS alloc]init];\
 return _##__PROPERTY;}
-#endif
+
 
 /**
  *  synthesize 属性
  *
  *  @param __PROPERTY 属性
  */
-#ifndef TF_SYNTHESIZE
 #define TF_SYNTHESIZE(__PROPERTY) @synthesize __PROPERTY = _##__PROPERTY;
-#endif
+
 
 
 #endif /* TFEasyCoderConst_h */

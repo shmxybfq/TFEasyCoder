@@ -11,18 +11,101 @@
 
 @interface ViewController ()
 
+@property (nonatomic,strong)UILabel  *titleLabel;
+@property (nonatomic,strong)UIButton *actionButton;
+
+
 @end
 
 @implementation ViewController
 
+//TF_SYNTHESIZE(titleLabel);
+//
+//-(UILabel *)titleLabel{\
+//    if (!_titleLabel)\
+//        _titleLabel = [[UILabel alloc]init];\
+//    return _titleLabel;}
+
+TF_LAZYLOAD_OBJC(UILabel,titleLabel);
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+
+//    __weak typeof(self) weakSelf = self;
+//    [UILabel easyCoder:^(UILabel *ins) {
+//        
+//        weakSelf.titleLabel = ins;
+//        [weakSelf.view addSubview:ins];
+//        
+//        ins.textAlignment = NSTextAlignmentCenter;
+//        ins.textColor = [UIColor blackColor];
+//        ins.font = [UIFont systemFontOfSize:14.f];
+//        ins.backgroundColor = [UIColor grayColor];
+//        ins.text = @"我是文字框~";
+//        ins.frame = CGRectMake(0, 0, 100, 100);
+//        ins.center = weakSelf.view.center;
+//        
+//    }];
+
+    
+//        __weak typeof(self) weakSelf = self;
+//        [UILabel easyCoder:^(UILabel *ins) {
+//    
+//            weakSelf.titleLabel = ins;
+//            [weakSelf.view addSubview:ins];
+//    
+//            ins
+//            .set_textAlignment(NSTextAlignmentCenter)
+//            .set_textColor([UIColor brownColor])
+//            .set_text(@"哈哈")
+//            .set_font([UIFont systemFontOfSize:14.0])
+//            .set_backgroundColor([UIColor redColor])
+//            .set_frame(CGRectMake(0, 0, 100, 100));
+//            
+//        }];
+    
+//    
+//    __weak typeof(self) weakSelf = self;
+//
+//    [self.actionButton easyCoder:^(UIButton *ins) {
+//        
+//        [weakSelf.view addSubview:ins];
+//        
+//        ins.frame = CGRectMake(0, 0, 100, 100);
+//        ins.center = CGPointMake(weakSelf.view.center.x, weakSelf.view.center.y - 150);
+//        
+//        [ins setTitle:@"点我" forState:UIControlStateNormal];
+//        [ins setTitle:@"点我" forState:UIControlStateHighlighted];
+//        
+//        [ins setImage:[UIImage imageNamed:@"test"] forState:UIControlStateNormal];
+//        [ins setImage:[UIImage imageNamed:@"test"] forState:UIControlStateHighlighted];
+//       
+//        [ins addTarget:weakSelf
+//                action:@selector(tectAction)
+//      forControlEvents:UIControlEventTouchUpInside];
+//        
+//    }];
+//    
+//    
+//    [self.titleLabel easyCoder:^(UILabel *ins) {
+//        
+//        [weakSelf.view addSubview:ins];
+//        
+//        ins.textAlignment = NSTextAlignmentCenter;
+//        ins.textColor = [UIColor blackColor];
+//        ins.font = [UIFont systemFontOfSize:14.f];
+//        ins.backgroundColor = [UIColor grayColor];
+//        ins.text = @"我是文字框~";
+//        ins.frame = CGRectMake(0, 0, 100, 100);
+//        ins.center = weakSelf.view.center;
+//        
+//    }];
+    
+    
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end
