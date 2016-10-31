@@ -34,4 +34,35 @@ TF_EC_CHAIN_PROP_INT(UITabBar ,long long,barStyle);
 TF_EC_CHAIN_PROP_INT(UITabBar ,BOOL,translucent);
 
 
+
+
+
+//superclass pros UIView
+TF_EC_CHAIN_PROP_INT(UITabBar ,UIView *,maskView)
+TF_EC_CHAIN_PROP_INT(UITabBar ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_INT(UITabBar ,long long,tag)
+TF_EC_CHAIN_PROP_INT(UITabBar ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_INT(UITabBar ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_INT(UITabBar ,NSUserActivity *,userActivity);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UITabBar ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UITabBar ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UITabBar ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UITabBar ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UITabBar ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UITabBar ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UITabBar ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UITabBar ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UITabBar ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UITabBar ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UITabBar ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UITabBar ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UITabBar ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UITabBar ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

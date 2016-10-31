@@ -19,4 +19,27 @@ TF_EC_MINSTANCE_INT(UIFocusAnimationCoordinator,UIFocusAnimationCoordinator *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

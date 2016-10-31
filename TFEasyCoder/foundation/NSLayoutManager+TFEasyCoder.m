@@ -23,4 +23,27 @@ TF_EC_CHAIN_PROP_IMP(NSLayoutManager ,double,hyphenationFactor)
 TF_EC_CHAIN_PROP_IMP(NSLayoutManager ,BOOL,usesFontLeading)
 TF_EC_CHAIN_PROP_IMP(NSLayoutManager ,BOOL,allowsNonContiguousLayout)
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(NSLayoutManager ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(NSLayoutManager ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(NSLayoutManager ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(NSLayoutManager ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(NSLayoutManager ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(NSLayoutManager ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(NSLayoutManager ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(NSLayoutManager ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(NSLayoutManager ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(NSLayoutManager ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(NSLayoutManager ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(NSLayoutManager ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(NSLayoutManager ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(NSLayoutManager ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

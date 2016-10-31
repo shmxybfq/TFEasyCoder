@@ -26,4 +26,27 @@ TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,UIPrintFormatter *,printForma
 TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,NSArray *,printingItems);
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

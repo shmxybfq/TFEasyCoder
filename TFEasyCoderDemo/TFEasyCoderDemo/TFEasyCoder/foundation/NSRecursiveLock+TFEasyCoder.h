@@ -20,4 +20,27 @@ TF_EC_MINSTANCE_INT(NSRecursiveLock,NSRecursiveLock *);
 
 TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,NSString *,name);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

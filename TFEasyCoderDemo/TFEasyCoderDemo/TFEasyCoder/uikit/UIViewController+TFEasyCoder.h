@@ -36,4 +36,29 @@ TF_EC_CHAIN_PROP_INT(UIViewController ,CGSize,contentSizeForViewInPopover)
 TF_EC_CHAIN_PROP_INT(UIViewController ,BOOL,modalInPopover)
 
 
+
+
+
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_INT(UIViewController ,NSUserActivity *,userActivity);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIViewController ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIViewController ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIViewController ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIViewController ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIViewController ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIViewController ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIViewController ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIViewController ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIViewController ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIViewController ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIViewController ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIViewController ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIViewController ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIViewController ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

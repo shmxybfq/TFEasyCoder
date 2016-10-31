@@ -22,4 +22,28 @@ TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,CGVector,gravityDirection);
 TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,double,angle);
 TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,double,magnitude);
 
+
+
+
+//superclass pros UIDynamicBehavior
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

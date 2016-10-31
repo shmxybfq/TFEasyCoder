@@ -24,4 +24,35 @@ TF_EC_CHAIN_PROP_INT(UIControl ,BOOL,highlighted);
 TF_EC_CHAIN_PROP_INT(UIControl ,long long,contentVerticalAlignment);
 TF_EC_CHAIN_PROP_INT(UIControl ,long long,contentHorizontalAlignment);
 
+
+
+
+//superclass pros UIView
+TF_EC_CHAIN_PROP_INT(UIControl ,UIView *,maskView)
+TF_EC_CHAIN_PROP_INT(UIControl ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_INT(UIControl ,long long,tag)
+TF_EC_CHAIN_PROP_INT(UIControl ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_INT(UIControl ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_INT(UIControl ,NSUserActivity *,userActivity);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIControl ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIControl ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIControl ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIControl ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIControl ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIControl ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIControl ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIControl ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIControl ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIControl ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIControl ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIControl ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIControl ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIControl ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

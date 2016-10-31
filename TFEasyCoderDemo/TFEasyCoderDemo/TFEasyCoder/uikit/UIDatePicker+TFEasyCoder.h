@@ -30,4 +30,41 @@ TF_EC_CHAIN_PROP_INT(UIDatePicker ,NSDate *,maximumDate)
 TF_EC_CHAIN_PROP_INT(UIDatePicker ,double,countDownDuration)
 
 
+
+
+
+//superclass pros UIControl
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,BOOL,enabled);
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,BOOL,selected);
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,BOOL,highlighted);
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,long long,contentVerticalAlignment);
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,long long,contentHorizontalAlignment);
+//superclass pros UIView
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,UIView *,maskView)
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,long long,tag)
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,NSUserActivity *,userActivity);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIDatePicker ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

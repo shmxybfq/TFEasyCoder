@@ -39,4 +39,29 @@ TF_EC_CHAIN_PROP_IMP(UIViewController ,CGSize,preferredContentSize)
 TF_EC_CHAIN_PROP_IMP(UIViewController ,CGSize,contentSizeForViewInPopover)
 TF_EC_CHAIN_PROP_IMP(UIViewController ,BOOL,modalInPopover)
 
+
+
+
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_IMP(UIViewController ,NSUserActivity *,userActivity)
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UIViewController ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UIViewController ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UIViewController ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UIViewController ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UIViewController ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UIViewController ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UIViewController ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UIViewController ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UIViewController ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UIViewController ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UIViewController ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UIViewController ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UIViewController ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UIViewController ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

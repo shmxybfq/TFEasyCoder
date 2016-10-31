@@ -29,4 +29,28 @@ TF_EC_CHAIN_PROP_INT(NSMutableURLRequest ,double,timeoutInterval);
 TF_EC_CHAIN_PROP_INT(NSMutableURLRequest ,unsigned long long,networkServiceType);
 TF_EC_CHAIN_PROP_INT(NSMutableURLRequest ,BOOL,allowsCellularAccess);
 
+
+
+
+//superclass pros NSURLRequest
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSMutableURLRequest ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSMutableURLRequest ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSMutableURLRequest ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSMutableURLRequest ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSMutableURLRequest ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSMutableURLRequest ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSMutableURLRequest ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSMutableURLRequest ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSMutableURLRequest ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSMutableURLRequest ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSMutableURLRequest ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSMutableURLRequest ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSMutableURLRequest ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSMutableURLRequest ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

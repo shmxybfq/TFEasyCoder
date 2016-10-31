@@ -31,4 +31,41 @@ TF_EC_CHAIN_PROP_INT(UIButton ,UIFont *,font)
 TF_EC_CHAIN_PROP_INT(UIButton ,NSLineBreakMode ,lineBreakMode)
 TF_EC_CHAIN_PROP_INT(UIButton ,CGSize ,titleShadowOffset)
 
+
+
+
+//superclass pros UIControl
+TF_EC_CHAIN_PROP_INT(UIButton ,BOOL,enabled);
+TF_EC_CHAIN_PROP_INT(UIButton ,BOOL,selected);
+TF_EC_CHAIN_PROP_INT(UIButton ,BOOL,highlighted);
+TF_EC_CHAIN_PROP_INT(UIButton ,long long,contentVerticalAlignment);
+TF_EC_CHAIN_PROP_INT(UIButton ,long long,contentHorizontalAlignment);
+//superclass pros UIView
+TF_EC_CHAIN_PROP_INT(UIButton ,UIView *,maskView)
+TF_EC_CHAIN_PROP_INT(UIButton ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_INT(UIButton ,long long,tag)
+TF_EC_CHAIN_PROP_INT(UIButton ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_INT(UIButton ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_INT(UIButton ,NSUserActivity *,userActivity);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIButton ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIButton ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIButton ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIButton ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIButton ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIButton ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIButton ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIButton ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIButton ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIButton ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIButton ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIButton ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIButton ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIButton ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

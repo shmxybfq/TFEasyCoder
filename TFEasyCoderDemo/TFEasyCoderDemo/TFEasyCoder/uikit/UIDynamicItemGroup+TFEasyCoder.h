@@ -21,4 +21,27 @@ TF_EC_MINSTANCE_INT(UIDynamicItemGroup,UIDynamicItemGroup *);
 TF_EC_CHAIN_PROP_INT(UIDynamicItemGroup ,CGPoint,center);
 TF_EC_CHAIN_PROP_INT(UIDynamicItemGroup ,CGAffineTransform,transform)
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIDynamicItemGroup ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIDynamicItemGroup ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIDynamicItemGroup ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIDynamicItemGroup ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIDynamicItemGroup ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIDynamicItemGroup ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIDynamicItemGroup ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIDynamicItemGroup ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIDynamicItemGroup ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIDynamicItemGroup ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIDynamicItemGroup ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIDynamicItemGroup ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIDynamicItemGroup ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIDynamicItemGroup ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

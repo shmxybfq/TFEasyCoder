@@ -20,4 +20,27 @@ TF_EC_CHAIN_PROP_IMP(NSTextAttachment ,NSString *,fileType)
 TF_EC_CHAIN_PROP_IMP(NSTextAttachment ,UIImage *,image)
 TF_EC_CHAIN_PROP_IMP(NSTextAttachment ,NSFileWrapper *,fileWrapper)
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(NSTextAttachment ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(NSTextAttachment ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(NSTextAttachment ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(NSTextAttachment ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(NSTextAttachment ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(NSTextAttachment ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(NSTextAttachment ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(NSTextAttachment ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(NSTextAttachment ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(NSTextAttachment ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(NSTextAttachment ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(NSTextAttachment ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(NSTextAttachment ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(NSTextAttachment ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

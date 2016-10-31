@@ -31,4 +31,27 @@ TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSDictionary *,userInfo)
 TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSString *,category)
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UILocalNotification ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UILocalNotification ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UILocalNotification ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UILocalNotification ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UILocalNotification ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UILocalNotification ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UILocalNotification ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UILocalNotification ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

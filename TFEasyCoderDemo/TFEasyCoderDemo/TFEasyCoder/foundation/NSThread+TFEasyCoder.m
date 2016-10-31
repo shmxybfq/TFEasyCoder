@@ -20,4 +20,27 @@ TF_EC_CHAIN_PROP_IMP(NSThread ,long long,qualityOfService)
 TF_EC_CHAIN_PROP_IMP(NSThread ,NSString *,name)
 TF_EC_CHAIN_PROP_IMP(NSThread ,unsigned long long,stackSize)
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(NSThread ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(NSThread ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(NSThread ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(NSThread ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(NSThread ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(NSThread ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(NSThread ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(NSThread ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(NSThread ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(NSThread ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(NSThread ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(NSThread ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(NSThread ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(NSThread ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

@@ -19,4 +19,27 @@ TF_EC_MINSTANCE_INT(NSPropertyListSerialization,NSPropertyListSerialization *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

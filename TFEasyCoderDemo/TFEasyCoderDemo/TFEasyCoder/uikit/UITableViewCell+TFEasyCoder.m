@@ -33,4 +33,35 @@ TF_EC_CHAIN_PROP_IMP(UITableViewCell ,UIEdgeInsets,separatorInset)
 TF_EC_CHAIN_PROP_IMP(UITableViewCell ,BOOL,editing)
 TF_EC_CHAIN_PROP_IMP(UITableViewCell ,long long,focusStyle)
 
+
+
+
+//superclass pros UIView
+TF_EC_CHAIN_PROP_IMP(UITableViewCell ,UIView *,maskView)
+TF_EC_CHAIN_PROP_IMP(UITableViewCell ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_IMP(UITableViewCell ,long long,tag)
+TF_EC_CHAIN_PROP_IMP(UITableViewCell ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_IMP(UITableViewCell ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_IMP(UITableViewCell ,NSUserActivity *,userActivity)
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UITableViewCell ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UITableViewCell ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UITableViewCell ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UITableViewCell ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UITableViewCell ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UITableViewCell ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UITableViewCell ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UITableViewCell ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UITableViewCell ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UITableViewCell ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UITableViewCell ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UITableViewCell ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UITableViewCell ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UITableViewCell ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

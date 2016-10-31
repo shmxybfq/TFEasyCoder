@@ -16,4 +16,27 @@ TF_EC_MINSTANCE_IMP(UIUserNotificationAction, UIUserNotificationAction *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

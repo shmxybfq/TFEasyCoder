@@ -21,4 +21,35 @@ TF_EC_MINSTANCE_INT(UIPopoverBackgroundView,UIPopoverBackgroundView *);
 TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,double,arrowOffset);
 TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,unsigned long long,arrowDirection);
 
+
+
+
+//superclass pros UIView
+TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,UIView *,maskView)
+TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,long long,tag)
+TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,NSUserActivity *,userActivity);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

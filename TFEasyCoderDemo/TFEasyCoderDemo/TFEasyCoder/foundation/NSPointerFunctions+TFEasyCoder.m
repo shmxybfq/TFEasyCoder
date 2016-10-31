@@ -18,4 +18,27 @@ TF_EC_MINSTANCE_IMP(NSPointerFunctions, NSPointerFunctions *);
 TF_EC_CHAIN_PROP_IMP(NSPointerFunctions ,BOOL,usesStrongWriteBarrier)
 TF_EC_CHAIN_PROP_IMP(NSPointerFunctions ,BOOL,usesWeakReadAndWriteBarriers)
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(NSPointerFunctions ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(NSPointerFunctions ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(NSPointerFunctions ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(NSPointerFunctions ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(NSPointerFunctions ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(NSPointerFunctions ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(NSPointerFunctions ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(NSPointerFunctions ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(NSPointerFunctions ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(NSPointerFunctions ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(NSPointerFunctions ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(NSPointerFunctions ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(NSPointerFunctions ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(NSPointerFunctions ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

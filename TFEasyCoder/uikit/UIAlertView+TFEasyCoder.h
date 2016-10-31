@@ -28,4 +28,35 @@ TF_EC_CHAIN_PROP_INT(UIAlertView ,NSString *,message);
 TF_EC_CHAIN_PROP_INT(UIAlertView ,long long,cancelButtonIndex);
 TF_EC_CHAIN_PROP_INT(UIAlertView ,long long,alertViewStyle);
 
+
+
+
+//superclass pros UIView
+TF_EC_CHAIN_PROP_INT(UIAlertView ,UIView *,maskView)
+TF_EC_CHAIN_PROP_INT(UIAlertView ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_INT(UIAlertView ,long long,tag)
+TF_EC_CHAIN_PROP_INT(UIAlertView ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_INT(UIAlertView ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_INT(UIAlertView ,NSUserActivity *,userActivity);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIAlertView ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIAlertView ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIAlertView ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIAlertView ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIAlertView ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIAlertView ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIAlertView ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIAlertView ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIAlertView ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIAlertView ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIAlertView ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIAlertView ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIAlertView ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIAlertView ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

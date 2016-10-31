@@ -19,4 +19,27 @@ TF_EC_MINSTANCE_INT(NSParagraphStyle,NSParagraphStyle *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSParagraphStyle ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSParagraphStyle ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSParagraphStyle ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSParagraphStyle ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSParagraphStyle ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSParagraphStyle ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSParagraphStyle ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSParagraphStyle ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSParagraphStyle ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSParagraphStyle ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSParagraphStyle ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSParagraphStyle ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSParagraphStyle ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSParagraphStyle ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

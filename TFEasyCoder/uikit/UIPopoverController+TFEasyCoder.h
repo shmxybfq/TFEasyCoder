@@ -31,4 +31,27 @@ TF_EC_CHAIN_PROP_INT(UIPopoverController ,UIEdgeInsets,popoverLayoutMargins)
 TF_EC_CHAIN_PROP_INT(UIPopoverController ,Class,popoverBackgroundViewClass)
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIPopoverController ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIPopoverController ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIPopoverController ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIPopoverController ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIPopoverController ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIPopoverController ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIPopoverController ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIPopoverController ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIPopoverController ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIPopoverController ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIPopoverController ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIPopoverController ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIPopoverController ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIPopoverController ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

@@ -34,4 +34,27 @@ TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,percentEncodedQuery);
 TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,percentEncodedFragment);
 TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSArray *,queryItems);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSURLComponents ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSURLComponents ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSURLComponents ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSURLComponents ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSURLComponents ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSURLComponents ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSURLComponents ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSURLComponents ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

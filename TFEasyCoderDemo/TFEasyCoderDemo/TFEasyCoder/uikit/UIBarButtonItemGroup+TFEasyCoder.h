@@ -22,4 +22,27 @@ TF_EC_CHAIN_PROP_INT(UIBarButtonItemGroup ,NSArray *,barButtonItems);
 TF_EC_CHAIN_PROP_INT(UIBarButtonItemGroup ,UIBarButtonItem *,representativeItem);
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIBarButtonItemGroup ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIBarButtonItemGroup ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIBarButtonItemGroup ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIBarButtonItemGroup ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIBarButtonItemGroup ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIBarButtonItemGroup ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIBarButtonItemGroup ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIBarButtonItemGroup ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIBarButtonItemGroup ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIBarButtonItemGroup ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIBarButtonItemGroup ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIBarButtonItemGroup ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIBarButtonItemGroup ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIBarButtonItemGroup ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

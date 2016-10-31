@@ -40,4 +40,35 @@ TF_EC_CHAIN_PROP_INT(UILabel ,double,minimumFontSize);
 TF_EC_CHAIN_PROP_INT(UILabel ,BOOL,adjustsLetterSpacingToFitWidth);
 
 
+
+
+
+//superclass pros UIView
+TF_EC_CHAIN_PROP_INT(UILabel ,UIView *,maskView)
+TF_EC_CHAIN_PROP_INT(UILabel ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_INT(UILabel ,long long,tag)
+TF_EC_CHAIN_PROP_INT(UILabel ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_INT(UILabel ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_INT(UILabel ,NSUserActivity *,userActivity);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UILabel ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UILabel ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UILabel ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UILabel ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UILabel ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UILabel ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UILabel ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UILabel ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UILabel ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UILabel ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UILabel ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UILabel ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UILabel ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UILabel ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

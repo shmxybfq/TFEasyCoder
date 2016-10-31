@@ -26,4 +26,35 @@ TF_EC_CHAIN_PROP_INT(UIToolbar ,UIColor *,barTintColor);
 TF_EC_CHAIN_PROP_INT(UIToolbar ,id<UIToolbarDelegate> ,delegate);
 
 
+
+
+
+//superclass pros UIView
+TF_EC_CHAIN_PROP_INT(UIToolbar ,UIView *,maskView)
+TF_EC_CHAIN_PROP_INT(UIToolbar ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_INT(UIToolbar ,long long,tag)
+TF_EC_CHAIN_PROP_INT(UIToolbar ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_INT(UIToolbar ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_INT(UIToolbar ,NSUserActivity *,userActivity);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIToolbar ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIToolbar ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIToolbar ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIToolbar ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIToolbar ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIToolbar ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIToolbar ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIToolbar ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIToolbar ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIToolbar ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIToolbar ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIToolbar ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIToolbar ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIToolbar ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

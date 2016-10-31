@@ -19,4 +19,27 @@ TF_EC_MINSTANCE_INT(UITextInputStringTokenizer,UITextInputStringTokenizer *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

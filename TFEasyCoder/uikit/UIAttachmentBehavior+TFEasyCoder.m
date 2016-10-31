@@ -21,4 +21,28 @@ TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,double,damping)
 TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,double,frequency)
 TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,double,frictionTorque)
 
+
+
+
+//superclass pros UIDynamicBehavior
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

@@ -18,4 +18,27 @@ TF_EC_MINSTANCE_IMP(UIDocument, UIDocument *);
 TF_EC_CHAIN_PROP_IMP(UIDocument ,NSDate *,fileModificationDate)
 TF_EC_CHAIN_PROP_IMP(UIDocument ,NSUndoManager *,undoManager)
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UIDocument ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UIDocument ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UIDocument ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UIDocument ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UIDocument ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UIDocument ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UIDocument ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UIDocument ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UIDocument ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UIDocument ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UIDocument ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UIDocument ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UIDocument ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UIDocument ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

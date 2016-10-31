@@ -21,4 +21,27 @@ TF_EC_MINSTANCE_INT(UIPercentDrivenInteractiveTransition,UIPercentDrivenInteract
 TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,double,completionSpeed);
 TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,long long,completionCurve);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

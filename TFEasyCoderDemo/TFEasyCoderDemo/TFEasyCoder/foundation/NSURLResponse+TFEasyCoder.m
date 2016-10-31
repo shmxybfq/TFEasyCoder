@@ -16,4 +16,27 @@ TF_EC_MINSTANCE_IMP(NSURLResponse, NSURLResponse *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(NSURLResponse ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(NSURLResponse ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(NSURLResponse ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(NSURLResponse ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(NSURLResponse ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(NSURLResponse ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(NSURLResponse ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(NSURLResponse ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(NSURLResponse ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(NSURLResponse ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(NSURLResponse ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(NSURLResponse ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(NSURLResponse ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(NSURLResponse ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

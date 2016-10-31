@@ -25,4 +25,28 @@ TF_EC_CHAIN_PROP_IMP(NSByteCountFormatter ,BOOL,adaptive)
 TF_EC_CHAIN_PROP_IMP(NSByteCountFormatter ,BOOL,zeroPadsFractionDigits)
 TF_EC_CHAIN_PROP_IMP(NSByteCountFormatter ,long long,formattingContext)
 
+
+
+
+//superclass pros NSFormatter
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(NSByteCountFormatter ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(NSByteCountFormatter ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(NSByteCountFormatter ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(NSByteCountFormatter ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(NSByteCountFormatter ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(NSByteCountFormatter ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(NSByteCountFormatter ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(NSByteCountFormatter ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(NSByteCountFormatter ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(NSByteCountFormatter ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(NSByteCountFormatter ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(NSByteCountFormatter ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(NSByteCountFormatter ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(NSByteCountFormatter ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

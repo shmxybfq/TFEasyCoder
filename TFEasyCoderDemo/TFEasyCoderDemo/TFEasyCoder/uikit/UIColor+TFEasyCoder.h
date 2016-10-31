@@ -18,4 +18,27 @@ TF_EC_MSTATIC_INT(UIColor, UIColor *);
 TF_EC_MINSTANCE_INT(UIColor,UIColor *);
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIColor ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIColor ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIColor ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIColor ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIColor ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIColor ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIColor ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIColor ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIColor ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIColor ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIColor ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIColor ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIColor ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIColor ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

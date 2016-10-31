@@ -19,4 +19,28 @@ TF_EC_MINSTANCE_INT(UIStoryboardPopoverSegue,UIStoryboardPopoverSegue *);
 
 
 
+
+
+
+//superclass pros UIStoryboardSegue
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

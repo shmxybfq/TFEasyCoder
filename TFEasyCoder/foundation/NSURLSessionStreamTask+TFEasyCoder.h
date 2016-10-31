@@ -19,4 +19,30 @@ TF_EC_MINSTANCE_INT(NSURLSessionStreamTask,NSURLSessionStreamTask *);
 
 
 
+
+
+
+//superclass pros NSURLSessionTask
+TF_EC_CHAIN_PROP_INT(NSURLSessionStreamTask ,NSString *,taskDescription)
+TF_EC_CHAIN_PROP_INT(NSURLSessionStreamTask ,float,priority)
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSURLSessionStreamTask ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSURLSessionStreamTask ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSURLSessionStreamTask ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSURLSessionStreamTask ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSURLSessionStreamTask ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSURLSessionStreamTask ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSURLSessionStreamTask ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSURLSessionStreamTask ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSURLSessionStreamTask ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSURLSessionStreamTask ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSURLSessionStreamTask ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSURLSessionStreamTask ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSURLSessionStreamTask ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSURLSessionStreamTask ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

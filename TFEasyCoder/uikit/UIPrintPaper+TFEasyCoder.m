@@ -16,4 +16,27 @@ TF_EC_MINSTANCE_IMP(UIPrintPaper, UIPrintPaper *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UIPrintPaper ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UIPrintPaper ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UIPrintPaper ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UIPrintPaper ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UIPrintPaper ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UIPrintPaper ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UIPrintPaper ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UIPrintPaper ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UIPrintPaper ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UIPrintPaper ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UIPrintPaper ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UIPrintPaper ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UIPrintPaper ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UIPrintPaper ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

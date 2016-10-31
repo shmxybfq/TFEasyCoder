@@ -19,4 +19,27 @@ TF_EC_MINSTANCE_INT(NSUbiquitousKeyValueStore,NSUbiquitousKeyValueStore *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

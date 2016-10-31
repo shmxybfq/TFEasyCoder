@@ -19,4 +19,27 @@ TF_EC_MINSTANCE_INT(UIDictationPhrase,UIDictationPhrase *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIDictationPhrase ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIDictationPhrase ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIDictationPhrase ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIDictationPhrase ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIDictationPhrase ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIDictationPhrase ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIDictationPhrase ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIDictationPhrase ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIDictationPhrase ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIDictationPhrase ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIDictationPhrase ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIDictationPhrase ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIDictationPhrase ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIDictationPhrase ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

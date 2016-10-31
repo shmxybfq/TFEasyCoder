@@ -36,4 +36,41 @@ TF_EC_CHAIN_PROP_IMP(UIButton ,CGSize ,titleShadowOffset)
 
 
 
+
+
+
+//superclass pros UIControl
+TF_EC_CHAIN_PROP_IMP(UIButton ,BOOL,enabled)
+TF_EC_CHAIN_PROP_IMP(UIButton ,BOOL,selected)
+TF_EC_CHAIN_PROP_IMP(UIButton ,BOOL,highlighted)
+TF_EC_CHAIN_PROP_IMP(UIButton ,long long,contentVerticalAlignment)
+TF_EC_CHAIN_PROP_IMP(UIButton ,long long,contentHorizontalAlignment)
+//superclass pros UIView
+TF_EC_CHAIN_PROP_IMP(UIButton ,UIView *,maskView)
+TF_EC_CHAIN_PROP_IMP(UIButton ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_IMP(UIButton ,long long,tag)
+TF_EC_CHAIN_PROP_IMP(UIButton ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_IMP(UIButton ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_IMP(UIButton ,NSUserActivity *,userActivity)
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UIButton ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UIButton ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UIButton ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UIButton ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UIButton ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UIButton ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UIButton ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UIButton ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UIButton ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UIButton ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UIButton ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UIButton ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UIButton ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UIButton ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

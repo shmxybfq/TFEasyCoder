@@ -21,4 +21,34 @@ TF_EC_MINSTANCE_INT(UIPinchGestureRecognizer,UIPinchGestureRecognizer *);
 TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,double,scale);
 
 
+
+
+
+//superclass pros UIGestureRecognizer
+TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,BOOL,enabled);
+TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,BOOL,cancelsTouchesInView);
+TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,BOOL,delaysTouchesBegan);
+TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,BOOL,delaysTouchesEnded);
+TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,NSArray *,allowedTouchTypes);
+TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,NSArray *,allowedPressTypes);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

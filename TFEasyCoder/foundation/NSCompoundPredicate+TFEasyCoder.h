@@ -19,4 +19,28 @@ TF_EC_MINSTANCE_INT(NSCompoundPredicate,NSCompoundPredicate *);
 
 
 
+
+
+
+//superclass pros NSPredicate
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSCompoundPredicate ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSCompoundPredicate ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSCompoundPredicate ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSCompoundPredicate ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSCompoundPredicate ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSCompoundPredicate ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSCompoundPredicate ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSCompoundPredicate ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSCompoundPredicate ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSCompoundPredicate ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSCompoundPredicate ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSCompoundPredicate ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSCompoundPredicate ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSCompoundPredicate ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

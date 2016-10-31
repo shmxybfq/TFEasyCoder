@@ -16,4 +16,27 @@ TF_EC_MINSTANCE_IMP(UILexicon, UILexicon *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UILexicon ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UILexicon ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UILexicon ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UILexicon ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UILexicon ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UILexicon ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UILexicon ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UILexicon ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UILexicon ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UILexicon ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UILexicon ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UILexicon ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UILexicon ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UILexicon ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

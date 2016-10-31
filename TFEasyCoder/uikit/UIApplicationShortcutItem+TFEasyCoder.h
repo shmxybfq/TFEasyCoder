@@ -19,4 +19,27 @@ TF_EC_MINSTANCE_INT(UIApplicationShortcutItem,UIApplicationShortcutItem *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIApplicationShortcutItem ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIApplicationShortcutItem ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIApplicationShortcutItem ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIApplicationShortcutItem ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIApplicationShortcutItem ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIApplicationShortcutItem ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIApplicationShortcutItem ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIApplicationShortcutItem ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIApplicationShortcutItem ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIApplicationShortcutItem ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIApplicationShortcutItem ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIApplicationShortcutItem ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIApplicationShortcutItem ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIApplicationShortcutItem ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

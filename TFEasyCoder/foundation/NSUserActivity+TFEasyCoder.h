@@ -30,4 +30,27 @@ TF_EC_CHAIN_PROP_INT(NSUserActivity ,BOOL,eligibleForHandoff);
 TF_EC_CHAIN_PROP_INT(NSUserActivity ,BOOL,eligibleForSearch);
 TF_EC_CHAIN_PROP_INT(NSUserActivity ,BOOL,eligibleForPublicIndexing);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSUserActivity ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSUserActivity ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSUserActivity ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSUserActivity ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSUserActivity ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSUserActivity ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSUserActivity ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSUserActivity ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSUserActivity ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSUserActivity ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSUserActivity ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSUserActivity ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSUserActivity ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSUserActivity ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

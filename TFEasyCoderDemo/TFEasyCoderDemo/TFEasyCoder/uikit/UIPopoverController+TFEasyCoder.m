@@ -23,4 +23,27 @@ TF_EC_CHAIN_PROP_IMP(UIPopoverController ,UIColor *,backgroundColor)
 TF_EC_CHAIN_PROP_IMP(UIPopoverController ,UIEdgeInsets,popoverLayoutMargins)
 TF_EC_CHAIN_PROP_IMP(UIPopoverController ,Class,popoverBackgroundViewClass)
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UIPopoverController ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UIPopoverController ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UIPopoverController ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UIPopoverController ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UIPopoverController ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UIPopoverController ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UIPopoverController ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UIPopoverController ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UIPopoverController ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UIPopoverController ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UIPopoverController ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UIPopoverController ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UIPopoverController ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UIPopoverController ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

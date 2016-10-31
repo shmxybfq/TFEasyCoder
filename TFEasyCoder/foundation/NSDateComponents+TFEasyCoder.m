@@ -33,4 +33,27 @@ TF_EC_CHAIN_PROP_IMP(NSDateComponents ,long long,weekOfYear)
 TF_EC_CHAIN_PROP_IMP(NSDateComponents ,long long,yearForWeekOfYear)
 TF_EC_CHAIN_PROP_IMP(NSDateComponents ,BOOL,leapMonth)
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(NSDateComponents ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(NSDateComponents ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(NSDateComponents ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(NSDateComponents ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(NSDateComponents ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(NSDateComponents ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(NSDateComponents ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(NSDateComponents ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(NSDateComponents ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(NSDateComponents ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(NSDateComponents ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(NSDateComponents ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(NSDateComponents ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(NSDateComponents ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

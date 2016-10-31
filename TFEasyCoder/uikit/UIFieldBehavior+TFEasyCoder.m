@@ -23,4 +23,28 @@ TF_EC_CHAIN_PROP_IMP(UIFieldBehavior ,CGVector,direction)
 TF_EC_CHAIN_PROP_IMP(UIFieldBehavior ,double,smoothness)
 TF_EC_CHAIN_PROP_IMP(UIFieldBehavior ,double,animationSpeed)
 
+
+
+
+//superclass pros UIDynamicBehavior
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UIFieldBehavior ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UIFieldBehavior ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UIFieldBehavior ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UIFieldBehavior ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UIFieldBehavior ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UIFieldBehavior ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UIFieldBehavior ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UIFieldBehavior ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UIFieldBehavior ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UIFieldBehavior ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UIFieldBehavior ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UIFieldBehavior ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UIFieldBehavior ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UIFieldBehavior ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

@@ -23,4 +23,27 @@ TF_EC_CHAIN_PROP_INT(NSExtensionItem ,NSAttributedString *,attributedContentText
 TF_EC_CHAIN_PROP_INT(NSExtensionItem ,NSArray *,attachments);
 TF_EC_CHAIN_PROP_INT(NSExtensionItem ,NSDictionary *,userInfo);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSExtensionItem ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSExtensionItem ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSExtensionItem ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSExtensionItem ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSExtensionItem ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSExtensionItem ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSExtensionItem ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSExtensionItem ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSExtensionItem ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSExtensionItem ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSExtensionItem ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSExtensionItem ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSExtensionItem ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSExtensionItem ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

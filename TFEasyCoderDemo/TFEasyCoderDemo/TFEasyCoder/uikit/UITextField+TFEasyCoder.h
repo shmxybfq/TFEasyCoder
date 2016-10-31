@@ -57,4 +57,41 @@ TF_EC_CHAIN_PROP_INT(UITextField ,id<UITextInputDelegate>  ,inputDelegate)
 TF_EC_CHAIN_PROP_INT(UITextField ,long long,selectionAffinity)
 
 
+
+
+
+//superclass pros UIControl
+TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,enabled);
+TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,selected);
+TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,highlighted);
+TF_EC_CHAIN_PROP_INT(UITextField ,long long,contentVerticalAlignment);
+TF_EC_CHAIN_PROP_INT(UITextField ,long long,contentHorizontalAlignment);
+//superclass pros UIView
+TF_EC_CHAIN_PROP_INT(UITextField ,UIView *,maskView)
+TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_INT(UITextField ,long long,tag)
+TF_EC_CHAIN_PROP_INT(UITextField ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_INT(UITextField ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_INT(UITextField ,NSUserActivity *,userActivity);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UITextField ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UITextField ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UITextField ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UITextField ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UITextField ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UITextField ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UITextField ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UITextField ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UITextField ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UITextField ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

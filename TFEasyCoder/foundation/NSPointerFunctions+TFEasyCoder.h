@@ -22,4 +22,27 @@ TF_EC_CHAIN_PROP_INT(NSPointerFunctions ,BOOL,usesStrongWriteBarrier)
 TF_EC_CHAIN_PROP_INT(NSPointerFunctions ,BOOL,usesWeakReadAndWriteBarriers)
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSPointerFunctions ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSPointerFunctions ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSPointerFunctions ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSPointerFunctions ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSPointerFunctions ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSPointerFunctions ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSPointerFunctions ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSPointerFunctions ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSPointerFunctions ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSPointerFunctions ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSPointerFunctions ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSPointerFunctions ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSPointerFunctions ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSPointerFunctions ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

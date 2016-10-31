@@ -27,4 +27,41 @@ TF_EC_CHAIN_PROP_IMP(UIDatePicker ,NSDate *,minimumDate)
 TF_EC_CHAIN_PROP_IMP(UIDatePicker ,NSDate *,maximumDate)
 TF_EC_CHAIN_PROP_IMP(UIDatePicker ,double,countDownDuration)
 
+
+
+
+//superclass pros UIControl
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,BOOL,enabled)
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,BOOL,selected)
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,BOOL,highlighted)
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,long long,contentVerticalAlignment)
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,long long,contentHorizontalAlignment)
+//superclass pros UIView
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,UIView *,maskView)
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,long long,tag)
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,NSUserActivity *,userActivity)
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UIDatePicker ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

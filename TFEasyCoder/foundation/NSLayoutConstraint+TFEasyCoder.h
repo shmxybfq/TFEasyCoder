@@ -23,4 +23,27 @@ TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,double,constant)
 TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,BOOL,active)
 TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,NSString *,identifier)
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

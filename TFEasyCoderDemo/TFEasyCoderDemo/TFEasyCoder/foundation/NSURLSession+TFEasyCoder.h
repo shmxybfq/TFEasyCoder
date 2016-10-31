@@ -22,4 +22,27 @@ TF_EC_MINSTANCE_INT(NSURLSession,NSURLSession *);
 TF_EC_CHAIN_PROP_INT(NSURLSession ,NSString *,sessionDescription);
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSURLSession ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSURLSession ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSURLSession ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSURLSession ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSURLSession ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSURLSession ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSURLSession ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSURLSession ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSURLSession ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSURLSession ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSURLSession ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSURLSession ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSURLSession ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSURLSession ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

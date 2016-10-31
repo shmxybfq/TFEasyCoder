@@ -26,4 +26,41 @@ TF_EC_CHAIN_PROP_INT(UISwitch ,UIImage *,offImage);
 TF_EC_CHAIN_PROP_INT(UISwitch ,BOOL,on);
 
 
+
+
+
+//superclass pros UIControl
+TF_EC_CHAIN_PROP_INT(UISwitch ,BOOL,enabled);
+TF_EC_CHAIN_PROP_INT(UISwitch ,BOOL,selected);
+TF_EC_CHAIN_PROP_INT(UISwitch ,BOOL,highlighted);
+TF_EC_CHAIN_PROP_INT(UISwitch ,long long,contentVerticalAlignment);
+TF_EC_CHAIN_PROP_INT(UISwitch ,long long,contentHorizontalAlignment);
+//superclass pros UIView
+TF_EC_CHAIN_PROP_INT(UISwitch ,UIView *,maskView)
+TF_EC_CHAIN_PROP_INT(UISwitch ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_INT(UISwitch ,long long,tag)
+TF_EC_CHAIN_PROP_INT(UISwitch ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_INT(UISwitch ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_INT(UISwitch ,NSUserActivity *,userActivity);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UISwitch ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UISwitch ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UISwitch ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UISwitch ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UISwitch ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UISwitch ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UISwitch ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UISwitch ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UISwitch ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UISwitch ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UISwitch ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UISwitch ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UISwitch ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UISwitch ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

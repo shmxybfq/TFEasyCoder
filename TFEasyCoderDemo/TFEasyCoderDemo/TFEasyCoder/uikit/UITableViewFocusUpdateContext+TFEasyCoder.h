@@ -19,4 +19,28 @@ TF_EC_MINSTANCE_INT(UITableViewFocusUpdateContext,UITableViewFocusUpdateContext 
 
 
 
+
+
+
+//superclass pros UIFocusUpdateContext
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

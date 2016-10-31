@@ -19,4 +19,27 @@ TF_EC_MINSTANCE_INT(UITextInputMode,UITextInputMode *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UITextInputMode ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UITextInputMode ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UITextInputMode ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UITextInputMode ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UITextInputMode ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UITextInputMode ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UITextInputMode ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UITextInputMode ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UITextInputMode ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UITextInputMode ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UITextInputMode ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UITextInputMode ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UITextInputMode ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UITextInputMode ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

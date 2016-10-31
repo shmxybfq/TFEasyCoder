@@ -26,4 +26,35 @@ TF_EC_CHAIN_PROP_IMP(UINavigationBar ,NSDictionary *,titleTextAttributes)
 TF_EC_CHAIN_PROP_IMP(UINavigationBar ,UIImage *,backIndicatorImage)
 TF_EC_CHAIN_PROP_IMP(UINavigationBar ,UIImage *,backIndicatorTransitionMaskImage)
 
+
+
+
+//superclass pros UIView
+TF_EC_CHAIN_PROP_IMP(UINavigationBar ,UIView *,maskView)
+TF_EC_CHAIN_PROP_IMP(UINavigationBar ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_IMP(UINavigationBar ,long long,tag)
+TF_EC_CHAIN_PROP_IMP(UINavigationBar ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_IMP(UINavigationBar ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_IMP(UINavigationBar ,NSUserActivity *,userActivity)
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UINavigationBar ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UINavigationBar ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UINavigationBar ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UINavigationBar ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UINavigationBar ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UINavigationBar ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UINavigationBar ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UINavigationBar ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UINavigationBar ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UINavigationBar ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UINavigationBar ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UINavigationBar ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UINavigationBar ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UINavigationBar ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

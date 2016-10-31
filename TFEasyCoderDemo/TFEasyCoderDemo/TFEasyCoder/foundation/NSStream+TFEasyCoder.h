@@ -20,4 +20,27 @@ TF_EC_MINSTANCE_INT(NSStream,NSStream *);
 
 TF_EC_CHAIN_PROP_INT(NSStream ,id<NSStreamDelegate> ,delegate);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSStream ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSStream ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSStream ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSStream ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSStream ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSStream ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSStream ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSStream ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSStream ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSStream ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSStream ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSStream ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSStream ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSStream ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

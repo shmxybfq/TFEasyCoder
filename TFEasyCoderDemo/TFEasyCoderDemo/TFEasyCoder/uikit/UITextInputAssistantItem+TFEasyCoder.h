@@ -23,4 +23,27 @@ TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,NSArray *,leadingBarButtonGroups)
 TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,NSArray *,trailingBarButtonGroups);
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

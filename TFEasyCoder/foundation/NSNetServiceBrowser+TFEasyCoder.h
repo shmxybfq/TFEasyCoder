@@ -21,4 +21,27 @@ TF_EC_MINSTANCE_INT(NSNetServiceBrowser,NSNetServiceBrowser *);
 TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,id<NSNetServiceBrowserDelegate> ,delegate);
 TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,BOOL,includesPeerToPeer);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

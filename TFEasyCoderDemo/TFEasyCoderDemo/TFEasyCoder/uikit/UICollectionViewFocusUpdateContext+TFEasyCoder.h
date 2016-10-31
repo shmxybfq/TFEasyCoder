@@ -19,4 +19,28 @@ TF_EC_MINSTANCE_INT(UICollectionViewFocusUpdateContext,UICollectionViewFocusUpda
 
 
 
+
+
+
+//superclass pros UIFocusUpdateContext
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

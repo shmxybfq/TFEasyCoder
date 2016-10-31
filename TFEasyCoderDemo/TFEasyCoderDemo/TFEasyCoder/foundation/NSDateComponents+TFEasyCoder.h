@@ -36,4 +36,27 @@ TF_EC_CHAIN_PROP_INT(NSDateComponents ,long long,weekOfYear);
 TF_EC_CHAIN_PROP_INT(NSDateComponents ,long long,yearForWeekOfYear);
 TF_EC_CHAIN_PROP_INT(NSDateComponents ,BOOL,leapMonth);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSDateComponents ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSDateComponents ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSDateComponents ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSDateComponents ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSDateComponents ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSDateComponents ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSDateComponents ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSDateComponents ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSDateComponents ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSDateComponents ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSDateComponents ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSDateComponents ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSDateComponents ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSDateComponents ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

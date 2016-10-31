@@ -20,4 +20,27 @@ TF_EC_MINSTANCE_INT(NSConditionLock,NSConditionLock *);
 
 TF_EC_CHAIN_PROP_INT(NSConditionLock ,NSString *,name);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSConditionLock ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSConditionLock ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSConditionLock ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSConditionLock ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSConditionLock ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSConditionLock ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSConditionLock ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSConditionLock ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSConditionLock ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSConditionLock ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSConditionLock ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSConditionLock ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSConditionLock ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSConditionLock ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

@@ -59,4 +59,27 @@ TF_EC_CHAIN_PROP_IMP(CAEmitterCell ,double,repeatDuration)
 TF_EC_CHAIN_PROP_IMP(CAEmitterCell ,BOOL,autoreverses)
 TF_EC_CHAIN_PROP_IMP(CAEmitterCell ,NSString *,fillMode)
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(CAEmitterCell ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(CAEmitterCell ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(CAEmitterCell ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(CAEmitterCell ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(CAEmitterCell ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(CAEmitterCell ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(CAEmitterCell ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(CAEmitterCell ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(CAEmitterCell ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(CAEmitterCell ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(CAEmitterCell ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(CAEmitterCell ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(CAEmitterCell ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(CAEmitterCell ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

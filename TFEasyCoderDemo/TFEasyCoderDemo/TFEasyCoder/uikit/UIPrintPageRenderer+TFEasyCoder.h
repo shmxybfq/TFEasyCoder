@@ -22,4 +22,27 @@ TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,double,headerHeight);
 TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,double,footerHeight);
 TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,NSArray *,printFormatters);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

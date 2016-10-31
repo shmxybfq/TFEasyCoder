@@ -43,4 +43,59 @@ TF_EC_CHAIN_PROP_IMP(UITextView ,NSDictionary *,markedTextStyle)
 TF_EC_CHAIN_PROP_IMP(UITextView ,id<UITextInputDelegate>  ,inputDelegate)
 TF_EC_CHAIN_PROP_IMP(UITextView ,long long,selectionAffinity)
 
+
+
+
+//superclass pros UIScrollView
+TF_EC_CHAIN_PROP_IMP(UITextView ,CGPoint,contentOffset)
+TF_EC_CHAIN_PROP_IMP(UITextView ,CGSize,contentSize)
+TF_EC_CHAIN_PROP_IMP(UITextView ,UIEdgeInsets,contentInset)
+//TF_EC_CHAIN_PROP_IMP(UITextView ,id<UIScrollViewDelegate>  ,delegate)
+TF_EC_CHAIN_PROP_IMP(UITextView ,BOOL,directionalLockEnabled)
+TF_EC_CHAIN_PROP_IMP(UITextView ,BOOL,bounces)
+TF_EC_CHAIN_PROP_IMP(UITextView ,BOOL,alwaysBounceVertical)
+TF_EC_CHAIN_PROP_IMP(UITextView ,BOOL,alwaysBounceHorizontal)
+TF_EC_CHAIN_PROP_IMP(UITextView ,BOOL,pagingEnabled)
+TF_EC_CHAIN_PROP_IMP(UITextView ,BOOL,scrollEnabled)
+TF_EC_CHAIN_PROP_IMP(UITextView ,BOOL,showsHorizontalScrollIndicator)
+TF_EC_CHAIN_PROP_IMP(UITextView ,BOOL,showsVerticalScrollIndicator)
+TF_EC_CHAIN_PROP_IMP(UITextView ,UIEdgeInsets,scrollIndicatorInsets)
+TF_EC_CHAIN_PROP_IMP(UITextView ,long long,indicatorStyle)
+TF_EC_CHAIN_PROP_IMP(UITextView ,double,decelerationRate)
+TF_EC_CHAIN_PROP_IMP(UITextView ,BOOL,delaysContentTouches)
+TF_EC_CHAIN_PROP_IMP(UITextView ,BOOL,canCancelContentTouches)
+TF_EC_CHAIN_PROP_IMP(UITextView ,double,minimumZoomScale)
+TF_EC_CHAIN_PROP_IMP(UITextView ,double,maximumZoomScale)
+TF_EC_CHAIN_PROP_IMP(UITextView ,double,zoomScale)
+TF_EC_CHAIN_PROP_IMP(UITextView ,BOOL,bouncesZoom)
+TF_EC_CHAIN_PROP_IMP(UITextView ,BOOL,scrollsToTop)
+TF_EC_CHAIN_PROP_IMP(UITextView ,long long,keyboardDismissMode)
+//superclass pros UIView
+TF_EC_CHAIN_PROP_IMP(UITextView ,UIView *,maskView)
+TF_EC_CHAIN_PROP_IMP(UITextView ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_IMP(UITextView ,long long,tag)
+TF_EC_CHAIN_PROP_IMP(UITextView ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_IMP(UITextView ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_IMP(UITextView ,NSUserActivity *,userActivity)
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UITextView ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UITextView ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UITextView ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UITextView ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UITextView ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UITextView ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UITextView ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UITextView ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UITextView ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UITextView ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UITextView ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UITextView ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UITextView ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UITextView ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

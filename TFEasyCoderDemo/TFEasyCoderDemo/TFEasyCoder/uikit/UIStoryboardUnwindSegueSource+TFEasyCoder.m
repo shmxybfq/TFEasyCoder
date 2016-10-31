@@ -16,4 +16,27 @@ TF_EC_MINSTANCE_IMP(UIStoryboardUnwindSegueSource, UIStoryboardUnwindSegueSource
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UIStoryboardUnwindSegueSource ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UIStoryboardUnwindSegueSource ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UIStoryboardUnwindSegueSource ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UIStoryboardUnwindSegueSource ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UIStoryboardUnwindSegueSource ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UIStoryboardUnwindSegueSource ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UIStoryboardUnwindSegueSource ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UIStoryboardUnwindSegueSource ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UIStoryboardUnwindSegueSource ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UIStoryboardUnwindSegueSource ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UIStoryboardUnwindSegueSource ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UIStoryboardUnwindSegueSource ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UIStoryboardUnwindSegueSource ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UIStoryboardUnwindSegueSource ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

@@ -22,4 +22,27 @@ TF_EC_CHAIN_PROP_INT(NSUndoManager ,BOOL,groupsByEvent);
 TF_EC_CHAIN_PROP_INT(NSUndoManager ,unsigned long long,levelsOfUndo);
 TF_EC_CHAIN_PROP_INT(NSUndoManager ,NSArray *,runLoopModes);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSUndoManager ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSUndoManager ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSUndoManager ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSUndoManager ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSUndoManager ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSUndoManager ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSUndoManager ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSUndoManager ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSUndoManager ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSUndoManager ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSUndoManager ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSUndoManager ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSUndoManager ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSUndoManager ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

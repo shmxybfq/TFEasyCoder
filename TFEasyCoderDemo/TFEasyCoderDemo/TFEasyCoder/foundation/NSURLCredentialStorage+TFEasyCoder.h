@@ -19,4 +19,27 @@ TF_EC_MINSTANCE_INT(NSURLCredentialStorage,NSURLCredentialStorage *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSURLCredentialStorage ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSURLCredentialStorage ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSURLCredentialStorage ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSURLCredentialStorage ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSURLCredentialStorage ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSURLCredentialStorage ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSURLCredentialStorage ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSURLCredentialStorage ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSURLCredentialStorage ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSURLCredentialStorage ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSURLCredentialStorage ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSURLCredentialStorage ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSURLCredentialStorage ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSURLCredentialStorage ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

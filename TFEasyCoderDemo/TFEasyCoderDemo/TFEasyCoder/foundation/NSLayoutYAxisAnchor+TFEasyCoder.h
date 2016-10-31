@@ -19,4 +19,28 @@ TF_EC_MINSTANCE_INT(NSLayoutYAxisAnchor,NSLayoutYAxisAnchor *);
 
 
 
+
+
+
+//superclass pros NSLayoutAnchor
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSLayoutYAxisAnchor ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSLayoutYAxisAnchor ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSLayoutYAxisAnchor ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSLayoutYAxisAnchor ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSLayoutYAxisAnchor ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSLayoutYAxisAnchor ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSLayoutYAxisAnchor ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSLayoutYAxisAnchor ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSLayoutYAxisAnchor ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSLayoutYAxisAnchor ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSLayoutYAxisAnchor ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSLayoutYAxisAnchor ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSLayoutYAxisAnchor ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSLayoutYAxisAnchor ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

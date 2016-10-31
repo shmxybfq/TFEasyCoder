@@ -19,4 +19,27 @@ TF_EC_MINSTANCE_INT(NSMetadataQueryResultGroup,NSMetadataQueryResultGroup *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

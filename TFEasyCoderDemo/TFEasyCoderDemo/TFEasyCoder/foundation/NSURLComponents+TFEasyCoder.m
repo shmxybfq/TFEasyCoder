@@ -31,4 +31,27 @@ TF_EC_CHAIN_PROP_IMP(NSURLComponents ,NSString *,percentEncodedQuery)
 TF_EC_CHAIN_PROP_IMP(NSURLComponents ,NSString *,percentEncodedFragment)
 TF_EC_CHAIN_PROP_IMP(NSURLComponents ,NSArray *,queryItems)
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(NSURLComponents ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(NSURLComponents ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(NSURLComponents ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(NSURLComponents ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(NSURLComponents ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(NSURLComponents ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(NSURLComponents ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(NSURLComponents ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(NSURLComponents ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(NSURLComponents ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(NSURLComponents ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(NSURLComponents ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(NSURLComponents ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(NSURLComponents ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

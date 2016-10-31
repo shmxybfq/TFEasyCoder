@@ -19,4 +19,27 @@ TF_EC_MINSTANCE_INT(NSFileSecurity,NSFileSecurity *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSFileSecurity ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSFileSecurity ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSFileSecurity ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSFileSecurity ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSFileSecurity ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSFileSecurity ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSFileSecurity ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSFileSecurity ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSFileSecurity ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSFileSecurity ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSFileSecurity ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSFileSecurity ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSFileSecurity ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSFileSecurity ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

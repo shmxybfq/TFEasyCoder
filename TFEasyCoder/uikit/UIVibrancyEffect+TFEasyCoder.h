@@ -19,4 +19,28 @@ TF_EC_MINSTANCE_INT(UIVibrancyEffect,UIVibrancyEffect *);
 
 
 
+
+
+
+//superclass pros UIVisualEffect
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

@@ -22,4 +22,27 @@ TF_EC_CHAIN_PROP_INT(NSFileWrapper ,NSString *,preferredFilename);
 TF_EC_CHAIN_PROP_INT(NSFileWrapper ,NSString *,filename);
 TF_EC_CHAIN_PROP_INT(NSFileWrapper ,NSDictionary *,fileAttributes);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSFileWrapper ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSFileWrapper ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSFileWrapper ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSFileWrapper ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSFileWrapper ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSFileWrapper ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSFileWrapper ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSFileWrapper ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSFileWrapper ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSFileWrapper ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSFileWrapper ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSFileWrapper ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSFileWrapper ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSFileWrapper ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

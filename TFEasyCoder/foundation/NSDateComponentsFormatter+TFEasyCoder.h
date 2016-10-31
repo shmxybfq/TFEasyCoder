@@ -29,4 +29,28 @@ TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,BOOL,includesApproximationPhrase
 TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,BOOL,includesTimeRemainingPhrase);
 TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,long long,formattingContext);
 
+
+
+
+//superclass pros NSFormatter
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

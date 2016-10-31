@@ -25,4 +25,27 @@ TF_EC_CHAIN_PROP_INT(UIPrintInfo ,long long,orientation);
 TF_EC_CHAIN_PROP_INT(UIPrintInfo ,long long,duplex);
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIPrintInfo ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIPrintInfo ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIPrintInfo ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIPrintInfo ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIPrintInfo ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIPrintInfo ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIPrintInfo ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIPrintInfo ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIPrintInfo ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIPrintInfo ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIPrintInfo ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIPrintInfo ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIPrintInfo ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIPrintInfo ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

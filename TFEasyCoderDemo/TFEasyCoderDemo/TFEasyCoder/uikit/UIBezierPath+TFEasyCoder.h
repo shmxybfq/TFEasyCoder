@@ -24,4 +24,27 @@ TF_EC_CHAIN_PROP_INT(UIBezierPath ,int,lineJoinStyle);
 TF_EC_CHAIN_PROP_INT(UIBezierPath ,double,miterLimit);
 TF_EC_CHAIN_PROP_INT(UIBezierPath ,double,flatness);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIBezierPath ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIBezierPath ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIBezierPath ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIBezierPath ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIBezierPath ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIBezierPath ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIBezierPath ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIBezierPath ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIBezierPath ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIBezierPath ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIBezierPath ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIBezierPath ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIBezierPath ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIBezierPath ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

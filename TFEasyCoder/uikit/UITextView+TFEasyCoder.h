@@ -47,4 +47,59 @@ TF_EC_CHAIN_PROP_INT(UITextView ,id<UITextInputDelegate>  ,inputDelegate)
 TF_EC_CHAIN_PROP_INT(UITextView ,long long,selectionAffinity)
 
 
+
+
+
+//superclass pros UIScrollView
+TF_EC_CHAIN_PROP_INT(UITextView ,CGPoint,contentOffset);
+TF_EC_CHAIN_PROP_INT(UITextView ,CGSize,contentSize);
+TF_EC_CHAIN_PROP_INT(UITextView ,UIEdgeInsets,contentInset);
+TF_EC_CHAIN_PROP_INT(UITextView ,id<UIScrollViewDelegate> ,delegate);
+TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,directionalLockEnabled);
+TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,bounces);
+TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,alwaysBounceVertical);
+TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,alwaysBounceHorizontal);
+TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,pagingEnabled);
+TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,scrollEnabled);
+TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,showsHorizontalScrollIndicator);
+TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,showsVerticalScrollIndicator);
+TF_EC_CHAIN_PROP_INT(UITextView ,UIEdgeInsets,scrollIndicatorInsets);
+TF_EC_CHAIN_PROP_INT(UITextView ,long long,indicatorStyle);
+TF_EC_CHAIN_PROP_INT(UITextView ,double,decelerationRate);
+TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,delaysContentTouches);
+TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,canCancelContentTouches);
+TF_EC_CHAIN_PROP_INT(UITextView ,double,minimumZoomScale);
+TF_EC_CHAIN_PROP_INT(UITextView ,double,maximumZoomScale);
+TF_EC_CHAIN_PROP_INT(UITextView ,double,zoomScale);
+TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,bouncesZoom);
+TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,scrollsToTop);
+TF_EC_CHAIN_PROP_INT(UITextView ,long long,keyboardDismissMode);
+//superclass pros UIView
+TF_EC_CHAIN_PROP_INT(UITextView ,UIView *,maskView)
+TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_INT(UITextView ,long long,tag)
+TF_EC_CHAIN_PROP_INT(UITextView ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_INT(UITextView ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_INT(UITextView ,NSUserActivity *,userActivity);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UITextView ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UITextView ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UITextView ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UITextView ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UITextView ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UITextView ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UITextView ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UITextView ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UITextView ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UITextView ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

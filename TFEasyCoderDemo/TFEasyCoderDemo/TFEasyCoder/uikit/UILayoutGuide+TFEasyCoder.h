@@ -21,4 +21,27 @@ TF_EC_MINSTANCE_INT(UILayoutGuide,UILayoutGuide *);
 TF_EC_CHAIN_PROP_INT(UILayoutGuide ,UIView *,owningView);
 TF_EC_CHAIN_PROP_INT(UILayoutGuide ,NSString *,identifier);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UILayoutGuide ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UILayoutGuide ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UILayoutGuide ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UILayoutGuide ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UILayoutGuide ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UILayoutGuide ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UILayoutGuide ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UILayoutGuide ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UILayoutGuide ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UILayoutGuide ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UILayoutGuide ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UILayoutGuide ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UILayoutGuide ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UILayoutGuide ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

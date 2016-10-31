@@ -52,4 +52,41 @@ TF_EC_CHAIN_PROP_IMP(UITextField ,NSDictionary *,markedTextStyle)
 TF_EC_CHAIN_PROP_IMP(UITextField ,id<UITextInputDelegate>  ,inputDelegate)
 TF_EC_CHAIN_PROP_IMP(UITextField ,long long,selectionAffinity)
 
+
+
+
+//superclass pros UIControl
+TF_EC_CHAIN_PROP_IMP(UITextField ,BOOL,enabled)
+TF_EC_CHAIN_PROP_IMP(UITextField ,BOOL,selected)
+TF_EC_CHAIN_PROP_IMP(UITextField ,BOOL,highlighted)
+TF_EC_CHAIN_PROP_IMP(UITextField ,long long,contentVerticalAlignment)
+TF_EC_CHAIN_PROP_IMP(UITextField ,long long,contentHorizontalAlignment)
+//superclass pros UIView
+TF_EC_CHAIN_PROP_IMP(UITextField ,UIView *,maskView)
+TF_EC_CHAIN_PROP_IMP(UITextField ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_IMP(UITextField ,long long,tag)
+TF_EC_CHAIN_PROP_IMP(UITextField ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_IMP(UITextField ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_IMP(UITextField ,NSUserActivity *,userActivity)
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UITextField ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UITextField ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UITextField ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UITextField ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UITextField ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UITextField ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UITextField ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UITextField ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UITextField ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UITextField ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UITextField ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UITextField ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UITextField ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UITextField ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

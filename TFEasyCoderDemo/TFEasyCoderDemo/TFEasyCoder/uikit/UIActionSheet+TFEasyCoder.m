@@ -21,4 +21,35 @@ TF_EC_CHAIN_PROP_IMP(UIActionSheet ,long long,actionSheetStyle)
 TF_EC_CHAIN_PROP_IMP(UIActionSheet ,long long,cancelButtonIndex)
 TF_EC_CHAIN_PROP_IMP(UIActionSheet ,long long,destructiveButtonIndex)
 
+
+
+
+//superclass pros UIView
+TF_EC_CHAIN_PROP_IMP(UIActionSheet ,UIView *,maskView)
+TF_EC_CHAIN_PROP_IMP(UIActionSheet ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_IMP(UIActionSheet ,long long,tag)
+TF_EC_CHAIN_PROP_IMP(UIActionSheet ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_IMP(UIActionSheet ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_IMP(UIActionSheet ,NSUserActivity *,userActivity)
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UIActionSheet ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UIActionSheet ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UIActionSheet ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UIActionSheet ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UIActionSheet ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UIActionSheet ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UIActionSheet ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UIActionSheet ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UIActionSheet ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UIActionSheet ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UIActionSheet ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UIActionSheet ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UIActionSheet ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UIActionSheet ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

@@ -23,4 +23,35 @@ TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,BOOL,hidesWhenStopped);
 TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,UIColor *,color);
 
 
+
+
+
+//superclass pros UIView
+TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,UIView *,maskView)
+TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,long long,tag)
+TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,NSUserActivity *,userActivity);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

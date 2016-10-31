@@ -19,4 +19,28 @@ TF_EC_MINSTANCE_INT(NSDirectoryEnumerator,NSDirectoryEnumerator *);
 
 
 
+
+
+
+//superclass pros NSEnumerator
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSDirectoryEnumerator ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSDirectoryEnumerator ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSDirectoryEnumerator ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSDirectoryEnumerator ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSDirectoryEnumerator ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSDirectoryEnumerator ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSDirectoryEnumerator ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSDirectoryEnumerator ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSDirectoryEnumerator ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSDirectoryEnumerator ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSDirectoryEnumerator ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSDirectoryEnumerator ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSDirectoryEnumerator ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSDirectoryEnumerator ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

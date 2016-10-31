@@ -19,4 +19,33 @@ TF_EC_MINSTANCE_INT(UIViewPrintFormatter,UIViewPrintFormatter *);
 
 
 
+
+
+
+//superclass pros UIPrintFormatter
+TF_EC_CHAIN_PROP_INT(UIViewPrintFormatter ,double,maximumContentHeight);
+TF_EC_CHAIN_PROP_INT(UIViewPrintFormatter ,double,maximumContentWidth);
+TF_EC_CHAIN_PROP_INT(UIViewPrintFormatter ,UIEdgeInsets,contentInsets);
+TF_EC_CHAIN_PROP_INT(UIViewPrintFormatter ,UIEdgeInsets,perPageContentInsets);
+TF_EC_CHAIN_PROP_INT(UIViewPrintFormatter ,long long,startPage);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIViewPrintFormatter ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIViewPrintFormatter ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIViewPrintFormatter ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIViewPrintFormatter ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIViewPrintFormatter ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIViewPrintFormatter ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIViewPrintFormatter ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIViewPrintFormatter ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIViewPrintFormatter ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIViewPrintFormatter ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIViewPrintFormatter ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIViewPrintFormatter ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIViewPrintFormatter ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIViewPrintFormatter ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

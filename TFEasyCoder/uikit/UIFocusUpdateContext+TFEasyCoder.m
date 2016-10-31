@@ -16,4 +16,27 @@ TF_EC_MINSTANCE_IMP(UIFocusUpdateContext, UIFocusUpdateContext *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UIFocusUpdateContext ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UIFocusUpdateContext ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UIFocusUpdateContext ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UIFocusUpdateContext ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UIFocusUpdateContext ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UIFocusUpdateContext ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UIFocusUpdateContext ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UIFocusUpdateContext ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UIFocusUpdateContext ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UIFocusUpdateContext ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UIFocusUpdateContext ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UIFocusUpdateContext ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UIFocusUpdateContext ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UIFocusUpdateContext ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

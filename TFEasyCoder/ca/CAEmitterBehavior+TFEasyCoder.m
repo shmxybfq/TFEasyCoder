@@ -18,4 +18,27 @@ TF_EC_MINSTANCE_IMP(CAEmitterBehavior, CAEmitterBehavior *);
 TF_EC_CHAIN_PROP_IMP(CAEmitterBehavior ,NSString *,name)
 TF_EC_CHAIN_PROP_IMP(CAEmitterBehavior ,BOOL,enabled)
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(CAEmitterBehavior ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(CAEmitterBehavior ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(CAEmitterBehavior ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(CAEmitterBehavior ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(CAEmitterBehavior ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(CAEmitterBehavior ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(CAEmitterBehavior ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(CAEmitterBehavior ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(CAEmitterBehavior ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(CAEmitterBehavior ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(CAEmitterBehavior ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(CAEmitterBehavior ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(CAEmitterBehavior ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(CAEmitterBehavior ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

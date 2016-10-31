@@ -27,4 +27,27 @@ TF_EC_CHAIN_PROP_INT(NSTextContainer ,unsigned long long,maximumNumberOfLines);
 TF_EC_CHAIN_PROP_INT(NSTextContainer ,BOOL,widthTracksTextView);
 TF_EC_CHAIN_PROP_INT(NSTextContainer ,BOOL,heightTracksTextView);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSTextContainer ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSTextContainer ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSTextContainer ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSTextContainer ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSTextContainer ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSTextContainer ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSTextContainer ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSTextContainer ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSTextContainer ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSTextContainer ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSTextContainer ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSTextContainer ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSTextContainer ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSTextContainer ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

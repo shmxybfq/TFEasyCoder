@@ -24,4 +24,27 @@ TF_EC_CHAIN_PROP_INT(UIScreen ,BOOL,wantsSoftwareDimming)
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIScreen ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIScreen ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIScreen ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIScreen ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIScreen ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIScreen ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIScreen ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIScreen ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIScreen ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIScreen ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIScreen ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIScreen ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIScreen ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIScreen ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

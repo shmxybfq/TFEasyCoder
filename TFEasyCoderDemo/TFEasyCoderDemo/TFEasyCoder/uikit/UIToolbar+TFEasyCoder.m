@@ -24,4 +24,35 @@ TF_EC_CHAIN_PROP_IMP(UIToolbar ,id<UIToolbarDelegate>  ,delegate)
 
 
 
+
+
+
+//superclass pros UIView
+TF_EC_CHAIN_PROP_IMP(UIToolbar ,UIView *,maskView)
+TF_EC_CHAIN_PROP_IMP(UIToolbar ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_IMP(UIToolbar ,long long,tag)
+TF_EC_CHAIN_PROP_IMP(UIToolbar ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_IMP(UIToolbar ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_IMP(UIToolbar ,NSUserActivity *,userActivity)
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UIToolbar ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UIToolbar ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UIToolbar ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UIToolbar ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UIToolbar ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UIToolbar ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UIToolbar ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UIToolbar ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UIToolbar ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UIToolbar ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UIToolbar ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UIToolbar ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UIToolbar ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UIToolbar ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

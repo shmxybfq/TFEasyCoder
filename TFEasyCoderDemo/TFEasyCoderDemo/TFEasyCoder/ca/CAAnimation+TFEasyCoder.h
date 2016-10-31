@@ -29,4 +29,27 @@ TF_EC_CHAIN_PROP_INT(CAAnimation ,double,repeatDuration);
 TF_EC_CHAIN_PROP_INT(CAAnimation ,BOOL,autoreverses);
 TF_EC_CHAIN_PROP_INT(CAAnimation ,NSString *,fillMode);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(CAAnimation ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(CAAnimation ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(CAAnimation ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(CAAnimation ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(CAAnimation ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(CAAnimation ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(CAAnimation ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(CAAnimation ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(CAAnimation ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(CAAnimation ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(CAAnimation ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(CAAnimation ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(CAAnimation ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(CAAnimation ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

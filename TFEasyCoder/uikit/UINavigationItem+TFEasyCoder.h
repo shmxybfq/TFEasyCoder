@@ -29,4 +29,27 @@ TF_EC_CHAIN_PROP_INT(UINavigationItem ,BOOL,leftItemsSupplementBackButton);
 TF_EC_CHAIN_PROP_INT(UINavigationItem ,UIBarButtonItem *,leftBarButtonItem);
 TF_EC_CHAIN_PROP_INT(UINavigationItem ,UIBarButtonItem *,rightBarButtonItem);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UINavigationItem ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UINavigationItem ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UINavigationItem ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UINavigationItem ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UINavigationItem ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UINavigationItem ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UINavigationItem ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UINavigationItem ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UINavigationItem ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UINavigationItem ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UINavigationItem ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UINavigationItem ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UINavigationItem ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UINavigationItem ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

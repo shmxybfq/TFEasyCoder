@@ -20,4 +20,27 @@ TF_EC_MINSTANCE_INT(NSStringDrawingContext,NSStringDrawingContext *);
 TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,double,minimumTrackingAdjustment)
 TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,double,minimumScaleFactor)
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

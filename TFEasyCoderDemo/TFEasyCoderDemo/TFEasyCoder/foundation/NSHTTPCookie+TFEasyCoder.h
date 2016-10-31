@@ -19,4 +19,27 @@ TF_EC_MINSTANCE_INT(NSHTTPCookie,NSHTTPCookie *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSHTTPCookie ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSHTTPCookie ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSHTTPCookie ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSHTTPCookie ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSHTTPCookie ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSHTTPCookie ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSHTTPCookie ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSHTTPCookie ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSHTTPCookie ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSHTTPCookie ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSHTTPCookie ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSHTTPCookie ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSHTTPCookie ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSHTTPCookie ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

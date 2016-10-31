@@ -19,4 +19,28 @@ TF_EC_MINSTANCE_INT(NSMutableCharacterSet,NSMutableCharacterSet *);
 
 
 
+
+
+
+//superclass pros NSCharacterSet
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSMutableCharacterSet ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSMutableCharacterSet ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSMutableCharacterSet ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSMutableCharacterSet ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSMutableCharacterSet ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSMutableCharacterSet ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSMutableCharacterSet ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSMutableCharacterSet ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSMutableCharacterSet ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSMutableCharacterSet ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSMutableCharacterSet ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSMutableCharacterSet ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSMutableCharacterSet ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSMutableCharacterSet ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

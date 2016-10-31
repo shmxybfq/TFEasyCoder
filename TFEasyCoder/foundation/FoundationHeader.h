@@ -162,7 +162,6 @@
 #import "NSSet+TFEasyCoder.h"
 #import "NSShadow+TFEasyCoder.h"
 #import "NSSimpleCString+TFEasyCoder.h"
-#import "NSSocketPort+TFEasyCoder.h"
 #import "NSSortDescriptor+TFEasyCoder.h"
 #import "NSStream+TFEasyCoder.h"
 #import "NSString+TFEasyCoder.h"

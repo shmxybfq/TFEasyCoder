@@ -19,4 +19,27 @@ TF_EC_MINSTANCE_INT(NSSortDescriptor,NSSortDescriptor *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

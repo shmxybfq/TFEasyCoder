@@ -19,4 +19,27 @@ TF_EC_MINSTANCE_INT(UIStoryboard,UIStoryboard *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIStoryboard ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIStoryboard ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIStoryboard ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIStoryboard ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIStoryboard ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIStoryboard ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIStoryboard ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIStoryboard ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIStoryboard ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIStoryboard ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIStoryboard ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIStoryboard ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIStoryboard ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIStoryboard ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

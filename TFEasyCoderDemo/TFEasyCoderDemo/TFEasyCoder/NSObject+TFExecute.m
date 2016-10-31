@@ -40,19 +40,23 @@
 
 
 
-+(void)tf_setValue:(id)_value forTarget:(id)_target forKey:(NSString *)_key
-{
-    NSCAssert(_target,@"tf_setTargetValue: _target can't be nil!");
-    NSCAssert(_value,@"tf_setTargetValue: _value can't be nil!");
-    NSCAssert(_key,@"tf_setTargetValue: _key can't be nil!");
-    
-    if (![_key hasPrefix:@"_"])
-        _key = [@"_" stringByAppendingString:_key];
-    
-    Ivar ivar = class_getInstanceVariable([_target class], [_key UTF8String]);
-    NSCAssert(ivar, @"%@ not contain attribute %@", [_target class], _key);
 
-    [_target setValue:_value forKey:_key];
+
+
++(void)tf_setTargetValue:(id)target withValue:(id)value forKey:(NSString *)key
+{
+    TFAssertParamNil(target, @"赋值目标不能为空");
+    TFAssertParamNil(value , @"赋值目标值不能为空");
+    TFAssertParamNil(key   , @"赋值目标健不能为空");
+    if (![key hasPrefix:@"_"])
+        key = [@"_" stringByAppendingString:key];
+    
+    Ivar ivar = class_getInstanceVariable([target class], [key UTF8String]);
+    if (!ivar) {
+        NSString *r = [NSString stringWithFormat:@"%@ 不存在变量:%@",[target class],key];
+        TFAssertParamNil(ivar, r);
+    }
+    [target setValue:value forKey:key];
 }
 
 

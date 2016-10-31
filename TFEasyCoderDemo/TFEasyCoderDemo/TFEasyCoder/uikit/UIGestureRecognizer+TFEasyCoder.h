@@ -25,4 +25,27 @@ TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,BOOL,delaysTouchesEnded);
 TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,NSArray *,allowedTouchTypes);
 TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,NSArray *,allowedPressTypes);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

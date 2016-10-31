@@ -43,4 +43,35 @@ TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,scrollsToTop);
 TF_EC_CHAIN_PROP_INT(UIScrollView ,long long,keyboardDismissMode);
 
 
+
+
+
+//superclass pros UIView
+TF_EC_CHAIN_PROP_INT(UIScrollView ,UIView *,maskView)
+TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_INT(UIScrollView ,long long,tag)
+TF_EC_CHAIN_PROP_INT(UIScrollView ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_INT(UIScrollView ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_INT(UIScrollView ,NSUserActivity *,userActivity);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIScrollView ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIScrollView ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIScrollView ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIScrollView ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIScrollView ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIScrollView ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIScrollView ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIScrollView ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIScrollView ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIScrollView ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

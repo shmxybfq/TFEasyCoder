@@ -23,4 +23,35 @@ TF_EC_CHAIN_PROP_INT(UIStackView ,long long,distribution);
 TF_EC_CHAIN_PROP_INT(UIStackView ,long long,alignment);
 TF_EC_CHAIN_PROP_INT(UIStackView ,double,spacing);
 
+
+
+
+//superclass pros UIView
+TF_EC_CHAIN_PROP_INT(UIStackView ,UIView *,maskView)
+TF_EC_CHAIN_PROP_INT(UIStackView ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_INT(UIStackView ,long long,tag)
+TF_EC_CHAIN_PROP_INT(UIStackView ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_INT(UIStackView ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_INT(UIStackView ,NSUserActivity *,userActivity);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIStackView ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIStackView ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIStackView ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIStackView ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIStackView ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIStackView ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIStackView ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIStackView ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIStackView ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIStackView ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIStackView ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIStackView ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIStackView ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIStackView ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

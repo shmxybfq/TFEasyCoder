@@ -19,4 +19,47 @@ TF_EC_MINSTANCE_INT(UIReferenceLibraryViewController,UIReferenceLibraryViewContr
 
 
 
+
+
+
+//superclass pros UIViewController
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,UITabBarItem *,tabBarItem)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,BOOL,hidesBottomBarWhenPushed)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,id<UIViewControllerTransitioningDelegate>  ,transitioningDelegate)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,UIView *,view)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,NSString *,title)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,BOOL,definesPresentationContext)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,BOOL,providesPresentationContextTransitionStyle)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,long long,modalTransitionStyle)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,long long,modalPresentationStyle)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,BOOL,modalPresentationCapturesStatusBarAppearance)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,BOOL,wantsFullScreenLayout)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,unsigned long long,edgesForExtendedLayout)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,BOOL,extendedLayoutIncludesOpaqueBars)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,BOOL,automaticallyAdjustsScrollViewInsets)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,CGSize,preferredContentSize)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,CGSize,contentSizeForViewInPopover)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,BOOL,modalInPopover)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,NSUserActivity *,userActivity);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIReferenceLibraryViewController ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

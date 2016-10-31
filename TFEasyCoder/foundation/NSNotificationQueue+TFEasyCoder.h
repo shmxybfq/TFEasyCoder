@@ -19,4 +19,27 @@ TF_EC_MINSTANCE_INT(NSNotificationQueue,NSNotificationQueue *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSNotificationQueue ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSNotificationQueue ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSNotificationQueue ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSNotificationQueue ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSNotificationQueue ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSNotificationQueue ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSNotificationQueue ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSNotificationQueue ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSNotificationQueue ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSNotificationQueue ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSNotificationQueue ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSNotificationQueue ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSNotificationQueue ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSNotificationQueue ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

@@ -19,4 +19,28 @@ TF_EC_MINSTANCE_INT(UIPressesEvent,UIPressesEvent *);
 
 
 
+
+
+
+//superclass pros UIEvent
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIPressesEvent ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIPressesEvent ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIPressesEvent ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIPressesEvent ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIPressesEvent ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIPressesEvent ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIPressesEvent ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIPressesEvent ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIPressesEvent ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIPressesEvent ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIPressesEvent ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIPressesEvent ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIPressesEvent ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIPressesEvent ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

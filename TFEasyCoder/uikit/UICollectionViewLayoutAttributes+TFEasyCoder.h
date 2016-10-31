@@ -27,4 +27,27 @@ TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,long long,zIndex);
 TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,BOOL,hidden);
 TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,NSIndexPath *,indexPath);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

@@ -21,4 +21,28 @@ TF_EC_MINSTANCE_INT(NSPersonNameComponentsFormatter,NSPersonNameComponentsFormat
 TF_EC_CHAIN_PROP_INT(NSPersonNameComponentsFormatter ,long long,style);
 TF_EC_CHAIN_PROP_INT(NSPersonNameComponentsFormatter ,BOOL,phonetic);
 
+
+
+
+//superclass pros NSFormatter
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSPersonNameComponentsFormatter ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSPersonNameComponentsFormatter ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSPersonNameComponentsFormatter ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSPersonNameComponentsFormatter ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSPersonNameComponentsFormatter ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSPersonNameComponentsFormatter ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSPersonNameComponentsFormatter ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSPersonNameComponentsFormatter ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSPersonNameComponentsFormatter ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSPersonNameComponentsFormatter ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSPersonNameComponentsFormatter ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSPersonNameComponentsFormatter ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSPersonNameComponentsFormatter ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSPersonNameComponentsFormatter ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

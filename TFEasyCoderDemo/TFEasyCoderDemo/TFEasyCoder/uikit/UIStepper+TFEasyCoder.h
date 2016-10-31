@@ -27,4 +27,41 @@ TF_EC_CHAIN_PROP_INT(UIStepper ,double,maximumValue);
 TF_EC_CHAIN_PROP_INT(UIStepper ,double,stepValue);
 TF_EC_CHAIN_PROP_INT(UIStepper ,UIColor *,tintColor);
 
+
+
+
+//superclass pros UIControl
+TF_EC_CHAIN_PROP_INT(UIStepper ,BOOL,enabled);
+TF_EC_CHAIN_PROP_INT(UIStepper ,BOOL,selected);
+TF_EC_CHAIN_PROP_INT(UIStepper ,BOOL,highlighted);
+TF_EC_CHAIN_PROP_INT(UIStepper ,long long,contentVerticalAlignment);
+TF_EC_CHAIN_PROP_INT(UIStepper ,long long,contentHorizontalAlignment);
+//superclass pros UIView
+TF_EC_CHAIN_PROP_INT(UIStepper ,UIView *,maskView)
+TF_EC_CHAIN_PROP_INT(UIStepper ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_INT(UIStepper ,long long,tag)
+TF_EC_CHAIN_PROP_INT(UIStepper ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_INT(UIStepper ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_INT(UIStepper ,NSUserActivity *,userActivity);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIStepper ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIStepper ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIStepper ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIStepper ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIStepper ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIStepper ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIStepper ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIStepper ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIStepper ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIStepper ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIStepper ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIStepper ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIStepper ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIStepper ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

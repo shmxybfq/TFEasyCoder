@@ -30,4 +30,35 @@ TF_EC_CHAIN_PROP_IMP(UITabBar ,double,itemSpacing)
 TF_EC_CHAIN_PROP_IMP(UITabBar ,long long,barStyle)
 TF_EC_CHAIN_PROP_IMP(UITabBar ,BOOL,translucent)
 
+
+
+
+//superclass pros UIView
+TF_EC_CHAIN_PROP_IMP(UITabBar ,UIView *,maskView)
+TF_EC_CHAIN_PROP_IMP(UITabBar ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_IMP(UITabBar ,long long,tag)
+TF_EC_CHAIN_PROP_IMP(UITabBar ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_IMP(UITabBar ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_IMP(UITabBar ,NSUserActivity *,userActivity)
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UITabBar ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UITabBar ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UITabBar ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UITabBar ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UITabBar ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UITabBar ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UITabBar ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UITabBar ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UITabBar ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UITabBar ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UITabBar ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UITabBar ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UITabBar ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UITabBar ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

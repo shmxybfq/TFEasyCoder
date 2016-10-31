@@ -24,4 +24,27 @@ TF_EC_CHAIN_PROP_IMP(NSProgress ,BOOL,cancellable)
 TF_EC_CHAIN_PROP_IMP(NSProgress ,BOOL,pausable)
 TF_EC_CHAIN_PROP_IMP(NSProgress ,NSString *,kind)
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(NSProgress ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(NSProgress ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(NSProgress ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(NSProgress ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(NSProgress ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(NSProgress ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(NSProgress ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(NSProgress ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(NSProgress ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(NSProgress ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(NSProgress ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(NSProgress ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(NSProgress ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(NSProgress ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

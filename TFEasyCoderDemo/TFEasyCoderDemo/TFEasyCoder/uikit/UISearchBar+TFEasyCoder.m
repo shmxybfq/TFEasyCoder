@@ -44,4 +44,35 @@ TF_EC_CHAIN_PROP_IMP(UISearchBar ,long long,returnKeyType)
 TF_EC_CHAIN_PROP_IMP(UISearchBar ,BOOL,enablesReturnKeyAutomatically)
 TF_EC_CHAIN_PROP_IMP(UISearchBar ,BOOL,secureTextEntry)
 
+
+
+
+//superclass pros UIView
+TF_EC_CHAIN_PROP_IMP(UISearchBar ,UIView *,maskView)
+TF_EC_CHAIN_PROP_IMP(UISearchBar ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_IMP(UISearchBar ,long long,tag)
+TF_EC_CHAIN_PROP_IMP(UISearchBar ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_IMP(UISearchBar ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_IMP(UISearchBar ,NSUserActivity *,userActivity)
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UISearchBar ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UISearchBar ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UISearchBar ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UISearchBar ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UISearchBar ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UISearchBar ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UISearchBar ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UISearchBar ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UISearchBar ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UISearchBar ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UISearchBar ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UISearchBar ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UISearchBar ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UISearchBar ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

@@ -25,4 +25,27 @@ TF_EC_CHAIN_PROP_INT(NSXMLParser ,unsigned long long,externalEntityResolvingPoli
 TF_EC_CHAIN_PROP_INT(NSXMLParser ,NSSet *,allowedExternalEntityURLs);
 TF_EC_CHAIN_PROP_INT(NSXMLParser ,BOOL,shouldResolveExternalEntities);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSXMLParser ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSXMLParser ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSXMLParser ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSXMLParser ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSXMLParser ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSXMLParser ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSXMLParser ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSXMLParser ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSXMLParser ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSXMLParser ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSXMLParser ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSXMLParser ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSXMLParser ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSXMLParser ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

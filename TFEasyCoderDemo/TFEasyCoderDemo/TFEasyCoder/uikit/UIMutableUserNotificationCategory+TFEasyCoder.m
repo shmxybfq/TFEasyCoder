@@ -17,4 +17,28 @@ TF_EC_MINSTANCE_IMP(UIMutableUserNotificationCategory, UIMutableUserNotification
 
 TF_EC_CHAIN_PROP_IMP(UIMutableUserNotificationCategory ,NSString *,identifier)
 
+
+
+
+//superclass pros UIUserNotificationCategory
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UIMutableUserNotificationCategory ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UIMutableUserNotificationCategory ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UIMutableUserNotificationCategory ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UIMutableUserNotificationCategory ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UIMutableUserNotificationCategory ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UIMutableUserNotificationCategory ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UIMutableUserNotificationCategory ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UIMutableUserNotificationCategory ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UIMutableUserNotificationCategory ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UIMutableUserNotificationCategory ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UIMutableUserNotificationCategory ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UIMutableUserNotificationCategory ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UIMutableUserNotificationCategory ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UIMutableUserNotificationCategory ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

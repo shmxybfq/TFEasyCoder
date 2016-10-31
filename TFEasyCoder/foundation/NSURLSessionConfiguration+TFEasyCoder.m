@@ -36,4 +36,27 @@ TF_EC_CHAIN_PROP_IMP(NSURLSessionConfiguration ,BOOL,shouldUseExtendedBackground
 TF_EC_CHAIN_PROP_IMP(NSURLSessionConfiguration ,NSArray *,protocolClasses)
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(NSURLSessionConfiguration ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(NSURLSessionConfiguration ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(NSURLSessionConfiguration ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(NSURLSessionConfiguration ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(NSURLSessionConfiguration ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(NSURLSessionConfiguration ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(NSURLSessionConfiguration ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(NSURLSessionConfiguration ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(NSURLSessionConfiguration ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(NSURLSessionConfiguration ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(NSURLSessionConfiguration ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(NSURLSessionConfiguration ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(NSURLSessionConfiguration ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(NSURLSessionConfiguration ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

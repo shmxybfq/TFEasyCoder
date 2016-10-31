@@ -23,4 +23,27 @@ TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,NSString *,nameSuffix)
 TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,NSString *,nickname)
 TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,NSPersonNameComponents *,phoneticRepresentation)
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

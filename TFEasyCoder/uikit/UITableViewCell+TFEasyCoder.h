@@ -36,4 +36,35 @@ TF_EC_CHAIN_PROP_INT(UITableViewCell ,UIEdgeInsets,separatorInset);
 TF_EC_CHAIN_PROP_INT(UITableViewCell ,BOOL,editing);
 TF_EC_CHAIN_PROP_INT(UITableViewCell ,long long,focusStyle);
 
+
+
+
+//superclass pros UIView
+TF_EC_CHAIN_PROP_INT(UITableViewCell ,UIView *,maskView)
+TF_EC_CHAIN_PROP_INT(UITableViewCell ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_INT(UITableViewCell ,long long,tag)
+TF_EC_CHAIN_PROP_INT(UITableViewCell ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_INT(UITableViewCell ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_INT(UITableViewCell ,NSUserActivity *,userActivity);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UITableViewCell ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UITableViewCell ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UITableViewCell ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UITableViewCell ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UITableViewCell ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UITableViewCell ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UITableViewCell ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UITableViewCell ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UITableViewCell ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UITableViewCell ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UITableViewCell ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UITableViewCell ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UITableViewCell ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UITableViewCell ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

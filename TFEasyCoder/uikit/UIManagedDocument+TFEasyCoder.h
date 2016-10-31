@@ -21,4 +21,30 @@ TF_EC_MINSTANCE_INT(UIManagedDocument,UIManagedDocument *);
 TF_EC_CHAIN_PROP_INT(UIManagedDocument ,NSDictionary *,persistentStoreOptions);
 TF_EC_CHAIN_PROP_INT(UIManagedDocument ,NSString *,modelConfiguration);
 
+
+
+
+//superclass pros UIDocument
+TF_EC_CHAIN_PROP_INT(UIManagedDocument ,NSDate *,fileModificationDate);
+TF_EC_CHAIN_PROP_INT(UIManagedDocument ,NSUndoManager *,undoManager);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIManagedDocument ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIManagedDocument ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIManagedDocument ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIManagedDocument ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIManagedDocument ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIManagedDocument ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIManagedDocument ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIManagedDocument ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIManagedDocument ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIManagedDocument ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIManagedDocument ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIManagedDocument ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIManagedDocument ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIManagedDocument ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

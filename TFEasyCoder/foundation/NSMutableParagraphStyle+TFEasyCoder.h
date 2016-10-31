@@ -35,4 +35,28 @@ TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,NSArray *,tabStops);
 TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,double,defaultTabInterval);
 TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,BOOL,allowsDefaultTighteningForTruncation);
 
+
+
+
+//superclass pros NSParagraphStyle
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

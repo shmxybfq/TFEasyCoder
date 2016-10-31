@@ -20,4 +20,34 @@ TF_EC_MINSTANCE_INT(UIRotationGestureRecognizer,UIRotationGestureRecognizer *);
 
 TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,double,rotation);
 
+
+
+
+//superclass pros UIGestureRecognizer
+TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,BOOL,enabled);
+TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,BOOL,cancelsTouchesInView);
+TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,BOOL,delaysTouchesBegan);
+TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,BOOL,delaysTouchesEnded);
+TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,NSArray *,allowedTouchTypes);
+TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,NSArray *,allowedPressTypes);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

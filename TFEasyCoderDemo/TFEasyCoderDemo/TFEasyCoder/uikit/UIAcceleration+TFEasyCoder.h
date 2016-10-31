@@ -23,4 +23,27 @@ TF_EC_CHAIN_PROP_INT(UIAcceleration ,double,x);
 TF_EC_CHAIN_PROP_INT(UIAcceleration ,double,y);
 TF_EC_CHAIN_PROP_INT(UIAcceleration ,double,z);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIAcceleration ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIAcceleration ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIAcceleration ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIAcceleration ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIAcceleration ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIAcceleration ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIAcceleration ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIAcceleration ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIAcceleration ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIAcceleration ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIAcceleration ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIAcceleration ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIAcceleration ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIAcceleration ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

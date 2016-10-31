@@ -31,4 +31,35 @@ TF_EC_CHAIN_PROP_IMP(UIWebView ,double,gapBetweenPages)
 TF_EC_CHAIN_PROP_IMP(UIWebView ,BOOL,allowsPictureInPictureMediaPlayback)
 TF_EC_CHAIN_PROP_IMP(UIWebView ,BOOL,allowsLinkPreview)
 
+
+
+
+//superclass pros UIView
+TF_EC_CHAIN_PROP_IMP(UIWebView ,UIView *,maskView)
+TF_EC_CHAIN_PROP_IMP(UIWebView ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_IMP(UIWebView ,long long,tag)
+TF_EC_CHAIN_PROP_IMP(UIWebView ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_IMP(UIWebView ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_IMP(UIWebView ,NSUserActivity *,userActivity)
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UIWebView ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UIWebView ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UIWebView ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UIWebView ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UIWebView ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UIWebView ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UIWebView ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UIWebView ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UIWebView ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UIWebView ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UIWebView ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UIWebView ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UIWebView ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UIWebView ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

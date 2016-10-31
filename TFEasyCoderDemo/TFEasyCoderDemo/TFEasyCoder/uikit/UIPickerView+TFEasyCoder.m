@@ -20,4 +20,35 @@ TF_EC_CHAIN_PROP_IMP(UIPickerView ,id<UIPickerViewDelegate>  ,delegate)
 TF_EC_CHAIN_PROP_IMP(UIPickerView ,BOOL,showsSelectionIndicator)
 
 
+
+
+
+//superclass pros UIView
+TF_EC_CHAIN_PROP_IMP(UIPickerView ,UIView *,maskView)
+TF_EC_CHAIN_PROP_IMP(UIPickerView ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_IMP(UIPickerView ,long long,tag)
+TF_EC_CHAIN_PROP_IMP(UIPickerView ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_IMP(UIPickerView ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_IMP(UIPickerView ,NSUserActivity *,userActivity)
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UIPickerView ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UIPickerView ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UIPickerView ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UIPickerView ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UIPickerView ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UIPickerView ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UIPickerView ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UIPickerView ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UIPickerView ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UIPickerView ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UIPickerView ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UIPickerView ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UIPickerView ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UIPickerView ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

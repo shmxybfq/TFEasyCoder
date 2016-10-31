@@ -73,4 +73,28 @@ TF_EC_CHAIN_PROP_IMP(NSNumberFormatter ,unsigned long long,minimumSignificantDig
 TF_EC_CHAIN_PROP_IMP(NSNumberFormatter ,unsigned long long,maximumSignificantDigits)
 TF_EC_CHAIN_PROP_IMP(NSNumberFormatter ,BOOL,partialStringValidationEnabled)
 
+
+
+
+//superclass pros NSFormatter
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(NSNumberFormatter ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(NSNumberFormatter ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(NSNumberFormatter ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(NSNumberFormatter ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(NSNumberFormatter ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(NSNumberFormatter ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(NSNumberFormatter ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(NSNumberFormatter ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(NSNumberFormatter ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(NSNumberFormatter ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(NSNumberFormatter ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(NSNumberFormatter ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(NSNumberFormatter ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(NSNumberFormatter ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

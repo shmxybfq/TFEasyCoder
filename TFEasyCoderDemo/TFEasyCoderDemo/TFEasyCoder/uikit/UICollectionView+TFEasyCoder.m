@@ -24,4 +24,59 @@ TF_EC_CHAIN_PROP_IMP(UICollectionView ,BOOL,allowsMultipleSelection)
 TF_EC_CHAIN_PROP_IMP(UICollectionView ,BOOL,remembersLastFocusedIndexPath)
 
 
+
+
+
+//superclass pros UIScrollView
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,CGPoint,contentOffset)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,CGSize,contentSize)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,UIEdgeInsets,contentInset)
+//TF_EC_CHAIN_PROP_IMP(UICollectionView ,id<UIScrollViewDelegate>  ,delegate)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,BOOL,directionalLockEnabled)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,BOOL,bounces)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,BOOL,alwaysBounceVertical)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,BOOL,alwaysBounceHorizontal)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,BOOL,pagingEnabled)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,BOOL,scrollEnabled)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,BOOL,showsHorizontalScrollIndicator)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,BOOL,showsVerticalScrollIndicator)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,UIEdgeInsets,scrollIndicatorInsets)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,long long,indicatorStyle)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,double,decelerationRate)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,BOOL,delaysContentTouches)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,BOOL,canCancelContentTouches)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,double,minimumZoomScale)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,double,maximumZoomScale)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,double,zoomScale)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,BOOL,bouncesZoom)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,BOOL,scrollsToTop)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,long long,keyboardDismissMode)
+//superclass pros UIView
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,UIView *,maskView)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,long long,tag)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,NSUserActivity *,userActivity)
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UICollectionView ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

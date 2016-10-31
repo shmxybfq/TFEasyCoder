@@ -17,4 +17,27 @@ TF_EC_MINSTANCE_IMP(UIPreviewAction, UIPreviewAction *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(UIPreviewAction ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(UIPreviewAction ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(UIPreviewAction ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(UIPreviewAction ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(UIPreviewAction ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(UIPreviewAction ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(UIPreviewAction ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(UIPreviewAction ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(UIPreviewAction ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(UIPreviewAction ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(UIPreviewAction ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(UIPreviewAction ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(UIPreviewAction ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(UIPreviewAction ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

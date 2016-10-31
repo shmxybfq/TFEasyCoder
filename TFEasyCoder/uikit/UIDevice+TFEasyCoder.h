@@ -21,4 +21,27 @@ TF_EC_MINSTANCE_INT(UIDevice,UIDevice *);
 TF_EC_CHAIN_PROP_INT(UIDevice ,BOOL,batteryMonitoringEnabled);
 TF_EC_CHAIN_PROP_INT(UIDevice ,BOOL,proximityMonitoringEnabled);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIDevice ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIDevice ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIDevice ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIDevice ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIDevice ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIDevice ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIDevice ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIDevice ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIDevice ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIDevice ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIDevice ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIDevice ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIDevice ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIDevice ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

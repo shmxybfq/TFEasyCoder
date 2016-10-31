@@ -34,4 +34,27 @@ TF_EC_CHAIN_PROP_INT(UILocalNotification ,NSDictionary *,userInfo);
 TF_EC_CHAIN_PROP_INT(UILocalNotification ,NSString *,category);
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UILocalNotification ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UILocalNotification ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UILocalNotification ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UILocalNotification ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UILocalNotification ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UILocalNotification ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UILocalNotification ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UILocalNotification ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UILocalNotification ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UILocalNotification ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UILocalNotification ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UILocalNotification ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UILocalNotification ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UILocalNotification ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

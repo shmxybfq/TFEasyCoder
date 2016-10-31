@@ -19,4 +19,27 @@ TF_EC_MINSTANCE_INT(UIFont,UIFont *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIFont ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIFont ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIFont ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIFont ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIFont ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIFont ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIFont ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIFont ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIFont ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIFont ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIFont ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIFont ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIFont ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIFont ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

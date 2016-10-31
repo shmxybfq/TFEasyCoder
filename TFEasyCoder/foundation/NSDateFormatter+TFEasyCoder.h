@@ -53,4 +53,28 @@ TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,shortStandaloneQuarterSymbols);
 TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSDate *,gregorianStartDate);
 TF_EC_CHAIN_PROP_INT(NSDateFormatter ,BOOL,doesRelativeDateFormatting);
 
+
+
+
+//superclass pros NSFormatter
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSDateFormatter ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSDateFormatter ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSDateFormatter ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSDateFormatter ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSDateFormatter ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSDateFormatter ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSDateFormatter ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSDateFormatter ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

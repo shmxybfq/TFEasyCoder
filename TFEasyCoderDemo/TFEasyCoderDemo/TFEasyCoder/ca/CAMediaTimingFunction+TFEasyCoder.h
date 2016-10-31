@@ -19,4 +19,27 @@ TF_EC_MINSTANCE_INT(CAMediaTimingFunction,CAMediaTimingFunction *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

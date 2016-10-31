@@ -26,4 +26,27 @@ TF_EC_CHAIN_PROP_INT(NSLayoutManager ,double,hyphenationFactor);
 TF_EC_CHAIN_PROP_INT(NSLayoutManager ,BOOL,usesFontLeading);
 TF_EC_CHAIN_PROP_INT(NSLayoutManager ,BOOL,allowsNonContiguousLayout);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSLayoutManager ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSLayoutManager ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSLayoutManager ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSLayoutManager ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSLayoutManager ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSLayoutManager ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSLayoutManager ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSLayoutManager ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSLayoutManager ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSLayoutManager ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSLayoutManager ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSLayoutManager ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSLayoutManager ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSLayoutManager ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

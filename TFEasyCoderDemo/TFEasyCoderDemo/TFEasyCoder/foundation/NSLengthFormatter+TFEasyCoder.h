@@ -22,4 +22,28 @@ TF_EC_CHAIN_PROP_INT(NSLengthFormatter ,NSNumberFormatter *,numberFormatter);
 TF_EC_CHAIN_PROP_INT(NSLengthFormatter ,long long,unitStyle);
 TF_EC_CHAIN_PROP_INT(NSLengthFormatter ,BOOL,forPersonHeightUse);
 
+
+
+
+//superclass pros NSFormatter
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSLengthFormatter ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSLengthFormatter ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSLengthFormatter ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSLengthFormatter ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSLengthFormatter ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSLengthFormatter ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSLengthFormatter ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSLengthFormatter ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSLengthFormatter ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSLengthFormatter ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSLengthFormatter ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSLengthFormatter ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSLengthFormatter ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSLengthFormatter ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

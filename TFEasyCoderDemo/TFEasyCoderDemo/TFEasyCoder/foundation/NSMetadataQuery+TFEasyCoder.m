@@ -25,4 +25,27 @@ TF_EC_CHAIN_PROP_IMP(NSMetadataQuery ,NSArray *,searchScopes)
 TF_EC_CHAIN_PROP_IMP(NSMetadataQuery ,NSArray *,searchItems)
 TF_EC_CHAIN_PROP_IMP(NSMetadataQuery ,NSOperationQueue *,operationQueue)
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(NSMetadataQuery ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(NSMetadataQuery ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(NSMetadataQuery ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(NSMetadataQuery ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(NSMetadataQuery ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(NSMetadataQuery ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(NSMetadataQuery ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(NSMetadataQuery ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(NSMetadataQuery ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(NSMetadataQuery ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(NSMetadataQuery ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(NSMetadataQuery ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(NSMetadataQuery ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(NSMetadataQuery ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

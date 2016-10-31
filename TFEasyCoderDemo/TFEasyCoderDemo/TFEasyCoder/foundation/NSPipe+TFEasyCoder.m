@@ -16,4 +16,27 @@ TF_EC_MINSTANCE_IMP(NSPipe, NSPipe *);
 
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_IMP(NSPipe ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_IMP(NSPipe ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_IMP(NSPipe ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_IMP(NSPipe ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_IMP(NSPipe ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_IMP(NSPipe ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_IMP(NSPipe ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_IMP(NSPipe ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_IMP(NSPipe ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_IMP(NSPipe ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_IMP(NSPipe ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_IMP(NSPipe ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_IMP(NSPipe ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_IMP(NSPipe ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

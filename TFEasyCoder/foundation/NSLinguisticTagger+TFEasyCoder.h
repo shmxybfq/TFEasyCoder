@@ -20,4 +20,27 @@ TF_EC_MINSTANCE_INT(NSLinguisticTagger,NSLinguisticTagger *);
 
 TF_EC_CHAIN_PROP_INT(NSLinguisticTagger ,NSString *,string);
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSLinguisticTagger ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSLinguisticTagger ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSLinguisticTagger ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSLinguisticTagger ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSLinguisticTagger ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSLinguisticTagger ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSLinguisticTagger ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSLinguisticTagger ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSLinguisticTagger ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSLinguisticTagger ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSLinguisticTagger ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSLinguisticTagger ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSLinguisticTagger ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSLinguisticTagger ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

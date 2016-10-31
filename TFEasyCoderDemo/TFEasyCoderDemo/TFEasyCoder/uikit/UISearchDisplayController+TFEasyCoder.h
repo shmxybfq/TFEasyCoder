@@ -31,4 +31,27 @@ TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,NSString *,searchResultsTitle);
 TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,BOOL,displaysSearchBarInNavigationBar);
 
 
+
+
+
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

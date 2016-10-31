@@ -22,4 +22,28 @@ TF_EC_CHAIN_PROP_INT(NSEnergyFormatter ,NSNumberFormatter *,numberFormatter);
 TF_EC_CHAIN_PROP_INT(NSEnergyFormatter ,long long,unitStyle);
 TF_EC_CHAIN_PROP_INT(NSEnergyFormatter ,BOOL,forFoodEnergyUse);
 
+
+
+
+//superclass pros NSFormatter
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(NSEnergyFormatter ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(NSEnergyFormatter ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(NSEnergyFormatter ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(NSEnergyFormatter ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(NSEnergyFormatter ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(NSEnergyFormatter ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(NSEnergyFormatter ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(NSEnergyFormatter ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(NSEnergyFormatter ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(NSEnergyFormatter ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(NSEnergyFormatter ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(NSEnergyFormatter ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(NSEnergyFormatter ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(NSEnergyFormatter ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

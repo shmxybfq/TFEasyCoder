@@ -28,4 +28,35 @@ TF_EC_CHAIN_PROP_INT(UIActionSheet ,long long,actionSheetStyle);
 TF_EC_CHAIN_PROP_INT(UIActionSheet ,long long,cancelButtonIndex);
 TF_EC_CHAIN_PROP_INT(UIActionSheet ,long long,destructiveButtonIndex);
 
+
+
+
+//superclass pros UIView
+TF_EC_CHAIN_PROP_INT(UIActionSheet ,UIView *,maskView)
+TF_EC_CHAIN_PROP_INT(UIActionSheet ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_INT(UIActionSheet ,long long,tag)
+TF_EC_CHAIN_PROP_INT(UIActionSheet ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_INT(UIActionSheet ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_INT(UIActionSheet ,NSUserActivity *,userActivity);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIActionSheet ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIActionSheet ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIActionSheet ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIActionSheet ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIActionSheet ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIActionSheet ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIActionSheet ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIActionSheet ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIActionSheet ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIActionSheet ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIActionSheet ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIActionSheet ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIActionSheet ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIActionSheet ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

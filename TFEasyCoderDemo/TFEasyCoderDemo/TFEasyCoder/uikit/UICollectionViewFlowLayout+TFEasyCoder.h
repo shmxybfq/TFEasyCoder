@@ -27,4 +27,28 @@ TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,UIEdgeInsets,sectionInset);
 TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,BOOL,sectionHeadersPinToVisibleBounds);
 TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,BOOL,sectionFootersPinToVisibleBounds);
 
+
+
+
+//superclass pros UICollectionViewLayout
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end

@@ -23,4 +23,35 @@ TF_EC_CHAIN_PROP_INT(UIPickerView ,id<UIPickerViewDelegate>,delegate);
 TF_EC_CHAIN_PROP_INT(UIPickerView ,BOOL,showsSelectionIndicator);
 
 
+
+
+
+//superclass pros UIView
+TF_EC_CHAIN_PROP_INT(UIPickerView ,UIView *,maskView)
+TF_EC_CHAIN_PROP_INT(UIPickerView ,BOOL,userInteractionEnabled)
+TF_EC_CHAIN_PROP_INT(UIPickerView ,long long,tag)
+TF_EC_CHAIN_PROP_INT(UIPickerView ,long long,semanticContentAttribute)
+TF_EC_CHAIN_PROP_INT(UIPickerView ,CGPoint,center)
+//superclass pros UIResponder
+TF_EC_CHAIN_PROP_INT(UIPickerView ,NSUserActivity *,userActivity);
+//superclass pros NSObject
+TF_EC_CHAIN_PROP_INT(UIPickerView ,NSArray *,accessibilityElements)
+TF_EC_CHAIN_PROP_INT(UIPickerView ,NSArray *,accessibilityCustomActions)
+TF_EC_CHAIN_PROP_INT(UIPickerView ,BOOL,isAccessibilityElement)
+TF_EC_CHAIN_PROP_INT(UIPickerView ,NSString *,accessibilityLabel)
+TF_EC_CHAIN_PROP_INT(UIPickerView ,NSString *,accessibilityHint)
+TF_EC_CHAIN_PROP_INT(UIPickerView ,NSString *,accessibilityValue)
+TF_EC_CHAIN_PROP_INT(UIPickerView ,unsigned long long,accessibilityTraits)
+TF_EC_CHAIN_PROP_INT(UIPickerView ,UIBezierPath *,accessibilityPath)
+TF_EC_CHAIN_PROP_INT(UIPickerView ,CGPoint,accessibilityActivationPoint)
+TF_EC_CHAIN_PROP_INT(UIPickerView ,NSString *,accessibilityLanguage)
+TF_EC_CHAIN_PROP_INT(UIPickerView ,BOOL,accessibilityElementsHidden)
+TF_EC_CHAIN_PROP_INT(UIPickerView ,BOOL,accessibilityViewIsModal)
+TF_EC_CHAIN_PROP_INT(UIPickerView ,BOOL,shouldGroupAccessibilityChildren)
+TF_EC_CHAIN_PROP_INT(UIPickerView ,long long,accessibilityNavigationStyle)
+
+
+
+
+
 @end
