@@ -40,4 +40,7 @@ TF_EC_CHAIN_PROP_IMP(UIVibrancyEffect ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIVibrancyEffect);
+
+
 @end

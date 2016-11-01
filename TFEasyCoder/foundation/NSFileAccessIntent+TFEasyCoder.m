@@ -39,4 +39,7 @@ TF_EC_CHAIN_PROP_IMP(NSFileAccessIntent ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(NSFileAccessIntent);
+
+
 @end

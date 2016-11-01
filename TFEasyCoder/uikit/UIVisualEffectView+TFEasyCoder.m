@@ -51,4 +51,7 @@ TF_EC_CHAIN_PROP_IMP(UIVisualEffectView ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIVisualEffectView);
+
+
 @end

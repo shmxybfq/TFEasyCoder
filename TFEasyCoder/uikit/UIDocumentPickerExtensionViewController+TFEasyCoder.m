@@ -62,4 +62,7 @@ TF_EC_CHAIN_PROP_IMP(UIDocumentPickerExtensionViewController ,long long,accessib
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIDocumentPickerExtensionViewController);
+
+
 @end

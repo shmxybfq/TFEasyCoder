@@ -45,4 +45,7 @@ TF_EC_CHAIN_PROP_INT(UIBarButtonItemGroup ,long long,accessibilityNavigationStyl
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIBarButtonItemGroup);
+
+
 @end

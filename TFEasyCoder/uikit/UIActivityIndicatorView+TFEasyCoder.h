@@ -56,4 +56,7 @@ TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,long long,accessibilityNavigationS
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIActivityIndicatorView);
+
+
 @end

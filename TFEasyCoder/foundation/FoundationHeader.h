@@ -98,10 +98,8 @@
 #import "NSLock+TFEasyCoder.h"
 
 
-#import "NSMachPort+TFEasyCoder.h"
 #import "NSMapTable+TFEasyCoder.h"
 #import "NSMassFormatter+TFEasyCoder.h"
-#import "NSMessagePort+TFEasyCoder.h"
 #import "NSMetadataItem+TFEasyCoder.h"
 #import "NSMetadataQuery+TFEasyCoder.h"
 #import "NSMetadataQueryAttributeValueTuple+TFEasyCoder.h"

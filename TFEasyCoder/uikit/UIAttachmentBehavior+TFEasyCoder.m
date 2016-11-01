@@ -45,4 +45,7 @@ TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,long long,accessibilityNavigationStyl
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIAttachmentBehavior);
+
+
 @end

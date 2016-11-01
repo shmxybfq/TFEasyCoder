@@ -68,4 +68,7 @@ TF_EC_CHAIN_PROP_INT(UITabBarController ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UITabBarController);
+
+
 @end

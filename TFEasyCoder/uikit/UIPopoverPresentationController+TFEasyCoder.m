@@ -51,4 +51,7 @@ TF_EC_CHAIN_PROP_IMP(UIPopoverPresentationController ,long long,accessibilityNav
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIPopoverPresentationController);
+
+
 @end

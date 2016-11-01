@@ -42,4 +42,7 @@ TF_EC_CHAIN_PROP_INT(UIVisualEffect ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIVisualEffect);
+
+
 @end

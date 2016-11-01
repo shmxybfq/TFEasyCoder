@@ -46,4 +46,7 @@ TF_EC_CHAIN_PROP_IMP(UIBarItem ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIBarItem);
+
+
 @end

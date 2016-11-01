@@ -44,4 +44,7 @@ TF_EC_CHAIN_PROP_IMP(UIDocumentInteractionController ,long long,accessibilityNav
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIDocumentInteractionController);
+
+
 @end

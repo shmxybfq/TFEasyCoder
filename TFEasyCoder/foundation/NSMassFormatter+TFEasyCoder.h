@@ -46,4 +46,7 @@ TF_EC_CHAIN_PROP_INT(NSMassFormatter ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(NSMassFormatter);
+
+
 @end

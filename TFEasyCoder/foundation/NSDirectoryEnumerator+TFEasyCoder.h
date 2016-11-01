@@ -43,4 +43,7 @@ TF_EC_CHAIN_PROP_INT(NSDirectoryEnumerator ,long long,accessibilityNavigationSty
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(NSDirectoryEnumerator);
+
+
 @end

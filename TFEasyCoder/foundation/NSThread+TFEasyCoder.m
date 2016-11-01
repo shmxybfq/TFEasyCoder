@@ -43,4 +43,7 @@ TF_EC_CHAIN_PROP_IMP(NSThread ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(NSThread);
+
+
 @end

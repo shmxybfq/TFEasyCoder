@@ -47,4 +47,7 @@ TF_EC_CHAIN_PROP_INT(UIBezierPath ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIBezierPath);
+
+
 @end

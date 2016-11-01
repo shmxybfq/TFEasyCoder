@@ -47,4 +47,7 @@ TF_EC_CHAIN_PROP_INT(UIFocusGuide ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIFocusGuide);
+
+
 @end

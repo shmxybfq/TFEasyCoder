@@ -50,4 +50,7 @@ TF_EC_CHAIN_PROP_INT(UIView ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIView);
+
+
 @end

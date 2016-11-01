@@ -43,4 +43,7 @@ TF_EC_CHAIN_PROP_INT(NSNumber ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(NSNumber);
+
+
 @end

@@ -42,4 +42,7 @@ TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,long long,accessibilityNavigat
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIFocusAnimationCoordinator);
+
+
 @end

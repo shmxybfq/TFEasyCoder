@@ -61,4 +61,7 @@ TF_EC_CHAIN_PROP_INT(UIAlertView ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIAlertView);
+
+
 @end

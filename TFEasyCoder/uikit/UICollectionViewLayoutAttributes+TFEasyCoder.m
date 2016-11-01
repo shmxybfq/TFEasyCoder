@@ -47,4 +47,7 @@ TF_EC_CHAIN_PROP_IMP(UICollectionViewLayoutAttributes ,long long,accessibilityNa
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UICollectionViewLayoutAttributes);
+
+
 @end

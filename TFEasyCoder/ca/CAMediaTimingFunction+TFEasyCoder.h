@@ -42,4 +42,7 @@ TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,long long,accessibilityNavigationSty
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(CAMediaTimingFunction);
+
+
 @end

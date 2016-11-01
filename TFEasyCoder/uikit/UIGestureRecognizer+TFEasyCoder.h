@@ -48,4 +48,7 @@ TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,long long,accessibilityNavigationStyle
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIGestureRecognizer);
+
+
 @end

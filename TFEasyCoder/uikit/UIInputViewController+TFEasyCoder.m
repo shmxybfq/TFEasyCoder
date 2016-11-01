@@ -65,4 +65,7 @@ TF_EC_CHAIN_PROP_IMP(UIInputViewController ,long long,accessibilityNavigationSty
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIInputViewController);
+
+
 @end

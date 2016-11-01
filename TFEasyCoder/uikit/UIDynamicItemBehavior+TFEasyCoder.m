@@ -46,4 +46,7 @@ TF_EC_CHAIN_PROP_IMP(UIDynamicItemBehavior ,long long,accessibilityNavigationSty
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIDynamicItemBehavior);
+
+
 @end

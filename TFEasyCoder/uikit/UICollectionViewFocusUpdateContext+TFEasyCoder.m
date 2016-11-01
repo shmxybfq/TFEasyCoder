@@ -40,4 +40,7 @@ TF_EC_CHAIN_PROP_IMP(UICollectionViewFocusUpdateContext ,long long,accessibility
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UICollectionViewFocusUpdateContext);
+
+
 @end

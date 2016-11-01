@@ -39,4 +39,7 @@ TF_EC_CHAIN_PROP_IMP(NSDate ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(NSDate);
+
+
 @end

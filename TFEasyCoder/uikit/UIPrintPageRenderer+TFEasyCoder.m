@@ -42,4 +42,7 @@ TF_EC_CHAIN_PROP_IMP(UIPrintPageRenderer ,long long,accessibilityNavigationStyle
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIPrintPageRenderer);
+
+
 @end

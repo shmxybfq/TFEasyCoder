@@ -49,4 +49,7 @@ TF_EC_CHAIN_PROP_IMP(UICollectionReusableView ,long long,accessibilityNavigation
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UICollectionReusableView);
+
+
 @end

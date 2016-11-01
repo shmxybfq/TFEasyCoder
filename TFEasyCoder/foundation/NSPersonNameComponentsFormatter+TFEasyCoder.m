@@ -42,4 +42,7 @@ TF_EC_CHAIN_PROP_IMP(NSPersonNameComponentsFormatter ,long long,accessibilityNav
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(NSPersonNameComponentsFormatter);
+
+
 @end

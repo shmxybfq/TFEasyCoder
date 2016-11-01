@@ -53,4 +53,7 @@ TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,long long,accessibilityNavigati
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UISimpleTextPrintFormatter);
+
+
 @end

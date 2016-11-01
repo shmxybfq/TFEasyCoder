@@ -39,4 +39,7 @@ TF_EC_CHAIN_PROP_IMP(UILocalizedIndexedCollation ,long long,accessibilityNavigat
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UILocalizedIndexedCollation);
+
+
 @end

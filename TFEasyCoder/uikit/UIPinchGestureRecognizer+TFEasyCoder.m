@@ -48,4 +48,7 @@ TF_EC_CHAIN_PROP_IMP(UIPinchGestureRecognizer ,long long,accessibilityNavigation
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIPinchGestureRecognizer);
+
+
 @end

@@ -43,4 +43,7 @@ TF_EC_CHAIN_PROP_INT(NSBundleResourceRequest ,long long,accessibilityNavigationS
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(NSBundleResourceRequest);
+
+
 @end

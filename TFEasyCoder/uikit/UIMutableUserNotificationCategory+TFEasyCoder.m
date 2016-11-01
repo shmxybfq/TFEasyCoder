@@ -41,4 +41,7 @@ TF_EC_CHAIN_PROP_IMP(UIMutableUserNotificationCategory ,long long,accessibilityN
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIMutableUserNotificationCategory);
+
+
 @end

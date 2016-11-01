@@ -50,4 +50,7 @@ TF_EC_CHAIN_PROP_IMP(UIScreenEdgePanGestureRecognizer ,long long,accessibilityNa
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIScreenEdgePanGestureRecognizer);
+
+
 @end

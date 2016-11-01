@@ -61,4 +61,7 @@ TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,long long,accessib
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIDocumentPickerExtensionViewController);
+
+
 @end

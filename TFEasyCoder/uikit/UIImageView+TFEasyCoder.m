@@ -59,4 +59,7 @@ TF_EC_CHAIN_PROP_IMP(UIImageView ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIImageView);
+
+
 @end

@@ -46,4 +46,7 @@ TF_EC_CHAIN_PROP_IMP(UIMutableUserNotificationAction ,long long,accessibilityNav
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIMutableUserNotificationAction);
+
+
 @end

@@ -95,4 +95,7 @@ TF_EC_CHAIN_PROP_IMP(CATextLayer ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(CATextLayer);
+
+
 @end

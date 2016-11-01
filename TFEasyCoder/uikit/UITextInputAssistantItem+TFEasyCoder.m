@@ -43,4 +43,7 @@ TF_EC_CHAIN_PROP_IMP(UITextInputAssistantItem ,long long,accessibilityNavigation
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UITextInputAssistantItem);
+
+
 @end

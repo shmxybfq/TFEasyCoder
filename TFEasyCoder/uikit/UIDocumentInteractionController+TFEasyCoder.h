@@ -46,4 +46,7 @@ TF_EC_CHAIN_PROP_INT(UIDocumentInteractionController ,long long,accessibilityNav
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIDocumentInteractionController);
+
+
 @end

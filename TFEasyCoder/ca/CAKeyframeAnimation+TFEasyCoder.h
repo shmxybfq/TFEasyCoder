@@ -66,4 +66,7 @@ TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,long long,accessibilityNavigationStyle
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(CAKeyframeAnimation);
+
+
 @end

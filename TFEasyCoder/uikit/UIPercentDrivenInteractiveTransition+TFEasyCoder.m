@@ -41,4 +41,7 @@ TF_EC_CHAIN_PROP_IMP(UIPercentDrivenInteractiveTransition ,long long,accessibili
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIPercentDrivenInteractiveTransition);
+
+
 @end

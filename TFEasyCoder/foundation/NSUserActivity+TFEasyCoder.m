@@ -50,4 +50,7 @@ TF_EC_CHAIN_PROP_IMP(NSUserActivity ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(NSUserActivity);
+
+
 @end

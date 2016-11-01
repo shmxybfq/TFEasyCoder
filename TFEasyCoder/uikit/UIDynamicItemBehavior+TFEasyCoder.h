@@ -49,4 +49,7 @@ TF_EC_CHAIN_PROP_INT(UIDynamicItemBehavior ,long long,accessibilityNavigationSty
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIDynamicItemBehavior);
+
+
 @end

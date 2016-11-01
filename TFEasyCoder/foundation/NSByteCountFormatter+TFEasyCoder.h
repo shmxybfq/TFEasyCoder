@@ -52,4 +52,7 @@ TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,long long,accessibilityNavigationStyl
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(NSByteCountFormatter);
+
+
 @end

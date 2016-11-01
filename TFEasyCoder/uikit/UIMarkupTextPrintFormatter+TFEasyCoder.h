@@ -49,4 +49,7 @@ TF_EC_CHAIN_PROP_INT(UIMarkupTextPrintFormatter ,long long,accessibilityNavigati
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIMarkupTextPrintFormatter);
+
+
 @end

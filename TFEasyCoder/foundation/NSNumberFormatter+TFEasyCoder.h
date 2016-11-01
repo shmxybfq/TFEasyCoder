@@ -100,4 +100,7 @@ TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(NSNumberFormatter);
+
+
 @end

@@ -16,4 +16,7 @@ TF_EC_MINSTANCE_IMP(NSProxy, NSProxy *);
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(NSProxy);
+
+
 @end

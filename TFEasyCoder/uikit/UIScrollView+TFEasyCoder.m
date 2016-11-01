@@ -73,4 +73,7 @@ TF_EC_CHAIN_PROP_IMP(UIScrollView ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIScrollView);
+
+
 @end

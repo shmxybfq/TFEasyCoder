@@ -64,4 +64,7 @@ TF_EC_CHAIN_PROP_IMP(UISlider ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UISlider);
+
+
 @end

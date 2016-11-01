@@ -57,4 +57,7 @@ TF_EC_CHAIN_PROP_INT(NSURLComponents ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(NSURLComponents);
+
+
 @end

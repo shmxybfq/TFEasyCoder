@@ -91,4 +91,7 @@ TF_EC_CHAIN_PROP_IMP(CAEAGLLayer ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(CAEAGLLayer);
+
+
 @end

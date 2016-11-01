@@ -50,4 +50,7 @@ TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,long long,accessibilityNa
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UICollectionViewLayoutAttributes);
+
+
 @end

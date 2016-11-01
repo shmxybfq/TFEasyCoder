@@ -54,4 +54,7 @@ TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,long long,accessibilityNavigatio
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UISearchDisplayController);
+
+
 @end

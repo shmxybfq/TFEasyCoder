@@ -42,4 +42,7 @@ TF_EC_CHAIN_PROP_INT(NSMetadataQueryAttributeValueTuple ,long long,accessibility
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(NSMetadataQueryAttributeValueTuple);
+
+
 @end

@@ -39,4 +39,7 @@ TF_EC_CHAIN_PROP_IMP(NSURLCredentialStorage ,long long,accessibilityNavigationSt
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(NSURLCredentialStorage);
+
+
 @end

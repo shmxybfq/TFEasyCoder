@@ -46,4 +46,7 @@ TF_EC_CHAIN_PROP_IMP(UIMarkupTextPrintFormatter ,long long,accessibilityNavigati
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIMarkupTextPrintFormatter);
+
+
 @end

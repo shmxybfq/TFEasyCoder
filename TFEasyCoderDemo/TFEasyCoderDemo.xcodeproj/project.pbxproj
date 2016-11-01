@@ -99,10 +99,8 @@
 		CD1675B11DC87BCF00969C21 /* NSLinguisticTagger+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1673411DC87BCE00969C21 /* NSLinguisticTagger+TFEasyCoder.m */; };
 		CD1675B21DC87BCF00969C21 /* NSLocale+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1673431DC87BCE00969C21 /* NSLocale+TFEasyCoder.m */; };
 		CD1675B31DC87BCF00969C21 /* NSLock+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1673451DC87BCE00969C21 /* NSLock+TFEasyCoder.m */; };
-		CD1675B41DC87BCF00969C21 /* NSMachPort+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1673471DC87BCE00969C21 /* NSMachPort+TFEasyCoder.m */; };
 		CD1675B51DC87BCF00969C21 /* NSMapTable+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1673491DC87BCE00969C21 /* NSMapTable+TFEasyCoder.m */; };
 		CD1675B61DC87BCF00969C21 /* NSMassFormatter+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD16734B1DC87BCE00969C21 /* NSMassFormatter+TFEasyCoder.m */; };
-		CD1675B71DC87BCF00969C21 /* NSMessagePort+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD16734D1DC87BCE00969C21 /* NSMessagePort+TFEasyCoder.m */; };
 		CD1675B81DC87BCF00969C21 /* NSMetadataItem+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD16734F1DC87BCE00969C21 /* NSMetadataItem+TFEasyCoder.m */; };
 		CD1675B91DC87BCF00969C21 /* NSMetadataQuery+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1673511DC87BCE00969C21 /* NSMetadataQuery+TFEasyCoder.m */; };
 		CD1675BA1DC87BCF00969C21 /* NSMetadataQueryAttributeValueTuple+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1673531DC87BCE00969C21 /* NSMetadataQueryAttributeValueTuple+TFEasyCoder.m */; };
@@ -557,14 +555,10 @@
 		CD1673431DC87BCE00969C21 /* NSLocale+TFEasyCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLocale+TFEasyCoder.m"; sourceTree = "<group>"; };
 		CD1673441DC87BCE00969C21 /* NSLock+TFEasyCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLock+TFEasyCoder.h"; sourceTree = "<group>"; };
 		CD1673451DC87BCE00969C21 /* NSLock+TFEasyCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLock+TFEasyCoder.m"; sourceTree = "<group>"; };
-		CD1673461DC87BCE00969C21 /* NSMachPort+TFEasyCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMachPort+TFEasyCoder.h"; sourceTree = "<group>"; };
-		CD1673471DC87BCE00969C21 /* NSMachPort+TFEasyCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMachPort+TFEasyCoder.m"; sourceTree = "<group>"; };
 		CD1673481DC87BCE00969C21 /* NSMapTable+TFEasyCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMapTable+TFEasyCoder.h"; sourceTree = "<group>"; };
 		CD1673491DC87BCE00969C21 /* NSMapTable+TFEasyCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMapTable+TFEasyCoder.m"; sourceTree = "<group>"; };
 		CD16734A1DC87BCE00969C21 /* NSMassFormatter+TFEasyCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMassFormatter+TFEasyCoder.h"; sourceTree = "<group>"; };
 		CD16734B1DC87BCE00969C21 /* NSMassFormatter+TFEasyCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMassFormatter+TFEasyCoder.m"; sourceTree = "<group>"; };
-		CD16734C1DC87BCE00969C21 /* NSMessagePort+TFEasyCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMessagePort+TFEasyCoder.h"; sourceTree = "<group>"; };
-		CD16734D1DC87BCE00969C21 /* NSMessagePort+TFEasyCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMessagePort+TFEasyCoder.m"; sourceTree = "<group>"; };
 		CD16734E1DC87BCE00969C21 /* NSMetadataItem+TFEasyCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMetadataItem+TFEasyCoder.h"; sourceTree = "<group>"; };
 		CD16734F1DC87BCE00969C21 /* NSMetadataItem+TFEasyCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMetadataItem+TFEasyCoder.m"; sourceTree = "<group>"; };
 		CD1673501DC87BCE00969C21 /* NSMetadataQuery+TFEasyCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMetadataQuery+TFEasyCoder.h"; sourceTree = "<group>"; };
@@ -1320,14 +1314,10 @@
 				CD1673431DC87BCE00969C21 /* NSLocale+TFEasyCoder.m */,
 				CD1673441DC87BCE00969C21 /* NSLock+TFEasyCoder.h */,
 				CD1673451DC87BCE00969C21 /* NSLock+TFEasyCoder.m */,
-				CD1673461DC87BCE00969C21 /* NSMachPort+TFEasyCoder.h */,
-				CD1673471DC87BCE00969C21 /* NSMachPort+TFEasyCoder.m */,
 				CD1673481DC87BCE00969C21 /* NSMapTable+TFEasyCoder.h */,
 				CD1673491DC87BCE00969C21 /* NSMapTable+TFEasyCoder.m */,
 				CD16734A1DC87BCE00969C21 /* NSMassFormatter+TFEasyCoder.h */,
 				CD16734B1DC87BCE00969C21 /* NSMassFormatter+TFEasyCoder.m */,
-				CD16734C1DC87BCE00969C21 /* NSMessagePort+TFEasyCoder.h */,
-				CD16734D1DC87BCE00969C21 /* NSMessagePort+TFEasyCoder.m */,
 				CD16734E1DC87BCE00969C21 /* NSMetadataItem+TFEasyCoder.h */,
 				CD16734F1DC87BCE00969C21 /* NSMetadataItem+TFEasyCoder.m */,
 				CD1673501DC87BCE00969C21 /* NSMetadataQuery+TFEasyCoder.h */,
@@ -1985,7 +1975,6 @@
 				CD1675E21DC87BD000969C21 /* NSPurgeableData+TFEasyCoder.m in Sources */,
 				CD1676381DC87BD000969C21 /* UIDevice+TFEasyCoder.m in Sources */,
 				CD1675FB1DC87BD000969C21 /* NSURLCache+TFEasyCoder.m in Sources */,
-				CD1675B71DC87BCF00969C21 /* NSMessagePort+TFEasyCoder.m in Sources */,
 				CD16764D1DC87BD000969C21 /* UIImagePickerController+TFEasyCoder.m in Sources */,
 				CD1675A01DC87BCF00969C21 /* NSHTTPURLResponse+TFEasyCoder.m in Sources */,
 				CD1676BA1DC87BD000969C21 /* UIWindow+TFEasyCoder.m in Sources */,
@@ -2152,7 +2141,6 @@
 				CD1675EE1DC87BD000969C21 /* NSStringDrawingContext+TFEasyCoder.m in Sources */,
 				CD1676421DC87BD000969C21 /* UIEvent+TFEasyCoder.m in Sources */,
 				CD1676261DC87BD000969C21 /* UIBezierPath+TFEasyCoder.m in Sources */,
-				CD1675B41DC87BCF00969C21 /* NSMachPort+TFEasyCoder.m in Sources */,
 				CD1676151DC87BD000969C21 /* UIAccessibilityCustomAction+TFEasyCoder.m in Sources */,
 				CD1675E61DC87BD000969C21 /* NSScanner+TFEasyCoder.m in Sources */,
 				CD1675691DC87BCF00969C21 /* CATextLayer+TFEasyCoder.m in Sources */,

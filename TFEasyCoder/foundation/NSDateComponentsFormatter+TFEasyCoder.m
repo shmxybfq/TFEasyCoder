@@ -50,4 +50,7 @@ TF_EC_CHAIN_PROP_IMP(NSDateComponentsFormatter ,long long,accessibilityNavigatio
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(NSDateComponentsFormatter);
+
+
 @end

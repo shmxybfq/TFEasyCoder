@@ -39,4 +39,7 @@ TF_EC_CHAIN_PROP_IMP(NSDecimalNumberHandler ,long long,accessibilityNavigationSt
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(NSDecimalNumberHandler);
+
+
 @end

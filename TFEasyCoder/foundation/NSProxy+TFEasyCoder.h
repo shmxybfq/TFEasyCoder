@@ -19,4 +19,7 @@ TF_EC_MINSTANCE_INT(NSProxy,NSProxy *);
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(NSProxy);
+
+
 @end

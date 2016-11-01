@@ -66,4 +66,7 @@ TF_EC_CHAIN_PROP_INT(UICollectionViewController ,long long,accessibilityNavigati
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UICollectionViewController);
+
+
 @end

@@ -40,4 +40,7 @@ TF_EC_CHAIN_PROP_IMP(UICollectionViewLayoutInvalidationContext ,long long,access
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UICollectionViewLayoutInvalidationContext);
+
+
 @end

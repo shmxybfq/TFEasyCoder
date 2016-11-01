@@ -44,4 +44,7 @@ TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,long long,accessibili
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIPercentDrivenInteractiveTransition);
+
+
 @end

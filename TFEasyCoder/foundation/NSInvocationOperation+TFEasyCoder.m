@@ -44,4 +44,7 @@ TF_EC_CHAIN_PROP_IMP(NSInvocationOperation ,long long,accessibilityNavigationSty
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(NSInvocationOperation);
+
+
 @end

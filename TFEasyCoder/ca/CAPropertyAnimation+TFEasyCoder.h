@@ -56,4 +56,7 @@ TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,long long,accessibilityNavigationStyle
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(CAPropertyAnimation);
+
+
 @end

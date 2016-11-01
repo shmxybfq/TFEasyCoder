@@ -86,4 +86,7 @@ TF_EC_CHAIN_PROP_IMP(UIImagePickerController ,long long,accessibilityNavigationS
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIImagePickerController);
+
+
 @end

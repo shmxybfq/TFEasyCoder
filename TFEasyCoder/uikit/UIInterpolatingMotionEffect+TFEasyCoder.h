@@ -43,4 +43,7 @@ TF_EC_CHAIN_PROP_INT(UIInterpolatingMotionEffect ,long long,accessibilityNavigat
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIInterpolatingMotionEffect);
+
+
 @end

@@ -65,4 +65,7 @@ TF_EC_CHAIN_PROP_IMP(UIActivityViewController ,long long,accessibilityNavigation
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIActivityViewController);
+
+
 @end

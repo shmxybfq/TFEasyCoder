@@ -50,4 +50,7 @@ TF_EC_CHAIN_PROP_IMP(UISimpleTextPrintFormatter ,long long,accessibilityNavigati
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UISimpleTextPrintFormatter);
+
+
 @end

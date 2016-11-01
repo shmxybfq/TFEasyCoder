@@ -39,4 +39,7 @@ TF_EC_CHAIN_PROP_IMP(UIFocusAnimationCoordinator ,long long,accessibilityNavigat
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIFocusAnimationCoordinator);
+
+
 @end

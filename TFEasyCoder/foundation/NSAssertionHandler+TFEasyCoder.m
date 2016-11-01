@@ -39,4 +39,7 @@ TF_EC_CHAIN_PROP_IMP(NSAssertionHandler ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(NSAssertionHandler);
+
+
 @end

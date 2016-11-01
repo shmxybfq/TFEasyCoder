@@ -39,4 +39,7 @@ TF_EC_CHAIN_PROP_IMP(NSDictionary ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(NSDictionary);
+
+
 @end

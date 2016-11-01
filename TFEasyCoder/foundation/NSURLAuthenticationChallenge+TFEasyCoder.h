@@ -42,4 +42,7 @@ TF_EC_CHAIN_PROP_INT(NSURLAuthenticationChallenge ,long long,accessibilityNaviga
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(NSURLAuthenticationChallenge);
+
+
 @end

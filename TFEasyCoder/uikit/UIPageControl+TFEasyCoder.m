@@ -62,4 +62,7 @@ TF_EC_CHAIN_PROP_IMP(UIPageControl ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIPageControl);
+
+
 @end

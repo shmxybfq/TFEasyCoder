@@ -46,4 +46,7 @@ TF_EC_CHAIN_PROP_IMP(UISearchDisplayController ,long long,accessibilityNavigatio
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UISearchDisplayController);
+
+
 @end

@@ -42,4 +42,7 @@ TF_EC_CHAIN_PROP_INT(NSURLConnection ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(NSURLConnection);
+
+
 @end

@@ -53,4 +53,7 @@ TF_EC_CHAIN_PROP_IMP(UIActivityIndicatorView ,long long,accessibilityNavigationS
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIActivityIndicatorView);
+
+
 @end

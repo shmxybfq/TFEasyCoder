@@ -92,4 +92,7 @@ TF_EC_CHAIN_PROP_IMP(CATiledLayer ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(CATiledLayer);
+
+
 @end

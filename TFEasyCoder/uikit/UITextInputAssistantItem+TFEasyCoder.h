@@ -46,4 +46,7 @@ TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,long long,accessibilityNavigation
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UITextInputAssistantItem);
+
+
 @end

@@ -39,4 +39,7 @@ TF_EC_CHAIN_PROP_IMP(NSUbiquitousKeyValueStore ,long long,accessibilityNavigatio
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(NSUbiquitousKeyValueStore);
+
+
 @end

@@ -39,4 +39,7 @@ TF_EC_CHAIN_PROP_IMP(UITextInputStringTokenizer ,long long,accessibilityNavigati
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UITextInputStringTokenizer);
+
+
 @end

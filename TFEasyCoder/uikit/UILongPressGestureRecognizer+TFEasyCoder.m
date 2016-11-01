@@ -50,4 +50,7 @@ TF_EC_CHAIN_PROP_IMP(UILongPressGestureRecognizer ,long long,accessibilityNaviga
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UILongPressGestureRecognizer);
+
+
 @end

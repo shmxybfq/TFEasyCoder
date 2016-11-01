@@ -39,4 +39,7 @@ TF_EC_CHAIN_PROP_IMP(NSMetadataQueryAttributeValueTuple ,long long,accessibility
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(NSMetadataQueryAttributeValueTuple);
+
+
 @end

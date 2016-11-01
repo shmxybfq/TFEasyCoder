@@ -44,4 +44,7 @@ TF_EC_CHAIN_PROP_INT(UIMutableUserNotificationCategory ,long long,accessibilityN
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIMutableUserNotificationCategory);
+
+
 @end

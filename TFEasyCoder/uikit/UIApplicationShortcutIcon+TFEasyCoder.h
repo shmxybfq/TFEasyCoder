@@ -41,4 +41,7 @@ TF_EC_CHAIN_PROP_INT(UIApplicationShortcutIcon ,long long,accessibilityNavigatio
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIApplicationShortcutIcon);
+
+
 @end

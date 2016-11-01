@@ -45,4 +45,7 @@ TF_EC_CHAIN_PROP_INT(NSPointerFunctions ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(NSPointerFunctions);
+
+
 @end

@@ -67,4 +67,7 @@ TF_EC_CHAIN_PROP_INT(UISlider ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UISlider);
+
+
 @end

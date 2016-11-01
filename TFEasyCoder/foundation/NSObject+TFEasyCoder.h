@@ -34,4 +34,7 @@ TF_EC_CHAIN_PROP_INT(NSObject ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(NSObject);
+
+
 @end

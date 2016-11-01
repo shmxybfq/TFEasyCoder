@@ -40,4 +40,7 @@ TF_EC_CHAIN_PROP_IMP(NSLayoutXAxisAnchor ,long long,accessibilityNavigationStyle
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(NSLayoutXAxisAnchor);
+
+
 @end

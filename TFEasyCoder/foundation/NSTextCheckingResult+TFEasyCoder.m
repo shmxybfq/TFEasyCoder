@@ -39,4 +39,7 @@ TF_EC_CHAIN_PROP_IMP(NSTextCheckingResult ,long long,accessibilityNavigationStyl
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(NSTextCheckingResult);
+
+
 @end

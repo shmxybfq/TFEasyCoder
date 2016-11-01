@@ -48,4 +48,7 @@ TF_EC_CHAIN_PROP_IMP(UIPanGestureRecognizer ,long long,accessibilityNavigationSt
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIPanGestureRecognizer);
+
+
 @end

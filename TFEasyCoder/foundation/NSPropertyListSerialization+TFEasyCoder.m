@@ -39,4 +39,7 @@ TF_EC_CHAIN_PROP_IMP(NSPropertyListSerialization ,long long,accessibilityNavigat
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(NSPropertyListSerialization);
+
+
 @end

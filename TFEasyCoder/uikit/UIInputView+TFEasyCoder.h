@@ -54,4 +54,7 @@ TF_EC_CHAIN_PROP_INT(UIInputView ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIInputView);
+
+
 @end

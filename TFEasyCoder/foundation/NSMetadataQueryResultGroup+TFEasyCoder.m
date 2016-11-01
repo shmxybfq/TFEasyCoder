@@ -39,4 +39,7 @@ TF_EC_CHAIN_PROP_IMP(NSMetadataQueryResultGroup ,long long,accessibilityNavigati
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(NSMetadataQueryResultGroup);
+
+
 @end

@@ -51,4 +51,7 @@ TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,long long,accessibilityNavigationSt
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIPanGestureRecognizer);
+
+
 @end

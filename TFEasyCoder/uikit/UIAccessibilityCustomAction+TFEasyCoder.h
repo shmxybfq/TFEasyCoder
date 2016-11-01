@@ -44,4 +44,7 @@ TF_EC_CHAIN_PROP_INT(UIAccessibilityCustomAction ,long long,accessibilityNavigat
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIAccessibilityCustomAction);
+
+
 @end

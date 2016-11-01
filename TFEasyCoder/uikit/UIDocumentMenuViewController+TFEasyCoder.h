@@ -64,4 +64,7 @@ TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,long long,accessibilityNaviga
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIDocumentMenuViewController);
+
+
 @end

@@ -42,4 +42,7 @@ TF_EC_CHAIN_PROP_INT(UICollectionViewLayout ,long long,accessibilityNavigationSt
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UICollectionViewLayout);
+
+
 @end

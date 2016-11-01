@@ -54,4 +54,7 @@ TF_EC_CHAIN_PROP_IMP(UILocalNotification ,long long,accessibilityNavigationStyle
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UILocalNotification);
+
+
 @end

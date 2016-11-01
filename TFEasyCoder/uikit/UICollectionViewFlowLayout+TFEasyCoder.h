@@ -51,4 +51,7 @@ TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,long long,accessibilityNavigati
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UICollectionViewFlowLayout);
+
+
 @end

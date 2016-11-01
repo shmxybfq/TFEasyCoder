@@ -45,4 +45,7 @@ TF_EC_CHAIN_PROP_INT(NSUndoManager ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(NSUndoManager);
+
+
 @end

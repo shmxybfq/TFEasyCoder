@@ -40,4 +40,7 @@ TF_EC_CHAIN_PROP_IMP(UIPrinterPickerController ,long long,accessibilityNavigatio
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIPrinterPickerController);
+
+
 @end

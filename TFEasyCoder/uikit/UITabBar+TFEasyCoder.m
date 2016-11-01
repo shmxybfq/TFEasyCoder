@@ -68,4 +68,7 @@ TF_EC_CHAIN_PROP_IMP(UITabBar ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UITabBar);
+
+
 @end

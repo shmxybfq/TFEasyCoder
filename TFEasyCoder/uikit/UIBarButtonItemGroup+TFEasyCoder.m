@@ -42,4 +42,7 @@ TF_EC_CHAIN_PROP_IMP(UIBarButtonItemGroup ,long long,accessibilityNavigationStyl
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIBarButtonItemGroup);
+
+
 @end

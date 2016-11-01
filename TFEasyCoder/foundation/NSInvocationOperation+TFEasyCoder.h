@@ -51,4 +51,7 @@ TF_EC_CHAIN_PROP_INT(NSInvocationOperation ,long long,accessibilityNavigationSty
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(NSInvocationOperation);
+
+
 @end

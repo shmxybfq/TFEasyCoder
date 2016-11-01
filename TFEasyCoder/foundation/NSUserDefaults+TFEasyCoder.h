@@ -42,4 +42,7 @@ TF_EC_CHAIN_PROP_INT(NSUserDefaults ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(NSUserDefaults);
+
+
 @end

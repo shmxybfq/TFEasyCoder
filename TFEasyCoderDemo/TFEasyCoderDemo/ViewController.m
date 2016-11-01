@@ -10,9 +10,12 @@
 #import "TFEasyCoder.h"
 
 @interface ViewController ()
-
+{
+    NSString *_wuwuw;
+}
 @property (nonatomic,strong)UILabel  *titleLabel;
 @property (nonatomic,strong)UIButton *actionButton;
+@property (nonatomic,  copy,setter=hahaha:)NSString *testvalue;
 
 
 @end
@@ -33,9 +36,14 @@
     [super viewDidLoad];
 
     
- 
     
-
+    
+    
+ 
+    NSLog(@">>>>>>:%@",_wuwuw);
+    [NSObject tf_setTargetValue:self withValue:@"xxx" forKey:@"wuwuw"];
+    NSLog(@">>>>>>:%@",_wuwuw);
+    
 //    __weak typeof(self) weakSelf = self;
 //    [UILabel easyCoder:^(UILabel *ins) {
 //        
@@ -65,6 +73,10 @@
             .set_textColor([UIColor brownColor])
             .set_text(@"哈哈")
             .set_font([UIFont systemFontOfSize:14.0])
+            .set_ValueKey(@"",@"")
+            .set_ValueKey(@"",@"")
+            .set_ValueKey(@"",@"")
+            .set_ValueKey(@"",@"")
             .set_backgroundColor([UIColor redColor]);
             
         }];

@@ -41,4 +41,7 @@ TF_EC_CHAIN_PROP_IMP(NSInputStream ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(NSInputStream);
+
+
 @end

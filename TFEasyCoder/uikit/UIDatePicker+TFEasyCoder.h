@@ -69,4 +69,7 @@ TF_EC_CHAIN_PROP_INT(UIDatePicker ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIDatePicker);
+
+
 @end

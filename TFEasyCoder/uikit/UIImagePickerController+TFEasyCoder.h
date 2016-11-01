@@ -84,4 +84,7 @@ TF_EC_CHAIN_PROP_INT(UIImagePickerController ,long long,accessibilityNavigationS
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIImagePickerController);
+
+
 @end

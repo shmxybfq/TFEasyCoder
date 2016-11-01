@@ -40,4 +40,7 @@ TF_EC_CHAIN_PROP_IMP(UIInterpolatingMotionEffect ,long long,accessibilityNavigat
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIInterpolatingMotionEffect);
+
+
 @end

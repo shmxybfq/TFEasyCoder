@@ -70,4 +70,7 @@ TF_EC_CHAIN_PROP_INT(UISplitViewController ,long long,accessibilityNavigationSty
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UISplitViewController);
+
+
 @end

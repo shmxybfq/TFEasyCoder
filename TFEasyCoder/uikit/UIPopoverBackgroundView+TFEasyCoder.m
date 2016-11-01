@@ -51,4 +51,7 @@ TF_EC_CHAIN_PROP_IMP(UIPopoverBackgroundView ,long long,accessibilityNavigationS
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIPopoverBackgroundView);
+
+
 @end

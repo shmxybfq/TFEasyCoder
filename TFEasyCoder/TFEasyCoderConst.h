@@ -86,6 +86,22 @@ return weakSelf;\
 };\
 }
 
+/**
+ *  
+ *
+ *  @param CLASS <#CLASS description#>
+ *
+ *  @return <#return value description#>
+ */
+#define TF_EC_CHAIN_VALUEKYE_INT(CLASS) -(CLASS *(^)(id value,NSString *key))set_ValueKey;
+#define TF_EC_CHAIN_VALUEKYE_IMP(CLASS)\
+-(CLASS *(^)(id value,NSString *key))set_ValueKey{\
+__weak typeof(self) weakSelf = self;\
+return ^(id value,NSString *key){\
+[NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];\
+return weakSelf;\
+};\
+}
 
 
 

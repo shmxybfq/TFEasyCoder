@@ -42,4 +42,7 @@ TF_EC_CHAIN_PROP_IMP(NSURLSessionDataTask ,long long,accessibilityNavigationStyl
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(NSURLSessionDataTask);
+
+
 @end

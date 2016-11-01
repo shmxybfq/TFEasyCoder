@@ -44,4 +44,7 @@ TF_EC_CHAIN_PROP_INT(UIMenuItem ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIMenuItem);
+
+
 @end

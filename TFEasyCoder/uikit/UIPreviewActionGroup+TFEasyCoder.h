@@ -42,4 +42,7 @@ TF_EC_CHAIN_PROP_INT(UIPreviewActionGroup ,long long,accessibilityNavigationStyl
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIPreviewActionGroup);
+
+
 @end

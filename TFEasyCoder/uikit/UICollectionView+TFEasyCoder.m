@@ -81,4 +81,7 @@ TF_EC_CHAIN_PROP_IMP(UICollectionView ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UICollectionView);
+
+
 @end

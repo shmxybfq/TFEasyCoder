@@ -82,4 +82,7 @@ TF_EC_CHAIN_PROP_IMP(CAEmitterCell ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(CAEmitterCell);
+
+
 @end

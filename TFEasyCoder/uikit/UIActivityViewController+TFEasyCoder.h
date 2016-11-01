@@ -63,4 +63,7 @@ TF_EC_CHAIN_PROP_INT(UIActivityViewController ,long long,accessibilityNavigation
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIActivityViewController);
+
+
 @end

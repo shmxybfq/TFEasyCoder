@@ -42,4 +42,7 @@ TF_EC_CHAIN_PROP_INT(UIUserNotificationSettings ,long long,accessibilityNavigati
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIUserNotificationSettings);
+
+
 @end

@@ -104,4 +104,7 @@ TF_EC_CHAIN_PROP_INT(UITextView ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UITextView);
+
+
 @end

@@ -44,4 +44,7 @@ TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutInvalidationContext ,long long,access
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UICollectionViewLayoutInvalidationContext);
+
+
 @end

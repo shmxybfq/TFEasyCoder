@@ -49,4 +49,7 @@ TF_EC_CHAIN_PROP_INT(UIBarItem ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIBarItem);
+
+
 @end

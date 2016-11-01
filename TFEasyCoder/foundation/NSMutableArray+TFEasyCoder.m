@@ -40,4 +40,7 @@ TF_EC_CHAIN_PROP_IMP(NSMutableArray ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(NSMutableArray);
+
+
 @end

@@ -84,4 +84,7 @@ TF_EC_CHAIN_PROP_INT(CAEmitterCell ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(CAEmitterCell);
+
+
 @end

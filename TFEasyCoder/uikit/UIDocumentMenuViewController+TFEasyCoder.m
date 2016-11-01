@@ -65,4 +65,7 @@ TF_EC_CHAIN_PROP_IMP(UIDocumentMenuViewController ,long long,accessibilityNaviga
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIDocumentMenuViewController);
+
+
 @end

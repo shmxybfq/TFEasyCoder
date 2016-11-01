@@ -38,4 +38,7 @@ TF_EC_CHAIN_PROP_IMP(UIColor ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIColor);
+
+
 @end

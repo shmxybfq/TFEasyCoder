@@ -49,4 +49,7 @@ TF_EC_CHAIN_PROP_INT(UIMutableUserNotificationAction ,long long,accessibilityNav
 
 
 
+TF_EC_CHAIN_VALUEKYE_INT(UIMutableUserNotificationAction);
+
+
 @end

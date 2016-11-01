@@ -56,4 +56,7 @@ TF_EC_CHAIN_PROP_IMP(UIProgressView ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIProgressView);
+
+
 @end

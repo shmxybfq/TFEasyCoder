@@ -47,4 +47,7 @@ TF_EC_CHAIN_PROP_IMP(UIRotationGestureRecognizer ,long long,accessibilityNavigat
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(UIRotationGestureRecognizer);
+
+
 @end

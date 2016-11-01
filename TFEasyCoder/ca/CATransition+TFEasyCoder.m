@@ -53,4 +53,7 @@ TF_EC_CHAIN_PROP_IMP(CATransition ,long long,accessibilityNavigationStyle)
 
 
 
+TF_EC_CHAIN_VALUEKYE_IMP(CATransition);
+
+
 @end
