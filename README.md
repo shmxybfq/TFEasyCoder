@@ -17,8 +17,8 @@ ___
 ## Introduction
 
 一个可以用copy和paste来提高编程效率的框架:
-<br/>为UIKit和Foundation的所有公开类添加了快速创建对象的方法
-<br/>为以上所有类的所有非私有属性添加了链式编程方法.
+* 为UIKit和Foundation的所有公开类添加了快速创建对象的方法
+* 为以上所有类的所有非私有属性添加了链式编程方法.
 
 ## What can do
 
