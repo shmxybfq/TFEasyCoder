@@ -31,7 +31,7 @@
     if (sel)ins = [NSObject tf_executeSelector:sel
                                     withTarget:[cls alloc]
                                withParamsArray:param];
-    else ins =[[cls alloc]init];    
+    else ins =[[cls alloc]init];
     TF_WEAK_OBJ(ins, weakIns);
     if (block)
         block(weakIns);
@@ -43,24 +43,52 @@
 
 
 
-+(void)tf_setTargetValue:(id)target withValue:(id)value forKey:(NSString *)key
++(void)tf_setTargetValue:(id)_target withValue:(id)_value forKey:(NSString *)_key
 {
-    TFAssertParamNil(target, @"赋值目标不能为空");
-    TFAssertParamNil(value , @"赋值目标值不能为空");
-    TFAssertParamNil(key   , @"赋值目标健不能为空");
-    if (![key hasPrefix:@"_"])
-        key = [@"_" stringByAppendingString:key];
-    
-    Ivar ivar = class_getInstanceVariable([target class], [key UTF8String]);
+    NSCAssert(_target,@"tf_setTargetValue: target can't be nil!");
+    NSCAssert(_value,@"tf_setTargetValue: value can't be nil!");
+    NSCAssert(_key,@"tf_setTargetValue: key can't be nil!");
+ 
+    Ivar ivar = class_getInstanceVariable([_target class], [[_key hasPrefix:@"_"]?_key:[@"_" stringByAppendingString:_key] UTF8String]);
     if (!ivar) {
-        NSString *r = [NSString stringWithFormat:@"%@ 不存在变量:%@",[target class],key];
-        TFAssertParamNil(ivar, r);
+        NSCAssert(_key,@"tf_setTargetValue: target:%@ don't contain attribute:%@",[_target class],_key);
+    }else{
+        
+        NSString *pro_setter = [NSString stringWithFormat:@"set%@",firstCharUpper(_key)];
+        BOOL responds = [_target respondsToSelector:NSSelectorFromString(pro_setter)];
+        if (responds) {
+            [NSObject tf_executeSelector:NSSelectorFromString(pro_setter)
+                              withTarget:_target
+                         withParamsArray:@[_value]];
+            return;
+        }else{
+            objc_property_t property = class_getProperty([_target class],[_key cStringUsingEncoding:NSASCIIStringEncoding]);
+            if (property && property_getAttributes(property)) {
+                
+                NSString *att_string = [NSString stringWithUTF8String:property_getAttributes(property)];
+                NSArray  *att_array = [att_string componentsSeparatedByString:@","];
+                
+                for (NSString *type in att_array) {
+                    if ([type hasPrefix:@"S"]) {
+                        pro_setter = [type substringFromIndex:1];
+                        BOOL responds = [_target respondsToSelector:NSSelectorFromString(pro_setter)];
+                        if (responds) {
+                            [NSObject tf_executeSelector:NSSelectorFromString(pro_setter)
+                                              withTarget:_target
+                                         withParamsArray:@[_value]];
+                        }else[_target setValue:_value forKey:_key];
+                        return;
+                    }
+                }
+                [_target setValue:_value forKey:_key];return;
+            }else[_target setValue:_value forKey:_key];return;
+        }
     }
-    [target setValue:value forKey:key];
+    [_target setValue:_value forKey:_key];
 }
 
 
-+(NSValue *)tf_executeSelector:(SEL)_sel withTarget:(id)_target  withParams:(id)params,...
++(id)tf_executeSelector:(SEL)_sel withTarget:(id)_target  withParams:(id)params,...
 {
     id arg;
     va_list _p_list;//定义一个指向个数可变的参数列表指针
@@ -94,11 +122,11 @@
 
 
 
-+(NSValue *)tf_executeSelector:(SEL)_sel withTarget:(id)_target  withParamsArray:(NSArray*)_params
++(id)tf_executeSelector:(SEL)_sel withTarget:(id)_target  withParamsArray:(NSArray*)_params
 {
     NSCAssert(_target,@"tf_executeSelector: target can't be nil!");
     NSCAssert(_sel,@"tf_executeSelector: selector can't be nil!");
-
+    
     Class cls = [_target class];
     //const char *cls_name = class_getName(cls);
     //const char *sel_name = sel_getName(_sel);
@@ -115,7 +143,7 @@
     NSMethodSignature  *signature = [cls instanceMethodSignatureForSelector:_sel];
     //check sel exsit
     NSCAssert(signature, @"unrecognized selector %@ for instance %@", selToString(_sel), _target);
-
+    
     //get NSInvocation
     //其实NSInvocation就是将一个方法变成一个对象
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
@@ -171,7 +199,7 @@ TYPE value = [num_param SELECTOR];\
                 TF_EXECUTE_PARAM_CASE('f', float, floatValue)
                 TF_EXECUTE_PARAM_CASE('d', double, doubleValue)
                 TF_EXECUTE_PARAM_CASE('B', BOOL, boolValue)
-              
+                
             case ':':{
                 
                 BOOL can_parse = [param_sel isKindOfClass:[NSString class]];
@@ -301,5 +329,17 @@ static inline NSNumber *numberFromString(NSString *string){
     NSNumber *number = [numberFormatter numberFromString:string];
     return number;
 }
+
+static inline NSString *firstCharUpper(NSString *string){
+    
+    NSMutableString *mu_string = [NSMutableString string];
+    [mu_string appendString:[NSString stringWithFormat:@"%c", [string characterAtIndex:0]].uppercaseString];
+    if (string.length >= 2) [mu_string appendString:[string substringFromIndex:1]];
+    return [NSString stringWithFormat:@"%@",mu_string];
+    
+}
+
+
+
 
 @end
