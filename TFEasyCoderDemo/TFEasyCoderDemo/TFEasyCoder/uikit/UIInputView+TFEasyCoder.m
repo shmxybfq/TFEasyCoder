@@ -27,6 +27,8 @@ TF_EC_CHAIN_PROP_IMP(UIInputView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UIInputView ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UIInputView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UIInputView ,CGPoint,center)
+TF_EC_CHAIN_PROP_IMP(UIInputView ,CGRect,frame)
+TF_EC_CHAIN_PROP_IMP(UIInputView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_IMP(UIInputView ,NSUserActivity *,userActivity)
 //superclass pros NSObject

@@ -19,7 +19,7 @@ TF_EC_MINSTANCE_INT(UINavigationBar,UINavigationBar *);
 
 
 TF_EC_CHAIN_PROP_INT(UINavigationBar ,long long,barStyle);
-TF_EC_CHAIN_PROP_INT(UINavigationBar ,id<UINavigationBarDelegate> *,delegate);
+TF_EC_CHAIN_PROP_INT(UINavigationBar ,id<UINavigationBarDelegate>,delegate);
 TF_EC_CHAIN_PROP_INT(UINavigationBar ,BOOL,translucent);
 TF_EC_CHAIN_PROP_INT(UINavigationBar ,NSArray *,items);
 TF_EC_CHAIN_PROP_INT(UINavigationBar ,UIColor *,tintColor);
@@ -38,6 +38,8 @@ TF_EC_CHAIN_PROP_INT(UINavigationBar ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UINavigationBar ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UINavigationBar ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UINavigationBar ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UINavigationBar ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UINavigationBar ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UINavigationBar ,NSUserActivity *,userActivity);
 //superclass pros NSObject

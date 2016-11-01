@@ -46,6 +46,8 @@ TF_EC_CHAIN_PROP_INT(UIButton ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UIButton ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UIButton ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UIButton ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UIButton ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UIButton ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UIButton ,NSUserActivity *,userActivity);
 //superclass pros NSObject

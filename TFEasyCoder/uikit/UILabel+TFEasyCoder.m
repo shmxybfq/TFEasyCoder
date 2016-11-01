@@ -9,6 +9,10 @@
 #import "UILabel+TFEasyCoder.h"
 #import "NSObject+TFExecute.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
+
 @implementation UILabel (TFEasyCoder)
 
 TF_EC_MSTATIC_IMP(UILabel, UILabel *);
@@ -25,7 +29,7 @@ TF_EC_CHAIN_PROP_IMP(UILabel ,long long,lineBreakMode)
 TF_EC_CHAIN_PROP_IMP(UILabel ,NSAttributedString *,attributedText)
 TF_EC_CHAIN_PROP_IMP(UILabel ,UIColor *,highlightedTextColor)
 TF_EC_CHAIN_PROP_IMP(UILabel ,BOOL,highlighted)
-TF_EC_CHAIN_PROP_IMP(UILabel ,BOOL,userInteractionEnabled)
+//TF_EC_CHAIN_PROP_IMP(UILabel ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UILabel ,BOOL,enabled)
 TF_EC_CHAIN_PROP_IMP(UILabel ,long long,numberOfLines)
 TF_EC_CHAIN_PROP_IMP(UILabel ,BOOL,adjustsFontSizeToFitWidth)
@@ -46,6 +50,8 @@ TF_EC_CHAIN_PROP_IMP(UILabel ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UILabel ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UILabel ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UILabel ,CGPoint,center)
+TF_EC_CHAIN_PROP_IMP(UILabel ,CGRect,frame)
+TF_EC_CHAIN_PROP_IMP(UILabel ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_IMP(UILabel ,NSUserActivity *,userActivity)
 //superclass pros NSObject

@@ -74,6 +74,8 @@ TF_EC_CHAIN_PROP_IMP(UITableView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UITableView ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UITableView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UITableView ,CGPoint,center)
+TF_EC_CHAIN_PROP_IMP(UITableView ,CGRect,frame)
+TF_EC_CHAIN_PROP_IMP(UITableView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_IMP(UITableView ,NSUserActivity *,userActivity)
 //superclass pros NSObject

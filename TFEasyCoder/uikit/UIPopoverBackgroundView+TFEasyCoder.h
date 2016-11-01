@@ -30,6 +30,8 @@ TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UIPopoverBackgroundView ,NSUserActivity *,userActivity);
 //superclass pros NSObject

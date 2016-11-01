@@ -10,6 +10,10 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
+
 TF_EC_BLOCK(UIStoryboardPopoverSegue,UIStoryboardPopoverSegue *);
 
 @interface UIStoryboardPopoverSegue (TFEasyCoder)

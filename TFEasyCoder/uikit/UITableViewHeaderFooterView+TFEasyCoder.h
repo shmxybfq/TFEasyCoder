@@ -30,6 +30,8 @@ TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,NSUserActivity *,userActivity);
 //superclass pros NSObject

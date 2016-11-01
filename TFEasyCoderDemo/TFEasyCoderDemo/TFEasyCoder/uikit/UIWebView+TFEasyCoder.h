@@ -43,6 +43,8 @@ TF_EC_CHAIN_PROP_INT(UIWebView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UIWebView ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UIWebView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UIWebView ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UIWebView ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UIWebView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UIWebView ,NSUserActivity *,userActivity);
 //superclass pros NSObject

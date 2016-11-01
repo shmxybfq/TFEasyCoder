@@ -9,6 +9,10 @@
 #import "UIAlertController+TFEasyCoder.h"
 #import "NSObject+TFExecute.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
+
 @implementation UIAlertController (TFEasyCoder)
 
 TF_EC_MSTATIC_IMP(UIAlertController, UIAlertController *);
@@ -29,7 +33,7 @@ TF_EC_CHAIN_PROP_IMP(UIAlertController ,UITabBarItem *,tabBarItem)
 TF_EC_CHAIN_PROP_IMP(UIAlertController ,BOOL,hidesBottomBarWhenPushed)
 TF_EC_CHAIN_PROP_IMP(UIAlertController ,id<UIViewControllerTransitioningDelegate>  ,transitioningDelegate)
 TF_EC_CHAIN_PROP_IMP(UIAlertController ,UIView *,view)
-TF_EC_CHAIN_PROP_IMP(UIAlertController ,NSString *,title)
+//TF_EC_CHAIN_PROP_IMP(UIAlertController ,NSString *,title)
 TF_EC_CHAIN_PROP_IMP(UIAlertController ,BOOL,definesPresentationContext)
 TF_EC_CHAIN_PROP_IMP(UIAlertController ,BOOL,providesPresentationContextTransitionStyle)
 TF_EC_CHAIN_PROP_IMP(UIAlertController ,long long,modalTransitionStyle)

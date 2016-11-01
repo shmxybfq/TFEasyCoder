@@ -17,9 +17,6 @@ TF_EC_MINSTANCE_IMP(UIAcceleration, UIAcceleration *);
 
 
 
-
-
-
 //superclass pros NSObject
 TF_EC_CHAIN_PROP_IMP(UIAcceleration ,NSArray *,accessibilityElements)
 TF_EC_CHAIN_PROP_IMP(UIAcceleration ,NSArray *,accessibilityCustomActions)

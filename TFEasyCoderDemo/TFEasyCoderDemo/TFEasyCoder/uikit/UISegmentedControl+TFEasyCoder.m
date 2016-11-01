@@ -9,14 +9,16 @@
 #import "UISegmentedControl+TFEasyCoder.h"
 #import "NSObject+TFExecute.h"
 
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
+
 @implementation UISegmentedControl (TFEasyCoder)
 
 TF_EC_MSTATIC_IMP(UISegmentedControl, UISegmentedControl *);
 TF_EC_MINSTANCE_IMP(UISegmentedControl, UISegmentedControl *);
 
-
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 
 TF_EC_CHAIN_PROP_IMP(UISegmentedControl ,long long,segmentedControlStyle)
@@ -40,6 +42,8 @@ TF_EC_CHAIN_PROP_IMP(UISegmentedControl ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UISegmentedControl ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UISegmentedControl ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UISegmentedControl ,CGPoint,center)
+TF_EC_CHAIN_PROP_IMP(UISegmentedControl ,CGRect,frame)
+TF_EC_CHAIN_PROP_IMP(UISegmentedControl ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_IMP(UISegmentedControl ,NSUserActivity *,userActivity)
 //superclass pros NSObject

@@ -39,7 +39,7 @@ TF_EC_CHAIN_PROP_INT(UIImagePickerController ,long long,cameraFlashMode);
 TF_EC_CHAIN_PROP_INT(UIImagePickerController ,NSArray *,viewControllers)
 TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,navigationBarHidden)
 TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,toolbarHidden)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,id<UINavigationControllerDelegate>  ,delegate)
+//TF_EC_CHAIN_PROP_INT(UIImagePickerController ,id<UINavigationControllerDelegate>  ,delegate)
 TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,hidesBarsWhenKeyboardAppears)
 TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,hidesBarsOnSwipe)
 TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,hidesBarsWhenVerticallyCompact)

@@ -51,7 +51,7 @@ TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,remembersLastFocusedIndexPath);
 TF_EC_CHAIN_PROP_INT(UITableView ,CGPoint,contentOffset);
 TF_EC_CHAIN_PROP_INT(UITableView ,CGSize,contentSize);
 TF_EC_CHAIN_PROP_INT(UITableView ,UIEdgeInsets,contentInset);
-TF_EC_CHAIN_PROP_INT(UITableView ,id<UIScrollViewDelegate> ,delegate);
+//TF_EC_CHAIN_PROP_INT(UITableView ,id<UIScrollViewDelegate> ,delegate);
 TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,directionalLockEnabled);
 TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,bounces);
 TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,alwaysBounceVertical);
@@ -77,6 +77,8 @@ TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UITableView ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UITableView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UITableView ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UITableView ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UITableView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UITableView ,NSUserActivity *,userActivity);
 //superclass pros NSObject

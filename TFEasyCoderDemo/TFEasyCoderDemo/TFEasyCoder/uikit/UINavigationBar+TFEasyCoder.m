@@ -9,6 +9,7 @@
 #import "UINavigationBar+TFEasyCoder.h"
 #import "NSObject+TFExecute.h"
 
+
 @implementation UINavigationBar (TFEasyCoder)
 
 TF_EC_MSTATIC_IMP(UINavigationBar, UINavigationBar *);
@@ -35,6 +36,8 @@ TF_EC_CHAIN_PROP_IMP(UINavigationBar ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UINavigationBar ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UINavigationBar ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UINavigationBar ,CGPoint,center)
+TF_EC_CHAIN_PROP_IMP(UINavigationBar ,CGRect,frame)
+TF_EC_CHAIN_PROP_IMP(UINavigationBar ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_IMP(UINavigationBar ,NSUserActivity *,userActivity)
 //superclass pros NSObject

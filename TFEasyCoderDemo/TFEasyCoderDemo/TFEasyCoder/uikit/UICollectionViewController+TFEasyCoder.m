@@ -9,6 +9,10 @@
 #import "UICollectionViewController+TFEasyCoder.h"
 #import "NSObject+TFExecute.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
+
 @implementation UICollectionViewController (TFEasyCoder)
 
 TF_EC_MSTATIC_IMP(UICollectionViewController, UICollectionViewController *);

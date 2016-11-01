@@ -30,6 +30,8 @@ TF_EC_CHAIN_PROP_IMP(UIWindow ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UIWindow ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UIWindow ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UIWindow ,CGPoint,center)
+TF_EC_CHAIN_PROP_IMP(UIWindow ,CGRect,frame)
+TF_EC_CHAIN_PROP_IMP(UIWindow ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_IMP(UIWindow ,NSUserActivity *,userActivity)
 //superclass pros NSObject

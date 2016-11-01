@@ -9,6 +9,11 @@
 #import "UITabBar+TFEasyCoder.h"
 #import "NSObject+TFExecute.h"
 
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
+
 @implementation UITabBar (TFEasyCoder)
 
 TF_EC_MSTATIC_IMP(UITabBar, UITabBar *);
@@ -39,6 +44,8 @@ TF_EC_CHAIN_PROP_IMP(UITabBar ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UITabBar ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UITabBar ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UITabBar ,CGPoint,center)
+TF_EC_CHAIN_PROP_IMP(UITabBar ,CGRect,frame)
+TF_EC_CHAIN_PROP_IMP(UITabBar ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_IMP(UITabBar ,NSUserActivity *,userActivity)
 //superclass pros NSObject

@@ -30,6 +30,8 @@ TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,NSUserActivity *,userActivity);
 //superclass pros NSObject

@@ -29,7 +29,7 @@ TF_EC_CHAIN_PROP_IMP(UIPopoverPresentationController ,Class,popoverBackgroundVie
 
 
 //superclass pros UIPresentationController
-TF_EC_CHAIN_PROP_IMP(UIPopoverPresentationController ,id<UIAdaptivePresentationControllerDelegate>  ,delegate)
+//TF_EC_CHAIN_PROP_IMP(UIPopoverPresentationController ,id<UIAdaptivePresentationControllerDelegate>  ,delegate)
 TF_EC_CHAIN_PROP_IMP(UIPopoverPresentationController ,UITraitCollection *,overrideTraitCollection)
 //superclass pros NSObject
 TF_EC_CHAIN_PROP_IMP(UIPopoverPresentationController ,NSArray *,accessibilityElements)

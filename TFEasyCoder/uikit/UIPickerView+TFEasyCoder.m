@@ -29,6 +29,8 @@ TF_EC_CHAIN_PROP_IMP(UIPickerView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UIPickerView ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UIPickerView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UIPickerView ,CGPoint,center)
+TF_EC_CHAIN_PROP_IMP(UIPickerView ,CGRect,frame)
+TF_EC_CHAIN_PROP_IMP(UIPickerView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_IMP(UIPickerView ,NSUserActivity *,userActivity)
 //superclass pros NSObject

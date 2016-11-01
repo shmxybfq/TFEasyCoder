@@ -41,6 +41,8 @@ TF_EC_CHAIN_PROP_INT(UIPageControl ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UIPageControl ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UIPageControl ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UIPageControl ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UIPageControl ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UIPageControl ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UIPageControl ,NSUserActivity *,userActivity);
 //superclass pros NSObject

@@ -32,6 +32,8 @@ TF_EC_CHAIN_PROP_INT(UIStackView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UIStackView ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UIStackView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UIStackView ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UIStackView ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UIStackView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UIStackView ,NSUserActivity *,userActivity);
 //superclass pros NSObject

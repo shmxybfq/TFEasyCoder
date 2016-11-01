@@ -30,7 +30,7 @@ TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,long long,videoQuality);
 TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,NSArray *,viewControllers)
 TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,navigationBarHidden)
 TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,toolbarHidden)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,id<UINavigationControllerDelegate>  ,delegate)
+//TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,id<UINavigationControllerDelegate>  ,delegate)
 TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,hidesBarsWhenKeyboardAppears)
 TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,hidesBarsOnSwipe)
 TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,hidesBarsWhenVerticallyCompact)

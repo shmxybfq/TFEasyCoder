@@ -39,6 +39,8 @@ TF_EC_CHAIN_PROP_INT(UISegmentedControl ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UISegmentedControl ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UISegmentedControl ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UISegmentedControl ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UISegmentedControl ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UISegmentedControl ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UISegmentedControl ,NSUserActivity *,userActivity);
 //superclass pros NSObject

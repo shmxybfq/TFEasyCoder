@@ -53,6 +53,8 @@ TF_EC_CHAIN_PROP_IMP(UISearchBar ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UISearchBar ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UISearchBar ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UISearchBar ,CGPoint,center)
+TF_EC_CHAIN_PROP_IMP(UISearchBar ,CGRect,frame)
+TF_EC_CHAIN_PROP_IMP(UISearchBar ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_IMP(UISearchBar ,NSUserActivity *,userActivity)
 //superclass pros NSObject

@@ -33,6 +33,8 @@ TF_EC_CHAIN_PROP_IMP(UIToolbar ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UIToolbar ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UIToolbar ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UIToolbar ,CGPoint,center)
+TF_EC_CHAIN_PROP_IMP(UIToolbar ,CGRect,frame)
+TF_EC_CHAIN_PROP_IMP(UIToolbar ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_IMP(UIToolbar ,NSUserActivity *,userActivity)
 //superclass pros NSObject

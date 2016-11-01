@@ -32,6 +32,8 @@ TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,NSUserActivity *,userActivity);
 //superclass pros NSObject

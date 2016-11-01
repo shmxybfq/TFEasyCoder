@@ -24,7 +24,7 @@ TF_EC_CHAIN_PROP_INT(UIView ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UIView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UIView ,CGPoint,center)
 TF_EC_CHAIN_PROP_INT(UIView ,CGRect,frame)
-
+TF_EC_CHAIN_PROP_INT(UIView ,UIColor *,backgroundColor)
 
 
 

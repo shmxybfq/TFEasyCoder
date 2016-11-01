@@ -9,6 +9,11 @@
 #import "UIWebView+TFEasyCoder.h"
 #import "NSObject+TFExecute.h"
 
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
+
 @implementation UIWebView (TFEasyCoder)
 
 TF_EC_MSTATIC_IMP(UIWebView, UIWebView *);
@@ -40,6 +45,8 @@ TF_EC_CHAIN_PROP_IMP(UIWebView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UIWebView ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UIWebView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UIWebView ,CGPoint,center)
+TF_EC_CHAIN_PROP_IMP(UIWebView ,CGRect,frame)
+TF_EC_CHAIN_PROP_IMP(UIWebView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_IMP(UIWebView ,NSUserActivity *,userActivity)
 //superclass pros NSObject

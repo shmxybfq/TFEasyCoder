@@ -49,6 +49,8 @@ TF_EC_CHAIN_PROP_IMP(UIScrollView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UIScrollView ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UIScrollView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UIScrollView ,CGPoint,center)
+TF_EC_CHAIN_PROP_IMP(UIScrollView ,CGRect,frame)
+TF_EC_CHAIN_PROP_IMP(UIScrollView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_IMP(UIScrollView ,NSUserActivity *,userActivity)
 //superclass pros NSObject

@@ -9,6 +9,10 @@
 #import "NSStringDrawingContext+TFEasyCoder.h"
 #import "NSObject+TFExecute.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
+
 @implementation NSStringDrawingContext (TFEasyCoder)
 
 TF_EC_MSTATIC_IMP(NSStringDrawingContext, NSStringDrawingContext *);

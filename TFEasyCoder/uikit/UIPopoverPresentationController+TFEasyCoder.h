@@ -31,7 +31,7 @@ TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,Class,popoverBackgroundVie
 
 
 //superclass pros UIPresentationController
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,id<UIAdaptivePresentationControllerDelegate>  ,delegate)
+//TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,id<UIAdaptivePresentationControllerDelegate>  ,delegate)
 TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,UITraitCollection *,overrideTraitCollection)
 //superclass pros NSObject
 TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,NSArray *,accessibilityElements)

@@ -33,6 +33,8 @@ TF_EC_CHAIN_PROP_INT(UIWindow ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UIWindow ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UIWindow ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UIWindow ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UIWindow ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UIWindow ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UIWindow ,NSUserActivity *,userActivity);
 //superclass pros NSObject

@@ -77,6 +77,8 @@ TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UITableView ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UITableView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UITableView ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UITableView ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UITableView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UITableView ,NSUserActivity *,userActivity);
 //superclass pros NSObject

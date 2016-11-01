@@ -9,6 +9,10 @@
 #import "UIVideoEditorController+TFEasyCoder.h"
 #import "NSObject+TFExecute.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
+
 @implementation UIVideoEditorController (TFEasyCoder)
 
 TF_EC_MSTATIC_IMP(UIVideoEditorController, UIVideoEditorController *);
@@ -27,7 +31,7 @@ TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,long long,videoQuality)
 TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,NSArray *,viewControllers)
 TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,navigationBarHidden)
 TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,toolbarHidden)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,id<UINavigationControllerDelegate>  ,delegate)
+//TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,id<UINavigationControllerDelegate>  ,delegate)
 TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,hidesBarsWhenKeyboardAppears)
 TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,hidesBarsOnSwipe)
 TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,hidesBarsWhenVerticallyCompact)

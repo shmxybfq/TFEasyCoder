@@ -21,7 +21,7 @@ TF_EC_CHAIN_PROP_IMP(UIView ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UIView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UIView ,CGPoint,center)
 TF_EC_CHAIN_PROP_IMP(UIView ,CGRect,frame)
-
+TF_EC_CHAIN_PROP_IMP(UIView ,UIColor *,backgroundColor)
 
 
 

@@ -35,6 +35,8 @@ TF_EC_CHAIN_PROP_INT(UIToolbar ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UIToolbar ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UIToolbar ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UIToolbar ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UIToolbar ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UIToolbar ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UIToolbar ,NSUserActivity *,userActivity);
 //superclass pros NSObject

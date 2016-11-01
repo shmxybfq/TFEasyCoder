@@ -35,6 +35,8 @@ TF_EC_CHAIN_PROP_INT(UIProgressView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UIProgressView ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UIProgressView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UIProgressView ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UIProgressView ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UIProgressView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UIProgressView ,NSUserActivity *,userActivity);
 //superclass pros NSObject

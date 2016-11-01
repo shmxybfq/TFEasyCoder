@@ -38,6 +38,8 @@ TF_EC_CHAIN_PROP_IMP(UISwitch ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UISwitch ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UISwitch ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UISwitch ,CGPoint,center)
+TF_EC_CHAIN_PROP_IMP(UISwitch ,CGRect,frame)
+TF_EC_CHAIN_PROP_IMP(UISwitch ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_IMP(UISwitch ,NSUserActivity *,userActivity)
 //superclass pros NSObject

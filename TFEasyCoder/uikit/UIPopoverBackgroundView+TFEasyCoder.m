@@ -27,6 +27,8 @@ TF_EC_CHAIN_PROP_IMP(UIPopoverBackgroundView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UIPopoverBackgroundView ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UIPopoverBackgroundView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UIPopoverBackgroundView ,CGPoint,center)
+TF_EC_CHAIN_PROP_IMP(UIPopoverBackgroundView ,CGRect,frame)
+TF_EC_CHAIN_PROP_IMP(UIPopoverBackgroundView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_IMP(UIPopoverBackgroundView ,NSUserActivity *,userActivity)
 //superclass pros NSObject

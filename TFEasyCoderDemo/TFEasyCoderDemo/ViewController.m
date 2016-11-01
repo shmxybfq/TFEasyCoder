@@ -33,6 +33,7 @@
     [super viewDidLoad];
 
     
+ 
     
 
 //    __weak typeof(self) weakSelf = self;
@@ -52,7 +53,7 @@
 //    }];
 
     
-        __weak typeof(self) weakSelf = self;
+    __weak typeof(self) weakSelf = self;
         [UILabel easyCoder:^(UILabel *ins) {
     
             weakSelf.titleLabel = ins;

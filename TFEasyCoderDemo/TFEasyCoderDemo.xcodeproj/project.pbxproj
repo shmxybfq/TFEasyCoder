@@ -1112,12 +1112,12 @@
 		CD1C75FA1DC7551D002133A0 /* TFEasyCoder */ = {
 			isa = PBXGroup;
 			children = (
-				CD1C75FB1DC7551D002133A0 /* ca */,
-				CD1C762B1DC7551D002133A0 /* foundation */,
-				CD1C77731DC7551E002133A0 /* NSObject+TFExecute.h */,
-				CD1C77741DC7551E002133A0 /* NSObject+TFExecute.m */,
 				CD1C77751DC7551E002133A0 /* TFEasyCoder.h */,
 				CD1C77761DC7551E002133A0 /* TFEasyCoderConst.h */,
+				CD1C77731DC7551E002133A0 /* NSObject+TFExecute.h */,
+				CD1C77741DC7551E002133A0 /* NSObject+TFExecute.m */,
+				CD1C75FB1DC7551D002133A0 /* ca */,
+				CD1C762B1DC7551D002133A0 /* foundation */,
 				CD1C77771DC7551E002133A0 /* uikit */,
 			);
 			path = TFEasyCoder;
@@ -1126,6 +1126,7 @@
 		CD1C75FB1DC7551D002133A0 /* ca */ = {
 			isa = PBXGroup;
 			children = (
+				CD1C760E1DC7551D002133A0 /* CAHeader.h */,
 				CD1C75FC1DC7551D002133A0 /* CAAnimation+TFEasyCoder.h */,
 				CD1C75FD1DC7551D002133A0 /* CAAnimation+TFEasyCoder.m */,
 				CD1C75FE1DC7551D002133A0 /* CAAnimationGroup+TFEasyCoder.h */,
@@ -1144,7 +1145,6 @@
 				CD1C760B1DC7551D002133A0 /* CAEmitterLayer+TFEasyCoder.m */,
 				CD1C760C1DC7551D002133A0 /* CAGradientLayer+TFEasyCoder.h */,
 				CD1C760D1DC7551D002133A0 /* CAGradientLayer+TFEasyCoder.m */,
-				CD1C760E1DC7551D002133A0 /* CAHeader.h */,
 				CD1C760F1DC7551D002133A0 /* CAKeyframeAnimation+TFEasyCoder.h */,
 				CD1C76101DC7551D002133A0 /* CAKeyframeAnimation+TFEasyCoder.m */,
 				CD1C76111DC7551D002133A0 /* CALayer+TFEasyCoder.h */,

@@ -25,6 +25,8 @@ TF_EC_CHAIN_PROP_IMP(UICollectionReusableView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UICollectionReusableView ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UICollectionReusableView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UICollectionReusableView ,CGPoint,center)
+TF_EC_CHAIN_PROP_IMP(UICollectionReusableView ,CGRect,frame)
+TF_EC_CHAIN_PROP_IMP(UICollectionReusableView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_IMP(UICollectionReusableView ,NSUserActivity *,userActivity)
 //superclass pros NSObject

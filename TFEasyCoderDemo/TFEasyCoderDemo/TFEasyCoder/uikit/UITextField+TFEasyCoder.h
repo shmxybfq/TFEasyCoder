@@ -72,6 +72,8 @@ TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UITextField ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UITextField ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UITextField ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UITextField ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UITextField ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UITextField ,NSUserActivity *,userActivity);
 //superclass pros NSObject

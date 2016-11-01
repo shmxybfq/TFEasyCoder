@@ -60,6 +60,8 @@ TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UICollectionView ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UICollectionView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UICollectionView ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UICollectionView ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UICollectionView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UICollectionView ,NSUserActivity *,userActivity);
 //superclass pros NSObject

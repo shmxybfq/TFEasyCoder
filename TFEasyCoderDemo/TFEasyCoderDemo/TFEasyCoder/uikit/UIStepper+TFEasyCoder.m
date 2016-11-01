@@ -39,6 +39,8 @@ TF_EC_CHAIN_PROP_IMP(UIStepper ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UIStepper ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UIStepper ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UIStepper ,CGPoint,center)
+TF_EC_CHAIN_PROP_IMP(UIStepper ,CGRect,frame)
+TF_EC_CHAIN_PROP_IMP(UIStepper ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_IMP(UIStepper ,NSUserActivity *,userActivity)
 //superclass pros NSObject

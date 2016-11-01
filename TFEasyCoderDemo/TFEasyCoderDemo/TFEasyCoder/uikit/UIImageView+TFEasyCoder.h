@@ -20,15 +20,14 @@ TF_EC_MINSTANCE_INT(UIImageView,UIImageView *);
 
 TF_EC_CHAIN_PROP_INT(UIImageView ,UIImage *,image);
 TF_EC_CHAIN_PROP_INT(UIImageView ,UIImage *,highlightedImage);
-TF_EC_CHAIN_PROP_INT(UIImageView ,BOOL,userInteractionEnabled);
+//TF_EC_CHAIN_PROP_INT(UIImageView ,BOOL,userInteractionEnabled);
 TF_EC_CHAIN_PROP_INT(UIImageView ,BOOL,highlighted);
 TF_EC_CHAIN_PROP_INT(UIImageView ,NSArray *,animationImages);
 TF_EC_CHAIN_PROP_INT(UIImageView ,NSArray *,highlightedAnimationImages);
 TF_EC_CHAIN_PROP_INT(UIImageView ,double,animationDuration);
 TF_EC_CHAIN_PROP_INT(UIImageView ,long long,animationRepeatCount);
 TF_EC_CHAIN_PROP_INT(UIImageView ,UIColor *,tintColor);
-TF_EC_CHAIN_PROP_INT(UIImageView ,BOOL,adjustsImageWhenAncestorFocused);
-TF_EC_CHAIN_PROP_INT(UIImageView ,int,drawMode);
+
 
 
 
@@ -39,6 +38,8 @@ TF_EC_CHAIN_PROP_INT(UIImageView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UIImageView ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UIImageView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UIImageView ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UIImageView ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UIImageView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UIImageView ,NSUserActivity *,userActivity);
 //superclass pros NSObject

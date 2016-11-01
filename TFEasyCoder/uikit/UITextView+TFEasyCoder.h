@@ -54,7 +54,7 @@ TF_EC_CHAIN_PROP_INT(UITextView ,long long,selectionAffinity)
 TF_EC_CHAIN_PROP_INT(UITextView ,CGPoint,contentOffset);
 TF_EC_CHAIN_PROP_INT(UITextView ,CGSize,contentSize);
 TF_EC_CHAIN_PROP_INT(UITextView ,UIEdgeInsets,contentInset);
-TF_EC_CHAIN_PROP_INT(UITextView ,id<UIScrollViewDelegate> ,delegate);
+//TF_EC_CHAIN_PROP_INT(UITextView ,id<UIScrollViewDelegate> ,delegate);
 TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,directionalLockEnabled);
 TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,bounces);
 TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,alwaysBounceVertical);
@@ -80,6 +80,8 @@ TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UITextView ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UITextView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UITextView ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UITextView ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UITextView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UITextView ,NSUserActivity *,userActivity);
 //superclass pros NSObject

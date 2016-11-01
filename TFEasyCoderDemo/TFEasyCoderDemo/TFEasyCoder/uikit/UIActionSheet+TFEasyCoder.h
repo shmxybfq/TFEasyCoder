@@ -37,6 +37,8 @@ TF_EC_CHAIN_PROP_INT(UIActionSheet ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UIActionSheet ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UIActionSheet ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UIActionSheet ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UIActionSheet ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UIActionSheet ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UIActionSheet ,NSUserActivity *,userActivity);
 //superclass pros NSObject

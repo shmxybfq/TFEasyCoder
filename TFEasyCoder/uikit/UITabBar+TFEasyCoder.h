@@ -43,6 +43,8 @@ TF_EC_CHAIN_PROP_INT(UITabBar ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UITabBar ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UITabBar ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UITabBar ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UITabBar ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UITabBar ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UITabBar ,NSUserActivity *,userActivity);
 //superclass pros NSObject

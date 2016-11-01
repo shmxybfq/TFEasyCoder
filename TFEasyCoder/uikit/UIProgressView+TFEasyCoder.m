@@ -32,6 +32,8 @@ TF_EC_CHAIN_PROP_IMP(UIProgressView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UIProgressView ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UIProgressView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UIProgressView ,CGPoint,center)
+TF_EC_CHAIN_PROP_IMP(UIProgressView ,CGRect,frame)
+TF_EC_CHAIN_PROP_IMP(UIProgressView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_IMP(UIProgressView ,NSUserActivity *,userActivity)
 //superclass pros NSObject

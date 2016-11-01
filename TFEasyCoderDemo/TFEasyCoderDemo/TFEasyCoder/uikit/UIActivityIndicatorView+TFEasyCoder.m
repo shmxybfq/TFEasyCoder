@@ -29,6 +29,8 @@ TF_EC_CHAIN_PROP_IMP(UIActivityIndicatorView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UIActivityIndicatorView ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UIActivityIndicatorView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UIActivityIndicatorView ,CGPoint,center)
+TF_EC_CHAIN_PROP_IMP(UIActivityIndicatorView ,CGRect,frame)
+TF_EC_CHAIN_PROP_IMP(UIActivityIndicatorView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_IMP(UIActivityIndicatorView ,NSUserActivity *,userActivity)
 //superclass pros NSObject

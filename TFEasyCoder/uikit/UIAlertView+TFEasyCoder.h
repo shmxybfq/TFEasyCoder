@@ -37,6 +37,8 @@ TF_EC_CHAIN_PROP_INT(UIAlertView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UIAlertView ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UIAlertView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UIAlertView ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UIAlertView ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UIAlertView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UIAlertView ,NSUserActivity *,userActivity);
 //superclass pros NSObject

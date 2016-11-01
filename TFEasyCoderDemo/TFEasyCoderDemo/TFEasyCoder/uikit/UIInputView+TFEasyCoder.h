@@ -30,6 +30,8 @@ TF_EC_CHAIN_PROP_INT(UIInputView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UIInputView ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UIInputView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UIInputView ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UIInputView ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UIInputView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UIInputView ,NSUserActivity *,userActivity);
 //superclass pros NSObject

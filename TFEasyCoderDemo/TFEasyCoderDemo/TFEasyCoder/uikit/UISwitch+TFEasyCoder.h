@@ -41,6 +41,8 @@ TF_EC_CHAIN_PROP_INT(UISwitch ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UISwitch ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UISwitch ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UISwitch ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UISwitch ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UISwitch ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UISwitch ,NSUserActivity *,userActivity);
 //superclass pros NSObject

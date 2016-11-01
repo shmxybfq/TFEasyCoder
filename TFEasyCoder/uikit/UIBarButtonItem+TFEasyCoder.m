@@ -30,11 +30,11 @@ TF_EC_CHAIN_PROP_IMP(UIBarButtonItem ,UIColor *,tintColor)
 
 
 //superclass pros UIBarItem
-TF_EC_CHAIN_PROP_IMP(UIBarButtonItem ,BOOL,enabled)
+//TF_EC_CHAIN_PROP_IMP(UIBarButtonItem ,BOOL,enabled)
 TF_EC_CHAIN_PROP_IMP(UIBarButtonItem ,NSString *,title)
 TF_EC_CHAIN_PROP_IMP(UIBarButtonItem ,UIImage *,image)
 TF_EC_CHAIN_PROP_IMP(UIBarButtonItem ,UIImage *,landscapeImagePhone)
-TF_EC_CHAIN_PROP_IMP(UIBarButtonItem ,UIEdgeInsets,imageInsets)
+//TF_EC_CHAIN_PROP_IMP(UIBarButtonItem ,UIEdgeInsets,imageInsets)
 TF_EC_CHAIN_PROP_IMP(UIBarButtonItem ,UIEdgeInsets,landscapeImagePhoneInsets)
 TF_EC_CHAIN_PROP_IMP(UIBarButtonItem ,long long,tag)
 //superclass pros NSObject

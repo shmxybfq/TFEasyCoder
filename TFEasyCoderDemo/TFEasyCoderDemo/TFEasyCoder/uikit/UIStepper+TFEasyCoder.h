@@ -42,6 +42,8 @@ TF_EC_CHAIN_PROP_INT(UIStepper ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UIStepper ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UIStepper ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UIStepper ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UIStepper ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UIStepper ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UIStepper ,NSUserActivity *,userActivity);
 //superclass pros NSObject

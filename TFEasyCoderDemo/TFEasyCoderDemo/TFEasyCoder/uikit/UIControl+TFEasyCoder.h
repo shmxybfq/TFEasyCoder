@@ -33,6 +33,8 @@ TF_EC_CHAIN_PROP_INT(UIControl ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UIControl ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UIControl ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UIControl ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UIControl ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UIControl ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UIControl ,NSUserActivity *,userActivity);
 //superclass pros NSObject

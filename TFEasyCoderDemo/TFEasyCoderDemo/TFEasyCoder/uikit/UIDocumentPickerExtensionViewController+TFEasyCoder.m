@@ -9,6 +9,10 @@
 #import "UIDocumentPickerExtensionViewController+TFEasyCoder.h"
 #import "NSObject+TFExecute.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
+
 @implementation UIDocumentPickerExtensionViewController (TFEasyCoder)
 
 TF_EC_MSTATIC_IMP(UIDocumentPickerExtensionViewController, UIDocumentPickerExtensionViewController *);

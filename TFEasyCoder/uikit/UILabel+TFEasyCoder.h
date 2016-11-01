@@ -28,7 +28,7 @@ TF_EC_CHAIN_PROP_INT(UILabel ,long long,lineBreakMode);
 TF_EC_CHAIN_PROP_INT(UILabel ,NSAttributedString *,attributedText);
 TF_EC_CHAIN_PROP_INT(UILabel ,UIColor *,highlightedTextColor);
 TF_EC_CHAIN_PROP_INT(UILabel ,BOOL,highlighted);
-TF_EC_CHAIN_PROP_INT(UILabel ,BOOL,userInteractionEnabled);
+//TF_EC_CHAIN_PROP_INT(UILabel ,BOOL,userInteractionEnabled);
 TF_EC_CHAIN_PROP_INT(UILabel ,BOOL,enabled);
 TF_EC_CHAIN_PROP_INT(UILabel ,long long,numberOfLines);
 TF_EC_CHAIN_PROP_INT(UILabel ,BOOL,adjustsFontSizeToFitWidth);
@@ -49,6 +49,8 @@ TF_EC_CHAIN_PROP_INT(UILabel ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UILabel ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UILabel ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UILabel ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UILabel ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UILabel ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UILabel ,NSUserActivity *,userActivity);
 //superclass pros NSObject

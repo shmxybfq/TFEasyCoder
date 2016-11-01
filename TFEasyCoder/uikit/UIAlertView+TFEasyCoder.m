@@ -30,6 +30,8 @@ TF_EC_CHAIN_PROP_IMP(UIAlertView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UIAlertView ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UIAlertView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UIAlertView ,CGPoint,center)
+TF_EC_CHAIN_PROP_IMP(UIAlertView ,CGRect,frame)
+TF_EC_CHAIN_PROP_IMP(UIAlertView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_IMP(UIAlertView ,NSUserActivity *,userActivity)
 //superclass pros NSObject

@@ -67,6 +67,8 @@ TF_EC_CHAIN_PROP_IMP(UITextField ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UITextField ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UITextField ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UITextField ,CGPoint,center)
+TF_EC_CHAIN_PROP_IMP(UITextField ,CGRect,frame)
+TF_EC_CHAIN_PROP_IMP(UITextField ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_IMP(UITextField ,NSUserActivity *,userActivity)
 //superclass pros NSObject

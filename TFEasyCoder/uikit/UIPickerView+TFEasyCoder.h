@@ -32,6 +32,8 @@ TF_EC_CHAIN_PROP_INT(UIPickerView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UIPickerView ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UIPickerView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UIPickerView ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UIPickerView ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UIPickerView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UIPickerView ,NSUserActivity *,userActivity);
 //superclass pros NSObject

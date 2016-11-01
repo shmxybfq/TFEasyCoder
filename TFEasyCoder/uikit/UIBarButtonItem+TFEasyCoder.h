@@ -32,11 +32,11 @@ TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,UIColor *,tintColor)
 
 
 //superclass pros UIBarItem
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,BOOL,enabled);
+//TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,BOOL,enabled);
 TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,NSString *,title);
 TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,UIImage *,image);
 TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,UIImage *,landscapeImagePhone);
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,UIEdgeInsets,imageInsets);
+//TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,UIEdgeInsets,imageInsets);
 TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,UIEdgeInsets,landscapeImagePhoneInsets);
 TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,long long,tag);
 //superclass pros NSObject

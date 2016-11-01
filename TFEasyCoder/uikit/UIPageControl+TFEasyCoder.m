@@ -38,6 +38,8 @@ TF_EC_CHAIN_PROP_IMP(UIPageControl ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UIPageControl ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UIPageControl ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UIPageControl ,CGPoint,center)
+TF_EC_CHAIN_PROP_IMP(UIPageControl ,CGRect,frame)
+TF_EC_CHAIN_PROP_IMP(UIPageControl ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_IMP(UIPageControl ,NSUserActivity *,userActivity)
 //superclass pros NSObject

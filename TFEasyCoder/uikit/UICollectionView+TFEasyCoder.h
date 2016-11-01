@@ -34,7 +34,7 @@ TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,remembersLastFocusedIndexPath);
 TF_EC_CHAIN_PROP_INT(UICollectionView ,CGPoint,contentOffset);
 TF_EC_CHAIN_PROP_INT(UICollectionView ,CGSize,contentSize);
 TF_EC_CHAIN_PROP_INT(UICollectionView ,UIEdgeInsets,contentInset);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,id<UIScrollViewDelegate> ,delegate);
+//TF_EC_CHAIN_PROP_INT(UICollectionView ,id<UIScrollViewDelegate> ,delegate);
 TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,directionalLockEnabled);
 TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,bounces);
 TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,alwaysBounceVertical);
@@ -60,6 +60,8 @@ TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_INT(UICollectionView ,long long,tag)
 TF_EC_CHAIN_PROP_INT(UICollectionView ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_INT(UICollectionView ,CGPoint,center)
+TF_EC_CHAIN_PROP_INT(UICollectionView ,CGRect,frame)
+TF_EC_CHAIN_PROP_INT(UICollectionView ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_INT(UICollectionView ,NSUserActivity *,userActivity);
 //superclass pros NSObject

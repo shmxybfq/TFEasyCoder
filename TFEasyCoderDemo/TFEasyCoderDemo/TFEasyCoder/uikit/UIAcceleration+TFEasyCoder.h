@@ -10,20 +10,16 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
+
 TF_EC_BLOCK(UIAcceleration,UIAcceleration *);
 
 @interface UIAcceleration (TFEasyCoder)
 
 TF_EC_MSTATIC_INT(UIAcceleration, UIAcceleration *);
 TF_EC_MINSTANCE_INT(UIAcceleration,UIAcceleration *);
-
-
-TF_EC_CHAIN_PROP_INT(UIAcceleration ,double,timestamp);
-TF_EC_CHAIN_PROP_INT(UIAcceleration ,double,x);
-TF_EC_CHAIN_PROP_INT(UIAcceleration ,double,y);
-TF_EC_CHAIN_PROP_INT(UIAcceleration ,double,z);
-
-
 
 
 //superclass pros NSObject
@@ -41,7 +37,6 @@ TF_EC_CHAIN_PROP_INT(UIAcceleration ,BOOL,accessibilityElementsHidden)
 TF_EC_CHAIN_PROP_INT(UIAcceleration ,BOOL,accessibilityViewIsModal)
 TF_EC_CHAIN_PROP_INT(UIAcceleration ,BOOL,shouldGroupAccessibilityChildren)
 TF_EC_CHAIN_PROP_INT(UIAcceleration ,long long,accessibilityNavigationStyle)
-
 
 
 

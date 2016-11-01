@@ -33,6 +33,8 @@ TF_EC_CHAIN_PROP_IMP(UIRefreshControl ,BOOL,userInteractionEnabled)
 TF_EC_CHAIN_PROP_IMP(UIRefreshControl ,long long,tag)
 TF_EC_CHAIN_PROP_IMP(UIRefreshControl ,long long,semanticContentAttribute)
 TF_EC_CHAIN_PROP_IMP(UIRefreshControl ,CGPoint,center)
+TF_EC_CHAIN_PROP_IMP(UIRefreshControl ,CGRect,frame)
+TF_EC_CHAIN_PROP_IMP(UIRefreshControl ,UIColor *,backgroundColor)
 //superclass pros UIResponder
 TF_EC_CHAIN_PROP_IMP(UIRefreshControl ,NSUserActivity *,userActivity)
 //superclass pros NSObject
