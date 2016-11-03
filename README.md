@@ -54,6 +54,8 @@ ___
  * 快速操作一个对象
  * 对象公有属性的链式编程
  * 对象私有属性/变量的链式编程
+ * 创建一个自定义对象
+ * 用自定义init方法创建一个自定义一个对象
 
 ###快速创建一个对象
 
@@ -129,6 +131,39 @@ ___
     }];
 
 ```
+
+###创建一个自定义对象
+
+```Objective-c
+
+ [CustemLabel easyCoderCustem:^(CustemLabel * ins) {
+        
+        ins.cusProperty1 = @"";
+        ins.cusProperty2 = @"";
+        ins.cusProperty3 = @"";
+        
+    }];
+
+```
+
+
+###用自定义init方法创建一个自定义一个对象
+
+```Objective-c
+
+ NSArray *param = @[@"111",@"222",[[UIView alloc]init],@('A'),@(YES),@"333",NSStringFromCGPoint(CGPointZero),@(NSTextAlignmentLeft)];
+    [CustemLabel easyCoderCustemInitMethod:@selector(initWithParam1:Param2:Param3:Param4:Param5:Param6:Param7:Param8:)
+                                    params:param
+                                      back:^(CustemLabel * ins) {
+                                          
+                                          ins.cusProperty1 = @"";
+                                          ins.cusProperty2 = @"";
+                                          ins.cusProperty3 = @"";
+                                          
+                                      }];
+
+```
+
 
 ## All the support classess (该框架支持的类)
 
