@@ -50,28 +50,31 @@ ___
 
 ## How To Use
 
-
+ * 快速创建一个对象
+ * 快速操作一个对象
+ * 对象公有属性的链式编程
+ * 对象私有属性/变量的链式编程
+ * 创建一个自定义对象
+ * 用自定义init方法创建一个自定义一个对象
 
 ###快速创建一个对象
 
 ```Objective-c
 
-   __weak typeof(self) weakSelf = self;
+    __weak typeof(self) weakSelf = self;
     [UILabel easyCoder:^(UILabel *ins) {
         
         weakSelf.titleLabel = ins;
         [weakSelf.view addSubview:ins];
         
+        ins.frame = CGRectMake(0, 0, 100, 100);
         ins.textAlignment = NSTextAlignmentCenter;
         ins.textColor = [UIColor blackColor];
         ins.font = [UIFont systemFontOfSize:14.f];
         ins.backgroundColor = [UIColor grayColor];
         ins.text = @"我是文字框~";
-        ins.frame = CGRectMake(0, 0, 100, 100);
         ins.center = weakSelf.view.center;
-        
-    }];
-    
+    }];    
 
 ```
 
@@ -80,56 +83,89 @@ ___
 
 ```Objective-c
 
-    __weak typeof(self) weakSelf = self;
-
-    [self.actionButton easyCoder:^(UIButton *ins) {
-        
-        [weakSelf.view addSubview:ins];
+  [self.titleLabel easyCoder:^(UILabel *ins) {
         
         ins.frame = CGRectMake(0, 0, 100, 100);
-        ins.center = CGPointMake(weakSelf.view.center.x, weakSelf.view.center.y - 150);
-        
-        [ins setTitle:@"点我" forState:UIControlStateNormal];
-        [ins setTitle:@"点我" forState:UIControlStateHighlighted];
-        
-        [ins setImage:[UIImage imageNamed:@"test"] forState:UIControlStateNormal];
-        [ins setImage:[UIImage imageNamed:@"test"] forState:UIControlStateHighlighted];
-       
-        [ins addTarget:weakSelf
-                action:@selector(tectAction)
-      forControlEvents:UIControlEventTouchUpInside];
-        
+        ins.textAlignment = NSTextAlignmentCenter;
+        ins.textColor = [UIColor blackColor];
+        ins.font = [UIFont systemFontOfSize:14.f];
+        ins.backgroundColor = [UIColor grayColor];
+        ins.text = @"我是文字框~";
+        ins.center = weakSelf.view.center;
     }];
     
 
 ```
 
-
-
-###链式为属性赋值
+###对象公有属性的链式编程
 
 ```Objective-c
 
-        __weak typeof(self) weakSelf = self;
-        [UILabel easyCoder:^(UILabel *ins) {
-    
-            weakSelf.titleLabel = ins;
-            [weakSelf.view addSubview:ins];
-    
-            ins
-            .set_textAlignment(NSTextAlignmentCenter)
-            .set_textColor([UIColor brownColor])
-            .set_text(@"哈哈")
-            .set_font([UIFont systemFontOfSize:14.0])
-            .set_backgroundColor([UIColor redColor])
-            .set_frame(CGRectMake(0, 0, 100, 100));
-            
-        }];
-    
+    [UILabel easyCoder:^(UILabel *ins) {
+        
+        ins
+        .set_frame(CGRectMake(0, 0, 100, 100))
+        .set_textAlignment(NSTextAlignmentCenter)
+        .set_textColor([UIColor brownColor])
+        .set_text(@"哈哈")
+        .set_font([UIFont systemFontOfSize:14.0])
+        .set_backgroundColor([UIColor redColor]);
+    }];
 
 ```
 
-## All the support classess
+
+###对象私有属性/变量的链式编程
+
+```Objective-c
+
+   [UILabel easyCoder:^(UILabel *ins) {
+        
+        ins
+        //它不同于系统API [ins setValue:@"value" forKey:@"key"];
+        .set_ValueKey(@"value1",@"key1")
+        .set_ValueKey(@"value1",@"key1")
+        .set_ValueKey(@"value1",@"key1")
+        .set_ValueKey(@"value1",@"key1");
+        
+    }];
+
+```
+
+###创建一个自定义对象
+
+```Objective-c
+
+ [CustemLabel easyCoderCustem:^(CustemLabel * ins) {
+        
+        ins.cusProperty1 = @"";
+        ins.cusProperty2 = @"";
+        ins.cusProperty3 = @"";
+        
+    }];
+
+```
+
+
+###用自定义init方法创建一个自定义一个对象
+
+```Objective-c
+
+ NSArray *param = @[@"111",@"222",[[UIView alloc]init],@('A'),@(YES),@"333",NSStringFromCGPoint(CGPointZero),@(NSTextAlignmentLeft)];
+    [CustemLabel easyCoderCustemInitMethod:@selector(initWithParam1:Param2:Param3:Param4:Param5:Param6:Param7:Param8:)
+                                    params:param
+                                      back:^(CustemLabel * ins) {
+                                          
+                                          ins.cusProperty1 = @"";
+                                          ins.cusProperty2 = @"";
+                                          ins.cusProperty3 = @"";
+                                          
+                                      }];
+
+```
+
+
+## All the support classess (该框架支持的类)
 
 ### ca - category classes (46-files)
 ___
