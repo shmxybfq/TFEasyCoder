@@ -360,6 +360,8 @@
 		CD1676B81DC87BD000969C21 /* UIVisualEffectView+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1675531DC87BCF00969C21 /* UIVisualEffectView+TFEasyCoder.m */; };
 		CD1676B91DC87BD000969C21 /* UIWebView+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1675551DC87BCF00969C21 /* UIWebView+TFEasyCoder.m */; };
 		CD1676BA1DC87BD000969C21 /* UIWindow+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1675571DC87BCF00969C21 /* UIWindow+TFEasyCoder.m */; };
+		CD3E0C001DCAE23B0092103C /* XXLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3E0BFF1DCAE23B0092103C /* XXLabel.m */; };
+		CD3E0C031DCB0C5C0092103C /* CustemLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3E0C021DCB0C5C0092103C /* CustemLabel.m */; };
 		CDA6F0EE1DC33CEC001330D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA6F0ED1DC33CEC001330D3 /* main.m */; };
 		CDA6F0F11DC33CEC001330D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA6F0F01DC33CEC001330D3 /* AppDelegate.m */; };
 		CDA6F0F41DC33CEC001330D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA6F0F31DC33CEC001330D3 /* ViewController.m */; };
@@ -1080,6 +1082,10 @@
 		CD1675551DC87BCF00969C21 /* UIWebView+TFEasyCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+TFEasyCoder.m"; sourceTree = "<group>"; };
 		CD1675561DC87BCF00969C21 /* UIWindow+TFEasyCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+TFEasyCoder.h"; sourceTree = "<group>"; };
 		CD1675571DC87BCF00969C21 /* UIWindow+TFEasyCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+TFEasyCoder.m"; sourceTree = "<group>"; };
+		CD3E0BFE1DCAE23B0092103C /* XXLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXLabel.h; sourceTree = "<group>"; };
+		CD3E0BFF1DCAE23B0092103C /* XXLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXLabel.m; sourceTree = "<group>"; };
+		CD3E0C011DCB0C5C0092103C /* CustemLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustemLabel.h; sourceTree = "<group>"; };
+		CD3E0C021DCB0C5C0092103C /* CustemLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustemLabel.m; sourceTree = "<group>"; };
 		CDA6F0E91DC33CEC001330D3 /* TFEasyCoderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFEasyCoderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA6F0ED1DC33CEC001330D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CDA6F0EF1DC33CEC001330D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1870,6 +1876,10 @@
 				CDA6F0F01DC33CEC001330D3 /* AppDelegate.m */,
 				CDA6F0F21DC33CEC001330D3 /* ViewController.h */,
 				CDA6F0F31DC33CEC001330D3 /* ViewController.m */,
+				CD3E0C011DCB0C5C0092103C /* CustemLabel.h */,
+				CD3E0C021DCB0C5C0092103C /* CustemLabel.m */,
+				CD3E0BFE1DCAE23B0092103C /* XXLabel.h */,
+				CD3E0BFF1DCAE23B0092103C /* XXLabel.m */,
 				CDA6F0F51DC33CEC001330D3 /* Main.storyboard */,
 				CDA6F0F81DC33CEC001330D3 /* Assets.xcassets */,
 				CDA6F0FA1DC33CEC001330D3 /* LaunchScreen.storyboard */,
@@ -2072,6 +2082,7 @@
 				CD1676631DC87BD000969C21 /* UINavigationBar+TFEasyCoder.m in Sources */,
 				CD1675B31DC87BCF00969C21 /* NSLock+TFEasyCoder.m in Sources */,
 				CD1676901DC87BD000969C21 /* UISplitViewController+TFEasyCoder.m in Sources */,
+				CD3E0C001DCAE23B0092103C /* XXLabel.m in Sources */,
 				CD1676571DC87BD000969C21 /* UILocalizedIndexedCollation+TFEasyCoder.m in Sources */,
 				CD1675A61DC87BCF00969C21 /* NSItemProvider+TFEasyCoder.m in Sources */,
 				CD1675781DC87BCF00969C21 /* NSCalendar+TFEasyCoder.m in Sources */,
@@ -2153,6 +2164,7 @@
 				CD16764C1DC87BD000969C21 /* UIImageAsset+TFEasyCoder.m in Sources */,
 				CD1676941DC87BD000969C21 /* UIStoryboardPopoverSegue+TFEasyCoder.m in Sources */,
 				CD16769F1DC87BD000969C21 /* UITableViewFocusUpdateContext+TFEasyCoder.m in Sources */,
+				CD3E0C031DCB0C5C0092103C /* CustemLabel.m in Sources */,
 				CD1676891DC87BD000969C21 /* UISearchContainerViewController+TFEasyCoder.m in Sources */,
 				CD1675771DC87BCF00969C21 /* NSCachedURLResponse+TFEasyCoder.m in Sources */,
 				CD1675F01DC87BD000969C21 /* NSTextCheckingResult+TFEasyCoder.m in Sources */,

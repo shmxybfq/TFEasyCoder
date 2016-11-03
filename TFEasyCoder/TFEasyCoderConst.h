@@ -44,7 +44,7 @@
 #define TF_EC_MSTATIC_INT(CLASS_NAME,CLASS_TYPE) +(CLASS_TYPE)easyCoder:(CLASS_NAME##EasyCoderBlock)block
 #define TF_EC_MSTATIC_IMP(CLASS_NAME,CLASS_TYPE)\
 +(CLASS_TYPE)easyCoder:(CLASS_NAME##EasyCoderBlock)block{\
-return [NSObject tf_execute:[CLASS_NAME class] back:^(id ins) {\
+return [NSObject tf_execute:[self class] back:^(id ins) {\
 if (block) {\
 block((CLASS_TYPE)ins);\
 }\

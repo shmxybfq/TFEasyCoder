@@ -13,6 +13,29 @@
 
 @implementation NSObject (TFExecute)
 
++(instancetype)easyCoderCustem:(ClassEasyCoderBlock)block{
+    return  [NSObject tf_execute:[self class] initMethod:nil params:nil back:^(id ins) {
+        if (block) {
+            block(ins);
+        }
+    }];
+}
++(instancetype)easyCoderCustemInitMethod:(SEL)sel params:(NSArray *)param back:(ClassEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] initMethod:sel params:param back:^(id ins) {
+        if (block) {
+            block(ins);
+        }
+    }];
+}
+
+-(instancetype)easyCoderCustem:(ClassEasyCoderBlock)block{
+    if (block) {
+        TF_WEAK_OBJ(self, weakSelf);
+        block(weakSelf);
+    }
+    return self;
+}
+
 +(id)tf_execute:(__unsafe_unretained Class)cls back:(ClassEasyCoderBlock)block
 {
     return [self tf_execute:cls

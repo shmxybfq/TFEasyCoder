@@ -14,6 +14,38 @@ typedef void(^ClassEasyCoderBlock) (id ins);
 @interface NSObject (TFExecute)
 
 /**
+ *  快速生成一个自定义类
+ *  block 回调快速生成一个类的实例
+ *
+ *  @param block 回调block
+ *
+ *  @return 生成的类的实例
+ */
++(instancetype)easyCoderCustem:(ClassEasyCoderBlock)block;
+/**
+ *  快速生成一个自定义类,用它自定义的init方法
+ *  block 回调快速生成一个类的实例
+ *
+ *  @param block 回调block
+ *
+ *  @return 生成的类的实例
+ */
++(instancetype)easyCoderCustemInitMethod:(SEL)sel
+                                  params:(NSArray *)param
+                                    back:(ClassEasyCoderBlock)block;
+
+/**
+ *  快速操作一个自定义类
+ *  block 类的实例
+ *
+ *  @param block 回调block
+ *
+ *  @return 类的实例
+ */
+-(instancetype)easyCoderCustem:(ClassEasyCoderBlock)block;
+
+
+/**
  *  block 回调快速生成一个类的实例
  *
  *  @param cls 类名
