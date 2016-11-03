@@ -39,10 +39,6 @@
 }
 
 
-
-
-
-
 +(void)tf_setTargetValue:(id)_target withValue:(id)_value forKey:(NSString *)_key
 {
     NSCAssert(_target,@"tf_setTargetValue: target can't be nil!");
@@ -91,31 +87,27 @@
 +(id)tf_executeSelector:(SEL)_sel withTarget:(id)_target  withParams:(id)params,...
 {
     id arg;
-    va_list _p_list;//定义一个指向个数可变的参数列表指针
-    va_start(_p_list, params);//va_start 得到第一个可变参数地址
-    
+    //define a pointer to the mutable paramter
+    va_list _p_list;
+    //va_start:get the first address of paramter
+    va_start(_p_list, params);
     NSMutableArray *_obj_params = arrayCapacity(5);
     if (params) {
-        //将第一个参数添加到array
+        //add the first paramter to array
         id pre = params;
         [_obj_params addObject:pre];
-        NSLog(@"参数<<<<<<<:%@",pre);
         @try {
-            //va_arg 指向下一个参数地址
+            //point to the next address
             while ((arg = va_arg(_p_list, id))) {
                 if (arg) {
                     [_obj_params addObject:arg];
-                    NSLog(@"参数<<<<<<<:%@",arg);
                 }
             }
         } @catch (NSException *exception) {
-            
-            NSString *rea = [NSString stringWithFormat:@"%s 方法不接受基本类型参数!",__func__];
-            TFAssert(NO,@"参数错误!",rea);
-            
+            NSCAssert(NO,@"%s paramter type error!",__func__);
         } @finally {}
     }
-    //置空
+    //clear
     va_end(_p_list);
     return  [self tf_executeSelector:_sel withTarget:_target withParamsArray:_obj_params];
 }

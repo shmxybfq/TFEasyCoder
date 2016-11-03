@@ -29,7 +29,7 @@
 //        _titleLabel = [[UILabel alloc]init];\
 //    return _titleLabel;}
 
-//TF_LAZYLOAD_OBJC(UILabel,titleLabel);
+TF_LAZYLOAD_OBJC(UILabel,titleLabel);
 
 
 - (void)viewDidLoad {
