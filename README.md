@@ -169,6 +169,12 @@
 
 ```
 
+###开发调试工具(0)效果图
+
+
+ ![image](https://github.com/shmxybfq/TFProjectsSource/blob/master/TFEasyCoder_Source/TFEasyCoder_git_rm_001.png)
+
+
 ###开发调试工具(1):view-Tree 显示随机色
 ```Objective-c
 
