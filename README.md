@@ -2,31 +2,32 @@
 # TFEasyCoder
 
 * 一个可以用copy和paste提高编程效率的框架:为UIKit和Foundation的所有公开类添加了快速创建对象的方法并且为这些类的所有非私有属性添加了链式编程方法.
-___
-
-## Summary
-
-* Introduction
-* What can do	
-* Installation
-* How To Use
-* All the support classess
-* About coder
 
 
-## Introduction
+
+## 摘要
+
+* 简单介绍
+* 可以做什么?
+* 安装
+* 怎么使用
+* 所有的支持的类
+* 关于作者
+
+
+## 简单介绍
 
 一个可以用copy和paste来提高编程效率的框架:
 * 为UIKit和Foundation的所有公开类添加了快速创建对象的方法
 * 为以上所有类的所有非私有属性添加了链式编程方法.
 
-## What can do
+## 可以做什么?
 
  *  快速创建对象.
  *  链式编程式对UIKit 和 Foundation非私有类的所有非私有属性赋值.
  *  利用copy 和 paste 实现快速编程
  
-## Installation
+## 安装
 
 
 ####所有文件:
@@ -48,7 +49,7 @@ ___
 `你可以选择性的导入自己想用的文件夹,然后从TFEasyCoder.h中删除相关的import即可`
  
 
-## How To Use
+## 怎么使用
 
  * 快速创建一个对象
  * 快速操作一个对象
@@ -165,7 +166,7 @@ ___
 ```
 
 
-## All the support classess (该框架支持的类)
+## 所有的支持的类
 
 ### ca - category classes (46-files)
 ___
@@ -547,7 +548,7 @@ NSXMLParser+TFEasyCoder.h
 ```
 
 
-##About coder
+##关于作者
 * GitHub:[shmxybfq](https://github.com/shmxybfq "shmxybfq's github")
 * SinaBlog:[守候ztf](http://blog.sina.com.cn/u/3481024997 "shmxybfq's sinablog")
 
