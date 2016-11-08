@@ -188,10 +188,13 @@
      */
     NSArray *allSubviews = [self.view allSubviews];
     NSLog(@"\n\n\n\n\n%@\n\n\n\n\n",allSubviews);
-        
-```
->打印结果:
-(
+    
+    
+    
+    //打印结果:
+    
+    
+    (
     "<_UILayoutGuide: 0x7fdd91c0e150; frame = (0 0; 0 20); hidden = YES; layer = <CALayer: 0x7fdd91c10050>>",
     "<_UILayoutGuide: 0x7fdd91c1b2e0; frame = (0 667; 0 0); hidden = YES; layer = <CALayer: 0x7fdd91c10d40>>",
     "<UITableView: 0x7fdd92025400; frame = (0 0; 375 667); clipsToBounds = YES; gestureRecognizers = <NSArray: 0x7fdd91c19930>; layer = <CALayer: 0x7fdd91c30190>; contentOffset: {0, 0}; contentSize: {375, 467}>",
@@ -206,30 +209,10 @@
     "<UIImageView: 0x7fdd91c1c7b0; frame = (0 0; 375 275); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd91c102a0>>",
     "<UIImageView: 0x7fdd91d1eee0; frame = (25 210; 40 40); clipsToBounds = YES; opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd91d18e00>>",
     "<UIImageView: 0x7fdd91d241a0; frame = (12 197; 66 66); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd91d08020>>",
-    "<UIImageView: 0x7fdd91c268e0; frame = (20 251.5; 50 17.5); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd91c25680>>",
-    "<UIImageView: 0x7fdd91c2bc20; frame = (285 242; 75 18); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd91c2ada0>>",
-    "<UITableViewCellContentView: 0x7fdd93c14a10; frame = (0 0; 375 48); gestureRecognizers = <NSArray: 0x7fdd93c15230>; layer = <CALayer: 0x7fdd93c14200>>",
-    "<UITableViewCellContentView: 0x7fdd93c0a0d0; frame = (0 0; 375 48); gestureRecognizers = <NSArray: 0x7fdd93c0a740>; layer = <CALayer: 0x7fdd93c09ad0>>",
-    "<UITableViewCellContentView: 0x7fdd939fb700; frame = (0 0; 375 48); gestureRecognizers = <NSArray: 0x7fdd93c00060>; layer = <CALayer: 0x7fdd939fb880>>",
-    "<UITableViewCellContentView: 0x7fdd91d27d50; frame = (0 0; 375 48); gestureRecognizers = <NSArray: 0x7fdd91d28f40>; layer = <CALayer: 0x7fdd91d281e0>>",
-    "<UIImageView: 0x7fdd93c15340; frame = (15 11.5; 25 25); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd93c154f0>>",
-    "<UILabel: 0x7fdd93c17310; frame = (50 11.5; 150 25); text = '\U60c5\U4fa3\U7a7a\U95f4'; userInteractionEnabled = NO; layer = <_UILabelLayer: 0x7fdd93c17520>>",
-    "<UIImageView: 0x7fdd93c185f0; frame = (350 19; 10 10); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd93c163f0>>",
-    "<UIImageView: 0x7fdd93c19740; frame = (50 47; 325 0.5); userInteractionEnabled = NO; layer = <CALayer: 0x7fdd93c18ab0>>",
-    "<UIImageView: 0x7fdd93c0a850; frame = (15 11.5; 25 25); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd93c0aa00>>",
-    "<UILabel: 0x7fdd93c0c820; frame = (50 11.5; 150 25); text = '\U80cc\U666f\U97f3\U4e50'; userInteractionEnabled = NO; layer = <_UILabelLayer: 0x7fdd93c0ca30>>",
-    "<UIImageView: 0x7fdd93c0dac0; frame = (350 19; 10 10); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd93c0cd60>>",
-    "<UIImageView: 0x7fdd93c0ec10; frame = (50 47; 325 0.5); userInteractionEnabled = NO; layer = <CALayer: 0x7fdd93c0df80>>",
-    "<UIImageView: 0x7fdd93c00170; frame = (15 11.5; 25 25); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd93c00320>>",
-    "<UILabel: 0x7fdd93c02140; frame = (50 11.5; 150 25); text = '\U597d\U53cb\U751f\U65e5'; userInteractionEnabled = NO; layer = <_UILabelLayer: 0x7fdd93c02350>>",
-    "<UIImageView: 0x7fdd93c03460; frame = (350 19; 10 10); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd93c02700>>",
-    "<UIImageView: 0x7fdd93c045b0; frame = (50 47; 325 0.5); userInteractionEnabled = NO; layer = <CALayer: 0x7fdd93c03920>>",
-    "<UIImageView: 0x7fdd91d29050; frame = (15 11.5; 25 25); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd91d29200>>",
-    "<UILabel: 0x7fdd91d2b140; frame = (50 11.5; 150 25); text = '\U6211\U7684\U8bbf\U5ba2'; userInteractionEnabled = NO; layer = <_UILabelLayer: 0x7fdd91d2b730>>",
-    "<UIImageView: 0x7fdd91d2dd20; frame = (350 19; 10 10); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd91d2cfc0>>",
-    "<UIImageView: 0x7fdd939f7620; frame = (50 47; 325 0.5); userInteractionEnabled = NO; layer = <CALayer: 0x7fdd93906d70>>",
-    "<UIView: 0x7fdd91c15940; frame = (0 0; 375 667); autoresize = W+H; layer = <CALayer: 0x7fdd91c0c4a0>>"
-)
+
+        
+```
+
 
 
 ###打印 view-Tree
@@ -247,8 +230,10 @@
     }];
     
     
-```
->打印结果:
+    
+    
+    //打印结果:
+    
 
 {
     UIView =     {
@@ -694,6 +679,14 @@
         );
     };
 }
+
+
+
+    
+    
+```
+
+
 
 
 ## 所有的支持的类
