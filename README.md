@@ -2,31 +2,32 @@
 # TFEasyCoder
 
 * 一个可以用copy和paste提高编程效率的框架:为UIKit和Foundation的所有公开类添加了快速创建对象的方法并且为这些类的所有非私有属性添加了链式编程方法.
-___
-
-## Summary
-
-* Introduction
-* What can do	
-* Installation
-* How To Use
-* All the support classess
-* About coder
 
 
-## Introduction
+
+## 摘要
+
+* 简单介绍
+* 可以做什么?
+* 安装
+* 怎么使用
+* 所有的支持的类
+* 关于作者
+
+
+## 简单介绍
 
 一个可以用copy和paste来提高编程效率的框架:
 * 为UIKit和Foundation的所有公开类添加了快速创建对象的方法
 * 为以上所有类的所有非私有属性添加了链式编程方法.
 
-## What can do
+## 可以做什么?
 
  *  快速创建对象.
  *  链式编程式对UIKit 和 Foundation非私有类的所有非私有属性赋值.
  *  利用copy 和 paste 实现快速编程
  
-## Installation
+## 安装
 
 
 ####所有文件:
@@ -48,7 +49,7 @@ ___
 `你可以选择性的导入自己想用的文件夹,然后从TFEasyCoder.h中删除相关的import即可`
  
 
-## How To Use
+## 怎么使用
 
  * 快速创建一个对象
  * 快速操作一个对象
@@ -56,6 +57,9 @@ ___
  * 对象私有属性/变量的链式编程
  * 创建一个自定义对象
  * 用自定义init方法创建一个自定义一个对象
+ * 开发调试工具(1):view-Tree 显示随机色
+ * 开发调试工具(2):获取某 view 的所有subviews
+ * 开发调试工具(3):打印 view-Tree
 
 ###快速创建一个对象
 
@@ -77,6 +81,7 @@ ___
     }];    
 
 ```
+
 
 
 ###快速操作一个对象
@@ -164,8 +169,558 @@ ___
 
 ```
 
+###开发调试工具(0)效果图
 
-## All the support classess (该框架支持的类)
+
+ ![image](https://github.com/shmxybfq/TFProjectsSource/blob/master/TFEasyCoder_Source/TFEasyCoder_git_rm_001.png)
+
+
+###开发调试工具(1):view-Tree 显示随机色
+```Objective-c
+
+   /**
+     *  为当前已存在的视图tree 加上随机颜色(UI开发工具)
+     */
+    [self.view allSubviewsBackgroundColorRandom:0.5];
+
+
+```
+
+###开发调试工具(2):获取某 view 的所有subviews
+```Objective-c
+
+    /**
+     *  获取view的所有子视图(UI开发工具)
+     */
+    NSArray *allSubviews = [self.view allSubviews];
+    NSLog(@"\n\n\n\n\n%@\n\n\n\n\n",allSubviews);
+    
+    
+    
+    //打印结果:
+    
+  
+(
+    "<_UILayoutGuide: 0x7fdd91c0e150; frame = (0 0; 0 20); hidden = YES; layer = <CALayer: 0x7fdd91c10050>>",
+    "<_UILayoutGuide: 0x7fdd91c1b2e0; frame = (0 667; 0 0); hidden = YES; layer = <CALayer: 0x7fdd91c10d40>>",
+    "<UITableView: 0x7fdd92025400; frame = (0 0; 375 667); clipsToBounds = YES; gestureRecognizers = <NSArray: 0x7fdd91c19930>; layer = <CALayer: 0x7fdd91c30190>; contentOffset: {0, 0}; contentSize: {375, 467}>",
+    "<UITableViewWrapperView: 0x7fdd92003800; frame = (0 0; 375 667); gestureRecognizers = <NSArray: 0x7fdd91c353b0>; layer = <CALayer: 0x7fdd91c349b0>; contentOffset: {0, 0}; contentSize: {375, 667}>",
+    "<TableviewHeader: 0x7fdd91c0dd60; frame = (0 0; 375 275); layer = <CALayer: 0x7fdd91c193b0>>",
+    "<UIImageView: 0x7fdd91e3a810; frame = (3 661.5; 369 2.5); alpha = 0; opaque = NO; autoresize = TM; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd91e3ad90>>",
+    "<UIImageView: 0x7fdd91e2b3e0; frame = (369.5 395; 2.5 269); alpha = 0; opaque = NO; autoresize = LM; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd91e2cce0>>",
+    "<TableviewCell: 0x7fdd93c14620; baseClass = UITableViewCell; frame = (0 419; 375 48); autoresize = W; layer = <CALayer: 0x7fdd93c13b00>>",
+    "<TableviewCell: 0x7fdd93c09ce0; baseClass = UITableViewCell; frame = (0 371; 375 48); autoresize = W; layer = <CALayer: 0x7fdd93c093b0>>",
+    "<TableviewCell: 0x7fdd939fb310; baseClass = UITableViewCell; frame = (0 323; 375 48); autoresize = W; layer = <CALayer: 0x7fdd939a2910>>",
+    "<TableviewCell: 0x7fdd91d257a0; baseClass = UITableViewCell; frame = (0 275; 375 48); autoresize = W; layer = <CALayer: 0x7fdd91d24d20>>",
+    "<UIImageView: 0x7fdd91c1c7b0; frame = (0 0; 375 275); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd91c102a0>>",
+    "<UIImageView: 0x7fdd91d1eee0; frame = (25 210; 40 40); clipsToBounds = YES; opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd91d18e00>>",
+    "<UIImageView: 0x7fdd91d241a0; frame = (12 197; 66 66); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd91d08020>>",
+    "<UIImageView: 0x7fdd91c268e0; frame = (20 251.5; 50 17.5); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd91c25680>>",
+    "<UIImageView: 0x7fdd91c2bc20; frame = (285 242; 75 18); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd91c2ada0>>",
+    "<UITableViewCellContentView: 0x7fdd93c14a10; frame = (0 0; 375 48); gestureRecognizers = <NSArray: 0x7fdd93c15230>; layer = <CALayer: 0x7fdd93c14200>>",
+    "<UITableViewCellContentView: 0x7fdd93c0a0d0; frame = (0 0; 375 48); gestureRecognizers = <NSArray: 0x7fdd93c0a740>; layer = <CALayer: 0x7fdd93c09ad0>>",
+    "<UITableViewCellContentView: 0x7fdd939fb700; frame = (0 0; 375 48); gestureRecognizers = <NSArray: 0x7fdd93c00060>; layer = <CALayer: 0x7fdd939fb880>>",
+    "<UITableViewCellContentView: 0x7fdd91d27d50; frame = (0 0; 375 48); gestureRecognizers = <NSArray: 0x7fdd91d28f40>; layer = <CALayer: 0x7fdd91d281e0>>",
+    "<UIImageView: 0x7fdd93c15340; frame = (15 11.5; 25 25); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd93c154f0>>",
+    "<UILabel: 0x7fdd93c17310; frame = (50 11.5; 150 25); text = '\U60c5\U4fa3\U7a7a\U95f4'; userInteractionEnabled = NO; layer = <_UILabelLayer: 0x7fdd93c17520>>",
+    "<UIImageView: 0x7fdd93c185f0; frame = (350 19; 10 10); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd93c163f0>>",
+    "<UIImageView: 0x7fdd93c19740; frame = (50 47; 325 0.5); userInteractionEnabled = NO; layer = <CALayer: 0x7fdd93c18ab0>>",
+    "<UIImageView: 0x7fdd93c0a850; frame = (15 11.5; 25 25); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd93c0aa00>>",
+    "<UILabel: 0x7fdd93c0c820; frame = (50 11.5; 150 25); text = '\U80cc\U666f\U97f3\U4e50'; userInteractionEnabled = NO; layer = <_UILabelLayer: 0x7fdd93c0ca30>>",
+    "<UIImageView: 0x7fdd93c0dac0; frame = (350 19; 10 10); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd93c0cd60>>",
+    "<UIImageView: 0x7fdd93c0ec10; frame = (50 47; 325 0.5); userInteractionEnabled = NO; layer = <CALayer: 0x7fdd93c0df80>>",
+    "<UIImageView: 0x7fdd93c00170; frame = (15 11.5; 25 25); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd93c00320>>",
+    "<UILabel: 0x7fdd93c02140; frame = (50 11.5; 150 25); text = '\U597d\U53cb\U751f\U65e5'; userInteractionEnabled = NO; layer = <_UILabelLayer: 0x7fdd93c02350>>",
+    "<UIImageView: 0x7fdd93c03460; frame = (350 19; 10 10); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd93c02700>>",
+    "<UIImageView: 0x7fdd93c045b0; frame = (50 47; 325 0.5); userInteractionEnabled = NO; layer = <CALayer: 0x7fdd93c03920>>",
+    "<UIImageView: 0x7fdd91d29050; frame = (15 11.5; 25 25); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd91d29200>>",
+    "<UILabel: 0x7fdd91d2b140; frame = (50 11.5; 150 25); text = '\U6211\U7684\U8bbf\U5ba2'; userInteractionEnabled = NO; layer = <_UILabelLayer: 0x7fdd91d2b730>>",
+    "<UIImageView: 0x7fdd91d2dd20; frame = (350 19; 10 10); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x7fdd91d2cfc0>>",
+    "<UIImageView: 0x7fdd939f7620; frame = (50 47; 325 0.5); userInteractionEnabled = NO; layer = <CALayer: 0x7fdd93906d70>>",
+    "<UIView: 0x7fdd91c15940; frame = (0 0; 375 667); autoresize = W+H; layer = <CALayer: 0x7fdd91c0c4a0>>"
+)
+
+
+        
+```
+
+
+
+###打印 view-Tree
+```Objective-c
+
+
+   /**
+     *  打印当前已存在的视图tree(UI开发工具)
+     */
+    [self.view logSubviews:^NSArray *{
+        /**
+         *  这里返回你要在视图tree里面显示的视图属性,返回nil则默认打印 @[@"frame",@"hidden",@"backgroundColor",@"userInteractionEnabled"]
+         */
+        return @[@"frame",@"hidden",@"backgroundColor",@"userInteractionEnabled"];
+    }];
+    
+    
+    
+    
+    //打印结果:
+    
+
+{
+    UIView =     {
+        properties =         {
+            backgroundColor = "UIDeviceRGBColorSpace 1 1 1 1";
+            frame = "NSRect: {{0, 0}, {375, 667}}";
+            hidden = 0;
+            userInteractionEnabled = 1;
+        };
+        subviews =         (
+                        {
+                "_UILayoutGuide" =                 {
+                    properties =                     {
+                        backgroundColor = null;
+                        frame = "NSRect: {{0, 0}, {0, 20}}";
+                        hidden = 1;
+                        userInteractionEnabled = 1;
+                    };
+                    subviews =                     (
+                    );
+                };
+            },
+                        {
+                "_UILayoutGuide" =                 {
+                    properties =                     {
+                        backgroundColor = null;
+                        frame = "NSRect: {{0, 667}, {0, 0}}";
+                        hidden = 1;
+                        userInteractionEnabled = 1;
+                    };
+                    subviews =                     (
+                    );
+                };
+            },
+                        {
+                UITableView =                 {
+                    properties =                     {
+                        backgroundColor = "UIDeviceWhiteColorSpace 0.666667 0.1";
+                        frame = "NSRect: {{0, 0}, {375, 667}}";
+                        hidden = 0;
+                        userInteractionEnabled = 1;
+                    };
+                    subviews =                     (
+                                                {
+                            UITableViewWrapperView =                             {
+                                properties =                                 {
+                                    backgroundColor = null;
+                                    frame = "NSRect: {{0, 0}, {375, 667}}";
+                                    hidden = 0;
+                                    userInteractionEnabled = 1;
+                                };
+                                subviews =                                 (
+                                                                        {
+                                        TableviewCell =                                         {
+                                            properties =                                             {
+                                                backgroundColor = "UIDeviceRGBColorSpace 1 1 1 1";
+                                                frame = "NSRect: {{0, 419}, {375, 48}}";
+                                                hidden = 0;
+                                                userInteractionEnabled = 1;
+                                            };
+                                            subviews =                                             (
+                                                                                                {
+                                                    UITableViewCellContentView =                                                     {
+                                                        properties =                                                         {
+                                                            backgroundColor = null;
+                                                            frame = "NSRect: {{0, 0}, {375, 48}}";
+                                                            hidden = 0;
+                                                            userInteractionEnabled = 1;
+                                                        };
+                                                        subviews =                                                         (
+                                                                                                                        {
+                                                                UIImageView =                                                                 {
+                                                                    properties =                                                                     {
+                                                                        backgroundColor = null;
+                                                                        frame = "NSRect: {{15, 11.5}, {25, 25}}";
+                                                                        hidden = 0;
+                                                                        userInteractionEnabled = 0;
+                                                                    };
+                                                                    subviews =                                                                     (
+                                                                    );
+                                                                };
+                                                            },
+                                                                                                                        {
+                                                                UILabel =                                                                 {
+                                                                    properties =                                                                     {
+                                                                        backgroundColor = "UIDeviceWhiteColorSpace 0 0";
+                                                                        frame = "NSRect: {{50, 11.5}, {150, 25}}";
+                                                                        hidden = 0;
+                                                                        userInteractionEnabled = 0;
+                                                                    };
+                                                                    subviews =                                                                     (
+                                                                    );
+                                                                };
+                                                            },
+                                                                                                                        {
+                                                                UIImageView =                                                                 {
+                                                                    properties =                                                                     {
+                                                                        backgroundColor = null;
+                                                                        frame = "NSRect: {{350, 19}, {10, 10}}";
+                                                                        hidden = 0;
+                                                                        userInteractionEnabled = 0;
+                                                                    };
+                                                                    subviews =                                                                     (
+                                                                    );
+                                                                };
+                                                            },
+                                                                                                                        {
+                                                                UIImageView =                                                                 {
+                                                                    properties =                                                                     {
+                                                                        backgroundColor = "UIDeviceWhiteColorSpace 0.666667 0.5";
+                                                                        frame = "NSRect: {{50, 47}, {325, 0.5}}";
+                                                                        hidden = 0;
+                                                                        userInteractionEnabled = 0;
+                                                                    };
+                                                                    subviews =                                                                     (
+                                                                    );
+                                                                };
+                                                            }
+                                                        );
+                                                    };
+                                                }
+                                            );
+                                        };
+                                    },
+                                                                        {
+                                        TableviewCell =                                         {
+                                            properties =                                             {
+                                                backgroundColor = "UIDeviceRGBColorSpace 1 1 1 1";
+                                                frame = "NSRect: {{0, 371}, {375, 48}}";
+                                                hidden = 0;
+                                                userInteractionEnabled = 1;
+                                            };
+                                            subviews =                                             (
+                                                                                                {
+                                                    UITableViewCellContentView =                                                     {
+                                                        properties =                                                         {
+                                                            backgroundColor = null;
+                                                            frame = "NSRect: {{0, 0}, {375, 48}}";
+                                                            hidden = 0;
+                                                            userInteractionEnabled = 1;
+                                                        };
+                                                        subviews =                                                         (
+                                                                                                                        {
+                                                                UIImageView =                                                                 {
+                                                                    properties =                                                                     {
+                                                                        backgroundColor = null;
+                                                                        frame = "NSRect: {{15, 11.5}, {25, 25}}";
+                                                                        hidden = 0;
+                                                                        userInteractionEnabled = 0;
+                                                                    };
+                                                                    subviews =                                                                     (
+                                                                    );
+                                                                };
+                                                            },
+                                                                                                                        {
+                                                                UILabel =                                                                 {
+                                                                    properties =                                                                     {
+                                                                        backgroundColor = "UIDeviceWhiteColorSpace 0 0";
+                                                                        frame = "NSRect: {{50, 11.5}, {150, 25}}";
+                                                                        hidden = 0;
+                                                                        userInteractionEnabled = 0;
+                                                                    };
+                                                                    subviews =                                                                     (
+                                                                    );
+                                                                };
+                                                            },
+                                                                                                                        {
+                                                                UIImageView =                                                                 {
+                                                                    properties =                                                                     {
+                                                                        backgroundColor = null;
+                                                                        frame = "NSRect: {{350, 19}, {10, 10}}";
+                                                                        hidden = 0;
+                                                                        userInteractionEnabled = 0;
+                                                                    };
+                                                                    subviews =                                                                     (
+                                                                    );
+                                                                };
+                                                            },
+                                                                                                                        {
+                                                                UIImageView =                                                                 {
+                                                                    properties =                                                                     {
+                                                                        backgroundColor = "UIDeviceWhiteColorSpace 0.666667 0.5";
+                                                                        frame = "NSRect: {{50, 47}, {325, 0.5}}";
+                                                                        hidden = 0;
+                                                                        userInteractionEnabled = 0;
+                                                                    };
+                                                                    subviews =                                                                     (
+                                                                    );
+                                                                };
+                                                            }
+                                                        );
+                                                    };
+                                                }
+                                            );
+                                        };
+                                    },
+                                                                        {
+                                        TableviewCell =                                         {
+                                            properties =                                             {
+                                                backgroundColor = "UIDeviceRGBColorSpace 1 1 1 1";
+                                                frame = "NSRect: {{0, 323}, {375, 48}}";
+                                                hidden = 0;
+                                                userInteractionEnabled = 1;
+                                            };
+                                            subviews =                                             (
+                                                                                                {
+                                                    UITableViewCellContentView =                                                     {
+                                                        properties =                                                         {
+                                                            backgroundColor = null;
+                                                            frame = "NSRect: {{0, 0}, {375, 48}}";
+                                                            hidden = 0;
+                                                            userInteractionEnabled = 1;
+                                                        };
+                                                        subviews =                                                         (
+                                                                                                                        {
+                                                                UIImageView =                                                                 {
+                                                                    properties =                                                                     {
+                                                                        backgroundColor = null;
+                                                                        frame = "NSRect: {{15, 11.5}, {25, 25}}";
+                                                                        hidden = 0;
+                                                                        userInteractionEnabled = 0;
+                                                                    };
+                                                                    subviews =                                                                     (
+                                                                    );
+                                                                };
+                                                            },
+                                                                                                                        {
+                                                                UILabel =                                                                 {
+                                                                    properties =                                                                     {
+                                                                        backgroundColor = "UIDeviceWhiteColorSpace 0 0";
+                                                                        frame = "NSRect: {{50, 11.5}, {150, 25}}";
+                                                                        hidden = 0;
+                                                                        userInteractionEnabled = 0;
+                                                                    };
+                                                                    subviews =                                                                     (
+                                                                    );
+                                                                };
+                                                            },
+                                                                                                                        {
+                                                                UIImageView =                                                                 {
+                                                                    properties =                                                                     {
+                                                                        backgroundColor = null;
+                                                                        frame = "NSRect: {{350, 19}, {10, 10}}";
+                                                                        hidden = 0;
+                                                                        userInteractionEnabled = 0;
+                                                                    };
+                                                                    subviews =                                                                     (
+                                                                    );
+                                                                };
+                                                            },
+                                                                                                                        {
+                                                                UIImageView =                                                                 {
+                                                                    properties =                                                                     {
+                                                                        backgroundColor = "UIDeviceWhiteColorSpace 0.666667 0.5";
+                                                                        frame = "NSRect: {{50, 47}, {325, 0.5}}";
+                                                                        hidden = 0;
+                                                                        userInteractionEnabled = 0;
+                                                                    };
+                                                                    subviews =                                                                     (
+                                                                    );
+                                                                };
+                                                            }
+                                                        );
+                                                    };
+                                                }
+                                            );
+                                        };
+                                    },
+                                                                        {
+                                        TableviewCell =                                         {
+                                            properties =                                             {
+                                                backgroundColor = "UIDeviceRGBColorSpace 1 1 1 1";
+                                                frame = "NSRect: {{0, 275}, {375, 48}}";
+                                                hidden = 0;
+                                                userInteractionEnabled = 1;
+                                            };
+                                            subviews =                                             (
+                                                                                                {
+                                                    UITableViewCellContentView =                                                     {
+                                                        properties =                                                         {
+                                                            backgroundColor = null;
+                                                            frame = "NSRect: {{0, 0}, {375, 48}}";
+                                                            hidden = 0;
+                                                            userInteractionEnabled = 1;
+                                                        };
+                                                        subviews =                                                         (
+                                                                                                                        {
+                                                                UIImageView =                                                                 {
+                                                                    properties =                                                                     {
+                                                                        backgroundColor = null;
+                                                                        frame = "NSRect: {{15, 11.5}, {25, 25}}";
+                                                                        hidden = 0;
+                                                                        userInteractionEnabled = 0;
+                                                                    };
+                                                                    subviews =                                                                     (
+                                                                    );
+                                                                };
+                                                            },
+                                                                                                                        {
+                                                                UILabel =                                                                 {
+                                                                    properties =                                                                     {
+                                                                        backgroundColor = "UIDeviceWhiteColorSpace 0 0";
+                                                                        frame = "NSRect: {{50, 11.5}, {150, 25}}";
+                                                                        hidden = 0;
+                                                                        userInteractionEnabled = 0;
+                                                                    };
+                                                                    subviews =                                                                     (
+                                                                    );
+                                                                };
+                                                            },
+                                                                                                                        {
+                                                                UIImageView =                                                                 {
+                                                                    properties =                                                                     {
+                                                                        backgroundColor = null;
+                                                                        frame = "NSRect: {{350, 19}, {10, 10}}";
+                                                                        hidden = 0;
+                                                                        userInteractionEnabled = 0;
+                                                                    };
+                                                                    subviews =                                                                     (
+                                                                    );
+                                                                };
+                                                            },
+                                                                                                                        {
+                                                                UIImageView =                                                                 {
+                                                                    properties =                                                                     {
+                                                                        backgroundColor = "UIDeviceWhiteColorSpace 0.666667 0.5";
+                                                                        frame = "NSRect: {{50, 47}, {325, 0.5}}";
+                                                                        hidden = 0;
+                                                                        userInteractionEnabled = 0;
+                                                                    };
+                                                                    subviews =                                                                     (
+                                                                    );
+                                                                };
+                                                            }
+                                                        );
+                                                    };
+                                                }
+                                            );
+                                        };
+                                    }
+                                );
+                            };
+                        },
+                                                {
+                            TableviewHeader =                             {
+                                properties =                                 {
+                                    backgroundColor = null;
+                                    frame = "NSRect: {{0, 0}, {375, 275}}";
+                                    hidden = 0;
+                                    userInteractionEnabled = 1;
+                                };
+                                subviews =                                 (
+                                                                        {
+                                        UIImageView =                                         {
+                                            properties =                                             {
+                                                backgroundColor = null;
+                                                frame = "NSRect: {{0, 0}, {375, 275}}";
+                                                hidden = 0;
+                                                userInteractionEnabled = 0;
+                                            };
+                                            subviews =                                             (
+                                            );
+                                        };
+                                    },
+                                                                        {
+                                        UIImageView =                                         {
+                                            properties =                                             {
+                                                backgroundColor = null;
+                                                frame = "NSRect: {{25, 210}, {40, 40}}";
+                                                hidden = 0;
+                                                userInteractionEnabled = 0;
+                                            };
+                                            subviews =                                             (
+                                            );
+                                        };
+                                    },
+                                                                        {
+                                        UIImageView =                                         {
+                                            properties =                                             {
+                                                backgroundColor = null;
+                                                frame = "NSRect: {{12, 197}, {66, 66}}";
+                                                hidden = 0;
+                                                userInteractionEnabled = 0;
+                                            };
+                                            subviews =                                             (
+                                            );
+                                        };
+                                    },
+                                                                        {
+                                        UIImageView =                                         {
+                                            properties =                                             {
+                                                backgroundColor = null;
+                                                frame = "NSRect: {{20, 251.5}, {50, 17.5}}";
+                                                hidden = 0;
+                                                userInteractionEnabled = 0;
+                                            };
+                                            subviews =                                             (
+                                            );
+                                        };
+                                    },
+                                                                        {
+                                        UIImageView =                                         {
+                                            properties =                                             {
+                                                backgroundColor = null;
+                                                frame = "NSRect: {{285, 242}, {75, 18}}";
+                                                hidden = 0;
+                                                userInteractionEnabled = 0;
+                                            };
+                                            subviews =                                             (
+                                            );
+                                        };
+                                    }
+                                );
+                            };
+                        },
+                                                {
+                            UIImageView =                             {
+                                properties =                                 {
+                                    backgroundColor = null;
+                                    frame = "NSRect: {{3, 661.5}, {369, 2.5}}";
+                                    hidden = 0;
+                                    userInteractionEnabled = 0;
+                                };
+                                subviews =                                 (
+                                );
+                            };
+                        },
+                                                {
+                            UIImageView =                             {
+                                properties =                                 {
+                                    backgroundColor = null;
+                                    frame = "NSRect: {{369.5, 395}, {2.5, 269}}";
+                                    hidden = 0;
+                                    userInteractionEnabled = 0;
+                                };
+                                subviews =                                 (
+                                );
+                            };
+                        }
+                    );
+                };
+            }
+        );
+    };
+}
+
+
+
+    
+    
+```
+
+
+
+
+## 所有的支持的类
 
 ### ca - category classes (46-files)
 ___
@@ -547,7 +1102,7 @@ NSXMLParser+TFEasyCoder.h
 ```
 
 
-##About coder
+##关于作者
 * GitHub:[shmxybfq](https://github.com/shmxybfq "shmxybfq's github")
 * SinaBlog:[守候ztf](http://blog.sina.com.cn/u/3481024997 "shmxybfq's sinablog")
 
