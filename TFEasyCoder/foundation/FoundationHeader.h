@@ -2,8 +2,8 @@
 //  NSHeader.h
 //  两大框架继承
 //
-//  Created by 融数 on 16/10/27.
-//  Copyright © 2016年 融数. All rights reserved.
+//  Created by ztf on 16/10/27.
+//  Copyright © 2016年 ztf. All rights reserved.
 //
 
 #ifndef NSHeader_h
