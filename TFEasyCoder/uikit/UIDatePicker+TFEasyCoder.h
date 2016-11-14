@@ -10,66 +10,66 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIDatePicker,UIDatePicker *);
+typedef void(^UIDatePickerEasyCoderBlock) (UIDatePicker * ins);
 
 @interface UIDatePicker (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIDatePicker, UIDatePicker *);
-TF_EC_MINSTANCE_INT(UIDatePicker,UIDatePicker *);
++( UIDatePicker *)easyCoder:(UIDatePickerEasyCoderBlock)block;
+-(UIDatePicker *)easyCoder:(UIDatePickerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,UIColor *,tintColor)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,double,minuteInterval)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,long long,datePickerMode)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,NSLocale *,locale)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,NSCalendar *,calendar)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,NSTimeZone *,timeZone)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,NSDate *,date)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,NSDate *,minimumDate)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,NSDate *,maximumDate)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,double,countDownDuration)
+-(UIDatePicker  *(^)(UIColor *  tintColor))set_tintColor;
+-(UIDatePicker  *(^)(double  minuteInterval))set_minuteInterval;
+-(UIDatePicker  *(^)(long long  datePickerMode))set_datePickerMode;
+-(UIDatePicker  *(^)(NSLocale *  locale))set_locale;
+-(UIDatePicker  *(^)(NSCalendar *  calendar))set_calendar;
+-(UIDatePicker  *(^)(NSTimeZone *  timeZone))set_timeZone;
+-(UIDatePicker  *(^)(NSDate *  date))set_date;
+-(UIDatePicker  *(^)(NSDate *  minimumDate))set_minimumDate;
+-(UIDatePicker  *(^)(NSDate *  maximumDate))set_maximumDate;
+-(UIDatePicker  *(^)(double  countDownDuration))set_countDownDuration;
 
 
 
 
 
 //superclass pros UIControl
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,BOOL,selected);
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,BOOL,highlighted);
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,long long,contentVerticalAlignment);
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,long long,contentHorizontalAlignment);
+-(UIDatePicker  *(^)(BOOL  enabled))set_enabled;
+-(UIDatePicker  *(^)(BOOL  selected))set_selected;
+-(UIDatePicker  *(^)(BOOL  highlighted))set_highlighted;
+-(UIDatePicker  *(^)(long long  contentVerticalAlignment))set_contentVerticalAlignment;
+-(UIDatePicker  *(^)(long long  contentHorizontalAlignment))set_contentHorizontalAlignment;
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,UIColor *,backgroundColor)
+-(UIDatePicker  *(^)(UIView *  maskView))set_maskView;
+-(UIDatePicker  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UIDatePicker  *(^)(long long  tag))set_tag;
+-(UIDatePicker  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UIDatePicker  *(^)(CGPoint  center))set_center;
+-(UIDatePicker  *(^)(CGRect  frame))set_frame;
+-(UIDatePicker  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,NSUserActivity *,userActivity);
+-(UIDatePicker  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIDatePicker ,long long,accessibilityNavigationStyle)
+-(UIDatePicker  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIDatePicker  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIDatePicker  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIDatePicker  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIDatePicker  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIDatePicker  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIDatePicker  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIDatePicker  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIDatePicker  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIDatePicker  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIDatePicker  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIDatePicker  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIDatePicker  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIDatePicker  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIDatePicker);
+-(UIDatePicker *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

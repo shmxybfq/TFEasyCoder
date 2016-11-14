@@ -10,48 +10,48 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UISwipeGestureRecognizer,UISwipeGestureRecognizer *);
+typedef void(^UISwipeGestureRecognizerEasyCoderBlock) (UISwipeGestureRecognizer * ins);
 
 @interface UISwipeGestureRecognizer (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UISwipeGestureRecognizer, UISwipeGestureRecognizer *);
-TF_EC_MINSTANCE_INT(UISwipeGestureRecognizer,UISwipeGestureRecognizer *);
++( UISwipeGestureRecognizer *)easyCoder:(UISwipeGestureRecognizerEasyCoderBlock)block;
+-(UISwipeGestureRecognizer *)easyCoder:(UISwipeGestureRecognizerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UISwipeGestureRecognizer ,unsigned long long,direction);
+-(UISwipeGestureRecognizer  *(^)(unsigned long long  direction))set_direction;
 
 
 
 
 
 //superclass pros UIGestureRecognizer
-TF_EC_CHAIN_PROP_INT(UISwipeGestureRecognizer ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(UISwipeGestureRecognizer ,BOOL,cancelsTouchesInView);
-TF_EC_CHAIN_PROP_INT(UISwipeGestureRecognizer ,BOOL,delaysTouchesBegan);
-TF_EC_CHAIN_PROP_INT(UISwipeGestureRecognizer ,BOOL,delaysTouchesEnded);
-TF_EC_CHAIN_PROP_INT(UISwipeGestureRecognizer ,NSArray *,allowedTouchTypes);
-TF_EC_CHAIN_PROP_INT(UISwipeGestureRecognizer ,NSArray *,allowedPressTypes);
+-(UISwipeGestureRecognizer  *(^)(BOOL  enabled))set_enabled;
+-(UISwipeGestureRecognizer  *(^)(BOOL  cancelsTouchesInView))set_cancelsTouchesInView;
+-(UISwipeGestureRecognizer  *(^)(BOOL  delaysTouchesBegan))set_delaysTouchesBegan;
+-(UISwipeGestureRecognizer  *(^)(BOOL  delaysTouchesEnded))set_delaysTouchesEnded;
+-(UISwipeGestureRecognizer  *(^)(NSArray *  allowedTouchTypes))set_allowedTouchTypes;
+-(UISwipeGestureRecognizer  *(^)(NSArray *  allowedPressTypes))set_allowedPressTypes;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UISwipeGestureRecognizer ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UISwipeGestureRecognizer ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UISwipeGestureRecognizer ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UISwipeGestureRecognizer ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UISwipeGestureRecognizer ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UISwipeGestureRecognizer ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UISwipeGestureRecognizer ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UISwipeGestureRecognizer ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UISwipeGestureRecognizer ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UISwipeGestureRecognizer ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UISwipeGestureRecognizer ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UISwipeGestureRecognizer ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UISwipeGestureRecognizer ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UISwipeGestureRecognizer ,long long,accessibilityNavigationStyle)
+-(UISwipeGestureRecognizer  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UISwipeGestureRecognizer  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UISwipeGestureRecognizer  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UISwipeGestureRecognizer  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UISwipeGestureRecognizer  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UISwipeGestureRecognizer  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UISwipeGestureRecognizer  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UISwipeGestureRecognizer  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UISwipeGestureRecognizer  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UISwipeGestureRecognizer  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UISwipeGestureRecognizer  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UISwipeGestureRecognizer  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UISwipeGestureRecognizer  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UISwipeGestureRecognizer  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UISwipeGestureRecognizer);
+-(UISwipeGestureRecognizer *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

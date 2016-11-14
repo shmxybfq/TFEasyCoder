@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSMethodSignature,NSMethodSignature *);
+typedef void(^NSMethodSignatureEasyCoderBlock) (NSMethodSignature * ins);
 
 @interface NSMethodSignature (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSMethodSignature, NSMethodSignature *);
-TF_EC_MINSTANCE_INT(NSMethodSignature,NSMethodSignature *);
++( NSMethodSignature *)easyCoder:(NSMethodSignatureEasyCoderBlock)block;
+-(NSMethodSignature *)easyCoder:(NSMethodSignatureEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(NSMethodSignature,NSMethodSignature *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSMethodSignature ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSMethodSignature ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSMethodSignature ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSMethodSignature ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSMethodSignature ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSMethodSignature ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSMethodSignature ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSMethodSignature ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSMethodSignature ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSMethodSignature ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSMethodSignature ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSMethodSignature ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSMethodSignature ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSMethodSignature ,long long,accessibilityNavigationStyle)
+-(NSMethodSignature  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSMethodSignature  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSMethodSignature  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSMethodSignature  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSMethodSignature  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSMethodSignature  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSMethodSignature  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSMethodSignature  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSMethodSignature  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSMethodSignature  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSMethodSignature  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSMethodSignature  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSMethodSignature  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSMethodSignature  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSMethodSignature);
+-(NSMethodSignature *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

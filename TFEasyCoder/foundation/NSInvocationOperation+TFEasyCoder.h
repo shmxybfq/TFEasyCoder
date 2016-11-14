@@ -14,12 +14,12 @@
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 
-TF_EC_BLOCK(NSInvocationOperation,NSInvocationOperation *);
+typedef void(^NSInvocationOperationEasyCoderBlock) (NSInvocationOperation * ins);
 
 @interface NSInvocationOperation (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSInvocationOperation, NSInvocationOperation *);
-TF_EC_MINSTANCE_INT(NSInvocationOperation,NSInvocationOperation *);
++( NSInvocationOperation *)easyCoder:(NSInvocationOperationEasyCoderBlock)block;
+-(NSInvocationOperation *)easyCoder:(NSInvocationOperationEasyCoderBlock)block;
 
 
 
@@ -27,31 +27,31 @@ TF_EC_MINSTANCE_INT(NSInvocationOperation,NSInvocationOperation *);
 
 
 //superclass pros NSOperation
-TF_EC_CHAIN_PROP_INT(NSInvocationOperation ,long long,queuePriority);
-TF_EC_CHAIN_PROP_INT(NSInvocationOperation ,double,threadPriority);
-TF_EC_CHAIN_PROP_INT(NSInvocationOperation ,long long,qualityOfService);
-TF_EC_CHAIN_PROP_INT(NSInvocationOperation ,NSString *,name);
+-(NSInvocationOperation  *(^)(long long  queuePriority))set_queuePriority;
+-(NSInvocationOperation  *(^)(double  threadPriority))set_threadPriority;
+-(NSInvocationOperation  *(^)(long long  qualityOfService))set_qualityOfService;
+-(NSInvocationOperation  *(^)(NSString *  name))set_name;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSInvocationOperation ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSInvocationOperation ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSInvocationOperation ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSInvocationOperation ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSInvocationOperation ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSInvocationOperation ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSInvocationOperation ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSInvocationOperation ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSInvocationOperation ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSInvocationOperation ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSInvocationOperation ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSInvocationOperation ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSInvocationOperation ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSInvocationOperation ,long long,accessibilityNavigationStyle)
+-(NSInvocationOperation  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSInvocationOperation  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSInvocationOperation  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSInvocationOperation  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSInvocationOperation  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSInvocationOperation  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSInvocationOperation  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSInvocationOperation  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSInvocationOperation  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSInvocationOperation  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSInvocationOperation  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSInvocationOperation  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSInvocationOperation  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSInvocationOperation  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSInvocationOperation);
+-(NSInvocationOperation *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -11,42 +11,209 @@
 
 @implementation NSPersonNameComponents (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(NSPersonNameComponents, NSPersonNameComponents *);
-TF_EC_MINSTANCE_IMP(NSPersonNameComponents, NSPersonNameComponents *);
++( NSPersonNameComponents *)easyCoder:(NSPersonNameComponentsEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( NSPersonNameComponents *)ins);
+        }
+    }];
+}
+
+-( NSPersonNameComponents *)easyCoder:(NSPersonNameComponentsEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
 
 
-TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,NSString *,namePrefix)
-TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,NSString *,givenName)
-TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,NSString *,middleName)
-TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,NSString *,familyName)
-TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,NSString *,nameSuffix)
-TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,NSString *,nickname)
-TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,NSPersonNameComponents *,phoneticRepresentation)
+
+-(NSPersonNameComponents  *(^)(NSString *  namePrefix))set_namePrefix{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  namePrefix){
+        weakSelf.namePrefix = namePrefix;
+        return weakSelf;
+    };
+}
+
+-(NSPersonNameComponents  *(^)(NSString *  givenName))set_givenName{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  givenName){
+        weakSelf.givenName = givenName;
+        return weakSelf;
+    };
+}
+
+-(NSPersonNameComponents  *(^)(NSString *  middleName))set_middleName{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  middleName){
+        weakSelf.middleName = middleName;
+        return weakSelf;
+    };
+}
+
+-(NSPersonNameComponents  *(^)(NSString *  familyName))set_familyName{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  familyName){
+        weakSelf.familyName = familyName;
+        return weakSelf;
+    };
+}
+
+-(NSPersonNameComponents  *(^)(NSString *  nameSuffix))set_nameSuffix{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  nameSuffix){
+        weakSelf.nameSuffix = nameSuffix;
+        return weakSelf;
+    };
+}
+
+-(NSPersonNameComponents  *(^)(NSString *  nickname))set_nickname{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  nickname){
+        weakSelf.nickname = nickname;
+        return weakSelf;
+    };
+}
+
+-(NSPersonNameComponents  *(^)(NSPersonNameComponents *  phoneticRepresentation))set_phoneticRepresentation{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSPersonNameComponents *  phoneticRepresentation){
+        weakSelf.phoneticRepresentation = phoneticRepresentation;
+        return weakSelf;
+    };
+}
+
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(NSPersonNameComponents ,long long,accessibilityNavigationStyle)
+-(NSPersonNameComponents  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(NSPersonNameComponents  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(NSPersonNameComponents  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(NSPersonNameComponents  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(NSPersonNameComponents  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(NSPersonNameComponents  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(NSPersonNameComponents  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(NSPersonNameComponents  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(NSPersonNameComponents  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(NSPersonNameComponents  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(NSPersonNameComponents  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(NSPersonNameComponents  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(NSPersonNameComponents  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(NSPersonNameComponents  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSPersonNameComponents);
+
+-(NSPersonNameComponents *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

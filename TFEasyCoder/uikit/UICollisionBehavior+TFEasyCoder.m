@@ -11,39 +11,178 @@
 
 @implementation UICollisionBehavior (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(UICollisionBehavior, UICollisionBehavior *);
-TF_EC_MINSTANCE_IMP(UICollisionBehavior, UICollisionBehavior *);
++( UICollisionBehavior *)easyCoder:(UICollisionBehaviorEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( UICollisionBehavior *)ins);
+        }
+    }];
+}
+
+-( UICollisionBehavior *)easyCoder:(UICollisionBehaviorEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
 
 
-TF_EC_CHAIN_PROP_IMP(UICollisionBehavior ,unsigned long long,collisionMode)
-TF_EC_CHAIN_PROP_IMP(UICollisionBehavior ,BOOL,translatesReferenceBoundsIntoBoundary)
-TF_EC_CHAIN_PROP_IMP(UICollisionBehavior ,id<UICollisionBehaviorDelegate>  ,collisionDelegate)
+
+-(UICollisionBehavior  *(^)(unsigned long long  collisionMode))set_collisionMode{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  collisionMode){
+        weakSelf.collisionMode = collisionMode;
+        return weakSelf;
+    };
+}
+
+-(UICollisionBehavior  *(^)(BOOL  translatesReferenceBoundsIntoBoundary))set_translatesReferenceBoundsIntoBoundary{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  translatesReferenceBoundsIntoBoundary){
+        weakSelf.translatesReferenceBoundsIntoBoundary = translatesReferenceBoundsIntoBoundary;
+        return weakSelf;
+    };
+}
+
+-(UICollisionBehavior  *(^)(id<UICollisionBehaviorDelegate>    collisionDelegate))set_collisionDelegate{
+    __weak typeof(self) weakSelf = self;
+    return ^(id<UICollisionBehaviorDelegate>    collisionDelegate){
+        weakSelf.collisionDelegate = collisionDelegate;
+        return weakSelf;
+    };
+}
+
 
 
 
 
 //superclass pros UIDynamicBehavior
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(UICollisionBehavior ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(UICollisionBehavior ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(UICollisionBehavior ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(UICollisionBehavior ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(UICollisionBehavior ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(UICollisionBehavior ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(UICollisionBehavior ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(UICollisionBehavior ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(UICollisionBehavior ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(UICollisionBehavior ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(UICollisionBehavior ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(UICollisionBehavior ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(UICollisionBehavior ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(UICollisionBehavior ,long long,accessibilityNavigationStyle)
+-(UICollisionBehavior  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(UICollisionBehavior  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(UICollisionBehavior  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(UICollisionBehavior  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(UICollisionBehavior  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(UICollisionBehavior  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(UICollisionBehavior  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(UICollisionBehavior  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(UICollisionBehavior  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(UICollisionBehavior  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(UICollisionBehavior  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(UICollisionBehavior  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(UICollisionBehavior  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(UICollisionBehavior  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(UICollisionBehavior);
+
+-(UICollisionBehavior *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

@@ -10,40 +10,40 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSStream,NSStream *);
+typedef void(^NSStreamEasyCoderBlock) (NSStream * ins);
 
 @interface NSStream (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSStream, NSStream *);
-TF_EC_MINSTANCE_INT(NSStream,NSStream *);
++( NSStream *)easyCoder:(NSStreamEasyCoderBlock)block;
+-(NSStream *)easyCoder:(NSStreamEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSStream ,id<NSStreamDelegate> ,delegate);
+-(NSStream  *(^)(id<NSStreamDelegate>   delegate))set_delegate;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSStream ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSStream ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSStream ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSStream ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSStream ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSStream ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSStream ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSStream ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSStream ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSStream ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSStream ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSStream ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSStream ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSStream ,long long,accessibilityNavigationStyle)
+-(NSStream  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSStream  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSStream  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSStream  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSStream  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSStream  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSStream  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSStream  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSStream  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSStream  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSStream  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSStream  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSStream  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSStream  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSStream);
+-(NSStream *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

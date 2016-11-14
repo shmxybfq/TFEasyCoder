@@ -10,56 +10,56 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIProgressView,UIProgressView *);
+typedef void(^UIProgressViewEasyCoderBlock) (UIProgressView * ins);
 
 @interface UIProgressView (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIProgressView, UIProgressView *);
-TF_EC_MINSTANCE_INT(UIProgressView,UIProgressView *);
++( UIProgressView *)easyCoder:(UIProgressViewEasyCoderBlock)block;
+-(UIProgressView *)easyCoder:(UIProgressViewEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIProgressView ,long long,progressViewStyle);
-TF_EC_CHAIN_PROP_INT(UIProgressView ,float,progress);
-TF_EC_CHAIN_PROP_INT(UIProgressView ,UIColor *,progressTintColor);
-TF_EC_CHAIN_PROP_INT(UIProgressView ,UIColor *,trackTintColor);
-TF_EC_CHAIN_PROP_INT(UIProgressView ,UIImage *,progressImage);
-TF_EC_CHAIN_PROP_INT(UIProgressView ,UIImage *,trackImage);
-TF_EC_CHAIN_PROP_INT(UIProgressView ,NSProgress *,observedProgress);
+-(UIProgressView  *(^)(long long  progressViewStyle))set_progressViewStyle;
+-(UIProgressView  *(^)(float  progress))set_progress;
+-(UIProgressView  *(^)(UIColor *  progressTintColor))set_progressTintColor;
+-(UIProgressView  *(^)(UIColor *  trackTintColor))set_trackTintColor;
+-(UIProgressView  *(^)(UIImage *  progressImage))set_progressImage;
+-(UIProgressView  *(^)(UIImage *  trackImage))set_trackImage;
+-(UIProgressView  *(^)(NSProgress *  observedProgress))set_observedProgress;
 
 
 
 
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UIProgressView ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UIProgressView ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UIProgressView ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UIProgressView ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UIProgressView ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UIProgressView ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UIProgressView ,UIColor *,backgroundColor)
+-(UIProgressView  *(^)(UIView *  maskView))set_maskView;
+-(UIProgressView  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UIProgressView  *(^)(long long  tag))set_tag;
+-(UIProgressView  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UIProgressView  *(^)(CGPoint  center))set_center;
+-(UIProgressView  *(^)(CGRect  frame))set_frame;
+-(UIProgressView  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIProgressView ,NSUserActivity *,userActivity);
+-(UIProgressView  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIProgressView ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIProgressView ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIProgressView ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIProgressView ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIProgressView ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIProgressView ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIProgressView ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIProgressView ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIProgressView ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIProgressView ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIProgressView ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIProgressView ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIProgressView ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIProgressView ,long long,accessibilityNavigationStyle)
+-(UIProgressView  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIProgressView  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIProgressView  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIProgressView  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIProgressView  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIProgressView  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIProgressView  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIProgressView  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIProgressView  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIProgressView  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIProgressView  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIProgressView  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIProgressView  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIProgressView  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIProgressView);
+-(UIProgressView *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

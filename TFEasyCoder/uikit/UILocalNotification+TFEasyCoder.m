@@ -11,50 +11,266 @@
 
 @implementation UILocalNotification (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(UILocalNotification, UILocalNotification *);
-TF_EC_MINSTANCE_IMP(UILocalNotification, UILocalNotification *);
++( UILocalNotification *)easyCoder:(UILocalNotificationEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( UILocalNotification *)ins);
+        }
+    }];
+}
+
+-( UILocalNotification *)easyCoder:(UILocalNotificationEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
 
 
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSDate *,fireDate)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSTimeZone *,timeZone)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,unsigned long long,repeatInterval)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSCalendar *,repeatCalendar)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,BOOL,regionTriggersOnce)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSString *,alertBody)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,BOOL,hasAction)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSString *,alertAction)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSString *,alertLaunchImage)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSString *,alertTitle)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSString *,soundName)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,long long,applicationIconBadgeNumber)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSDictionary *,userInfo)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSString *,category)
+
+-(UILocalNotification  *(^)(NSDate *  fireDate))set_fireDate{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSDate *  fireDate){
+        weakSelf.fireDate = fireDate;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(NSTimeZone *  timeZone))set_timeZone{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSTimeZone *  timeZone){
+        weakSelf.timeZone = timeZone;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(unsigned long long  repeatInterval))set_repeatInterval{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  repeatInterval){
+        weakSelf.repeatInterval = repeatInterval;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(NSCalendar *  repeatCalendar))set_repeatCalendar{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSCalendar *  repeatCalendar){
+        weakSelf.repeatCalendar = repeatCalendar;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(BOOL  regionTriggersOnce))set_regionTriggersOnce{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  regionTriggersOnce){
+        weakSelf.regionTriggersOnce = regionTriggersOnce;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(NSString *  alertBody))set_alertBody{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  alertBody){
+        weakSelf.alertBody = alertBody;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(BOOL  hasAction))set_hasAction{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  hasAction){
+        weakSelf.hasAction = hasAction;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(NSString *  alertAction))set_alertAction{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  alertAction){
+        weakSelf.alertAction = alertAction;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(NSString *  alertLaunchImage))set_alertLaunchImage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  alertLaunchImage){
+        weakSelf.alertLaunchImage = alertLaunchImage;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(NSString *  alertTitle))set_alertTitle{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  alertTitle){
+        weakSelf.alertTitle = alertTitle;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(NSString *  soundName))set_soundName{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  soundName){
+        weakSelf.soundName = soundName;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(long long  applicationIconBadgeNumber))set_applicationIconBadgeNumber{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  applicationIconBadgeNumber){
+        weakSelf.applicationIconBadgeNumber = applicationIconBadgeNumber;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(NSDictionary *  userInfo))set_userInfo{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSDictionary *  userInfo){
+        weakSelf.userInfo = userInfo;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(NSString *  category))set_category{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  category){
+        weakSelf.category = category;
+        return weakSelf;
+    };
+}
+
 
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(UILocalNotification ,long long,accessibilityNavigationStyle)
+-(UILocalNotification  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(UILocalNotification  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(UILocalNotification);
+
+-(UILocalNotification *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

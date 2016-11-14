@@ -10,50 +10,50 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIPopoverPresentationController,UIPopoverPresentationController *);
+typedef void(^UIPopoverPresentationControllerEasyCoderBlock) (UIPopoverPresentationController * ins);
 
 @interface UIPopoverPresentationController (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIPopoverPresentationController, UIPopoverPresentationController *);
-TF_EC_MINSTANCE_INT(UIPopoverPresentationController,UIPopoverPresentationController *);
++( UIPopoverPresentationController *)easyCoder:(UIPopoverPresentationControllerEasyCoderBlock)block;
+-(UIPopoverPresentationController *)easyCoder:(UIPopoverPresentationControllerEasyCoderBlock)block;
 
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,id<UIPopoverPresentationControllerDelegate>  ,delegate)
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,unsigned long long,permittedArrowDirections)
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,UIView *,sourceView)
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,BOOL,canOverlapSourceViewRect)
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,UIBarButtonItem *,barButtonItem)
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,NSArray *,passthroughViews)
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,UIColor *,backgroundColor)
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,UIEdgeInsets,popoverLayoutMargins)
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,Class,popoverBackgroundViewClass)
+-(UIPopoverPresentationController  *(^)(id<UIPopoverPresentationControllerDelegate>    delegate))set_delegate;
+-(UIPopoverPresentationController  *(^)(unsigned long long  permittedArrowDirections))set_permittedArrowDirections;
+-(UIPopoverPresentationController  *(^)(UIView *  sourceView))set_sourceView;
+-(UIPopoverPresentationController  *(^)(BOOL  canOverlapSourceViewRect))set_canOverlapSourceViewRect;
+-(UIPopoverPresentationController  *(^)(UIBarButtonItem *  barButtonItem))set_barButtonItem;
+-(UIPopoverPresentationController  *(^)(NSArray *  passthroughViews))set_passthroughViews;
+-(UIPopoverPresentationController  *(^)(UIColor *  backgroundColor))set_backgroundColor;
+-(UIPopoverPresentationController  *(^)(UIEdgeInsets  popoverLayoutMargins))set_popoverLayoutMargins;
+-(UIPopoverPresentationController  *(^)(Class  popoverBackgroundViewClass))set_popoverBackgroundViewClass;
 
 
 
 
 //superclass pros UIPresentationController
 //TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,id<UIAdaptivePresentationControllerDelegate>  ,delegate)
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,UITraitCollection *,overrideTraitCollection)
+-(UIPopoverPresentationController  *(^)(UITraitCollection *  overrideTraitCollection))set_overrideTraitCollection;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIPopoverPresentationController ,long long,accessibilityNavigationStyle)
+-(UIPopoverPresentationController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIPopoverPresentationController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIPopoverPresentationController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIPopoverPresentationController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIPopoverPresentationController  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIPopoverPresentationController  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIPopoverPresentationController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIPopoverPresentationController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIPopoverPresentationController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIPopoverPresentationController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIPopoverPresentationController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIPopoverPresentationController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIPopoverPresentationController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIPopoverPresentationController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIPopoverPresentationController);
+-(UIPopoverPresentationController *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

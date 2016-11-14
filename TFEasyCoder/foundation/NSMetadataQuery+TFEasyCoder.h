@@ -10,48 +10,48 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSMetadataQuery,NSMetadataQuery *);
+typedef void(^NSMetadataQueryEasyCoderBlock) (NSMetadataQuery * ins);
 
 @interface NSMetadataQuery (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSMetadataQuery, NSMetadataQuery *);
-TF_EC_MINSTANCE_INT(NSMetadataQuery,NSMetadataQuery *);
++( NSMetadataQuery *)easyCoder:(NSMetadataQueryEasyCoderBlock)block;
+-(NSMetadataQuery *)easyCoder:(NSMetadataQueryEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,id<NSMetadataQueryDelegate> ,delegate);
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,NSPredicate *,predicate);
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,NSArray *,sortDescriptors);
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,NSArray *,valueListAttributes);
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,NSArray *,groupingAttributes);
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,double,notificationBatchingInterval);
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,NSArray *,searchScopes);
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,NSArray *,searchItems);
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,NSOperationQueue *,operationQueue);
+-(NSMetadataQuery  *(^)(id<NSMetadataQueryDelegate>   delegate))set_delegate;
+-(NSMetadataQuery  *(^)(NSPredicate *  predicate))set_predicate;
+-(NSMetadataQuery  *(^)(NSArray *  sortDescriptors))set_sortDescriptors;
+-(NSMetadataQuery  *(^)(NSArray *  valueListAttributes))set_valueListAttributes;
+-(NSMetadataQuery  *(^)(NSArray *  groupingAttributes))set_groupingAttributes;
+-(NSMetadataQuery  *(^)(double  notificationBatchingInterval))set_notificationBatchingInterval;
+-(NSMetadataQuery  *(^)(NSArray *  searchScopes))set_searchScopes;
+-(NSMetadataQuery  *(^)(NSArray *  searchItems))set_searchItems;
+-(NSMetadataQuery  *(^)(NSOperationQueue *  operationQueue))set_operationQueue;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSMetadataQuery ,long long,accessibilityNavigationStyle)
+-(NSMetadataQuery  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSMetadataQuery  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSMetadataQuery  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSMetadataQuery  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSMetadataQuery  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSMetadataQuery  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSMetadataQuery  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSMetadataQuery  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSMetadataQuery  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSMetadataQuery  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSMetadataQuery  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSMetadataQuery  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSMetadataQuery  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSMetadataQuery  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSMetadataQuery);
+-(NSMetadataQuery *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

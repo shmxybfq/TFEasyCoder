@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSDecimalNumber,NSDecimalNumber *);
+typedef void(^NSDecimalNumberEasyCoderBlock) (NSDecimalNumber * ins);
 
 @interface NSDecimalNumber (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSDecimalNumber, NSDecimalNumber *);
-TF_EC_MINSTANCE_INT(NSDecimalNumber,NSDecimalNumber *);
++( NSDecimalNumber *)easyCoder:(NSDecimalNumberEasyCoderBlock)block;
+-(NSDecimalNumber *)easyCoder:(NSDecimalNumberEasyCoderBlock)block;
 
 
 
@@ -25,26 +25,26 @@ TF_EC_MINSTANCE_INT(NSDecimalNumber,NSDecimalNumber *);
 //superclass pros NSNumber
 //superclass pros NSValue
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSDecimalNumber ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSDecimalNumber ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSDecimalNumber ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSDecimalNumber ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSDecimalNumber ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSDecimalNumber ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSDecimalNumber ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSDecimalNumber ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSDecimalNumber ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSDecimalNumber ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSDecimalNumber ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSDecimalNumber ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSDecimalNumber ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSDecimalNumber ,long long,accessibilityNavigationStyle)
+-(NSDecimalNumber  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSDecimalNumber  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSDecimalNumber  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSDecimalNumber  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSDecimalNumber  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSDecimalNumber  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSDecimalNumber  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSDecimalNumber  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSDecimalNumber  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSDecimalNumber  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSDecimalNumber  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSDecimalNumber  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSDecimalNumber  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSDecimalNumber  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSDecimalNumber);
+-(NSDecimalNumber *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

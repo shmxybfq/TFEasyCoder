@@ -11,96 +11,634 @@
 
 @implementation CAShapeLayer (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(CAShapeLayer, CAShapeLayer *);
-TF_EC_MINSTANCE_IMP(CAShapeLayer, CAShapeLayer *);
++( CAShapeLayer *)easyCoder:(CAShapeLayerEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( CAShapeLayer *)ins);
+        }
+    }];
+}
+
+-( CAShapeLayer *)easyCoder:(CAShapeLayerEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
 
 
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,CGPathRef,path)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,CGColorRef,fillColor)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,NSString *,fillRule)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,CGColorRef,strokeColor)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,double,strokeStart)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,double,strokeEnd)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,double,lineWidth)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,double,miterLimit)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,NSString *,lineCap)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,NSString *,lineJoin)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,double,lineDashPhase)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,NSArray *,lineDashPattern)
+
+-(CAShapeLayer  *(^)(CGPathRef  path))set_path{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPathRef  path){
+        weakSelf.path = path;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(CGColorRef  fillColor))set_fillColor{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGColorRef  fillColor){
+        weakSelf.fillColor = fillColor;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(NSString *  fillRule))set_fillRule{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  fillRule){
+        weakSelf.fillRule = fillRule;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(CGColorRef  strokeColor))set_strokeColor{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGColorRef  strokeColor){
+        weakSelf.strokeColor = strokeColor;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(double  strokeStart))set_strokeStart{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  strokeStart){
+        weakSelf.strokeStart = strokeStart;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(double  strokeEnd))set_strokeEnd{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  strokeEnd){
+        weakSelf.strokeEnd = strokeEnd;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(double  lineWidth))set_lineWidth{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  lineWidth){
+        weakSelf.lineWidth = lineWidth;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(double  miterLimit))set_miterLimit{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  miterLimit){
+        weakSelf.miterLimit = miterLimit;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(NSString *  lineCap))set_lineCap{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  lineCap){
+        weakSelf.lineCap = lineCap;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(NSString *  lineJoin))set_lineJoin{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  lineJoin){
+        weakSelf.lineJoin = lineJoin;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(double  lineDashPhase))set_lineDashPhase{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  lineDashPhase){
+        weakSelf.lineDashPhase = lineDashPhase;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(NSArray *  lineDashPattern))set_lineDashPattern{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  lineDashPattern){
+        weakSelf.lineDashPattern = lineDashPattern;
+        return weakSelf;
+    };
+}
+
 
 
 
 
 //superclass pros CALayer
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,CGPoint,position)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,double,zPosition)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,CGPoint,anchorPoint)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,double,anchorPointZ)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,CATransform3D,transform);
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,BOOL,hidden)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,BOOL,doubleSided)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,BOOL,geometryFlipped)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,NSArray *,sublayers)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,CATransform3D,sublayerTransform);
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,CALayer *,mask)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,BOOL,masksToBounds)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,NSString *,contentsGravity)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,double,contentsScale)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,NSString *,minificationFilter)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,NSString *,magnificationFilter)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,float,minificationFilterBias)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,BOOL,opaque)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,BOOL,needsDisplayOnBoundsChange)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,BOOL,drawsAsynchronously)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,unsigned int,edgeAntialiasingMask)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,BOOL,allowsEdgeAntialiasing)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,CGColorRef,backgroundColor)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,double,cornerRadius)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,double,borderWidth)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,CGColorRef,borderColor)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,float,opacity)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,BOOL,allowsGroupOpacity)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,NSArray *,filters)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,NSArray *,backgroundFilters)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,BOOL,shouldRasterize)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,double,rasterizationScale)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,CGColorRef,shadowColor)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,float,shadowOpacity)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,CGSize,shadowOffset)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,double,shadowRadius)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,CGPathRef,shadowPath)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,NSDictionary *,actions)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,NSString *,name)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,NSDictionary *,style)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,double,beginTime)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,double,duration)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,float,speed)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,double,timeOffset)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,float,repeatCount)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,double,repeatDuration)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,BOOL,autoreverses)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,NSString *,fillMode)
+-(CAShapeLayer  *(^)(CGPoint  position))set_position{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  position){
+        weakSelf.position = position;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(double  zPosition))set_zPosition{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  zPosition){
+        weakSelf.zPosition = zPosition;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(CGPoint  anchorPoint))set_anchorPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  anchorPoint){
+        weakSelf.anchorPoint = anchorPoint;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(double  anchorPointZ))set_anchorPointZ{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  anchorPointZ){
+        weakSelf.anchorPointZ = anchorPointZ;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(CATransform3D  transform))set_transform{
+    __weak typeof(self) weakSelf = self;
+    return ^(CATransform3D  transform){
+        weakSelf.transform = transform;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(BOOL  hidden))set_hidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  hidden){
+        weakSelf.hidden = hidden;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(BOOL  doubleSided))set_doubleSided{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  doubleSided){
+        weakSelf.doubleSided = doubleSided;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(BOOL  geometryFlipped))set_geometryFlipped{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  geometryFlipped){
+        weakSelf.geometryFlipped = geometryFlipped;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(NSArray *  sublayers))set_sublayers{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  sublayers){
+        weakSelf.sublayers = sublayers;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(CATransform3D  sublayerTransform))set_sublayerTransform{
+    __weak typeof(self) weakSelf = self;
+    return ^(CATransform3D  sublayerTransform){
+        weakSelf.sublayerTransform = sublayerTransform;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(CALayer *  mask))set_mask{
+    __weak typeof(self) weakSelf = self;
+    return ^(CALayer *  mask){
+        weakSelf.mask = mask;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(BOOL  masksToBounds))set_masksToBounds{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  masksToBounds){
+        weakSelf.masksToBounds = masksToBounds;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(NSString *  contentsGravity))set_contentsGravity{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  contentsGravity){
+        weakSelf.contentsGravity = contentsGravity;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(double  contentsScale))set_contentsScale{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  contentsScale){
+        weakSelf.contentsScale = contentsScale;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(NSString *  minificationFilter))set_minificationFilter{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  minificationFilter){
+        weakSelf.minificationFilter = minificationFilter;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(NSString *  magnificationFilter))set_magnificationFilter{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  magnificationFilter){
+        weakSelf.magnificationFilter = magnificationFilter;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(float  minificationFilterBias))set_minificationFilterBias{
+    __weak typeof(self) weakSelf = self;
+    return ^(float  minificationFilterBias){
+        weakSelf.minificationFilterBias = minificationFilterBias;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(BOOL  opaque))set_opaque{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  opaque){
+        weakSelf.opaque = opaque;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(BOOL  needsDisplayOnBoundsChange))set_needsDisplayOnBoundsChange{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  needsDisplayOnBoundsChange){
+        weakSelf.needsDisplayOnBoundsChange = needsDisplayOnBoundsChange;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(BOOL  drawsAsynchronously))set_drawsAsynchronously{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  drawsAsynchronously){
+        weakSelf.drawsAsynchronously = drawsAsynchronously;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(unsigned int  edgeAntialiasingMask))set_edgeAntialiasingMask{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned int  edgeAntialiasingMask){
+        weakSelf.edgeAntialiasingMask = edgeAntialiasingMask;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(BOOL  allowsEdgeAntialiasing))set_allowsEdgeAntialiasing{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  allowsEdgeAntialiasing){
+        weakSelf.allowsEdgeAntialiasing = allowsEdgeAntialiasing;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(CGColorRef  backgroundColor))set_backgroundColor{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGColorRef  backgroundColor){
+        weakSelf.backgroundColor = backgroundColor;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(double  cornerRadius))set_cornerRadius{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  cornerRadius){
+        weakSelf.cornerRadius = cornerRadius;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(double  borderWidth))set_borderWidth{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  borderWidth){
+        weakSelf.borderWidth = borderWidth;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(CGColorRef  borderColor))set_borderColor{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGColorRef  borderColor){
+        weakSelf.borderColor = borderColor;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(float  opacity))set_opacity{
+    __weak typeof(self) weakSelf = self;
+    return ^(float  opacity){
+        weakSelf.opacity = opacity;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(BOOL  allowsGroupOpacity))set_allowsGroupOpacity{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  allowsGroupOpacity){
+        weakSelf.allowsGroupOpacity = allowsGroupOpacity;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(NSArray *  filters))set_filters{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  filters){
+        weakSelf.filters = filters;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(NSArray *  backgroundFilters))set_backgroundFilters{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  backgroundFilters){
+        weakSelf.backgroundFilters = backgroundFilters;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(BOOL  shouldRasterize))set_shouldRasterize{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldRasterize){
+        weakSelf.shouldRasterize = shouldRasterize;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(double  rasterizationScale))set_rasterizationScale{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  rasterizationScale){
+        weakSelf.rasterizationScale = rasterizationScale;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(CGColorRef  shadowColor))set_shadowColor{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGColorRef  shadowColor){
+        weakSelf.shadowColor = shadowColor;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(float  shadowOpacity))set_shadowOpacity{
+    __weak typeof(self) weakSelf = self;
+    return ^(float  shadowOpacity){
+        weakSelf.shadowOpacity = shadowOpacity;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(CGSize  shadowOffset))set_shadowOffset{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGSize  shadowOffset){
+        weakSelf.shadowOffset = shadowOffset;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(double  shadowRadius))set_shadowRadius{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  shadowRadius){
+        weakSelf.shadowRadius = shadowRadius;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(CGPathRef  shadowPath))set_shadowPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPathRef  shadowPath){
+        weakSelf.shadowPath = shadowPath;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(NSDictionary *  actions))set_actions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSDictionary *  actions){
+        weakSelf.actions = actions;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(NSString *  name))set_name{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  name){
+        weakSelf.name = name;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(NSDictionary *  style))set_style{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSDictionary *  style){
+        weakSelf.style = style;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(double  beginTime))set_beginTime{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  beginTime){
+        weakSelf.beginTime = beginTime;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(double  duration))set_duration{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  duration){
+        weakSelf.duration = duration;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(float  speed))set_speed{
+    __weak typeof(self) weakSelf = self;
+    return ^(float  speed){
+        weakSelf.speed = speed;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(double  timeOffset))set_timeOffset{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  timeOffset){
+        weakSelf.timeOffset = timeOffset;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(float  repeatCount))set_repeatCount{
+    __weak typeof(self) weakSelf = self;
+    return ^(float  repeatCount){
+        weakSelf.repeatCount = repeatCount;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(double  repeatDuration))set_repeatDuration{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  repeatDuration){
+        weakSelf.repeatDuration = repeatDuration;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(BOOL  autoreverses))set_autoreverses{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  autoreverses){
+        weakSelf.autoreverses = autoreverses;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(NSString *  fillMode))set_fillMode{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  fillMode){
+        weakSelf.fillMode = fillMode;
+        return weakSelf;
+    };
+}
+
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(CAShapeLayer ,long long,accessibilityNavigationStyle)
+-(CAShapeLayer  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(CAShapeLayer  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(CAShapeLayer);
+
+-(CAShapeLayer *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

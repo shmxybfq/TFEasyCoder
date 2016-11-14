@@ -10,59 +10,59 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(CASpringAnimation,CASpringAnimation *);
+typedef void(^CASpringAnimationEasyCoderBlock) (CASpringAnimation * ins);
 
 @interface CASpringAnimation (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(CASpringAnimation, CASpringAnimation *);
-TF_EC_MINSTANCE_INT(CASpringAnimation,CASpringAnimation *);
++( CASpringAnimation *)easyCoder:(CASpringAnimationEasyCoderBlock)block;
+-(CASpringAnimation *)easyCoder:(CASpringAnimationEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,double,mass);
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,double,stiffness);
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,double,damping);
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,double,initialVelocity);
+-(CASpringAnimation  *(^)(double  mass))set_mass;
+-(CASpringAnimation  *(^)(double  stiffness))set_stiffness;
+-(CASpringAnimation  *(^)(double  damping))set_damping;
+-(CASpringAnimation  *(^)(double  initialVelocity))set_initialVelocity;
 
 
 
 
 //superclass pros CABasicAnimation
 //superclass pros CAPropertyAnimation
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,NSString *,keyPath);
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,BOOL,additive);
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,BOOL,cumulative);
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,CAValueFunction *,valueFunction);
+-(CASpringAnimation  *(^)(NSString *  keyPath))set_keyPath;
+-(CASpringAnimation  *(^)(BOOL  additive))set_additive;
+-(CASpringAnimation  *(^)(BOOL  cumulative))set_cumulative;
+-(CASpringAnimation  *(^)(CAValueFunction *  valueFunction))set_valueFunction;
 //superclass pros CAAnimation
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,CAMediaTimingFunction *,timingFunction);
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,double,beginTime);
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,double,duration);
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,float,speed);
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,double,timeOffset);
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,float,repeatCount);
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,double,repeatDuration);
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,BOOL,autoreverses);
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,NSString *,fillMode);
+-(CASpringAnimation  *(^)(CAMediaTimingFunction *  timingFunction))set_timingFunction;
+-(CASpringAnimation  *(^)(double  beginTime))set_beginTime;
+-(CASpringAnimation  *(^)(double  duration))set_duration;
+-(CASpringAnimation  *(^)(float  speed))set_speed;
+-(CASpringAnimation  *(^)(double  timeOffset))set_timeOffset;
+-(CASpringAnimation  *(^)(float  repeatCount))set_repeatCount;
+-(CASpringAnimation  *(^)(double  repeatDuration))set_repeatDuration;
+-(CASpringAnimation  *(^)(BOOL  autoreverses))set_autoreverses;
+-(CASpringAnimation  *(^)(NSString *  fillMode))set_fillMode;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(CASpringAnimation ,long long,accessibilityNavigationStyle)
+-(CASpringAnimation  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(CASpringAnimation  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(CASpringAnimation  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(CASpringAnimation  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(CASpringAnimation  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(CASpringAnimation  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(CASpringAnimation  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(CASpringAnimation  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(CASpringAnimation  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(CASpringAnimation  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(CASpringAnimation  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(CASpringAnimation  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(CASpringAnimation  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(CASpringAnimation  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(CASpringAnimation);
+-(CASpringAnimation *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

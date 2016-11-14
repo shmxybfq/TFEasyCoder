@@ -10,44 +10,44 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIManagedDocument,UIManagedDocument *);
+typedef void(^UIManagedDocumentEasyCoderBlock) (UIManagedDocument * ins);
 
 @interface UIManagedDocument (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIManagedDocument, UIManagedDocument *);
-TF_EC_MINSTANCE_INT(UIManagedDocument,UIManagedDocument *);
++( UIManagedDocument *)easyCoder:(UIManagedDocumentEasyCoderBlock)block;
+-(UIManagedDocument *)easyCoder:(UIManagedDocumentEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIManagedDocument ,NSDictionary *,persistentStoreOptions);
-TF_EC_CHAIN_PROP_INT(UIManagedDocument ,NSString *,modelConfiguration);
+-(UIManagedDocument  *(^)(NSDictionary *  persistentStoreOptions))set_persistentStoreOptions;
+-(UIManagedDocument  *(^)(NSString *  modelConfiguration))set_modelConfiguration;
 
 
 
 
 //superclass pros UIDocument
-TF_EC_CHAIN_PROP_INT(UIManagedDocument ,NSDate *,fileModificationDate);
-TF_EC_CHAIN_PROP_INT(UIManagedDocument ,NSUndoManager *,undoManager);
+-(UIManagedDocument  *(^)(NSDate *  fileModificationDate))set_fileModificationDate;
+-(UIManagedDocument  *(^)(NSUndoManager *  undoManager))set_undoManager;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIManagedDocument ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIManagedDocument ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIManagedDocument ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIManagedDocument ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIManagedDocument ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIManagedDocument ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIManagedDocument ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIManagedDocument ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIManagedDocument ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIManagedDocument ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIManagedDocument ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIManagedDocument ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIManagedDocument ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIManagedDocument ,long long,accessibilityNavigationStyle)
+-(UIManagedDocument  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIManagedDocument  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIManagedDocument  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIManagedDocument  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIManagedDocument  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIManagedDocument  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIManagedDocument  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIManagedDocument  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIManagedDocument  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIManagedDocument  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIManagedDocument  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIManagedDocument  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIManagedDocument  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIManagedDocument  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIManagedDocument);
+-(UIManagedDocument *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

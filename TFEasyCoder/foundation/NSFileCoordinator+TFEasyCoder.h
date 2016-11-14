@@ -10,40 +10,40 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSFileCoordinator,NSFileCoordinator *);
+typedef void(^NSFileCoordinatorEasyCoderBlock) (NSFileCoordinator * ins);
 
 @interface NSFileCoordinator (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSFileCoordinator, NSFileCoordinator *);
-TF_EC_MINSTANCE_INT(NSFileCoordinator,NSFileCoordinator *);
++( NSFileCoordinator *)easyCoder:(NSFileCoordinatorEasyCoderBlock)block;
+-(NSFileCoordinator *)easyCoder:(NSFileCoordinatorEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSFileCoordinator ,NSString *,purposeIdentifier);
+-(NSFileCoordinator  *(^)(NSString *  purposeIdentifier))set_purposeIdentifier;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSFileCoordinator ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSFileCoordinator ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSFileCoordinator ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSFileCoordinator ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSFileCoordinator ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSFileCoordinator ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSFileCoordinator ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSFileCoordinator ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSFileCoordinator ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSFileCoordinator ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSFileCoordinator ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSFileCoordinator ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSFileCoordinator ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSFileCoordinator ,long long,accessibilityNavigationStyle)
+-(NSFileCoordinator  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSFileCoordinator  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSFileCoordinator  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSFileCoordinator  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSFileCoordinator  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSFileCoordinator  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSFileCoordinator  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSFileCoordinator  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSFileCoordinator  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSFileCoordinator  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSFileCoordinator  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSFileCoordinator  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSFileCoordinator  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSFileCoordinator  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSFileCoordinator);
+-(NSFileCoordinator *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

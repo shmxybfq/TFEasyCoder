@@ -10,46 +10,46 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIMutableUserNotificationAction,UIMutableUserNotificationAction *);
+typedef void(^UIMutableUserNotificationActionEasyCoderBlock) (UIMutableUserNotificationAction * ins);
 
 @interface UIMutableUserNotificationAction (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIMutableUserNotificationAction, UIMutableUserNotificationAction *);
-TF_EC_MINSTANCE_INT(UIMutableUserNotificationAction,UIMutableUserNotificationAction *);
++( UIMutableUserNotificationAction *)easyCoder:(UIMutableUserNotificationActionEasyCoderBlock)block;
+-(UIMutableUserNotificationAction *)easyCoder:(UIMutableUserNotificationActionEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIMutableUserNotificationAction ,NSString *,identifier);
-TF_EC_CHAIN_PROP_INT(UIMutableUserNotificationAction ,NSString *,title);
-TF_EC_CHAIN_PROP_INT(UIMutableUserNotificationAction ,unsigned long long,behavior);
-TF_EC_CHAIN_PROP_INT(UIMutableUserNotificationAction ,NSDictionary *,parameters);
-TF_EC_CHAIN_PROP_INT(UIMutableUserNotificationAction ,unsigned long long,activationMode);
-TF_EC_CHAIN_PROP_INT(UIMutableUserNotificationAction ,BOOL,destructive);
+-(UIMutableUserNotificationAction  *(^)(NSString *  identifier))set_identifier;
+-(UIMutableUserNotificationAction  *(^)(NSString *  title))set_title;
+-(UIMutableUserNotificationAction  *(^)(unsigned long long  behavior))set_behavior;
+-(UIMutableUserNotificationAction  *(^)(NSDictionary *  parameters))set_parameters;
+-(UIMutableUserNotificationAction  *(^)(unsigned long long  activationMode))set_activationMode;
+-(UIMutableUserNotificationAction  *(^)(BOOL  destructive))set_destructive;
 
 
 
 
 //superclass pros UIUserNotificationAction
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIMutableUserNotificationAction ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIMutableUserNotificationAction ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIMutableUserNotificationAction ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIMutableUserNotificationAction ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIMutableUserNotificationAction ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIMutableUserNotificationAction ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIMutableUserNotificationAction ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIMutableUserNotificationAction ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIMutableUserNotificationAction ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIMutableUserNotificationAction ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIMutableUserNotificationAction ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIMutableUserNotificationAction ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIMutableUserNotificationAction ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIMutableUserNotificationAction ,long long,accessibilityNavigationStyle)
+-(UIMutableUserNotificationAction  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIMutableUserNotificationAction  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIMutableUserNotificationAction  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIMutableUserNotificationAction  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIMutableUserNotificationAction  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIMutableUserNotificationAction  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIMutableUserNotificationAction  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIMutableUserNotificationAction  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIMutableUserNotificationAction  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIMutableUserNotificationAction  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIMutableUserNotificationAction  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIMutableUserNotificationAction  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIMutableUserNotificationAction  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIMutableUserNotificationAction  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIMutableUserNotificationAction);
+-(UIMutableUserNotificationAction *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

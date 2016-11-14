@@ -10,58 +10,58 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIDocumentPickerExtensionViewController,UIDocumentPickerExtensionViewController *);
+typedef void(^UIDocumentPickerExtensionViewControllerEasyCoderBlock) (UIDocumentPickerExtensionViewController * ins);
 
 @interface UIDocumentPickerExtensionViewController (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIDocumentPickerExtensionViewController, UIDocumentPickerExtensionViewController *);
-TF_EC_MINSTANCE_INT(UIDocumentPickerExtensionViewController,UIDocumentPickerExtensionViewController *);
++( UIDocumentPickerExtensionViewController *)easyCoder:(UIDocumentPickerExtensionViewControllerEasyCoderBlock)block;
+-(UIDocumentPickerExtensionViewController *)easyCoder:(UIDocumentPickerExtensionViewControllerEasyCoderBlock)block;
 
 
 
 
 
 //superclass pros UIViewController
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,UITabBarItem *,tabBarItem)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,BOOL,hidesBottomBarWhenPushed)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,id<UIViewControllerTransitioningDelegate>  ,transitioningDelegate)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,UIView *,view)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,NSString *,title)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,BOOL,definesPresentationContext)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,BOOL,providesPresentationContextTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,long long,modalTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,long long,modalPresentationStyle)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,BOOL,modalPresentationCapturesStatusBarAppearance)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,BOOL,wantsFullScreenLayout)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,unsigned long long,edgesForExtendedLayout)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,BOOL,extendedLayoutIncludesOpaqueBars)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,BOOL,automaticallyAdjustsScrollViewInsets)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,CGSize,preferredContentSize)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,CGSize,contentSizeForViewInPopover)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,BOOL,modalInPopover)
+-(UIDocumentPickerExtensionViewController  *(^)(UITabBarItem *  tabBarItem))set_tabBarItem;
+-(UIDocumentPickerExtensionViewController  *(^)(BOOL  hidesBottomBarWhenPushed))set_hidesBottomBarWhenPushed;
+-(UIDocumentPickerExtensionViewController  *(^)(id<UIViewControllerTransitioningDelegate>    transitioningDelegate))set_transitioningDelegate;
+-(UIDocumentPickerExtensionViewController  *(^)(UIView *  view))set_view;
+-(UIDocumentPickerExtensionViewController  *(^)(NSString *  title))set_title;
+-(UIDocumentPickerExtensionViewController  *(^)(BOOL  definesPresentationContext))set_definesPresentationContext;
+-(UIDocumentPickerExtensionViewController  *(^)(BOOL  providesPresentationContextTransitionStyle))set_providesPresentationContextTransitionStyle;
+-(UIDocumentPickerExtensionViewController  *(^)(long long  modalTransitionStyle))set_modalTransitionStyle;
+-(UIDocumentPickerExtensionViewController  *(^)(long long  modalPresentationStyle))set_modalPresentationStyle;
+-(UIDocumentPickerExtensionViewController  *(^)(BOOL  modalPresentationCapturesStatusBarAppearance))set_modalPresentationCapturesStatusBarAppearance;
+-(UIDocumentPickerExtensionViewController  *(^)(BOOL  wantsFullScreenLayout))set_wantsFullScreenLayout;
+-(UIDocumentPickerExtensionViewController  *(^)(unsigned long long  edgesForExtendedLayout))set_edgesForExtendedLayout;
+-(UIDocumentPickerExtensionViewController  *(^)(BOOL  extendedLayoutIncludesOpaqueBars))set_extendedLayoutIncludesOpaqueBars;
+-(UIDocumentPickerExtensionViewController  *(^)(BOOL  automaticallyAdjustsScrollViewInsets))set_automaticallyAdjustsScrollViewInsets;
+-(UIDocumentPickerExtensionViewController  *(^)(CGSize  preferredContentSize))set_preferredContentSize;
+-(UIDocumentPickerExtensionViewController  *(^)(CGSize  contentSizeForViewInPopover))set_contentSizeForViewInPopover;
+-(UIDocumentPickerExtensionViewController  *(^)(BOOL  modalInPopover))set_modalInPopover;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,NSUserActivity *,userActivity);
+-(UIDocumentPickerExtensionViewController  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIDocumentPickerExtensionViewController ,long long,accessibilityNavigationStyle)
+-(UIDocumentPickerExtensionViewController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIDocumentPickerExtensionViewController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIDocumentPickerExtensionViewController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIDocumentPickerExtensionViewController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIDocumentPickerExtensionViewController  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIDocumentPickerExtensionViewController  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIDocumentPickerExtensionViewController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIDocumentPickerExtensionViewController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIDocumentPickerExtensionViewController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIDocumentPickerExtensionViewController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIDocumentPickerExtensionViewController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIDocumentPickerExtensionViewController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIDocumentPickerExtensionViewController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIDocumentPickerExtensionViewController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIDocumentPickerExtensionViewController);
+-(UIDocumentPickerExtensionViewController *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

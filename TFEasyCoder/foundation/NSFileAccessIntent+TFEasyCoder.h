@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSFileAccessIntent,NSFileAccessIntent *);
+typedef void(^NSFileAccessIntentEasyCoderBlock) (NSFileAccessIntent * ins);
 
 @interface NSFileAccessIntent (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSFileAccessIntent, NSFileAccessIntent *);
-TF_EC_MINSTANCE_INT(NSFileAccessIntent,NSFileAccessIntent *);
++( NSFileAccessIntent *)easyCoder:(NSFileAccessIntentEasyCoderBlock)block;
+-(NSFileAccessIntent *)easyCoder:(NSFileAccessIntentEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(NSFileAccessIntent,NSFileAccessIntent *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSFileAccessIntent ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSFileAccessIntent ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSFileAccessIntent ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSFileAccessIntent ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSFileAccessIntent ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSFileAccessIntent ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSFileAccessIntent ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSFileAccessIntent ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSFileAccessIntent ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSFileAccessIntent ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSFileAccessIntent ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSFileAccessIntent ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSFileAccessIntent ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSFileAccessIntent ,long long,accessibilityNavigationStyle)
+-(NSFileAccessIntent  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSFileAccessIntent  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSFileAccessIntent  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSFileAccessIntent  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSFileAccessIntent  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSFileAccessIntent  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSFileAccessIntent  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSFileAccessIntent  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSFileAccessIntent  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSFileAccessIntent  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSFileAccessIntent  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSFileAccessIntent  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSFileAccessIntent  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSFileAccessIntent  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSFileAccessIntent);
+-(NSFileAccessIntent *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

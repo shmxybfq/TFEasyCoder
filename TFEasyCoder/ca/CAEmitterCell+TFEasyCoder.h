@@ -10,81 +10,81 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(CAEmitterCell,CAEmitterCell *);
+typedef void(^CAEmitterCellEasyCoderBlock) (CAEmitterCell * ins);
 
 @interface CAEmitterCell (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(CAEmitterCell, CAEmitterCell *);
-TF_EC_MINSTANCE_INT(CAEmitterCell,CAEmitterCell *);
++( CAEmitterCell *)easyCoder:(CAEmitterCellEasyCoderBlock)block;
+-(CAEmitterCell *)easyCoder:(CAEmitterCellEasyCoderBlock)block;
 
 
 
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,NSString *,name);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,float,birthRate);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,float,lifetime);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,float,lifetimeRange);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,double,emissionLatitude);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,double,emissionLongitude);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,double,emissionRange);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,double,velocity);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,double,velocityRange);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,double,xAcceleration);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,double,yAcceleration);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,double,zAcceleration);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,double,scale);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,double,scaleRange);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,double,scaleSpeed);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,double,spin);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,double,spinRange);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,CGColorRef,color);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,float,redRange);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,float,greenRange);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,float,blueRange);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,float,alphaRange);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,float,redSpeed);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,float,greenSpeed);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,float,blueSpeed);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,float,alphaSpeed);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,double,contentsScale);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,NSString *,minificationFilter);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,NSString *,magnificationFilter);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,float,minificationFilterBias);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,NSArray *,emitterCells);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,NSDictionary *,style);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,double,beginTime);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,double,duration);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,float,speed);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,double,timeOffset);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,float,repeatCount);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,double,repeatDuration);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,BOOL,autoreverses);
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,NSString *,fillMode);
+-(CAEmitterCell  *(^)(NSString *  name))set_name;
+-(CAEmitterCell  *(^)(BOOL  enabled))set_enabled;
+-(CAEmitterCell  *(^)(float  birthRate))set_birthRate;
+-(CAEmitterCell  *(^)(float  lifetime))set_lifetime;
+-(CAEmitterCell  *(^)(float  lifetimeRange))set_lifetimeRange;
+-(CAEmitterCell  *(^)(double  emissionLatitude))set_emissionLatitude;
+-(CAEmitterCell  *(^)(double  emissionLongitude))set_emissionLongitude;
+-(CAEmitterCell  *(^)(double  emissionRange))set_emissionRange;
+-(CAEmitterCell  *(^)(double  velocity))set_velocity;
+-(CAEmitterCell  *(^)(double  velocityRange))set_velocityRange;
+-(CAEmitterCell  *(^)(double  xAcceleration))set_xAcceleration;
+-(CAEmitterCell  *(^)(double  yAcceleration))set_yAcceleration;
+-(CAEmitterCell  *(^)(double  zAcceleration))set_zAcceleration;
+-(CAEmitterCell  *(^)(double  scale))set_scale;
+-(CAEmitterCell  *(^)(double  scaleRange))set_scaleRange;
+-(CAEmitterCell  *(^)(double  scaleSpeed))set_scaleSpeed;
+-(CAEmitterCell  *(^)(double  spin))set_spin;
+-(CAEmitterCell  *(^)(double  spinRange))set_spinRange;
+-(CAEmitterCell  *(^)(CGColorRef  color))set_color;
+-(CAEmitterCell  *(^)(float  redRange))set_redRange;
+-(CAEmitterCell  *(^)(float  greenRange))set_greenRange;
+-(CAEmitterCell  *(^)(float  blueRange))set_blueRange;
+-(CAEmitterCell  *(^)(float  alphaRange))set_alphaRange;
+-(CAEmitterCell  *(^)(float  redSpeed))set_redSpeed;
+-(CAEmitterCell  *(^)(float  greenSpeed))set_greenSpeed;
+-(CAEmitterCell  *(^)(float  blueSpeed))set_blueSpeed;
+-(CAEmitterCell  *(^)(float  alphaSpeed))set_alphaSpeed;
+-(CAEmitterCell  *(^)(double  contentsScale))set_contentsScale;
+-(CAEmitterCell  *(^)(NSString *  minificationFilter))set_minificationFilter;
+-(CAEmitterCell  *(^)(NSString *  magnificationFilter))set_magnificationFilter;
+-(CAEmitterCell  *(^)(float  minificationFilterBias))set_minificationFilterBias;
+-(CAEmitterCell  *(^)(NSArray *  emitterCells))set_emitterCells;
+-(CAEmitterCell  *(^)(NSDictionary *  style))set_style;
+-(CAEmitterCell  *(^)(double  beginTime))set_beginTime;
+-(CAEmitterCell  *(^)(double  duration))set_duration;
+-(CAEmitterCell  *(^)(float  speed))set_speed;
+-(CAEmitterCell  *(^)(double  timeOffset))set_timeOffset;
+-(CAEmitterCell  *(^)(float  repeatCount))set_repeatCount;
+-(CAEmitterCell  *(^)(double  repeatDuration))set_repeatDuration;
+-(CAEmitterCell  *(^)(BOOL  autoreverses))set_autoreverses;
+-(CAEmitterCell  *(^)(NSString *  fillMode))set_fillMode;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(CAEmitterCell ,long long,accessibilityNavigationStyle)
+-(CAEmitterCell  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(CAEmitterCell  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(CAEmitterCell  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(CAEmitterCell  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(CAEmitterCell  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(CAEmitterCell  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(CAEmitterCell  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(CAEmitterCell  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(CAEmitterCell  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(CAEmitterCell  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(CAEmitterCell  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(CAEmitterCell  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(CAEmitterCell  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(CAEmitterCell  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(CAEmitterCell);
+-(CAEmitterCell *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

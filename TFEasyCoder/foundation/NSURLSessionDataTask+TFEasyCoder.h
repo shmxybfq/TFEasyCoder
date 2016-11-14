@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSURLSessionDataTask,NSURLSessionDataTask *);
+typedef void(^NSURLSessionDataTaskEasyCoderBlock) (NSURLSessionDataTask * ins);
 
 @interface NSURLSessionDataTask (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSURLSessionDataTask, NSURLSessionDataTask *);
-TF_EC_MINSTANCE_INT(NSURLSessionDataTask,NSURLSessionDataTask *);
++( NSURLSessionDataTask *)easyCoder:(NSURLSessionDataTaskEasyCoderBlock)block;
+-(NSURLSessionDataTask *)easyCoder:(NSURLSessionDataTaskEasyCoderBlock)block;
 
 
 
@@ -23,29 +23,29 @@ TF_EC_MINSTANCE_INT(NSURLSessionDataTask,NSURLSessionDataTask *);
 
 
 //superclass pros NSURLSessionTask
-TF_EC_CHAIN_PROP_INT(NSURLSessionDataTask ,NSString *,taskDescription)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDataTask ,float,priority)
+-(NSURLSessionDataTask  *(^)(NSString *  taskDescription))set_taskDescription;
+-(NSURLSessionDataTask  *(^)(float  priority))set_priority;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSURLSessionDataTask ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDataTask ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDataTask ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDataTask ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDataTask ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDataTask ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDataTask ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDataTask ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDataTask ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDataTask ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDataTask ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDataTask ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDataTask ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDataTask ,long long,accessibilityNavigationStyle)
+-(NSURLSessionDataTask  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSURLSessionDataTask  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSURLSessionDataTask  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSURLSessionDataTask  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSURLSessionDataTask  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSURLSessionDataTask  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSURLSessionDataTask  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSURLSessionDataTask  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSURLSessionDataTask  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSURLSessionDataTask  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSURLSessionDataTask  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSURLSessionDataTask  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSURLSessionDataTask  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSURLSessionDataTask  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSURLSessionDataTask);
+-(NSURLSessionDataTask *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

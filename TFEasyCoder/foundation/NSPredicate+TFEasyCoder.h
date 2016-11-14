@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSPredicate,NSPredicate *);
+typedef void(^NSPredicateEasyCoderBlock) (NSPredicate * ins);
 
 @interface NSPredicate (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSPredicate, NSPredicate *);
-TF_EC_MINSTANCE_INT(NSPredicate,NSPredicate *);
++( NSPredicate *)easyCoder:(NSPredicateEasyCoderBlock)block;
+-(NSPredicate *)easyCoder:(NSPredicateEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(NSPredicate,NSPredicate *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSPredicate ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSPredicate ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSPredicate ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSPredicate ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSPredicate ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSPredicate ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSPredicate ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSPredicate ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSPredicate ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSPredicate ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSPredicate ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSPredicate ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSPredicate ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSPredicate ,long long,accessibilityNavigationStyle)
+-(NSPredicate  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSPredicate  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSPredicate  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSPredicate  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSPredicate  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSPredicate  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSPredicate  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSPredicate  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSPredicate  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSPredicate  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSPredicate  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSPredicate  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSPredicate  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSPredicate  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSPredicate);
+-(NSPredicate *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

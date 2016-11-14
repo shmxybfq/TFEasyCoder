@@ -10,43 +10,43 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSMassFormatter,NSMassFormatter *);
+typedef void(^NSMassFormatterEasyCoderBlock) (NSMassFormatter * ins);
 
 @interface NSMassFormatter (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSMassFormatter, NSMassFormatter *);
-TF_EC_MINSTANCE_INT(NSMassFormatter,NSMassFormatter *);
++( NSMassFormatter *)easyCoder:(NSMassFormatterEasyCoderBlock)block;
+-(NSMassFormatter *)easyCoder:(NSMassFormatterEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSMassFormatter ,NSNumberFormatter *,numberFormatter);
-TF_EC_CHAIN_PROP_INT(NSMassFormatter ,long long,unitStyle);
-TF_EC_CHAIN_PROP_INT(NSMassFormatter ,BOOL,forPersonMassUse);
+-(NSMassFormatter  *(^)(NSNumberFormatter *  numberFormatter))set_numberFormatter;
+-(NSMassFormatter  *(^)(long long  unitStyle))set_unitStyle;
+-(NSMassFormatter  *(^)(BOOL  forPersonMassUse))set_forPersonMassUse;
 
 
 
 
 //superclass pros NSFormatter
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSMassFormatter ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSMassFormatter ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSMassFormatter ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSMassFormatter ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSMassFormatter ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSMassFormatter ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSMassFormatter ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSMassFormatter ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSMassFormatter ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSMassFormatter ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSMassFormatter ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSMassFormatter ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSMassFormatter ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSMassFormatter ,long long,accessibilityNavigationStyle)
+-(NSMassFormatter  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSMassFormatter  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSMassFormatter  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSMassFormatter  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSMassFormatter  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSMassFormatter  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSMassFormatter  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSMassFormatter  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSMassFormatter  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSMassFormatter  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSMassFormatter  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSMassFormatter  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSMassFormatter  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSMassFormatter  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSMassFormatter);
+-(NSMassFormatter *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

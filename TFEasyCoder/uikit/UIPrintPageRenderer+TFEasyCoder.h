@@ -10,42 +10,42 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIPrintPageRenderer,UIPrintPageRenderer *);
+typedef void(^UIPrintPageRendererEasyCoderBlock) (UIPrintPageRenderer * ins);
 
 @interface UIPrintPageRenderer (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIPrintPageRenderer, UIPrintPageRenderer *);
-TF_EC_MINSTANCE_INT(UIPrintPageRenderer,UIPrintPageRenderer *);
++( UIPrintPageRenderer *)easyCoder:(UIPrintPageRendererEasyCoderBlock)block;
+-(UIPrintPageRenderer *)easyCoder:(UIPrintPageRendererEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,double,headerHeight);
-TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,double,footerHeight);
-TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,NSArray *,printFormatters);
+-(UIPrintPageRenderer  *(^)(double  headerHeight))set_headerHeight;
+-(UIPrintPageRenderer  *(^)(double  footerHeight))set_footerHeight;
+-(UIPrintPageRenderer  *(^)(NSArray *  printFormatters))set_printFormatters;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIPrintPageRenderer ,long long,accessibilityNavigationStyle)
+-(UIPrintPageRenderer  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIPrintPageRenderer  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIPrintPageRenderer  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIPrintPageRenderer  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIPrintPageRenderer  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIPrintPageRenderer  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIPrintPageRenderer  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIPrintPageRenderer  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIPrintPageRenderer  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIPrintPageRenderer  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIPrintPageRenderer  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIPrintPageRenderer  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIPrintPageRenderer  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIPrintPageRenderer  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIPrintPageRenderer);
+-(UIPrintPageRenderer *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

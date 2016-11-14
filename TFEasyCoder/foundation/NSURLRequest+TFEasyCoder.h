@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSURLRequest,NSURLRequest *);
+typedef void(^NSURLRequestEasyCoderBlock) (NSURLRequest * ins);
 
 @interface NSURLRequest (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSURLRequest, NSURLRequest *);
-TF_EC_MINSTANCE_INT(NSURLRequest,NSURLRequest *);
++( NSURLRequest *)easyCoder:(NSURLRequestEasyCoderBlock)block;
+-(NSURLRequest *)easyCoder:(NSURLRequestEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(NSURLRequest,NSURLRequest *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSURLRequest ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSURLRequest ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSURLRequest ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSURLRequest ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSURLRequest ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSURLRequest ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSURLRequest ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSURLRequest ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSURLRequest ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSURLRequest ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSURLRequest ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSURLRequest ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSURLRequest ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSURLRequest ,long long,accessibilityNavigationStyle)
+-(NSURLRequest  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSURLRequest  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSURLRequest  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSURLRequest  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSURLRequest  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSURLRequest  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSURLRequest  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSURLRequest  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSURLRequest  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSURLRequest  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSURLRequest  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSURLRequest  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSURLRequest  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSURLRequest  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSURLRequest);
+-(NSURLRequest *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

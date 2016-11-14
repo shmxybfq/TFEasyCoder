@@ -11,36 +11,168 @@
 
 @implementation UICollectionViewLayoutInvalidationContext (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(UICollectionViewLayoutInvalidationContext, UICollectionViewLayoutInvalidationContext *);
-TF_EC_MINSTANCE_IMP(UICollectionViewLayoutInvalidationContext, UICollectionViewLayoutInvalidationContext *);
++( UICollectionViewLayoutInvalidationContext *)easyCoder:(UICollectionViewLayoutInvalidationContextEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( UICollectionViewLayoutInvalidationContext *)ins);
+        }
+    }];
+}
+
+-( UICollectionViewLayoutInvalidationContext *)easyCoder:(UICollectionViewLayoutInvalidationContextEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
 
 
-TF_EC_CHAIN_PROP_IMP(UICollectionViewLayoutInvalidationContext ,CGPoint,contentOffsetAdjustment)
-TF_EC_CHAIN_PROP_IMP(UICollectionViewLayoutInvalidationContext ,CGSize,contentSizeAdjustment)
+
+-(UICollectionViewLayoutInvalidationContext  *(^)(CGPoint  contentOffsetAdjustment))set_contentOffsetAdjustment{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  contentOffsetAdjustment){
+        weakSelf.contentOffsetAdjustment = contentOffsetAdjustment;
+        return weakSelf;
+    };
+}
+
+-(UICollectionViewLayoutInvalidationContext  *(^)(CGSize  contentSizeAdjustment))set_contentSizeAdjustment{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGSize  contentSizeAdjustment){
+        weakSelf.contentSizeAdjustment = contentSizeAdjustment;
+        return weakSelf;
+    };
+}
+
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(UICollectionViewLayoutInvalidationContext ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(UICollectionViewLayoutInvalidationContext ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(UICollectionViewLayoutInvalidationContext ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(UICollectionViewLayoutInvalidationContext ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(UICollectionViewLayoutInvalidationContext ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(UICollectionViewLayoutInvalidationContext ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(UICollectionViewLayoutInvalidationContext ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(UICollectionViewLayoutInvalidationContext ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(UICollectionViewLayoutInvalidationContext ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(UICollectionViewLayoutInvalidationContext ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(UICollectionViewLayoutInvalidationContext ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(UICollectionViewLayoutInvalidationContext ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(UICollectionViewLayoutInvalidationContext ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(UICollectionViewLayoutInvalidationContext ,long long,accessibilityNavigationStyle)
+-(UICollectionViewLayoutInvalidationContext  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(UICollectionViewLayoutInvalidationContext  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(UICollectionViewLayoutInvalidationContext  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(UICollectionViewLayoutInvalidationContext  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(UICollectionViewLayoutInvalidationContext  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(UICollectionViewLayoutInvalidationContext  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(UICollectionViewLayoutInvalidationContext  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(UICollectionViewLayoutInvalidationContext  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(UICollectionViewLayoutInvalidationContext  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(UICollectionViewLayoutInvalidationContext  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(UICollectionViewLayoutInvalidationContext  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(UICollectionViewLayoutInvalidationContext  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(UICollectionViewLayoutInvalidationContext  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(UICollectionViewLayoutInvalidationContext  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(UICollectionViewLayoutInvalidationContext);
+
+-(UICollectionViewLayoutInvalidationContext *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

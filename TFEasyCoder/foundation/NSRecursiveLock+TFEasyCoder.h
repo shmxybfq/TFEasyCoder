@@ -10,40 +10,40 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSRecursiveLock,NSRecursiveLock *);
+typedef void(^NSRecursiveLockEasyCoderBlock) (NSRecursiveLock * ins);
 
 @interface NSRecursiveLock (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSRecursiveLock, NSRecursiveLock *);
-TF_EC_MINSTANCE_INT(NSRecursiveLock,NSRecursiveLock *);
++( NSRecursiveLock *)easyCoder:(NSRecursiveLockEasyCoderBlock)block;
+-(NSRecursiveLock *)easyCoder:(NSRecursiveLockEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,NSString *,name);
+-(NSRecursiveLock  *(^)(NSString *  name))set_name;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSRecursiveLock ,long long,accessibilityNavigationStyle)
+-(NSRecursiveLock  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSRecursiveLock  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSRecursiveLock  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSRecursiveLock  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSRecursiveLock  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSRecursiveLock  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSRecursiveLock  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSRecursiveLock  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSRecursiveLock  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSRecursiveLock  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSRecursiveLock  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSRecursiveLock  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSRecursiveLock  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSRecursiveLock  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSRecursiveLock);
+-(NSRecursiveLock *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

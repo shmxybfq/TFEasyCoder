@@ -10,63 +10,63 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(CAKeyframeAnimation,CAKeyframeAnimation *);
+typedef void(^CAKeyframeAnimationEasyCoderBlock) (CAKeyframeAnimation * ins);
 
 @interface CAKeyframeAnimation (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(CAKeyframeAnimation, CAKeyframeAnimation *);
-TF_EC_MINSTANCE_INT(CAKeyframeAnimation,CAKeyframeAnimation *);
++( CAKeyframeAnimation *)easyCoder:(CAKeyframeAnimationEasyCoderBlock)block;
+-(CAKeyframeAnimation *)easyCoder:(CAKeyframeAnimationEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,NSArray *,values);
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,CGPathRef,path);
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,NSArray *,keyTimes);
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,NSArray *,timingFunctions);
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,NSString *,calculationMode);
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,NSArray *,tensionValues);
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,NSArray *,continuityValues);
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,NSArray *,biasValues);
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,NSString *,rotationMode);
+-(CAKeyframeAnimation  *(^)(NSArray *  values))set_values;
+-(CAKeyframeAnimation  *(^)(CGPathRef  path))set_path;
+-(CAKeyframeAnimation  *(^)(NSArray *  keyTimes))set_keyTimes;
+-(CAKeyframeAnimation  *(^)(NSArray *  timingFunctions))set_timingFunctions;
+-(CAKeyframeAnimation  *(^)(NSString *  calculationMode))set_calculationMode;
+-(CAKeyframeAnimation  *(^)(NSArray *  tensionValues))set_tensionValues;
+-(CAKeyframeAnimation  *(^)(NSArray *  continuityValues))set_continuityValues;
+-(CAKeyframeAnimation  *(^)(NSArray *  biasValues))set_biasValues;
+-(CAKeyframeAnimation  *(^)(NSString *  rotationMode))set_rotationMode;
 
 
 
 
 //superclass pros CAPropertyAnimation
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,NSString *,keyPath);
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,BOOL,additive);
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,BOOL,cumulative);
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,CAValueFunction *,valueFunction);
+-(CAKeyframeAnimation  *(^)(NSString *  keyPath))set_keyPath;
+-(CAKeyframeAnimation  *(^)(BOOL  additive))set_additive;
+-(CAKeyframeAnimation  *(^)(BOOL  cumulative))set_cumulative;
+-(CAKeyframeAnimation  *(^)(CAValueFunction *  valueFunction))set_valueFunction;
 //superclass pros CAAnimation
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,CAMediaTimingFunction *,timingFunction);
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,double,beginTime);
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,double,duration);
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,float,speed);
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,double,timeOffset);
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,float,repeatCount);
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,double,repeatDuration);
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,BOOL,autoreverses);
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,NSString *,fillMode);
+-(CAKeyframeAnimation  *(^)(CAMediaTimingFunction *  timingFunction))set_timingFunction;
+-(CAKeyframeAnimation  *(^)(double  beginTime))set_beginTime;
+-(CAKeyframeAnimation  *(^)(double  duration))set_duration;
+-(CAKeyframeAnimation  *(^)(float  speed))set_speed;
+-(CAKeyframeAnimation  *(^)(double  timeOffset))set_timeOffset;
+-(CAKeyframeAnimation  *(^)(float  repeatCount))set_repeatCount;
+-(CAKeyframeAnimation  *(^)(double  repeatDuration))set_repeatDuration;
+-(CAKeyframeAnimation  *(^)(BOOL  autoreverses))set_autoreverses;
+-(CAKeyframeAnimation  *(^)(NSString *  fillMode))set_fillMode;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(CAKeyframeAnimation ,long long,accessibilityNavigationStyle)
+-(CAKeyframeAnimation  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(CAKeyframeAnimation  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(CAKeyframeAnimation  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(CAKeyframeAnimation  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(CAKeyframeAnimation  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(CAKeyframeAnimation  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(CAKeyframeAnimation  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(CAKeyframeAnimation  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(CAKeyframeAnimation  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(CAKeyframeAnimation  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(CAKeyframeAnimation  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(CAKeyframeAnimation  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(CAKeyframeAnimation  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(CAKeyframeAnimation  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(CAKeyframeAnimation);
+-(CAKeyframeAnimation *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSPropertyListSerialization,NSPropertyListSerialization *);
+typedef void(^NSPropertyListSerializationEasyCoderBlock) (NSPropertyListSerialization * ins);
 
 @interface NSPropertyListSerialization (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSPropertyListSerialization, NSPropertyListSerialization *);
-TF_EC_MINSTANCE_INT(NSPropertyListSerialization,NSPropertyListSerialization *);
++( NSPropertyListSerialization *)easyCoder:(NSPropertyListSerializationEasyCoderBlock)block;
+-(NSPropertyListSerialization *)easyCoder:(NSPropertyListSerializationEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(NSPropertyListSerialization,NSPropertyListSerialization *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSPropertyListSerialization ,long long,accessibilityNavigationStyle)
+-(NSPropertyListSerialization  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSPropertyListSerialization  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSPropertyListSerialization  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSPropertyListSerialization  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSPropertyListSerialization  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSPropertyListSerialization  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSPropertyListSerialization  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSPropertyListSerialization  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSPropertyListSerialization  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSPropertyListSerialization  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSPropertyListSerialization  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSPropertyListSerialization  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSPropertyListSerialization  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSPropertyListSerialization  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSPropertyListSerialization);
+-(NSPropertyListSerialization *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIRegion,UIRegion *);
+typedef void(^UIRegionEasyCoderBlock) (UIRegion * ins);
 
 @interface UIRegion (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIRegion, UIRegion *);
-TF_EC_MINSTANCE_INT(UIRegion,UIRegion *);
++( UIRegion *)easyCoder:(UIRegionEasyCoderBlock)block;
+-(UIRegion *)easyCoder:(UIRegionEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(UIRegion,UIRegion *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIRegion ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIRegion ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIRegion ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIRegion ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIRegion ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIRegion ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIRegion ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIRegion ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIRegion ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIRegion ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIRegion ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIRegion ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIRegion ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIRegion ,long long,accessibilityNavigationStyle)
+-(UIRegion  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIRegion  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIRegion  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIRegion  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIRegion  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIRegion  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIRegion  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIRegion  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIRegion  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIRegion  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIRegion  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIRegion  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIRegion  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIRegion  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIRegion);
+-(UIRegion *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -10,43 +10,43 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIGravityBehavior,UIGravityBehavior *);
+typedef void(^UIGravityBehaviorEasyCoderBlock) (UIGravityBehavior * ins);
 
 @interface UIGravityBehavior (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIGravityBehavior, UIGravityBehavior *);
-TF_EC_MINSTANCE_INT(UIGravityBehavior,UIGravityBehavior *);
++( UIGravityBehavior *)easyCoder:(UIGravityBehaviorEasyCoderBlock)block;
+-(UIGravityBehavior *)easyCoder:(UIGravityBehaviorEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,CGVector,gravityDirection);
-TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,double,angle);
-TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,double,magnitude);
+-(UIGravityBehavior  *(^)(CGVector  gravityDirection))set_gravityDirection;
+-(UIGravityBehavior  *(^)(double  angle))set_angle;
+-(UIGravityBehavior  *(^)(double  magnitude))set_magnitude;
 
 
 
 
 //superclass pros UIDynamicBehavior
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIGravityBehavior ,long long,accessibilityNavigationStyle)
+-(UIGravityBehavior  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIGravityBehavior  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIGravityBehavior  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIGravityBehavior  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIGravityBehavior  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIGravityBehavior  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIGravityBehavior  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIGravityBehavior  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIGravityBehavior  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIGravityBehavior  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIGravityBehavior  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIGravityBehavior  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIGravityBehavior  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIGravityBehavior  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIGravityBehavior);
+-(UIGravityBehavior *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

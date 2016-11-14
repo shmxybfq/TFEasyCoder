@@ -11,43 +11,210 @@
 
 @implementation NSProgress (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(NSProgress, NSProgress *);
-TF_EC_MINSTANCE_IMP(NSProgress, NSProgress *);
++( NSProgress *)easyCoder:(NSProgressEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( NSProgress *)ins);
+        }
+    }];
+}
+
+-( NSProgress *)easyCoder:(NSProgressEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
 
 
 
-TF_EC_CHAIN_PROP_IMP(NSProgress ,long long,totalUnitCount)
-TF_EC_CHAIN_PROP_IMP(NSProgress ,long long,completedUnitCount)
-TF_EC_CHAIN_PROP_IMP(NSProgress ,NSString *,localizedDescription)
-TF_EC_CHAIN_PROP_IMP(NSProgress ,NSString *,localizedAdditionalDescription)
-TF_EC_CHAIN_PROP_IMP(NSProgress ,BOOL,cancellable)
-TF_EC_CHAIN_PROP_IMP(NSProgress ,BOOL,pausable)
-TF_EC_CHAIN_PROP_IMP(NSProgress ,NSString *,kind)
+
+-(NSProgress  *(^)(long long  totalUnitCount))set_totalUnitCount{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  totalUnitCount){
+        weakSelf.totalUnitCount = totalUnitCount;
+        return weakSelf;
+    };
+}
+
+-(NSProgress  *(^)(long long  completedUnitCount))set_completedUnitCount{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  completedUnitCount){
+        weakSelf.completedUnitCount = completedUnitCount;
+        return weakSelf;
+    };
+}
+
+-(NSProgress  *(^)(NSString *  localizedDescription))set_localizedDescription{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  localizedDescription){
+        weakSelf.localizedDescription = localizedDescription;
+        return weakSelf;
+    };
+}
+
+-(NSProgress  *(^)(NSString *  localizedAdditionalDescription))set_localizedAdditionalDescription{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  localizedAdditionalDescription){
+        weakSelf.localizedAdditionalDescription = localizedAdditionalDescription;
+        return weakSelf;
+    };
+}
+
+-(NSProgress  *(^)(BOOL  cancellable))set_cancellable{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  cancellable){
+        weakSelf.cancellable = cancellable;
+        return weakSelf;
+    };
+}
+
+-(NSProgress  *(^)(BOOL  pausable))set_pausable{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  pausable){
+        weakSelf.pausable = pausable;
+        return weakSelf;
+    };
+}
+
+-(NSProgress  *(^)(NSString *  kind))set_kind{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  kind){
+        weakSelf.kind = kind;
+        return weakSelf;
+    };
+}
+
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(NSProgress ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(NSProgress ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(NSProgress ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(NSProgress ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(NSProgress ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(NSProgress ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(NSProgress ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(NSProgress ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(NSProgress ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(NSProgress ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(NSProgress ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(NSProgress ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(NSProgress ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(NSProgress ,long long,accessibilityNavigationStyle)
+-(NSProgress  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(NSProgress  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(NSProgress  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(NSProgress  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(NSProgress  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(NSProgress  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(NSProgress  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(NSProgress  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(NSProgress  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(NSProgress  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(NSProgress  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(NSProgress  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(NSProgress  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(NSProgress  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSProgress);
+
+-(NSProgress *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

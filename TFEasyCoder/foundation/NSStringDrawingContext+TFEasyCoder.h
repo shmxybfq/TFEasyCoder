@@ -10,40 +10,40 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSStringDrawingContext,NSStringDrawingContext *);
+typedef void(^NSStringDrawingContextEasyCoderBlock) (NSStringDrawingContext * ins);
 
 @interface NSStringDrawingContext (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSStringDrawingContext, NSStringDrawingContext *);
-TF_EC_MINSTANCE_INT(NSStringDrawingContext,NSStringDrawingContext *);
++( NSStringDrawingContext *)easyCoder:(NSStringDrawingContextEasyCoderBlock)block;
+-(NSStringDrawingContext *)easyCoder:(NSStringDrawingContextEasyCoderBlock)block;
 
-TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,double,minimumTrackingAdjustment)
-TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,double,minimumScaleFactor)
+-(NSStringDrawingContext  *(^)(double  minimumTrackingAdjustment))set_minimumTrackingAdjustment;
+-(NSStringDrawingContext  *(^)(double  minimumScaleFactor))set_minimumScaleFactor;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSStringDrawingContext ,long long,accessibilityNavigationStyle)
+-(NSStringDrawingContext  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSStringDrawingContext  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSStringDrawingContext  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSStringDrawingContext  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSStringDrawingContext  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSStringDrawingContext  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSStringDrawingContext  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSStringDrawingContext  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSStringDrawingContext  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSStringDrawingContext  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSStringDrawingContext  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSStringDrawingContext  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSStringDrawingContext  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSStringDrawingContext  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSStringDrawingContext);
+-(NSStringDrawingContext *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

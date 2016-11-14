@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIVibrancyEffect,UIVibrancyEffect *);
+typedef void(^UIVibrancyEffectEasyCoderBlock) (UIVibrancyEffect * ins);
 
 @interface UIVibrancyEffect (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIVibrancyEffect, UIVibrancyEffect *);
-TF_EC_MINSTANCE_INT(UIVibrancyEffect,UIVibrancyEffect *);
++( UIVibrancyEffect *)easyCoder:(UIVibrancyEffectEasyCoderBlock)block;
+-(UIVibrancyEffect *)easyCoder:(UIVibrancyEffectEasyCoderBlock)block;
 
 
 
@@ -24,26 +24,26 @@ TF_EC_MINSTANCE_INT(UIVibrancyEffect,UIVibrancyEffect *);
 
 //superclass pros UIVisualEffect
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIVibrancyEffect ,long long,accessibilityNavigationStyle)
+-(UIVibrancyEffect  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIVibrancyEffect  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIVibrancyEffect  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIVibrancyEffect  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIVibrancyEffect  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIVibrancyEffect  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIVibrancyEffect  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIVibrancyEffect  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIVibrancyEffect  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIVibrancyEffect  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIVibrancyEffect  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIVibrancyEffect  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIVibrancyEffect  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIVibrancyEffect  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIVibrancyEffect);
+-(UIVibrancyEffect *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

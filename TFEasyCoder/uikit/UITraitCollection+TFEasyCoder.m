@@ -11,8 +11,22 @@
 
 @implementation UITraitCollection (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(UITraitCollection, UITraitCollection *);
-TF_EC_MINSTANCE_IMP(UITraitCollection, UITraitCollection *);
++( UITraitCollection *)easyCoder:(UITraitCollectionEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( UITraitCollection *)ins);
+        }
+    }];
+}
+
+-( UITraitCollection *)easyCoder:(UITraitCollectionEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
+
 
 
 
@@ -20,26 +34,130 @@ TF_EC_MINSTANCE_IMP(UITraitCollection, UITraitCollection *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(UITraitCollection ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(UITraitCollection ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(UITraitCollection ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(UITraitCollection ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(UITraitCollection ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(UITraitCollection ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(UITraitCollection ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(UITraitCollection ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(UITraitCollection ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(UITraitCollection ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(UITraitCollection ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(UITraitCollection ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(UITraitCollection ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(UITraitCollection ,long long,accessibilityNavigationStyle)
+-(UITraitCollection  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(UITraitCollection  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(UITraitCollection  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(UITraitCollection  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(UITraitCollection  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(UITraitCollection  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(UITraitCollection  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(UITraitCollection  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(UITraitCollection  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(UITraitCollection  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(UITraitCollection  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(UITraitCollection  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(UITraitCollection  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(UITraitCollection  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(UITraitCollection);
+
+-(UITraitCollection *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

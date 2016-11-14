@@ -15,53 +15,53 @@
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 
-TF_EC_BLOCK(UIAlertView,UIAlertView *);
+typedef void(^UIAlertViewEasyCoderBlock) (UIAlertView * ins);
 
 @interface UIAlertView (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIAlertView, UIAlertView *);
-TF_EC_MINSTANCE_INT(UIAlertView,UIAlertView *);
++( UIAlertView *)easyCoder:(UIAlertViewEasyCoderBlock)block;
+-(UIAlertView *)easyCoder:(UIAlertViewEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIAlertView ,NSString *,title);
-TF_EC_CHAIN_PROP_INT(UIAlertView ,NSString *,message);
-TF_EC_CHAIN_PROP_INT(UIAlertView ,long long,cancelButtonIndex);
-TF_EC_CHAIN_PROP_INT(UIAlertView ,long long,alertViewStyle);
+-(UIAlertView  *(^)(NSString *  title))set_title;
+-(UIAlertView  *(^)(NSString *  message))set_message;
+-(UIAlertView  *(^)(long long  cancelButtonIndex))set_cancelButtonIndex;
+-(UIAlertView  *(^)(long long  alertViewStyle))set_alertViewStyle;
 
 
 
 
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UIAlertView ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UIAlertView ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UIAlertView ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UIAlertView ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UIAlertView ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UIAlertView ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UIAlertView ,UIColor *,backgroundColor)
+-(UIAlertView  *(^)(UIView *  maskView))set_maskView;
+-(UIAlertView  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UIAlertView  *(^)(long long  tag))set_tag;
+-(UIAlertView  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UIAlertView  *(^)(CGPoint  center))set_center;
+-(UIAlertView  *(^)(CGRect  frame))set_frame;
+-(UIAlertView  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIAlertView ,NSUserActivity *,userActivity);
+-(UIAlertView  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIAlertView ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIAlertView ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIAlertView ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIAlertView ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIAlertView ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIAlertView ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIAlertView ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIAlertView ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIAlertView ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIAlertView ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIAlertView ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIAlertView ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIAlertView ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIAlertView ,long long,accessibilityNavigationStyle)
+-(UIAlertView  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIAlertView  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIAlertView  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIAlertView  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIAlertView  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIAlertView  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIAlertView  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIAlertView  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIAlertView  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIAlertView  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIAlertView  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIAlertView  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIAlertView  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIAlertView  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIAlertView);
+-(UIAlertView *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

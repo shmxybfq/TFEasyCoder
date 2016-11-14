@@ -10,16 +10,16 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSProxy,NSProxy *);
+typedef void(^NSProxyEasyCoderBlock) (NSProxy * ins);
 
 @interface NSProxy (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSProxy, NSProxy *);
-TF_EC_MINSTANCE_INT(NSProxy,NSProxy *);
++( NSProxy *)easyCoder:(NSProxyEasyCoderBlock)block;
+-(NSProxy *)easyCoder:(NSProxyEasyCoderBlock)block;
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSProxy);
+-(NSProxy *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

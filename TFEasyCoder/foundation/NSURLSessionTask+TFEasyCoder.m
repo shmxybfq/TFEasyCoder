@@ -11,38 +11,170 @@
 
 @implementation NSURLSessionTask (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(NSURLSessionTask, NSURLSessionTask *);
-TF_EC_MINSTANCE_IMP(NSURLSessionTask, NSURLSessionTask *);
++( NSURLSessionTask *)easyCoder:(NSURLSessionTaskEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( NSURLSessionTask *)ins);
+        }
+    }];
+}
+
+-( NSURLSessionTask *)easyCoder:(NSURLSessionTaskEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
 
 
 
-TF_EC_CHAIN_PROP_IMP(NSURLSessionTask ,NSString *,taskDescription)
-TF_EC_CHAIN_PROP_IMP(NSURLSessionTask ,float,priority)
+
+-(NSURLSessionTask  *(^)(NSString *  taskDescription))set_taskDescription{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  taskDescription){
+        weakSelf.taskDescription = taskDescription;
+        return weakSelf;
+    };
+}
+
+-(NSURLSessionTask  *(^)(float  priority))set_priority{
+    __weak typeof(self) weakSelf = self;
+    return ^(float  priority){
+        weakSelf.priority = priority;
+        return weakSelf;
+    };
+}
+
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(NSURLSessionTask ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(NSURLSessionTask ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(NSURLSessionTask ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(NSURLSessionTask ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(NSURLSessionTask ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(NSURLSessionTask ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(NSURLSessionTask ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(NSURLSessionTask ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(NSURLSessionTask ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(NSURLSessionTask ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(NSURLSessionTask ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(NSURLSessionTask ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(NSURLSessionTask ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(NSURLSessionTask ,long long,accessibilityNavigationStyle)
+-(NSURLSessionTask  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(NSURLSessionTask  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(NSURLSessionTask  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(NSURLSessionTask  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(NSURLSessionTask  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(NSURLSessionTask  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(NSURLSessionTask  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(NSURLSessionTask  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(NSURLSessionTask  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(NSURLSessionTask  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(NSURLSessionTask  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(NSURLSessionTask  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(NSURLSessionTask  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(NSURLSessionTask  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSURLSessionTask);
+
+-(NSURLSessionTask *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

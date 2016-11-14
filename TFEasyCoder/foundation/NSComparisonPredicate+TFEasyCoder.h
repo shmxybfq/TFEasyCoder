@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSComparisonPredicate,NSComparisonPredicate *);
+typedef void(^NSComparisonPredicateEasyCoderBlock) (NSComparisonPredicate * ins);
 
 @interface NSComparisonPredicate (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSComparisonPredicate, NSComparisonPredicate *);
-TF_EC_MINSTANCE_INT(NSComparisonPredicate,NSComparisonPredicate *);
++( NSComparisonPredicate *)easyCoder:(NSComparisonPredicateEasyCoderBlock)block;
+-(NSComparisonPredicate *)easyCoder:(NSComparisonPredicateEasyCoderBlock)block;
 
 
 
@@ -24,26 +24,26 @@ TF_EC_MINSTANCE_INT(NSComparisonPredicate,NSComparisonPredicate *);
 
 //superclass pros NSPredicate
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSComparisonPredicate ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSComparisonPredicate ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSComparisonPredicate ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSComparisonPredicate ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSComparisonPredicate ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSComparisonPredicate ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSComparisonPredicate ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSComparisonPredicate ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSComparisonPredicate ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSComparisonPredicate ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSComparisonPredicate ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSComparisonPredicate ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSComparisonPredicate ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSComparisonPredicate ,long long,accessibilityNavigationStyle)
+-(NSComparisonPredicate  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSComparisonPredicate  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSComparisonPredicate  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSComparisonPredicate  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSComparisonPredicate  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSComparisonPredicate  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSComparisonPredicate  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSComparisonPredicate  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSComparisonPredicate  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSComparisonPredicate  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSComparisonPredicate  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSComparisonPredicate  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSComparisonPredicate  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSComparisonPredicate  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSComparisonPredicate);
+-(NSComparisonPredicate *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

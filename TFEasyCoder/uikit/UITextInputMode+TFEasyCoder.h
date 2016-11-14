@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UITextInputMode,UITextInputMode *);
+typedef void(^UITextInputModeEasyCoderBlock) (UITextInputMode * ins);
 
 @interface UITextInputMode (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UITextInputMode, UITextInputMode *);
-TF_EC_MINSTANCE_INT(UITextInputMode,UITextInputMode *);
++( UITextInputMode *)easyCoder:(UITextInputModeEasyCoderBlock)block;
+-(UITextInputMode *)easyCoder:(UITextInputModeEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(UITextInputMode,UITextInputMode *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UITextInputMode ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UITextInputMode ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UITextInputMode ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UITextInputMode ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UITextInputMode ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UITextInputMode ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UITextInputMode ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UITextInputMode ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UITextInputMode ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UITextInputMode ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UITextInputMode ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UITextInputMode ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UITextInputMode ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UITextInputMode ,long long,accessibilityNavigationStyle)
+-(UITextInputMode  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UITextInputMode  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UITextInputMode  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UITextInputMode  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UITextInputMode  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UITextInputMode  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UITextInputMode  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UITextInputMode  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UITextInputMode  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UITextInputMode  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UITextInputMode  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UITextInputMode  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UITextInputMode  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UITextInputMode  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UITextInputMode);
+-(UITextInputMode *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -10,46 +10,46 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSDateIntervalFormatter,NSDateIntervalFormatter *);
+typedef void(^NSDateIntervalFormatterEasyCoderBlock) (NSDateIntervalFormatter * ins);
 
 @interface NSDateIntervalFormatter (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSDateIntervalFormatter, NSDateIntervalFormatter *);
-TF_EC_MINSTANCE_INT(NSDateIntervalFormatter,NSDateIntervalFormatter *);
++( NSDateIntervalFormatter *)easyCoder:(NSDateIntervalFormatterEasyCoderBlock)block;
+-(NSDateIntervalFormatter *)easyCoder:(NSDateIntervalFormatterEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSDateIntervalFormatter ,NSLocale *,locale);
-TF_EC_CHAIN_PROP_INT(NSDateIntervalFormatter ,NSCalendar *,calendar);
-TF_EC_CHAIN_PROP_INT(NSDateIntervalFormatter ,NSTimeZone *,timeZone);
-TF_EC_CHAIN_PROP_INT(NSDateIntervalFormatter ,NSString *,dateTemplate);
-TF_EC_CHAIN_PROP_INT(NSDateIntervalFormatter ,unsigned long long,dateStyle);
-TF_EC_CHAIN_PROP_INT(NSDateIntervalFormatter ,unsigned long long,timeStyle);
+-(NSDateIntervalFormatter  *(^)(NSLocale *  locale))set_locale;
+-(NSDateIntervalFormatter  *(^)(NSCalendar *  calendar))set_calendar;
+-(NSDateIntervalFormatter  *(^)(NSTimeZone *  timeZone))set_timeZone;
+-(NSDateIntervalFormatter  *(^)(NSString *  dateTemplate))set_dateTemplate;
+-(NSDateIntervalFormatter  *(^)(unsigned long long  dateStyle))set_dateStyle;
+-(NSDateIntervalFormatter  *(^)(unsigned long long  timeStyle))set_timeStyle;
 
 
 
 
 //superclass pros NSFormatter
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSDateIntervalFormatter ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSDateIntervalFormatter ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSDateIntervalFormatter ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSDateIntervalFormatter ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSDateIntervalFormatter ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSDateIntervalFormatter ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSDateIntervalFormatter ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSDateIntervalFormatter ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSDateIntervalFormatter ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSDateIntervalFormatter ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSDateIntervalFormatter ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSDateIntervalFormatter ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSDateIntervalFormatter ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSDateIntervalFormatter ,long long,accessibilityNavigationStyle)
+-(NSDateIntervalFormatter  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSDateIntervalFormatter  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSDateIntervalFormatter  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSDateIntervalFormatter  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSDateIntervalFormatter  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSDateIntervalFormatter  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSDateIntervalFormatter  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSDateIntervalFormatter  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSDateIntervalFormatter  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSDateIntervalFormatter  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSDateIntervalFormatter  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSDateIntervalFormatter  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSDateIntervalFormatter  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSDateIntervalFormatter  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSDateIntervalFormatter);
+-(NSDateIntervalFormatter *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

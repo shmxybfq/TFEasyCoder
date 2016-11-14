@@ -10,50 +10,50 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSDateComponentsFormatter,NSDateComponentsFormatter *);
+typedef void(^NSDateComponentsFormatterEasyCoderBlock) (NSDateComponentsFormatter * ins);
 
 @interface NSDateComponentsFormatter (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSDateComponentsFormatter, NSDateComponentsFormatter *);
-TF_EC_MINSTANCE_INT(NSDateComponentsFormatter,NSDateComponentsFormatter *);
++( NSDateComponentsFormatter *)easyCoder:(NSDateComponentsFormatterEasyCoderBlock)block;
+-(NSDateComponentsFormatter *)easyCoder:(NSDateComponentsFormatterEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,long long,unitsStyle);
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,unsigned long long,allowedUnits);
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,unsigned long long,zeroFormattingBehavior);
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,NSCalendar *,calendar);
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,BOOL,allowsFractionalUnits);
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,long long,maximumUnitCount);
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,BOOL,collapsesLargestUnit);
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,BOOL,includesApproximationPhrase);
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,BOOL,includesTimeRemainingPhrase);
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,long long,formattingContext);
+-(NSDateComponentsFormatter  *(^)(long long  unitsStyle))set_unitsStyle;
+-(NSDateComponentsFormatter  *(^)(unsigned long long  allowedUnits))set_allowedUnits;
+-(NSDateComponentsFormatter  *(^)(unsigned long long  zeroFormattingBehavior))set_zeroFormattingBehavior;
+-(NSDateComponentsFormatter  *(^)(NSCalendar *  calendar))set_calendar;
+-(NSDateComponentsFormatter  *(^)(BOOL  allowsFractionalUnits))set_allowsFractionalUnits;
+-(NSDateComponentsFormatter  *(^)(long long  maximumUnitCount))set_maximumUnitCount;
+-(NSDateComponentsFormatter  *(^)(BOOL  collapsesLargestUnit))set_collapsesLargestUnit;
+-(NSDateComponentsFormatter  *(^)(BOOL  includesApproximationPhrase))set_includesApproximationPhrase;
+-(NSDateComponentsFormatter  *(^)(BOOL  includesTimeRemainingPhrase))set_includesTimeRemainingPhrase;
+-(NSDateComponentsFormatter  *(^)(long long  formattingContext))set_formattingContext;
 
 
 
 
 //superclass pros NSFormatter
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSDateComponentsFormatter ,long long,accessibilityNavigationStyle)
+-(NSDateComponentsFormatter  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSDateComponentsFormatter  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSDateComponentsFormatter  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSDateComponentsFormatter  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSDateComponentsFormatter  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSDateComponentsFormatter  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSDateComponentsFormatter  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSDateComponentsFormatter  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSDateComponentsFormatter  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSDateComponentsFormatter  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSDateComponentsFormatter  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSDateComponentsFormatter  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSDateComponentsFormatter  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSDateComponentsFormatter  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSDateComponentsFormatter);
+-(NSDateComponentsFormatter *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

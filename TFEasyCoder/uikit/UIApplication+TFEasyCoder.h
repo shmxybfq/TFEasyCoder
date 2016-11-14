@@ -10,46 +10,46 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIApplication,UIApplication *);
+typedef void(^UIApplicationEasyCoderBlock) (UIApplication * ins);
 
 @interface UIApplication (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIApplication, UIApplication *);
-TF_EC_MINSTANCE_INT(UIApplication,UIApplication *);
++( UIApplication *)easyCoder:(UIApplicationEasyCoderBlock)block;
+-(UIApplication *)easyCoder:(UIApplicationEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIApplication ,id<UIApplicationDelegate>  ,delegate)
-TF_EC_CHAIN_PROP_INT(UIApplication ,BOOL,idleTimerDisabled)
-TF_EC_CHAIN_PROP_INT(UIApplication ,BOOL,networkActivityIndicatorVisible)
-TF_EC_CHAIN_PROP_INT(UIApplication ,long long,applicationIconBadgeNumber)
-TF_EC_CHAIN_PROP_INT(UIApplication ,BOOL,applicationSupportsShakeToEdit)
+-(UIApplication  *(^)(id<UIApplicationDelegate>    delegate))set_delegate;
+-(UIApplication  *(^)(BOOL  idleTimerDisabled))set_idleTimerDisabled;
+-(UIApplication  *(^)(BOOL  networkActivityIndicatorVisible))set_networkActivityIndicatorVisible;
+-(UIApplication  *(^)(long long  applicationIconBadgeNumber))set_applicationIconBadgeNumber;
+-(UIApplication  *(^)(BOOL  applicationSupportsShakeToEdit))set_applicationSupportsShakeToEdit;
 
 
 
 
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIApplication ,NSUserActivity *,userActivity);
+-(UIApplication  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIApplication ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIApplication ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIApplication ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIApplication ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIApplication ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIApplication ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIApplication ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIApplication ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIApplication ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIApplication ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIApplication ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIApplication ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIApplication ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIApplication ,long long,accessibilityNavigationStyle)
+-(UIApplication  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIApplication  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIApplication  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIApplication  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIApplication  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIApplication  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIApplication  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIApplication  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIApplication  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIApplication  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIApplication  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIApplication  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIApplication  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIApplication  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIApplication);
+-(UIApplication *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

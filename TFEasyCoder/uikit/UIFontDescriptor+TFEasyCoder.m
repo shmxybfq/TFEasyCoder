@@ -11,8 +11,22 @@
 
 @implementation UIFontDescriptor (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(UIFontDescriptor, UIFontDescriptor *);
-TF_EC_MINSTANCE_IMP(UIFontDescriptor, UIFontDescriptor *);
++( UIFontDescriptor *)easyCoder:(UIFontDescriptorEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( UIFontDescriptor *)ins);
+        }
+    }];
+}
+
+-( UIFontDescriptor *)easyCoder:(UIFontDescriptorEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
+
 
 
 
@@ -20,26 +34,130 @@ TF_EC_MINSTANCE_IMP(UIFontDescriptor, UIFontDescriptor *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(UIFontDescriptor ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(UIFontDescriptor ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(UIFontDescriptor ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(UIFontDescriptor ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(UIFontDescriptor ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(UIFontDescriptor ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(UIFontDescriptor ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(UIFontDescriptor ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(UIFontDescriptor ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(UIFontDescriptor ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(UIFontDescriptor ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(UIFontDescriptor ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(UIFontDescriptor ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(UIFontDescriptor ,long long,accessibilityNavigationStyle)
+-(UIFontDescriptor  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(UIFontDescriptor  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(UIFontDescriptor  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(UIFontDescriptor  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(UIFontDescriptor  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(UIFontDescriptor  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(UIFontDescriptor  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(UIFontDescriptor  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(UIFontDescriptor  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(UIFontDescriptor  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(UIFontDescriptor  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(UIFontDescriptor  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(UIFontDescriptor  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(UIFontDescriptor  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIFontDescriptor);
+
+-(UIFontDescriptor *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

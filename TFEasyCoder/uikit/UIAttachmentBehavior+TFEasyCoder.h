@@ -10,45 +10,45 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIAttachmentBehavior,UIAttachmentBehavior *);
+typedef void(^UIAttachmentBehaviorEasyCoderBlock) (UIAttachmentBehavior * ins);
 
 @interface UIAttachmentBehavior (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIAttachmentBehavior, UIAttachmentBehavior *);
-TF_EC_MINSTANCE_INT(UIAttachmentBehavior,UIAttachmentBehavior *);
++( UIAttachmentBehavior *)easyCoder:(UIAttachmentBehaviorEasyCoderBlock)block;
+-(UIAttachmentBehavior *)easyCoder:(UIAttachmentBehaviorEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIAttachmentBehavior ,CGPoint,anchorPoint);
-TF_EC_CHAIN_PROP_INT(UIAttachmentBehavior ,double,length);
-TF_EC_CHAIN_PROP_INT(UIAttachmentBehavior ,double,damping);
-TF_EC_CHAIN_PROP_INT(UIAttachmentBehavior ,double,frequency);
-TF_EC_CHAIN_PROP_INT(UIAttachmentBehavior ,double,frictionTorque);
+-(UIAttachmentBehavior  *(^)(CGPoint  anchorPoint))set_anchorPoint;
+-(UIAttachmentBehavior  *(^)(double  length))set_length;
+-(UIAttachmentBehavior  *(^)(double  damping))set_damping;
+-(UIAttachmentBehavior  *(^)(double  frequency))set_frequency;
+-(UIAttachmentBehavior  *(^)(double  frictionTorque))set_frictionTorque;
 
 
 
 
 //superclass pros UIDynamicBehavior
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIAttachmentBehavior ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIAttachmentBehavior ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIAttachmentBehavior ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIAttachmentBehavior ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIAttachmentBehavior ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIAttachmentBehavior ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIAttachmentBehavior ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIAttachmentBehavior ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIAttachmentBehavior ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIAttachmentBehavior ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIAttachmentBehavior ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIAttachmentBehavior ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIAttachmentBehavior ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIAttachmentBehavior ,long long,accessibilityNavigationStyle)
+-(UIAttachmentBehavior  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIAttachmentBehavior  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIAttachmentBehavior  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIAttachmentBehavior  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIAttachmentBehavior  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIAttachmentBehavior  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIAttachmentBehavior  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIAttachmentBehavior  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIAttachmentBehavior  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIAttachmentBehavior  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIAttachmentBehavior  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIAttachmentBehavior  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIAttachmentBehavior  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIAttachmentBehavior  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIAttachmentBehavior);
+-(UIAttachmentBehavior *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

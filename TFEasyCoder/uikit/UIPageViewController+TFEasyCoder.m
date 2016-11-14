@@ -16,58 +16,323 @@
 
 @implementation UIPageViewController (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(UIPageViewController, UIPageViewController *);
-TF_EC_MINSTANCE_IMP(UIPageViewController, UIPageViewController *);
++( UIPageViewController *)easyCoder:(UIPageViewControllerEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( UIPageViewController *)ins);
+        }
+    }];
+}
+
+-( UIPageViewController *)easyCoder:(UIPageViewControllerEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
 
 
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,id<UIPageViewControllerDelegate>  ,delegate)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,id<UIPageViewControllerDataSource>  ,dataSource)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,BOOL,doubleSided)
+
+-(UIPageViewController  *(^)(id<UIPageViewControllerDelegate>    delegate))set_delegate{
+    __weak typeof(self) weakSelf = self;
+    return ^(id<UIPageViewControllerDelegate>    delegate){
+        weakSelf.delegate = delegate;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(id<UIPageViewControllerDataSource>    dataSource))set_dataSource{
+    __weak typeof(self) weakSelf = self;
+    return ^(id<UIPageViewControllerDataSource>    dataSource){
+        weakSelf.dataSource = dataSource;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(BOOL  doubleSided))set_doubleSided{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  doubleSided){
+        weakSelf.doubleSided = doubleSided;
+        return weakSelf;
+    };
+}
+
 
 
 
 
 //superclass pros UIViewController
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,UITabBarItem *,tabBarItem)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,BOOL,hidesBottomBarWhenPushed)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,id<UIViewControllerTransitioningDelegate>  ,transitioningDelegate)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,UIView *,view)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,NSString *,title)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,BOOL,definesPresentationContext)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,BOOL,providesPresentationContextTransitionStyle)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,long long,modalTransitionStyle)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,long long,modalPresentationStyle)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,BOOL,modalPresentationCapturesStatusBarAppearance)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,BOOL,wantsFullScreenLayout)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,unsigned long long,edgesForExtendedLayout)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,BOOL,extendedLayoutIncludesOpaqueBars)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,BOOL,automaticallyAdjustsScrollViewInsets)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,CGSize,preferredContentSize)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,CGSize,contentSizeForViewInPopover)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,BOOL,modalInPopover)
+-(UIPageViewController  *(^)(UITabBarItem *  tabBarItem))set_tabBarItem{
+    __weak typeof(self) weakSelf = self;
+    return ^(UITabBarItem *  tabBarItem){
+        weakSelf.tabBarItem = tabBarItem;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(BOOL  hidesBottomBarWhenPushed))set_hidesBottomBarWhenPushed{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  hidesBottomBarWhenPushed){
+        weakSelf.hidesBottomBarWhenPushed = hidesBottomBarWhenPushed;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(id<UIViewControllerTransitioningDelegate>    transitioningDelegate))set_transitioningDelegate{
+    __weak typeof(self) weakSelf = self;
+    return ^(id<UIViewControllerTransitioningDelegate>    transitioningDelegate){
+        weakSelf.transitioningDelegate = transitioningDelegate;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(UIView *  view))set_view{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIView *  view){
+        weakSelf.view = view;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(NSString *  title))set_title{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  title){
+        weakSelf.title = title;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(BOOL  definesPresentationContext))set_definesPresentationContext{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  definesPresentationContext){
+        weakSelf.definesPresentationContext = definesPresentationContext;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(BOOL  providesPresentationContextTransitionStyle))set_providesPresentationContextTransitionStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  providesPresentationContextTransitionStyle){
+        weakSelf.providesPresentationContextTransitionStyle = providesPresentationContextTransitionStyle;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(long long  modalTransitionStyle))set_modalTransitionStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  modalTransitionStyle){
+        weakSelf.modalTransitionStyle = modalTransitionStyle;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(long long  modalPresentationStyle))set_modalPresentationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  modalPresentationStyle){
+        weakSelf.modalPresentationStyle = modalPresentationStyle;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(BOOL  modalPresentationCapturesStatusBarAppearance))set_modalPresentationCapturesStatusBarAppearance{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  modalPresentationCapturesStatusBarAppearance){
+        weakSelf.modalPresentationCapturesStatusBarAppearance = modalPresentationCapturesStatusBarAppearance;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(BOOL  wantsFullScreenLayout))set_wantsFullScreenLayout{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  wantsFullScreenLayout){
+        weakSelf.wantsFullScreenLayout = wantsFullScreenLayout;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(unsigned long long  edgesForExtendedLayout))set_edgesForExtendedLayout{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  edgesForExtendedLayout){
+        weakSelf.edgesForExtendedLayout = edgesForExtendedLayout;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(BOOL  extendedLayoutIncludesOpaqueBars))set_extendedLayoutIncludesOpaqueBars{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  extendedLayoutIncludesOpaqueBars){
+        weakSelf.extendedLayoutIncludesOpaqueBars = extendedLayoutIncludesOpaqueBars;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(BOOL  automaticallyAdjustsScrollViewInsets))set_automaticallyAdjustsScrollViewInsets{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  automaticallyAdjustsScrollViewInsets){
+        weakSelf.automaticallyAdjustsScrollViewInsets = automaticallyAdjustsScrollViewInsets;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(CGSize  preferredContentSize))set_preferredContentSize{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGSize  preferredContentSize){
+        weakSelf.preferredContentSize = preferredContentSize;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(CGSize  contentSizeForViewInPopover))set_contentSizeForViewInPopover{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGSize  contentSizeForViewInPopover){
+        weakSelf.contentSizeForViewInPopover = contentSizeForViewInPopover;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(BOOL  modalInPopover))set_modalInPopover{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  modalInPopover){
+        weakSelf.modalInPopover = modalInPopover;
+        return weakSelf;
+    };
+}
+
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,NSUserActivity *,userActivity)
+-(UIPageViewController  *(^)(NSUserActivity *  userActivity))set_userActivity{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSUserActivity *  userActivity){
+        weakSelf.userActivity = userActivity;
+        return weakSelf;
+    };
+}
+
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(UIPageViewController ,long long,accessibilityNavigationStyle)
+-(UIPageViewController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(UIPageViewController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIPageViewController);
+
+-(UIPageViewController *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

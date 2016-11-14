@@ -10,41 +10,41 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSNetService,NSNetService *);
+typedef void(^NSNetServiceEasyCoderBlock) (NSNetService * ins);
 
 @interface NSNetService (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSNetService, NSNetService *);
-TF_EC_MINSTANCE_INT(NSNetService,NSNetService *);
++( NSNetService *)easyCoder:(NSNetServiceEasyCoderBlock)block;
+-(NSNetService *)easyCoder:(NSNetServiceEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSNetService ,id<NSNetServiceDelegate> ,delegate);
-TF_EC_CHAIN_PROP_INT(NSNetService ,BOOL,includesPeerToPeer);
+-(NSNetService  *(^)(id<NSNetServiceDelegate>   delegate))set_delegate;
+-(NSNetService  *(^)(BOOL  includesPeerToPeer))set_includesPeerToPeer;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSNetService ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSNetService ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSNetService ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSNetService ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSNetService ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSNetService ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSNetService ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSNetService ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSNetService ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSNetService ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSNetService ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSNetService ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSNetService ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSNetService ,long long,accessibilityNavigationStyle)
+-(NSNetService  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSNetService  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSNetService  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSNetService  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSNetService  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSNetService  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSNetService  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSNetService  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSNetService  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSNetService  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSNetService  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSNetService  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSNetService  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSNetService  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSNetService);
+-(NSNetService *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

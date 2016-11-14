@@ -10,54 +10,54 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSURLComponents,NSURLComponents *);
+typedef void(^NSURLComponentsEasyCoderBlock) (NSURLComponents * ins);
 
 @interface NSURLComponents (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSURLComponents, NSURLComponents *);
-TF_EC_MINSTANCE_INT(NSURLComponents,NSURLComponents *);
++( NSURLComponents *)easyCoder:(NSURLComponentsEasyCoderBlock)block;
+-(NSURLComponents *)easyCoder:(NSURLComponentsEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,scheme);
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,user);
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,password);
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,host);
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSNumber *,port);
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,path);
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,query);
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,fragment);
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,percentEncodedUser);
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,percentEncodedPassword);
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,percentEncodedHost);
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,percentEncodedPath);
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,percentEncodedQuery);
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,percentEncodedFragment);
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSArray *,queryItems);
+-(NSURLComponents  *(^)(NSString *  scheme))set_scheme;
+-(NSURLComponents  *(^)(NSString *  user))set_user;
+-(NSURLComponents  *(^)(NSString *  password))set_password;
+-(NSURLComponents  *(^)(NSString *  host))set_host;
+-(NSURLComponents  *(^)(NSNumber *  port))set_port;
+-(NSURLComponents  *(^)(NSString *  path))set_path;
+-(NSURLComponents  *(^)(NSString *  query))set_query;
+-(NSURLComponents  *(^)(NSString *  fragment))set_fragment;
+-(NSURLComponents  *(^)(NSString *  percentEncodedUser))set_percentEncodedUser;
+-(NSURLComponents  *(^)(NSString *  percentEncodedPassword))set_percentEncodedPassword;
+-(NSURLComponents  *(^)(NSString *  percentEncodedHost))set_percentEncodedHost;
+-(NSURLComponents  *(^)(NSString *  percentEncodedPath))set_percentEncodedPath;
+-(NSURLComponents  *(^)(NSString *  percentEncodedQuery))set_percentEncodedQuery;
+-(NSURLComponents  *(^)(NSString *  percentEncodedFragment))set_percentEncodedFragment;
+-(NSURLComponents  *(^)(NSArray *  queryItems))set_queryItems;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSURLComponents ,long long,accessibilityNavigationStyle)
+-(NSURLComponents  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSURLComponents  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSURLComponents  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSURLComponents  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSURLComponents  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSURLComponents  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSURLComponents  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSURLComponents  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSURLComponents  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSURLComponents  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSURLComponents  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSURLComponents  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSURLComponents  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSURLComponents  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSURLComponents);
+-(NSURLComponents *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -10,98 +10,98 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UITableView,UITableView *);
+typedef void(^UITableViewEasyCoderBlock) (UITableView * ins);
 
 @interface UITableView (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UITableView, UITableView *);
-TF_EC_MINSTANCE_INT(UITableView,UITableView *);
++( UITableView *)easyCoder:(UITableViewEasyCoderBlock)block;
+-(UITableView *)easyCoder:(UITableViewEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UITableView ,id<UITableViewDataSource> ,dataSource);
-TF_EC_CHAIN_PROP_INT(UITableView ,id<UITableViewDelegate> ,delegate);
-TF_EC_CHAIN_PROP_INT(UITableView ,double,rowHeight);
-TF_EC_CHAIN_PROP_INT(UITableView ,double,sectionHeaderHeight);
-TF_EC_CHAIN_PROP_INT(UITableView ,double,sectionFooterHeight);
-TF_EC_CHAIN_PROP_INT(UITableView ,double,estimatedSectionHeaderHeight);
-TF_EC_CHAIN_PROP_INT(UITableView ,double,estimatedSectionFooterHeight);
-TF_EC_CHAIN_PROP_INT(UITableView ,UIEdgeInsets,separatorInset);
-TF_EC_CHAIN_PROP_INT(UITableView ,UIView *,backgroundView);
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,editing);
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,allowsSelection);
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,allowsSelectionDuringEditing);
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,allowsMultipleSelection);
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,allowsMultipleSelectionDuringEditing);
-TF_EC_CHAIN_PROP_INT(UITableView ,UIColor *,sectionIndexColor);
-TF_EC_CHAIN_PROP_INT(UITableView ,UIColor *,sectionIndexBackgroundColor);
-TF_EC_CHAIN_PROP_INT(UITableView ,UIColor *,sectionIndexTrackingBackgroundColor);
-TF_EC_CHAIN_PROP_INT(UITableView ,long long,separatorStyle);
-TF_EC_CHAIN_PROP_INT(UITableView ,UIColor *,separatorColor);
-TF_EC_CHAIN_PROP_INT(UITableView ,UIVisualEffect *,separatorEffect);
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,cellLayoutMarginsFollowReadableWidth);
-TF_EC_CHAIN_PROP_INT(UITableView ,UIView *,tableHeaderView);
-TF_EC_CHAIN_PROP_INT(UITableView ,UIView *,tableFooterView);
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,remembersLastFocusedIndexPath);
+-(UITableView  *(^)(id<UITableViewDataSource>   dataSource))set_dataSource;
+-(UITableView  *(^)(id<UITableViewDelegate>   delegate))set_delegate;
+-(UITableView  *(^)(double  rowHeight))set_rowHeight;
+-(UITableView  *(^)(double  sectionHeaderHeight))set_sectionHeaderHeight;
+-(UITableView  *(^)(double  sectionFooterHeight))set_sectionFooterHeight;
+-(UITableView  *(^)(double  estimatedSectionHeaderHeight))set_estimatedSectionHeaderHeight;
+-(UITableView  *(^)(double  estimatedSectionFooterHeight))set_estimatedSectionFooterHeight;
+-(UITableView  *(^)(UIEdgeInsets  separatorInset))set_separatorInset;
+-(UITableView  *(^)(UIView *  backgroundView))set_backgroundView;
+-(UITableView  *(^)(BOOL  editing))set_editing;
+-(UITableView  *(^)(BOOL  allowsSelection))set_allowsSelection;
+-(UITableView  *(^)(BOOL  allowsSelectionDuringEditing))set_allowsSelectionDuringEditing;
+-(UITableView  *(^)(BOOL  allowsMultipleSelection))set_allowsMultipleSelection;
+-(UITableView  *(^)(BOOL  allowsMultipleSelectionDuringEditing))set_allowsMultipleSelectionDuringEditing;
+-(UITableView  *(^)(UIColor *  sectionIndexColor))set_sectionIndexColor;
+-(UITableView  *(^)(UIColor *  sectionIndexBackgroundColor))set_sectionIndexBackgroundColor;
+-(UITableView  *(^)(UIColor *  sectionIndexTrackingBackgroundColor))set_sectionIndexTrackingBackgroundColor;
+-(UITableView  *(^)(long long  separatorStyle))set_separatorStyle;
+-(UITableView  *(^)(UIColor *  separatorColor))set_separatorColor;
+-(UITableView  *(^)(UIVisualEffect *  separatorEffect))set_separatorEffect;
+-(UITableView  *(^)(BOOL  cellLayoutMarginsFollowReadableWidth))set_cellLayoutMarginsFollowReadableWidth;
+-(UITableView  *(^)(UIView *  tableHeaderView))set_tableHeaderView;
+-(UITableView  *(^)(UIView *  tableFooterView))set_tableFooterView;
+-(UITableView  *(^)(BOOL  remembersLastFocusedIndexPath))set_remembersLastFocusedIndexPath;
 
 
 
 
 
 //superclass pros UIScrollView
-TF_EC_CHAIN_PROP_INT(UITableView ,CGPoint,contentOffset);
-TF_EC_CHAIN_PROP_INT(UITableView ,CGSize,contentSize);
-TF_EC_CHAIN_PROP_INT(UITableView ,UIEdgeInsets,contentInset);
+-(UITableView  *(^)(CGPoint  contentOffset))set_contentOffset;
+-(UITableView  *(^)(CGSize  contentSize))set_contentSize;
+-(UITableView  *(^)(UIEdgeInsets  contentInset))set_contentInset;
 //TF_EC_CHAIN_PROP_INT(UITableView ,id<UIScrollViewDelegate> ,delegate);
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,directionalLockEnabled);
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,bounces);
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,alwaysBounceVertical);
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,alwaysBounceHorizontal);
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,pagingEnabled);
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,scrollEnabled);
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,showsHorizontalScrollIndicator);
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,showsVerticalScrollIndicator);
-TF_EC_CHAIN_PROP_INT(UITableView ,UIEdgeInsets,scrollIndicatorInsets);
-TF_EC_CHAIN_PROP_INT(UITableView ,long long,indicatorStyle);
-TF_EC_CHAIN_PROP_INT(UITableView ,double,decelerationRate);
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,delaysContentTouches);
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,canCancelContentTouches);
-TF_EC_CHAIN_PROP_INT(UITableView ,double,minimumZoomScale);
-TF_EC_CHAIN_PROP_INT(UITableView ,double,maximumZoomScale);
-TF_EC_CHAIN_PROP_INT(UITableView ,double,zoomScale);
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,bouncesZoom);
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,scrollsToTop);
-TF_EC_CHAIN_PROP_INT(UITableView ,long long,keyboardDismissMode);
+-(UITableView  *(^)(BOOL  directionalLockEnabled))set_directionalLockEnabled;
+-(UITableView  *(^)(BOOL  bounces))set_bounces;
+-(UITableView  *(^)(BOOL  alwaysBounceVertical))set_alwaysBounceVertical;
+-(UITableView  *(^)(BOOL  alwaysBounceHorizontal))set_alwaysBounceHorizontal;
+-(UITableView  *(^)(BOOL  pagingEnabled))set_pagingEnabled;
+-(UITableView  *(^)(BOOL  scrollEnabled))set_scrollEnabled;
+-(UITableView  *(^)(BOOL  showsHorizontalScrollIndicator))set_showsHorizontalScrollIndicator;
+-(UITableView  *(^)(BOOL  showsVerticalScrollIndicator))set_showsVerticalScrollIndicator;
+-(UITableView  *(^)(UIEdgeInsets  scrollIndicatorInsets))set_scrollIndicatorInsets;
+-(UITableView  *(^)(long long  indicatorStyle))set_indicatorStyle;
+-(UITableView  *(^)(double  decelerationRate))set_decelerationRate;
+-(UITableView  *(^)(BOOL  delaysContentTouches))set_delaysContentTouches;
+-(UITableView  *(^)(BOOL  canCancelContentTouches))set_canCancelContentTouches;
+-(UITableView  *(^)(double  minimumZoomScale))set_minimumZoomScale;
+-(UITableView  *(^)(double  maximumZoomScale))set_maximumZoomScale;
+-(UITableView  *(^)(double  zoomScale))set_zoomScale;
+-(UITableView  *(^)(BOOL  bouncesZoom))set_bouncesZoom;
+-(UITableView  *(^)(BOOL  scrollsToTop))set_scrollsToTop;
+-(UITableView  *(^)(long long  keyboardDismissMode))set_keyboardDismissMode;
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UITableView ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UITableView ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UITableView ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UITableView ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UITableView ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UITableView ,UIColor *,backgroundColor)
+-(UITableView  *(^)(UIView *  maskView))set_maskView;
+-(UITableView  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UITableView  *(^)(long long  tag))set_tag;
+-(UITableView  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UITableView  *(^)(CGPoint  center))set_center;
+-(UITableView  *(^)(CGRect  frame))set_frame;
+-(UITableView  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UITableView ,NSUserActivity *,userActivity);
+-(UITableView  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UITableView ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UITableView ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UITableView ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UITableView ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UITableView ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UITableView ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UITableView ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UITableView ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UITableView ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UITableView ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UITableView ,long long,accessibilityNavigationStyle)
+-(UITableView  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UITableView  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UITableView  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UITableView  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UITableView  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UITableView  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UITableView  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UITableView  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UITableView  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UITableView  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UITableView  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UITableView  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UITableView  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UITableView  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UITableView);
+-(UITableView *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

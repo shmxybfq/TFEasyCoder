@@ -10,42 +10,42 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIMenuController,UIMenuController *);
+typedef void(^UIMenuControllerEasyCoderBlock) (UIMenuController * ins);
 
 @interface UIMenuController (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIMenuController, UIMenuController *);
-TF_EC_MINSTANCE_INT(UIMenuController,UIMenuController *);
++( UIMenuController *)easyCoder:(UIMenuControllerEasyCoderBlock)block;
+-(UIMenuController *)easyCoder:(UIMenuControllerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIMenuController ,BOOL,menuVisible);
-TF_EC_CHAIN_PROP_INT(UIMenuController ,long long,arrowDirection);
-TF_EC_CHAIN_PROP_INT(UIMenuController ,NSArray *,menuItems);
+-(UIMenuController  *(^)(BOOL  menuVisible))set_menuVisible;
+-(UIMenuController  *(^)(long long  arrowDirection))set_arrowDirection;
+-(UIMenuController  *(^)(NSArray *  menuItems))set_menuItems;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIMenuController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIMenuController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIMenuController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIMenuController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIMenuController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIMenuController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIMenuController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIMenuController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIMenuController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIMenuController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIMenuController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIMenuController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIMenuController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIMenuController ,long long,accessibilityNavigationStyle)
+-(UIMenuController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIMenuController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIMenuController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIMenuController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIMenuController  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIMenuController  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIMenuController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIMenuController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIMenuController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIMenuController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIMenuController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIMenuController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIMenuController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIMenuController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIMenuController);
+-(UIMenuController *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

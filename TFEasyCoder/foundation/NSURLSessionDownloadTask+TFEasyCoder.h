@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSURLSessionDownloadTask,NSURLSessionDownloadTask *);
+typedef void(^NSURLSessionDownloadTaskEasyCoderBlock) (NSURLSessionDownloadTask * ins);
 
 @interface NSURLSessionDownloadTask (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSURLSessionDownloadTask, NSURLSessionDownloadTask *);
-TF_EC_MINSTANCE_INT(NSURLSessionDownloadTask,NSURLSessionDownloadTask *);
++( NSURLSessionDownloadTask *)easyCoder:(NSURLSessionDownloadTaskEasyCoderBlock)block;
+-(NSURLSessionDownloadTask *)easyCoder:(NSURLSessionDownloadTaskEasyCoderBlock)block;
 
 
 
@@ -23,29 +23,29 @@ TF_EC_MINSTANCE_INT(NSURLSessionDownloadTask,NSURLSessionDownloadTask *);
 
 
 //superclass pros NSURLSessionTask
-TF_EC_CHAIN_PROP_INT(NSURLSessionDownloadTask ,NSString *,taskDescription)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDownloadTask ,float,priority)
+-(NSURLSessionDownloadTask  *(^)(NSString *  taskDescription))set_taskDescription;
+-(NSURLSessionDownloadTask  *(^)(float  priority))set_priority;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSURLSessionDownloadTask ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDownloadTask ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDownloadTask ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDownloadTask ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDownloadTask ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDownloadTask ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDownloadTask ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDownloadTask ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDownloadTask ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDownloadTask ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDownloadTask ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDownloadTask ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDownloadTask ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSURLSessionDownloadTask ,long long,accessibilityNavigationStyle)
+-(NSURLSessionDownloadTask  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSURLSessionDownloadTask  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSURLSessionDownloadTask  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSURLSessionDownloadTask  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSURLSessionDownloadTask  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSURLSessionDownloadTask  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSURLSessionDownloadTask  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSURLSessionDownloadTask  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSURLSessionDownloadTask  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSURLSessionDownloadTask  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSURLSessionDownloadTask  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSURLSessionDownloadTask  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSURLSessionDownloadTask  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSURLSessionDownloadTask  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSURLSessionDownloadTask);
+-(NSURLSessionDownloadTask *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

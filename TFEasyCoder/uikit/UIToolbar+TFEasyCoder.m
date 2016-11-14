@@ -11,16 +11,72 @@
 
 @implementation UIToolbar (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(UIToolbar, UIToolbar *);
-TF_EC_MINSTANCE_IMP(UIToolbar, UIToolbar *);
++( UIToolbar *)easyCoder:(UIToolbarEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( UIToolbar *)ins);
+        }
+    }];
+}
+
+-( UIToolbar *)easyCoder:(UIToolbarEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
 
 
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,long long,barStyle)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,NSArray *,items)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,BOOL,translucent)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,UIColor *,tintColor)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,UIColor *,barTintColor)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,id<UIToolbarDelegate>  ,delegate)
+
+-(UIToolbar  *(^)(long long  barStyle))set_barStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  barStyle){
+        weakSelf.barStyle = barStyle;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(NSArray *  items))set_items{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  items){
+        weakSelf.items = items;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(BOOL  translucent))set_translucent{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  translucent){
+        weakSelf.translucent = translucent;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(UIColor *  tintColor))set_tintColor{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIColor *  tintColor){
+        weakSelf.tintColor = tintColor;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(UIColor *  barTintColor))set_barTintColor{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIColor *  barTintColor){
+        weakSelf.barTintColor = barTintColor;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(id<UIToolbarDelegate>    delegate))set_delegate{
+    __weak typeof(self) weakSelf = self;
+    return ^(id<UIToolbarDelegate>    delegate){
+        weakSelf.delegate = delegate;
+        return weakSelf;
+    };
+}
+
 
 
 
@@ -28,36 +84,196 @@ TF_EC_CHAIN_PROP_IMP(UIToolbar ,id<UIToolbarDelegate>  ,delegate)
 
 
 //superclass pros UIView
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,UIView *,maskView)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,long long,tag)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,CGPoint,center)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,CGRect,frame)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,UIColor *,backgroundColor)
+-(UIToolbar  *(^)(UIView *  maskView))set_maskView{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIView *  maskView){
+        weakSelf.maskView = maskView;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  userInteractionEnabled){
+        weakSelf.userInteractionEnabled = userInteractionEnabled;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(long long  tag))set_tag{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  tag){
+        weakSelf.tag = tag;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  semanticContentAttribute){
+        weakSelf.semanticContentAttribute = semanticContentAttribute;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(CGPoint  center))set_center{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  center){
+        weakSelf.center = center;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(CGRect  frame))set_frame{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGRect  frame){
+        weakSelf.frame = frame;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(UIColor *  backgroundColor))set_backgroundColor{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIColor *  backgroundColor){
+        weakSelf.backgroundColor = backgroundColor;
+        return weakSelf;
+    };
+}
+
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,NSUserActivity *,userActivity)
+-(UIToolbar  *(^)(NSUserActivity *  userActivity))set_userActivity{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSUserActivity *  userActivity){
+        weakSelf.userActivity = userActivity;
+        return weakSelf;
+    };
+}
+
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(UIToolbar ,long long,accessibilityNavigationStyle)
+-(UIToolbar  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(UIToolbar  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIToolbar);
+
+-(UIToolbar *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

@@ -10,61 +10,61 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIInputViewController,UIInputViewController *);
+typedef void(^UIInputViewControllerEasyCoderBlock) (UIInputViewController * ins);
 
 @interface UIInputViewController (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIInputViewController, UIInputViewController *);
-TF_EC_MINSTANCE_INT(UIInputViewController,UIInputViewController *);
++( UIInputViewController *)easyCoder:(UIInputViewControllerEasyCoderBlock)block;
+-(UIInputViewController *)easyCoder:(UIInputViewControllerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,UIInputView *,inputView);
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,NSString *,primaryLanguage);
+-(UIInputViewController  *(^)(UIInputView *  inputView))set_inputView;
+-(UIInputViewController  *(^)(NSString *  primaryLanguage))set_primaryLanguage;
 
 
 
 
 //superclass pros UIViewController
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,UITabBarItem *,tabBarItem)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,BOOL,hidesBottomBarWhenPushed)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,id<UIViewControllerTransitioningDelegate>  ,transitioningDelegate)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,UIView *,view)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,NSString *,title)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,BOOL,definesPresentationContext)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,BOOL,providesPresentationContextTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,long long,modalTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,long long,modalPresentationStyle)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,BOOL,modalPresentationCapturesStatusBarAppearance)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,BOOL,wantsFullScreenLayout)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,unsigned long long,edgesForExtendedLayout)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,BOOL,extendedLayoutIncludesOpaqueBars)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,BOOL,automaticallyAdjustsScrollViewInsets)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,CGSize,preferredContentSize)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,CGSize,contentSizeForViewInPopover)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,BOOL,modalInPopover)
+-(UIInputViewController  *(^)(UITabBarItem *  tabBarItem))set_tabBarItem;
+-(UIInputViewController  *(^)(BOOL  hidesBottomBarWhenPushed))set_hidesBottomBarWhenPushed;
+-(UIInputViewController  *(^)(id<UIViewControllerTransitioningDelegate>    transitioningDelegate))set_transitioningDelegate;
+-(UIInputViewController  *(^)(UIView *  view))set_view;
+-(UIInputViewController  *(^)(NSString *  title))set_title;
+-(UIInputViewController  *(^)(BOOL  definesPresentationContext))set_definesPresentationContext;
+-(UIInputViewController  *(^)(BOOL  providesPresentationContextTransitionStyle))set_providesPresentationContextTransitionStyle;
+-(UIInputViewController  *(^)(long long  modalTransitionStyle))set_modalTransitionStyle;
+-(UIInputViewController  *(^)(long long  modalPresentationStyle))set_modalPresentationStyle;
+-(UIInputViewController  *(^)(BOOL  modalPresentationCapturesStatusBarAppearance))set_modalPresentationCapturesStatusBarAppearance;
+-(UIInputViewController  *(^)(BOOL  wantsFullScreenLayout))set_wantsFullScreenLayout;
+-(UIInputViewController  *(^)(unsigned long long  edgesForExtendedLayout))set_edgesForExtendedLayout;
+-(UIInputViewController  *(^)(BOOL  extendedLayoutIncludesOpaqueBars))set_extendedLayoutIncludesOpaqueBars;
+-(UIInputViewController  *(^)(BOOL  automaticallyAdjustsScrollViewInsets))set_automaticallyAdjustsScrollViewInsets;
+-(UIInputViewController  *(^)(CGSize  preferredContentSize))set_preferredContentSize;
+-(UIInputViewController  *(^)(CGSize  contentSizeForViewInPopover))set_contentSizeForViewInPopover;
+-(UIInputViewController  *(^)(BOOL  modalInPopover))set_modalInPopover;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,NSUserActivity *,userActivity);
+-(UIInputViewController  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIInputViewController ,long long,accessibilityNavigationStyle)
+-(UIInputViewController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIInputViewController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIInputViewController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIInputViewController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIInputViewController  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIInputViewController  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIInputViewController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIInputViewController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIInputViewController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIInputViewController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIInputViewController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIInputViewController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIInputViewController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIInputViewController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIInputViewController);
+-(UIInputViewController *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

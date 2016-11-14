@@ -11,8 +11,22 @@
 
 @implementation NSMetadataQueryResultGroup (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(NSMetadataQueryResultGroup, NSMetadataQueryResultGroup *);
-TF_EC_MINSTANCE_IMP(NSMetadataQueryResultGroup, NSMetadataQueryResultGroup *);
++( NSMetadataQueryResultGroup *)easyCoder:(NSMetadataQueryResultGroupEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( NSMetadataQueryResultGroup *)ins);
+        }
+    }];
+}
+
+-( NSMetadataQueryResultGroup *)easyCoder:(NSMetadataQueryResultGroupEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
+
 
 
 
@@ -20,26 +34,130 @@ TF_EC_MINSTANCE_IMP(NSMetadataQueryResultGroup, NSMetadataQueryResultGroup *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(NSMetadataQueryResultGroup ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(NSMetadataQueryResultGroup ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(NSMetadataQueryResultGroup ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(NSMetadataQueryResultGroup ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(NSMetadataQueryResultGroup ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(NSMetadataQueryResultGroup ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(NSMetadataQueryResultGroup ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(NSMetadataQueryResultGroup ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(NSMetadataQueryResultGroup ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(NSMetadataQueryResultGroup ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(NSMetadataQueryResultGroup ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(NSMetadataQueryResultGroup ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(NSMetadataQueryResultGroup ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(NSMetadataQueryResultGroup ,long long,accessibilityNavigationStyle)
+-(NSMetadataQueryResultGroup  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(NSMetadataQueryResultGroup  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(NSMetadataQueryResultGroup  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(NSMetadataQueryResultGroup  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(NSMetadataQueryResultGroup  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(NSMetadataQueryResultGroup  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(NSMetadataQueryResultGroup  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(NSMetadataQueryResultGroup  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(NSMetadataQueryResultGroup  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(NSMetadataQueryResultGroup  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(NSMetadataQueryResultGroup  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(NSMetadataQueryResultGroup  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(NSMetadataQueryResultGroup  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(NSMetadataQueryResultGroup  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSMetadataQueryResultGroup);
+
+-(NSMetadataQueryResultGroup *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

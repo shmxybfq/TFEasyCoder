@@ -10,81 +10,81 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UICollectionView,UICollectionView *);
+typedef void(^UICollectionViewEasyCoderBlock) (UICollectionView * ins);
 
 @interface UICollectionView (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UICollectionView, UICollectionView *);
-TF_EC_MINSTANCE_INT(UICollectionView,UICollectionView *);
++( UICollectionView *)easyCoder:(UICollectionViewEasyCoderBlock)block;
+-(UICollectionView *)easyCoder:(UICollectionViewEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UICollectionView ,UICollectionViewLayout *,collectionViewLayout);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,id<UICollectionViewDelegate> ,delegate);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,id<UICollectionViewDataSource> ,dataSource);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,UIView *,backgroundView);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,allowsSelection);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,allowsMultipleSelection);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,remembersLastFocusedIndexPath);
+-(UICollectionView  *(^)(UICollectionViewLayout *  collectionViewLayout))set_collectionViewLayout;
+-(UICollectionView  *(^)(id<UICollectionViewDelegate>   delegate))set_delegate;
+-(UICollectionView  *(^)(id<UICollectionViewDataSource>   dataSource))set_dataSource;
+-(UICollectionView  *(^)(UIView *  backgroundView))set_backgroundView;
+-(UICollectionView  *(^)(BOOL  allowsSelection))set_allowsSelection;
+-(UICollectionView  *(^)(BOOL  allowsMultipleSelection))set_allowsMultipleSelection;
+-(UICollectionView  *(^)(BOOL  remembersLastFocusedIndexPath))set_remembersLastFocusedIndexPath;
 
 
 
 
 
 //superclass pros UIScrollView
-TF_EC_CHAIN_PROP_INT(UICollectionView ,CGPoint,contentOffset);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,CGSize,contentSize);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,UIEdgeInsets,contentInset);
+-(UICollectionView  *(^)(CGPoint  contentOffset))set_contentOffset;
+-(UICollectionView  *(^)(CGSize  contentSize))set_contentSize;
+-(UICollectionView  *(^)(UIEdgeInsets  contentInset))set_contentInset;
 //TF_EC_CHAIN_PROP_INT(UICollectionView ,id<UIScrollViewDelegate> ,delegate);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,directionalLockEnabled);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,bounces);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,alwaysBounceVertical);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,alwaysBounceHorizontal);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,pagingEnabled);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,scrollEnabled);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,showsHorizontalScrollIndicator);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,showsVerticalScrollIndicator);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,UIEdgeInsets,scrollIndicatorInsets);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,long long,indicatorStyle);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,double,decelerationRate);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,delaysContentTouches);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,canCancelContentTouches);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,double,minimumZoomScale);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,double,maximumZoomScale);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,double,zoomScale);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,bouncesZoom);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,scrollsToTop);
-TF_EC_CHAIN_PROP_INT(UICollectionView ,long long,keyboardDismissMode);
+-(UICollectionView  *(^)(BOOL  directionalLockEnabled))set_directionalLockEnabled;
+-(UICollectionView  *(^)(BOOL  bounces))set_bounces;
+-(UICollectionView  *(^)(BOOL  alwaysBounceVertical))set_alwaysBounceVertical;
+-(UICollectionView  *(^)(BOOL  alwaysBounceHorizontal))set_alwaysBounceHorizontal;
+-(UICollectionView  *(^)(BOOL  pagingEnabled))set_pagingEnabled;
+-(UICollectionView  *(^)(BOOL  scrollEnabled))set_scrollEnabled;
+-(UICollectionView  *(^)(BOOL  showsHorizontalScrollIndicator))set_showsHorizontalScrollIndicator;
+-(UICollectionView  *(^)(BOOL  showsVerticalScrollIndicator))set_showsVerticalScrollIndicator;
+-(UICollectionView  *(^)(UIEdgeInsets  scrollIndicatorInsets))set_scrollIndicatorInsets;
+-(UICollectionView  *(^)(long long  indicatorStyle))set_indicatorStyle;
+-(UICollectionView  *(^)(double  decelerationRate))set_decelerationRate;
+-(UICollectionView  *(^)(BOOL  delaysContentTouches))set_delaysContentTouches;
+-(UICollectionView  *(^)(BOOL  canCancelContentTouches))set_canCancelContentTouches;
+-(UICollectionView  *(^)(double  minimumZoomScale))set_minimumZoomScale;
+-(UICollectionView  *(^)(double  maximumZoomScale))set_maximumZoomScale;
+-(UICollectionView  *(^)(double  zoomScale))set_zoomScale;
+-(UICollectionView  *(^)(BOOL  bouncesZoom))set_bouncesZoom;
+-(UICollectionView  *(^)(BOOL  scrollsToTop))set_scrollsToTop;
+-(UICollectionView  *(^)(long long  keyboardDismissMode))set_keyboardDismissMode;
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UICollectionView ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UICollectionView ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UICollectionView ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UICollectionView ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UICollectionView ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UICollectionView ,UIColor *,backgroundColor)
+-(UICollectionView  *(^)(UIView *  maskView))set_maskView;
+-(UICollectionView  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UICollectionView  *(^)(long long  tag))set_tag;
+-(UICollectionView  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UICollectionView  *(^)(CGPoint  center))set_center;
+-(UICollectionView  *(^)(CGRect  frame))set_frame;
+-(UICollectionView  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UICollectionView ,NSUserActivity *,userActivity);
+-(UICollectionView  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UICollectionView ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UICollectionView ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UICollectionView ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UICollectionView ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UICollectionView ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UICollectionView ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UICollectionView ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UICollectionView ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UICollectionView ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UICollectionView ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UICollectionView ,long long,accessibilityNavigationStyle)
+-(UICollectionView  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UICollectionView  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UICollectionView  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UICollectionView  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UICollectionView  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UICollectionView  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UICollectionView  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UICollectionView  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UICollectionView  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UICollectionView  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UICollectionView  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UICollectionView  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UICollectionView  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UICollectionView  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UICollectionView);
+-(UICollectionView *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

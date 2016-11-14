@@ -10,45 +10,45 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIGestureRecognizer,UIGestureRecognizer *);
+typedef void(^UIGestureRecognizerEasyCoderBlock) (UIGestureRecognizer * ins);
 
 @interface UIGestureRecognizer (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIGestureRecognizer, UIGestureRecognizer *);
-TF_EC_MINSTANCE_INT(UIGestureRecognizer,UIGestureRecognizer *);
++( UIGestureRecognizer *)easyCoder:(UIGestureRecognizerEasyCoderBlock)block;
+-(UIGestureRecognizer *)easyCoder:(UIGestureRecognizerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,BOOL,cancelsTouchesInView);
-TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,BOOL,delaysTouchesBegan);
-TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,BOOL,delaysTouchesEnded);
-TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,NSArray *,allowedTouchTypes);
-TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,NSArray *,allowedPressTypes);
+-(UIGestureRecognizer  *(^)(BOOL  enabled))set_enabled;
+-(UIGestureRecognizer  *(^)(BOOL  cancelsTouchesInView))set_cancelsTouchesInView;
+-(UIGestureRecognizer  *(^)(BOOL  delaysTouchesBegan))set_delaysTouchesBegan;
+-(UIGestureRecognizer  *(^)(BOOL  delaysTouchesEnded))set_delaysTouchesEnded;
+-(UIGestureRecognizer  *(^)(NSArray *  allowedTouchTypes))set_allowedTouchTypes;
+-(UIGestureRecognizer  *(^)(NSArray *  allowedPressTypes))set_allowedPressTypes;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIGestureRecognizer ,long long,accessibilityNavigationStyle)
+-(UIGestureRecognizer  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIGestureRecognizer  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIGestureRecognizer  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIGestureRecognizer  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIGestureRecognizer  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIGestureRecognizer  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIGestureRecognizer  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIGestureRecognizer  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIGestureRecognizer  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIGestureRecognizer  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIGestureRecognizer  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIGestureRecognizer  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIGestureRecognizer  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIGestureRecognizer  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIGestureRecognizer);
+-(UIGestureRecognizer *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

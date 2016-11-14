@@ -15,46 +15,46 @@
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 
-TF_EC_BLOCK(UISearchDisplayController,UISearchDisplayController *);
+typedef void(^UISearchDisplayControllerEasyCoderBlock) (UISearchDisplayController * ins);
 
 @interface UISearchDisplayController (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UISearchDisplayController, UISearchDisplayController *);
-TF_EC_MINSTANCE_INT(UISearchDisplayController,UISearchDisplayController *);
++( UISearchDisplayController *)easyCoder:(UISearchDisplayControllerEasyCoderBlock)block;
+-(UISearchDisplayController *)easyCoder:(UISearchDisplayControllerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,id<UISearchDisplayDelegate> ,delegate);
-TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,BOOL,active);
-TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,id<UITableViewDataSource> ,searchResultsDataSource);
-TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,id<UITableViewDelegate> ,searchResultsDelegate);
-TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,NSString *,searchResultsTitle);
-TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,BOOL,displaysSearchBarInNavigationBar);
+-(UISearchDisplayController  *(^)(id<UISearchDisplayDelegate>   delegate))set_delegate;
+-(UISearchDisplayController  *(^)(BOOL  active))set_active;
+-(UISearchDisplayController  *(^)(id<UITableViewDataSource>   searchResultsDataSource))set_searchResultsDataSource;
+-(UISearchDisplayController  *(^)(id<UITableViewDelegate>   searchResultsDelegate))set_searchResultsDelegate;
+-(UISearchDisplayController  *(^)(NSString *  searchResultsTitle))set_searchResultsTitle;
+-(UISearchDisplayController  *(^)(BOOL  displaysSearchBarInNavigationBar))set_displaysSearchBarInNavigationBar;
 
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UISearchDisplayController ,long long,accessibilityNavigationStyle)
+-(UISearchDisplayController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UISearchDisplayController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UISearchDisplayController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UISearchDisplayController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UISearchDisplayController  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UISearchDisplayController  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UISearchDisplayController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UISearchDisplayController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UISearchDisplayController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UISearchDisplayController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UISearchDisplayController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UISearchDisplayController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UISearchDisplayController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UISearchDisplayController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UISearchDisplayController);
+-(UISearchDisplayController *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

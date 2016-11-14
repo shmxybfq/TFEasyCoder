@@ -11,41 +11,194 @@
 
 @implementation UIAttachmentBehavior (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(UIAttachmentBehavior, UIAttachmentBehavior *);
-TF_EC_MINSTANCE_IMP(UIAttachmentBehavior, UIAttachmentBehavior *);
++( UIAttachmentBehavior *)easyCoder:(UIAttachmentBehaviorEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( UIAttachmentBehavior *)ins);
+        }
+    }];
+}
+
+-( UIAttachmentBehavior *)easyCoder:(UIAttachmentBehaviorEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
 
 
-TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,CGPoint,anchorPoint)
-TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,double,length)
-TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,double,damping)
-TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,double,frequency)
-TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,double,frictionTorque)
+
+-(UIAttachmentBehavior  *(^)(CGPoint  anchorPoint))set_anchorPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  anchorPoint){
+        weakSelf.anchorPoint = anchorPoint;
+        return weakSelf;
+    };
+}
+
+-(UIAttachmentBehavior  *(^)(double  length))set_length{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  length){
+        weakSelf.length = length;
+        return weakSelf;
+    };
+}
+
+-(UIAttachmentBehavior  *(^)(double  damping))set_damping{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  damping){
+        weakSelf.damping = damping;
+        return weakSelf;
+    };
+}
+
+-(UIAttachmentBehavior  *(^)(double  frequency))set_frequency{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  frequency){
+        weakSelf.frequency = frequency;
+        return weakSelf;
+    };
+}
+
+-(UIAttachmentBehavior  *(^)(double  frictionTorque))set_frictionTorque{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  frictionTorque){
+        weakSelf.frictionTorque = frictionTorque;
+        return weakSelf;
+    };
+}
+
 
 
 
 
 //superclass pros UIDynamicBehavior
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(UIAttachmentBehavior ,long long,accessibilityNavigationStyle)
+-(UIAttachmentBehavior  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(UIAttachmentBehavior  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(UIAttachmentBehavior  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(UIAttachmentBehavior  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(UIAttachmentBehavior  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(UIAttachmentBehavior  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(UIAttachmentBehavior  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(UIAttachmentBehavior  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(UIAttachmentBehavior  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(UIAttachmentBehavior  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(UIAttachmentBehavior  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(UIAttachmentBehavior  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(UIAttachmentBehavior  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(UIAttachmentBehavior  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIAttachmentBehavior);
+
+-(UIAttachmentBehavior *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

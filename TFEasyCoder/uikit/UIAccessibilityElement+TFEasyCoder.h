@@ -10,45 +10,45 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIAccessibilityElement,UIAccessibilityElement *);
+typedef void(^UIAccessibilityElementEasyCoderBlock) (UIAccessibilityElement * ins);
 
 @interface UIAccessibilityElement (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIAccessibilityElement, UIAccessibilityElement *);
-TF_EC_MINSTANCE_INT(UIAccessibilityElement,UIAccessibilityElement *);
++( UIAccessibilityElement *)easyCoder:(UIAccessibilityElementEasyCoderBlock)block;
+-(UIAccessibilityElement *)easyCoder:(UIAccessibilityElementEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIAccessibilityElement ,BOOL,isAccessibilityElement);
-TF_EC_CHAIN_PROP_INT(UIAccessibilityElement ,NSString *,accessibilityLabel);
-TF_EC_CHAIN_PROP_INT(UIAccessibilityElement ,NSString *,accessibilityHint);
-TF_EC_CHAIN_PROP_INT(UIAccessibilityElement ,NSString *,accessibilityValue);
-TF_EC_CHAIN_PROP_INT(UIAccessibilityElement ,unsigned long long,accessibilityTraits);
-TF_EC_CHAIN_PROP_INT(UIAccessibilityElement ,NSString *,accessibilityIdentifier);
+-(UIAccessibilityElement  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIAccessibilityElement  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIAccessibilityElement  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIAccessibilityElement  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIAccessibilityElement  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIAccessibilityElement  *(^)(NSString *  accessibilityIdentifier))set_accessibilityIdentifier;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIAccessibilityElement ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIAccessibilityElement ,NSArray *,accessibilityCustomActions)
+-(UIAccessibilityElement  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIAccessibilityElement  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
 //TF_EC_CHAIN_PROP_INT(UIAccessibilityElement ,BOOL,isAccessibilityElement)
 //TF_EC_CHAIN_PROP_INT(UIAccessibilityElement ,NSString *,accessibilityLabel)
 //TF_EC_CHAIN_PROP_INT(UIAccessibilityElement ,NSString *,accessibilityHint)
 //TF_EC_CHAIN_PROP_INT(UIAccessibilityElement ,NSString *,accessibilityValue)
 //TF_EC_CHAIN_PROP_INT(UIAccessibilityElement ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIAccessibilityElement ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIAccessibilityElement ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIAccessibilityElement ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIAccessibilityElement ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIAccessibilityElement ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIAccessibilityElement ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIAccessibilityElement ,long long,accessibilityNavigationStyle)
+-(UIAccessibilityElement  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIAccessibilityElement  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIAccessibilityElement  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIAccessibilityElement  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIAccessibilityElement  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIAccessibilityElement  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIAccessibilityElement  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIAccessibilityElement);
+-(UIAccessibilityElement *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

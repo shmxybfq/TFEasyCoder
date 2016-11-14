@@ -10,44 +10,44 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIBezierPath,UIBezierPath *);
+typedef void(^UIBezierPathEasyCoderBlock) (UIBezierPath * ins);
 
 @interface UIBezierPath (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIBezierPath, UIBezierPath *);
-TF_EC_MINSTANCE_INT(UIBezierPath,UIBezierPath *);
++( UIBezierPath *)easyCoder:(UIBezierPathEasyCoderBlock)block;
+-(UIBezierPath *)easyCoder:(UIBezierPathEasyCoderBlock)block;
 
-TF_EC_CHAIN_PROP_INT(UIBezierPath ,CGPathRef,CGPath);
-TF_EC_CHAIN_PROP_INT(UIBezierPath ,double,lineWidth);
-TF_EC_CHAIN_PROP_INT(UIBezierPath ,int,lineCapStyle);
-TF_EC_CHAIN_PROP_INT(UIBezierPath ,int,lineJoinStyle);
-TF_EC_CHAIN_PROP_INT(UIBezierPath ,double,miterLimit);
-TF_EC_CHAIN_PROP_INT(UIBezierPath ,double,flatness);
+-(UIBezierPath  *(^)(CGPathRef  CGPath))set_CGPath;
+-(UIBezierPath  *(^)(double  lineWidth))set_lineWidth;
+-(UIBezierPath  *(^)(int  lineCapStyle))set_lineCapStyle;
+-(UIBezierPath  *(^)(int  lineJoinStyle))set_lineJoinStyle;
+-(UIBezierPath  *(^)(double  miterLimit))set_miterLimit;
+-(UIBezierPath  *(^)(double  flatness))set_flatness;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIBezierPath ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIBezierPath ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIBezierPath ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIBezierPath ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIBezierPath ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIBezierPath ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIBezierPath ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIBezierPath ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIBezierPath ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIBezierPath ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIBezierPath ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIBezierPath ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIBezierPath ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIBezierPath ,long long,accessibilityNavigationStyle)
+-(UIBezierPath  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIBezierPath  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIBezierPath  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIBezierPath  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIBezierPath  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIBezierPath  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIBezierPath  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIBezierPath  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIBezierPath  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIBezierPath  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIBezierPath  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIBezierPath  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIBezierPath  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIBezierPath  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIBezierPath);
+-(UIBezierPath *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

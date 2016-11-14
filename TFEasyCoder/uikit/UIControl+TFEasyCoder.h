@@ -10,54 +10,54 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIControl,UIControl *);
+typedef void(^UIControlEasyCoderBlock) (UIControl * ins);
 
 @interface UIControl (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIControl, UIControl *);
-TF_EC_MINSTANCE_INT(UIControl,UIControl *);
++( UIControl *)easyCoder:(UIControlEasyCoderBlock)block;
+-(UIControl *)easyCoder:(UIControlEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIControl ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(UIControl ,BOOL,selected);
-TF_EC_CHAIN_PROP_INT(UIControl ,BOOL,highlighted);
-TF_EC_CHAIN_PROP_INT(UIControl ,long long,contentVerticalAlignment);
-TF_EC_CHAIN_PROP_INT(UIControl ,long long,contentHorizontalAlignment);
+-(UIControl  *(^)(BOOL  enabled))set_enabled;
+-(UIControl  *(^)(BOOL  selected))set_selected;
+-(UIControl  *(^)(BOOL  highlighted))set_highlighted;
+-(UIControl  *(^)(long long  contentVerticalAlignment))set_contentVerticalAlignment;
+-(UIControl  *(^)(long long  contentHorizontalAlignment))set_contentHorizontalAlignment;
 
 
 
 
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UIControl ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UIControl ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UIControl ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UIControl ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UIControl ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UIControl ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UIControl ,UIColor *,backgroundColor)
+-(UIControl  *(^)(UIView *  maskView))set_maskView;
+-(UIControl  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UIControl  *(^)(long long  tag))set_tag;
+-(UIControl  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UIControl  *(^)(CGPoint  center))set_center;
+-(UIControl  *(^)(CGRect  frame))set_frame;
+-(UIControl  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIControl ,NSUserActivity *,userActivity);
+-(UIControl  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIControl ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIControl ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIControl ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIControl ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIControl ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIControl ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIControl ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIControl ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIControl ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIControl ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIControl ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIControl ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIControl ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIControl ,long long,accessibilityNavigationStyle)
+-(UIControl  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIControl  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIControl  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIControl  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIControl  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIControl  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIControl  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIControl  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIControl  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIControl  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIControl  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIControl  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIControl  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIControl  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIControl);
+-(UIControl *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

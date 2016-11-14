@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSTextTab,NSTextTab *);
+typedef void(^NSTextTabEasyCoderBlock) (NSTextTab * ins);
 
 @interface NSTextTab (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSTextTab, NSTextTab *);
-TF_EC_MINSTANCE_INT(NSTextTab,NSTextTab *);
++( NSTextTab *)easyCoder:(NSTextTabEasyCoderBlock)block;
+-(NSTextTab *)easyCoder:(NSTextTabEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(NSTextTab,NSTextTab *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSTextTab ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSTextTab ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSTextTab ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSTextTab ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSTextTab ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSTextTab ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSTextTab ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSTextTab ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSTextTab ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSTextTab ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSTextTab ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSTextTab ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSTextTab ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSTextTab ,long long,accessibilityNavigationStyle)
+-(NSTextTab  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSTextTab  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSTextTab  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSTextTab  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSTextTab  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSTextTab  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSTextTab  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSTextTab  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSTextTab  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSTextTab  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSTextTab  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSTextTab  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSTextTab  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSTextTab  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSTextTab);
+-(NSTextTab *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

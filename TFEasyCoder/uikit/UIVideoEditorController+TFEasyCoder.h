@@ -10,72 +10,72 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIVideoEditorController,UIVideoEditorController *);
+typedef void(^UIVideoEditorControllerEasyCoderBlock) (UIVideoEditorController * ins);
 
 @interface UIVideoEditorController (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIVideoEditorController, UIVideoEditorController *);
-TF_EC_MINSTANCE_INT(UIVideoEditorController,UIVideoEditorController *);
++( UIVideoEditorController *)easyCoder:(UIVideoEditorControllerEasyCoderBlock)block;
+-(UIVideoEditorController *)easyCoder:(UIVideoEditorControllerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,id ,delegate);
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,NSString *,videoPath);
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,double,videoMaximumDuration);
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,long long,videoQuality);
+-(UIVideoEditorController  *(^)(id   delegate))set_delegate;
+-(UIVideoEditorController  *(^)(NSString *  videoPath))set_videoPath;
+-(UIVideoEditorController  *(^)(double  videoMaximumDuration))set_videoMaximumDuration;
+-(UIVideoEditorController  *(^)(long long  videoQuality))set_videoQuality;
 
 
 
 
 //superclass pros UINavigationController
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,NSArray *,viewControllers)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,navigationBarHidden)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,toolbarHidden)
+-(UIVideoEditorController  *(^)(NSArray *  viewControllers))set_viewControllers;
+-(UIVideoEditorController  *(^)(BOOL  navigationBarHidden))set_navigationBarHidden;
+-(UIVideoEditorController  *(^)(BOOL  toolbarHidden))set_toolbarHidden;
 //TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,id<UINavigationControllerDelegate>  ,delegate)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,hidesBarsWhenKeyboardAppears)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,hidesBarsOnSwipe)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,hidesBarsWhenVerticallyCompact)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,hidesBarsOnTap)
+-(UIVideoEditorController  *(^)(BOOL  hidesBarsWhenKeyboardAppears))set_hidesBarsWhenKeyboardAppears;
+-(UIVideoEditorController  *(^)(BOOL  hidesBarsOnSwipe))set_hidesBarsOnSwipe;
+-(UIVideoEditorController  *(^)(BOOL  hidesBarsWhenVerticallyCompact))set_hidesBarsWhenVerticallyCompact;
+-(UIVideoEditorController  *(^)(BOOL  hidesBarsOnTap))set_hidesBarsOnTap;
 //superclass pros UIViewController
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,UITabBarItem *,tabBarItem)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,hidesBottomBarWhenPushed)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,id<UIViewControllerTransitioningDelegate>  ,transitioningDelegate)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,UIView *,view)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,NSString *,title)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,definesPresentationContext)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,providesPresentationContextTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,long long,modalTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,long long,modalPresentationStyle)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,modalPresentationCapturesStatusBarAppearance)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,wantsFullScreenLayout)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,unsigned long long,edgesForExtendedLayout)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,extendedLayoutIncludesOpaqueBars)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,automaticallyAdjustsScrollViewInsets)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,CGSize,preferredContentSize)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,CGSize,contentSizeForViewInPopover)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,modalInPopover)
+-(UIVideoEditorController  *(^)(UITabBarItem *  tabBarItem))set_tabBarItem;
+-(UIVideoEditorController  *(^)(BOOL  hidesBottomBarWhenPushed))set_hidesBottomBarWhenPushed;
+-(UIVideoEditorController  *(^)(id<UIViewControllerTransitioningDelegate>    transitioningDelegate))set_transitioningDelegate;
+-(UIVideoEditorController  *(^)(UIView *  view))set_view;
+-(UIVideoEditorController  *(^)(NSString *  title))set_title;
+-(UIVideoEditorController  *(^)(BOOL  definesPresentationContext))set_definesPresentationContext;
+-(UIVideoEditorController  *(^)(BOOL  providesPresentationContextTransitionStyle))set_providesPresentationContextTransitionStyle;
+-(UIVideoEditorController  *(^)(long long  modalTransitionStyle))set_modalTransitionStyle;
+-(UIVideoEditorController  *(^)(long long  modalPresentationStyle))set_modalPresentationStyle;
+-(UIVideoEditorController  *(^)(BOOL  modalPresentationCapturesStatusBarAppearance))set_modalPresentationCapturesStatusBarAppearance;
+-(UIVideoEditorController  *(^)(BOOL  wantsFullScreenLayout))set_wantsFullScreenLayout;
+-(UIVideoEditorController  *(^)(unsigned long long  edgesForExtendedLayout))set_edgesForExtendedLayout;
+-(UIVideoEditorController  *(^)(BOOL  extendedLayoutIncludesOpaqueBars))set_extendedLayoutIncludesOpaqueBars;
+-(UIVideoEditorController  *(^)(BOOL  automaticallyAdjustsScrollViewInsets))set_automaticallyAdjustsScrollViewInsets;
+-(UIVideoEditorController  *(^)(CGSize  preferredContentSize))set_preferredContentSize;
+-(UIVideoEditorController  *(^)(CGSize  contentSizeForViewInPopover))set_contentSizeForViewInPopover;
+-(UIVideoEditorController  *(^)(BOOL  modalInPopover))set_modalInPopover;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,NSUserActivity *,userActivity);
+-(UIVideoEditorController  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIVideoEditorController ,long long,accessibilityNavigationStyle)
+-(UIVideoEditorController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIVideoEditorController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIVideoEditorController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIVideoEditorController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIVideoEditorController  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIVideoEditorController  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIVideoEditorController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIVideoEditorController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIVideoEditorController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIVideoEditorController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIVideoEditorController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIVideoEditorController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIVideoEditorController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIVideoEditorController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIVideoEditorController);
+-(UIVideoEditorController *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

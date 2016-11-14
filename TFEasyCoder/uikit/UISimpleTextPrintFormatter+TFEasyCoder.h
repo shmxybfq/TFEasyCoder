@@ -10,50 +10,50 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UISimpleTextPrintFormatter,UISimpleTextPrintFormatter *);
+typedef void(^UISimpleTextPrintFormatterEasyCoderBlock) (UISimpleTextPrintFormatter * ins);
 
 @interface UISimpleTextPrintFormatter (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UISimpleTextPrintFormatter, UISimpleTextPrintFormatter *);
-TF_EC_MINSTANCE_INT(UISimpleTextPrintFormatter,UISimpleTextPrintFormatter *);
++( UISimpleTextPrintFormatter *)easyCoder:(UISimpleTextPrintFormatterEasyCoderBlock)block;
+-(UISimpleTextPrintFormatter *)easyCoder:(UISimpleTextPrintFormatterEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,NSString *,text);
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,NSAttributedString *,attributedText);
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,UIFont *,font);
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,UIColor *,color);
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,long long,textAlignment);
+-(UISimpleTextPrintFormatter  *(^)(NSString *  text))set_text;
+-(UISimpleTextPrintFormatter  *(^)(NSAttributedString *  attributedText))set_attributedText;
+-(UISimpleTextPrintFormatter  *(^)(UIFont *  font))set_font;
+-(UISimpleTextPrintFormatter  *(^)(UIColor *  color))set_color;
+-(UISimpleTextPrintFormatter  *(^)(long long  textAlignment))set_textAlignment;
 
 
 
 
 //superclass pros UIPrintFormatter
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,double,maximumContentHeight);
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,double,maximumContentWidth);
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,UIEdgeInsets,contentInsets);
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,UIEdgeInsets,perPageContentInsets);
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,long long,startPage);
+-(UISimpleTextPrintFormatter  *(^)(double  maximumContentHeight))set_maximumContentHeight;
+-(UISimpleTextPrintFormatter  *(^)(double  maximumContentWidth))set_maximumContentWidth;
+-(UISimpleTextPrintFormatter  *(^)(UIEdgeInsets  contentInsets))set_contentInsets;
+-(UISimpleTextPrintFormatter  *(^)(UIEdgeInsets  perPageContentInsets))set_perPageContentInsets;
+-(UISimpleTextPrintFormatter  *(^)(long long  startPage))set_startPage;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UISimpleTextPrintFormatter ,long long,accessibilityNavigationStyle)
+-(UISimpleTextPrintFormatter  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UISimpleTextPrintFormatter  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UISimpleTextPrintFormatter  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UISimpleTextPrintFormatter  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UISimpleTextPrintFormatter  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UISimpleTextPrintFormatter  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UISimpleTextPrintFormatter  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UISimpleTextPrintFormatter  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UISimpleTextPrintFormatter  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UISimpleTextPrintFormatter  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UISimpleTextPrintFormatter  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UISimpleTextPrintFormatter  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UISimpleTextPrintFormatter  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UISimpleTextPrintFormatter  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UISimpleTextPrintFormatter);
+-(UISimpleTextPrintFormatter *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

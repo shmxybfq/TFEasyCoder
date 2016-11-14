@@ -10,53 +10,53 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(CAPropertyAnimation,CAPropertyAnimation *);
+typedef void(^CAPropertyAnimationEasyCoderBlock) (CAPropertyAnimation * ins);
 
 @interface CAPropertyAnimation (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(CAPropertyAnimation, CAPropertyAnimation *);
-TF_EC_MINSTANCE_INT(CAPropertyAnimation,CAPropertyAnimation *);
++( CAPropertyAnimation *)easyCoder:(CAPropertyAnimationEasyCoderBlock)block;
+-(CAPropertyAnimation *)easyCoder:(CAPropertyAnimationEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,NSString *,keyPath);
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,BOOL,additive);
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,BOOL,cumulative);
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,CAValueFunction *,valueFunction);
+-(CAPropertyAnimation  *(^)(NSString *  keyPath))set_keyPath;
+-(CAPropertyAnimation  *(^)(BOOL  additive))set_additive;
+-(CAPropertyAnimation  *(^)(BOOL  cumulative))set_cumulative;
+-(CAPropertyAnimation  *(^)(CAValueFunction *  valueFunction))set_valueFunction;
 
 
 
 
 //superclass pros CAAnimation
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,CAMediaTimingFunction *,timingFunction);
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,double,beginTime);
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,double,duration);
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,float,speed);
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,double,timeOffset);
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,float,repeatCount);
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,double,repeatDuration);
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,BOOL,autoreverses);
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,NSString *,fillMode);
+-(CAPropertyAnimation  *(^)(CAMediaTimingFunction *  timingFunction))set_timingFunction;
+-(CAPropertyAnimation  *(^)(double  beginTime))set_beginTime;
+-(CAPropertyAnimation  *(^)(double  duration))set_duration;
+-(CAPropertyAnimation  *(^)(float  speed))set_speed;
+-(CAPropertyAnimation  *(^)(double  timeOffset))set_timeOffset;
+-(CAPropertyAnimation  *(^)(float  repeatCount))set_repeatCount;
+-(CAPropertyAnimation  *(^)(double  repeatDuration))set_repeatDuration;
+-(CAPropertyAnimation  *(^)(BOOL  autoreverses))set_autoreverses;
+-(CAPropertyAnimation  *(^)(NSString *  fillMode))set_fillMode;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(CAPropertyAnimation ,long long,accessibilityNavigationStyle)
+-(CAPropertyAnimation  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(CAPropertyAnimation  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(CAPropertyAnimation  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(CAPropertyAnimation  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(CAPropertyAnimation  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(CAPropertyAnimation  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(CAPropertyAnimation  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(CAPropertyAnimation  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(CAPropertyAnimation  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(CAPropertyAnimation  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(CAPropertyAnimation  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(CAPropertyAnimation  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(CAPropertyAnimation  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(CAPropertyAnimation  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(CAPropertyAnimation);
+-(CAPropertyAnimation *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

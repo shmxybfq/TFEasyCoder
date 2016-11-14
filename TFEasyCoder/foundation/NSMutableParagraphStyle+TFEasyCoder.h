@@ -10,56 +10,56 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSMutableParagraphStyle,NSMutableParagraphStyle *);
+typedef void(^NSMutableParagraphStyleEasyCoderBlock) (NSMutableParagraphStyle * ins);
 
 @interface NSMutableParagraphStyle (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSMutableParagraphStyle, NSMutableParagraphStyle *);
-TF_EC_MINSTANCE_INT(NSMutableParagraphStyle,NSMutableParagraphStyle *);
++( NSMutableParagraphStyle *)easyCoder:(NSMutableParagraphStyleEasyCoderBlock)block;
+-(NSMutableParagraphStyle *)easyCoder:(NSMutableParagraphStyleEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,double,lineSpacing);
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,double,paragraphSpacing);
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,long long,alignment);
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,double,firstLineHeadIndent);
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,double,headIndent);
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,double,tailIndent);
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,long long,lineBreakMode);
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,double,minimumLineHeight);
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,double,maximumLineHeight);
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,long long,baseWritingDirection);
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,double,lineHeightMultiple);
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,double,paragraphSpacingBefore);
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,float,hyphenationFactor);
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,NSArray *,tabStops);
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,double,defaultTabInterval);
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,BOOL,allowsDefaultTighteningForTruncation);
+-(NSMutableParagraphStyle  *(^)(double  lineSpacing))set_lineSpacing;
+-(NSMutableParagraphStyle  *(^)(double  paragraphSpacing))set_paragraphSpacing;
+-(NSMutableParagraphStyle  *(^)(long long  alignment))set_alignment;
+-(NSMutableParagraphStyle  *(^)(double  firstLineHeadIndent))set_firstLineHeadIndent;
+-(NSMutableParagraphStyle  *(^)(double  headIndent))set_headIndent;
+-(NSMutableParagraphStyle  *(^)(double  tailIndent))set_tailIndent;
+-(NSMutableParagraphStyle  *(^)(long long  lineBreakMode))set_lineBreakMode;
+-(NSMutableParagraphStyle  *(^)(double  minimumLineHeight))set_minimumLineHeight;
+-(NSMutableParagraphStyle  *(^)(double  maximumLineHeight))set_maximumLineHeight;
+-(NSMutableParagraphStyle  *(^)(long long  baseWritingDirection))set_baseWritingDirection;
+-(NSMutableParagraphStyle  *(^)(double  lineHeightMultiple))set_lineHeightMultiple;
+-(NSMutableParagraphStyle  *(^)(double  paragraphSpacingBefore))set_paragraphSpacingBefore;
+-(NSMutableParagraphStyle  *(^)(float  hyphenationFactor))set_hyphenationFactor;
+-(NSMutableParagraphStyle  *(^)(NSArray *  tabStops))set_tabStops;
+-(NSMutableParagraphStyle  *(^)(double  defaultTabInterval))set_defaultTabInterval;
+-(NSMutableParagraphStyle  *(^)(BOOL  allowsDefaultTighteningForTruncation))set_allowsDefaultTighteningForTruncation;
 
 
 
 
 //superclass pros NSParagraphStyle
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSMutableParagraphStyle ,long long,accessibilityNavigationStyle)
+-(NSMutableParagraphStyle  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSMutableParagraphStyle  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSMutableParagraphStyle  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSMutableParagraphStyle  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSMutableParagraphStyle  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSMutableParagraphStyle  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSMutableParagraphStyle  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSMutableParagraphStyle  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSMutableParagraphStyle  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSMutableParagraphStyle  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSMutableParagraphStyle  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSMutableParagraphStyle  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSMutableParagraphStyle  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSMutableParagraphStyle  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSMutableParagraphStyle);
+-(NSMutableParagraphStyle *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

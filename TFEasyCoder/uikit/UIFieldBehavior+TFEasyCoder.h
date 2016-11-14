@@ -10,47 +10,47 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIFieldBehavior,UIFieldBehavior *);
+typedef void(^UIFieldBehaviorEasyCoderBlock) (UIFieldBehavior * ins);
 
 @interface UIFieldBehavior (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIFieldBehavior, UIFieldBehavior *);
-TF_EC_MINSTANCE_INT(UIFieldBehavior,UIFieldBehavior *);
++( UIFieldBehavior *)easyCoder:(UIFieldBehaviorEasyCoderBlock)block;
+-(UIFieldBehavior *)easyCoder:(UIFieldBehaviorEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIFieldBehavior ,CGPoint,position);
-TF_EC_CHAIN_PROP_INT(UIFieldBehavior ,double,strength);
-TF_EC_CHAIN_PROP_INT(UIFieldBehavior ,double,falloff);
-TF_EC_CHAIN_PROP_INT(UIFieldBehavior ,double,minimumRadius);
-TF_EC_CHAIN_PROP_INT(UIFieldBehavior ,CGVector,direction);
-TF_EC_CHAIN_PROP_INT(UIFieldBehavior ,double,smoothness);
-TF_EC_CHAIN_PROP_INT(UIFieldBehavior ,double,animationSpeed);
+-(UIFieldBehavior  *(^)(CGPoint  position))set_position;
+-(UIFieldBehavior  *(^)(double  strength))set_strength;
+-(UIFieldBehavior  *(^)(double  falloff))set_falloff;
+-(UIFieldBehavior  *(^)(double  minimumRadius))set_minimumRadius;
+-(UIFieldBehavior  *(^)(CGVector  direction))set_direction;
+-(UIFieldBehavior  *(^)(double  smoothness))set_smoothness;
+-(UIFieldBehavior  *(^)(double  animationSpeed))set_animationSpeed;
 
 
 
 
 //superclass pros UIDynamicBehavior
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIFieldBehavior ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIFieldBehavior ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIFieldBehavior ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIFieldBehavior ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIFieldBehavior ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIFieldBehavior ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIFieldBehavior ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIFieldBehavior ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIFieldBehavior ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIFieldBehavior ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIFieldBehavior ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIFieldBehavior ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIFieldBehavior ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIFieldBehavior ,long long,accessibilityNavigationStyle)
+-(UIFieldBehavior  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIFieldBehavior  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIFieldBehavior  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIFieldBehavior  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIFieldBehavior  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIFieldBehavior  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIFieldBehavior  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIFieldBehavior  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIFieldBehavior  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIFieldBehavior  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIFieldBehavior  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIFieldBehavior  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIFieldBehavior  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIFieldBehavior  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIFieldBehavior);
+-(UIFieldBehavior *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

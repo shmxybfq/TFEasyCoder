@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(CABasicAnimation,CABasicAnimation *);
+typedef void(^CABasicAnimationEasyCoderBlock) (CABasicAnimation * ins);
 
 @interface CABasicAnimation (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(CABasicAnimation, CABasicAnimation *);
-TF_EC_MINSTANCE_INT(CABasicAnimation,CABasicAnimation *);
++( CABasicAnimation *)easyCoder:(CABasicAnimationEasyCoderBlock)block;
+-(CABasicAnimation *)easyCoder:(CABasicAnimationEasyCoderBlock)block;
 
 
 
@@ -24,41 +24,41 @@ TF_EC_MINSTANCE_INT(CABasicAnimation,CABasicAnimation *);
 
 
 //superclass pros CAPropertyAnimation
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,NSString *,keyPath);
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,BOOL,additive);
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,BOOL,cumulative);
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,CAValueFunction *,valueFunction);
+-(CABasicAnimation  *(^)(NSString *  keyPath))set_keyPath;
+-(CABasicAnimation  *(^)(BOOL  additive))set_additive;
+-(CABasicAnimation  *(^)(BOOL  cumulative))set_cumulative;
+-(CABasicAnimation  *(^)(CAValueFunction *  valueFunction))set_valueFunction;
 //superclass pros CAAnimation
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,CAMediaTimingFunction *,timingFunction);
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,double,beginTime);
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,double,duration);
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,float,speed);
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,double,timeOffset);
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,float,repeatCount);
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,double,repeatDuration);
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,BOOL,autoreverses);
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,NSString *,fillMode);
+-(CABasicAnimation  *(^)(CAMediaTimingFunction *  timingFunction))set_timingFunction;
+-(CABasicAnimation  *(^)(double  beginTime))set_beginTime;
+-(CABasicAnimation  *(^)(double  duration))set_duration;
+-(CABasicAnimation  *(^)(float  speed))set_speed;
+-(CABasicAnimation  *(^)(double  timeOffset))set_timeOffset;
+-(CABasicAnimation  *(^)(float  repeatCount))set_repeatCount;
+-(CABasicAnimation  *(^)(double  repeatDuration))set_repeatDuration;
+-(CABasicAnimation  *(^)(BOOL  autoreverses))set_autoreverses;
+-(CABasicAnimation  *(^)(NSString *  fillMode))set_fillMode;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(CABasicAnimation ,long long,accessibilityNavigationStyle)
+-(CABasicAnimation  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(CABasicAnimation  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(CABasicAnimation  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(CABasicAnimation  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(CABasicAnimation  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(CABasicAnimation  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(CABasicAnimation  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(CABasicAnimation  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(CABasicAnimation  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(CABasicAnimation  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(CABasicAnimation  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(CABasicAnimation  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(CABasicAnimation  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(CABasicAnimation  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(CABasicAnimation);
+-(CABasicAnimation *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -10,101 +10,101 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UITextView,UITextView *);
+typedef void(^UITextViewEasyCoderBlock) (UITextView * ins);
 
 @interface UITextView (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UITextView, UITextView *);
-TF_EC_MINSTANCE_INT(UITextView,UITextView *);
++( UITextView *)easyCoder:(UITextViewEasyCoderBlock)block;
+-(UITextView *)easyCoder:(UITextViewEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UITextView ,id<UITextViewDelegate>  ,delegate)
-TF_EC_CHAIN_PROP_INT(UITextView ,NSString *,text)
-TF_EC_CHAIN_PROP_INT(UITextView ,UIFont *,font)
-TF_EC_CHAIN_PROP_INT(UITextView ,UIColor *,textColor)
-TF_EC_CHAIN_PROP_INT(UITextView ,long long,textAlignment)
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,editable)
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,selectable)
-TF_EC_CHAIN_PROP_INT(UITextView ,unsigned long long,dataDetectorTypes)
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,allowsEditingTextAttributes)
-TF_EC_CHAIN_PROP_INT(UITextView ,NSAttributedString *,attributedText)
-TF_EC_CHAIN_PROP_INT(UITextView ,NSDictionary *,typingAttributes)
-TF_EC_CHAIN_PROP_INT(UITextView ,UIView *,inputView)
-TF_EC_CHAIN_PROP_INT(UITextView ,UIView *,inputAccessoryView)
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,clearsOnInsertion)
-TF_EC_CHAIN_PROP_INT(UITextView ,UIEdgeInsets,textContainerInset)
-TF_EC_CHAIN_PROP_INT(UITextView ,NSDictionary *,linkTextAttributes)
-TF_EC_CHAIN_PROP_INT(UITextView ,long long,autocapitalizationType)
-TF_EC_CHAIN_PROP_INT(UITextView ,long long,autocorrectionType)
-TF_EC_CHAIN_PROP_INT(UITextView ,long long,spellCheckingType)
-TF_EC_CHAIN_PROP_INT(UITextView ,long long,keyboardType)
-TF_EC_CHAIN_PROP_INT(UITextView ,long long,keyboardAppearance)
-TF_EC_CHAIN_PROP_INT(UITextView ,long long,returnKeyType)
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,enablesReturnKeyAutomatically)
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,secureTextEntry)
-TF_EC_CHAIN_PROP_INT(UITextView ,NSDictionary *,markedTextStyle)
-TF_EC_CHAIN_PROP_INT(UITextView ,id<UITextInputDelegate>  ,inputDelegate)
-TF_EC_CHAIN_PROP_INT(UITextView ,long long,selectionAffinity)
+-(UITextView  *(^)(id<UITextViewDelegate>    delegate))set_delegate;
+-(UITextView  *(^)(NSString *  text))set_text;
+-(UITextView  *(^)(UIFont *  font))set_font;
+-(UITextView  *(^)(UIColor *  textColor))set_textColor;
+-(UITextView  *(^)(long long  textAlignment))set_textAlignment;
+-(UITextView  *(^)(BOOL  editable))set_editable;
+-(UITextView  *(^)(BOOL  selectable))set_selectable;
+-(UITextView  *(^)(unsigned long long  dataDetectorTypes))set_dataDetectorTypes;
+-(UITextView  *(^)(BOOL  allowsEditingTextAttributes))set_allowsEditingTextAttributes;
+-(UITextView  *(^)(NSAttributedString *  attributedText))set_attributedText;
+-(UITextView  *(^)(NSDictionary *  typingAttributes))set_typingAttributes;
+-(UITextView  *(^)(UIView *  inputView))set_inputView;
+-(UITextView  *(^)(UIView *  inputAccessoryView))set_inputAccessoryView;
+-(UITextView  *(^)(BOOL  clearsOnInsertion))set_clearsOnInsertion;
+-(UITextView  *(^)(UIEdgeInsets  textContainerInset))set_textContainerInset;
+-(UITextView  *(^)(NSDictionary *  linkTextAttributes))set_linkTextAttributes;
+-(UITextView  *(^)(long long  autocapitalizationType))set_autocapitalizationType;
+-(UITextView  *(^)(long long  autocorrectionType))set_autocorrectionType;
+-(UITextView  *(^)(long long  spellCheckingType))set_spellCheckingType;
+-(UITextView  *(^)(long long  keyboardType))set_keyboardType;
+-(UITextView  *(^)(long long  keyboardAppearance))set_keyboardAppearance;
+-(UITextView  *(^)(long long  returnKeyType))set_returnKeyType;
+-(UITextView  *(^)(BOOL  enablesReturnKeyAutomatically))set_enablesReturnKeyAutomatically;
+-(UITextView  *(^)(BOOL  secureTextEntry))set_secureTextEntry;
+-(UITextView  *(^)(NSDictionary *  markedTextStyle))set_markedTextStyle;
+-(UITextView  *(^)(id<UITextInputDelegate>    inputDelegate))set_inputDelegate;
+-(UITextView  *(^)(long long  selectionAffinity))set_selectionAffinity;
 
 
 
 
 
 //superclass pros UIScrollView
-TF_EC_CHAIN_PROP_INT(UITextView ,CGPoint,contentOffset);
-TF_EC_CHAIN_PROP_INT(UITextView ,CGSize,contentSize);
-TF_EC_CHAIN_PROP_INT(UITextView ,UIEdgeInsets,contentInset);
+-(UITextView  *(^)(CGPoint  contentOffset))set_contentOffset;
+-(UITextView  *(^)(CGSize  contentSize))set_contentSize;
+-(UITextView  *(^)(UIEdgeInsets  contentInset))set_contentInset;
 //TF_EC_CHAIN_PROP_INT(UITextView ,id<UIScrollViewDelegate> ,delegate);
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,directionalLockEnabled);
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,bounces);
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,alwaysBounceVertical);
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,alwaysBounceHorizontal);
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,pagingEnabled);
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,scrollEnabled);
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,showsHorizontalScrollIndicator);
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,showsVerticalScrollIndicator);
-TF_EC_CHAIN_PROP_INT(UITextView ,UIEdgeInsets,scrollIndicatorInsets);
-TF_EC_CHAIN_PROP_INT(UITextView ,long long,indicatorStyle);
-TF_EC_CHAIN_PROP_INT(UITextView ,double,decelerationRate);
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,delaysContentTouches);
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,canCancelContentTouches);
-TF_EC_CHAIN_PROP_INT(UITextView ,double,minimumZoomScale);
-TF_EC_CHAIN_PROP_INT(UITextView ,double,maximumZoomScale);
-TF_EC_CHAIN_PROP_INT(UITextView ,double,zoomScale);
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,bouncesZoom);
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,scrollsToTop);
-TF_EC_CHAIN_PROP_INT(UITextView ,long long,keyboardDismissMode);
+-(UITextView  *(^)(BOOL  directionalLockEnabled))set_directionalLockEnabled;
+-(UITextView  *(^)(BOOL  bounces))set_bounces;
+-(UITextView  *(^)(BOOL  alwaysBounceVertical))set_alwaysBounceVertical;
+-(UITextView  *(^)(BOOL  alwaysBounceHorizontal))set_alwaysBounceHorizontal;
+-(UITextView  *(^)(BOOL  pagingEnabled))set_pagingEnabled;
+-(UITextView  *(^)(BOOL  scrollEnabled))set_scrollEnabled;
+-(UITextView  *(^)(BOOL  showsHorizontalScrollIndicator))set_showsHorizontalScrollIndicator;
+-(UITextView  *(^)(BOOL  showsVerticalScrollIndicator))set_showsVerticalScrollIndicator;
+-(UITextView  *(^)(UIEdgeInsets  scrollIndicatorInsets))set_scrollIndicatorInsets;
+-(UITextView  *(^)(long long  indicatorStyle))set_indicatorStyle;
+-(UITextView  *(^)(double  decelerationRate))set_decelerationRate;
+-(UITextView  *(^)(BOOL  delaysContentTouches))set_delaysContentTouches;
+-(UITextView  *(^)(BOOL  canCancelContentTouches))set_canCancelContentTouches;
+-(UITextView  *(^)(double  minimumZoomScale))set_minimumZoomScale;
+-(UITextView  *(^)(double  maximumZoomScale))set_maximumZoomScale;
+-(UITextView  *(^)(double  zoomScale))set_zoomScale;
+-(UITextView  *(^)(BOOL  bouncesZoom))set_bouncesZoom;
+-(UITextView  *(^)(BOOL  scrollsToTop))set_scrollsToTop;
+-(UITextView  *(^)(long long  keyboardDismissMode))set_keyboardDismissMode;
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UITextView ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UITextView ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UITextView ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UITextView ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UITextView ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UITextView ,UIColor *,backgroundColor)
+-(UITextView  *(^)(UIView *  maskView))set_maskView;
+-(UITextView  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UITextView  *(^)(long long  tag))set_tag;
+-(UITextView  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UITextView  *(^)(CGPoint  center))set_center;
+-(UITextView  *(^)(CGRect  frame))set_frame;
+-(UITextView  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UITextView ,NSUserActivity *,userActivity);
+-(UITextView  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UITextView ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UITextView ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UITextView ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UITextView ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UITextView ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UITextView ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UITextView ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UITextView ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UITextView ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UITextView ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UITextView ,long long,accessibilityNavigationStyle)
+-(UITextView  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UITextView  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UITextView  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UITextView  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UITextView  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UITextView  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UITextView  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UITextView  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UITextView  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UITextView  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UITextView  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UITextView  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UITextView  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UITextView  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UITextView);
+-(UITextView *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

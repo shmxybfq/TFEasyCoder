@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIFontDescriptor,UIFontDescriptor *);
+typedef void(^UIFontDescriptorEasyCoderBlock) (UIFontDescriptor * ins);
 
 @interface UIFontDescriptor (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIFontDescriptor, UIFontDescriptor *);
-TF_EC_MINSTANCE_INT(UIFontDescriptor,UIFontDescriptor *);
++( UIFontDescriptor *)easyCoder:(UIFontDescriptorEasyCoderBlock)block;
+-(UIFontDescriptor *)easyCoder:(UIFontDescriptorEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(UIFontDescriptor,UIFontDescriptor *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIFontDescriptor ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIFontDescriptor ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIFontDescriptor ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIFontDescriptor ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIFontDescriptor ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIFontDescriptor ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIFontDescriptor ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIFontDescriptor ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIFontDescriptor ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIFontDescriptor ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIFontDescriptor ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIFontDescriptor ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIFontDescriptor ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIFontDescriptor ,long long,accessibilityNavigationStyle)
+-(UIFontDescriptor  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIFontDescriptor  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIFontDescriptor  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIFontDescriptor  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIFontDescriptor  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIFontDescriptor  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIFontDescriptor  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIFontDescriptor  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIFontDescriptor  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIFontDescriptor  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIFontDescriptor  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIFontDescriptor  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIFontDescriptor  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIFontDescriptor  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIFontDescriptor);
+-(UIFontDescriptor *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

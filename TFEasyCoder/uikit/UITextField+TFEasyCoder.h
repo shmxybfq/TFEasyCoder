@@ -10,93 +10,93 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UITextField,UITextField *);
+typedef void(^UITextFieldEasyCoderBlock) (UITextField * ins);
 
 @interface UITextField (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UITextField, UITextField *);
-TF_EC_MINSTANCE_INT(UITextField,UITextField *);
++( UITextField *)easyCoder:(UITextFieldEasyCoderBlock)block;
+-(UITextField *)easyCoder:(UITextFieldEasyCoderBlock)block;
 
 
 
-TF_EC_CHAIN_PROP_INT(UITextField ,NSString *,text)
-TF_EC_CHAIN_PROP_INT(UITextField ,NSAttributedString *,attributedText)
-TF_EC_CHAIN_PROP_INT(UITextField ,UIColor *,textColor)
-TF_EC_CHAIN_PROP_INT(UITextField ,UIFont *,font)
-TF_EC_CHAIN_PROP_INT(UITextField ,long long,textAlignment)
-TF_EC_CHAIN_PROP_INT(UITextField ,long long,borderStyle)
-TF_EC_CHAIN_PROP_INT(UITextField ,NSDictionary *,defaultTextAttributes)
-TF_EC_CHAIN_PROP_INT(UITextField ,NSString *,placeholder)
-TF_EC_CHAIN_PROP_INT(UITextField ,NSAttributedString *,attributedPlaceholder)
-TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,clearsOnBeginEditing)
-TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,adjustsFontSizeToFitWidth)
-TF_EC_CHAIN_PROP_INT(UITextField ,double,minimumFontSize)
-TF_EC_CHAIN_PROP_INT(UITextField ,id<UITextFieldDelegate>  ,delegate)
-TF_EC_CHAIN_PROP_INT(UITextField ,UIImage *,background)
-TF_EC_CHAIN_PROP_INT(UITextField ,UIImage *,disabledBackground)
-TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,allowsEditingTextAttributes)
-TF_EC_CHAIN_PROP_INT(UITextField ,NSDictionary *,typingAttributes)
-TF_EC_CHAIN_PROP_INT(UITextField ,long long,clearButtonMode)
-TF_EC_CHAIN_PROP_INT(UITextField ,UIView *,leftView)
-TF_EC_CHAIN_PROP_INT(UITextField ,long long,leftViewMode)
-TF_EC_CHAIN_PROP_INT(UITextField ,UIView *,rightView)
-TF_EC_CHAIN_PROP_INT(UITextField ,long long,rightViewMode)
-TF_EC_CHAIN_PROP_INT(UITextField ,UIView *,inputView)
-TF_EC_CHAIN_PROP_INT(UITextField ,UIView *,inputAccessoryView)
-TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,clearsOnInsertion)
-TF_EC_CHAIN_PROP_INT(UITextField ,long long,autocapitalizationType)
-TF_EC_CHAIN_PROP_INT(UITextField ,long long,autocorrectionType)
-TF_EC_CHAIN_PROP_INT(UITextField ,long long,spellCheckingType)
-TF_EC_CHAIN_PROP_INT(UITextField ,long long,keyboardType)
-TF_EC_CHAIN_PROP_INT(UITextField ,long long,keyboardAppearance)
-TF_EC_CHAIN_PROP_INT(UITextField ,long long,returnKeyType)
-TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,enablesReturnKeyAutomatically)
-TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,secureTextEntry)
-TF_EC_CHAIN_PROP_INT(UITextField ,NSDictionary *,markedTextStyle)
-TF_EC_CHAIN_PROP_INT(UITextField ,id<UITextInputDelegate>  ,inputDelegate)
-TF_EC_CHAIN_PROP_INT(UITextField ,long long,selectionAffinity)
+-(UITextField  *(^)(NSString *  text))set_text;
+-(UITextField  *(^)(NSAttributedString *  attributedText))set_attributedText;
+-(UITextField  *(^)(UIColor *  textColor))set_textColor;
+-(UITextField  *(^)(UIFont *  font))set_font;
+-(UITextField  *(^)(long long  textAlignment))set_textAlignment;
+-(UITextField  *(^)(long long  borderStyle))set_borderStyle;
+-(UITextField  *(^)(NSDictionary *  defaultTextAttributes))set_defaultTextAttributes;
+-(UITextField  *(^)(NSString *  placeholder))set_placeholder;
+-(UITextField  *(^)(NSAttributedString *  attributedPlaceholder))set_attributedPlaceholder;
+-(UITextField  *(^)(BOOL  clearsOnBeginEditing))set_clearsOnBeginEditing;
+-(UITextField  *(^)(BOOL  adjustsFontSizeToFitWidth))set_adjustsFontSizeToFitWidth;
+-(UITextField  *(^)(double  minimumFontSize))set_minimumFontSize;
+-(UITextField  *(^)(id<UITextFieldDelegate>    delegate))set_delegate;
+-(UITextField  *(^)(UIImage *  background))set_background;
+-(UITextField  *(^)(UIImage *  disabledBackground))set_disabledBackground;
+-(UITextField  *(^)(BOOL  allowsEditingTextAttributes))set_allowsEditingTextAttributes;
+-(UITextField  *(^)(NSDictionary *  typingAttributes))set_typingAttributes;
+-(UITextField  *(^)(long long  clearButtonMode))set_clearButtonMode;
+-(UITextField  *(^)(UIView *  leftView))set_leftView;
+-(UITextField  *(^)(long long  leftViewMode))set_leftViewMode;
+-(UITextField  *(^)(UIView *  rightView))set_rightView;
+-(UITextField  *(^)(long long  rightViewMode))set_rightViewMode;
+-(UITextField  *(^)(UIView *  inputView))set_inputView;
+-(UITextField  *(^)(UIView *  inputAccessoryView))set_inputAccessoryView;
+-(UITextField  *(^)(BOOL  clearsOnInsertion))set_clearsOnInsertion;
+-(UITextField  *(^)(long long  autocapitalizationType))set_autocapitalizationType;
+-(UITextField  *(^)(long long  autocorrectionType))set_autocorrectionType;
+-(UITextField  *(^)(long long  spellCheckingType))set_spellCheckingType;
+-(UITextField  *(^)(long long  keyboardType))set_keyboardType;
+-(UITextField  *(^)(long long  keyboardAppearance))set_keyboardAppearance;
+-(UITextField  *(^)(long long  returnKeyType))set_returnKeyType;
+-(UITextField  *(^)(BOOL  enablesReturnKeyAutomatically))set_enablesReturnKeyAutomatically;
+-(UITextField  *(^)(BOOL  secureTextEntry))set_secureTextEntry;
+-(UITextField  *(^)(NSDictionary *  markedTextStyle))set_markedTextStyle;
+-(UITextField  *(^)(id<UITextInputDelegate>    inputDelegate))set_inputDelegate;
+-(UITextField  *(^)(long long  selectionAffinity))set_selectionAffinity;
 
 
 
 
 
 //superclass pros UIControl
-TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,selected);
-TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,highlighted);
-TF_EC_CHAIN_PROP_INT(UITextField ,long long,contentVerticalAlignment);
-TF_EC_CHAIN_PROP_INT(UITextField ,long long,contentHorizontalAlignment);
+-(UITextField  *(^)(BOOL  enabled))set_enabled;
+-(UITextField  *(^)(BOOL  selected))set_selected;
+-(UITextField  *(^)(BOOL  highlighted))set_highlighted;
+-(UITextField  *(^)(long long  contentVerticalAlignment))set_contentVerticalAlignment;
+-(UITextField  *(^)(long long  contentHorizontalAlignment))set_contentHorizontalAlignment;
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UITextField ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UITextField ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UITextField ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UITextField ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UITextField ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UITextField ,UIColor *,backgroundColor)
+-(UITextField  *(^)(UIView *  maskView))set_maskView;
+-(UITextField  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UITextField  *(^)(long long  tag))set_tag;
+-(UITextField  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UITextField  *(^)(CGPoint  center))set_center;
+-(UITextField  *(^)(CGRect  frame))set_frame;
+-(UITextField  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UITextField ,NSUserActivity *,userActivity);
+-(UITextField  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UITextField ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UITextField ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UITextField ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UITextField ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UITextField ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UITextField ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UITextField ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UITextField ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UITextField ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UITextField ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UITextField ,long long,accessibilityNavigationStyle)
+-(UITextField  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UITextField  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UITextField  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UITextField  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UITextField  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UITextField  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UITextField  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UITextField  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UITextField  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UITextField  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UITextField  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UITextField  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UITextField  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UITextField  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UITextField);
+-(UITextField *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

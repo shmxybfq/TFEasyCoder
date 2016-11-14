@@ -10,48 +10,48 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIPanGestureRecognizer,UIPanGestureRecognizer *);
+typedef void(^UIPanGestureRecognizerEasyCoderBlock) (UIPanGestureRecognizer * ins);
 
 @interface UIPanGestureRecognizer (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIPanGestureRecognizer, UIPanGestureRecognizer *);
-TF_EC_MINSTANCE_INT(UIPanGestureRecognizer,UIPanGestureRecognizer *);
++( UIPanGestureRecognizer *)easyCoder:(UIPanGestureRecognizerEasyCoderBlock)block;
+-(UIPanGestureRecognizer *)easyCoder:(UIPanGestureRecognizerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,unsigned long long,minimumNumberOfTouches);
-TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,unsigned long long,maximumNumberOfTouches);
+-(UIPanGestureRecognizer  *(^)(unsigned long long  minimumNumberOfTouches))set_minimumNumberOfTouches;
+-(UIPanGestureRecognizer  *(^)(unsigned long long  maximumNumberOfTouches))set_maximumNumberOfTouches;
 
 
 
 
 //superclass pros UIGestureRecognizer
-TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,BOOL,cancelsTouchesInView);
-TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,BOOL,delaysTouchesBegan);
-TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,BOOL,delaysTouchesEnded);
-TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,NSArray *,allowedTouchTypes);
-TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,NSArray *,allowedPressTypes);
+-(UIPanGestureRecognizer  *(^)(BOOL  enabled))set_enabled;
+-(UIPanGestureRecognizer  *(^)(BOOL  cancelsTouchesInView))set_cancelsTouchesInView;
+-(UIPanGestureRecognizer  *(^)(BOOL  delaysTouchesBegan))set_delaysTouchesBegan;
+-(UIPanGestureRecognizer  *(^)(BOOL  delaysTouchesEnded))set_delaysTouchesEnded;
+-(UIPanGestureRecognizer  *(^)(NSArray *  allowedTouchTypes))set_allowedTouchTypes;
+-(UIPanGestureRecognizer  *(^)(NSArray *  allowedPressTypes))set_allowedPressTypes;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIPanGestureRecognizer ,long long,accessibilityNavigationStyle)
+-(UIPanGestureRecognizer  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIPanGestureRecognizer  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIPanGestureRecognizer  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIPanGestureRecognizer  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIPanGestureRecognizer  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIPanGestureRecognizer  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIPanGestureRecognizer  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIPanGestureRecognizer  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIPanGestureRecognizer  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIPanGestureRecognizer  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIPanGestureRecognizer  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIPanGestureRecognizer  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIPanGestureRecognizer  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIPanGestureRecognizer  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIPanGestureRecognizer);
+-(UIPanGestureRecognizer *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -10,41 +10,41 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UICollectionViewTransitionLayout,UICollectionViewTransitionLayout *);
+typedef void(^UICollectionViewTransitionLayoutEasyCoderBlock) (UICollectionViewTransitionLayout * ins);
 
 @interface UICollectionViewTransitionLayout (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UICollectionViewTransitionLayout, UICollectionViewTransitionLayout *);
-TF_EC_MINSTANCE_INT(UICollectionViewTransitionLayout,UICollectionViewTransitionLayout *);
++( UICollectionViewTransitionLayout *)easyCoder:(UICollectionViewTransitionLayoutEasyCoderBlock)block;
+-(UICollectionViewTransitionLayout *)easyCoder:(UICollectionViewTransitionLayoutEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UICollectionViewTransitionLayout ,double,transitionProgress);
+-(UICollectionViewTransitionLayout  *(^)(double  transitionProgress))set_transitionProgress;
 
 
 
 
 //superclass pros UICollectionViewLayout
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UICollectionViewTransitionLayout ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UICollectionViewTransitionLayout ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UICollectionViewTransitionLayout ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UICollectionViewTransitionLayout ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UICollectionViewTransitionLayout ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UICollectionViewTransitionLayout ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UICollectionViewTransitionLayout ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UICollectionViewTransitionLayout ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UICollectionViewTransitionLayout ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UICollectionViewTransitionLayout ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UICollectionViewTransitionLayout ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UICollectionViewTransitionLayout ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UICollectionViewTransitionLayout ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UICollectionViewTransitionLayout ,long long,accessibilityNavigationStyle)
+-(UICollectionViewTransitionLayout  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UICollectionViewTransitionLayout  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UICollectionViewTransitionLayout  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UICollectionViewTransitionLayout  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UICollectionViewTransitionLayout  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UICollectionViewTransitionLayout  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UICollectionViewTransitionLayout  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UICollectionViewTransitionLayout  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UICollectionViewTransitionLayout  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UICollectionViewTransitionLayout  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UICollectionViewTransitionLayout  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UICollectionViewTransitionLayout  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UICollectionViewTransitionLayout  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UICollectionViewTransitionLayout  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UICollectionViewTransitionLayout);
+-(UICollectionViewTransitionLayout *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

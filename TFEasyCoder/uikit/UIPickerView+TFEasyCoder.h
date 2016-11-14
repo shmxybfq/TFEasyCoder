@@ -10,53 +10,53 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIPickerView,UIPickerView *);
+typedef void(^UIPickerViewEasyCoderBlock) (UIPickerView * ins);
 
 @interface UIPickerView (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIPickerView, UIPickerView *);
-TF_EC_MINSTANCE_INT(UIPickerView,UIPickerView *);
++( UIPickerView *)easyCoder:(UIPickerViewEasyCoderBlock)block;
+-(UIPickerView *)easyCoder:(UIPickerViewEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIPickerView ,id<UIPickerViewDataSource>,dataSource);
-TF_EC_CHAIN_PROP_INT(UIPickerView ,id<UIPickerViewDelegate>,delegate);
-TF_EC_CHAIN_PROP_INT(UIPickerView ,BOOL,showsSelectionIndicator);
+-(UIPickerView  *(^)(id<UIPickerViewDataSource>  dataSource))set_dataSource;
+-(UIPickerView  *(^)(id<UIPickerViewDelegate>  delegate))set_delegate;
+-(UIPickerView  *(^)(BOOL  showsSelectionIndicator))set_showsSelectionIndicator;
 
 
 
 
 
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UIPickerView ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UIPickerView ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UIPickerView ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UIPickerView ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UIPickerView ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UIPickerView ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UIPickerView ,UIColor *,backgroundColor)
+-(UIPickerView  *(^)(UIView *  maskView))set_maskView;
+-(UIPickerView  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UIPickerView  *(^)(long long  tag))set_tag;
+-(UIPickerView  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UIPickerView  *(^)(CGPoint  center))set_center;
+-(UIPickerView  *(^)(CGRect  frame))set_frame;
+-(UIPickerView  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIPickerView ,NSUserActivity *,userActivity);
+-(UIPickerView  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIPickerView ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIPickerView ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIPickerView ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIPickerView ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIPickerView ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIPickerView ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIPickerView ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIPickerView ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIPickerView ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIPickerView ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIPickerView ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIPickerView ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIPickerView ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIPickerView ,long long,accessibilityNavigationStyle)
+-(UIPickerView  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIPickerView  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIPickerView  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIPickerView  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIPickerView  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIPickerView  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIPickerView  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIPickerView  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIPickerView  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIPickerView  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIPickerView  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIPickerView  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIPickerView  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIPickerView  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIPickerView);
+-(UIPickerView *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -10,50 +10,50 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UILongPressGestureRecognizer,UILongPressGestureRecognizer *);
+typedef void(^UILongPressGestureRecognizerEasyCoderBlock) (UILongPressGestureRecognizer * ins);
 
 @interface UILongPressGestureRecognizer (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UILongPressGestureRecognizer, UILongPressGestureRecognizer *);
-TF_EC_MINSTANCE_INT(UILongPressGestureRecognizer,UILongPressGestureRecognizer *);
++( UILongPressGestureRecognizer *)easyCoder:(UILongPressGestureRecognizerEasyCoderBlock)block;
+-(UILongPressGestureRecognizer *)easyCoder:(UILongPressGestureRecognizerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,unsigned long long,numberOfTapsRequired);
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,double,minimumPressDuration);
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,double,allowableMovement);
+-(UILongPressGestureRecognizer  *(^)(unsigned long long  numberOfTapsRequired))set_numberOfTapsRequired;
+-(UILongPressGestureRecognizer  *(^)(double  minimumPressDuration))set_minimumPressDuration;
+-(UILongPressGestureRecognizer  *(^)(double  allowableMovement))set_allowableMovement;
 
 
 
 
 
 //superclass pros UIGestureRecognizer
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,BOOL,cancelsTouchesInView);
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,BOOL,delaysTouchesBegan);
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,BOOL,delaysTouchesEnded);
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,NSArray *,allowedTouchTypes);
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,NSArray *,allowedPressTypes);
+-(UILongPressGestureRecognizer  *(^)(BOOL  enabled))set_enabled;
+-(UILongPressGestureRecognizer  *(^)(BOOL  cancelsTouchesInView))set_cancelsTouchesInView;
+-(UILongPressGestureRecognizer  *(^)(BOOL  delaysTouchesBegan))set_delaysTouchesBegan;
+-(UILongPressGestureRecognizer  *(^)(BOOL  delaysTouchesEnded))set_delaysTouchesEnded;
+-(UILongPressGestureRecognizer  *(^)(NSArray *  allowedTouchTypes))set_allowedTouchTypes;
+-(UILongPressGestureRecognizer  *(^)(NSArray *  allowedPressTypes))set_allowedPressTypes;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UILongPressGestureRecognizer ,long long,accessibilityNavigationStyle)
+-(UILongPressGestureRecognizer  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UILongPressGestureRecognizer  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UILongPressGestureRecognizer  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UILongPressGestureRecognizer  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UILongPressGestureRecognizer  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UILongPressGestureRecognizer  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UILongPressGestureRecognizer  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UILongPressGestureRecognizer  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UILongPressGestureRecognizer  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UILongPressGestureRecognizer  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UILongPressGestureRecognizer  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UILongPressGestureRecognizer  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UILongPressGestureRecognizer  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UILongPressGestureRecognizer  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UILongPressGestureRecognizer);
+-(UILongPressGestureRecognizer *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

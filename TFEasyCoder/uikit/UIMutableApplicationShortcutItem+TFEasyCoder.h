@@ -10,19 +10,19 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIMutableApplicationShortcutItem,UIMutableApplicationShortcutItem *);
+typedef void(^UIMutableApplicationShortcutItemEasyCoderBlock) (UIMutableApplicationShortcutItem * ins);
 
 @interface UIMutableApplicationShortcutItem (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIMutableApplicationShortcutItem, UIMutableApplicationShortcutItem *);
-TF_EC_MINSTANCE_INT(UIMutableApplicationShortcutItem,UIMutableApplicationShortcutItem *);
++( UIMutableApplicationShortcutItem *)easyCoder:(UIMutableApplicationShortcutItemEasyCoderBlock)block;
+-(UIMutableApplicationShortcutItem *)easyCoder:(UIMutableApplicationShortcutItemEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIMutableApplicationShortcutItem ,NSString *,type);
-TF_EC_CHAIN_PROP_INT(UIMutableApplicationShortcutItem ,NSString *,localizedTitle);
-TF_EC_CHAIN_PROP_INT(UIMutableApplicationShortcutItem ,NSString *,localizedSubtitle);
-TF_EC_CHAIN_PROP_INT(UIMutableApplicationShortcutItem ,UIApplicationShortcutIcon *,icon);
-TF_EC_CHAIN_PROP_INT(UIMutableApplicationShortcutItem ,NSDictionary *,userInfo);
+-(UIMutableApplicationShortcutItem  *(^)(NSString *  type))set_type;
+-(UIMutableApplicationShortcutItem  *(^)(NSString *  localizedTitle))set_localizedTitle;
+-(UIMutableApplicationShortcutItem  *(^)(NSString *  localizedSubtitle))set_localizedSubtitle;
+-(UIMutableApplicationShortcutItem  *(^)(UIApplicationShortcutIcon *  icon))set_icon;
+-(UIMutableApplicationShortcutItem  *(^)(NSDictionary *  userInfo))set_userInfo;
 
 
 
@@ -30,26 +30,26 @@ TF_EC_CHAIN_PROP_INT(UIMutableApplicationShortcutItem ,NSDictionary *,userInfo);
 
 //superclass pros UIApplicationShortcutItem
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIMutableApplicationShortcutItem ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIMutableApplicationShortcutItem ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIMutableApplicationShortcutItem ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIMutableApplicationShortcutItem ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIMutableApplicationShortcutItem ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIMutableApplicationShortcutItem ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIMutableApplicationShortcutItem ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIMutableApplicationShortcutItem ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIMutableApplicationShortcutItem ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIMutableApplicationShortcutItem ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIMutableApplicationShortcutItem ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIMutableApplicationShortcutItem ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIMutableApplicationShortcutItem ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIMutableApplicationShortcutItem ,long long,accessibilityNavigationStyle)
+-(UIMutableApplicationShortcutItem  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIMutableApplicationShortcutItem  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIMutableApplicationShortcutItem  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIMutableApplicationShortcutItem  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIMutableApplicationShortcutItem  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIMutableApplicationShortcutItem  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIMutableApplicationShortcutItem  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIMutableApplicationShortcutItem  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIMutableApplicationShortcutItem  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIMutableApplicationShortcutItem  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIMutableApplicationShortcutItem  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIMutableApplicationShortcutItem  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIMutableApplicationShortcutItem  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIMutableApplicationShortcutItem  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIMutableApplicationShortcutItem);
+-(UIMutableApplicationShortcutItem *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

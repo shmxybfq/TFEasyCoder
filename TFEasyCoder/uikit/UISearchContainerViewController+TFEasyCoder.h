@@ -10,58 +10,58 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UISearchContainerViewController,UISearchContainerViewController *);
+typedef void(^UISearchContainerViewControllerEasyCoderBlock) (UISearchContainerViewController * ins);
 
 @interface UISearchContainerViewController (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UISearchContainerViewController, UISearchContainerViewController *);
-TF_EC_MINSTANCE_INT(UISearchContainerViewController,UISearchContainerViewController *);
++( UISearchContainerViewController *)easyCoder:(UISearchContainerViewControllerEasyCoderBlock)block;
+-(UISearchContainerViewController *)easyCoder:(UISearchContainerViewControllerEasyCoderBlock)block;
 
 
 
 
 
 //superclass pros UIViewController
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,UITabBarItem *,tabBarItem)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,BOOL,hidesBottomBarWhenPushed)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,id<UIViewControllerTransitioningDelegate>  ,transitioningDelegate)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,UIView *,view)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,NSString *,title)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,BOOL,definesPresentationContext)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,BOOL,providesPresentationContextTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,long long,modalTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,long long,modalPresentationStyle)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,BOOL,modalPresentationCapturesStatusBarAppearance)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,BOOL,wantsFullScreenLayout)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,unsigned long long,edgesForExtendedLayout)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,BOOL,extendedLayoutIncludesOpaqueBars)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,BOOL,automaticallyAdjustsScrollViewInsets)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,CGSize,preferredContentSize)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,CGSize,contentSizeForViewInPopover)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,BOOL,modalInPopover)
+-(UISearchContainerViewController  *(^)(UITabBarItem *  tabBarItem))set_tabBarItem;
+-(UISearchContainerViewController  *(^)(BOOL  hidesBottomBarWhenPushed))set_hidesBottomBarWhenPushed;
+-(UISearchContainerViewController  *(^)(id<UIViewControllerTransitioningDelegate>    transitioningDelegate))set_transitioningDelegate;
+-(UISearchContainerViewController  *(^)(UIView *  view))set_view;
+-(UISearchContainerViewController  *(^)(NSString *  title))set_title;
+-(UISearchContainerViewController  *(^)(BOOL  definesPresentationContext))set_definesPresentationContext;
+-(UISearchContainerViewController  *(^)(BOOL  providesPresentationContextTransitionStyle))set_providesPresentationContextTransitionStyle;
+-(UISearchContainerViewController  *(^)(long long  modalTransitionStyle))set_modalTransitionStyle;
+-(UISearchContainerViewController  *(^)(long long  modalPresentationStyle))set_modalPresentationStyle;
+-(UISearchContainerViewController  *(^)(BOOL  modalPresentationCapturesStatusBarAppearance))set_modalPresentationCapturesStatusBarAppearance;
+-(UISearchContainerViewController  *(^)(BOOL  wantsFullScreenLayout))set_wantsFullScreenLayout;
+-(UISearchContainerViewController  *(^)(unsigned long long  edgesForExtendedLayout))set_edgesForExtendedLayout;
+-(UISearchContainerViewController  *(^)(BOOL  extendedLayoutIncludesOpaqueBars))set_extendedLayoutIncludesOpaqueBars;
+-(UISearchContainerViewController  *(^)(BOOL  automaticallyAdjustsScrollViewInsets))set_automaticallyAdjustsScrollViewInsets;
+-(UISearchContainerViewController  *(^)(CGSize  preferredContentSize))set_preferredContentSize;
+-(UISearchContainerViewController  *(^)(CGSize  contentSizeForViewInPopover))set_contentSizeForViewInPopover;
+-(UISearchContainerViewController  *(^)(BOOL  modalInPopover))set_modalInPopover;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,NSUserActivity *,userActivity);
+-(UISearchContainerViewController  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UISearchContainerViewController ,long long,accessibilityNavigationStyle)
+-(UISearchContainerViewController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UISearchContainerViewController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UISearchContainerViewController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UISearchContainerViewController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UISearchContainerViewController  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UISearchContainerViewController  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UISearchContainerViewController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UISearchContainerViewController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UISearchContainerViewController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UISearchContainerViewController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UISearchContainerViewController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UISearchContainerViewController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UISearchContainerViewController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UISearchContainerViewController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UISearchContainerViewController);
+-(UISearchContainerViewController *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

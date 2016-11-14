@@ -11,36 +11,161 @@
 
 @implementation NSHTTPCookieStorage (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(NSHTTPCookieStorage, NSHTTPCookieStorage *);
-TF_EC_MINSTANCE_IMP(NSHTTPCookieStorage, NSHTTPCookieStorage *);
++( NSHTTPCookieStorage *)easyCoder:(NSHTTPCookieStorageEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( NSHTTPCookieStorage *)ins);
+        }
+    }];
+}
+
+-( NSHTTPCookieStorage *)easyCoder:(NSHTTPCookieStorageEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
 
 
-TF_EC_CHAIN_PROP_IMP(NSHTTPCookieStorage ,unsigned long long,cookieAcceptPolicy)
+
+-(NSHTTPCookieStorage  *(^)(unsigned long long  cookieAcceptPolicy))set_cookieAcceptPolicy{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  cookieAcceptPolicy){
+        weakSelf.cookieAcceptPolicy = cookieAcceptPolicy;
+        return weakSelf;
+    };
+}
+
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(NSHTTPCookieStorage ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(NSHTTPCookieStorage ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(NSHTTPCookieStorage ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(NSHTTPCookieStorage ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(NSHTTPCookieStorage ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(NSHTTPCookieStorage ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(NSHTTPCookieStorage ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(NSHTTPCookieStorage ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(NSHTTPCookieStorage ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(NSHTTPCookieStorage ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(NSHTTPCookieStorage ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(NSHTTPCookieStorage ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(NSHTTPCookieStorage ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(NSHTTPCookieStorage ,long long,accessibilityNavigationStyle)
+-(NSHTTPCookieStorage  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(NSHTTPCookieStorage  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(NSHTTPCookieStorage  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(NSHTTPCookieStorage  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(NSHTTPCookieStorage  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(NSHTTPCookieStorage  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(NSHTTPCookieStorage  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(NSHTTPCookieStorage  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(NSHTTPCookieStorage  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(NSHTTPCookieStorage  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(NSHTTPCookieStorage  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(NSHTTPCookieStorage  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(NSHTTPCookieStorage  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(NSHTTPCookieStorage  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSHTTPCookieStorage);
+
+-(NSHTTPCookieStorage *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

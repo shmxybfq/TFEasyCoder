@@ -10,44 +10,44 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIPrintFormatter,UIPrintFormatter *);
+typedef void(^UIPrintFormatterEasyCoderBlock) (UIPrintFormatter * ins);
 
 @interface UIPrintFormatter (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIPrintFormatter, UIPrintFormatter *);
-TF_EC_MINSTANCE_INT(UIPrintFormatter,UIPrintFormatter *);
++( UIPrintFormatter *)easyCoder:(UIPrintFormatterEasyCoderBlock)block;
+-(UIPrintFormatter *)easyCoder:(UIPrintFormatterEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIPrintFormatter ,double,maximumContentHeight);
-TF_EC_CHAIN_PROP_INT(UIPrintFormatter ,double,maximumContentWidth);
-TF_EC_CHAIN_PROP_INT(UIPrintFormatter ,UIEdgeInsets,contentInsets);
-TF_EC_CHAIN_PROP_INT(UIPrintFormatter ,UIEdgeInsets,perPageContentInsets);
-TF_EC_CHAIN_PROP_INT(UIPrintFormatter ,long long,startPage);
+-(UIPrintFormatter  *(^)(double  maximumContentHeight))set_maximumContentHeight;
+-(UIPrintFormatter  *(^)(double  maximumContentWidth))set_maximumContentWidth;
+-(UIPrintFormatter  *(^)(UIEdgeInsets  contentInsets))set_contentInsets;
+-(UIPrintFormatter  *(^)(UIEdgeInsets  perPageContentInsets))set_perPageContentInsets;
+-(UIPrintFormatter  *(^)(long long  startPage))set_startPage;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIPrintFormatter ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIPrintFormatter ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIPrintFormatter ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIPrintFormatter ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIPrintFormatter ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIPrintFormatter ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIPrintFormatter ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIPrintFormatter ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIPrintFormatter ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIPrintFormatter ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIPrintFormatter ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIPrintFormatter ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIPrintFormatter ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIPrintFormatter ,long long,accessibilityNavigationStyle)
+-(UIPrintFormatter  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIPrintFormatter  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIPrintFormatter  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIPrintFormatter  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIPrintFormatter  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIPrintFormatter  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIPrintFormatter  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIPrintFormatter  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIPrintFormatter  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIPrintFormatter  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIPrintFormatter  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIPrintFormatter  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIPrintFormatter  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIPrintFormatter  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIPrintFormatter);
+-(UIPrintFormatter *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

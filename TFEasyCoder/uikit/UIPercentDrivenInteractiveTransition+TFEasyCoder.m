@@ -11,37 +11,169 @@
 
 @implementation UIPercentDrivenInteractiveTransition (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(UIPercentDrivenInteractiveTransition, UIPercentDrivenInteractiveTransition *);
-TF_EC_MINSTANCE_IMP(UIPercentDrivenInteractiveTransition, UIPercentDrivenInteractiveTransition *);
++( UIPercentDrivenInteractiveTransition *)easyCoder:(UIPercentDrivenInteractiveTransitionEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( UIPercentDrivenInteractiveTransition *)ins);
+        }
+    }];
+}
+
+-( UIPercentDrivenInteractiveTransition *)easyCoder:(UIPercentDrivenInteractiveTransitionEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
 
 
-TF_EC_CHAIN_PROP_IMP(UIPercentDrivenInteractiveTransition ,double,completionSpeed)
-TF_EC_CHAIN_PROP_IMP(UIPercentDrivenInteractiveTransition ,long long,completionCurve)
+
+-(UIPercentDrivenInteractiveTransition  *(^)(double  completionSpeed))set_completionSpeed{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  completionSpeed){
+        weakSelf.completionSpeed = completionSpeed;
+        return weakSelf;
+    };
+}
+
+-(UIPercentDrivenInteractiveTransition  *(^)(long long  completionCurve))set_completionCurve{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  completionCurve){
+        weakSelf.completionCurve = completionCurve;
+        return weakSelf;
+    };
+}
+
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(UIPercentDrivenInteractiveTransition ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(UIPercentDrivenInteractiveTransition ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(UIPercentDrivenInteractiveTransition ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(UIPercentDrivenInteractiveTransition ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(UIPercentDrivenInteractiveTransition ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(UIPercentDrivenInteractiveTransition ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(UIPercentDrivenInteractiveTransition ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(UIPercentDrivenInteractiveTransition ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(UIPercentDrivenInteractiveTransition ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(UIPercentDrivenInteractiveTransition ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(UIPercentDrivenInteractiveTransition ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(UIPercentDrivenInteractiveTransition ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(UIPercentDrivenInteractiveTransition ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(UIPercentDrivenInteractiveTransition ,long long,accessibilityNavigationStyle)
+-(UIPercentDrivenInteractiveTransition  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(UIPercentDrivenInteractiveTransition  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(UIPercentDrivenInteractiveTransition  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(UIPercentDrivenInteractiveTransition  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(UIPercentDrivenInteractiveTransition  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(UIPercentDrivenInteractiveTransition  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(UIPercentDrivenInteractiveTransition  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(UIPercentDrivenInteractiveTransition  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(UIPercentDrivenInteractiveTransition  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(UIPercentDrivenInteractiveTransition  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(UIPercentDrivenInteractiveTransition  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(UIPercentDrivenInteractiveTransition  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(UIPercentDrivenInteractiveTransition  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(UIPercentDrivenInteractiveTransition  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIPercentDrivenInteractiveTransition);
+
+-(UIPercentDrivenInteractiveTransition *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

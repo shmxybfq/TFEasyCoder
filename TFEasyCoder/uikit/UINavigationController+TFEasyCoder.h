@@ -10,68 +10,68 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UINavigationController,UINavigationController *);
+typedef void(^UINavigationControllerEasyCoderBlock) (UINavigationController * ins);
 
 @interface UINavigationController (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UINavigationController, UINavigationController *);
-TF_EC_MINSTANCE_INT(UINavigationController,UINavigationController *);
++( UINavigationController *)easyCoder:(UINavigationControllerEasyCoderBlock)block;
+-(UINavigationController *)easyCoder:(UINavigationControllerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UINavigationController ,NSArray *,viewControllers)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,BOOL,navigationBarHidden)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,BOOL,toolbarHidden)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,id<UINavigationControllerDelegate>  ,delegate)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,BOOL,hidesBarsWhenKeyboardAppears)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,BOOL,hidesBarsOnSwipe)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,BOOL,hidesBarsWhenVerticallyCompact)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,BOOL,hidesBarsOnTap)
+-(UINavigationController  *(^)(NSArray *  viewControllers))set_viewControllers;
+-(UINavigationController  *(^)(BOOL  navigationBarHidden))set_navigationBarHidden;
+-(UINavigationController  *(^)(BOOL  toolbarHidden))set_toolbarHidden;
+-(UINavigationController  *(^)(id<UINavigationControllerDelegate>    delegate))set_delegate;
+-(UINavigationController  *(^)(BOOL  hidesBarsWhenKeyboardAppears))set_hidesBarsWhenKeyboardAppears;
+-(UINavigationController  *(^)(BOOL  hidesBarsOnSwipe))set_hidesBarsOnSwipe;
+-(UINavigationController  *(^)(BOOL  hidesBarsWhenVerticallyCompact))set_hidesBarsWhenVerticallyCompact;
+-(UINavigationController  *(^)(BOOL  hidesBarsOnTap))set_hidesBarsOnTap;
 
 
 
 
 
 //superclass pros UIViewController
-TF_EC_CHAIN_PROP_INT(UINavigationController ,UITabBarItem *,tabBarItem)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,BOOL,hidesBottomBarWhenPushed)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,id<UIViewControllerTransitioningDelegate>  ,transitioningDelegate)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,UIView *,view)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,NSString *,title)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,BOOL,definesPresentationContext)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,BOOL,providesPresentationContextTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,long long,modalTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,long long,modalPresentationStyle)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,BOOL,modalPresentationCapturesStatusBarAppearance)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,BOOL,wantsFullScreenLayout)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,unsigned long long,edgesForExtendedLayout)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,BOOL,extendedLayoutIncludesOpaqueBars)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,BOOL,automaticallyAdjustsScrollViewInsets)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,CGSize,preferredContentSize)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,CGSize,contentSizeForViewInPopover)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,BOOL,modalInPopover)
+-(UINavigationController  *(^)(UITabBarItem *  tabBarItem))set_tabBarItem;
+-(UINavigationController  *(^)(BOOL  hidesBottomBarWhenPushed))set_hidesBottomBarWhenPushed;
+-(UINavigationController  *(^)(id<UIViewControllerTransitioningDelegate>    transitioningDelegate))set_transitioningDelegate;
+-(UINavigationController  *(^)(UIView *  view))set_view;
+-(UINavigationController  *(^)(NSString *  title))set_title;
+-(UINavigationController  *(^)(BOOL  definesPresentationContext))set_definesPresentationContext;
+-(UINavigationController  *(^)(BOOL  providesPresentationContextTransitionStyle))set_providesPresentationContextTransitionStyle;
+-(UINavigationController  *(^)(long long  modalTransitionStyle))set_modalTransitionStyle;
+-(UINavigationController  *(^)(long long  modalPresentationStyle))set_modalPresentationStyle;
+-(UINavigationController  *(^)(BOOL  modalPresentationCapturesStatusBarAppearance))set_modalPresentationCapturesStatusBarAppearance;
+-(UINavigationController  *(^)(BOOL  wantsFullScreenLayout))set_wantsFullScreenLayout;
+-(UINavigationController  *(^)(unsigned long long  edgesForExtendedLayout))set_edgesForExtendedLayout;
+-(UINavigationController  *(^)(BOOL  extendedLayoutIncludesOpaqueBars))set_extendedLayoutIncludesOpaqueBars;
+-(UINavigationController  *(^)(BOOL  automaticallyAdjustsScrollViewInsets))set_automaticallyAdjustsScrollViewInsets;
+-(UINavigationController  *(^)(CGSize  preferredContentSize))set_preferredContentSize;
+-(UINavigationController  *(^)(CGSize  contentSizeForViewInPopover))set_contentSizeForViewInPopover;
+-(UINavigationController  *(^)(BOOL  modalInPopover))set_modalInPopover;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UINavigationController ,NSUserActivity *,userActivity);
+-(UINavigationController  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UINavigationController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UINavigationController ,long long,accessibilityNavigationStyle)
+-(UINavigationController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UINavigationController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UINavigationController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UINavigationController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UINavigationController  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UINavigationController  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UINavigationController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UINavigationController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UINavigationController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UINavigationController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UINavigationController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UINavigationController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UINavigationController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UINavigationController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UINavigationController);
+-(UINavigationController *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

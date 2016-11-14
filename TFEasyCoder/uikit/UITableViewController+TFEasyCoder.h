@@ -10,61 +10,61 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UITableViewController,UITableViewController *);
+typedef void(^UITableViewControllerEasyCoderBlock) (UITableViewController * ins);
 
 @interface UITableViewController (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UITableViewController, UITableViewController *);
-TF_EC_MINSTANCE_INT(UITableViewController,UITableViewController *);
++( UITableViewController *)easyCoder:(UITableViewControllerEasyCoderBlock)block;
+-(UITableViewController *)easyCoder:(UITableViewControllerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UITableViewController ,UITableView *,tableView);
-TF_EC_CHAIN_PROP_INT(UITableViewController ,BOOL,clearsSelectionOnViewWillAppear);
+-(UITableViewController  *(^)(UITableView *  tableView))set_tableView;
+-(UITableViewController  *(^)(BOOL  clearsSelectionOnViewWillAppear))set_clearsSelectionOnViewWillAppear;
 
 
 
 
 //superclass pros UIViewController
-TF_EC_CHAIN_PROP_INT(UITableViewController ,UITabBarItem *,tabBarItem)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,BOOL,hidesBottomBarWhenPushed)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,id<UIViewControllerTransitioningDelegate>  ,transitioningDelegate)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,UIView *,view)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,NSString *,title)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,BOOL,definesPresentationContext)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,BOOL,providesPresentationContextTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,long long,modalTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,long long,modalPresentationStyle)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,BOOL,modalPresentationCapturesStatusBarAppearance)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,BOOL,wantsFullScreenLayout)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,unsigned long long,edgesForExtendedLayout)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,BOOL,extendedLayoutIncludesOpaqueBars)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,BOOL,automaticallyAdjustsScrollViewInsets)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,CGSize,preferredContentSize)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,CGSize,contentSizeForViewInPopover)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,BOOL,modalInPopover)
+-(UITableViewController  *(^)(UITabBarItem *  tabBarItem))set_tabBarItem;
+-(UITableViewController  *(^)(BOOL  hidesBottomBarWhenPushed))set_hidesBottomBarWhenPushed;
+-(UITableViewController  *(^)(id<UIViewControllerTransitioningDelegate>    transitioningDelegate))set_transitioningDelegate;
+-(UITableViewController  *(^)(UIView *  view))set_view;
+-(UITableViewController  *(^)(NSString *  title))set_title;
+-(UITableViewController  *(^)(BOOL  definesPresentationContext))set_definesPresentationContext;
+-(UITableViewController  *(^)(BOOL  providesPresentationContextTransitionStyle))set_providesPresentationContextTransitionStyle;
+-(UITableViewController  *(^)(long long  modalTransitionStyle))set_modalTransitionStyle;
+-(UITableViewController  *(^)(long long  modalPresentationStyle))set_modalPresentationStyle;
+-(UITableViewController  *(^)(BOOL  modalPresentationCapturesStatusBarAppearance))set_modalPresentationCapturesStatusBarAppearance;
+-(UITableViewController  *(^)(BOOL  wantsFullScreenLayout))set_wantsFullScreenLayout;
+-(UITableViewController  *(^)(unsigned long long  edgesForExtendedLayout))set_edgesForExtendedLayout;
+-(UITableViewController  *(^)(BOOL  extendedLayoutIncludesOpaqueBars))set_extendedLayoutIncludesOpaqueBars;
+-(UITableViewController  *(^)(BOOL  automaticallyAdjustsScrollViewInsets))set_automaticallyAdjustsScrollViewInsets;
+-(UITableViewController  *(^)(CGSize  preferredContentSize))set_preferredContentSize;
+-(UITableViewController  *(^)(CGSize  contentSizeForViewInPopover))set_contentSizeForViewInPopover;
+-(UITableViewController  *(^)(BOOL  modalInPopover))set_modalInPopover;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UITableViewController ,NSUserActivity *,userActivity);
+-(UITableViewController  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UITableViewController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UITableViewController ,long long,accessibilityNavigationStyle)
+-(UITableViewController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UITableViewController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UITableViewController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UITableViewController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UITableViewController  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UITableViewController  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UITableViewController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UITableViewController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UITableViewController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UITableViewController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UITableViewController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UITableViewController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UITableViewController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UITableViewController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UITableViewController);
+-(UITableViewController *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

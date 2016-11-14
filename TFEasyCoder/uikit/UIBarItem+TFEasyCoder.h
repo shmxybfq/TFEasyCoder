@@ -10,46 +10,46 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIBarItem,UIBarItem *);
+typedef void(^UIBarItemEasyCoderBlock) (UIBarItem * ins);
 
 @interface UIBarItem (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIBarItem, UIBarItem *);
-TF_EC_MINSTANCE_INT(UIBarItem,UIBarItem *);
++( UIBarItem *)easyCoder:(UIBarItemEasyCoderBlock)block;
+-(UIBarItem *)easyCoder:(UIBarItemEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIBarItem ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(UIBarItem ,NSString *,title);
-TF_EC_CHAIN_PROP_INT(UIBarItem ,UIImage *,image);
-TF_EC_CHAIN_PROP_INT(UIBarItem ,UIImage *,landscapeImagePhone);
-TF_EC_CHAIN_PROP_INT(UIBarItem ,UIEdgeInsets,imageInsets);
-TF_EC_CHAIN_PROP_INT(UIBarItem ,UIEdgeInsets,landscapeImagePhoneInsets);
-TF_EC_CHAIN_PROP_INT(UIBarItem ,long long,tag);
+-(UIBarItem  *(^)(BOOL  enabled))set_enabled;
+-(UIBarItem  *(^)(NSString *  title))set_title;
+-(UIBarItem  *(^)(UIImage *  image))set_image;
+-(UIBarItem  *(^)(UIImage *  landscapeImagePhone))set_landscapeImagePhone;
+-(UIBarItem  *(^)(UIEdgeInsets  imageInsets))set_imageInsets;
+-(UIBarItem  *(^)(UIEdgeInsets  landscapeImagePhoneInsets))set_landscapeImagePhoneInsets;
+-(UIBarItem  *(^)(long long  tag))set_tag;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIBarItem ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIBarItem ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIBarItem ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIBarItem ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIBarItem ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIBarItem ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIBarItem ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIBarItem ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIBarItem ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIBarItem ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIBarItem ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIBarItem ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIBarItem ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIBarItem ,long long,accessibilityNavigationStyle)
+-(UIBarItem  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIBarItem  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIBarItem  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIBarItem  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIBarItem  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIBarItem  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIBarItem  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIBarItem  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIBarItem  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIBarItem  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIBarItem  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIBarItem  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIBarItem  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIBarItem  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIBarItem);
+-(UIBarItem *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

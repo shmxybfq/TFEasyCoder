@@ -10,50 +10,50 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(CAAnimationGroup,CAAnimationGroup *);
+typedef void(^CAAnimationGroupEasyCoderBlock) (CAAnimationGroup * ins);
 
 @interface CAAnimationGroup (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(CAAnimationGroup, CAAnimationGroup *);
-TF_EC_MINSTANCE_INT(CAAnimationGroup,CAAnimationGroup *);
++( CAAnimationGroup *)easyCoder:(CAAnimationGroupEasyCoderBlock)block;
+-(CAAnimationGroup *)easyCoder:(CAAnimationGroupEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,NSArray *,animations);
+-(CAAnimationGroup  *(^)(NSArray *  animations))set_animations;
 
 
 
 
 //superclass pros CAAnimation
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,CAMediaTimingFunction *,timingFunction);
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,double,beginTime);
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,double,duration);
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,float,speed);
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,double,timeOffset);
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,float,repeatCount);
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,double,repeatDuration);
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,BOOL,autoreverses);
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,NSString *,fillMode);
+-(CAAnimationGroup  *(^)(CAMediaTimingFunction *  timingFunction))set_timingFunction;
+-(CAAnimationGroup  *(^)(double  beginTime))set_beginTime;
+-(CAAnimationGroup  *(^)(double  duration))set_duration;
+-(CAAnimationGroup  *(^)(float  speed))set_speed;
+-(CAAnimationGroup  *(^)(double  timeOffset))set_timeOffset;
+-(CAAnimationGroup  *(^)(float  repeatCount))set_repeatCount;
+-(CAAnimationGroup  *(^)(double  repeatDuration))set_repeatDuration;
+-(CAAnimationGroup  *(^)(BOOL  autoreverses))set_autoreverses;
+-(CAAnimationGroup  *(^)(NSString *  fillMode))set_fillMode;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(CAAnimationGroup ,long long,accessibilityNavigationStyle)
+-(CAAnimationGroup  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(CAAnimationGroup  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(CAAnimationGroup  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(CAAnimationGroup  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(CAAnimationGroup  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(CAAnimationGroup  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(CAAnimationGroup  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(CAAnimationGroup  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(CAAnimationGroup  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(CAAnimationGroup  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(CAAnimationGroup  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(CAAnimationGroup  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(CAAnimationGroup  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(CAAnimationGroup  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(CAAnimationGroup);
+-(CAAnimationGroup *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -15,8 +15,22 @@
 
 @implementation UIReferenceLibraryViewController (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(UIReferenceLibraryViewController, UIReferenceLibraryViewController *);
-TF_EC_MINSTANCE_IMP(UIReferenceLibraryViewController, UIReferenceLibraryViewController *);
++( UIReferenceLibraryViewController *)easyCoder:(UIReferenceLibraryViewControllerEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( UIReferenceLibraryViewController *)ins);
+        }
+    }];
+}
+
+-( UIReferenceLibraryViewController *)easyCoder:(UIReferenceLibraryViewControllerEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
+
 
 
 
@@ -24,46 +38,276 @@ TF_EC_MINSTANCE_IMP(UIReferenceLibraryViewController, UIReferenceLibraryViewCont
 
 
 //superclass pros UIViewController
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,UITabBarItem *,tabBarItem)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,BOOL,hidesBottomBarWhenPushed)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,id<UIViewControllerTransitioningDelegate>  ,transitioningDelegate)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,UIView *,view)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,NSString *,title)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,BOOL,definesPresentationContext)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,BOOL,providesPresentationContextTransitionStyle)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,long long,modalTransitionStyle)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,long long,modalPresentationStyle)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,BOOL,modalPresentationCapturesStatusBarAppearance)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,BOOL,wantsFullScreenLayout)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,unsigned long long,edgesForExtendedLayout)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,BOOL,extendedLayoutIncludesOpaqueBars)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,BOOL,automaticallyAdjustsScrollViewInsets)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,CGSize,preferredContentSize)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,CGSize,contentSizeForViewInPopover)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,BOOL,modalInPopover)
+-(UIReferenceLibraryViewController  *(^)(UITabBarItem *  tabBarItem))set_tabBarItem{
+    __weak typeof(self) weakSelf = self;
+    return ^(UITabBarItem *  tabBarItem){
+        weakSelf.tabBarItem = tabBarItem;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(BOOL  hidesBottomBarWhenPushed))set_hidesBottomBarWhenPushed{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  hidesBottomBarWhenPushed){
+        weakSelf.hidesBottomBarWhenPushed = hidesBottomBarWhenPushed;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(id<UIViewControllerTransitioningDelegate>    transitioningDelegate))set_transitioningDelegate{
+    __weak typeof(self) weakSelf = self;
+    return ^(id<UIViewControllerTransitioningDelegate>    transitioningDelegate){
+        weakSelf.transitioningDelegate = transitioningDelegate;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(UIView *  view))set_view{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIView *  view){
+        weakSelf.view = view;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(NSString *  title))set_title{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  title){
+        weakSelf.title = title;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(BOOL  definesPresentationContext))set_definesPresentationContext{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  definesPresentationContext){
+        weakSelf.definesPresentationContext = definesPresentationContext;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(BOOL  providesPresentationContextTransitionStyle))set_providesPresentationContextTransitionStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  providesPresentationContextTransitionStyle){
+        weakSelf.providesPresentationContextTransitionStyle = providesPresentationContextTransitionStyle;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(long long  modalTransitionStyle))set_modalTransitionStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  modalTransitionStyle){
+        weakSelf.modalTransitionStyle = modalTransitionStyle;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(long long  modalPresentationStyle))set_modalPresentationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  modalPresentationStyle){
+        weakSelf.modalPresentationStyle = modalPresentationStyle;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(BOOL  modalPresentationCapturesStatusBarAppearance))set_modalPresentationCapturesStatusBarAppearance{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  modalPresentationCapturesStatusBarAppearance){
+        weakSelf.modalPresentationCapturesStatusBarAppearance = modalPresentationCapturesStatusBarAppearance;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(BOOL  wantsFullScreenLayout))set_wantsFullScreenLayout{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  wantsFullScreenLayout){
+        weakSelf.wantsFullScreenLayout = wantsFullScreenLayout;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(unsigned long long  edgesForExtendedLayout))set_edgesForExtendedLayout{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  edgesForExtendedLayout){
+        weakSelf.edgesForExtendedLayout = edgesForExtendedLayout;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(BOOL  extendedLayoutIncludesOpaqueBars))set_extendedLayoutIncludesOpaqueBars{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  extendedLayoutIncludesOpaqueBars){
+        weakSelf.extendedLayoutIncludesOpaqueBars = extendedLayoutIncludesOpaqueBars;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(BOOL  automaticallyAdjustsScrollViewInsets))set_automaticallyAdjustsScrollViewInsets{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  automaticallyAdjustsScrollViewInsets){
+        weakSelf.automaticallyAdjustsScrollViewInsets = automaticallyAdjustsScrollViewInsets;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(CGSize  preferredContentSize))set_preferredContentSize{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGSize  preferredContentSize){
+        weakSelf.preferredContentSize = preferredContentSize;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(CGSize  contentSizeForViewInPopover))set_contentSizeForViewInPopover{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGSize  contentSizeForViewInPopover){
+        weakSelf.contentSizeForViewInPopover = contentSizeForViewInPopover;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(BOOL  modalInPopover))set_modalInPopover{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  modalInPopover){
+        weakSelf.modalInPopover = modalInPopover;
+        return weakSelf;
+    };
+}
+
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,NSUserActivity *,userActivity)
+-(UIReferenceLibraryViewController  *(^)(NSUserActivity *  userActivity))set_userActivity{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSUserActivity *  userActivity){
+        weakSelf.userActivity = userActivity;
+        return weakSelf;
+    };
+}
+
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(UIReferenceLibraryViewController ,long long,accessibilityNavigationStyle)
+-(UIReferenceLibraryViewController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(UIReferenceLibraryViewController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIReferenceLibraryViewController);
+
+-(UIReferenceLibraryViewController *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

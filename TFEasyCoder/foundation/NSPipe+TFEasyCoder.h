@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSPipe,NSPipe *);
+typedef void(^NSPipeEasyCoderBlock) (NSPipe * ins);
 
 @interface NSPipe (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSPipe, NSPipe *);
-TF_EC_MINSTANCE_INT(NSPipe,NSPipe *);
++( NSPipe *)easyCoder:(NSPipeEasyCoderBlock)block;
+-(NSPipe *)easyCoder:(NSPipeEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(NSPipe,NSPipe *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSPipe ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSPipe ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSPipe ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSPipe ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSPipe ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSPipe ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSPipe ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSPipe ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSPipe ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSPipe ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSPipe ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSPipe ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSPipe ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSPipe ,long long,accessibilityNavigationStyle)
+-(NSPipe  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSPipe  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSPipe  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSPipe  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSPipe  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSPipe  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSPipe  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSPipe  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSPipe  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSPipe  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSPipe  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSPipe  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSPipe  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSPipe  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSPipe);
+-(NSPipe *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

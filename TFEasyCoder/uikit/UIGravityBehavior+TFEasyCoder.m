@@ -11,39 +11,178 @@
 
 @implementation UIGravityBehavior (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(UIGravityBehavior, UIGravityBehavior *);
-TF_EC_MINSTANCE_IMP(UIGravityBehavior, UIGravityBehavior *);
++( UIGravityBehavior *)easyCoder:(UIGravityBehaviorEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( UIGravityBehavior *)ins);
+        }
+    }];
+}
+
+-( UIGravityBehavior *)easyCoder:(UIGravityBehaviorEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
 
 
-TF_EC_CHAIN_PROP_IMP(UIGravityBehavior ,CGVector,gravityDirection)
-TF_EC_CHAIN_PROP_IMP(UIGravityBehavior ,double,angle)
-TF_EC_CHAIN_PROP_IMP(UIGravityBehavior ,double,magnitude)
+
+-(UIGravityBehavior  *(^)(CGVector  gravityDirection))set_gravityDirection{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGVector  gravityDirection){
+        weakSelf.gravityDirection = gravityDirection;
+        return weakSelf;
+    };
+}
+
+-(UIGravityBehavior  *(^)(double  angle))set_angle{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  angle){
+        weakSelf.angle = angle;
+        return weakSelf;
+    };
+}
+
+-(UIGravityBehavior  *(^)(double  magnitude))set_magnitude{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  magnitude){
+        weakSelf.magnitude = magnitude;
+        return weakSelf;
+    };
+}
+
 
 
 
 
 //superclass pros UIDynamicBehavior
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(UIGravityBehavior ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(UIGravityBehavior ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(UIGravityBehavior ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(UIGravityBehavior ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(UIGravityBehavior ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(UIGravityBehavior ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(UIGravityBehavior ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(UIGravityBehavior ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(UIGravityBehavior ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(UIGravityBehavior ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(UIGravityBehavior ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(UIGravityBehavior ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(UIGravityBehavior ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(UIGravityBehavior ,long long,accessibilityNavigationStyle)
+-(UIGravityBehavior  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(UIGravityBehavior  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(UIGravityBehavior  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(UIGravityBehavior  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(UIGravityBehavior  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(UIGravityBehavior  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(UIGravityBehavior  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(UIGravityBehavior  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(UIGravityBehavior  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(UIGravityBehavior  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(UIGravityBehavior  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(UIGravityBehavior  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(UIGravityBehavior  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(UIGravityBehavior  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIGravityBehavior);
+
+-(UIGravityBehavior *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UINib,UINib *);
+typedef void(^UINibEasyCoderBlock) (UINib * ins);
 
 @interface UINib (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UINib, UINib *);
-TF_EC_MINSTANCE_INT(UINib,UINib *);
++( UINib *)easyCoder:(UINibEasyCoderBlock)block;
+-(UINib *)easyCoder:(UINibEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(UINib,UINib *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UINib ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UINib ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UINib ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UINib ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UINib ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UINib ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UINib ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UINib ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UINib ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UINib ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UINib ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UINib ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UINib ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UINib ,long long,accessibilityNavigationStyle)
+-(UINib  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UINib  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UINib  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UINib  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UINib  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UINib  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UINib  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UINib  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UINib  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UINib  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UINib  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UINib  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UINib  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UINib  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UINib);
+-(UINib *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

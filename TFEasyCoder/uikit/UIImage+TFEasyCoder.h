@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIImage,UIImage *);
+typedef void(^UIImageEasyCoderBlock) (UIImage * ins);
 
 @interface UIImage (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIImage, UIImage *);
-TF_EC_MINSTANCE_INT(UIImage,UIImage *);
++( UIImage *)easyCoder:(UIImageEasyCoderBlock)block;
+-(UIImage *)easyCoder:(UIImageEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(UIImage,UIImage *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIImage ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIImage ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIImage ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIImage ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIImage ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIImage ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIImage ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIImage ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIImage ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIImage ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIImage ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIImage ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIImage ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIImage ,long long,accessibilityNavigationStyle)
+-(UIImage  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIImage  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIImage  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIImage  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIImage  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIImage  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIImage  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIImage  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIImage  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIImage  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIImage  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIImage  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIImage  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIImage  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIImage);
+-(UIImage *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

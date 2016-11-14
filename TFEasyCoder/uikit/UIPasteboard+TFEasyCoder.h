@@ -10,48 +10,48 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIPasteboard,UIPasteboard *);
+typedef void(^UIPasteboardEasyCoderBlock) (UIPasteboard * ins);
 
 @interface UIPasteboard (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIPasteboard, UIPasteboard *);
-TF_EC_MINSTANCE_INT(UIPasteboard,UIPasteboard *);
++( UIPasteboard *)easyCoder:(UIPasteboardEasyCoderBlock)block;
+-(UIPasteboard *)easyCoder:(UIPasteboardEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,NSString *,string);
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,NSArray *,strings);
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,NSArray *,URLs);
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,UIImage *,image);
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,NSArray *,images);
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,UIColor *,color);
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,NSArray *,colors);
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,BOOL,persistent);
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,NSArray *,items);
+-(UIPasteboard  *(^)(NSString *  string))set_string;
+-(UIPasteboard  *(^)(NSArray *  strings))set_strings;
+-(UIPasteboard  *(^)(NSArray *  URLs))set_URLs;
+-(UIPasteboard  *(^)(UIImage *  image))set_image;
+-(UIPasteboard  *(^)(NSArray *  images))set_images;
+-(UIPasteboard  *(^)(UIColor *  color))set_color;
+-(UIPasteboard  *(^)(NSArray *  colors))set_colors;
+-(UIPasteboard  *(^)(BOOL  persistent))set_persistent;
+-(UIPasteboard  *(^)(NSArray *  items))set_items;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIPasteboard ,long long,accessibilityNavigationStyle)
+-(UIPasteboard  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIPasteboard  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIPasteboard  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIPasteboard  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIPasteboard  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIPasteboard  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIPasteboard  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIPasteboard  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIPasteboard  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIPasteboard  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIPasteboard  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIPasteboard  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIPasteboard  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIPasteboard  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIPasteboard);
+-(UIPasteboard *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

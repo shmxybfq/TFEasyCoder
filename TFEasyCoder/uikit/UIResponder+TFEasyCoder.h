@@ -10,41 +10,41 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIResponder,UIResponder *);
+typedef void(^UIResponderEasyCoderBlock) (UIResponder * ins);
 
 @interface UIResponder (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIResponder, UIResponder *);
-TF_EC_MINSTANCE_INT(UIResponder,UIResponder *);
++( UIResponder *)easyCoder:(UIResponderEasyCoderBlock)block;
+-(UIResponder *)easyCoder:(UIResponderEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIResponder ,NSUserActivity *,userActivity);
+-(UIResponder  *(^)(NSUserActivity *  userActivity))set_userActivity;
 
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIResponder ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIResponder ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIResponder ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIResponder ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIResponder ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIResponder ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIResponder ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIResponder ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIResponder ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIResponder ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIResponder ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIResponder ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIResponder ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIResponder ,long long,accessibilityNavigationStyle)
+-(UIResponder  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIResponder  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIResponder  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIResponder  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIResponder  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIResponder  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIResponder  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIResponder  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIResponder  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIResponder  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIResponder  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIResponder  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIResponder  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIResponder  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIResponder);
+-(UIResponder *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

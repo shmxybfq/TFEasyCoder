@@ -10,48 +10,48 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UICollectionViewFlowLayout,UICollectionViewFlowLayout *);
+typedef void(^UICollectionViewFlowLayoutEasyCoderBlock) (UICollectionViewFlowLayout * ins);
 
 @interface UICollectionViewFlowLayout (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UICollectionViewFlowLayout, UICollectionViewFlowLayout *);
-TF_EC_MINSTANCE_INT(UICollectionViewFlowLayout,UICollectionViewFlowLayout *);
++( UICollectionViewFlowLayout *)easyCoder:(UICollectionViewFlowLayoutEasyCoderBlock)block;
+-(UICollectionViewFlowLayout *)easyCoder:(UICollectionViewFlowLayoutEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,double,minimumLineSpacing);
-TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,double,minimumInteritemSpacing);
-TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,CGSize,itemSize);
-TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,CGSize,estimatedItemSize);
-TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,long long,scrollDirection);
-TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,UIEdgeInsets,sectionInset);
-TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,BOOL,sectionHeadersPinToVisibleBounds);
-TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,BOOL,sectionFootersPinToVisibleBounds);
+-(UICollectionViewFlowLayout  *(^)(double  minimumLineSpacing))set_minimumLineSpacing;
+-(UICollectionViewFlowLayout  *(^)(double  minimumInteritemSpacing))set_minimumInteritemSpacing;
+-(UICollectionViewFlowLayout  *(^)(CGSize  itemSize))set_itemSize;
+-(UICollectionViewFlowLayout  *(^)(CGSize  estimatedItemSize))set_estimatedItemSize;
+-(UICollectionViewFlowLayout  *(^)(long long  scrollDirection))set_scrollDirection;
+-(UICollectionViewFlowLayout  *(^)(UIEdgeInsets  sectionInset))set_sectionInset;
+-(UICollectionViewFlowLayout  *(^)(BOOL  sectionHeadersPinToVisibleBounds))set_sectionHeadersPinToVisibleBounds;
+-(UICollectionViewFlowLayout  *(^)(BOOL  sectionFootersPinToVisibleBounds))set_sectionFootersPinToVisibleBounds;
 
 
 
 
 //superclass pros UICollectionViewLayout
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFlowLayout ,long long,accessibilityNavigationStyle)
+-(UICollectionViewFlowLayout  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UICollectionViewFlowLayout  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UICollectionViewFlowLayout  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UICollectionViewFlowLayout  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UICollectionViewFlowLayout  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UICollectionViewFlowLayout  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UICollectionViewFlowLayout  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UICollectionViewFlowLayout  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UICollectionViewFlowLayout  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UICollectionViewFlowLayout  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UICollectionViewFlowLayout  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UICollectionViewFlowLayout  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UICollectionViewFlowLayout  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UICollectionViewFlowLayout  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UICollectionViewFlowLayout);
+-(UICollectionViewFlowLayout *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

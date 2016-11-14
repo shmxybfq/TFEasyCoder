@@ -10,100 +10,100 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(CAShapeLayer,CAShapeLayer *);
+typedef void(^CAShapeLayerEasyCoderBlock) (CAShapeLayer * ins);
 
 @interface CAShapeLayer (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(CAShapeLayer, CAShapeLayer *);
-TF_EC_MINSTANCE_INT(CAShapeLayer,CAShapeLayer *);
++( CAShapeLayer *)easyCoder:(CAShapeLayerEasyCoderBlock)block;
+-(CAShapeLayer *)easyCoder:(CAShapeLayerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,CGPathRef,path);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,CGColorRef,fillColor);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,NSString *,fillRule);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,CGColorRef,strokeColor);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,double,strokeStart);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,double,strokeEnd);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,double,lineWidth);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,double,miterLimit);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,NSString *,lineCap);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,NSString *,lineJoin);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,double,lineDashPhase);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,NSArray *,lineDashPattern);
+-(CAShapeLayer  *(^)(CGPathRef  path))set_path;
+-(CAShapeLayer  *(^)(CGColorRef  fillColor))set_fillColor;
+-(CAShapeLayer  *(^)(NSString *  fillRule))set_fillRule;
+-(CAShapeLayer  *(^)(CGColorRef  strokeColor))set_strokeColor;
+-(CAShapeLayer  *(^)(double  strokeStart))set_strokeStart;
+-(CAShapeLayer  *(^)(double  strokeEnd))set_strokeEnd;
+-(CAShapeLayer  *(^)(double  lineWidth))set_lineWidth;
+-(CAShapeLayer  *(^)(double  miterLimit))set_miterLimit;
+-(CAShapeLayer  *(^)(NSString *  lineCap))set_lineCap;
+-(CAShapeLayer  *(^)(NSString *  lineJoin))set_lineJoin;
+-(CAShapeLayer  *(^)(double  lineDashPhase))set_lineDashPhase;
+-(CAShapeLayer  *(^)(NSArray *  lineDashPattern))set_lineDashPattern;
 
 
 
 
 //superclass pros CALayer
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,CGPoint,position);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,double,zPosition);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,CGPoint,anchorPoint);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,double,anchorPointZ);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,CATransform3D,transform);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,BOOL,hidden);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,BOOL,doubleSided);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,BOOL,geometryFlipped);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,NSArray *,sublayers);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,CATransform3D,sublayerTransform);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,CALayer *,mask);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,BOOL,masksToBounds);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,NSString *,contentsGravity);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,double,contentsScale);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,NSString *,minificationFilter);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,NSString *,magnificationFilter);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,float,minificationFilterBias);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,BOOL,opaque);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,BOOL,needsDisplayOnBoundsChange);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,BOOL,drawsAsynchronously);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,unsigned int,edgeAntialiasingMask);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,BOOL,allowsEdgeAntialiasing);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,CGColorRef,backgroundColor);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,double,cornerRadius);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,double,borderWidth);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,CGColorRef,borderColor);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,float,opacity);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,BOOL,allowsGroupOpacity);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,NSArray *,filters);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,NSArray *,backgroundFilters);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,BOOL,shouldRasterize);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,double,rasterizationScale);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,CGColorRef,shadowColor);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,float,shadowOpacity);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,CGSize,shadowOffset);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,double,shadowRadius);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,CGPathRef,shadowPath);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,NSDictionary *,actions);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,NSString *,name);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,NSDictionary *,style);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,double,beginTime);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,double,duration);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,float,speed);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,double,timeOffset);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,float,repeatCount);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,double,repeatDuration);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,BOOL,autoreverses);
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,NSString *,fillMode);
+-(CAShapeLayer  *(^)(CGPoint  position))set_position;
+-(CAShapeLayer  *(^)(double  zPosition))set_zPosition;
+-(CAShapeLayer  *(^)(CGPoint  anchorPoint))set_anchorPoint;
+-(CAShapeLayer  *(^)(double  anchorPointZ))set_anchorPointZ;
+-(CAShapeLayer  *(^)(CATransform3D  transform))set_transform;
+-(CAShapeLayer  *(^)(BOOL  hidden))set_hidden;
+-(CAShapeLayer  *(^)(BOOL  doubleSided))set_doubleSided;
+-(CAShapeLayer  *(^)(BOOL  geometryFlipped))set_geometryFlipped;
+-(CAShapeLayer  *(^)(NSArray *  sublayers))set_sublayers;
+-(CAShapeLayer  *(^)(CATransform3D  sublayerTransform))set_sublayerTransform;
+-(CAShapeLayer  *(^)(CALayer *  mask))set_mask;
+-(CAShapeLayer  *(^)(BOOL  masksToBounds))set_masksToBounds;
+-(CAShapeLayer  *(^)(NSString *  contentsGravity))set_contentsGravity;
+-(CAShapeLayer  *(^)(double  contentsScale))set_contentsScale;
+-(CAShapeLayer  *(^)(NSString *  minificationFilter))set_minificationFilter;
+-(CAShapeLayer  *(^)(NSString *  magnificationFilter))set_magnificationFilter;
+-(CAShapeLayer  *(^)(float  minificationFilterBias))set_minificationFilterBias;
+-(CAShapeLayer  *(^)(BOOL  opaque))set_opaque;
+-(CAShapeLayer  *(^)(BOOL  needsDisplayOnBoundsChange))set_needsDisplayOnBoundsChange;
+-(CAShapeLayer  *(^)(BOOL  drawsAsynchronously))set_drawsAsynchronously;
+-(CAShapeLayer  *(^)(unsigned int  edgeAntialiasingMask))set_edgeAntialiasingMask;
+-(CAShapeLayer  *(^)(BOOL  allowsEdgeAntialiasing))set_allowsEdgeAntialiasing;
+-(CAShapeLayer  *(^)(CGColorRef  backgroundColor))set_backgroundColor;
+-(CAShapeLayer  *(^)(double  cornerRadius))set_cornerRadius;
+-(CAShapeLayer  *(^)(double  borderWidth))set_borderWidth;
+-(CAShapeLayer  *(^)(CGColorRef  borderColor))set_borderColor;
+-(CAShapeLayer  *(^)(float  opacity))set_opacity;
+-(CAShapeLayer  *(^)(BOOL  allowsGroupOpacity))set_allowsGroupOpacity;
+-(CAShapeLayer  *(^)(NSArray *  filters))set_filters;
+-(CAShapeLayer  *(^)(NSArray *  backgroundFilters))set_backgroundFilters;
+-(CAShapeLayer  *(^)(BOOL  shouldRasterize))set_shouldRasterize;
+-(CAShapeLayer  *(^)(double  rasterizationScale))set_rasterizationScale;
+-(CAShapeLayer  *(^)(CGColorRef  shadowColor))set_shadowColor;
+-(CAShapeLayer  *(^)(float  shadowOpacity))set_shadowOpacity;
+-(CAShapeLayer  *(^)(CGSize  shadowOffset))set_shadowOffset;
+-(CAShapeLayer  *(^)(double  shadowRadius))set_shadowRadius;
+-(CAShapeLayer  *(^)(CGPathRef  shadowPath))set_shadowPath;
+-(CAShapeLayer  *(^)(NSDictionary *  actions))set_actions;
+-(CAShapeLayer  *(^)(NSString *  name))set_name;
+-(CAShapeLayer  *(^)(NSDictionary *  style))set_style;
+-(CAShapeLayer  *(^)(double  beginTime))set_beginTime;
+-(CAShapeLayer  *(^)(double  duration))set_duration;
+-(CAShapeLayer  *(^)(float  speed))set_speed;
+-(CAShapeLayer  *(^)(double  timeOffset))set_timeOffset;
+-(CAShapeLayer  *(^)(float  repeatCount))set_repeatCount;
+-(CAShapeLayer  *(^)(double  repeatDuration))set_repeatDuration;
+-(CAShapeLayer  *(^)(BOOL  autoreverses))set_autoreverses;
+-(CAShapeLayer  *(^)(NSString *  fillMode))set_fillMode;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(CAShapeLayer ,long long,accessibilityNavigationStyle)
+-(CAShapeLayer  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(CAShapeLayer  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(CAShapeLayer  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(CAShapeLayer  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(CAShapeLayer  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(CAShapeLayer  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(CAShapeLayer  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(CAShapeLayer  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(CAShapeLayer  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(CAShapeLayer  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(CAShapeLayer  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(CAShapeLayer  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(CAShapeLayer  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(CAShapeLayer  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(CAShapeLayer);
+-(CAShapeLayer *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

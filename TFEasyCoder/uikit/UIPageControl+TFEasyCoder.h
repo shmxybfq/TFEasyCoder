@@ -10,62 +10,62 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIPageControl,UIPageControl *);
+typedef void(^UIPageControlEasyCoderBlock) (UIPageControl * ins);
 
 @interface UIPageControl (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIPageControl, UIPageControl *);
-TF_EC_MINSTANCE_INT(UIPageControl,UIPageControl *);
++( UIPageControl *)easyCoder:(UIPageControlEasyCoderBlock)block;
+-(UIPageControl *)easyCoder:(UIPageControlEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIPageControl ,long long,numberOfPages);
-TF_EC_CHAIN_PROP_INT(UIPageControl ,long long,currentPage);
-TF_EC_CHAIN_PROP_INT(UIPageControl ,BOOL,hidesForSinglePage);
-TF_EC_CHAIN_PROP_INT(UIPageControl ,BOOL,defersCurrentPageDisplay);
-TF_EC_CHAIN_PROP_INT(UIPageControl ,UIColor *,pageIndicatorTintColor);
-TF_EC_CHAIN_PROP_INT(UIPageControl ,UIColor *,currentPageIndicatorTintColor);
+-(UIPageControl  *(^)(long long  numberOfPages))set_numberOfPages;
+-(UIPageControl  *(^)(long long  currentPage))set_currentPage;
+-(UIPageControl  *(^)(BOOL  hidesForSinglePage))set_hidesForSinglePage;
+-(UIPageControl  *(^)(BOOL  defersCurrentPageDisplay))set_defersCurrentPageDisplay;
+-(UIPageControl  *(^)(UIColor *  pageIndicatorTintColor))set_pageIndicatorTintColor;
+-(UIPageControl  *(^)(UIColor *  currentPageIndicatorTintColor))set_currentPageIndicatorTintColor;
 
 
 
 
 
 //superclass pros UIControl
-TF_EC_CHAIN_PROP_INT(UIPageControl ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(UIPageControl ,BOOL,selected);
-TF_EC_CHAIN_PROP_INT(UIPageControl ,BOOL,highlighted);
-TF_EC_CHAIN_PROP_INT(UIPageControl ,long long,contentVerticalAlignment);
-TF_EC_CHAIN_PROP_INT(UIPageControl ,long long,contentHorizontalAlignment);
+-(UIPageControl  *(^)(BOOL  enabled))set_enabled;
+-(UIPageControl  *(^)(BOOL  selected))set_selected;
+-(UIPageControl  *(^)(BOOL  highlighted))set_highlighted;
+-(UIPageControl  *(^)(long long  contentVerticalAlignment))set_contentVerticalAlignment;
+-(UIPageControl  *(^)(long long  contentHorizontalAlignment))set_contentHorizontalAlignment;
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UIPageControl ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UIPageControl ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UIPageControl ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UIPageControl ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UIPageControl ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UIPageControl ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UIPageControl ,UIColor *,backgroundColor)
+-(UIPageControl  *(^)(UIView *  maskView))set_maskView;
+-(UIPageControl  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UIPageControl  *(^)(long long  tag))set_tag;
+-(UIPageControl  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UIPageControl  *(^)(CGPoint  center))set_center;
+-(UIPageControl  *(^)(CGRect  frame))set_frame;
+-(UIPageControl  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIPageControl ,NSUserActivity *,userActivity);
+-(UIPageControl  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIPageControl ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIPageControl ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIPageControl ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIPageControl ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIPageControl ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIPageControl ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIPageControl ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIPageControl ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIPageControl ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIPageControl ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIPageControl ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIPageControl ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIPageControl ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIPageControl ,long long,accessibilityNavigationStyle)
+-(UIPageControl  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIPageControl  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIPageControl  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIPageControl  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIPageControl  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIPageControl  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIPageControl  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIPageControl  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIPageControl  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIPageControl  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIPageControl  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIPageControl  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIPageControl  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIPageControl  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIPageControl);
+-(UIPageControl *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

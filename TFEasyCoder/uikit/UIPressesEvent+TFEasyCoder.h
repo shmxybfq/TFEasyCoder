@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIPressesEvent,UIPressesEvent *);
+typedef void(^UIPressesEventEasyCoderBlock) (UIPressesEvent * ins);
 
 @interface UIPressesEvent (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIPressesEvent, UIPressesEvent *);
-TF_EC_MINSTANCE_INT(UIPressesEvent,UIPressesEvent *);
++( UIPressesEvent *)easyCoder:(UIPressesEventEasyCoderBlock)block;
+-(UIPressesEvent *)easyCoder:(UIPressesEventEasyCoderBlock)block;
 
 
 
@@ -24,26 +24,26 @@ TF_EC_MINSTANCE_INT(UIPressesEvent,UIPressesEvent *);
 
 //superclass pros UIEvent
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIPressesEvent ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIPressesEvent ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIPressesEvent ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIPressesEvent ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIPressesEvent ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIPressesEvent ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIPressesEvent ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIPressesEvent ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIPressesEvent ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIPressesEvent ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIPressesEvent ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIPressesEvent ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIPressesEvent ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIPressesEvent ,long long,accessibilityNavigationStyle)
+-(UIPressesEvent  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIPressesEvent  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIPressesEvent  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIPressesEvent  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIPressesEvent  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIPressesEvent  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIPressesEvent  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIPressesEvent  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIPressesEvent  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIPressesEvent  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIPressesEvent  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIPressesEvent  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIPressesEvent  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIPressesEvent  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIPressesEvent);
+-(UIPressesEvent *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

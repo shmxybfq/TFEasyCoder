@@ -10,41 +10,41 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIDynamicAnimator,UIDynamicAnimator *);
+typedef void(^UIDynamicAnimatorEasyCoderBlock) (UIDynamicAnimator * ins);
 
 @interface UIDynamicAnimator (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIDynamicAnimator, UIDynamicAnimator *);
-TF_EC_MINSTANCE_INT(UIDynamicAnimator,UIDynamicAnimator *);
++( UIDynamicAnimator *)easyCoder:(UIDynamicAnimatorEasyCoderBlock)block;
+-(UIDynamicAnimator *)easyCoder:(UIDynamicAnimatorEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIDynamicAnimator ,id<UIDynamicAnimatorDelegate> ,delegate);
+-(UIDynamicAnimator  *(^)(id<UIDynamicAnimatorDelegate>   delegate))set_delegate;
 
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIDynamicAnimator ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIDynamicAnimator ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIDynamicAnimator ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIDynamicAnimator ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIDynamicAnimator ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIDynamicAnimator ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIDynamicAnimator ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIDynamicAnimator ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIDynamicAnimator ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIDynamicAnimator ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIDynamicAnimator ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIDynamicAnimator ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIDynamicAnimator ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIDynamicAnimator ,long long,accessibilityNavigationStyle)
+-(UIDynamicAnimator  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIDynamicAnimator  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIDynamicAnimator  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIDynamicAnimator  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIDynamicAnimator  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIDynamicAnimator  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIDynamicAnimator  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIDynamicAnimator  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIDynamicAnimator  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIDynamicAnimator  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIDynamicAnimator  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIDynamicAnimator  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIDynamicAnimator  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIDynamicAnimator  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIDynamicAnimator);
+-(UIDynamicAnimator *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

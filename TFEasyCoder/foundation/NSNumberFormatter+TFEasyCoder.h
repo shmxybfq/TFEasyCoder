@@ -10,97 +10,97 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSNumberFormatter,NSNumberFormatter *);
+typedef void(^NSNumberFormatterEasyCoderBlock) (NSNumberFormatter * ins);
 
 @interface NSNumberFormatter (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSNumberFormatter, NSNumberFormatter *);
-TF_EC_MINSTANCE_INT(NSNumberFormatter,NSNumberFormatter *);
++( NSNumberFormatter *)easyCoder:(NSNumberFormatterEasyCoderBlock)block;
+-(NSNumberFormatter *)easyCoder:(NSNumberFormatterEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,long long,formattingContext);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,unsigned long long,numberStyle);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSLocale *,locale);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,BOOL,generatesDecimalNumbers);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,unsigned long long,formatterBehavior);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,negativeFormat);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSDictionary *,textAttributesForNegativeValues);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,positiveFormat);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSDictionary *,textAttributesForPositiveValues);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,BOOL,allowsFloats);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,decimalSeparator);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,BOOL,alwaysShowsDecimalSeparator);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,currencyDecimalSeparator);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,BOOL,usesGroupingSeparator);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,groupingSeparator);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,zeroSymbol);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSDictionary *,textAttributesForZero);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,nilSymbol);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSDictionary *,textAttributesForNil);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,notANumberSymbol);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSDictionary *,textAttributesForNotANumber);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,positiveInfinitySymbol);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSDictionary *,textAttributesForPositiveInfinity);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,negativeInfinitySymbol);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSDictionary *,textAttributesForNegativeInfinity);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,positivePrefix);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,positiveSuffix);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,negativePrefix);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,negativeSuffix);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,currencyCode);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,currencySymbol);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,internationalCurrencySymbol);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,percentSymbol);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,perMillSymbol);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,minusSign);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,plusSign);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,exponentSymbol);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,unsigned long long,groupingSize);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,unsigned long long,secondaryGroupingSize);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSNumber *,multiplier);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,unsigned long long,formatWidth);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,paddingCharacter);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,unsigned long long,paddingPosition);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,unsigned long long,roundingMode);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSNumber *,roundingIncrement);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,unsigned long long,minimumIntegerDigits);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,unsigned long long,maximumIntegerDigits);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,unsigned long long,minimumFractionDigits);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,unsigned long long,maximumFractionDigits);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSNumber *,minimum);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSNumber *,maximum);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,currencyGroupingSeparator);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,BOOL,lenient);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,BOOL,usesSignificantDigits);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,unsigned long long,minimumSignificantDigits);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,unsigned long long,maximumSignificantDigits);
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,BOOL,partialStringValidationEnabled);
+-(NSNumberFormatter  *(^)(long long  formattingContext))set_formattingContext;
+-(NSNumberFormatter  *(^)(unsigned long long  numberStyle))set_numberStyle;
+-(NSNumberFormatter  *(^)(NSLocale *  locale))set_locale;
+-(NSNumberFormatter  *(^)(BOOL  generatesDecimalNumbers))set_generatesDecimalNumbers;
+-(NSNumberFormatter  *(^)(unsigned long long  formatterBehavior))set_formatterBehavior;
+-(NSNumberFormatter  *(^)(NSString *  negativeFormat))set_negativeFormat;
+-(NSNumberFormatter  *(^)(NSDictionary *  textAttributesForNegativeValues))set_textAttributesForNegativeValues;
+-(NSNumberFormatter  *(^)(NSString *  positiveFormat))set_positiveFormat;
+-(NSNumberFormatter  *(^)(NSDictionary *  textAttributesForPositiveValues))set_textAttributesForPositiveValues;
+-(NSNumberFormatter  *(^)(BOOL  allowsFloats))set_allowsFloats;
+-(NSNumberFormatter  *(^)(NSString *  decimalSeparator))set_decimalSeparator;
+-(NSNumberFormatter  *(^)(BOOL  alwaysShowsDecimalSeparator))set_alwaysShowsDecimalSeparator;
+-(NSNumberFormatter  *(^)(NSString *  currencyDecimalSeparator))set_currencyDecimalSeparator;
+-(NSNumberFormatter  *(^)(BOOL  usesGroupingSeparator))set_usesGroupingSeparator;
+-(NSNumberFormatter  *(^)(NSString *  groupingSeparator))set_groupingSeparator;
+-(NSNumberFormatter  *(^)(NSString *  zeroSymbol))set_zeroSymbol;
+-(NSNumberFormatter  *(^)(NSDictionary *  textAttributesForZero))set_textAttributesForZero;
+-(NSNumberFormatter  *(^)(NSString *  nilSymbol))set_nilSymbol;
+-(NSNumberFormatter  *(^)(NSDictionary *  textAttributesForNil))set_textAttributesForNil;
+-(NSNumberFormatter  *(^)(NSString *  notANumberSymbol))set_notANumberSymbol;
+-(NSNumberFormatter  *(^)(NSDictionary *  textAttributesForNotANumber))set_textAttributesForNotANumber;
+-(NSNumberFormatter  *(^)(NSString *  positiveInfinitySymbol))set_positiveInfinitySymbol;
+-(NSNumberFormatter  *(^)(NSDictionary *  textAttributesForPositiveInfinity))set_textAttributesForPositiveInfinity;
+-(NSNumberFormatter  *(^)(NSString *  negativeInfinitySymbol))set_negativeInfinitySymbol;
+-(NSNumberFormatter  *(^)(NSDictionary *  textAttributesForNegativeInfinity))set_textAttributesForNegativeInfinity;
+-(NSNumberFormatter  *(^)(NSString *  positivePrefix))set_positivePrefix;
+-(NSNumberFormatter  *(^)(NSString *  positiveSuffix))set_positiveSuffix;
+-(NSNumberFormatter  *(^)(NSString *  negativePrefix))set_negativePrefix;
+-(NSNumberFormatter  *(^)(NSString *  negativeSuffix))set_negativeSuffix;
+-(NSNumberFormatter  *(^)(NSString *  currencyCode))set_currencyCode;
+-(NSNumberFormatter  *(^)(NSString *  currencySymbol))set_currencySymbol;
+-(NSNumberFormatter  *(^)(NSString *  internationalCurrencySymbol))set_internationalCurrencySymbol;
+-(NSNumberFormatter  *(^)(NSString *  percentSymbol))set_percentSymbol;
+-(NSNumberFormatter  *(^)(NSString *  perMillSymbol))set_perMillSymbol;
+-(NSNumberFormatter  *(^)(NSString *  minusSign))set_minusSign;
+-(NSNumberFormatter  *(^)(NSString *  plusSign))set_plusSign;
+-(NSNumberFormatter  *(^)(NSString *  exponentSymbol))set_exponentSymbol;
+-(NSNumberFormatter  *(^)(unsigned long long  groupingSize))set_groupingSize;
+-(NSNumberFormatter  *(^)(unsigned long long  secondaryGroupingSize))set_secondaryGroupingSize;
+-(NSNumberFormatter  *(^)(NSNumber *  multiplier))set_multiplier;
+-(NSNumberFormatter  *(^)(unsigned long long  formatWidth))set_formatWidth;
+-(NSNumberFormatter  *(^)(NSString *  paddingCharacter))set_paddingCharacter;
+-(NSNumberFormatter  *(^)(unsigned long long  paddingPosition))set_paddingPosition;
+-(NSNumberFormatter  *(^)(unsigned long long  roundingMode))set_roundingMode;
+-(NSNumberFormatter  *(^)(NSNumber *  roundingIncrement))set_roundingIncrement;
+-(NSNumberFormatter  *(^)(unsigned long long  minimumIntegerDigits))set_minimumIntegerDigits;
+-(NSNumberFormatter  *(^)(unsigned long long  maximumIntegerDigits))set_maximumIntegerDigits;
+-(NSNumberFormatter  *(^)(unsigned long long  minimumFractionDigits))set_minimumFractionDigits;
+-(NSNumberFormatter  *(^)(unsigned long long  maximumFractionDigits))set_maximumFractionDigits;
+-(NSNumberFormatter  *(^)(NSNumber *  minimum))set_minimum;
+-(NSNumberFormatter  *(^)(NSNumber *  maximum))set_maximum;
+-(NSNumberFormatter  *(^)(NSString *  currencyGroupingSeparator))set_currencyGroupingSeparator;
+-(NSNumberFormatter  *(^)(BOOL  lenient))set_lenient;
+-(NSNumberFormatter  *(^)(BOOL  usesSignificantDigits))set_usesSignificantDigits;
+-(NSNumberFormatter  *(^)(unsigned long long  minimumSignificantDigits))set_minimumSignificantDigits;
+-(NSNumberFormatter  *(^)(unsigned long long  maximumSignificantDigits))set_maximumSignificantDigits;
+-(NSNumberFormatter  *(^)(BOOL  partialStringValidationEnabled))set_partialStringValidationEnabled;
 
 
 
 
 //superclass pros NSFormatter
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSNumberFormatter ,long long,accessibilityNavigationStyle)
+-(NSNumberFormatter  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSNumberFormatter  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSNumberFormatter  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSNumberFormatter  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSNumberFormatter  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSNumberFormatter  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSNumberFormatter  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSNumberFormatter  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSNumberFormatter  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSNumberFormatter  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSNumberFormatter  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSNumberFormatter  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSNumberFormatter  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSNumberFormatter  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSNumberFormatter);
+-(NSNumberFormatter *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSAssertionHandler,NSAssertionHandler *);
+typedef void(^NSAssertionHandlerEasyCoderBlock) (NSAssertionHandler * ins);
 
 @interface NSAssertionHandler (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSAssertionHandler, NSAssertionHandler *);
-TF_EC_MINSTANCE_INT(NSAssertionHandler,NSAssertionHandler *);
++( NSAssertionHandler *)easyCoder:(NSAssertionHandlerEasyCoderBlock)block;
+-(NSAssertionHandler *)easyCoder:(NSAssertionHandlerEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(NSAssertionHandler,NSAssertionHandler *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSAssertionHandler ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSAssertionHandler ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSAssertionHandler ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSAssertionHandler ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSAssertionHandler ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSAssertionHandler ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSAssertionHandler ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSAssertionHandler ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSAssertionHandler ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSAssertionHandler ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSAssertionHandler ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSAssertionHandler ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSAssertionHandler ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSAssertionHandler ,long long,accessibilityNavigationStyle)
+-(NSAssertionHandler  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSAssertionHandler  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSAssertionHandler  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSAssertionHandler  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSAssertionHandler  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSAssertionHandler  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSAssertionHandler  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSAssertionHandler  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSAssertionHandler  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSAssertionHandler  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSAssertionHandler  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSAssertionHandler  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSAssertionHandler  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSAssertionHandler  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSAssertionHandler);
+-(NSAssertionHandler *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

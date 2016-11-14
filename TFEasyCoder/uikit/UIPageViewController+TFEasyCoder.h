@@ -10,62 +10,62 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIPageViewController,UIPageViewController *);
+typedef void(^UIPageViewControllerEasyCoderBlock) (UIPageViewController * ins);
 
 @interface UIPageViewController (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIPageViewController, UIPageViewController *);
-TF_EC_MINSTANCE_INT(UIPageViewController,UIPageViewController *);
++( UIPageViewController *)easyCoder:(UIPageViewControllerEasyCoderBlock)block;
+-(UIPageViewController *)easyCoder:(UIPageViewControllerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,id<UIPageViewControllerDelegate>,delegate);
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,id<UIPageViewControllerDataSource>,dataSource);
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,BOOL,doubleSided);
+-(UIPageViewController  *(^)(id<UIPageViewControllerDelegate>  delegate))set_delegate;
+-(UIPageViewController  *(^)(id<UIPageViewControllerDataSource>  dataSource))set_dataSource;
+-(UIPageViewController  *(^)(BOOL  doubleSided))set_doubleSided;
 
 
 
 
 //superclass pros UIViewController
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,UITabBarItem *,tabBarItem)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,BOOL,hidesBottomBarWhenPushed)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,id<UIViewControllerTransitioningDelegate>  ,transitioningDelegate)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,UIView *,view)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,NSString *,title)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,BOOL,definesPresentationContext)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,BOOL,providesPresentationContextTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,long long,modalTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,long long,modalPresentationStyle)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,BOOL,modalPresentationCapturesStatusBarAppearance)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,BOOL,wantsFullScreenLayout)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,unsigned long long,edgesForExtendedLayout)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,BOOL,extendedLayoutIncludesOpaqueBars)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,BOOL,automaticallyAdjustsScrollViewInsets)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,CGSize,preferredContentSize)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,CGSize,contentSizeForViewInPopover)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,BOOL,modalInPopover)
+-(UIPageViewController  *(^)(UITabBarItem *  tabBarItem))set_tabBarItem;
+-(UIPageViewController  *(^)(BOOL  hidesBottomBarWhenPushed))set_hidesBottomBarWhenPushed;
+-(UIPageViewController  *(^)(id<UIViewControllerTransitioningDelegate>    transitioningDelegate))set_transitioningDelegate;
+-(UIPageViewController  *(^)(UIView *  view))set_view;
+-(UIPageViewController  *(^)(NSString *  title))set_title;
+-(UIPageViewController  *(^)(BOOL  definesPresentationContext))set_definesPresentationContext;
+-(UIPageViewController  *(^)(BOOL  providesPresentationContextTransitionStyle))set_providesPresentationContextTransitionStyle;
+-(UIPageViewController  *(^)(long long  modalTransitionStyle))set_modalTransitionStyle;
+-(UIPageViewController  *(^)(long long  modalPresentationStyle))set_modalPresentationStyle;
+-(UIPageViewController  *(^)(BOOL  modalPresentationCapturesStatusBarAppearance))set_modalPresentationCapturesStatusBarAppearance;
+-(UIPageViewController  *(^)(BOOL  wantsFullScreenLayout))set_wantsFullScreenLayout;
+-(UIPageViewController  *(^)(unsigned long long  edgesForExtendedLayout))set_edgesForExtendedLayout;
+-(UIPageViewController  *(^)(BOOL  extendedLayoutIncludesOpaqueBars))set_extendedLayoutIncludesOpaqueBars;
+-(UIPageViewController  *(^)(BOOL  automaticallyAdjustsScrollViewInsets))set_automaticallyAdjustsScrollViewInsets;
+-(UIPageViewController  *(^)(CGSize  preferredContentSize))set_preferredContentSize;
+-(UIPageViewController  *(^)(CGSize  contentSizeForViewInPopover))set_contentSizeForViewInPopover;
+-(UIPageViewController  *(^)(BOOL  modalInPopover))set_modalInPopover;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,NSUserActivity *,userActivity);
+-(UIPageViewController  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIPageViewController ,long long,accessibilityNavigationStyle)
+-(UIPageViewController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIPageViewController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIPageViewController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIPageViewController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIPageViewController  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIPageViewController  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIPageViewController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIPageViewController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIPageViewController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIPageViewController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIPageViewController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIPageViewController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIPageViewController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIPageViewController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIPageViewController);
+-(UIPageViewController *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

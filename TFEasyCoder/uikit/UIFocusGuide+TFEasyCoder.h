@@ -10,44 +10,44 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIFocusGuide,UIFocusGuide *);
+typedef void(^UIFocusGuideEasyCoderBlock) (UIFocusGuide * ins);
 
 @interface UIFocusGuide (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIFocusGuide, UIFocusGuide *);
-TF_EC_MINSTANCE_INT(UIFocusGuide,UIFocusGuide *);
++( UIFocusGuide *)easyCoder:(UIFocusGuideEasyCoderBlock)block;
+-(UIFocusGuide *)easyCoder:(UIFocusGuideEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIFocusGuide ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(UIFocusGuide ,UIView *,preferredFocusedView);
+-(UIFocusGuide  *(^)(BOOL  enabled))set_enabled;
+-(UIFocusGuide  *(^)(UIView *  preferredFocusedView))set_preferredFocusedView;
 
 
 
 
 //superclass pros UILayoutGuide
-TF_EC_CHAIN_PROP_INT(UIFocusGuide ,UIView *,owningView);
-TF_EC_CHAIN_PROP_INT(UIFocusGuide ,NSString *,identifier);
+-(UIFocusGuide  *(^)(UIView *  owningView))set_owningView;
+-(UIFocusGuide  *(^)(NSString *  identifier))set_identifier;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIFocusGuide ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIFocusGuide ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIFocusGuide ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIFocusGuide ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIFocusGuide ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIFocusGuide ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIFocusGuide ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIFocusGuide ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIFocusGuide ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIFocusGuide ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIFocusGuide ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIFocusGuide ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIFocusGuide ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIFocusGuide ,long long,accessibilityNavigationStyle)
+-(UIFocusGuide  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIFocusGuide  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIFocusGuide  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIFocusGuide  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIFocusGuide  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIFocusGuide  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIFocusGuide  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIFocusGuide  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIFocusGuide  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIFocusGuide  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIFocusGuide  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIFocusGuide  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIFocusGuide  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIFocusGuide  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIFocusGuide);
+-(UIFocusGuide *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

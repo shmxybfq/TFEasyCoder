@@ -10,41 +10,41 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSProcessInfo,NSProcessInfo *);
+typedef void(^NSProcessInfoEasyCoderBlock) (NSProcessInfo * ins);
 
 @interface NSProcessInfo (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSProcessInfo, NSProcessInfo *);
-TF_EC_MINSTANCE_INT(NSProcessInfo,NSProcessInfo *);
++( NSProcessInfo *)easyCoder:(NSProcessInfoEasyCoderBlock)block;
+-(NSProcessInfo *)easyCoder:(NSProcessInfoEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSProcessInfo ,NSString *,processName);
+-(NSProcessInfo  *(^)(NSString *  processName))set_processName;
 
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSProcessInfo ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSProcessInfo ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSProcessInfo ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSProcessInfo ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSProcessInfo ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSProcessInfo ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSProcessInfo ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSProcessInfo ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSProcessInfo ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSProcessInfo ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSProcessInfo ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSProcessInfo ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSProcessInfo ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSProcessInfo ,long long,accessibilityNavigationStyle)
+-(NSProcessInfo  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSProcessInfo  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSProcessInfo  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSProcessInfo  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSProcessInfo  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSProcessInfo  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSProcessInfo  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSProcessInfo  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSProcessInfo  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSProcessInfo  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSProcessInfo  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSProcessInfo  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSProcessInfo  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSProcessInfo  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSProcessInfo);
+-(NSProcessInfo *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

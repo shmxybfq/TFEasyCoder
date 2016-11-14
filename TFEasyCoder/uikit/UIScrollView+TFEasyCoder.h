@@ -10,73 +10,73 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIScrollView,UIScrollView *);
+typedef void(^UIScrollViewEasyCoderBlock) (UIScrollView * ins);
 
 @interface UIScrollView (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIScrollView, UIScrollView *);
-TF_EC_MINSTANCE_INT(UIScrollView,UIScrollView *);
++( UIScrollView *)easyCoder:(UIScrollViewEasyCoderBlock)block;
+-(UIScrollView *)easyCoder:(UIScrollViewEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIScrollView ,CGPoint,contentOffset);
-TF_EC_CHAIN_PROP_INT(UIScrollView ,CGSize,contentSize);
-TF_EC_CHAIN_PROP_INT(UIScrollView ,UIEdgeInsets,contentInset);
-TF_EC_CHAIN_PROP_INT(UIScrollView ,id<UIScrollViewDelegate> ,delegate);
-TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,directionalLockEnabled);
-TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,bounces);
-TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,alwaysBounceVertical);
-TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,alwaysBounceHorizontal);
-TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,pagingEnabled);
-TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,scrollEnabled);
-TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,showsHorizontalScrollIndicator);
-TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,showsVerticalScrollIndicator);
-TF_EC_CHAIN_PROP_INT(UIScrollView ,UIEdgeInsets,scrollIndicatorInsets);
-TF_EC_CHAIN_PROP_INT(UIScrollView ,long long,indicatorStyle);
-TF_EC_CHAIN_PROP_INT(UIScrollView ,double,decelerationRate);
-TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,delaysContentTouches);
-TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,canCancelContentTouches);
-TF_EC_CHAIN_PROP_INT(UIScrollView ,double,minimumZoomScale);
-TF_EC_CHAIN_PROP_INT(UIScrollView ,double,maximumZoomScale);
-TF_EC_CHAIN_PROP_INT(UIScrollView ,double,zoomScale);
-TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,bouncesZoom);
-TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,scrollsToTop);
-TF_EC_CHAIN_PROP_INT(UIScrollView ,long long,keyboardDismissMode);
+-(UIScrollView  *(^)(CGPoint  contentOffset))set_contentOffset;
+-(UIScrollView  *(^)(CGSize  contentSize))set_contentSize;
+-(UIScrollView  *(^)(UIEdgeInsets  contentInset))set_contentInset;
+-(UIScrollView  *(^)(id<UIScrollViewDelegate>   delegate))set_delegate;
+-(UIScrollView  *(^)(BOOL  directionalLockEnabled))set_directionalLockEnabled;
+-(UIScrollView  *(^)(BOOL  bounces))set_bounces;
+-(UIScrollView  *(^)(BOOL  alwaysBounceVertical))set_alwaysBounceVertical;
+-(UIScrollView  *(^)(BOOL  alwaysBounceHorizontal))set_alwaysBounceHorizontal;
+-(UIScrollView  *(^)(BOOL  pagingEnabled))set_pagingEnabled;
+-(UIScrollView  *(^)(BOOL  scrollEnabled))set_scrollEnabled;
+-(UIScrollView  *(^)(BOOL  showsHorizontalScrollIndicator))set_showsHorizontalScrollIndicator;
+-(UIScrollView  *(^)(BOOL  showsVerticalScrollIndicator))set_showsVerticalScrollIndicator;
+-(UIScrollView  *(^)(UIEdgeInsets  scrollIndicatorInsets))set_scrollIndicatorInsets;
+-(UIScrollView  *(^)(long long  indicatorStyle))set_indicatorStyle;
+-(UIScrollView  *(^)(double  decelerationRate))set_decelerationRate;
+-(UIScrollView  *(^)(BOOL  delaysContentTouches))set_delaysContentTouches;
+-(UIScrollView  *(^)(BOOL  canCancelContentTouches))set_canCancelContentTouches;
+-(UIScrollView  *(^)(double  minimumZoomScale))set_minimumZoomScale;
+-(UIScrollView  *(^)(double  maximumZoomScale))set_maximumZoomScale;
+-(UIScrollView  *(^)(double  zoomScale))set_zoomScale;
+-(UIScrollView  *(^)(BOOL  bouncesZoom))set_bouncesZoom;
+-(UIScrollView  *(^)(BOOL  scrollsToTop))set_scrollsToTop;
+-(UIScrollView  *(^)(long long  keyboardDismissMode))set_keyboardDismissMode;
 
 
 
 
 
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UIScrollView ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UIScrollView ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UIScrollView ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UIScrollView ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UIScrollView ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UIScrollView ,UIColor *,backgroundColor)
+-(UIScrollView  *(^)(UIView *  maskView))set_maskView;
+-(UIScrollView  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UIScrollView  *(^)(long long  tag))set_tag;
+-(UIScrollView  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UIScrollView  *(^)(CGPoint  center))set_center;
+-(UIScrollView  *(^)(CGRect  frame))set_frame;
+-(UIScrollView  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIScrollView ,NSUserActivity *,userActivity);
+-(UIScrollView  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIScrollView ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIScrollView ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIScrollView ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIScrollView ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIScrollView ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIScrollView ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIScrollView ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIScrollView ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIScrollView ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIScrollView ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIScrollView ,long long,accessibilityNavigationStyle)
+-(UIScrollView  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIScrollView  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIScrollView  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIScrollView  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIScrollView  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIScrollView  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIScrollView  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIScrollView  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIScrollView  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIScrollView  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIScrollView  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIScrollView  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIScrollView  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIScrollView  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIScrollView);
+-(UIScrollView *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -10,47 +10,47 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIRotationGestureRecognizer,UIRotationGestureRecognizer *);
+typedef void(^UIRotationGestureRecognizerEasyCoderBlock) (UIRotationGestureRecognizer * ins);
 
 @interface UIRotationGestureRecognizer (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIRotationGestureRecognizer, UIRotationGestureRecognizer *);
-TF_EC_MINSTANCE_INT(UIRotationGestureRecognizer,UIRotationGestureRecognizer *);
++( UIRotationGestureRecognizer *)easyCoder:(UIRotationGestureRecognizerEasyCoderBlock)block;
+-(UIRotationGestureRecognizer *)easyCoder:(UIRotationGestureRecognizerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,double,rotation);
+-(UIRotationGestureRecognizer  *(^)(double  rotation))set_rotation;
 
 
 
 
 //superclass pros UIGestureRecognizer
-TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,BOOL,cancelsTouchesInView);
-TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,BOOL,delaysTouchesBegan);
-TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,BOOL,delaysTouchesEnded);
-TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,NSArray *,allowedTouchTypes);
-TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,NSArray *,allowedPressTypes);
+-(UIRotationGestureRecognizer  *(^)(BOOL  enabled))set_enabled;
+-(UIRotationGestureRecognizer  *(^)(BOOL  cancelsTouchesInView))set_cancelsTouchesInView;
+-(UIRotationGestureRecognizer  *(^)(BOOL  delaysTouchesBegan))set_delaysTouchesBegan;
+-(UIRotationGestureRecognizer  *(^)(BOOL  delaysTouchesEnded))set_delaysTouchesEnded;
+-(UIRotationGestureRecognizer  *(^)(NSArray *  allowedTouchTypes))set_allowedTouchTypes;
+-(UIRotationGestureRecognizer  *(^)(NSArray *  allowedPressTypes))set_allowedPressTypes;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIRotationGestureRecognizer ,long long,accessibilityNavigationStyle)
+-(UIRotationGestureRecognizer  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIRotationGestureRecognizer  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIRotationGestureRecognizer  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIRotationGestureRecognizer  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIRotationGestureRecognizer  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIRotationGestureRecognizer  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIRotationGestureRecognizer  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIRotationGestureRecognizer  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIRotationGestureRecognizer  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIRotationGestureRecognizer  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIRotationGestureRecognizer  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIRotationGestureRecognizer  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIRotationGestureRecognizer  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIRotationGestureRecognizer  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIRotationGestureRecognizer);
+-(UIRotationGestureRecognizer *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

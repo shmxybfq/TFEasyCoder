@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSNotificationCenter,NSNotificationCenter *);
+typedef void(^NSNotificationCenterEasyCoderBlock) (NSNotificationCenter * ins);
 
 @interface NSNotificationCenter (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSNotificationCenter, NSNotificationCenter *);
-TF_EC_MINSTANCE_INT(NSNotificationCenter,NSNotificationCenter *);
++( NSNotificationCenter *)easyCoder:(NSNotificationCenterEasyCoderBlock)block;
+-(NSNotificationCenter *)easyCoder:(NSNotificationCenterEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(NSNotificationCenter,NSNotificationCenter *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSNotificationCenter ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSNotificationCenter ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSNotificationCenter ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSNotificationCenter ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSNotificationCenter ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSNotificationCenter ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSNotificationCenter ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSNotificationCenter ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSNotificationCenter ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSNotificationCenter ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSNotificationCenter ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSNotificationCenter ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSNotificationCenter ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSNotificationCenter ,long long,accessibilityNavigationStyle)
+-(NSNotificationCenter  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSNotificationCenter  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSNotificationCenter  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSNotificationCenter  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSNotificationCenter  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSNotificationCenter  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSNotificationCenter  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSNotificationCenter  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSNotificationCenter  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSNotificationCenter  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSNotificationCenter  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSNotificationCenter  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSNotificationCenter  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSNotificationCenter  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSNotificationCenter);
+-(NSNotificationCenter *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

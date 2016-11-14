@@ -10,60 +10,60 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSURLSessionConfiguration,NSURLSessionConfiguration *);
+typedef void(^NSURLSessionConfigurationEasyCoderBlock) (NSURLSessionConfiguration * ins);
 
 @interface NSURLSessionConfiguration (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSURLSessionConfiguration, NSURLSessionConfiguration *);
-TF_EC_MINSTANCE_INT(NSURLSessionConfiguration,NSURLSessionConfiguration *);
++( NSURLSessionConfiguration *)easyCoder:(NSURLSessionConfigurationEasyCoderBlock)block;
+-(NSURLSessionConfiguration *)easyCoder:(NSURLSessionConfigurationEasyCoderBlock)block;
 
 
 
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,unsigned long long,requestCachePolicy)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,double,timeoutIntervalForRequest)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,double,timeoutIntervalForResource)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,unsigned long long,networkServiceType)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,BOOL,allowsCellularAccess)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,BOOL,discretionary)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,NSString *,sharedContainerIdentifier)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,BOOL,sessionSendsLaunchEvents)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,NSDictionary *,connectionProxyDictionary)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,int,TLSMinimumSupportedProtocol)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,int,TLSMaximumSupportedProtocol)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,BOOL,HTTPShouldUsePipelining)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,BOOL,HTTPShouldSetCookies)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,unsigned long long,HTTPCookieAcceptPolicy)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,NSDictionary *,HTTPAdditionalHeaders)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,long long,HTTPMaximumConnectionsPerHost)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,NSHTTPCookieStorage *,HTTPCookieStorage)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,BOOL,shouldUseExtendedBackgroundIdleMode)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,NSArray *,protocolClasses)
+-(NSURLSessionConfiguration  *(^)(unsigned long long  requestCachePolicy))set_requestCachePolicy;
+-(NSURLSessionConfiguration  *(^)(double  timeoutIntervalForRequest))set_timeoutIntervalForRequest;
+-(NSURLSessionConfiguration  *(^)(double  timeoutIntervalForResource))set_timeoutIntervalForResource;
+-(NSURLSessionConfiguration  *(^)(unsigned long long  networkServiceType))set_networkServiceType;
+-(NSURLSessionConfiguration  *(^)(BOOL  allowsCellularAccess))set_allowsCellularAccess;
+-(NSURLSessionConfiguration  *(^)(BOOL  discretionary))set_discretionary;
+-(NSURLSessionConfiguration  *(^)(NSString *  sharedContainerIdentifier))set_sharedContainerIdentifier;
+-(NSURLSessionConfiguration  *(^)(BOOL  sessionSendsLaunchEvents))set_sessionSendsLaunchEvents;
+-(NSURLSessionConfiguration  *(^)(NSDictionary *  connectionProxyDictionary))set_connectionProxyDictionary;
+-(NSURLSessionConfiguration  *(^)(int  TLSMinimumSupportedProtocol))set_TLSMinimumSupportedProtocol;
+-(NSURLSessionConfiguration  *(^)(int  TLSMaximumSupportedProtocol))set_TLSMaximumSupportedProtocol;
+-(NSURLSessionConfiguration  *(^)(BOOL  HTTPShouldUsePipelining))set_HTTPShouldUsePipelining;
+-(NSURLSessionConfiguration  *(^)(BOOL  HTTPShouldSetCookies))set_HTTPShouldSetCookies;
+-(NSURLSessionConfiguration  *(^)(unsigned long long  HTTPCookieAcceptPolicy))set_HTTPCookieAcceptPolicy;
+-(NSURLSessionConfiguration  *(^)(NSDictionary *  HTTPAdditionalHeaders))set_HTTPAdditionalHeaders;
+-(NSURLSessionConfiguration  *(^)(long long  HTTPMaximumConnectionsPerHost))set_HTTPMaximumConnectionsPerHost;
+-(NSURLSessionConfiguration  *(^)(NSHTTPCookieStorage *  HTTPCookieStorage))set_HTTPCookieStorage;
+-(NSURLSessionConfiguration  *(^)(BOOL  shouldUseExtendedBackgroundIdleMode))set_shouldUseExtendedBackgroundIdleMode;
+-(NSURLSessionConfiguration  *(^)(NSArray *  protocolClasses))set_protocolClasses;
 
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSURLSessionConfiguration ,long long,accessibilityNavigationStyle)
+-(NSURLSessionConfiguration  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSURLSessionConfiguration  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSURLSessionConfiguration  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSURLSessionConfiguration  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSURLSessionConfiguration  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSURLSessionConfiguration  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSURLSessionConfiguration  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSURLSessionConfiguration  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSURLSessionConfiguration  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSURLSessionConfiguration  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSURLSessionConfiguration  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSURLSessionConfiguration  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSURLSessionConfiguration  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSURLSessionConfiguration  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSURLSessionConfiguration);
+-(NSURLSessionConfiguration *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

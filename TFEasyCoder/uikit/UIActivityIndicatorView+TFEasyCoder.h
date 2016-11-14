@@ -10,53 +10,53 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIActivityIndicatorView,UIActivityIndicatorView *);
+typedef void(^UIActivityIndicatorViewEasyCoderBlock) (UIActivityIndicatorView * ins);
 
 @interface UIActivityIndicatorView (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIActivityIndicatorView, UIActivityIndicatorView *);
-TF_EC_MINSTANCE_INT(UIActivityIndicatorView,UIActivityIndicatorView *);
++( UIActivityIndicatorView *)easyCoder:(UIActivityIndicatorViewEasyCoderBlock)block;
+-(UIActivityIndicatorView *)easyCoder:(UIActivityIndicatorViewEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,long long,activityIndicatorViewStyle);
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,BOOL,hidesWhenStopped);
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,UIColor *,color);
+-(UIActivityIndicatorView  *(^)(long long  activityIndicatorViewStyle))set_activityIndicatorViewStyle;
+-(UIActivityIndicatorView  *(^)(BOOL  hidesWhenStopped))set_hidesWhenStopped;
+-(UIActivityIndicatorView  *(^)(UIColor *  color))set_color;
 
 
 
 
 
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,UIColor *,backgroundColor)
+-(UIActivityIndicatorView  *(^)(UIView *  maskView))set_maskView;
+-(UIActivityIndicatorView  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UIActivityIndicatorView  *(^)(long long  tag))set_tag;
+-(UIActivityIndicatorView  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UIActivityIndicatorView  *(^)(CGPoint  center))set_center;
+-(UIActivityIndicatorView  *(^)(CGRect  frame))set_frame;
+-(UIActivityIndicatorView  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,NSUserActivity *,userActivity);
+-(UIActivityIndicatorView  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIActivityIndicatorView ,long long,accessibilityNavigationStyle)
+-(UIActivityIndicatorView  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIActivityIndicatorView  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIActivityIndicatorView  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIActivityIndicatorView  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIActivityIndicatorView  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIActivityIndicatorView  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIActivityIndicatorView  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIActivityIndicatorView  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIActivityIndicatorView  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIActivityIndicatorView  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIActivityIndicatorView  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIActivityIndicatorView  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIActivityIndicatorView  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIActivityIndicatorView  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIActivityIndicatorView);
+-(UIActivityIndicatorView *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

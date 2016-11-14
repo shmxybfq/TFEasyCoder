@@ -10,38 +10,38 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIColor,UIColor *);
+typedef void(^UIColorEasyCoderBlock) (UIColor * ins);
 
 @interface UIColor (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIColor, UIColor *);
-TF_EC_MINSTANCE_INT(UIColor,UIColor *);
++( UIColor *)easyCoder:(UIColorEasyCoderBlock)block;
+-(UIColor *)easyCoder:(UIColorEasyCoderBlock)block;
 
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIColor ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIColor ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIColor ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIColor ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIColor ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIColor ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIColor ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIColor ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIColor ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIColor ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIColor ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIColor ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIColor ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIColor ,long long,accessibilityNavigationStyle)
+-(UIColor  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIColor  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIColor  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIColor  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIColor  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIColor  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIColor  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIColor  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIColor  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIColor  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIColor  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIColor  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIColor  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIColor  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIColor);
+-(UIColor *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

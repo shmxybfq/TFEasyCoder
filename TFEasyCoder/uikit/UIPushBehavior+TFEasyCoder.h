@@ -10,44 +10,44 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIPushBehavior,UIPushBehavior *);
+typedef void(^UIPushBehaviorEasyCoderBlock) (UIPushBehavior * ins);
 
 @interface UIPushBehavior (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIPushBehavior, UIPushBehavior *);
-TF_EC_MINSTANCE_INT(UIPushBehavior,UIPushBehavior *);
++( UIPushBehavior *)easyCoder:(UIPushBehaviorEasyCoderBlock)block;
+-(UIPushBehavior *)easyCoder:(UIPushBehaviorEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIPushBehavior ,BOOL,active);
-TF_EC_CHAIN_PROP_INT(UIPushBehavior ,double,angle);
-TF_EC_CHAIN_PROP_INT(UIPushBehavior ,double,magnitude);
-TF_EC_CHAIN_PROP_INT(UIPushBehavior ,CGVector,pushDirection);
+-(UIPushBehavior  *(^)(BOOL  active))set_active;
+-(UIPushBehavior  *(^)(double  angle))set_angle;
+-(UIPushBehavior  *(^)(double  magnitude))set_magnitude;
+-(UIPushBehavior  *(^)(CGVector  pushDirection))set_pushDirection;
 
 
 
 
 //superclass pros UIDynamicBehavior
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIPushBehavior ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIPushBehavior ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIPushBehavior ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIPushBehavior ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIPushBehavior ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIPushBehavior ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIPushBehavior ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIPushBehavior ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIPushBehavior ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIPushBehavior ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIPushBehavior ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIPushBehavior ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIPushBehavior ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIPushBehavior ,long long,accessibilityNavigationStyle)
+-(UIPushBehavior  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIPushBehavior  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIPushBehavior  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIPushBehavior  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIPushBehavior  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIPushBehavior  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIPushBehavior  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIPushBehavior  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIPushBehavior  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIPushBehavior  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIPushBehavior  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIPushBehavior  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIPushBehavior  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIPushBehavior  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIPushBehavior);
+-(UIPushBehavior *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

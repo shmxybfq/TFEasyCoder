@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSLayoutXAxisAnchor,NSLayoutXAxisAnchor *);
+typedef void(^NSLayoutXAxisAnchorEasyCoderBlock) (NSLayoutXAxisAnchor * ins);
 
 @interface NSLayoutXAxisAnchor (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSLayoutXAxisAnchor, NSLayoutXAxisAnchor *);
-TF_EC_MINSTANCE_INT(NSLayoutXAxisAnchor,NSLayoutXAxisAnchor *);
++( NSLayoutXAxisAnchor *)easyCoder:(NSLayoutXAxisAnchorEasyCoderBlock)block;
+-(NSLayoutXAxisAnchor *)easyCoder:(NSLayoutXAxisAnchorEasyCoderBlock)block;
 
 
 
@@ -24,26 +24,26 @@ TF_EC_MINSTANCE_INT(NSLayoutXAxisAnchor,NSLayoutXAxisAnchor *);
 
 //superclass pros NSLayoutAnchor
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSLayoutXAxisAnchor ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSLayoutXAxisAnchor ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSLayoutXAxisAnchor ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSLayoutXAxisAnchor ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSLayoutXAxisAnchor ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSLayoutXAxisAnchor ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSLayoutXAxisAnchor ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSLayoutXAxisAnchor ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSLayoutXAxisAnchor ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSLayoutXAxisAnchor ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSLayoutXAxisAnchor ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSLayoutXAxisAnchor ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSLayoutXAxisAnchor ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSLayoutXAxisAnchor ,long long,accessibilityNavigationStyle)
+-(NSLayoutXAxisAnchor  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSLayoutXAxisAnchor  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSLayoutXAxisAnchor  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSLayoutXAxisAnchor  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSLayoutXAxisAnchor  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSLayoutXAxisAnchor  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSLayoutXAxisAnchor  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSLayoutXAxisAnchor  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSLayoutXAxisAnchor  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSLayoutXAxisAnchor  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSLayoutXAxisAnchor  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSLayoutXAxisAnchor  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSLayoutXAxisAnchor  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSLayoutXAxisAnchor  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSLayoutXAxisAnchor);
+-(NSLayoutXAxisAnchor *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -11,37 +11,169 @@
 
 @implementation CADisplayLink (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(CADisplayLink, CADisplayLink *);
-TF_EC_MINSTANCE_IMP(CADisplayLink, CADisplayLink *);
++( CADisplayLink *)easyCoder:(CADisplayLinkEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( CADisplayLink *)ins);
+        }
+    }];
+}
+
+-( CADisplayLink *)easyCoder:(CADisplayLinkEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
 
 
-TF_EC_CHAIN_PROP_IMP(CADisplayLink ,BOOL,paused)
-TF_EC_CHAIN_PROP_IMP(CADisplayLink ,long long,frameInterval)
+
+-(CADisplayLink  *(^)(BOOL  paused))set_paused{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  paused){
+        weakSelf.paused = paused;
+        return weakSelf;
+    };
+}
+
+-(CADisplayLink  *(^)(long long  frameInterval))set_frameInterval{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  frameInterval){
+        weakSelf.frameInterval = frameInterval;
+        return weakSelf;
+    };
+}
+
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(CADisplayLink ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(CADisplayLink ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(CADisplayLink ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(CADisplayLink ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(CADisplayLink ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(CADisplayLink ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(CADisplayLink ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(CADisplayLink ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(CADisplayLink ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(CADisplayLink ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(CADisplayLink ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(CADisplayLink ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(CADisplayLink ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(CADisplayLink ,long long,accessibilityNavigationStyle)
+-(CADisplayLink  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(CADisplayLink  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(CADisplayLink  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(CADisplayLink  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(CADisplayLink  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(CADisplayLink  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(CADisplayLink  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(CADisplayLink  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(CADisplayLink  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(CADisplayLink  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(CADisplayLink  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(CADisplayLink  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(CADisplayLink  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(CADisplayLink  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(CADisplayLink);
+
+-(CADisplayLink *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

@@ -10,42 +10,42 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSURLSession,NSURLSession *);
+typedef void(^NSURLSessionEasyCoderBlock) (NSURLSession * ins);
 
 @interface NSURLSession (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSURLSession, NSURLSession *);
-TF_EC_MINSTANCE_INT(NSURLSession,NSURLSession *);
++( NSURLSession *)easyCoder:(NSURLSessionEasyCoderBlock)block;
+-(NSURLSession *)easyCoder:(NSURLSessionEasyCoderBlock)block;
 
 
 
-TF_EC_CHAIN_PROP_INT(NSURLSession ,NSString *,sessionDescription);
+-(NSURLSession  *(^)(NSString *  sessionDescription))set_sessionDescription;
 
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSURLSession ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSURLSession ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSURLSession ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSURLSession ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSURLSession ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSURLSession ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSURLSession ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSURLSession ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSURLSession ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSURLSession ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSURLSession ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSURLSession ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSURLSession ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSURLSession ,long long,accessibilityNavigationStyle)
+-(NSURLSession  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSURLSession  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSURLSession  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSURLSession  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSURLSession  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSURLSession  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSURLSession  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSURLSession  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSURLSession  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSURLSession  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSURLSession  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSURLSession  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSURLSession  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSURLSession  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSURLSession);
+-(NSURLSession *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

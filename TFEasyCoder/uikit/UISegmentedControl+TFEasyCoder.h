@@ -10,60 +10,60 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UISegmentedControl,UISegmentedControl *);
+typedef void(^UISegmentedControlEasyCoderBlock) (UISegmentedControl * ins);
 
 @interface UISegmentedControl (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UISegmentedControl, UISegmentedControl *);
-TF_EC_MINSTANCE_INT(UISegmentedControl,UISegmentedControl *);
++( UISegmentedControl *)easyCoder:(UISegmentedControlEasyCoderBlock)block;
+-(UISegmentedControl *)easyCoder:(UISegmentedControlEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,long long,segmentedControlStyle);
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,BOOL,momentary);
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,BOOL,apportionsSegmentWidthsByContent);
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,long long,selectedSegmentIndex);
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,UIColor *,tintColor);
+-(UISegmentedControl  *(^)(long long  segmentedControlStyle))set_segmentedControlStyle;
+-(UISegmentedControl  *(^)(BOOL  momentary))set_momentary;
+-(UISegmentedControl  *(^)(BOOL  apportionsSegmentWidthsByContent))set_apportionsSegmentWidthsByContent;
+-(UISegmentedControl  *(^)(long long  selectedSegmentIndex))set_selectedSegmentIndex;
+-(UISegmentedControl  *(^)(UIColor *  tintColor))set_tintColor;
 
 
 
 
 //superclass pros UIControl
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,BOOL,selected);
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,BOOL,highlighted);
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,long long,contentVerticalAlignment);
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,long long,contentHorizontalAlignment);
+-(UISegmentedControl  *(^)(BOOL  enabled))set_enabled;
+-(UISegmentedControl  *(^)(BOOL  selected))set_selected;
+-(UISegmentedControl  *(^)(BOOL  highlighted))set_highlighted;
+-(UISegmentedControl  *(^)(long long  contentVerticalAlignment))set_contentVerticalAlignment;
+-(UISegmentedControl  *(^)(long long  contentHorizontalAlignment))set_contentHorizontalAlignment;
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,UIColor *,backgroundColor)
+-(UISegmentedControl  *(^)(UIView *  maskView))set_maskView;
+-(UISegmentedControl  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UISegmentedControl  *(^)(long long  tag))set_tag;
+-(UISegmentedControl  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UISegmentedControl  *(^)(CGPoint  center))set_center;
+-(UISegmentedControl  *(^)(CGRect  frame))set_frame;
+-(UISegmentedControl  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,NSUserActivity *,userActivity);
+-(UISegmentedControl  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UISegmentedControl ,long long,accessibilityNavigationStyle)
+-(UISegmentedControl  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UISegmentedControl  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UISegmentedControl  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UISegmentedControl  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UISegmentedControl  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UISegmentedControl  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UISegmentedControl  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UISegmentedControl  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UISegmentedControl  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UISegmentedControl  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UISegmentedControl  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UISegmentedControl  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UISegmentedControl  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UISegmentedControl  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UISegmentedControl);
+-(UISegmentedControl *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

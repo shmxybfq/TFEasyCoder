@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(CAMediaTimingFunction,CAMediaTimingFunction *);
+typedef void(^CAMediaTimingFunctionEasyCoderBlock) (CAMediaTimingFunction * ins);
 
 @interface CAMediaTimingFunction (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(CAMediaTimingFunction, CAMediaTimingFunction *);
-TF_EC_MINSTANCE_INT(CAMediaTimingFunction,CAMediaTimingFunction *);
++( CAMediaTimingFunction *)easyCoder:(CAMediaTimingFunctionEasyCoderBlock)block;
+-(CAMediaTimingFunction *)easyCoder:(CAMediaTimingFunctionEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(CAMediaTimingFunction,CAMediaTimingFunction *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(CAMediaTimingFunction ,long long,accessibilityNavigationStyle)
+-(CAMediaTimingFunction  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(CAMediaTimingFunction  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(CAMediaTimingFunction  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(CAMediaTimingFunction  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(CAMediaTimingFunction  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(CAMediaTimingFunction  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(CAMediaTimingFunction  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(CAMediaTimingFunction  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(CAMediaTimingFunction  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(CAMediaTimingFunction  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(CAMediaTimingFunction  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(CAMediaTimingFunction  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(CAMediaTimingFunction  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(CAMediaTimingFunction  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(CAMediaTimingFunction);
+-(CAMediaTimingFunction *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

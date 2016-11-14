@@ -10,49 +10,49 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UITapGestureRecognizer,UITapGestureRecognizer *);
+typedef void(^UITapGestureRecognizerEasyCoderBlock) (UITapGestureRecognizer * ins);
 
 @interface UITapGestureRecognizer (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UITapGestureRecognizer, UITapGestureRecognizer *);
-TF_EC_MINSTANCE_INT(UITapGestureRecognizer,UITapGestureRecognizer *);
++( UITapGestureRecognizer *)easyCoder:(UITapGestureRecognizerEasyCoderBlock)block;
+-(UITapGestureRecognizer *)easyCoder:(UITapGestureRecognizerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UITapGestureRecognizer ,unsigned long long,numberOfTapsRequired);
-TF_EC_CHAIN_PROP_INT(UITapGestureRecognizer ,unsigned long long,numberOfTouchesRequired);
+-(UITapGestureRecognizer  *(^)(unsigned long long  numberOfTapsRequired))set_numberOfTapsRequired;
+-(UITapGestureRecognizer  *(^)(unsigned long long  numberOfTouchesRequired))set_numberOfTouchesRequired;
 
 
 
 
 
 //superclass pros UIGestureRecognizer
-TF_EC_CHAIN_PROP_INT(UITapGestureRecognizer ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(UITapGestureRecognizer ,BOOL,cancelsTouchesInView);
-TF_EC_CHAIN_PROP_INT(UITapGestureRecognizer ,BOOL,delaysTouchesBegan);
-TF_EC_CHAIN_PROP_INT(UITapGestureRecognizer ,BOOL,delaysTouchesEnded);
-TF_EC_CHAIN_PROP_INT(UITapGestureRecognizer ,NSArray *,allowedTouchTypes);
-TF_EC_CHAIN_PROP_INT(UITapGestureRecognizer ,NSArray *,allowedPressTypes);
+-(UITapGestureRecognizer  *(^)(BOOL  enabled))set_enabled;
+-(UITapGestureRecognizer  *(^)(BOOL  cancelsTouchesInView))set_cancelsTouchesInView;
+-(UITapGestureRecognizer  *(^)(BOOL  delaysTouchesBegan))set_delaysTouchesBegan;
+-(UITapGestureRecognizer  *(^)(BOOL  delaysTouchesEnded))set_delaysTouchesEnded;
+-(UITapGestureRecognizer  *(^)(NSArray *  allowedTouchTypes))set_allowedTouchTypes;
+-(UITapGestureRecognizer  *(^)(NSArray *  allowedPressTypes))set_allowedPressTypes;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UITapGestureRecognizer ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UITapGestureRecognizer ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UITapGestureRecognizer ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UITapGestureRecognizer ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UITapGestureRecognizer ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UITapGestureRecognizer ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UITapGestureRecognizer ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UITapGestureRecognizer ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UITapGestureRecognizer ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UITapGestureRecognizer ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UITapGestureRecognizer ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UITapGestureRecognizer ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UITapGestureRecognizer ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UITapGestureRecognizer ,long long,accessibilityNavigationStyle)
+-(UITapGestureRecognizer  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UITapGestureRecognizer  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UITapGestureRecognizer  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UITapGestureRecognizer  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UITapGestureRecognizer  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UITapGestureRecognizer  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UITapGestureRecognizer  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UITapGestureRecognizer  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UITapGestureRecognizer  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UITapGestureRecognizer  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UITapGestureRecognizer  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UITapGestureRecognizer  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UITapGestureRecognizer  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UITapGestureRecognizer  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UITapGestureRecognizer);
+-(UITapGestureRecognizer *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

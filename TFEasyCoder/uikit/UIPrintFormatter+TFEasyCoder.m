@@ -11,40 +11,193 @@
 
 @implementation UIPrintFormatter (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(UIPrintFormatter, UIPrintFormatter *);
-TF_EC_MINSTANCE_IMP(UIPrintFormatter, UIPrintFormatter *);
++( UIPrintFormatter *)easyCoder:(UIPrintFormatterEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( UIPrintFormatter *)ins);
+        }
+    }];
+}
+
+-( UIPrintFormatter *)easyCoder:(UIPrintFormatterEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
 
 
-TF_EC_CHAIN_PROP_IMP(UIPrintFormatter ,double,maximumContentHeight)
-TF_EC_CHAIN_PROP_IMP(UIPrintFormatter ,double,maximumContentWidth)
-TF_EC_CHAIN_PROP_IMP(UIPrintFormatter ,UIEdgeInsets,contentInsets)
-TF_EC_CHAIN_PROP_IMP(UIPrintFormatter ,UIEdgeInsets,perPageContentInsets)
-TF_EC_CHAIN_PROP_IMP(UIPrintFormatter ,long long,startPage)
+
+-(UIPrintFormatter  *(^)(double  maximumContentHeight))set_maximumContentHeight{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  maximumContentHeight){
+        weakSelf.maximumContentHeight = maximumContentHeight;
+        return weakSelf;
+    };
+}
+
+-(UIPrintFormatter  *(^)(double  maximumContentWidth))set_maximumContentWidth{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  maximumContentWidth){
+        weakSelf.maximumContentWidth = maximumContentWidth;
+        return weakSelf;
+    };
+}
+
+-(UIPrintFormatter  *(^)(UIEdgeInsets  contentInsets))set_contentInsets{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIEdgeInsets  contentInsets){
+        weakSelf.contentInsets = contentInsets;
+        return weakSelf;
+    };
+}
+
+-(UIPrintFormatter  *(^)(UIEdgeInsets  perPageContentInsets))set_perPageContentInsets{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIEdgeInsets  perPageContentInsets){
+        weakSelf.perPageContentInsets = perPageContentInsets;
+        return weakSelf;
+    };
+}
+
+-(UIPrintFormatter  *(^)(long long  startPage))set_startPage{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  startPage){
+        weakSelf.startPage = startPage;
+        return weakSelf;
+    };
+}
+
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(UIPrintFormatter ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(UIPrintFormatter ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(UIPrintFormatter ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(UIPrintFormatter ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(UIPrintFormatter ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(UIPrintFormatter ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(UIPrintFormatter ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(UIPrintFormatter ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(UIPrintFormatter ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(UIPrintFormatter ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(UIPrintFormatter ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(UIPrintFormatter ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(UIPrintFormatter ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(UIPrintFormatter ,long long,accessibilityNavigationStyle)
+-(UIPrintFormatter  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(UIPrintFormatter  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(UIPrintFormatter  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(UIPrintFormatter  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(UIPrintFormatter  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(UIPrintFormatter  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(UIPrintFormatter  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(UIPrintFormatter  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(UIPrintFormatter  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(UIPrintFormatter  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(UIPrintFormatter  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(UIPrintFormatter  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(UIPrintFormatter  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(UIPrintFormatter  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIPrintFormatter);
+
+-(UIPrintFormatter *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

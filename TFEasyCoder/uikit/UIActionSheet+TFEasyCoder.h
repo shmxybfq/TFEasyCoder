@@ -14,54 +14,54 @@
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 
-TF_EC_BLOCK(UIActionSheet,UIActionSheet *);
+typedef void(^UIActionSheetEasyCoderBlock) (UIActionSheet * ins);
 
 @interface UIActionSheet (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIActionSheet, UIActionSheet *);
-TF_EC_MINSTANCE_INT(UIActionSheet,UIActionSheet *);
++( UIActionSheet *)easyCoder:(UIActionSheetEasyCoderBlock)block;
+-(UIActionSheet *)easyCoder:(UIActionSheetEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,id<UIActionSheetDelegate> ,delegate);
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,NSString *,title);
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,long long,actionSheetStyle);
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,long long,cancelButtonIndex);
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,long long,destructiveButtonIndex);
+-(UIActionSheet  *(^)(id<UIActionSheetDelegate>   delegate))set_delegate;
+-(UIActionSheet  *(^)(NSString *  title))set_title;
+-(UIActionSheet  *(^)(long long  actionSheetStyle))set_actionSheetStyle;
+-(UIActionSheet  *(^)(long long  cancelButtonIndex))set_cancelButtonIndex;
+-(UIActionSheet  *(^)(long long  destructiveButtonIndex))set_destructiveButtonIndex;
 
 
 
 
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,UIColor *,backgroundColor)
+-(UIActionSheet  *(^)(UIView *  maskView))set_maskView;
+-(UIActionSheet  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UIActionSheet  *(^)(long long  tag))set_tag;
+-(UIActionSheet  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UIActionSheet  *(^)(CGPoint  center))set_center;
+-(UIActionSheet  *(^)(CGRect  frame))set_frame;
+-(UIActionSheet  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,NSUserActivity *,userActivity);
+-(UIActionSheet  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIActionSheet ,long long,accessibilityNavigationStyle)
+-(UIActionSheet  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIActionSheet  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIActionSheet  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIActionSheet  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIActionSheet  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIActionSheet  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIActionSheet  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIActionSheet  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIActionSheet  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIActionSheet  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIActionSheet  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIActionSheet  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIActionSheet  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIActionSheet  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIActionSheet);
+-(UIActionSheet *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -13,41 +13,41 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
-TF_EC_BLOCK(UIAccelerometer,UIAccelerometer *);
+typedef void(^UIAccelerometerEasyCoderBlock) (UIAccelerometer * ins);
 
 @interface UIAccelerometer (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIAccelerometer, UIAccelerometer *);
-TF_EC_MINSTANCE_INT(UIAccelerometer,UIAccelerometer *);
++( UIAccelerometer *)easyCoder:(UIAccelerometerEasyCoderBlock)block;
+-(UIAccelerometer *)easyCoder:(UIAccelerometerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIAccelerometer ,double,updateInterval);
-TF_EC_CHAIN_PROP_INT(UIAccelerometer ,id<UIAccelerometerDelegate> ,delegate);
+-(UIAccelerometer  *(^)(double  updateInterval))set_updateInterval;
+-(UIAccelerometer  *(^)(id<UIAccelerometerDelegate>   delegate))set_delegate;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIAccelerometer ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIAccelerometer ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIAccelerometer ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIAccelerometer ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIAccelerometer ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIAccelerometer ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIAccelerometer ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIAccelerometer ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIAccelerometer ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIAccelerometer ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIAccelerometer ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIAccelerometer ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIAccelerometer ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIAccelerometer ,long long,accessibilityNavigationStyle)
+-(UIAccelerometer  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIAccelerometer  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIAccelerometer  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIAccelerometer  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIAccelerometer  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIAccelerometer  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIAccelerometer  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIAccelerometer  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIAccelerometer  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIAccelerometer  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIAccelerometer  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIAccelerometer  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIAccelerometer  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIAccelerometer  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIAccelerometer);
+-(UIAccelerometer *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -11,8 +11,22 @@
 
 @implementation NSURLAuthenticationChallenge (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(NSURLAuthenticationChallenge, NSURLAuthenticationChallenge *);
-TF_EC_MINSTANCE_IMP(NSURLAuthenticationChallenge, NSURLAuthenticationChallenge *);
++( NSURLAuthenticationChallenge *)easyCoder:(NSURLAuthenticationChallengeEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( NSURLAuthenticationChallenge *)ins);
+        }
+    }];
+}
+
+-( NSURLAuthenticationChallenge *)easyCoder:(NSURLAuthenticationChallengeEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
+
 
 
 
@@ -20,26 +34,130 @@ TF_EC_MINSTANCE_IMP(NSURLAuthenticationChallenge, NSURLAuthenticationChallenge *
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(NSURLAuthenticationChallenge ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(NSURLAuthenticationChallenge ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(NSURLAuthenticationChallenge ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(NSURLAuthenticationChallenge ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(NSURLAuthenticationChallenge ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(NSURLAuthenticationChallenge ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(NSURLAuthenticationChallenge ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(NSURLAuthenticationChallenge ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(NSURLAuthenticationChallenge ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(NSURLAuthenticationChallenge ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(NSURLAuthenticationChallenge ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(NSURLAuthenticationChallenge ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(NSURLAuthenticationChallenge ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(NSURLAuthenticationChallenge ,long long,accessibilityNavigationStyle)
+-(NSURLAuthenticationChallenge  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(NSURLAuthenticationChallenge  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(NSURLAuthenticationChallenge  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(NSURLAuthenticationChallenge  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(NSURLAuthenticationChallenge  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(NSURLAuthenticationChallenge  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(NSURLAuthenticationChallenge  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(NSURLAuthenticationChallenge  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(NSURLAuthenticationChallenge  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(NSURLAuthenticationChallenge  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(NSURLAuthenticationChallenge  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(NSURLAuthenticationChallenge  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(NSURLAuthenticationChallenge  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(NSURLAuthenticationChallenge  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSURLAuthenticationChallenge);
+
+-(NSURLAuthenticationChallenge *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

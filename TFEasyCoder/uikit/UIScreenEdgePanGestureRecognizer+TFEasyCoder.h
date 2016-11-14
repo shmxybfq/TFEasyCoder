@@ -10,50 +10,50 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIScreenEdgePanGestureRecognizer,UIScreenEdgePanGestureRecognizer *);
+typedef void(^UIScreenEdgePanGestureRecognizerEasyCoderBlock) (UIScreenEdgePanGestureRecognizer * ins);
 
 @interface UIScreenEdgePanGestureRecognizer (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIScreenEdgePanGestureRecognizer, UIScreenEdgePanGestureRecognizer *);
-TF_EC_MINSTANCE_INT(UIScreenEdgePanGestureRecognizer,UIScreenEdgePanGestureRecognizer *);
++( UIScreenEdgePanGestureRecognizer *)easyCoder:(UIScreenEdgePanGestureRecognizerEasyCoderBlock)block;
+-(UIScreenEdgePanGestureRecognizer *)easyCoder:(UIScreenEdgePanGestureRecognizerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,unsigned long long,edges);
+-(UIScreenEdgePanGestureRecognizer  *(^)(unsigned long long  edges))set_edges;
 
 
 
 
 //superclass pros UIPanGestureRecognizer
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,unsigned long long,minimumNumberOfTouches);
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,unsigned long long,maximumNumberOfTouches);
+-(UIScreenEdgePanGestureRecognizer  *(^)(unsigned long long  minimumNumberOfTouches))set_minimumNumberOfTouches;
+-(UIScreenEdgePanGestureRecognizer  *(^)(unsigned long long  maximumNumberOfTouches))set_maximumNumberOfTouches;
 //superclass pros UIGestureRecognizer
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,BOOL,cancelsTouchesInView);
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,BOOL,delaysTouchesBegan);
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,BOOL,delaysTouchesEnded);
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,NSArray *,allowedTouchTypes);
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,NSArray *,allowedPressTypes);
+-(UIScreenEdgePanGestureRecognizer  *(^)(BOOL  enabled))set_enabled;
+-(UIScreenEdgePanGestureRecognizer  *(^)(BOOL  cancelsTouchesInView))set_cancelsTouchesInView;
+-(UIScreenEdgePanGestureRecognizer  *(^)(BOOL  delaysTouchesBegan))set_delaysTouchesBegan;
+-(UIScreenEdgePanGestureRecognizer  *(^)(BOOL  delaysTouchesEnded))set_delaysTouchesEnded;
+-(UIScreenEdgePanGestureRecognizer  *(^)(NSArray *  allowedTouchTypes))set_allowedTouchTypes;
+-(UIScreenEdgePanGestureRecognizer  *(^)(NSArray *  allowedPressTypes))set_allowedPressTypes;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIScreenEdgePanGestureRecognizer ,long long,accessibilityNavigationStyle)
+-(UIScreenEdgePanGestureRecognizer  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIScreenEdgePanGestureRecognizer  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIScreenEdgePanGestureRecognizer  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIScreenEdgePanGestureRecognizer  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIScreenEdgePanGestureRecognizer  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIScreenEdgePanGestureRecognizer  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIScreenEdgePanGestureRecognizer  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIScreenEdgePanGestureRecognizer  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIScreenEdgePanGestureRecognizer  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIScreenEdgePanGestureRecognizer  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIScreenEdgePanGestureRecognizer  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIScreenEdgePanGestureRecognizer  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIScreenEdgePanGestureRecognizer  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIScreenEdgePanGestureRecognizer  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIScreenEdgePanGestureRecognizer);
+-(UIScreenEdgePanGestureRecognizer *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

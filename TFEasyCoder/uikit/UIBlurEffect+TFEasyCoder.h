@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIBlurEffect,UIBlurEffect *);
+typedef void(^UIBlurEffectEasyCoderBlock) (UIBlurEffect * ins);
 
 @interface UIBlurEffect (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIBlurEffect, UIBlurEffect *);
-TF_EC_MINSTANCE_INT(UIBlurEffect,UIBlurEffect *);
++( UIBlurEffect *)easyCoder:(UIBlurEffectEasyCoderBlock)block;
+-(UIBlurEffect *)easyCoder:(UIBlurEffectEasyCoderBlock)block;
 
 
 
@@ -24,26 +24,26 @@ TF_EC_MINSTANCE_INT(UIBlurEffect,UIBlurEffect *);
 
 //superclass pros UIVisualEffect
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIBlurEffect ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIBlurEffect ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIBlurEffect ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIBlurEffect ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIBlurEffect ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIBlurEffect ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIBlurEffect ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIBlurEffect ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIBlurEffect ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIBlurEffect ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIBlurEffect ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIBlurEffect ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIBlurEffect ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIBlurEffect ,long long,accessibilityNavigationStyle)
+-(UIBlurEffect  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIBlurEffect  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIBlurEffect  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIBlurEffect  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIBlurEffect  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIBlurEffect  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIBlurEffect  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIBlurEffect  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIBlurEffect  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIBlurEffect  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIBlurEffect  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIBlurEffect  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIBlurEffect  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIBlurEffect  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIBlurEffect);
+-(UIBlurEffect *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

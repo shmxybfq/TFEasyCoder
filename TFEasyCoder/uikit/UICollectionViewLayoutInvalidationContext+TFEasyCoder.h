@@ -10,41 +10,41 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UICollectionViewLayoutInvalidationContext,UICollectionViewLayoutInvalidationContext *);
+typedef void(^UICollectionViewLayoutInvalidationContextEasyCoderBlock) (UICollectionViewLayoutInvalidationContext * ins);
 
 @interface UICollectionViewLayoutInvalidationContext (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UICollectionViewLayoutInvalidationContext, UICollectionViewLayoutInvalidationContext *);
-TF_EC_MINSTANCE_INT(UICollectionViewLayoutInvalidationContext,UICollectionViewLayoutInvalidationContext *);
++( UICollectionViewLayoutInvalidationContext *)easyCoder:(UICollectionViewLayoutInvalidationContextEasyCoderBlock)block;
+-(UICollectionViewLayoutInvalidationContext *)easyCoder:(UICollectionViewLayoutInvalidationContextEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutInvalidationContext ,CGPoint,contentOffsetAdjustment)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutInvalidationContext ,CGSize,contentSizeAdjustment)
+-(UICollectionViewLayoutInvalidationContext  *(^)(CGPoint  contentOffsetAdjustment))set_contentOffsetAdjustment;
+-(UICollectionViewLayoutInvalidationContext  *(^)(CGSize  contentSizeAdjustment))set_contentSizeAdjustment;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutInvalidationContext ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutInvalidationContext ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutInvalidationContext ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutInvalidationContext ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutInvalidationContext ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutInvalidationContext ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutInvalidationContext ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutInvalidationContext ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutInvalidationContext ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutInvalidationContext ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutInvalidationContext ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutInvalidationContext ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutInvalidationContext ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutInvalidationContext ,long long,accessibilityNavigationStyle)
+-(UICollectionViewLayoutInvalidationContext  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UICollectionViewLayoutInvalidationContext  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UICollectionViewLayoutInvalidationContext  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UICollectionViewLayoutInvalidationContext  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UICollectionViewLayoutInvalidationContext  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UICollectionViewLayoutInvalidationContext  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UICollectionViewLayoutInvalidationContext  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UICollectionViewLayoutInvalidationContext  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UICollectionViewLayoutInvalidationContext  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UICollectionViewLayoutInvalidationContext  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UICollectionViewLayoutInvalidationContext  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UICollectionViewLayoutInvalidationContext  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UICollectionViewLayoutInvalidationContext  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UICollectionViewLayoutInvalidationContext  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UICollectionViewLayoutInvalidationContext);
+-(UICollectionViewLayoutInvalidationContext *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -11,8 +11,22 @@
 
 @implementation UIUserNotificationAction (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(UIUserNotificationAction, UIUserNotificationAction *);
-TF_EC_MINSTANCE_IMP(UIUserNotificationAction, UIUserNotificationAction *);
++( UIUserNotificationAction *)easyCoder:(UIUserNotificationActionEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( UIUserNotificationAction *)ins);
+        }
+    }];
+}
+
+-( UIUserNotificationAction *)easyCoder:(UIUserNotificationActionEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
+
 
 
 
@@ -20,26 +34,130 @@ TF_EC_MINSTANCE_IMP(UIUserNotificationAction, UIUserNotificationAction *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(UIUserNotificationAction ,long long,accessibilityNavigationStyle)
+-(UIUserNotificationAction  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(UIUserNotificationAction  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(UIUserNotificationAction  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(UIUserNotificationAction  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(UIUserNotificationAction  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(UIUserNotificationAction  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(UIUserNotificationAction  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(UIUserNotificationAction  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(UIUserNotificationAction  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(UIUserNotificationAction  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(UIUserNotificationAction  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(UIUserNotificationAction  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(UIUserNotificationAction  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(UIUserNotificationAction  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIUserNotificationAction);
+
+-(UIUserNotificationAction *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

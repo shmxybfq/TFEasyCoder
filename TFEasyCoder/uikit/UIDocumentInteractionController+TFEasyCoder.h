@@ -10,43 +10,43 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIDocumentInteractionController,UIDocumentInteractionController *);
+typedef void(^UIDocumentInteractionControllerEasyCoderBlock) (UIDocumentInteractionController * ins);
 
 @interface UIDocumentInteractionController (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIDocumentInteractionController, UIDocumentInteractionController *);
-TF_EC_MINSTANCE_INT(UIDocumentInteractionController,UIDocumentInteractionController *);
++( UIDocumentInteractionController *)easyCoder:(UIDocumentInteractionControllerEasyCoderBlock)block;
+-(UIDocumentInteractionController *)easyCoder:(UIDocumentInteractionControllerEasyCoderBlock)block;
 
 
 
-TF_EC_CHAIN_PROP_INT(UIDocumentInteractionController ,id<UIDocumentInteractionControllerDelegate>  ,delegate)
-TF_EC_CHAIN_PROP_INT(UIDocumentInteractionController ,NSString *,UTI)
-TF_EC_CHAIN_PROP_INT(UIDocumentInteractionController ,NSString *,name)
+-(UIDocumentInteractionController  *(^)(id<UIDocumentInteractionControllerDelegate>    delegate))set_delegate;
+-(UIDocumentInteractionController  *(^)(NSString *  UTI))set_UTI;
+-(UIDocumentInteractionController  *(^)(NSString *  name))set_name;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIDocumentInteractionController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIDocumentInteractionController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIDocumentInteractionController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIDocumentInteractionController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIDocumentInteractionController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIDocumentInteractionController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIDocumentInteractionController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIDocumentInteractionController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIDocumentInteractionController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIDocumentInteractionController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIDocumentInteractionController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIDocumentInteractionController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIDocumentInteractionController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIDocumentInteractionController ,long long,accessibilityNavigationStyle)
+-(UIDocumentInteractionController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIDocumentInteractionController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIDocumentInteractionController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIDocumentInteractionController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIDocumentInteractionController  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIDocumentInteractionController  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIDocumentInteractionController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIDocumentInteractionController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIDocumentInteractionController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIDocumentInteractionController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIDocumentInteractionController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIDocumentInteractionController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIDocumentInteractionController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIDocumentInteractionController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIDocumentInteractionController);
+-(UIDocumentInteractionController *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

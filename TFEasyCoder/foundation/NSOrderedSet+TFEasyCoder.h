@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSOrderedSet,NSOrderedSet *);
+typedef void(^NSOrderedSetEasyCoderBlock) (NSOrderedSet * ins);
 
 @interface NSOrderedSet (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSOrderedSet, NSOrderedSet *);
-TF_EC_MINSTANCE_INT(NSOrderedSet,NSOrderedSet *);
++( NSOrderedSet *)easyCoder:(NSOrderedSetEasyCoderBlock)block;
+-(NSOrderedSet *)easyCoder:(NSOrderedSetEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(NSOrderedSet,NSOrderedSet *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSOrderedSet ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSOrderedSet ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSOrderedSet ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSOrderedSet ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSOrderedSet ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSOrderedSet ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSOrderedSet ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSOrderedSet ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSOrderedSet ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSOrderedSet ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSOrderedSet ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSOrderedSet ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSOrderedSet ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSOrderedSet ,long long,accessibilityNavigationStyle)
+-(NSOrderedSet  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSOrderedSet  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSOrderedSet  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSOrderedSet  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSOrderedSet  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSOrderedSet  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSOrderedSet  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSOrderedSet  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSOrderedSet  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSOrderedSet  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSOrderedSet  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSOrderedSet  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSOrderedSet  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSOrderedSet  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSOrderedSet);
+-(NSOrderedSet *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

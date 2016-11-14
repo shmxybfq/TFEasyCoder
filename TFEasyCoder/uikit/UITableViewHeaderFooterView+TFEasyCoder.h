@@ -10,51 +10,51 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UITableViewHeaderFooterView,UITableViewHeaderFooterView *);
+typedef void(^UITableViewHeaderFooterViewEasyCoderBlock) (UITableViewHeaderFooterView * ins);
 
 @interface UITableViewHeaderFooterView (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UITableViewHeaderFooterView, UITableViewHeaderFooterView *);
-TF_EC_MINSTANCE_INT(UITableViewHeaderFooterView,UITableViewHeaderFooterView *);
++( UITableViewHeaderFooterView *)easyCoder:(UITableViewHeaderFooterViewEasyCoderBlock)block;
+-(UITableViewHeaderFooterView *)easyCoder:(UITableViewHeaderFooterViewEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,UIColor *,tintColor)
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,UIView *,backgroundView)
+-(UITableViewHeaderFooterView  *(^)(UIColor *  tintColor))set_tintColor;
+-(UITableViewHeaderFooterView  *(^)(UIView *  backgroundView))set_backgroundView;
 
 
 
 
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,UIColor *,backgroundColor)
+-(UITableViewHeaderFooterView  *(^)(UIView *  maskView))set_maskView;
+-(UITableViewHeaderFooterView  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UITableViewHeaderFooterView  *(^)(long long  tag))set_tag;
+-(UITableViewHeaderFooterView  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UITableViewHeaderFooterView  *(^)(CGPoint  center))set_center;
+-(UITableViewHeaderFooterView  *(^)(CGRect  frame))set_frame;
+-(UITableViewHeaderFooterView  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,NSUserActivity *,userActivity);
+-(UITableViewHeaderFooterView  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UITableViewHeaderFooterView ,long long,accessibilityNavigationStyle)
+-(UITableViewHeaderFooterView  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UITableViewHeaderFooterView  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UITableViewHeaderFooterView  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UITableViewHeaderFooterView  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UITableViewHeaderFooterView  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UITableViewHeaderFooterView  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UITableViewHeaderFooterView  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UITableViewHeaderFooterView  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UITableViewHeaderFooterView  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UITableViewHeaderFooterView  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UITableViewHeaderFooterView  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UITableViewHeaderFooterView  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UITableViewHeaderFooterView  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UITableViewHeaderFooterView  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UITableViewHeaderFooterView);
+-(UITableViewHeaderFooterView *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

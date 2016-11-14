@@ -10,64 +10,64 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIWebView,UIWebView *);
+typedef void(^UIWebViewEasyCoderBlock) (UIWebView * ins);
 
 @interface UIWebView (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIWebView, UIWebView *);
-TF_EC_MINSTANCE_INT(UIWebView,UIWebView *);
++( UIWebView *)easyCoder:(UIWebViewEasyCoderBlock)block;
+-(UIWebView *)easyCoder:(UIWebViewEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIWebView ,id<UIWebViewDelegate> ,delegate);
-TF_EC_CHAIN_PROP_INT(UIWebView ,BOOL,scalesPageToFit);
-TF_EC_CHAIN_PROP_INT(UIWebView ,BOOL,detectsPhoneNumbers);
-TF_EC_CHAIN_PROP_INT(UIWebView ,unsigned long long,dataDetectorTypes);
-TF_EC_CHAIN_PROP_INT(UIWebView ,BOOL,allowsInlineMediaPlayback);
-TF_EC_CHAIN_PROP_INT(UIWebView ,BOOL,mediaPlaybackRequiresUserAction);
-TF_EC_CHAIN_PROP_INT(UIWebView ,BOOL,mediaPlaybackAllowsAirPlay);
-TF_EC_CHAIN_PROP_INT(UIWebView ,BOOL,suppressesIncrementalRendering);
-TF_EC_CHAIN_PROP_INT(UIWebView ,BOOL,keyboardDisplayRequiresUserAction);
-TF_EC_CHAIN_PROP_INT(UIWebView ,long long,paginationMode);
-TF_EC_CHAIN_PROP_INT(UIWebView ,long long,paginationBreakingMode);
-TF_EC_CHAIN_PROP_INT(UIWebView ,double,pageLength);
-TF_EC_CHAIN_PROP_INT(UIWebView ,double,gapBetweenPages);
-TF_EC_CHAIN_PROP_INT(UIWebView ,BOOL,allowsPictureInPictureMediaPlayback);
-TF_EC_CHAIN_PROP_INT(UIWebView ,BOOL,allowsLinkPreview);
+-(UIWebView  *(^)(id<UIWebViewDelegate>   delegate))set_delegate;
+-(UIWebView  *(^)(BOOL  scalesPageToFit))set_scalesPageToFit;
+-(UIWebView  *(^)(BOOL  detectsPhoneNumbers))set_detectsPhoneNumbers;
+-(UIWebView  *(^)(unsigned long long  dataDetectorTypes))set_dataDetectorTypes;
+-(UIWebView  *(^)(BOOL  allowsInlineMediaPlayback))set_allowsInlineMediaPlayback;
+-(UIWebView  *(^)(BOOL  mediaPlaybackRequiresUserAction))set_mediaPlaybackRequiresUserAction;
+-(UIWebView  *(^)(BOOL  mediaPlaybackAllowsAirPlay))set_mediaPlaybackAllowsAirPlay;
+-(UIWebView  *(^)(BOOL  suppressesIncrementalRendering))set_suppressesIncrementalRendering;
+-(UIWebView  *(^)(BOOL  keyboardDisplayRequiresUserAction))set_keyboardDisplayRequiresUserAction;
+-(UIWebView  *(^)(long long  paginationMode))set_paginationMode;
+-(UIWebView  *(^)(long long  paginationBreakingMode))set_paginationBreakingMode;
+-(UIWebView  *(^)(double  pageLength))set_pageLength;
+-(UIWebView  *(^)(double  gapBetweenPages))set_gapBetweenPages;
+-(UIWebView  *(^)(BOOL  allowsPictureInPictureMediaPlayback))set_allowsPictureInPictureMediaPlayback;
+-(UIWebView  *(^)(BOOL  allowsLinkPreview))set_allowsLinkPreview;
 
 
 
 
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UIWebView ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UIWebView ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UIWebView ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UIWebView ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UIWebView ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UIWebView ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UIWebView ,UIColor *,backgroundColor)
+-(UIWebView  *(^)(UIView *  maskView))set_maskView;
+-(UIWebView  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UIWebView  *(^)(long long  tag))set_tag;
+-(UIWebView  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UIWebView  *(^)(CGPoint  center))set_center;
+-(UIWebView  *(^)(CGRect  frame))set_frame;
+-(UIWebView  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIWebView ,NSUserActivity *,userActivity);
+-(UIWebView  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIWebView ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIWebView ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIWebView ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIWebView ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIWebView ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIWebView ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIWebView ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIWebView ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIWebView ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIWebView ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIWebView ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIWebView ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIWebView ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIWebView ,long long,accessibilityNavigationStyle)
+-(UIWebView  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIWebView  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIWebView  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIWebView  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIWebView  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIWebView  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIWebView  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIWebView  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIWebView  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIWebView  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIWebView  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIWebView  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIWebView  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIWebView  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIWebView);
+-(UIWebView *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

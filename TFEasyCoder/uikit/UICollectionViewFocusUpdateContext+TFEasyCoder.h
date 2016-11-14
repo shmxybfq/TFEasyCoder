@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UICollectionViewFocusUpdateContext,UICollectionViewFocusUpdateContext *);
+typedef void(^UICollectionViewFocusUpdateContextEasyCoderBlock) (UICollectionViewFocusUpdateContext * ins);
 
 @interface UICollectionViewFocusUpdateContext (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UICollectionViewFocusUpdateContext, UICollectionViewFocusUpdateContext *);
-TF_EC_MINSTANCE_INT(UICollectionViewFocusUpdateContext,UICollectionViewFocusUpdateContext *);
++( UICollectionViewFocusUpdateContext *)easyCoder:(UICollectionViewFocusUpdateContextEasyCoderBlock)block;
+-(UICollectionViewFocusUpdateContext *)easyCoder:(UICollectionViewFocusUpdateContextEasyCoderBlock)block;
 
 
 
@@ -24,26 +24,26 @@ TF_EC_MINSTANCE_INT(UICollectionViewFocusUpdateContext,UICollectionViewFocusUpda
 
 //superclass pros UIFocusUpdateContext
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UICollectionViewFocusUpdateContext ,long long,accessibilityNavigationStyle)
+-(UICollectionViewFocusUpdateContext  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UICollectionViewFocusUpdateContext  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UICollectionViewFocusUpdateContext  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UICollectionViewFocusUpdateContext  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UICollectionViewFocusUpdateContext  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UICollectionViewFocusUpdateContext  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UICollectionViewFocusUpdateContext  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UICollectionViewFocusUpdateContext  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UICollectionViewFocusUpdateContext  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UICollectionViewFocusUpdateContext  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UICollectionViewFocusUpdateContext  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UICollectionViewFocusUpdateContext  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UICollectionViewFocusUpdateContext  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UICollectionViewFocusUpdateContext  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UICollectionViewFocusUpdateContext);
+-(UICollectionViewFocusUpdateContext *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

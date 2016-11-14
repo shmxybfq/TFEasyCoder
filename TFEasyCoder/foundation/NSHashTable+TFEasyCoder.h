@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSHashTable,NSHashTable *);
+typedef void(^NSHashTableEasyCoderBlock) (NSHashTable * ins);
 
 @interface NSHashTable (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSHashTable, NSHashTable *);
-TF_EC_MINSTANCE_INT(NSHashTable,NSHashTable *);
++( NSHashTable *)easyCoder:(NSHashTableEasyCoderBlock)block;
+-(NSHashTable *)easyCoder:(NSHashTableEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(NSHashTable,NSHashTable *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSHashTable ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSHashTable ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSHashTable ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSHashTable ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSHashTable ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSHashTable ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSHashTable ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSHashTable ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSHashTable ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSHashTable ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSHashTable ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSHashTable ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSHashTable ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSHashTable ,long long,accessibilityNavigationStyle)
+-(NSHashTable  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSHashTable  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSHashTable  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSHashTable  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSHashTable  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSHashTable  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSHashTable  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSHashTable  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSHashTable  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSHashTable  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSHashTable  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSHashTable  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSHashTable  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSHashTable  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSHashTable);
+-(NSHashTable *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

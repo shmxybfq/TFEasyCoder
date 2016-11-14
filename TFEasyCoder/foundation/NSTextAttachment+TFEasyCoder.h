@@ -10,43 +10,43 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSTextAttachment,NSTextAttachment *);
+typedef void(^NSTextAttachmentEasyCoderBlock) (NSTextAttachment * ins);
 
 @interface NSTextAttachment (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSTextAttachment, NSTextAttachment *);
-TF_EC_MINSTANCE_INT(NSTextAttachment,NSTextAttachment *);
++( NSTextAttachment *)easyCoder:(NSTextAttachmentEasyCoderBlock)block;
+-(NSTextAttachment *)easyCoder:(NSTextAttachmentEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSTextAttachment ,NSData *,contents);
-TF_EC_CHAIN_PROP_INT(NSTextAttachment ,NSString *,fileType);
-TF_EC_CHAIN_PROP_INT(NSTextAttachment ,UIImage *,image);
-TF_EC_CHAIN_PROP_INT(NSTextAttachment ,NSFileWrapper *,fileWrapper);
+-(NSTextAttachment  *(^)(NSData *  contents))set_contents;
+-(NSTextAttachment  *(^)(NSString *  fileType))set_fileType;
+-(NSTextAttachment  *(^)(UIImage *  image))set_image;
+-(NSTextAttachment  *(^)(NSFileWrapper *  fileWrapper))set_fileWrapper;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSTextAttachment ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSTextAttachment ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSTextAttachment ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSTextAttachment ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSTextAttachment ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSTextAttachment ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSTextAttachment ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSTextAttachment ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSTextAttachment ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSTextAttachment ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSTextAttachment ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSTextAttachment ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSTextAttachment ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSTextAttachment ,long long,accessibilityNavigationStyle)
+-(NSTextAttachment  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSTextAttachment  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSTextAttachment  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSTextAttachment  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSTextAttachment  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSTextAttachment  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSTextAttachment  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSTextAttachment  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSTextAttachment  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSTextAttachment  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSTextAttachment  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSTextAttachment  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSTextAttachment  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSTextAttachment  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSTextAttachment);
+-(NSTextAttachment *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

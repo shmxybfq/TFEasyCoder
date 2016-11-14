@@ -10,41 +10,41 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(CAEmitterBehavior,CAEmitterBehavior *);
+typedef void(^CAEmitterBehaviorEasyCoderBlock) (CAEmitterBehavior * ins);
 
 @interface CAEmitterBehavior (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(CAEmitterBehavior, CAEmitterBehavior *);
-TF_EC_MINSTANCE_INT(CAEmitterBehavior,CAEmitterBehavior *);
++( CAEmitterBehavior *)easyCoder:(CAEmitterBehaviorEasyCoderBlock)block;
+-(CAEmitterBehavior *)easyCoder:(CAEmitterBehaviorEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(CAEmitterBehavior ,NSString *,name);
-TF_EC_CHAIN_PROP_INT(CAEmitterBehavior ,BOOL,enabled);
+-(CAEmitterBehavior  *(^)(NSString *  name))set_name;
+-(CAEmitterBehavior  *(^)(BOOL  enabled))set_enabled;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(CAEmitterBehavior ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(CAEmitterBehavior ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(CAEmitterBehavior ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(CAEmitterBehavior ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(CAEmitterBehavior ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(CAEmitterBehavior ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(CAEmitterBehavior ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(CAEmitterBehavior ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(CAEmitterBehavior ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(CAEmitterBehavior ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(CAEmitterBehavior ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(CAEmitterBehavior ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(CAEmitterBehavior ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(CAEmitterBehavior ,long long,accessibilityNavigationStyle)
+-(CAEmitterBehavior  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(CAEmitterBehavior  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(CAEmitterBehavior  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(CAEmitterBehavior  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(CAEmitterBehavior  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(CAEmitterBehavior  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(CAEmitterBehavior  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(CAEmitterBehavior  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(CAEmitterBehavior  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(CAEmitterBehavior  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(CAEmitterBehavior  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(CAEmitterBehavior  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(CAEmitterBehavior  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(CAEmitterBehavior  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(CAEmitterBehavior);
+-(CAEmitterBehavior *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

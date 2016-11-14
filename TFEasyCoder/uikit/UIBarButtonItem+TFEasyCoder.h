@@ -10,22 +10,22 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIBarButtonItem,UIBarButtonItem *);
+typedef void(^UIBarButtonItemEasyCoderBlock) (UIBarButtonItem * ins);
 
 @interface UIBarButtonItem (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIBarButtonItem, UIBarButtonItem *);
-TF_EC_MINSTANCE_INT(UIBarButtonItem,UIBarButtonItem *);
++( UIBarButtonItem *)easyCoder:(UIBarButtonItemEasyCoderBlock)block;
+-(UIBarButtonItem *)easyCoder:(UIBarButtonItemEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,BOOL,enabled)
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,UIEdgeInsets,imageInsets)
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,long long,style)
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,double,width)
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,NSSet *,possibleTitles)
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,UIView *,customView)
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,SEL,action)
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,UIColor *,tintColor)
+-(UIBarButtonItem  *(^)(BOOL  enabled))set_enabled;
+-(UIBarButtonItem  *(^)(UIEdgeInsets  imageInsets))set_imageInsets;
+-(UIBarButtonItem  *(^)(long long  style))set_style;
+-(UIBarButtonItem  *(^)(double  width))set_width;
+-(UIBarButtonItem  *(^)(NSSet *  possibleTitles))set_possibleTitles;
+-(UIBarButtonItem  *(^)(UIView *  customView))set_customView;
+-(UIBarButtonItem  *(^)(SEL  action))set_action;
+-(UIBarButtonItem  *(^)(UIColor *  tintColor))set_tintColor;
 
 
 
@@ -33,33 +33,33 @@ TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,UIColor *,tintColor)
 
 //superclass pros UIBarItem
 //TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,NSString *,title);
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,UIImage *,image);
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,UIImage *,landscapeImagePhone);
+-(UIBarButtonItem  *(^)(NSString *  title))set_title;
+-(UIBarButtonItem  *(^)(UIImage *  image))set_image;
+-(UIBarButtonItem  *(^)(UIImage *  landscapeImagePhone))set_landscapeImagePhone;
 //TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,UIEdgeInsets,imageInsets);
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,UIEdgeInsets,landscapeImagePhoneInsets);
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,long long,tag);
+-(UIBarButtonItem  *(^)(UIEdgeInsets  landscapeImagePhoneInsets))set_landscapeImagePhoneInsets;
+-(UIBarButtonItem  *(^)(long long  tag))set_tag;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIBarButtonItem ,long long,accessibilityNavigationStyle)
+-(UIBarButtonItem  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIBarButtonItem  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIBarButtonItem  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIBarButtonItem  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIBarButtonItem  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIBarButtonItem  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIBarButtonItem  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIBarButtonItem  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIBarButtonItem  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIBarButtonItem  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIBarButtonItem  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIBarButtonItem  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIBarButtonItem  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIBarButtonItem  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIBarButtonItem);
+-(UIBarButtonItem *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

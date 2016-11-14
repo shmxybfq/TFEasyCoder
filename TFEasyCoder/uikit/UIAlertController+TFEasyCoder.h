@@ -10,63 +10,63 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIAlertController,UIAlertController *);
+typedef void(^UIAlertControllerEasyCoderBlock) (UIAlertController * ins);
 
 @interface UIAlertController (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIAlertController, UIAlertController *);
-TF_EC_MINSTANCE_INT(UIAlertController,UIAlertController *);
++( UIAlertController *)easyCoder:(UIAlertControllerEasyCoderBlock)block;
+-(UIAlertController *)easyCoder:(UIAlertControllerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIAlertController ,UIAlertAction *,preferredAction)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,NSString *,title)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,NSString *,message)
+-(UIAlertController  *(^)(UIAlertAction *  preferredAction))set_preferredAction;
+-(UIAlertController  *(^)(NSString *  title))set_title;
+-(UIAlertController  *(^)(NSString *  message))set_message;
 
 
 
 
 
 //superclass pros UIViewController
-TF_EC_CHAIN_PROP_INT(UIAlertController ,UITabBarItem *,tabBarItem)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,BOOL,hidesBottomBarWhenPushed)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,id<UIViewControllerTransitioningDelegate>  ,transitioningDelegate)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,UIView *,view)
+-(UIAlertController  *(^)(UITabBarItem *  tabBarItem))set_tabBarItem;
+-(UIAlertController  *(^)(BOOL  hidesBottomBarWhenPushed))set_hidesBottomBarWhenPushed;
+-(UIAlertController  *(^)(id<UIViewControllerTransitioningDelegate>    transitioningDelegate))set_transitioningDelegate;
+-(UIAlertController  *(^)(UIView *  view))set_view;
 //TF_EC_CHAIN_PROP_INT(UIAlertController ,NSString *,title)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,BOOL,definesPresentationContext)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,BOOL,providesPresentationContextTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,long long,modalTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,long long,modalPresentationStyle)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,BOOL,modalPresentationCapturesStatusBarAppearance)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,BOOL,wantsFullScreenLayout)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,unsigned long long,edgesForExtendedLayout)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,BOOL,extendedLayoutIncludesOpaqueBars)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,BOOL,automaticallyAdjustsScrollViewInsets)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,CGSize,preferredContentSize)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,CGSize,contentSizeForViewInPopover)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,BOOL,modalInPopover)
+-(UIAlertController  *(^)(BOOL  definesPresentationContext))set_definesPresentationContext;
+-(UIAlertController  *(^)(BOOL  providesPresentationContextTransitionStyle))set_providesPresentationContextTransitionStyle;
+-(UIAlertController  *(^)(long long  modalTransitionStyle))set_modalTransitionStyle;
+-(UIAlertController  *(^)(long long  modalPresentationStyle))set_modalPresentationStyle;
+-(UIAlertController  *(^)(BOOL  modalPresentationCapturesStatusBarAppearance))set_modalPresentationCapturesStatusBarAppearance;
+-(UIAlertController  *(^)(BOOL  wantsFullScreenLayout))set_wantsFullScreenLayout;
+-(UIAlertController  *(^)(unsigned long long  edgesForExtendedLayout))set_edgesForExtendedLayout;
+-(UIAlertController  *(^)(BOOL  extendedLayoutIncludesOpaqueBars))set_extendedLayoutIncludesOpaqueBars;
+-(UIAlertController  *(^)(BOOL  automaticallyAdjustsScrollViewInsets))set_automaticallyAdjustsScrollViewInsets;
+-(UIAlertController  *(^)(CGSize  preferredContentSize))set_preferredContentSize;
+-(UIAlertController  *(^)(CGSize  contentSizeForViewInPopover))set_contentSizeForViewInPopover;
+-(UIAlertController  *(^)(BOOL  modalInPopover))set_modalInPopover;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIAlertController ,NSUserActivity *,userActivity);
+-(UIAlertController  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIAlertController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIAlertController ,long long,accessibilityNavigationStyle)
+-(UIAlertController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIAlertController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIAlertController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIAlertController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIAlertController  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIAlertController  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIAlertController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIAlertController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIAlertController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIAlertController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIAlertController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIAlertController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIAlertController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIAlertController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIAlertController);
+-(UIAlertController *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -11,8 +11,22 @@
 
 @implementation NSFileProviderExtension (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(NSFileProviderExtension, NSFileProviderExtension *);
-TF_EC_MINSTANCE_IMP(NSFileProviderExtension, NSFileProviderExtension *);
++( NSFileProviderExtension *)easyCoder:(NSFileProviderExtensionEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( NSFileProviderExtension *)ins);
+        }
+    }];
+}
+
+-( NSFileProviderExtension *)easyCoder:(NSFileProviderExtensionEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
+
 
 
 
@@ -20,26 +34,130 @@ TF_EC_MINSTANCE_IMP(NSFileProviderExtension, NSFileProviderExtension *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(NSFileProviderExtension ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(NSFileProviderExtension ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(NSFileProviderExtension ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(NSFileProviderExtension ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(NSFileProviderExtension ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(NSFileProviderExtension ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(NSFileProviderExtension ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(NSFileProviderExtension ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(NSFileProviderExtension ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(NSFileProviderExtension ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(NSFileProviderExtension ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(NSFileProviderExtension ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(NSFileProviderExtension ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(NSFileProviderExtension ,long long,accessibilityNavigationStyle)
+-(NSFileProviderExtension  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(NSFileProviderExtension  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(NSFileProviderExtension  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(NSFileProviderExtension  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(NSFileProviderExtension  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(NSFileProviderExtension  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(NSFileProviderExtension  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(NSFileProviderExtension  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(NSFileProviderExtension  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(NSFileProviderExtension  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(NSFileProviderExtension  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(NSFileProviderExtension  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(NSFileProviderExtension  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(NSFileProviderExtension  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSFileProviderExtension);
+
+-(NSFileProviderExtension *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

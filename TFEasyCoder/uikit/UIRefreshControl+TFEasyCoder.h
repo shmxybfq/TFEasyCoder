@@ -10,57 +10,57 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIRefreshControl,UIRefreshControl *);
+typedef void(^UIRefreshControlEasyCoderBlock) (UIRefreshControl * ins);
 
 @interface UIRefreshControl (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIRefreshControl, UIRefreshControl *);
-TF_EC_MINSTANCE_INT(UIRefreshControl,UIRefreshControl *);
++( UIRefreshControl *)easyCoder:(UIRefreshControlEasyCoderBlock)block;
+-(UIRefreshControl *)easyCoder:(UIRefreshControlEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,UIColor *,tintColor);
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,NSAttributedString *,attributedTitle);
+-(UIRefreshControl  *(^)(UIColor *  tintColor))set_tintColor;
+-(UIRefreshControl  *(^)(NSAttributedString *  attributedTitle))set_attributedTitle;
 
 
 
 
 //superclass pros UIControl
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,BOOL,selected);
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,BOOL,highlighted);
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,long long,contentVerticalAlignment);
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,long long,contentHorizontalAlignment);
+-(UIRefreshControl  *(^)(BOOL  enabled))set_enabled;
+-(UIRefreshControl  *(^)(BOOL  selected))set_selected;
+-(UIRefreshControl  *(^)(BOOL  highlighted))set_highlighted;
+-(UIRefreshControl  *(^)(long long  contentVerticalAlignment))set_contentVerticalAlignment;
+-(UIRefreshControl  *(^)(long long  contentHorizontalAlignment))set_contentHorizontalAlignment;
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,UIColor *,backgroundColor)
+-(UIRefreshControl  *(^)(UIView *  maskView))set_maskView;
+-(UIRefreshControl  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UIRefreshControl  *(^)(long long  tag))set_tag;
+-(UIRefreshControl  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UIRefreshControl  *(^)(CGPoint  center))set_center;
+-(UIRefreshControl  *(^)(CGRect  frame))set_frame;
+-(UIRefreshControl  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,NSUserActivity *,userActivity);
+-(UIRefreshControl  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIRefreshControl ,long long,accessibilityNavigationStyle)
+-(UIRefreshControl  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIRefreshControl  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIRefreshControl  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIRefreshControl  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIRefreshControl  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIRefreshControl  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIRefreshControl  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIRefreshControl  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIRefreshControl  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIRefreshControl  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIRefreshControl  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIRefreshControl  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIRefreshControl  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIRefreshControl  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIRefreshControl);
+-(UIRefreshControl *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

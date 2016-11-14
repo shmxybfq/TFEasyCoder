@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIPress,UIPress *);
+typedef void(^UIPressEasyCoderBlock) (UIPress * ins);
 
 @interface UIPress (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIPress, UIPress *);
-TF_EC_MINSTANCE_INT(UIPress,UIPress *);
++( UIPress *)easyCoder:(UIPressEasyCoderBlock)block;
+-(UIPress *)easyCoder:(UIPressEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(UIPress,UIPress *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIPress ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIPress ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIPress ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIPress ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIPress ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIPress ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIPress ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIPress ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIPress ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIPress ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIPress ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIPress ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIPress ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIPress ,long long,accessibilityNavigationStyle)
+-(UIPress  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIPress  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIPress  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIPress  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIPress  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIPress  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIPress  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIPress  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIPress  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIPress  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIPress  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIPress  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIPress  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIPress  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIPress);
+-(UIPress *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

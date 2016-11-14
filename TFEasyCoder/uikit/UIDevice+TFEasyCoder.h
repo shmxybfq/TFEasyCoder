@@ -10,41 +10,41 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIDevice,UIDevice *);
+typedef void(^UIDeviceEasyCoderBlock) (UIDevice * ins);
 
 @interface UIDevice (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIDevice, UIDevice *);
-TF_EC_MINSTANCE_INT(UIDevice,UIDevice *);
++( UIDevice *)easyCoder:(UIDeviceEasyCoderBlock)block;
+-(UIDevice *)easyCoder:(UIDeviceEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIDevice ,BOOL,batteryMonitoringEnabled);
-TF_EC_CHAIN_PROP_INT(UIDevice ,BOOL,proximityMonitoringEnabled);
+-(UIDevice  *(^)(BOOL  batteryMonitoringEnabled))set_batteryMonitoringEnabled;
+-(UIDevice  *(^)(BOOL  proximityMonitoringEnabled))set_proximityMonitoringEnabled;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIDevice ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIDevice ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIDevice ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIDevice ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIDevice ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIDevice ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIDevice ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIDevice ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIDevice ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIDevice ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIDevice ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIDevice ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIDevice ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIDevice ,long long,accessibilityNavigationStyle)
+-(UIDevice  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIDevice  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIDevice  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIDevice  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIDevice  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIDevice  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIDevice  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIDevice  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIDevice  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIDevice  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIDevice  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIDevice  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIDevice  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIDevice  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIDevice);
+-(UIDevice *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

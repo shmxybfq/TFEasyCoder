@@ -10,74 +10,74 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSDateFormatter,NSDateFormatter *);
+typedef void(^NSDateFormatterEasyCoderBlock) (NSDateFormatter * ins);
 
 @interface NSDateFormatter (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSDateFormatter, NSDateFormatter *);
-TF_EC_MINSTANCE_INT(NSDateFormatter,NSDateFormatter *);
++( NSDateFormatter *)easyCoder:(NSDateFormatterEasyCoderBlock)block;
+-(NSDateFormatter *)easyCoder:(NSDateFormatterEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,long long,formattingContext);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSString *,dateFormat);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,unsigned long long,dateStyle);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,unsigned long long,timeStyle);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSLocale *,locale);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,BOOL,generatesCalendarDates);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,unsigned long long,formatterBehavior);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSTimeZone *,timeZone);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSCalendar *,calendar);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,BOOL,lenient);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSDate *,twoDigitStartDate);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSDate *,defaultDate);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,eraSymbols);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,monthSymbols);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,shortMonthSymbols);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,weekdaySymbols);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,shortWeekdaySymbols);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSString *,AMSymbol);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSString *,PMSymbol);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,longEraSymbols);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,veryShortMonthSymbols);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,standaloneMonthSymbols);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,shortStandaloneMonthSymbols);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,veryShortStandaloneMonthSymbols);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,veryShortWeekdaySymbols);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,standaloneWeekdaySymbols);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,shortStandaloneWeekdaySymbols);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,veryShortStandaloneWeekdaySymbols);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,quarterSymbols);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,shortQuarterSymbols);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,standaloneQuarterSymbols);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,shortStandaloneQuarterSymbols);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSDate *,gregorianStartDate);
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,BOOL,doesRelativeDateFormatting);
+-(NSDateFormatter  *(^)(long long  formattingContext))set_formattingContext;
+-(NSDateFormatter  *(^)(NSString *  dateFormat))set_dateFormat;
+-(NSDateFormatter  *(^)(unsigned long long  dateStyle))set_dateStyle;
+-(NSDateFormatter  *(^)(unsigned long long  timeStyle))set_timeStyle;
+-(NSDateFormatter  *(^)(NSLocale *  locale))set_locale;
+-(NSDateFormatter  *(^)(BOOL  generatesCalendarDates))set_generatesCalendarDates;
+-(NSDateFormatter  *(^)(unsigned long long  formatterBehavior))set_formatterBehavior;
+-(NSDateFormatter  *(^)(NSTimeZone *  timeZone))set_timeZone;
+-(NSDateFormatter  *(^)(NSCalendar *  calendar))set_calendar;
+-(NSDateFormatter  *(^)(BOOL  lenient))set_lenient;
+-(NSDateFormatter  *(^)(NSDate *  twoDigitStartDate))set_twoDigitStartDate;
+-(NSDateFormatter  *(^)(NSDate *  defaultDate))set_defaultDate;
+-(NSDateFormatter  *(^)(NSArray *  eraSymbols))set_eraSymbols;
+-(NSDateFormatter  *(^)(NSArray *  monthSymbols))set_monthSymbols;
+-(NSDateFormatter  *(^)(NSArray *  shortMonthSymbols))set_shortMonthSymbols;
+-(NSDateFormatter  *(^)(NSArray *  weekdaySymbols))set_weekdaySymbols;
+-(NSDateFormatter  *(^)(NSArray *  shortWeekdaySymbols))set_shortWeekdaySymbols;
+-(NSDateFormatter  *(^)(NSString *  AMSymbol))set_AMSymbol;
+-(NSDateFormatter  *(^)(NSString *  PMSymbol))set_PMSymbol;
+-(NSDateFormatter  *(^)(NSArray *  longEraSymbols))set_longEraSymbols;
+-(NSDateFormatter  *(^)(NSArray *  veryShortMonthSymbols))set_veryShortMonthSymbols;
+-(NSDateFormatter  *(^)(NSArray *  standaloneMonthSymbols))set_standaloneMonthSymbols;
+-(NSDateFormatter  *(^)(NSArray *  shortStandaloneMonthSymbols))set_shortStandaloneMonthSymbols;
+-(NSDateFormatter  *(^)(NSArray *  veryShortStandaloneMonthSymbols))set_veryShortStandaloneMonthSymbols;
+-(NSDateFormatter  *(^)(NSArray *  veryShortWeekdaySymbols))set_veryShortWeekdaySymbols;
+-(NSDateFormatter  *(^)(NSArray *  standaloneWeekdaySymbols))set_standaloneWeekdaySymbols;
+-(NSDateFormatter  *(^)(NSArray *  shortStandaloneWeekdaySymbols))set_shortStandaloneWeekdaySymbols;
+-(NSDateFormatter  *(^)(NSArray *  veryShortStandaloneWeekdaySymbols))set_veryShortStandaloneWeekdaySymbols;
+-(NSDateFormatter  *(^)(NSArray *  quarterSymbols))set_quarterSymbols;
+-(NSDateFormatter  *(^)(NSArray *  shortQuarterSymbols))set_shortQuarterSymbols;
+-(NSDateFormatter  *(^)(NSArray *  standaloneQuarterSymbols))set_standaloneQuarterSymbols;
+-(NSDateFormatter  *(^)(NSArray *  shortStandaloneQuarterSymbols))set_shortStandaloneQuarterSymbols;
+-(NSDateFormatter  *(^)(NSDate *  gregorianStartDate))set_gregorianStartDate;
+-(NSDateFormatter  *(^)(BOOL  doesRelativeDateFormatting))set_doesRelativeDateFormatting;
 
 
 
 
 //superclass pros NSFormatter
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSDateFormatter ,long long,accessibilityNavigationStyle)
+-(NSDateFormatter  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSDateFormatter  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSDateFormatter  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSDateFormatter  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSDateFormatter  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSDateFormatter  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSDateFormatter  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSDateFormatter  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSDateFormatter  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSDateFormatter  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSDateFormatter  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSDateFormatter  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSDateFormatter  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSDateFormatter  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSDateFormatter);
+-(NSDateFormatter *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

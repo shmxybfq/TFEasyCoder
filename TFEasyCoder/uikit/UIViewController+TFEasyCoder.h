@@ -10,58 +10,58 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIViewController,UIViewController *);
+typedef void(^UIViewControllerEasyCoderBlock) (UIViewController * ins);
 
 @interface UIViewController (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIViewController, UIViewController *);
-TF_EC_MINSTANCE_INT(UIViewController,UIViewController *);
++( UIViewController *)easyCoder:(UIViewControllerEasyCoderBlock)block;
+-(UIViewController *)easyCoder:(UIViewControllerEasyCoderBlock)block;
 
-TF_EC_CHAIN_PROP_INT(UIViewController ,UITabBarItem *,tabBarItem)
-TF_EC_CHAIN_PROP_INT(UIViewController ,BOOL,hidesBottomBarWhenPushed)
-TF_EC_CHAIN_PROP_INT(UIViewController ,id<UIViewControllerTransitioningDelegate>  ,transitioningDelegate)
-TF_EC_CHAIN_PROP_INT(UIViewController ,UIView *,view)
-TF_EC_CHAIN_PROP_INT(UIViewController ,NSString *,title)
-TF_EC_CHAIN_PROP_INT(UIViewController ,BOOL,definesPresentationContext)
-TF_EC_CHAIN_PROP_INT(UIViewController ,BOOL,providesPresentationContextTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UIViewController ,long long,modalTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UIViewController ,long long,modalPresentationStyle)
-TF_EC_CHAIN_PROP_INT(UIViewController ,BOOL,modalPresentationCapturesStatusBarAppearance)
-TF_EC_CHAIN_PROP_INT(UIViewController ,BOOL,wantsFullScreenLayout)
-TF_EC_CHAIN_PROP_INT(UIViewController ,unsigned long long,edgesForExtendedLayout)
-TF_EC_CHAIN_PROP_INT(UIViewController ,BOOL,extendedLayoutIncludesOpaqueBars)
-TF_EC_CHAIN_PROP_INT(UIViewController ,BOOL,automaticallyAdjustsScrollViewInsets)
-TF_EC_CHAIN_PROP_INT(UIViewController ,CGSize,preferredContentSize)
-TF_EC_CHAIN_PROP_INT(UIViewController ,CGSize,contentSizeForViewInPopover)
-TF_EC_CHAIN_PROP_INT(UIViewController ,BOOL,modalInPopover)
+-(UIViewController  *(^)(UITabBarItem *  tabBarItem))set_tabBarItem;
+-(UIViewController  *(^)(BOOL  hidesBottomBarWhenPushed))set_hidesBottomBarWhenPushed;
+-(UIViewController  *(^)(id<UIViewControllerTransitioningDelegate>    transitioningDelegate))set_transitioningDelegate;
+-(UIViewController  *(^)(UIView *  view))set_view;
+-(UIViewController  *(^)(NSString *  title))set_title;
+-(UIViewController  *(^)(BOOL  definesPresentationContext))set_definesPresentationContext;
+-(UIViewController  *(^)(BOOL  providesPresentationContextTransitionStyle))set_providesPresentationContextTransitionStyle;
+-(UIViewController  *(^)(long long  modalTransitionStyle))set_modalTransitionStyle;
+-(UIViewController  *(^)(long long  modalPresentationStyle))set_modalPresentationStyle;
+-(UIViewController  *(^)(BOOL  modalPresentationCapturesStatusBarAppearance))set_modalPresentationCapturesStatusBarAppearance;
+-(UIViewController  *(^)(BOOL  wantsFullScreenLayout))set_wantsFullScreenLayout;
+-(UIViewController  *(^)(unsigned long long  edgesForExtendedLayout))set_edgesForExtendedLayout;
+-(UIViewController  *(^)(BOOL  extendedLayoutIncludesOpaqueBars))set_extendedLayoutIncludesOpaqueBars;
+-(UIViewController  *(^)(BOOL  automaticallyAdjustsScrollViewInsets))set_automaticallyAdjustsScrollViewInsets;
+-(UIViewController  *(^)(CGSize  preferredContentSize))set_preferredContentSize;
+-(UIViewController  *(^)(CGSize  contentSizeForViewInPopover))set_contentSizeForViewInPopover;
+-(UIViewController  *(^)(BOOL  modalInPopover))set_modalInPopover;
 
 
 
 
 
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIViewController ,NSUserActivity *,userActivity);
+-(UIViewController  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIViewController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIViewController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIViewController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIViewController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIViewController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIViewController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIViewController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIViewController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIViewController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIViewController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIViewController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIViewController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIViewController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIViewController ,long long,accessibilityNavigationStyle)
+-(UIViewController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIViewController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIViewController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIViewController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIViewController  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIViewController  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIViewController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIViewController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIViewController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIViewController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIViewController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIViewController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIViewController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIViewController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIViewController);
+-(UIViewController *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

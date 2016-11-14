@@ -11,8 +11,22 @@
 
 @implementation NSDirectoryEnumerator (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(NSDirectoryEnumerator, NSDirectoryEnumerator *);
-TF_EC_MINSTANCE_IMP(NSDirectoryEnumerator, NSDirectoryEnumerator *);
++( NSDirectoryEnumerator *)easyCoder:(NSDirectoryEnumeratorEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( NSDirectoryEnumerator *)ins);
+        }
+    }];
+}
+
+-( NSDirectoryEnumerator *)easyCoder:(NSDirectoryEnumeratorEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
+
 
 
 
@@ -21,26 +35,130 @@ TF_EC_MINSTANCE_IMP(NSDirectoryEnumerator, NSDirectoryEnumerator *);
 
 //superclass pros NSEnumerator
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(NSDirectoryEnumerator ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(NSDirectoryEnumerator ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(NSDirectoryEnumerator ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(NSDirectoryEnumerator ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(NSDirectoryEnumerator ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(NSDirectoryEnumerator ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(NSDirectoryEnumerator ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(NSDirectoryEnumerator ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(NSDirectoryEnumerator ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(NSDirectoryEnumerator ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(NSDirectoryEnumerator ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(NSDirectoryEnumerator ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(NSDirectoryEnumerator ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(NSDirectoryEnumerator ,long long,accessibilityNavigationStyle)
+-(NSDirectoryEnumerator  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(NSDirectoryEnumerator  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(NSDirectoryEnumerator  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(NSDirectoryEnumerator  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(NSDirectoryEnumerator  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(NSDirectoryEnumerator  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(NSDirectoryEnumerator  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(NSDirectoryEnumerator  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(NSDirectoryEnumerator  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(NSDirectoryEnumerator  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(NSDirectoryEnumerator  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(NSDirectoryEnumerator  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(NSDirectoryEnumerator  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(NSDirectoryEnumerator  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSDirectoryEnumerator);
+
+-(NSDirectoryEnumerator *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

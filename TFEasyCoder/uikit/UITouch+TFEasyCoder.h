@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UITouch,UITouch *);
+typedef void(^UITouchEasyCoderBlock) (UITouch * ins);
 
 @interface UITouch (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UITouch, UITouch *);
-TF_EC_MINSTANCE_INT(UITouch,UITouch *);
++( UITouch *)easyCoder:(UITouchEasyCoderBlock)block;
+-(UITouch *)easyCoder:(UITouchEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(UITouch,UITouch *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UITouch ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UITouch ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UITouch ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UITouch ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UITouch ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UITouch ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UITouch ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UITouch ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UITouch ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UITouch ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UITouch ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UITouch ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UITouch ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UITouch ,long long,accessibilityNavigationStyle)
+-(UITouch  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UITouch  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UITouch  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UITouch  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UITouch  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UITouch  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UITouch  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UITouch  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UITouch  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UITouch  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UITouch  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UITouch  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UITouch  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UITouch  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UITouch);
+-(UITouch *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

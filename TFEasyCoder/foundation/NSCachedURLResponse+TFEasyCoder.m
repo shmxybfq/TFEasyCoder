@@ -11,8 +11,22 @@
 
 @implementation NSCachedURLResponse (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(NSCachedURLResponse, NSCachedURLResponse *);
-TF_EC_MINSTANCE_IMP(NSCachedURLResponse, NSCachedURLResponse *);
++( NSCachedURLResponse *)easyCoder:(NSCachedURLResponseEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( NSCachedURLResponse *)ins);
+        }
+    }];
+}
+
+-( NSCachedURLResponse *)easyCoder:(NSCachedURLResponseEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
+
 
 
 
@@ -20,26 +34,130 @@ TF_EC_MINSTANCE_IMP(NSCachedURLResponse, NSCachedURLResponse *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(NSCachedURLResponse ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(NSCachedURLResponse ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(NSCachedURLResponse ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(NSCachedURLResponse ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(NSCachedURLResponse ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(NSCachedURLResponse ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(NSCachedURLResponse ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(NSCachedURLResponse ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(NSCachedURLResponse ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(NSCachedURLResponse ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(NSCachedURLResponse ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(NSCachedURLResponse ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(NSCachedURLResponse ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(NSCachedURLResponse ,long long,accessibilityNavigationStyle)
+-(NSCachedURLResponse  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(NSCachedURLResponse  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(NSCachedURLResponse  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(NSCachedURLResponse  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(NSCachedURLResponse  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(NSCachedURLResponse  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(NSCachedURLResponse  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(NSCachedURLResponse  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(NSCachedURLResponse  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(NSCachedURLResponse  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(NSCachedURLResponse  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(NSCachedURLResponse  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(NSCachedURLResponse  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(NSCachedURLResponse  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSCachedURLResponse);
+
+-(NSCachedURLResponse *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

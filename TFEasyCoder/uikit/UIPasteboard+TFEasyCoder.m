@@ -11,44 +11,225 @@
 
 @implementation UIPasteboard (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(UIPasteboard, UIPasteboard *);
-TF_EC_MINSTANCE_IMP(UIPasteboard, UIPasteboard *);
++( UIPasteboard *)easyCoder:(UIPasteboardEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( UIPasteboard *)ins);
+        }
+    }];
+}
+
+-( UIPasteboard *)easyCoder:(UIPasteboardEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
 
 
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,NSString *,string)
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,NSArray *,strings)
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,NSArray *,URLs)
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,UIImage *,image)
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,NSArray *,images)
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,UIColor *,color)
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,NSArray *,colors)
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,BOOL,persistent)
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,NSArray *,items)
+
+-(UIPasteboard  *(^)(NSString *  string))set_string{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  string){
+        weakSelf.string = string;
+        return weakSelf;
+    };
+}
+
+-(UIPasteboard  *(^)(NSArray *  strings))set_strings{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  strings){
+        weakSelf.strings = strings;
+        return weakSelf;
+    };
+}
+
+-(UIPasteboard  *(^)(NSArray *  URLs))set_URLs{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  URLs){
+        weakSelf.URLs = URLs;
+        return weakSelf;
+    };
+}
+
+-(UIPasteboard  *(^)(UIImage *  image))set_image{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIImage *  image){
+        weakSelf.image = image;
+        return weakSelf;
+    };
+}
+
+-(UIPasteboard  *(^)(NSArray *  images))set_images{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  images){
+        weakSelf.images = images;
+        return weakSelf;
+    };
+}
+
+-(UIPasteboard  *(^)(UIColor *  color))set_color{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIColor *  color){
+        weakSelf.color = color;
+        return weakSelf;
+    };
+}
+
+-(UIPasteboard  *(^)(NSArray *  colors))set_colors{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  colors){
+        weakSelf.colors = colors;
+        return weakSelf;
+    };
+}
+
+-(UIPasteboard  *(^)(BOOL  persistent))set_persistent{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  persistent){
+        weakSelf.persistent = persistent;
+        return weakSelf;
+    };
+}
+
+-(UIPasteboard  *(^)(NSArray *  items))set_items{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  items){
+        weakSelf.items = items;
+        return weakSelf;
+    };
+}
+
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(UIPasteboard ,long long,accessibilityNavigationStyle)
+-(UIPasteboard  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(UIPasteboard  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(UIPasteboard  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(UIPasteboard  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(UIPasteboard  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(UIPasteboard  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(UIPasteboard  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(UIPasteboard  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(UIPasteboard  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(UIPasteboard  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(UIPasteboard  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(UIPasteboard  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(UIPasteboard  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(UIPasteboard  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIPasteboard);
+
+-(UIPasteboard *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

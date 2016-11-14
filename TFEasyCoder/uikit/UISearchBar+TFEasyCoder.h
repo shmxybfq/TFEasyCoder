@@ -10,79 +10,79 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UISearchBar,UISearchBar *);
+typedef void(^UISearchBarEasyCoderBlock) (UISearchBar * ins);
 
 @interface UISearchBar (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UISearchBar, UISearchBar *);
-TF_EC_MINSTANCE_INT(UISearchBar,UISearchBar *);
++( UISearchBar *)easyCoder:(UISearchBarEasyCoderBlock)block;
+-(UISearchBar *)easyCoder:(UISearchBarEasyCoderBlock)block;
 
 
 
-TF_EC_CHAIN_PROP_INT(UISearchBar ,long long,barStyle)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,id<UISearchBarDelegate>  ,delegate)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,NSString *,text)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,NSString *,prompt)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,NSString *,placeholder)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,BOOL,showsBookmarkButton)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,BOOL,showsCancelButton)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,BOOL,showsSearchResultsButton)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,UIColor *,tintColor)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,UIColor *,barTintColor)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,unsigned long long,searchBarStyle)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,BOOL,translucent)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,NSArray *,scopeButtonTitles)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,long long,selectedScopeButtonIndex)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,BOOL,showsScopeBar)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,UIView *,inputAccessoryView)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,UIImage *,backgroundImage)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,UIImage *,scopeBarBackgroundImage)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,UIOffset,searchFieldBackgroundPositionAdjustment)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,UIOffset,searchTextPositionAdjustment)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,long long,autocapitalizationType)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,long long,autocorrectionType)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,long long,spellCheckingType)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,long long,keyboardType)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,long long,keyboardAppearance)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,long long,returnKeyType)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,BOOL,enablesReturnKeyAutomatically)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,BOOL,secureTextEntry)
+-(UISearchBar  *(^)(long long  barStyle))set_barStyle;
+-(UISearchBar  *(^)(id<UISearchBarDelegate>    delegate))set_delegate;
+-(UISearchBar  *(^)(NSString *  text))set_text;
+-(UISearchBar  *(^)(NSString *  prompt))set_prompt;
+-(UISearchBar  *(^)(NSString *  placeholder))set_placeholder;
+-(UISearchBar  *(^)(BOOL  showsBookmarkButton))set_showsBookmarkButton;
+-(UISearchBar  *(^)(BOOL  showsCancelButton))set_showsCancelButton;
+-(UISearchBar  *(^)(BOOL  showsSearchResultsButton))set_showsSearchResultsButton;
+-(UISearchBar  *(^)(UIColor *  tintColor))set_tintColor;
+-(UISearchBar  *(^)(UIColor *  barTintColor))set_barTintColor;
+-(UISearchBar  *(^)(unsigned long long  searchBarStyle))set_searchBarStyle;
+-(UISearchBar  *(^)(BOOL  translucent))set_translucent;
+-(UISearchBar  *(^)(NSArray *  scopeButtonTitles))set_scopeButtonTitles;
+-(UISearchBar  *(^)(long long  selectedScopeButtonIndex))set_selectedScopeButtonIndex;
+-(UISearchBar  *(^)(BOOL  showsScopeBar))set_showsScopeBar;
+-(UISearchBar  *(^)(UIView *  inputAccessoryView))set_inputAccessoryView;
+-(UISearchBar  *(^)(UIImage *  backgroundImage))set_backgroundImage;
+-(UISearchBar  *(^)(UIImage *  scopeBarBackgroundImage))set_scopeBarBackgroundImage;
+-(UISearchBar  *(^)(UIOffset  searchFieldBackgroundPositionAdjustment))set_searchFieldBackgroundPositionAdjustment;
+-(UISearchBar  *(^)(UIOffset  searchTextPositionAdjustment))set_searchTextPositionAdjustment;
+-(UISearchBar  *(^)(long long  autocapitalizationType))set_autocapitalizationType;
+-(UISearchBar  *(^)(long long  autocorrectionType))set_autocorrectionType;
+-(UISearchBar  *(^)(long long  spellCheckingType))set_spellCheckingType;
+-(UISearchBar  *(^)(long long  keyboardType))set_keyboardType;
+-(UISearchBar  *(^)(long long  keyboardAppearance))set_keyboardAppearance;
+-(UISearchBar  *(^)(long long  returnKeyType))set_returnKeyType;
+-(UISearchBar  *(^)(BOOL  enablesReturnKeyAutomatically))set_enablesReturnKeyAutomatically;
+-(UISearchBar  *(^)(BOOL  secureTextEntry))set_secureTextEntry;
 
 
 
 
 
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UISearchBar ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,UIColor *,backgroundColor)
+-(UISearchBar  *(^)(UIView *  maskView))set_maskView;
+-(UISearchBar  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UISearchBar  *(^)(long long  tag))set_tag;
+-(UISearchBar  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UISearchBar  *(^)(CGPoint  center))set_center;
+-(UISearchBar  *(^)(CGRect  frame))set_frame;
+-(UISearchBar  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UISearchBar ,NSUserActivity *,userActivity);
+-(UISearchBar  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UISearchBar ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UISearchBar ,long long,accessibilityNavigationStyle)
+-(UISearchBar  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UISearchBar  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UISearchBar  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UISearchBar  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UISearchBar  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UISearchBar  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UISearchBar  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UISearchBar  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UISearchBar  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UISearchBar  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UISearchBar  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UISearchBar  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UISearchBar  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UISearchBar  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UISearchBar);
+-(UISearchBar *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

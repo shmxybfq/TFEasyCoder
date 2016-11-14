@@ -10,38 +10,38 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIApplicationShortcutIcon,UIApplicationShortcutIcon *);
+typedef void(^UIApplicationShortcutIconEasyCoderBlock) (UIApplicationShortcutIcon * ins);
 
 @interface UIApplicationShortcutIcon (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIApplicationShortcutIcon, UIApplicationShortcutIcon *);
-TF_EC_MINSTANCE_INT(UIApplicationShortcutIcon,UIApplicationShortcutIcon *);
++( UIApplicationShortcutIcon *)easyCoder:(UIApplicationShortcutIconEasyCoderBlock)block;
+-(UIApplicationShortcutIcon *)easyCoder:(UIApplicationShortcutIconEasyCoderBlock)block;
 
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIApplicationShortcutIcon ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIApplicationShortcutIcon ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIApplicationShortcutIcon ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIApplicationShortcutIcon ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIApplicationShortcutIcon ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIApplicationShortcutIcon ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIApplicationShortcutIcon ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIApplicationShortcutIcon ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIApplicationShortcutIcon ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIApplicationShortcutIcon ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIApplicationShortcutIcon ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIApplicationShortcutIcon ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIApplicationShortcutIcon ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIApplicationShortcutIcon ,long long,accessibilityNavigationStyle)
+-(UIApplicationShortcutIcon  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIApplicationShortcutIcon  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIApplicationShortcutIcon  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIApplicationShortcutIcon  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIApplicationShortcutIcon  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIApplicationShortcutIcon  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIApplicationShortcutIcon  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIApplicationShortcutIcon  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIApplicationShortcutIcon  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIApplicationShortcutIcon  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIApplicationShortcutIcon  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIApplicationShortcutIcon  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIApplicationShortcutIcon  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIApplicationShortcutIcon  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIApplicationShortcutIcon);
+-(UIApplicationShortcutIcon *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -10,104 +10,104 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(CAEmitterLayer,CAEmitterLayer *);
+typedef void(^CAEmitterLayerEasyCoderBlock) (CAEmitterLayer * ins);
 
 @interface CAEmitterLayer (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(CAEmitterLayer, CAEmitterLayer *);
-TF_EC_MINSTANCE_INT(CAEmitterLayer,CAEmitterLayer *);
++( CAEmitterLayer *)easyCoder:(CAEmitterLayerEasyCoderBlock)block;
+-(CAEmitterLayer *)easyCoder:(CAEmitterLayerEasyCoderBlock)block;
 
 
 
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,NSArray *,emitterCells);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,float,birthRate);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,float,lifetime);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,CGPoint,emitterPosition);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,double,emitterZPosition);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,CGSize,emitterSize);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,double,emitterDepth);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,NSString *,emitterShape);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,NSString *,emitterMode);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,NSString *,renderMode);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,BOOL,preservesDepth);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,float,velocity);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,float,scale);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,float,spin);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,unsigned int,seed);
+-(CAEmitterLayer  *(^)(NSArray *  emitterCells))set_emitterCells;
+-(CAEmitterLayer  *(^)(float  birthRate))set_birthRate;
+-(CAEmitterLayer  *(^)(float  lifetime))set_lifetime;
+-(CAEmitterLayer  *(^)(CGPoint  emitterPosition))set_emitterPosition;
+-(CAEmitterLayer  *(^)(double  emitterZPosition))set_emitterZPosition;
+-(CAEmitterLayer  *(^)(CGSize  emitterSize))set_emitterSize;
+-(CAEmitterLayer  *(^)(double  emitterDepth))set_emitterDepth;
+-(CAEmitterLayer  *(^)(NSString *  emitterShape))set_emitterShape;
+-(CAEmitterLayer  *(^)(NSString *  emitterMode))set_emitterMode;
+-(CAEmitterLayer  *(^)(NSString *  renderMode))set_renderMode;
+-(CAEmitterLayer  *(^)(BOOL  preservesDepth))set_preservesDepth;
+-(CAEmitterLayer  *(^)(float  velocity))set_velocity;
+-(CAEmitterLayer  *(^)(float  scale))set_scale;
+-(CAEmitterLayer  *(^)(float  spin))set_spin;
+-(CAEmitterLayer  *(^)(unsigned int  seed))set_seed;
 
 
 
 
 //superclass pros CALayer
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,CGPoint,position);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,double,zPosition);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,CGPoint,anchorPoint);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,double,anchorPointZ);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,CATransform3D,transform);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,BOOL,hidden);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,BOOL,doubleSided);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,BOOL,geometryFlipped);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,NSArray *,sublayers);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,CATransform3D,sublayerTransform);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,CALayer *,mask);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,BOOL,masksToBounds);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,NSString *,contentsGravity);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,double,contentsScale);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,NSString *,minificationFilter);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,NSString *,magnificationFilter);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,float,minificationFilterBias);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,BOOL,opaque);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,BOOL,needsDisplayOnBoundsChange);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,BOOL,drawsAsynchronously);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,unsigned int,edgeAntialiasingMask);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,BOOL,allowsEdgeAntialiasing);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,CGColorRef,backgroundColor);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,double,cornerRadius);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,double,borderWidth);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,CGColorRef,borderColor);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,float,opacity);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,BOOL,allowsGroupOpacity);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,NSArray *,filters);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,NSArray *,backgroundFilters);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,BOOL,shouldRasterize);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,double,rasterizationScale);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,CGColorRef,shadowColor);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,float,shadowOpacity);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,CGSize,shadowOffset);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,double,shadowRadius);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,CGPathRef,shadowPath);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,NSDictionary *,actions);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,NSString *,name);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,NSDictionary *,style);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,double,beginTime);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,double,duration);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,float,speed);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,double,timeOffset);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,float,repeatCount);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,double,repeatDuration);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,BOOL,autoreverses);
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,NSString *,fillMode);
+-(CAEmitterLayer  *(^)(CGPoint  position))set_position;
+-(CAEmitterLayer  *(^)(double  zPosition))set_zPosition;
+-(CAEmitterLayer  *(^)(CGPoint  anchorPoint))set_anchorPoint;
+-(CAEmitterLayer  *(^)(double  anchorPointZ))set_anchorPointZ;
+-(CAEmitterLayer  *(^)(CATransform3D  transform))set_transform;
+-(CAEmitterLayer  *(^)(BOOL  hidden))set_hidden;
+-(CAEmitterLayer  *(^)(BOOL  doubleSided))set_doubleSided;
+-(CAEmitterLayer  *(^)(BOOL  geometryFlipped))set_geometryFlipped;
+-(CAEmitterLayer  *(^)(NSArray *  sublayers))set_sublayers;
+-(CAEmitterLayer  *(^)(CATransform3D  sublayerTransform))set_sublayerTransform;
+-(CAEmitterLayer  *(^)(CALayer *  mask))set_mask;
+-(CAEmitterLayer  *(^)(BOOL  masksToBounds))set_masksToBounds;
+-(CAEmitterLayer  *(^)(NSString *  contentsGravity))set_contentsGravity;
+-(CAEmitterLayer  *(^)(double  contentsScale))set_contentsScale;
+-(CAEmitterLayer  *(^)(NSString *  minificationFilter))set_minificationFilter;
+-(CAEmitterLayer  *(^)(NSString *  magnificationFilter))set_magnificationFilter;
+-(CAEmitterLayer  *(^)(float  minificationFilterBias))set_minificationFilterBias;
+-(CAEmitterLayer  *(^)(BOOL  opaque))set_opaque;
+-(CAEmitterLayer  *(^)(BOOL  needsDisplayOnBoundsChange))set_needsDisplayOnBoundsChange;
+-(CAEmitterLayer  *(^)(BOOL  drawsAsynchronously))set_drawsAsynchronously;
+-(CAEmitterLayer  *(^)(unsigned int  edgeAntialiasingMask))set_edgeAntialiasingMask;
+-(CAEmitterLayer  *(^)(BOOL  allowsEdgeAntialiasing))set_allowsEdgeAntialiasing;
+-(CAEmitterLayer  *(^)(CGColorRef  backgroundColor))set_backgroundColor;
+-(CAEmitterLayer  *(^)(double  cornerRadius))set_cornerRadius;
+-(CAEmitterLayer  *(^)(double  borderWidth))set_borderWidth;
+-(CAEmitterLayer  *(^)(CGColorRef  borderColor))set_borderColor;
+-(CAEmitterLayer  *(^)(float  opacity))set_opacity;
+-(CAEmitterLayer  *(^)(BOOL  allowsGroupOpacity))set_allowsGroupOpacity;
+-(CAEmitterLayer  *(^)(NSArray *  filters))set_filters;
+-(CAEmitterLayer  *(^)(NSArray *  backgroundFilters))set_backgroundFilters;
+-(CAEmitterLayer  *(^)(BOOL  shouldRasterize))set_shouldRasterize;
+-(CAEmitterLayer  *(^)(double  rasterizationScale))set_rasterizationScale;
+-(CAEmitterLayer  *(^)(CGColorRef  shadowColor))set_shadowColor;
+-(CAEmitterLayer  *(^)(float  shadowOpacity))set_shadowOpacity;
+-(CAEmitterLayer  *(^)(CGSize  shadowOffset))set_shadowOffset;
+-(CAEmitterLayer  *(^)(double  shadowRadius))set_shadowRadius;
+-(CAEmitterLayer  *(^)(CGPathRef  shadowPath))set_shadowPath;
+-(CAEmitterLayer  *(^)(NSDictionary *  actions))set_actions;
+-(CAEmitterLayer  *(^)(NSString *  name))set_name;
+-(CAEmitterLayer  *(^)(NSDictionary *  style))set_style;
+-(CAEmitterLayer  *(^)(double  beginTime))set_beginTime;
+-(CAEmitterLayer  *(^)(double  duration))set_duration;
+-(CAEmitterLayer  *(^)(float  speed))set_speed;
+-(CAEmitterLayer  *(^)(double  timeOffset))set_timeOffset;
+-(CAEmitterLayer  *(^)(float  repeatCount))set_repeatCount;
+-(CAEmitterLayer  *(^)(double  repeatDuration))set_repeatDuration;
+-(CAEmitterLayer  *(^)(BOOL  autoreverses))set_autoreverses;
+-(CAEmitterLayer  *(^)(NSString *  fillMode))set_fillMode;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(CAEmitterLayer ,long long,accessibilityNavigationStyle)
+-(CAEmitterLayer  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(CAEmitterLayer  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(CAEmitterLayer  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(CAEmitterLayer  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(CAEmitterLayer  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(CAEmitterLayer  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(CAEmitterLayer  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(CAEmitterLayer  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(CAEmitterLayer  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(CAEmitterLayer  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(CAEmitterLayer  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(CAEmitterLayer  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(CAEmitterLayer  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(CAEmitterLayer  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(CAEmitterLayer);
+-(CAEmitterLayer *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

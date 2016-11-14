@@ -10,56 +10,56 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSDateComponents,NSDateComponents *);
+typedef void(^NSDateComponentsEasyCoderBlock) (NSDateComponents * ins);
 
 @interface NSDateComponents (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSDateComponents, NSDateComponents *);
-TF_EC_MINSTANCE_INT(NSDateComponents,NSDateComponents *);
++( NSDateComponents *)easyCoder:(NSDateComponentsEasyCoderBlock)block;
+-(NSDateComponents *)easyCoder:(NSDateComponentsEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,NSCalendar *,calendar);
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,NSTimeZone *,timeZone);
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,long long,era);
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,long long,year);
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,long long,month);
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,long long,day);
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,long long,hour);
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,long long,minute);
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,long long,second);
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,long long,nanosecond);
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,long long,weekday);
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,long long,weekdayOrdinal);
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,long long,quarter);
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,long long,weekOfMonth);
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,long long,weekOfYear);
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,long long,yearForWeekOfYear);
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,BOOL,leapMonth);
+-(NSDateComponents  *(^)(NSCalendar *  calendar))set_calendar;
+-(NSDateComponents  *(^)(NSTimeZone *  timeZone))set_timeZone;
+-(NSDateComponents  *(^)(long long  era))set_era;
+-(NSDateComponents  *(^)(long long  year))set_year;
+-(NSDateComponents  *(^)(long long  month))set_month;
+-(NSDateComponents  *(^)(long long  day))set_day;
+-(NSDateComponents  *(^)(long long  hour))set_hour;
+-(NSDateComponents  *(^)(long long  minute))set_minute;
+-(NSDateComponents  *(^)(long long  second))set_second;
+-(NSDateComponents  *(^)(long long  nanosecond))set_nanosecond;
+-(NSDateComponents  *(^)(long long  weekday))set_weekday;
+-(NSDateComponents  *(^)(long long  weekdayOrdinal))set_weekdayOrdinal;
+-(NSDateComponents  *(^)(long long  quarter))set_quarter;
+-(NSDateComponents  *(^)(long long  weekOfMonth))set_weekOfMonth;
+-(NSDateComponents  *(^)(long long  weekOfYear))set_weekOfYear;
+-(NSDateComponents  *(^)(long long  yearForWeekOfYear))set_yearForWeekOfYear;
+-(NSDateComponents  *(^)(BOOL  leapMonth))set_leapMonth;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSDateComponents ,long long,accessibilityNavigationStyle)
+-(NSDateComponents  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSDateComponents  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSDateComponents  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSDateComponents  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSDateComponents  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSDateComponents  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSDateComponents  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSDateComponents  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSDateComponents  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSDateComponents  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSDateComponents  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSDateComponents  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSDateComponents  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSDateComponents  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSDateComponents);
+-(NSDateComponents *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

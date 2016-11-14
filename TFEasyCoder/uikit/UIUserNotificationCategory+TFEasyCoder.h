@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIUserNotificationCategory,UIUserNotificationCategory *);
+typedef void(^UIUserNotificationCategoryEasyCoderBlock) (UIUserNotificationCategory * ins);
 
 @interface UIUserNotificationCategory (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIUserNotificationCategory, UIUserNotificationCategory *);
-TF_EC_MINSTANCE_INT(UIUserNotificationCategory,UIUserNotificationCategory *);
++( UIUserNotificationCategory *)easyCoder:(UIUserNotificationCategoryEasyCoderBlock)block;
+-(UIUserNotificationCategory *)easyCoder:(UIUserNotificationCategoryEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(UIUserNotificationCategory,UIUserNotificationCategory *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIUserNotificationCategory ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIUserNotificationCategory ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIUserNotificationCategory ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIUserNotificationCategory ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIUserNotificationCategory ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIUserNotificationCategory ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIUserNotificationCategory ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIUserNotificationCategory ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIUserNotificationCategory ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIUserNotificationCategory ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIUserNotificationCategory ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIUserNotificationCategory ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIUserNotificationCategory ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIUserNotificationCategory ,long long,accessibilityNavigationStyle)
+-(UIUserNotificationCategory  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIUserNotificationCategory  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIUserNotificationCategory  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIUserNotificationCategory  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIUserNotificationCategory  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIUserNotificationCategory  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIUserNotificationCategory  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIUserNotificationCategory  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIUserNotificationCategory  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIUserNotificationCategory  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIUserNotificationCategory  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIUserNotificationCategory  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIUserNotificationCategory  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIUserNotificationCategory  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIUserNotificationCategory);
+-(UIUserNotificationCategory *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

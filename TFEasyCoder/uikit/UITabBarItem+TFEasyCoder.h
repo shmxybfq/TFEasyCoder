@@ -10,51 +10,51 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UITabBarItem,UITabBarItem *);
+typedef void(^UITabBarItemEasyCoderBlock) (UITabBarItem * ins);
 
 @interface UITabBarItem (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UITabBarItem, UITabBarItem *);
-TF_EC_MINSTANCE_INT(UITabBarItem,UITabBarItem *);
++( UITabBarItem *)easyCoder:(UITabBarItemEasyCoderBlock)block;
+-(UITabBarItem *)easyCoder:(UITabBarItemEasyCoderBlock)block;
 
 
 
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,UIImage *,selectedImage);
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,NSString *,badgeValue);
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,UIOffset,titlePositionAdjustment);
+-(UITabBarItem  *(^)(UIImage *  selectedImage))set_selectedImage;
+-(UITabBarItem  *(^)(NSString *  badgeValue))set_badgeValue;
+-(UITabBarItem  *(^)(UIOffset  titlePositionAdjustment))set_titlePositionAdjustment;
 
 
 
 
 //superclass pros UIBarItem
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,NSString *,title);
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,UIImage *,image);
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,UIImage *,landscapeImagePhone);
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,UIEdgeInsets,imageInsets);
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,UIEdgeInsets,landscapeImagePhoneInsets);
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,long long,tag);
+-(UITabBarItem  *(^)(BOOL  enabled))set_enabled;
+-(UITabBarItem  *(^)(NSString *  title))set_title;
+-(UITabBarItem  *(^)(UIImage *  image))set_image;
+-(UITabBarItem  *(^)(UIImage *  landscapeImagePhone))set_landscapeImagePhone;
+-(UITabBarItem  *(^)(UIEdgeInsets  imageInsets))set_imageInsets;
+-(UITabBarItem  *(^)(UIEdgeInsets  landscapeImagePhoneInsets))set_landscapeImagePhoneInsets;
+-(UITabBarItem  *(^)(long long  tag))set_tag;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UITabBarItem ,long long,accessibilityNavigationStyle)
+-(UITabBarItem  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UITabBarItem  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UITabBarItem  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UITabBarItem  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UITabBarItem  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UITabBarItem  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UITabBarItem  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UITabBarItem  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UITabBarItem  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UITabBarItem  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UITabBarItem  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UITabBarItem  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UITabBarItem  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UITabBarItem  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UITabBarItem);
+-(UITabBarItem *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

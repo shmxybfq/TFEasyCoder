@@ -10,46 +10,46 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIMarkupTextPrintFormatter,UIMarkupTextPrintFormatter *);
+typedef void(^UIMarkupTextPrintFormatterEasyCoderBlock) (UIMarkupTextPrintFormatter * ins);
 
 @interface UIMarkupTextPrintFormatter (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIMarkupTextPrintFormatter, UIMarkupTextPrintFormatter *);
-TF_EC_MINSTANCE_INT(UIMarkupTextPrintFormatter,UIMarkupTextPrintFormatter *);
++( UIMarkupTextPrintFormatter *)easyCoder:(UIMarkupTextPrintFormatterEasyCoderBlock)block;
+-(UIMarkupTextPrintFormatter *)easyCoder:(UIMarkupTextPrintFormatterEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIMarkupTextPrintFormatter ,NSString *,markupText);
+-(UIMarkupTextPrintFormatter  *(^)(NSString *  markupText))set_markupText;
 
 
 
 
 //superclass pros UIPrintFormatter
-TF_EC_CHAIN_PROP_INT(UIMarkupTextPrintFormatter ,double,maximumContentHeight);
-TF_EC_CHAIN_PROP_INT(UIMarkupTextPrintFormatter ,double,maximumContentWidth);
-TF_EC_CHAIN_PROP_INT(UIMarkupTextPrintFormatter ,UIEdgeInsets,contentInsets);
-TF_EC_CHAIN_PROP_INT(UIMarkupTextPrintFormatter ,UIEdgeInsets,perPageContentInsets);
-TF_EC_CHAIN_PROP_INT(UIMarkupTextPrintFormatter ,long long,startPage);
+-(UIMarkupTextPrintFormatter  *(^)(double  maximumContentHeight))set_maximumContentHeight;
+-(UIMarkupTextPrintFormatter  *(^)(double  maximumContentWidth))set_maximumContentWidth;
+-(UIMarkupTextPrintFormatter  *(^)(UIEdgeInsets  contentInsets))set_contentInsets;
+-(UIMarkupTextPrintFormatter  *(^)(UIEdgeInsets  perPageContentInsets))set_perPageContentInsets;
+-(UIMarkupTextPrintFormatter  *(^)(long long  startPage))set_startPage;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIMarkupTextPrintFormatter ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIMarkupTextPrintFormatter ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIMarkupTextPrintFormatter ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIMarkupTextPrintFormatter ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIMarkupTextPrintFormatter ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIMarkupTextPrintFormatter ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIMarkupTextPrintFormatter ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIMarkupTextPrintFormatter ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIMarkupTextPrintFormatter ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIMarkupTextPrintFormatter ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIMarkupTextPrintFormatter ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIMarkupTextPrintFormatter ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIMarkupTextPrintFormatter ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIMarkupTextPrintFormatter ,long long,accessibilityNavigationStyle)
+-(UIMarkupTextPrintFormatter  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIMarkupTextPrintFormatter  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIMarkupTextPrintFormatter  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIMarkupTextPrintFormatter  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIMarkupTextPrintFormatter  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIMarkupTextPrintFormatter  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIMarkupTextPrintFormatter  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIMarkupTextPrintFormatter  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIMarkupTextPrintFormatter  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIMarkupTextPrintFormatter  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIMarkupTextPrintFormatter  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIMarkupTextPrintFormatter  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIMarkupTextPrintFormatter  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIMarkupTextPrintFormatter  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIMarkupTextPrintFormatter);
+-(UIMarkupTextPrintFormatter *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

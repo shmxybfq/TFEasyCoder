@@ -10,42 +10,42 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UITableViewRowAction,UITableViewRowAction *);
+typedef void(^UITableViewRowActionEasyCoderBlock) (UITableViewRowAction * ins);
 
 @interface UITableViewRowAction (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UITableViewRowAction, UITableViewRowAction *);
-TF_EC_MINSTANCE_INT(UITableViewRowAction,UITableViewRowAction *);
++( UITableViewRowAction *)easyCoder:(UITableViewRowActionEasyCoderBlock)block;
+-(UITableViewRowAction *)easyCoder:(UITableViewRowActionEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UITableViewRowAction ,NSString *,title);
-TF_EC_CHAIN_PROP_INT(UITableViewRowAction ,UIColor *,backgroundColor);
-TF_EC_CHAIN_PROP_INT(UITableViewRowAction ,UIVisualEffect *,backgroundEffect);
+-(UITableViewRowAction  *(^)(NSString *  title))set_title;
+-(UITableViewRowAction  *(^)(UIColor *  backgroundColor))set_backgroundColor;
+-(UITableViewRowAction  *(^)(UIVisualEffect *  backgroundEffect))set_backgroundEffect;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UITableViewRowAction ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UITableViewRowAction ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UITableViewRowAction ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UITableViewRowAction ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UITableViewRowAction ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UITableViewRowAction ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UITableViewRowAction ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UITableViewRowAction ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UITableViewRowAction ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UITableViewRowAction ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UITableViewRowAction ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UITableViewRowAction ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UITableViewRowAction ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UITableViewRowAction ,long long,accessibilityNavigationStyle)
+-(UITableViewRowAction  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UITableViewRowAction  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UITableViewRowAction  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UITableViewRowAction  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UITableViewRowAction  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UITableViewRowAction  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UITableViewRowAction  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UITableViewRowAction  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UITableViewRowAction  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UITableViewRowAction  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UITableViewRowAction  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UITableViewRowAction  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UITableViewRowAction  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UITableViewRowAction  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UITableViewRowAction);
+-(UITableViewRowAction *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

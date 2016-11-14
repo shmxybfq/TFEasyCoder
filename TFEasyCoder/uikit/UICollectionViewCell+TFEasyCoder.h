@@ -10,54 +10,54 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UICollectionViewCell,UICollectionViewCell *);
+typedef void(^UICollectionViewCellEasyCoderBlock) (UICollectionViewCell * ins);
 
 @interface UICollectionViewCell (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UICollectionViewCell, UICollectionViewCell *);
-TF_EC_MINSTANCE_INT(UICollectionViewCell,UICollectionViewCell *);
++( UICollectionViewCell *)easyCoder:(UICollectionViewCellEasyCoderBlock)block;
+-(UICollectionViewCell *)easyCoder:(UICollectionViewCellEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,BOOL,selected);
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,BOOL,highlighted);
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,UIView *,backgroundView);
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,UIView *,selectedBackgroundView);
+-(UICollectionViewCell  *(^)(BOOL  selected))set_selected;
+-(UICollectionViewCell  *(^)(BOOL  highlighted))set_highlighted;
+-(UICollectionViewCell  *(^)(UIView *  backgroundView))set_backgroundView;
+-(UICollectionViewCell  *(^)(UIView *  selectedBackgroundView))set_selectedBackgroundView;
 
 
 
 
 //superclass pros UICollectionReusableView
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,UIColor *,backgroundColor)
+-(UICollectionViewCell  *(^)(UIView *  maskView))set_maskView;
+-(UICollectionViewCell  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UICollectionViewCell  *(^)(long long  tag))set_tag;
+-(UICollectionViewCell  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UICollectionViewCell  *(^)(CGPoint  center))set_center;
+-(UICollectionViewCell  *(^)(CGRect  frame))set_frame;
+-(UICollectionViewCell  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,NSUserActivity *,userActivity);
+-(UICollectionViewCell  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UICollectionViewCell ,long long,accessibilityNavigationStyle)
+-(UICollectionViewCell  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UICollectionViewCell  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UICollectionViewCell  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UICollectionViewCell  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UICollectionViewCell  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UICollectionViewCell  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UICollectionViewCell  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UICollectionViewCell  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UICollectionViewCell  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UICollectionViewCell  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UICollectionViewCell  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UICollectionViewCell  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UICollectionViewCell  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UICollectionViewCell  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UICollectionViewCell);
+-(UICollectionViewCell *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

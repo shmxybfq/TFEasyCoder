@@ -10,43 +10,43 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSLayoutConstraint,NSLayoutConstraint *);
+typedef void(^NSLayoutConstraintEasyCoderBlock) (NSLayoutConstraint * ins);
 
 @interface NSLayoutConstraint (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSLayoutConstraint, NSLayoutConstraint *);
-TF_EC_MINSTANCE_INT(NSLayoutConstraint,NSLayoutConstraint *);
++( NSLayoutConstraint *)easyCoder:(NSLayoutConstraintEasyCoderBlock)block;
+-(NSLayoutConstraint *)easyCoder:(NSLayoutConstraintEasyCoderBlock)block;
 
-TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,float,priority)
-TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,BOOL,shouldBeArchived)
-TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,double,constant)
-TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,BOOL,active)
-TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,NSString *,identifier)
+-(NSLayoutConstraint  *(^)(float  priority))set_priority;
+-(NSLayoutConstraint  *(^)(BOOL  shouldBeArchived))set_shouldBeArchived;
+-(NSLayoutConstraint  *(^)(double  constant))set_constant;
+-(NSLayoutConstraint  *(^)(BOOL  active))set_active;
+-(NSLayoutConstraint  *(^)(NSString *  identifier))set_identifier;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSLayoutConstraint ,long long,accessibilityNavigationStyle)
+-(NSLayoutConstraint  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSLayoutConstraint  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSLayoutConstraint  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSLayoutConstraint  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSLayoutConstraint  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSLayoutConstraint  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSLayoutConstraint  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSLayoutConstraint  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSLayoutConstraint  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSLayoutConstraint  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSLayoutConstraint  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSLayoutConstraint  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSLayoutConstraint  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSLayoutConstraint  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSLayoutConstraint);
+-(NSLayoutConstraint *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

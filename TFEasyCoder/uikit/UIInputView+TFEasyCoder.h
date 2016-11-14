@@ -10,51 +10,51 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIInputView,UIInputView *);
+typedef void(^UIInputViewEasyCoderBlock) (UIInputView * ins);
 
 @interface UIInputView (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIInputView, UIInputView *);
-TF_EC_MINSTANCE_INT(UIInputView,UIInputView *);
++( UIInputView *)easyCoder:(UIInputViewEasyCoderBlock)block;
+-(UIInputView *)easyCoder:(UIInputViewEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIInputView ,BOOL,allowsSelfSizing);
+-(UIInputView  *(^)(BOOL  allowsSelfSizing))set_allowsSelfSizing;
 
 
 
 
 
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UIInputView ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UIInputView ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UIInputView ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UIInputView ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UIInputView ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UIInputView ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UIInputView ,UIColor *,backgroundColor)
+-(UIInputView  *(^)(UIView *  maskView))set_maskView;
+-(UIInputView  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UIInputView  *(^)(long long  tag))set_tag;
+-(UIInputView  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UIInputView  *(^)(CGPoint  center))set_center;
+-(UIInputView  *(^)(CGRect  frame))set_frame;
+-(UIInputView  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIInputView ,NSUserActivity *,userActivity);
+-(UIInputView  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIInputView ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIInputView ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIInputView ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIInputView ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIInputView ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIInputView ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIInputView ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIInputView ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIInputView ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIInputView ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIInputView ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIInputView ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIInputView ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIInputView ,long long,accessibilityNavigationStyle)
+-(UIInputView  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIInputView  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIInputView  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIInputView  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIInputView  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIInputView  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIInputView  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIInputView  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIInputView  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIInputView  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIInputView  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIInputView  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIInputView  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIInputView  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIInputView);
+-(UIInputView *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

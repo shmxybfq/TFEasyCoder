@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSLocale,NSLocale *);
+typedef void(^NSLocaleEasyCoderBlock) (NSLocale * ins);
 
 @interface NSLocale (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSLocale, NSLocale *);
-TF_EC_MINSTANCE_INT(NSLocale,NSLocale *);
++( NSLocale *)easyCoder:(NSLocaleEasyCoderBlock)block;
+-(NSLocale *)easyCoder:(NSLocaleEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(NSLocale,NSLocale *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSLocale ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSLocale ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSLocale ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSLocale ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSLocale ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSLocale ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSLocale ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSLocale ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSLocale ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSLocale ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSLocale ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSLocale ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSLocale ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSLocale ,long long,accessibilityNavigationStyle)
+-(NSLocale  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSLocale  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSLocale  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSLocale  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSLocale  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSLocale  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSLocale  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSLocale  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSLocale  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSLocale  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSLocale  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSLocale  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSLocale  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSLocale  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSLocale);
+-(NSLocale *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

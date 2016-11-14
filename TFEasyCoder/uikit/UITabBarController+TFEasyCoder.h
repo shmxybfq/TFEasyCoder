@@ -10,65 +10,65 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UITabBarController,UITabBarController *);
+typedef void(^UITabBarControllerEasyCoderBlock) (UITabBarController * ins);
 
 @interface UITabBarController (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UITabBarController, UITabBarController *);
-TF_EC_MINSTANCE_INT(UITabBarController,UITabBarController *);
++( UITabBarController *)easyCoder:(UITabBarControllerEasyCoderBlock)block;
+-(UITabBarController *)easyCoder:(UITabBarControllerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UITabBarController ,NSArray *,viewControllers);
-TF_EC_CHAIN_PROP_INT(UITabBarController ,UIViewController *,selectedViewController);
-TF_EC_CHAIN_PROP_INT(UITabBarController ,unsigned long long,selectedIndex);
-TF_EC_CHAIN_PROP_INT(UITabBarController ,NSArray *,customizableViewControllers);
-TF_EC_CHAIN_PROP_INT(UITabBarController ,id<UITabBarControllerDelegate> ,delegate);
+-(UITabBarController  *(^)(NSArray *  viewControllers))set_viewControllers;
+-(UITabBarController  *(^)(UIViewController *  selectedViewController))set_selectedViewController;
+-(UITabBarController  *(^)(unsigned long long  selectedIndex))set_selectedIndex;
+-(UITabBarController  *(^)(NSArray *  customizableViewControllers))set_customizableViewControllers;
+-(UITabBarController  *(^)(id<UITabBarControllerDelegate>   delegate))set_delegate;
 
 
 
 
 
 //superclass pros UIViewController
-TF_EC_CHAIN_PROP_INT(UITabBarController ,UITabBarItem *,tabBarItem)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,BOOL,hidesBottomBarWhenPushed)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,id<UIViewControllerTransitioningDelegate>  ,transitioningDelegate)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,UIView *,view)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,NSString *,title)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,BOOL,definesPresentationContext)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,BOOL,providesPresentationContextTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,long long,modalTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,long long,modalPresentationStyle)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,BOOL,modalPresentationCapturesStatusBarAppearance)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,BOOL,wantsFullScreenLayout)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,unsigned long long,edgesForExtendedLayout)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,BOOL,extendedLayoutIncludesOpaqueBars)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,BOOL,automaticallyAdjustsScrollViewInsets)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,CGSize,preferredContentSize)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,CGSize,contentSizeForViewInPopover)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,BOOL,modalInPopover)
+-(UITabBarController  *(^)(UITabBarItem *  tabBarItem))set_tabBarItem;
+-(UITabBarController  *(^)(BOOL  hidesBottomBarWhenPushed))set_hidesBottomBarWhenPushed;
+-(UITabBarController  *(^)(id<UIViewControllerTransitioningDelegate>    transitioningDelegate))set_transitioningDelegate;
+-(UITabBarController  *(^)(UIView *  view))set_view;
+-(UITabBarController  *(^)(NSString *  title))set_title;
+-(UITabBarController  *(^)(BOOL  definesPresentationContext))set_definesPresentationContext;
+-(UITabBarController  *(^)(BOOL  providesPresentationContextTransitionStyle))set_providesPresentationContextTransitionStyle;
+-(UITabBarController  *(^)(long long  modalTransitionStyle))set_modalTransitionStyle;
+-(UITabBarController  *(^)(long long  modalPresentationStyle))set_modalPresentationStyle;
+-(UITabBarController  *(^)(BOOL  modalPresentationCapturesStatusBarAppearance))set_modalPresentationCapturesStatusBarAppearance;
+-(UITabBarController  *(^)(BOOL  wantsFullScreenLayout))set_wantsFullScreenLayout;
+-(UITabBarController  *(^)(unsigned long long  edgesForExtendedLayout))set_edgesForExtendedLayout;
+-(UITabBarController  *(^)(BOOL  extendedLayoutIncludesOpaqueBars))set_extendedLayoutIncludesOpaqueBars;
+-(UITabBarController  *(^)(BOOL  automaticallyAdjustsScrollViewInsets))set_automaticallyAdjustsScrollViewInsets;
+-(UITabBarController  *(^)(CGSize  preferredContentSize))set_preferredContentSize;
+-(UITabBarController  *(^)(CGSize  contentSizeForViewInPopover))set_contentSizeForViewInPopover;
+-(UITabBarController  *(^)(BOOL  modalInPopover))set_modalInPopover;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UITabBarController ,NSUserActivity *,userActivity);
+-(UITabBarController  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UITabBarController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UITabBarController ,long long,accessibilityNavigationStyle)
+-(UITabBarController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UITabBarController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UITabBarController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UITabBarController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UITabBarController  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UITabBarController  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UITabBarController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UITabBarController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UITabBarController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UITabBarController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UITabBarController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UITabBarController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UITabBarController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UITabBarController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UITabBarController);
+-(UITabBarController *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

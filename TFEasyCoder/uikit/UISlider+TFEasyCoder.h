@@ -10,64 +10,64 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UISlider,UISlider *);
+typedef void(^UISliderEasyCoderBlock) (UISlider * ins);
 
 @interface UISlider (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UISlider, UISlider *);
-TF_EC_MINSTANCE_INT(UISlider,UISlider *);
++( UISlider *)easyCoder:(UISliderEasyCoderBlock)block;
+-(UISlider *)easyCoder:(UISliderEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UISlider ,float,value);
-TF_EC_CHAIN_PROP_INT(UISlider ,float,minimumValue);
-TF_EC_CHAIN_PROP_INT(UISlider ,float,maximumValue);
-TF_EC_CHAIN_PROP_INT(UISlider ,UIImage *,minimumValueImage);
-TF_EC_CHAIN_PROP_INT(UISlider ,UIImage *,maximumValueImage);
-TF_EC_CHAIN_PROP_INT(UISlider ,BOOL,continuous);
-TF_EC_CHAIN_PROP_INT(UISlider ,UIColor *,minimumTrackTintColor);
-TF_EC_CHAIN_PROP_INT(UISlider ,UIColor *,maximumTrackTintColor);
-TF_EC_CHAIN_PROP_INT(UISlider ,UIColor *,thumbTintColor);
+-(UISlider  *(^)(float  value))set_value;
+-(UISlider  *(^)(float  minimumValue))set_minimumValue;
+-(UISlider  *(^)(float  maximumValue))set_maximumValue;
+-(UISlider  *(^)(UIImage *  minimumValueImage))set_minimumValueImage;
+-(UISlider  *(^)(UIImage *  maximumValueImage))set_maximumValueImage;
+-(UISlider  *(^)(BOOL  continuous))set_continuous;
+-(UISlider  *(^)(UIColor *  minimumTrackTintColor))set_minimumTrackTintColor;
+-(UISlider  *(^)(UIColor *  maximumTrackTintColor))set_maximumTrackTintColor;
+-(UISlider  *(^)(UIColor *  thumbTintColor))set_thumbTintColor;
 
 
 
 
 //superclass pros UIControl
-TF_EC_CHAIN_PROP_INT(UISlider ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(UISlider ,BOOL,selected);
-TF_EC_CHAIN_PROP_INT(UISlider ,BOOL,highlighted);
-TF_EC_CHAIN_PROP_INT(UISlider ,long long,contentVerticalAlignment);
-TF_EC_CHAIN_PROP_INT(UISlider ,long long,contentHorizontalAlignment);
+-(UISlider  *(^)(BOOL  enabled))set_enabled;
+-(UISlider  *(^)(BOOL  selected))set_selected;
+-(UISlider  *(^)(BOOL  highlighted))set_highlighted;
+-(UISlider  *(^)(long long  contentVerticalAlignment))set_contentVerticalAlignment;
+-(UISlider  *(^)(long long  contentHorizontalAlignment))set_contentHorizontalAlignment;
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UISlider ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UISlider ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UISlider ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UISlider ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UISlider ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UISlider ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UISlider ,UIColor *,backgroundColor)
+-(UISlider  *(^)(UIView *  maskView))set_maskView;
+-(UISlider  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UISlider  *(^)(long long  tag))set_tag;
+-(UISlider  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UISlider  *(^)(CGPoint  center))set_center;
+-(UISlider  *(^)(CGRect  frame))set_frame;
+-(UISlider  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UISlider ,NSUserActivity *,userActivity);
+-(UISlider  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UISlider ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UISlider ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UISlider ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UISlider ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UISlider ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UISlider ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UISlider ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UISlider ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UISlider ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UISlider ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UISlider ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UISlider ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UISlider ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UISlider ,long long,accessibilityNavigationStyle)
+-(UISlider  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UISlider  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UISlider  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UISlider  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UISlider  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UISlider  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UISlider  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UISlider  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UISlider  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UISlider  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UISlider  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UISlider  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UISlider  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UISlider  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UISlider);
+-(UISlider *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

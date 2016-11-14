@@ -10,64 +10,64 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UITabBar,UITabBar *);
+typedef void(^UITabBarEasyCoderBlock) (UITabBar * ins);
 
 @interface UITabBar (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UITabBar, UITabBar *);
-TF_EC_MINSTANCE_INT(UITabBar,UITabBar *);
++( UITabBar *)easyCoder:(UITabBarEasyCoderBlock)block;
+-(UITabBar *)easyCoder:(UITabBarEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UITabBar ,id<UITabBarDelegate> ,delegate);
-TF_EC_CHAIN_PROP_INT(UITabBar ,NSArray *,items);
-TF_EC_CHAIN_PROP_INT(UITabBar ,UITabBarItem *,selectedItem);
-TF_EC_CHAIN_PROP_INT(UITabBar ,UIColor *,tintColor);
-TF_EC_CHAIN_PROP_INT(UITabBar ,UIColor *,barTintColor);
-TF_EC_CHAIN_PROP_INT(UITabBar ,UIColor *,selectedImageTintColor);
-TF_EC_CHAIN_PROP_INT(UITabBar ,UIImage *,backgroundImage);
-TF_EC_CHAIN_PROP_INT(UITabBar ,UIImage *,selectionIndicatorImage);
-TF_EC_CHAIN_PROP_INT(UITabBar ,UIImage *,shadowImage);
-TF_EC_CHAIN_PROP_INT(UITabBar ,long long,itemPositioning);
-TF_EC_CHAIN_PROP_INT(UITabBar ,double,itemWidth);
-TF_EC_CHAIN_PROP_INT(UITabBar ,double,itemSpacing);
-TF_EC_CHAIN_PROP_INT(UITabBar ,long long,barStyle);
-TF_EC_CHAIN_PROP_INT(UITabBar ,BOOL,translucent);
+-(UITabBar  *(^)(id<UITabBarDelegate>   delegate))set_delegate;
+-(UITabBar  *(^)(NSArray *  items))set_items;
+-(UITabBar  *(^)(UITabBarItem *  selectedItem))set_selectedItem;
+-(UITabBar  *(^)(UIColor *  tintColor))set_tintColor;
+-(UITabBar  *(^)(UIColor *  barTintColor))set_barTintColor;
+-(UITabBar  *(^)(UIColor *  selectedImageTintColor))set_selectedImageTintColor;
+-(UITabBar  *(^)(UIImage *  backgroundImage))set_backgroundImage;
+-(UITabBar  *(^)(UIImage *  selectionIndicatorImage))set_selectionIndicatorImage;
+-(UITabBar  *(^)(UIImage *  shadowImage))set_shadowImage;
+-(UITabBar  *(^)(long long  itemPositioning))set_itemPositioning;
+-(UITabBar  *(^)(double  itemWidth))set_itemWidth;
+-(UITabBar  *(^)(double  itemSpacing))set_itemSpacing;
+-(UITabBar  *(^)(long long  barStyle))set_barStyle;
+-(UITabBar  *(^)(BOOL  translucent))set_translucent;
 
 
 
 
 
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UITabBar ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UITabBar ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UITabBar ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UITabBar ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UITabBar ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UITabBar ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UITabBar ,UIColor *,backgroundColor)
+-(UITabBar  *(^)(UIView *  maskView))set_maskView;
+-(UITabBar  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UITabBar  *(^)(long long  tag))set_tag;
+-(UITabBar  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UITabBar  *(^)(CGPoint  center))set_center;
+-(UITabBar  *(^)(CGRect  frame))set_frame;
+-(UITabBar  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UITabBar ,NSUserActivity *,userActivity);
+-(UITabBar  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UITabBar ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UITabBar ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UITabBar ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UITabBar ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UITabBar ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UITabBar ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UITabBar ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UITabBar ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UITabBar ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UITabBar ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UITabBar ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UITabBar ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UITabBar ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UITabBar ,long long,accessibilityNavigationStyle)
+-(UITabBar  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UITabBar  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UITabBar  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UITabBar  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UITabBar  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UITabBar  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UITabBar  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UITabBar  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UITabBar  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UITabBar  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UITabBar  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UITabBar  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UITabBar  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UITabBar  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UITabBar);
+-(UITabBar *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

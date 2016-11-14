@@ -10,41 +10,41 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIPercentDrivenInteractiveTransition,UIPercentDrivenInteractiveTransition *);
+typedef void(^UIPercentDrivenInteractiveTransitionEasyCoderBlock) (UIPercentDrivenInteractiveTransition * ins);
 
 @interface UIPercentDrivenInteractiveTransition (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIPercentDrivenInteractiveTransition, UIPercentDrivenInteractiveTransition *);
-TF_EC_MINSTANCE_INT(UIPercentDrivenInteractiveTransition,UIPercentDrivenInteractiveTransition *);
++( UIPercentDrivenInteractiveTransition *)easyCoder:(UIPercentDrivenInteractiveTransitionEasyCoderBlock)block;
+-(UIPercentDrivenInteractiveTransition *)easyCoder:(UIPercentDrivenInteractiveTransitionEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,double,completionSpeed);
-TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,long long,completionCurve);
+-(UIPercentDrivenInteractiveTransition  *(^)(double  completionSpeed))set_completionSpeed;
+-(UIPercentDrivenInteractiveTransition  *(^)(long long  completionCurve))set_completionCurve;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIPercentDrivenInteractiveTransition ,long long,accessibilityNavigationStyle)
+-(UIPercentDrivenInteractiveTransition  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIPercentDrivenInteractiveTransition  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIPercentDrivenInteractiveTransition  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIPercentDrivenInteractiveTransition  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIPercentDrivenInteractiveTransition  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIPercentDrivenInteractiveTransition  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIPercentDrivenInteractiveTransition  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIPercentDrivenInteractiveTransition  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIPercentDrivenInteractiveTransition  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIPercentDrivenInteractiveTransition  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIPercentDrivenInteractiveTransition  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIPercentDrivenInteractiveTransition  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIPercentDrivenInteractiveTransition  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIPercentDrivenInteractiveTransition  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIPercentDrivenInteractiveTransition);
+-(UIPercentDrivenInteractiveTransition *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -10,63 +10,63 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIStepper,UIStepper *);
+typedef void(^UIStepperEasyCoderBlock) (UIStepper * ins);
 
 @interface UIStepper (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIStepper, UIStepper *);
-TF_EC_MINSTANCE_INT(UIStepper,UIStepper *);
++( UIStepper *)easyCoder:(UIStepperEasyCoderBlock)block;
+-(UIStepper *)easyCoder:(UIStepperEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIStepper ,BOOL,continuous);
-TF_EC_CHAIN_PROP_INT(UIStepper ,BOOL,autorepeat);
-TF_EC_CHAIN_PROP_INT(UIStepper ,BOOL,wraps);
-TF_EC_CHAIN_PROP_INT(UIStepper ,double,value);
-TF_EC_CHAIN_PROP_INT(UIStepper ,double,minimumValue);
-TF_EC_CHAIN_PROP_INT(UIStepper ,double,maximumValue);
-TF_EC_CHAIN_PROP_INT(UIStepper ,double,stepValue);
-TF_EC_CHAIN_PROP_INT(UIStepper ,UIColor *,tintColor);
+-(UIStepper  *(^)(BOOL  continuous))set_continuous;
+-(UIStepper  *(^)(BOOL  autorepeat))set_autorepeat;
+-(UIStepper  *(^)(BOOL  wraps))set_wraps;
+-(UIStepper  *(^)(double  value))set_value;
+-(UIStepper  *(^)(double  minimumValue))set_minimumValue;
+-(UIStepper  *(^)(double  maximumValue))set_maximumValue;
+-(UIStepper  *(^)(double  stepValue))set_stepValue;
+-(UIStepper  *(^)(UIColor *  tintColor))set_tintColor;
 
 
 
 
 //superclass pros UIControl
-TF_EC_CHAIN_PROP_INT(UIStepper ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(UIStepper ,BOOL,selected);
-TF_EC_CHAIN_PROP_INT(UIStepper ,BOOL,highlighted);
-TF_EC_CHAIN_PROP_INT(UIStepper ,long long,contentVerticalAlignment);
-TF_EC_CHAIN_PROP_INT(UIStepper ,long long,contentHorizontalAlignment);
+-(UIStepper  *(^)(BOOL  enabled))set_enabled;
+-(UIStepper  *(^)(BOOL  selected))set_selected;
+-(UIStepper  *(^)(BOOL  highlighted))set_highlighted;
+-(UIStepper  *(^)(long long  contentVerticalAlignment))set_contentVerticalAlignment;
+-(UIStepper  *(^)(long long  contentHorizontalAlignment))set_contentHorizontalAlignment;
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UIStepper ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UIStepper ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UIStepper ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UIStepper ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UIStepper ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UIStepper ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UIStepper ,UIColor *,backgroundColor)
+-(UIStepper  *(^)(UIView *  maskView))set_maskView;
+-(UIStepper  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UIStepper  *(^)(long long  tag))set_tag;
+-(UIStepper  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UIStepper  *(^)(CGPoint  center))set_center;
+-(UIStepper  *(^)(CGRect  frame))set_frame;
+-(UIStepper  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIStepper ,NSUserActivity *,userActivity);
+-(UIStepper  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIStepper ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIStepper ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIStepper ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIStepper ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIStepper ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIStepper ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIStepper ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIStepper ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIStepper ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIStepper ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIStepper ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIStepper ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIStepper ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIStepper ,long long,accessibilityNavigationStyle)
+-(UIStepper  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIStepper  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIStepper  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIStepper  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIStepper  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIStepper  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIStepper  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIStepper  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIStepper  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIStepper  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIStepper  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIStepper  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIStepper  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIStepper  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIStepper);
+-(UIStepper *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

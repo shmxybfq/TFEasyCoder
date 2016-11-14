@@ -10,48 +10,48 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIPinchGestureRecognizer,UIPinchGestureRecognizer *);
+typedef void(^UIPinchGestureRecognizerEasyCoderBlock) (UIPinchGestureRecognizer * ins);
 
 @interface UIPinchGestureRecognizer (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIPinchGestureRecognizer, UIPinchGestureRecognizer *);
-TF_EC_MINSTANCE_INT(UIPinchGestureRecognizer,UIPinchGestureRecognizer *);
++( UIPinchGestureRecognizer *)easyCoder:(UIPinchGestureRecognizerEasyCoderBlock)block;
+-(UIPinchGestureRecognizer *)easyCoder:(UIPinchGestureRecognizerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,double,scale);
+-(UIPinchGestureRecognizer  *(^)(double  scale))set_scale;
 
 
 
 
 
 //superclass pros UIGestureRecognizer
-TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,BOOL,cancelsTouchesInView);
-TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,BOOL,delaysTouchesBegan);
-TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,BOOL,delaysTouchesEnded);
-TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,NSArray *,allowedTouchTypes);
-TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,NSArray *,allowedPressTypes);
+-(UIPinchGestureRecognizer  *(^)(BOOL  enabled))set_enabled;
+-(UIPinchGestureRecognizer  *(^)(BOOL  cancelsTouchesInView))set_cancelsTouchesInView;
+-(UIPinchGestureRecognizer  *(^)(BOOL  delaysTouchesBegan))set_delaysTouchesBegan;
+-(UIPinchGestureRecognizer  *(^)(BOOL  delaysTouchesEnded))set_delaysTouchesEnded;
+-(UIPinchGestureRecognizer  *(^)(NSArray *  allowedTouchTypes))set_allowedTouchTypes;
+-(UIPinchGestureRecognizer  *(^)(NSArray *  allowedPressTypes))set_allowedPressTypes;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIPinchGestureRecognizer ,long long,accessibilityNavigationStyle)
+-(UIPinchGestureRecognizer  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIPinchGestureRecognizer  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIPinchGestureRecognizer  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIPinchGestureRecognizer  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIPinchGestureRecognizer  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIPinchGestureRecognizer  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIPinchGestureRecognizer  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIPinchGestureRecognizer  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIPinchGestureRecognizer  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIPinchGestureRecognizer  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIPinchGestureRecognizer  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIPinchGestureRecognizer  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIPinchGestureRecognizer  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIPinchGestureRecognizer  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIPinchGestureRecognizer);
+-(UIPinchGestureRecognizer *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

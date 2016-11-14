@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UITableViewFocusUpdateContext,UITableViewFocusUpdateContext *);
+typedef void(^UITableViewFocusUpdateContextEasyCoderBlock) (UITableViewFocusUpdateContext * ins);
 
 @interface UITableViewFocusUpdateContext (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UITableViewFocusUpdateContext, UITableViewFocusUpdateContext *);
-TF_EC_MINSTANCE_INT(UITableViewFocusUpdateContext,UITableViewFocusUpdateContext *);
++( UITableViewFocusUpdateContext *)easyCoder:(UITableViewFocusUpdateContextEasyCoderBlock)block;
+-(UITableViewFocusUpdateContext *)easyCoder:(UITableViewFocusUpdateContextEasyCoderBlock)block;
 
 
 
@@ -24,26 +24,26 @@ TF_EC_MINSTANCE_INT(UITableViewFocusUpdateContext,UITableViewFocusUpdateContext 
 
 //superclass pros UIFocusUpdateContext
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UITableViewFocusUpdateContext ,long long,accessibilityNavigationStyle)
+-(UITableViewFocusUpdateContext  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UITableViewFocusUpdateContext  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UITableViewFocusUpdateContext  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UITableViewFocusUpdateContext  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UITableViewFocusUpdateContext  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UITableViewFocusUpdateContext  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UITableViewFocusUpdateContext  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UITableViewFocusUpdateContext  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UITableViewFocusUpdateContext  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UITableViewFocusUpdateContext  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UITableViewFocusUpdateContext  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UITableViewFocusUpdateContext  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UITableViewFocusUpdateContext  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UITableViewFocusUpdateContext  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UITableViewFocusUpdateContext);
+-(UITableViewFocusUpdateContext *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

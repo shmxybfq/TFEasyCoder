@@ -10,66 +10,66 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UITableViewCell,UITableViewCell *);
+typedef void(^UITableViewCellEasyCoderBlock) (UITableViewCell * ins);
 
 @interface UITableViewCell (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UITableViewCell, UITableViewCell *);
-TF_EC_MINSTANCE_INT(UITableViewCell,UITableViewCell *);
++( UITableViewCell *)easyCoder:(UITableViewCellEasyCoderBlock)block;
+-(UITableViewCell *)easyCoder:(UITableViewCellEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,UIView *,backgroundView);
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,UIView *,selectedBackgroundView);
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,UIView *,multipleSelectionBackgroundView);
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,long long,selectionStyle);
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,BOOL,selected);
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,BOOL,highlighted);
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,BOOL,showsReorderControl);
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,BOOL,shouldIndentWhileEditing);
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,long long,accessoryType);
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,UIView *,accessoryView);
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,long long,editingAccessoryType);
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,UIView *,editingAccessoryView);
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,long long,indentationLevel);
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,double,indentationWidth);
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,UIEdgeInsets,separatorInset);
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,BOOL,editing);
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,long long,focusStyle);
+-(UITableViewCell  *(^)(UIView *  backgroundView))set_backgroundView;
+-(UITableViewCell  *(^)(UIView *  selectedBackgroundView))set_selectedBackgroundView;
+-(UITableViewCell  *(^)(UIView *  multipleSelectionBackgroundView))set_multipleSelectionBackgroundView;
+-(UITableViewCell  *(^)(long long  selectionStyle))set_selectionStyle;
+-(UITableViewCell  *(^)(BOOL  selected))set_selected;
+-(UITableViewCell  *(^)(BOOL  highlighted))set_highlighted;
+-(UITableViewCell  *(^)(BOOL  showsReorderControl))set_showsReorderControl;
+-(UITableViewCell  *(^)(BOOL  shouldIndentWhileEditing))set_shouldIndentWhileEditing;
+-(UITableViewCell  *(^)(long long  accessoryType))set_accessoryType;
+-(UITableViewCell  *(^)(UIView *  accessoryView))set_accessoryView;
+-(UITableViewCell  *(^)(long long  editingAccessoryType))set_editingAccessoryType;
+-(UITableViewCell  *(^)(UIView *  editingAccessoryView))set_editingAccessoryView;
+-(UITableViewCell  *(^)(long long  indentationLevel))set_indentationLevel;
+-(UITableViewCell  *(^)(double  indentationWidth))set_indentationWidth;
+-(UITableViewCell  *(^)(UIEdgeInsets  separatorInset))set_separatorInset;
+-(UITableViewCell  *(^)(BOOL  editing))set_editing;
+-(UITableViewCell  *(^)(long long  focusStyle))set_focusStyle;
 
 
 
 
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,UIColor *,backgroundColor)
+-(UITableViewCell  *(^)(UIView *  maskView))set_maskView;
+-(UITableViewCell  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UITableViewCell  *(^)(long long  tag))set_tag;
+-(UITableViewCell  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UITableViewCell  *(^)(CGPoint  center))set_center;
+-(UITableViewCell  *(^)(CGRect  frame))set_frame;
+-(UITableViewCell  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,NSUserActivity *,userActivity);
+-(UITableViewCell  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UITableViewCell ,long long,accessibilityNavigationStyle)
+-(UITableViewCell  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UITableViewCell  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UITableViewCell  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UITableViewCell  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UITableViewCell  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UITableViewCell  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UITableViewCell  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UITableViewCell  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UITableViewCell  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UITableViewCell  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UITableViewCell  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UITableViewCell  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UITableViewCell  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UITableViewCell  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UITableViewCell);
+-(UITableViewCell *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

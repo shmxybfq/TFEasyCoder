@@ -10,67 +10,67 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIButton,UIButton *);
+typedef void(^UIButtonEasyCoderBlock) (UIButton * ins);
 
 @interface UIButton (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIButton, UIButton *);
-TF_EC_MINSTANCE_INT(UIButton,UIButton *);
++( UIButton *)easyCoder:(UIButtonEasyCoderBlock)block;
+-(UIButton *)easyCoder:(UIButtonEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIButton ,UIEdgeInsets,contentEdgeInsets);
-TF_EC_CHAIN_PROP_INT(UIButton ,UIEdgeInsets,titleEdgeInsets);
-TF_EC_CHAIN_PROP_INT(UIButton ,BOOL,reversesTitleShadowWhenHighlighted);
-TF_EC_CHAIN_PROP_INT(UIButton ,UIEdgeInsets,imageEdgeInsets);
-TF_EC_CHAIN_PROP_INT(UIButton ,BOOL,adjustsImageWhenHighlighted);
-TF_EC_CHAIN_PROP_INT(UIButton ,BOOL,adjustsImageWhenDisabled);
-TF_EC_CHAIN_PROP_INT(UIButton ,BOOL,showsTouchWhenHighlighted);
-TF_EC_CHAIN_PROP_INT(UIButton ,UIColor *,tintColor);
+-(UIButton  *(^)(UIEdgeInsets  contentEdgeInsets))set_contentEdgeInsets;
+-(UIButton  *(^)(UIEdgeInsets  titleEdgeInsets))set_titleEdgeInsets;
+-(UIButton  *(^)(BOOL  reversesTitleShadowWhenHighlighted))set_reversesTitleShadowWhenHighlighted;
+-(UIButton  *(^)(UIEdgeInsets  imageEdgeInsets))set_imageEdgeInsets;
+-(UIButton  *(^)(BOOL  adjustsImageWhenHighlighted))set_adjustsImageWhenHighlighted;
+-(UIButton  *(^)(BOOL  adjustsImageWhenDisabled))set_adjustsImageWhenDisabled;
+-(UIButton  *(^)(BOOL  showsTouchWhenHighlighted))set_showsTouchWhenHighlighted;
+-(UIButton  *(^)(UIColor *  tintColor))set_tintColor;
 
-TF_EC_CHAIN_PROP_INT(UIButton ,UIFont *,font)
-TF_EC_CHAIN_PROP_INT(UIButton ,NSLineBreakMode ,lineBreakMode)
-TF_EC_CHAIN_PROP_INT(UIButton ,CGSize ,titleShadowOffset)
+-(UIButton  *(^)(UIFont *  font))set_font;
+-(UIButton  *(^)(NSLineBreakMode   lineBreakMode))set_lineBreakMode;
+-(UIButton  *(^)(CGSize   titleShadowOffset))set_titleShadowOffset;
 
 
 
 
 //superclass pros UIControl
-TF_EC_CHAIN_PROP_INT(UIButton ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(UIButton ,BOOL,selected);
-TF_EC_CHAIN_PROP_INT(UIButton ,BOOL,highlighted);
-TF_EC_CHAIN_PROP_INT(UIButton ,long long,contentVerticalAlignment);
-TF_EC_CHAIN_PROP_INT(UIButton ,long long,contentHorizontalAlignment);
+-(UIButton  *(^)(BOOL  enabled))set_enabled;
+-(UIButton  *(^)(BOOL  selected))set_selected;
+-(UIButton  *(^)(BOOL  highlighted))set_highlighted;
+-(UIButton  *(^)(long long  contentVerticalAlignment))set_contentVerticalAlignment;
+-(UIButton  *(^)(long long  contentHorizontalAlignment))set_contentHorizontalAlignment;
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UIButton ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UIButton ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UIButton ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UIButton ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UIButton ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UIButton ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UIButton ,UIColor *,backgroundColor)
+-(UIButton  *(^)(UIView *  maskView))set_maskView;
+-(UIButton  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UIButton  *(^)(long long  tag))set_tag;
+-(UIButton  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UIButton  *(^)(CGPoint  center))set_center;
+-(UIButton  *(^)(CGRect  frame))set_frame;
+-(UIButton  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIButton ,NSUserActivity *,userActivity);
+-(UIButton  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIButton ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIButton ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIButton ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIButton ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIButton ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIButton ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIButton ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIButton ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIButton ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIButton ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIButton ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIButton ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIButton ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIButton ,long long,accessibilityNavigationStyle)
+-(UIButton  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIButton  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIButton  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIButton  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIButton  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIButton  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIButton  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIButton  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIButton  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIButton  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIButton  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIButton  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIButton  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIButton  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIButton);
+-(UIButton *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

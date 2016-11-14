@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSSortDescriptor,NSSortDescriptor *);
+typedef void(^NSSortDescriptorEasyCoderBlock) (NSSortDescriptor * ins);
 
 @interface NSSortDescriptor (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSSortDescriptor, NSSortDescriptor *);
-TF_EC_MINSTANCE_INT(NSSortDescriptor,NSSortDescriptor *);
++( NSSortDescriptor *)easyCoder:(NSSortDescriptorEasyCoderBlock)block;
+-(NSSortDescriptor *)easyCoder:(NSSortDescriptorEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(NSSortDescriptor,NSSortDescriptor *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSSortDescriptor ,long long,accessibilityNavigationStyle)
+-(NSSortDescriptor  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSSortDescriptor  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSSortDescriptor  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSSortDescriptor  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSSortDescriptor  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSSortDescriptor  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSSortDescriptor  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSSortDescriptor  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSSortDescriptor  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSSortDescriptor  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSSortDescriptor  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSSortDescriptor  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSSortDescriptor  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSSortDescriptor  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSSortDescriptor);
+-(NSSortDescriptor *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSMetadataQueryResultGroup,NSMetadataQueryResultGroup *);
+typedef void(^NSMetadataQueryResultGroupEasyCoderBlock) (NSMetadataQueryResultGroup * ins);
 
 @interface NSMetadataQueryResultGroup (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSMetadataQueryResultGroup, NSMetadataQueryResultGroup *);
-TF_EC_MINSTANCE_INT(NSMetadataQueryResultGroup,NSMetadataQueryResultGroup *);
++( NSMetadataQueryResultGroup *)easyCoder:(NSMetadataQueryResultGroupEasyCoderBlock)block;
+-(NSMetadataQueryResultGroup *)easyCoder:(NSMetadataQueryResultGroupEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(NSMetadataQueryResultGroup,NSMetadataQueryResultGroup *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSMetadataQueryResultGroup ,long long,accessibilityNavigationStyle)
+-(NSMetadataQueryResultGroup  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSMetadataQueryResultGroup  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSMetadataQueryResultGroup  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSMetadataQueryResultGroup  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSMetadataQueryResultGroup  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSMetadataQueryResultGroup  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSMetadataQueryResultGroup  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSMetadataQueryResultGroup  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSMetadataQueryResultGroup  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSMetadataQueryResultGroup  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSMetadataQueryResultGroup  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSMetadataQueryResultGroup  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSMetadataQueryResultGroup  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSMetadataQueryResultGroup  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSMetadataQueryResultGroup);
+-(NSMetadataQueryResultGroup *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -10,62 +10,62 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UISwitch,UISwitch *);
+typedef void(^UISwitchEasyCoderBlock) (UISwitch * ins);
 
 @interface UISwitch (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UISwitch, UISwitch *);
-TF_EC_MINSTANCE_INT(UISwitch,UISwitch *);
++( UISwitch *)easyCoder:(UISwitchEasyCoderBlock)block;
+-(UISwitch *)easyCoder:(UISwitchEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UISwitch ,UIColor *,onTintColor);
-TF_EC_CHAIN_PROP_INT(UISwitch ,UIColor *,tintColor);
-TF_EC_CHAIN_PROP_INT(UISwitch ,UIColor *,thumbTintColor);
-TF_EC_CHAIN_PROP_INT(UISwitch ,UIImage *,onImage);
-TF_EC_CHAIN_PROP_INT(UISwitch ,UIImage *,offImage);
-TF_EC_CHAIN_PROP_INT(UISwitch ,BOOL,on);
+-(UISwitch  *(^)(UIColor *  onTintColor))set_onTintColor;
+-(UISwitch  *(^)(UIColor *  tintColor))set_tintColor;
+-(UISwitch  *(^)(UIColor *  thumbTintColor))set_thumbTintColor;
+-(UISwitch  *(^)(UIImage *  onImage))set_onImage;
+-(UISwitch  *(^)(UIImage *  offImage))set_offImage;
+-(UISwitch  *(^)(BOOL  on))set_on;
 
 
 
 
 
 //superclass pros UIControl
-TF_EC_CHAIN_PROP_INT(UISwitch ,BOOL,enabled);
-TF_EC_CHAIN_PROP_INT(UISwitch ,BOOL,selected);
-TF_EC_CHAIN_PROP_INT(UISwitch ,BOOL,highlighted);
-TF_EC_CHAIN_PROP_INT(UISwitch ,long long,contentVerticalAlignment);
-TF_EC_CHAIN_PROP_INT(UISwitch ,long long,contentHorizontalAlignment);
+-(UISwitch  *(^)(BOOL  enabled))set_enabled;
+-(UISwitch  *(^)(BOOL  selected))set_selected;
+-(UISwitch  *(^)(BOOL  highlighted))set_highlighted;
+-(UISwitch  *(^)(long long  contentVerticalAlignment))set_contentVerticalAlignment;
+-(UISwitch  *(^)(long long  contentHorizontalAlignment))set_contentHorizontalAlignment;
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UISwitch ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UISwitch ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UISwitch ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UISwitch ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UISwitch ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UISwitch ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UISwitch ,UIColor *,backgroundColor)
+-(UISwitch  *(^)(UIView *  maskView))set_maskView;
+-(UISwitch  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UISwitch  *(^)(long long  tag))set_tag;
+-(UISwitch  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UISwitch  *(^)(CGPoint  center))set_center;
+-(UISwitch  *(^)(CGRect  frame))set_frame;
+-(UISwitch  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UISwitch ,NSUserActivity *,userActivity);
+-(UISwitch  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UISwitch ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UISwitch ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UISwitch ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UISwitch ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UISwitch ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UISwitch ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UISwitch ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UISwitch ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UISwitch ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UISwitch ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UISwitch ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UISwitch ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UISwitch ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UISwitch ,long long,accessibilityNavigationStyle)
+-(UISwitch  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UISwitch  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UISwitch  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UISwitch  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UISwitch  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UISwitch  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UISwitch  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UISwitch  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UISwitch  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UISwitch  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UISwitch  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UISwitch  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UISwitch  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UISwitch  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UISwitch);
+-(UISwitch *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

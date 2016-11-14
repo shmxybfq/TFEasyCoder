@@ -10,60 +10,60 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIActivityViewController,UIActivityViewController *);
+typedef void(^UIActivityViewControllerEasyCoderBlock) (UIActivityViewController * ins);
 
 @interface UIActivityViewController (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIActivityViewController, UIActivityViewController *);
-TF_EC_MINSTANCE_INT(UIActivityViewController,UIActivityViewController *);
++( UIActivityViewController *)easyCoder:(UIActivityViewControllerEasyCoderBlock)block;
+-(UIActivityViewController *)easyCoder:(UIActivityViewControllerEasyCoderBlock)block;
 
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,NSArray *,excludedActivityTypes)
+-(UIActivityViewController  *(^)(NSArray *  excludedActivityTypes))set_excludedActivityTypes;
 
 
 
 
 
 //superclass pros UIViewController
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,UITabBarItem *,tabBarItem)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,BOOL,hidesBottomBarWhenPushed)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,id<UIViewControllerTransitioningDelegate>  ,transitioningDelegate)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,UIView *,view)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,NSString *,title)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,BOOL,definesPresentationContext)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,BOOL,providesPresentationContextTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,long long,modalTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,long long,modalPresentationStyle)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,BOOL,modalPresentationCapturesStatusBarAppearance)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,BOOL,wantsFullScreenLayout)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,unsigned long long,edgesForExtendedLayout)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,BOOL,extendedLayoutIncludesOpaqueBars)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,BOOL,automaticallyAdjustsScrollViewInsets)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,CGSize,preferredContentSize)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,CGSize,contentSizeForViewInPopover)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,BOOL,modalInPopover)
+-(UIActivityViewController  *(^)(UITabBarItem *  tabBarItem))set_tabBarItem;
+-(UIActivityViewController  *(^)(BOOL  hidesBottomBarWhenPushed))set_hidesBottomBarWhenPushed;
+-(UIActivityViewController  *(^)(id<UIViewControllerTransitioningDelegate>    transitioningDelegate))set_transitioningDelegate;
+-(UIActivityViewController  *(^)(UIView *  view))set_view;
+-(UIActivityViewController  *(^)(NSString *  title))set_title;
+-(UIActivityViewController  *(^)(BOOL  definesPresentationContext))set_definesPresentationContext;
+-(UIActivityViewController  *(^)(BOOL  providesPresentationContextTransitionStyle))set_providesPresentationContextTransitionStyle;
+-(UIActivityViewController  *(^)(long long  modalTransitionStyle))set_modalTransitionStyle;
+-(UIActivityViewController  *(^)(long long  modalPresentationStyle))set_modalPresentationStyle;
+-(UIActivityViewController  *(^)(BOOL  modalPresentationCapturesStatusBarAppearance))set_modalPresentationCapturesStatusBarAppearance;
+-(UIActivityViewController  *(^)(BOOL  wantsFullScreenLayout))set_wantsFullScreenLayout;
+-(UIActivityViewController  *(^)(unsigned long long  edgesForExtendedLayout))set_edgesForExtendedLayout;
+-(UIActivityViewController  *(^)(BOOL  extendedLayoutIncludesOpaqueBars))set_extendedLayoutIncludesOpaqueBars;
+-(UIActivityViewController  *(^)(BOOL  automaticallyAdjustsScrollViewInsets))set_automaticallyAdjustsScrollViewInsets;
+-(UIActivityViewController  *(^)(CGSize  preferredContentSize))set_preferredContentSize;
+-(UIActivityViewController  *(^)(CGSize  contentSizeForViewInPopover))set_contentSizeForViewInPopover;
+-(UIActivityViewController  *(^)(BOOL  modalInPopover))set_modalInPopover;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,NSUserActivity *,userActivity);
+-(UIActivityViewController  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIActivityViewController ,long long,accessibilityNavigationStyle)
+-(UIActivityViewController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIActivityViewController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIActivityViewController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIActivityViewController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIActivityViewController  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIActivityViewController  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIActivityViewController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIActivityViewController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIActivityViewController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIActivityViewController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIActivityViewController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIActivityViewController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIActivityViewController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIActivityViewController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIActivityViewController);
+-(UIActivityViewController *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

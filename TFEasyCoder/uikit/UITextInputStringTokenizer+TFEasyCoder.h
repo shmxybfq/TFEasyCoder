@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UITextInputStringTokenizer,UITextInputStringTokenizer *);
+typedef void(^UITextInputStringTokenizerEasyCoderBlock) (UITextInputStringTokenizer * ins);
 
 @interface UITextInputStringTokenizer (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UITextInputStringTokenizer, UITextInputStringTokenizer *);
-TF_EC_MINSTANCE_INT(UITextInputStringTokenizer,UITextInputStringTokenizer *);
++( UITextInputStringTokenizer *)easyCoder:(UITextInputStringTokenizerEasyCoderBlock)block;
+-(UITextInputStringTokenizer *)easyCoder:(UITextInputStringTokenizerEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(UITextInputStringTokenizer,UITextInputStringTokenizer *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UITextInputStringTokenizer ,long long,accessibilityNavigationStyle)
+-(UITextInputStringTokenizer  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UITextInputStringTokenizer  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UITextInputStringTokenizer  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UITextInputStringTokenizer  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UITextInputStringTokenizer  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UITextInputStringTokenizer  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UITextInputStringTokenizer  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UITextInputStringTokenizer  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UITextInputStringTokenizer  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UITextInputStringTokenizer  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UITextInputStringTokenizer  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UITextInputStringTokenizer  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UITextInputStringTokenizer  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UITextInputStringTokenizer  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UITextInputStringTokenizer);
+-(UITextInputStringTokenizer *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

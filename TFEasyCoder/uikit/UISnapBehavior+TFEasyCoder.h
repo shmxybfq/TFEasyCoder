@@ -10,42 +10,42 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UISnapBehavior,UISnapBehavior *);
+typedef void(^UISnapBehaviorEasyCoderBlock) (UISnapBehavior * ins);
 
 @interface UISnapBehavior (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UISnapBehavior, UISnapBehavior *);
-TF_EC_MINSTANCE_INT(UISnapBehavior,UISnapBehavior *);
++( UISnapBehavior *)easyCoder:(UISnapBehaviorEasyCoderBlock)block;
+-(UISnapBehavior *)easyCoder:(UISnapBehaviorEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UISnapBehavior ,CGPoint,snapPoint);
-TF_EC_CHAIN_PROP_INT(UISnapBehavior ,double,damping);
+-(UISnapBehavior  *(^)(CGPoint  snapPoint))set_snapPoint;
+-(UISnapBehavior  *(^)(double  damping))set_damping;
 
 
 
 
 //superclass pros UIDynamicBehavior
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UISnapBehavior ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UISnapBehavior ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UISnapBehavior ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UISnapBehavior ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UISnapBehavior ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UISnapBehavior ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UISnapBehavior ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UISnapBehavior ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UISnapBehavior ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UISnapBehavior ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UISnapBehavior ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UISnapBehavior ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UISnapBehavior ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UISnapBehavior ,long long,accessibilityNavigationStyle)
+-(UISnapBehavior  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UISnapBehavior  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UISnapBehavior  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UISnapBehavior  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UISnapBehavior  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UISnapBehavior  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UISnapBehavior  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UISnapBehavior  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UISnapBehavior  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UISnapBehavior  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UISnapBehavior  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UISnapBehavior  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UISnapBehavior  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UISnapBehavior  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UISnapBehavior);
+-(UISnapBehavior *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -10,56 +10,56 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIToolbar,UIToolbar *);
+typedef void(^UIToolbarEasyCoderBlock) (UIToolbar * ins);
 
 @interface UIToolbar (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIToolbar, UIToolbar *);
-TF_EC_MINSTANCE_INT(UIToolbar,UIToolbar *);
++( UIToolbar *)easyCoder:(UIToolbarEasyCoderBlock)block;
+-(UIToolbar *)easyCoder:(UIToolbarEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIToolbar ,long long,barStyle);
-TF_EC_CHAIN_PROP_INT(UIToolbar ,NSArray *,items);
-TF_EC_CHAIN_PROP_INT(UIToolbar ,BOOL,translucent);
-TF_EC_CHAIN_PROP_INT(UIToolbar ,UIColor *,tintColor);
-TF_EC_CHAIN_PROP_INT(UIToolbar ,UIColor *,barTintColor);
-TF_EC_CHAIN_PROP_INT(UIToolbar ,id<UIToolbarDelegate> ,delegate);
+-(UIToolbar  *(^)(long long  barStyle))set_barStyle;
+-(UIToolbar  *(^)(NSArray *  items))set_items;
+-(UIToolbar  *(^)(BOOL  translucent))set_translucent;
+-(UIToolbar  *(^)(UIColor *  tintColor))set_tintColor;
+-(UIToolbar  *(^)(UIColor *  barTintColor))set_barTintColor;
+-(UIToolbar  *(^)(id<UIToolbarDelegate>   delegate))set_delegate;
 
 
 
 
 
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UIToolbar ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UIToolbar ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UIToolbar ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UIToolbar ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UIToolbar ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UIToolbar ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UIToolbar ,UIColor *,backgroundColor)
+-(UIToolbar  *(^)(UIView *  maskView))set_maskView;
+-(UIToolbar  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UIToolbar  *(^)(long long  tag))set_tag;
+-(UIToolbar  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UIToolbar  *(^)(CGPoint  center))set_center;
+-(UIToolbar  *(^)(CGRect  frame))set_frame;
+-(UIToolbar  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIToolbar ,NSUserActivity *,userActivity);
+-(UIToolbar  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIToolbar ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIToolbar ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIToolbar ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIToolbar ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIToolbar ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIToolbar ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIToolbar ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIToolbar ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIToolbar ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIToolbar ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIToolbar ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIToolbar ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIToolbar ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIToolbar ,long long,accessibilityNavigationStyle)
+-(UIToolbar  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIToolbar  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIToolbar  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIToolbar  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIToolbar  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIToolbar  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIToolbar  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIToolbar  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIToolbar  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIToolbar  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIToolbar  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIToolbar  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIToolbar  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIToolbar  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIToolbar);
+-(UIToolbar *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

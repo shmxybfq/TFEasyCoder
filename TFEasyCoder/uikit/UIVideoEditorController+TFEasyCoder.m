@@ -15,68 +15,389 @@
 
 @implementation UIVideoEditorController (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(UIVideoEditorController, UIVideoEditorController *);
-TF_EC_MINSTANCE_IMP(UIVideoEditorController, UIVideoEditorController *);
++( UIVideoEditorController *)easyCoder:(UIVideoEditorControllerEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( UIVideoEditorController *)ins);
+        }
+    }];
+}
+
+-( UIVideoEditorController *)easyCoder:(UIVideoEditorControllerEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
 
 
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,id ,delegate)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,NSString *,videoPath)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,double,videoMaximumDuration)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,long long,videoQuality)
+
+-(UIVideoEditorController  *(^)(id   delegate))set_delegate{
+    __weak typeof(self) weakSelf = self;
+    return ^(id   delegate){
+        weakSelf.delegate = delegate;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(NSString *  videoPath))set_videoPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  videoPath){
+        weakSelf.videoPath = videoPath;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(double  videoMaximumDuration))set_videoMaximumDuration{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  videoMaximumDuration){
+        weakSelf.videoMaximumDuration = videoMaximumDuration;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(long long  videoQuality))set_videoQuality{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  videoQuality){
+        weakSelf.videoQuality = videoQuality;
+        return weakSelf;
+    };
+}
+
 
 
 
 
 //superclass pros UINavigationController
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,NSArray *,viewControllers)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,navigationBarHidden)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,toolbarHidden)
+-(UIVideoEditorController  *(^)(NSArray *  viewControllers))set_viewControllers{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  viewControllers){
+        weakSelf.viewControllers = viewControllers;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(BOOL  navigationBarHidden))set_navigationBarHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  navigationBarHidden){
+        weakSelf.navigationBarHidden = navigationBarHidden;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(BOOL  toolbarHidden))set_toolbarHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  toolbarHidden){
+        weakSelf.toolbarHidden = toolbarHidden;
+        return weakSelf;
+    };
+}
+
 //TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,id<UINavigationControllerDelegate>  ,delegate)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,hidesBarsWhenKeyboardAppears)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,hidesBarsOnSwipe)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,hidesBarsWhenVerticallyCompact)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,hidesBarsOnTap)
+-(UIVideoEditorController  *(^)(BOOL  hidesBarsWhenKeyboardAppears))set_hidesBarsWhenKeyboardAppears{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  hidesBarsWhenKeyboardAppears){
+        weakSelf.hidesBarsWhenKeyboardAppears = hidesBarsWhenKeyboardAppears;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(BOOL  hidesBarsOnSwipe))set_hidesBarsOnSwipe{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  hidesBarsOnSwipe){
+        weakSelf.hidesBarsOnSwipe = hidesBarsOnSwipe;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(BOOL  hidesBarsWhenVerticallyCompact))set_hidesBarsWhenVerticallyCompact{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  hidesBarsWhenVerticallyCompact){
+        weakSelf.hidesBarsWhenVerticallyCompact = hidesBarsWhenVerticallyCompact;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(BOOL  hidesBarsOnTap))set_hidesBarsOnTap{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  hidesBarsOnTap){
+        weakSelf.hidesBarsOnTap = hidesBarsOnTap;
+        return weakSelf;
+    };
+}
+
 //superclass pros UIViewController
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,UITabBarItem *,tabBarItem)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,hidesBottomBarWhenPushed)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,id<UIViewControllerTransitioningDelegate>  ,transitioningDelegate)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,UIView *,view)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,NSString *,title)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,definesPresentationContext)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,providesPresentationContextTransitionStyle)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,long long,modalTransitionStyle)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,long long,modalPresentationStyle)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,modalPresentationCapturesStatusBarAppearance)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,wantsFullScreenLayout)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,unsigned long long,edgesForExtendedLayout)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,extendedLayoutIncludesOpaqueBars)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,automaticallyAdjustsScrollViewInsets)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,CGSize,preferredContentSize)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,CGSize,contentSizeForViewInPopover)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,modalInPopover)
+-(UIVideoEditorController  *(^)(UITabBarItem *  tabBarItem))set_tabBarItem{
+    __weak typeof(self) weakSelf = self;
+    return ^(UITabBarItem *  tabBarItem){
+        weakSelf.tabBarItem = tabBarItem;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(BOOL  hidesBottomBarWhenPushed))set_hidesBottomBarWhenPushed{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  hidesBottomBarWhenPushed){
+        weakSelf.hidesBottomBarWhenPushed = hidesBottomBarWhenPushed;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(id<UIViewControllerTransitioningDelegate>    transitioningDelegate))set_transitioningDelegate{
+    __weak typeof(self) weakSelf = self;
+    return ^(id<UIViewControllerTransitioningDelegate>    transitioningDelegate){
+        weakSelf.transitioningDelegate = transitioningDelegate;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(UIView *  view))set_view{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIView *  view){
+        weakSelf.view = view;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(NSString *  title))set_title{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  title){
+        weakSelf.title = title;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(BOOL  definesPresentationContext))set_definesPresentationContext{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  definesPresentationContext){
+        weakSelf.definesPresentationContext = definesPresentationContext;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(BOOL  providesPresentationContextTransitionStyle))set_providesPresentationContextTransitionStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  providesPresentationContextTransitionStyle){
+        weakSelf.providesPresentationContextTransitionStyle = providesPresentationContextTransitionStyle;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(long long  modalTransitionStyle))set_modalTransitionStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  modalTransitionStyle){
+        weakSelf.modalTransitionStyle = modalTransitionStyle;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(long long  modalPresentationStyle))set_modalPresentationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  modalPresentationStyle){
+        weakSelf.modalPresentationStyle = modalPresentationStyle;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(BOOL  modalPresentationCapturesStatusBarAppearance))set_modalPresentationCapturesStatusBarAppearance{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  modalPresentationCapturesStatusBarAppearance){
+        weakSelf.modalPresentationCapturesStatusBarAppearance = modalPresentationCapturesStatusBarAppearance;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(BOOL  wantsFullScreenLayout))set_wantsFullScreenLayout{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  wantsFullScreenLayout){
+        weakSelf.wantsFullScreenLayout = wantsFullScreenLayout;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(unsigned long long  edgesForExtendedLayout))set_edgesForExtendedLayout{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  edgesForExtendedLayout){
+        weakSelf.edgesForExtendedLayout = edgesForExtendedLayout;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(BOOL  extendedLayoutIncludesOpaqueBars))set_extendedLayoutIncludesOpaqueBars{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  extendedLayoutIncludesOpaqueBars){
+        weakSelf.extendedLayoutIncludesOpaqueBars = extendedLayoutIncludesOpaqueBars;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(BOOL  automaticallyAdjustsScrollViewInsets))set_automaticallyAdjustsScrollViewInsets{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  automaticallyAdjustsScrollViewInsets){
+        weakSelf.automaticallyAdjustsScrollViewInsets = automaticallyAdjustsScrollViewInsets;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(CGSize  preferredContentSize))set_preferredContentSize{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGSize  preferredContentSize){
+        weakSelf.preferredContentSize = preferredContentSize;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(CGSize  contentSizeForViewInPopover))set_contentSizeForViewInPopover{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGSize  contentSizeForViewInPopover){
+        weakSelf.contentSizeForViewInPopover = contentSizeForViewInPopover;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(BOOL  modalInPopover))set_modalInPopover{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  modalInPopover){
+        weakSelf.modalInPopover = modalInPopover;
+        return weakSelf;
+    };
+}
+
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,NSUserActivity *,userActivity)
+-(UIVideoEditorController  *(^)(NSUserActivity *  userActivity))set_userActivity{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSUserActivity *  userActivity){
+        weakSelf.userActivity = userActivity;
+        return weakSelf;
+    };
+}
+
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(UIVideoEditorController ,long long,accessibilityNavigationStyle)
+-(UIVideoEditorController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(UIVideoEditorController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIVideoEditorController);
+
+-(UIVideoEditorController *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

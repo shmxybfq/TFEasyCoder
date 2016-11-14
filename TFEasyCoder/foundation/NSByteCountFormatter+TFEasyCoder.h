@@ -10,49 +10,49 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSByteCountFormatter,NSByteCountFormatter *);
+typedef void(^NSByteCountFormatterEasyCoderBlock) (NSByteCountFormatter * ins);
 
 @interface NSByteCountFormatter (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSByteCountFormatter, NSByteCountFormatter *);
-TF_EC_MINSTANCE_INT(NSByteCountFormatter,NSByteCountFormatter *);
++( NSByteCountFormatter *)easyCoder:(NSByteCountFormatterEasyCoderBlock)block;
+-(NSByteCountFormatter *)easyCoder:(NSByteCountFormatterEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,unsigned long long,allowedUnits);
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,long long,countStyle);
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,BOOL,allowsNonnumericFormatting);
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,BOOL,includesUnit);
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,BOOL,includesCount);
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,BOOL,includesActualByteCount);
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,BOOL,adaptive);
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,BOOL,zeroPadsFractionDigits);
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,long long,formattingContext);
+-(NSByteCountFormatter  *(^)(unsigned long long  allowedUnits))set_allowedUnits;
+-(NSByteCountFormatter  *(^)(long long  countStyle))set_countStyle;
+-(NSByteCountFormatter  *(^)(BOOL  allowsNonnumericFormatting))set_allowsNonnumericFormatting;
+-(NSByteCountFormatter  *(^)(BOOL  includesUnit))set_includesUnit;
+-(NSByteCountFormatter  *(^)(BOOL  includesCount))set_includesCount;
+-(NSByteCountFormatter  *(^)(BOOL  includesActualByteCount))set_includesActualByteCount;
+-(NSByteCountFormatter  *(^)(BOOL  adaptive))set_adaptive;
+-(NSByteCountFormatter  *(^)(BOOL  zeroPadsFractionDigits))set_zeroPadsFractionDigits;
+-(NSByteCountFormatter  *(^)(long long  formattingContext))set_formattingContext;
 
 
 
 
 //superclass pros NSFormatter
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSByteCountFormatter ,long long,accessibilityNavigationStyle)
+-(NSByteCountFormatter  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSByteCountFormatter  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSByteCountFormatter  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSByteCountFormatter  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSByteCountFormatter  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSByteCountFormatter  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSByteCountFormatter  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSByteCountFormatter  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSByteCountFormatter  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSByteCountFormatter  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSByteCountFormatter  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSByteCountFormatter  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSByteCountFormatter  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSByteCountFormatter  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSByteCountFormatter);
+-(NSByteCountFormatter *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

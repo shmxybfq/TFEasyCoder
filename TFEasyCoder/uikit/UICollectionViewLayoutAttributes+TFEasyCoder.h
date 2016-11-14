@@ -10,47 +10,47 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UICollectionViewLayoutAttributes,UICollectionViewLayoutAttributes *);
+typedef void(^UICollectionViewLayoutAttributesEasyCoderBlock) (UICollectionViewLayoutAttributes * ins);
 
 @interface UICollectionViewLayoutAttributes (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UICollectionViewLayoutAttributes, UICollectionViewLayoutAttributes *);
-TF_EC_MINSTANCE_INT(UICollectionViewLayoutAttributes,UICollectionViewLayoutAttributes *);
++( UICollectionViewLayoutAttributes *)easyCoder:(UICollectionViewLayoutAttributesEasyCoderBlock)block;
+-(UICollectionViewLayoutAttributes *)easyCoder:(UICollectionViewLayoutAttributesEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,CGPoint,center);
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,CGSize,size);
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,CATransform3D,transform3D)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,CGAffineTransform,transform)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,double,alpha);
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,long long,zIndex);
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,BOOL,hidden);
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,NSIndexPath *,indexPath);
+-(UICollectionViewLayoutAttributes  *(^)(CGPoint  center))set_center;
+-(UICollectionViewLayoutAttributes  *(^)(CGSize  size))set_size;
+-(UICollectionViewLayoutAttributes  *(^)(CATransform3D  transform3D))set_transform3D;
+-(UICollectionViewLayoutAttributes  *(^)(CGAffineTransform  transform))set_transform;
+-(UICollectionViewLayoutAttributes  *(^)(double  alpha))set_alpha;
+-(UICollectionViewLayoutAttributes  *(^)(long long  zIndex))set_zIndex;
+-(UICollectionViewLayoutAttributes  *(^)(BOOL  hidden))set_hidden;
+-(UICollectionViewLayoutAttributes  *(^)(NSIndexPath *  indexPath))set_indexPath;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UICollectionViewLayoutAttributes ,long long,accessibilityNavigationStyle)
+-(UICollectionViewLayoutAttributes  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UICollectionViewLayoutAttributes  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UICollectionViewLayoutAttributes  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UICollectionViewLayoutAttributes  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UICollectionViewLayoutAttributes  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UICollectionViewLayoutAttributes  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UICollectionViewLayoutAttributes  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UICollectionViewLayoutAttributes  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UICollectionViewLayoutAttributes  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UICollectionViewLayoutAttributes  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UICollectionViewLayoutAttributes  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UICollectionViewLayoutAttributes  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UICollectionViewLayoutAttributes  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UICollectionViewLayoutAttributes  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UICollectionViewLayoutAttributes);
+-(UICollectionViewLayoutAttributes *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

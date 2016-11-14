@@ -10,41 +10,41 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSNetServiceBrowser,NSNetServiceBrowser *);
+typedef void(^NSNetServiceBrowserEasyCoderBlock) (NSNetServiceBrowser * ins);
 
 @interface NSNetServiceBrowser (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSNetServiceBrowser, NSNetServiceBrowser *);
-TF_EC_MINSTANCE_INT(NSNetServiceBrowser,NSNetServiceBrowser *);
++( NSNetServiceBrowser *)easyCoder:(NSNetServiceBrowserEasyCoderBlock)block;
+-(NSNetServiceBrowser *)easyCoder:(NSNetServiceBrowserEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,id<NSNetServiceBrowserDelegate> ,delegate);
-TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,BOOL,includesPeerToPeer);
+-(NSNetServiceBrowser  *(^)(id<NSNetServiceBrowserDelegate>   delegate))set_delegate;
+-(NSNetServiceBrowser  *(^)(BOOL  includesPeerToPeer))set_includesPeerToPeer;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSNetServiceBrowser ,long long,accessibilityNavigationStyle)
+-(NSNetServiceBrowser  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSNetServiceBrowser  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSNetServiceBrowser  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSNetServiceBrowser  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSNetServiceBrowser  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSNetServiceBrowser  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSNetServiceBrowser  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSNetServiceBrowser  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSNetServiceBrowser  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSNetServiceBrowser  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSNetServiceBrowser  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSNetServiceBrowser  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSNetServiceBrowser  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSNetServiceBrowser  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSNetServiceBrowser);
+-(NSNetServiceBrowser *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

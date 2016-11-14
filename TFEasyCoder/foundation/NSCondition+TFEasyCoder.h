@@ -10,40 +10,40 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSCondition,NSCondition *);
+typedef void(^NSConditionEasyCoderBlock) (NSCondition * ins);
 
 @interface NSCondition (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSCondition, NSCondition *);
-TF_EC_MINSTANCE_INT(NSCondition,NSCondition *);
++( NSCondition *)easyCoder:(NSConditionEasyCoderBlock)block;
+-(NSCondition *)easyCoder:(NSConditionEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSCondition ,NSString *,name);
+-(NSCondition  *(^)(NSString *  name))set_name;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSCondition ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSCondition ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSCondition ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSCondition ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSCondition ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSCondition ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSCondition ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSCondition ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSCondition ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSCondition ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSCondition ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSCondition ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSCondition ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSCondition ,long long,accessibilityNavigationStyle)
+-(NSCondition  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSCondition  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSCondition  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSCondition  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSCondition  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSCondition  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSCondition  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSCondition  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSCondition  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSCondition  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSCondition  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSCondition  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSCondition  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSCondition  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSCondition);
+-(NSCondition *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

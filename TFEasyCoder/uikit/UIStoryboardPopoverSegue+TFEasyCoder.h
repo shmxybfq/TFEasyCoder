@@ -14,12 +14,12 @@
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 
-TF_EC_BLOCK(UIStoryboardPopoverSegue,UIStoryboardPopoverSegue *);
+typedef void(^UIStoryboardPopoverSegueEasyCoderBlock) (UIStoryboardPopoverSegue * ins);
 
 @interface UIStoryboardPopoverSegue (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIStoryboardPopoverSegue, UIStoryboardPopoverSegue *);
-TF_EC_MINSTANCE_INT(UIStoryboardPopoverSegue,UIStoryboardPopoverSegue *);
++( UIStoryboardPopoverSegue *)easyCoder:(UIStoryboardPopoverSegueEasyCoderBlock)block;
+-(UIStoryboardPopoverSegue *)easyCoder:(UIStoryboardPopoverSegueEasyCoderBlock)block;
 
 
 
@@ -28,26 +28,26 @@ TF_EC_MINSTANCE_INT(UIStoryboardPopoverSegue,UIStoryboardPopoverSegue *);
 
 //superclass pros UIStoryboardSegue
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIStoryboardPopoverSegue ,long long,accessibilityNavigationStyle)
+-(UIStoryboardPopoverSegue  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIStoryboardPopoverSegue  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIStoryboardPopoverSegue  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIStoryboardPopoverSegue  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIStoryboardPopoverSegue  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIStoryboardPopoverSegue  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIStoryboardPopoverSegue  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIStoryboardPopoverSegue  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIStoryboardPopoverSegue  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIStoryboardPopoverSegue  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIStoryboardPopoverSegue  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIStoryboardPopoverSegue  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIStoryboardPopoverSegue  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIStoryboardPopoverSegue  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIStoryboardPopoverSegue);
+-(UIStoryboardPopoverSegue *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

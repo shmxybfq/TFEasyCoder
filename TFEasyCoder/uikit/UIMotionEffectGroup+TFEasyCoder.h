@@ -10,41 +10,41 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIMotionEffectGroup,UIMotionEffectGroup *);
+typedef void(^UIMotionEffectGroupEasyCoderBlock) (UIMotionEffectGroup * ins);
 
 @interface UIMotionEffectGroup (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIMotionEffectGroup, UIMotionEffectGroup *);
-TF_EC_MINSTANCE_INT(UIMotionEffectGroup,UIMotionEffectGroup *);
++( UIMotionEffectGroup *)easyCoder:(UIMotionEffectGroupEasyCoderBlock)block;
+-(UIMotionEffectGroup *)easyCoder:(UIMotionEffectGroupEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIMotionEffectGroup ,NSArray *,motionEffects);
+-(UIMotionEffectGroup  *(^)(NSArray *  motionEffects))set_motionEffects;
 
 
 
 
 //superclass pros UIMotionEffect
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIMotionEffectGroup ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIMotionEffectGroup ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIMotionEffectGroup ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIMotionEffectGroup ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIMotionEffectGroup ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIMotionEffectGroup ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIMotionEffectGroup ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIMotionEffectGroup ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIMotionEffectGroup ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIMotionEffectGroup ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIMotionEffectGroup ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIMotionEffectGroup ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIMotionEffectGroup ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIMotionEffectGroup ,long long,accessibilityNavigationStyle)
+-(UIMotionEffectGroup  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIMotionEffectGroup  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIMotionEffectGroup  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIMotionEffectGroup  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIMotionEffectGroup  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIMotionEffectGroup  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIMotionEffectGroup  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIMotionEffectGroup  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIMotionEffectGroup  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIMotionEffectGroup  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIMotionEffectGroup  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIMotionEffectGroup  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIMotionEffectGroup  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIMotionEffectGroup  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIMotionEffectGroup);
+-(UIMotionEffectGroup *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

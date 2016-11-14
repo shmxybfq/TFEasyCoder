@@ -10,89 +10,89 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(CAScrollLayer,CAScrollLayer *);
+typedef void(^CAScrollLayerEasyCoderBlock) (CAScrollLayer * ins);
 
 @interface CAScrollLayer (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(CAScrollLayer, CAScrollLayer *);
-TF_EC_MINSTANCE_INT(CAScrollLayer,CAScrollLayer *);
++( CAScrollLayer *)easyCoder:(CAScrollLayerEasyCoderBlock)block;
+-(CAScrollLayer *)easyCoder:(CAScrollLayerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,NSString *,scrollMode);
+-(CAScrollLayer  *(^)(NSString *  scrollMode))set_scrollMode;
 
 
 
 
 //superclass pros CALayer
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,CGPoint,position);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,double,zPosition);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,CGPoint,anchorPoint);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,double,anchorPointZ);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,CATransform3D,transform);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,BOOL,hidden);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,BOOL,doubleSided);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,BOOL,geometryFlipped);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,NSArray *,sublayers);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,CATransform3D,sublayerTransform);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,CALayer *,mask);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,BOOL,masksToBounds);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,NSString *,contentsGravity);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,double,contentsScale);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,NSString *,minificationFilter);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,NSString *,magnificationFilter);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,float,minificationFilterBias);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,BOOL,opaque);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,BOOL,needsDisplayOnBoundsChange);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,BOOL,drawsAsynchronously);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,unsigned int,edgeAntialiasingMask);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,BOOL,allowsEdgeAntialiasing);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,CGColorRef,backgroundColor);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,double,cornerRadius);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,double,borderWidth);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,CGColorRef,borderColor);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,float,opacity);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,BOOL,allowsGroupOpacity);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,NSArray *,filters);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,NSArray *,backgroundFilters);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,BOOL,shouldRasterize);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,double,rasterizationScale);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,CGColorRef,shadowColor);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,float,shadowOpacity);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,CGSize,shadowOffset);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,double,shadowRadius);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,CGPathRef,shadowPath);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,NSDictionary *,actions);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,NSString *,name);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,NSDictionary *,style);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,double,beginTime);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,double,duration);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,float,speed);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,double,timeOffset);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,float,repeatCount);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,double,repeatDuration);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,BOOL,autoreverses);
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,NSString *,fillMode);
+-(CAScrollLayer  *(^)(CGPoint  position))set_position;
+-(CAScrollLayer  *(^)(double  zPosition))set_zPosition;
+-(CAScrollLayer  *(^)(CGPoint  anchorPoint))set_anchorPoint;
+-(CAScrollLayer  *(^)(double  anchorPointZ))set_anchorPointZ;
+-(CAScrollLayer  *(^)(CATransform3D  transform))set_transform;
+-(CAScrollLayer  *(^)(BOOL  hidden))set_hidden;
+-(CAScrollLayer  *(^)(BOOL  doubleSided))set_doubleSided;
+-(CAScrollLayer  *(^)(BOOL  geometryFlipped))set_geometryFlipped;
+-(CAScrollLayer  *(^)(NSArray *  sublayers))set_sublayers;
+-(CAScrollLayer  *(^)(CATransform3D  sublayerTransform))set_sublayerTransform;
+-(CAScrollLayer  *(^)(CALayer *  mask))set_mask;
+-(CAScrollLayer  *(^)(BOOL  masksToBounds))set_masksToBounds;
+-(CAScrollLayer  *(^)(NSString *  contentsGravity))set_contentsGravity;
+-(CAScrollLayer  *(^)(double  contentsScale))set_contentsScale;
+-(CAScrollLayer  *(^)(NSString *  minificationFilter))set_minificationFilter;
+-(CAScrollLayer  *(^)(NSString *  magnificationFilter))set_magnificationFilter;
+-(CAScrollLayer  *(^)(float  minificationFilterBias))set_minificationFilterBias;
+-(CAScrollLayer  *(^)(BOOL  opaque))set_opaque;
+-(CAScrollLayer  *(^)(BOOL  needsDisplayOnBoundsChange))set_needsDisplayOnBoundsChange;
+-(CAScrollLayer  *(^)(BOOL  drawsAsynchronously))set_drawsAsynchronously;
+-(CAScrollLayer  *(^)(unsigned int  edgeAntialiasingMask))set_edgeAntialiasingMask;
+-(CAScrollLayer  *(^)(BOOL  allowsEdgeAntialiasing))set_allowsEdgeAntialiasing;
+-(CAScrollLayer  *(^)(CGColorRef  backgroundColor))set_backgroundColor;
+-(CAScrollLayer  *(^)(double  cornerRadius))set_cornerRadius;
+-(CAScrollLayer  *(^)(double  borderWidth))set_borderWidth;
+-(CAScrollLayer  *(^)(CGColorRef  borderColor))set_borderColor;
+-(CAScrollLayer  *(^)(float  opacity))set_opacity;
+-(CAScrollLayer  *(^)(BOOL  allowsGroupOpacity))set_allowsGroupOpacity;
+-(CAScrollLayer  *(^)(NSArray *  filters))set_filters;
+-(CAScrollLayer  *(^)(NSArray *  backgroundFilters))set_backgroundFilters;
+-(CAScrollLayer  *(^)(BOOL  shouldRasterize))set_shouldRasterize;
+-(CAScrollLayer  *(^)(double  rasterizationScale))set_rasterizationScale;
+-(CAScrollLayer  *(^)(CGColorRef  shadowColor))set_shadowColor;
+-(CAScrollLayer  *(^)(float  shadowOpacity))set_shadowOpacity;
+-(CAScrollLayer  *(^)(CGSize  shadowOffset))set_shadowOffset;
+-(CAScrollLayer  *(^)(double  shadowRadius))set_shadowRadius;
+-(CAScrollLayer  *(^)(CGPathRef  shadowPath))set_shadowPath;
+-(CAScrollLayer  *(^)(NSDictionary *  actions))set_actions;
+-(CAScrollLayer  *(^)(NSString *  name))set_name;
+-(CAScrollLayer  *(^)(NSDictionary *  style))set_style;
+-(CAScrollLayer  *(^)(double  beginTime))set_beginTime;
+-(CAScrollLayer  *(^)(double  duration))set_duration;
+-(CAScrollLayer  *(^)(float  speed))set_speed;
+-(CAScrollLayer  *(^)(double  timeOffset))set_timeOffset;
+-(CAScrollLayer  *(^)(float  repeatCount))set_repeatCount;
+-(CAScrollLayer  *(^)(double  repeatDuration))set_repeatDuration;
+-(CAScrollLayer  *(^)(BOOL  autoreverses))set_autoreverses;
+-(CAScrollLayer  *(^)(NSString *  fillMode))set_fillMode;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(CAScrollLayer ,long long,accessibilityNavigationStyle)
+-(CAScrollLayer  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(CAScrollLayer  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(CAScrollLayer  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(CAScrollLayer  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(CAScrollLayer  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(CAScrollLayer  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(CAScrollLayer  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(CAScrollLayer  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(CAScrollLayer  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(CAScrollLayer  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(CAScrollLayer  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(CAScrollLayer  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(CAScrollLayer  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(CAScrollLayer  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(CAScrollLayer);
+-(CAScrollLayer *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

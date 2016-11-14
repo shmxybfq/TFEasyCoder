@@ -10,53 +10,53 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(CATransition,CATransition *);
+typedef void(^CATransitionEasyCoderBlock) (CATransition * ins);
 
 @interface CATransition (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(CATransition, CATransition *);
-TF_EC_MINSTANCE_INT(CATransition,CATransition *);
++( CATransition *)easyCoder:(CATransitionEasyCoderBlock)block;
+-(CATransition *)easyCoder:(CATransitionEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(CATransition ,NSString *,type);
-TF_EC_CHAIN_PROP_INT(CATransition ,NSString *,subtype);
-TF_EC_CHAIN_PROP_INT(CATransition ,float,startProgress);
-TF_EC_CHAIN_PROP_INT(CATransition ,float,endProgress);
+-(CATransition  *(^)(NSString *  type))set_type;
+-(CATransition  *(^)(NSString *  subtype))set_subtype;
+-(CATransition  *(^)(float  startProgress))set_startProgress;
+-(CATransition  *(^)(float  endProgress))set_endProgress;
 
 
 
 
 //superclass pros CAAnimation
-TF_EC_CHAIN_PROP_INT(CATransition ,CAMediaTimingFunction *,timingFunction);
-TF_EC_CHAIN_PROP_INT(CATransition ,double,beginTime);
-TF_EC_CHAIN_PROP_INT(CATransition ,double,duration);
-TF_EC_CHAIN_PROP_INT(CATransition ,float,speed);
-TF_EC_CHAIN_PROP_INT(CATransition ,double,timeOffset);
-TF_EC_CHAIN_PROP_INT(CATransition ,float,repeatCount);
-TF_EC_CHAIN_PROP_INT(CATransition ,double,repeatDuration);
-TF_EC_CHAIN_PROP_INT(CATransition ,BOOL,autoreverses);
-TF_EC_CHAIN_PROP_INT(CATransition ,NSString *,fillMode);
+-(CATransition  *(^)(CAMediaTimingFunction *  timingFunction))set_timingFunction;
+-(CATransition  *(^)(double  beginTime))set_beginTime;
+-(CATransition  *(^)(double  duration))set_duration;
+-(CATransition  *(^)(float  speed))set_speed;
+-(CATransition  *(^)(double  timeOffset))set_timeOffset;
+-(CATransition  *(^)(float  repeatCount))set_repeatCount;
+-(CATransition  *(^)(double  repeatDuration))set_repeatDuration;
+-(CATransition  *(^)(BOOL  autoreverses))set_autoreverses;
+-(CATransition  *(^)(NSString *  fillMode))set_fillMode;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(CATransition ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(CATransition ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(CATransition ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(CATransition ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(CATransition ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(CATransition ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(CATransition ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(CATransition ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(CATransition ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(CATransition ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(CATransition ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(CATransition ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(CATransition ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(CATransition ,long long,accessibilityNavigationStyle)
+-(CATransition  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(CATransition  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(CATransition  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(CATransition  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(CATransition  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(CATransition  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(CATransition  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(CATransition  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(CATransition  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(CATransition  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(CATransition  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(CATransition  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(CATransition  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(CATransition  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(CATransition);
+-(CATransition *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

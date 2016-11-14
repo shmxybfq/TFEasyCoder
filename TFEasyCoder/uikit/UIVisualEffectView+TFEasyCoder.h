@@ -10,51 +10,51 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIVisualEffectView,UIVisualEffectView *);
+typedef void(^UIVisualEffectViewEasyCoderBlock) (UIVisualEffectView * ins);
 
 @interface UIVisualEffectView (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIVisualEffectView, UIVisualEffectView *);
-TF_EC_MINSTANCE_INT(UIVisualEffectView,UIVisualEffectView *);
++( UIVisualEffectView *)easyCoder:(UIVisualEffectViewEasyCoderBlock)block;
+-(UIVisualEffectView *)easyCoder:(UIVisualEffectViewEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,UIVisualEffect *,effect);
+-(UIVisualEffectView  *(^)(UIVisualEffect *  effect))set_effect;
 
 
 
 
 
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,UIColor *,backgroundColor)
+-(UIVisualEffectView  *(^)(UIView *  maskView))set_maskView;
+-(UIVisualEffectView  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UIVisualEffectView  *(^)(long long  tag))set_tag;
+-(UIVisualEffectView  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UIVisualEffectView  *(^)(CGPoint  center))set_center;
+-(UIVisualEffectView  *(^)(CGRect  frame))set_frame;
+-(UIVisualEffectView  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,NSUserActivity *,userActivity);
+-(UIVisualEffectView  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIVisualEffectView ,long long,accessibilityNavigationStyle)
+-(UIVisualEffectView  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIVisualEffectView  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIVisualEffectView  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIVisualEffectView  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIVisualEffectView  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIVisualEffectView  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIVisualEffectView  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIVisualEffectView  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIVisualEffectView  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIVisualEffectView  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIVisualEffectView  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIVisualEffectView  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIVisualEffectView  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIVisualEffectView  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIVisualEffectView);
+-(UIVisualEffectView *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -10,40 +10,40 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSHTTPCookieStorage,NSHTTPCookieStorage *);
+typedef void(^NSHTTPCookieStorageEasyCoderBlock) (NSHTTPCookieStorage * ins);
 
 @interface NSHTTPCookieStorage (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSHTTPCookieStorage, NSHTTPCookieStorage *);
-TF_EC_MINSTANCE_INT(NSHTTPCookieStorage,NSHTTPCookieStorage *);
++( NSHTTPCookieStorage *)easyCoder:(NSHTTPCookieStorageEasyCoderBlock)block;
+-(NSHTTPCookieStorage *)easyCoder:(NSHTTPCookieStorageEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSHTTPCookieStorage ,unsigned long long,cookieAcceptPolicy);
+-(NSHTTPCookieStorage  *(^)(unsigned long long  cookieAcceptPolicy))set_cookieAcceptPolicy;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSHTTPCookieStorage ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSHTTPCookieStorage ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSHTTPCookieStorage ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSHTTPCookieStorage ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSHTTPCookieStorage ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSHTTPCookieStorage ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSHTTPCookieStorage ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSHTTPCookieStorage ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSHTTPCookieStorage ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSHTTPCookieStorage ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSHTTPCookieStorage ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSHTTPCookieStorage ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSHTTPCookieStorage ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSHTTPCookieStorage ,long long,accessibilityNavigationStyle)
+-(NSHTTPCookieStorage  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSHTTPCookieStorage  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSHTTPCookieStorage  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSHTTPCookieStorage  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSHTTPCookieStorage  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSHTTPCookieStorage  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSHTTPCookieStorage  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSHTTPCookieStorage  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSHTTPCookieStorage  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSHTTPCookieStorage  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSHTTPCookieStorage  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSHTTPCookieStorage  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSHTTPCookieStorage  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSHTTPCookieStorage  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSHTTPCookieStorage);
+-(NSHTTPCookieStorage *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

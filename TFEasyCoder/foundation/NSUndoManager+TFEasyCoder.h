@@ -10,42 +10,42 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSUndoManager,NSUndoManager *);
+typedef void(^NSUndoManagerEasyCoderBlock) (NSUndoManager * ins);
 
 @interface NSUndoManager (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSUndoManager, NSUndoManager *);
-TF_EC_MINSTANCE_INT(NSUndoManager,NSUndoManager *);
++( NSUndoManager *)easyCoder:(NSUndoManagerEasyCoderBlock)block;
+-(NSUndoManager *)easyCoder:(NSUndoManagerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSUndoManager ,BOOL,groupsByEvent);
-TF_EC_CHAIN_PROP_INT(NSUndoManager ,unsigned long long,levelsOfUndo);
-TF_EC_CHAIN_PROP_INT(NSUndoManager ,NSArray *,runLoopModes);
+-(NSUndoManager  *(^)(BOOL  groupsByEvent))set_groupsByEvent;
+-(NSUndoManager  *(^)(unsigned long long  levelsOfUndo))set_levelsOfUndo;
+-(NSUndoManager  *(^)(NSArray *  runLoopModes))set_runLoopModes;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSUndoManager ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSUndoManager ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSUndoManager ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSUndoManager ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSUndoManager ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSUndoManager ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSUndoManager ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSUndoManager ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSUndoManager ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSUndoManager ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSUndoManager ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSUndoManager ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSUndoManager ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSUndoManager ,long long,accessibilityNavigationStyle)
+-(NSUndoManager  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSUndoManager  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSUndoManager  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSUndoManager  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSUndoManager  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSUndoManager  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSUndoManager  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSUndoManager  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSUndoManager  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSUndoManager  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSUndoManager  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSUndoManager  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSUndoManager  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSUndoManager  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSUndoManager);
+-(NSUndoManager *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -10,45 +10,45 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIPrintInfo,UIPrintInfo *);
+typedef void(^UIPrintInfoEasyCoderBlock) (UIPrintInfo * ins);
 
 @interface UIPrintInfo (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIPrintInfo, UIPrintInfo *);
-TF_EC_MINSTANCE_INT(UIPrintInfo,UIPrintInfo *);
++( UIPrintInfo *)easyCoder:(UIPrintInfoEasyCoderBlock)block;
+-(UIPrintInfo *)easyCoder:(UIPrintInfoEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIPrintInfo ,NSString *,printerID);
-TF_EC_CHAIN_PROP_INT(UIPrintInfo ,NSString *,jobName);
-TF_EC_CHAIN_PROP_INT(UIPrintInfo ,long long,outputType);
-TF_EC_CHAIN_PROP_INT(UIPrintInfo ,long long,orientation);
-TF_EC_CHAIN_PROP_INT(UIPrintInfo ,long long,duplex);
+-(UIPrintInfo  *(^)(NSString *  printerID))set_printerID;
+-(UIPrintInfo  *(^)(NSString *  jobName))set_jobName;
+-(UIPrintInfo  *(^)(long long  outputType))set_outputType;
+-(UIPrintInfo  *(^)(long long  orientation))set_orientation;
+-(UIPrintInfo  *(^)(long long  duplex))set_duplex;
 
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIPrintInfo ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIPrintInfo ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIPrintInfo ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIPrintInfo ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIPrintInfo ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIPrintInfo ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIPrintInfo ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIPrintInfo ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIPrintInfo ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIPrintInfo ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIPrintInfo ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIPrintInfo ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIPrintInfo ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIPrintInfo ,long long,accessibilityNavigationStyle)
+-(UIPrintInfo  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIPrintInfo  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIPrintInfo  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIPrintInfo  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIPrintInfo  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIPrintInfo  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIPrintInfo  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIPrintInfo  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIPrintInfo  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIPrintInfo  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIPrintInfo  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIPrintInfo  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIPrintInfo  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIPrintInfo  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIPrintInfo);
+-(UIPrintInfo *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

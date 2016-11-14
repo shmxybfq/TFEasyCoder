@@ -16,61 +16,340 @@
 
 @implementation UITabBarController (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(UITabBarController, UITabBarController *);
-TF_EC_MINSTANCE_IMP(UITabBarController, UITabBarController *);
++( UITabBarController *)easyCoder:(UITabBarControllerEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( UITabBarController *)ins);
+        }
+    }];
+}
+
+-( UITabBarController *)easyCoder:(UITabBarControllerEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
 
 
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,NSArray *,viewControllers)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,UIViewController *,selectedViewController)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,unsigned long long,selectedIndex)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,NSArray *,customizableViewControllers)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,id<UITabBarControllerDelegate>  ,delegate)
+
+-(UITabBarController  *(^)(NSArray *  viewControllers))set_viewControllers{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  viewControllers){
+        weakSelf.viewControllers = viewControllers;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(UIViewController *  selectedViewController))set_selectedViewController{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIViewController *  selectedViewController){
+        weakSelf.selectedViewController = selectedViewController;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(unsigned long long  selectedIndex))set_selectedIndex{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  selectedIndex){
+        weakSelf.selectedIndex = selectedIndex;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(NSArray *  customizableViewControllers))set_customizableViewControllers{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  customizableViewControllers){
+        weakSelf.customizableViewControllers = customizableViewControllers;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(id<UITabBarControllerDelegate>    delegate))set_delegate{
+    __weak typeof(self) weakSelf = self;
+    return ^(id<UITabBarControllerDelegate>    delegate){
+        weakSelf.delegate = delegate;
+        return weakSelf;
+    };
+}
+
 
 
 
 
 
 //superclass pros UIViewController
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,UITabBarItem *,tabBarItem)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,BOOL,hidesBottomBarWhenPushed)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,id<UIViewControllerTransitioningDelegate>  ,transitioningDelegate)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,UIView *,view)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,NSString *,title)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,BOOL,definesPresentationContext)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,BOOL,providesPresentationContextTransitionStyle)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,long long,modalTransitionStyle)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,long long,modalPresentationStyle)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,BOOL,modalPresentationCapturesStatusBarAppearance)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,BOOL,wantsFullScreenLayout)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,unsigned long long,edgesForExtendedLayout)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,BOOL,extendedLayoutIncludesOpaqueBars)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,BOOL,automaticallyAdjustsScrollViewInsets)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,CGSize,preferredContentSize)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,CGSize,contentSizeForViewInPopover)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,BOOL,modalInPopover)
+-(UITabBarController  *(^)(UITabBarItem *  tabBarItem))set_tabBarItem{
+    __weak typeof(self) weakSelf = self;
+    return ^(UITabBarItem *  tabBarItem){
+        weakSelf.tabBarItem = tabBarItem;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(BOOL  hidesBottomBarWhenPushed))set_hidesBottomBarWhenPushed{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  hidesBottomBarWhenPushed){
+        weakSelf.hidesBottomBarWhenPushed = hidesBottomBarWhenPushed;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(id<UIViewControllerTransitioningDelegate>    transitioningDelegate))set_transitioningDelegate{
+    __weak typeof(self) weakSelf = self;
+    return ^(id<UIViewControllerTransitioningDelegate>    transitioningDelegate){
+        weakSelf.transitioningDelegate = transitioningDelegate;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(UIView *  view))set_view{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIView *  view){
+        weakSelf.view = view;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(NSString *  title))set_title{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  title){
+        weakSelf.title = title;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(BOOL  definesPresentationContext))set_definesPresentationContext{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  definesPresentationContext){
+        weakSelf.definesPresentationContext = definesPresentationContext;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(BOOL  providesPresentationContextTransitionStyle))set_providesPresentationContextTransitionStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  providesPresentationContextTransitionStyle){
+        weakSelf.providesPresentationContextTransitionStyle = providesPresentationContextTransitionStyle;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(long long  modalTransitionStyle))set_modalTransitionStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  modalTransitionStyle){
+        weakSelf.modalTransitionStyle = modalTransitionStyle;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(long long  modalPresentationStyle))set_modalPresentationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  modalPresentationStyle){
+        weakSelf.modalPresentationStyle = modalPresentationStyle;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(BOOL  modalPresentationCapturesStatusBarAppearance))set_modalPresentationCapturesStatusBarAppearance{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  modalPresentationCapturesStatusBarAppearance){
+        weakSelf.modalPresentationCapturesStatusBarAppearance = modalPresentationCapturesStatusBarAppearance;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(BOOL  wantsFullScreenLayout))set_wantsFullScreenLayout{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  wantsFullScreenLayout){
+        weakSelf.wantsFullScreenLayout = wantsFullScreenLayout;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(unsigned long long  edgesForExtendedLayout))set_edgesForExtendedLayout{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  edgesForExtendedLayout){
+        weakSelf.edgesForExtendedLayout = edgesForExtendedLayout;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(BOOL  extendedLayoutIncludesOpaqueBars))set_extendedLayoutIncludesOpaqueBars{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  extendedLayoutIncludesOpaqueBars){
+        weakSelf.extendedLayoutIncludesOpaqueBars = extendedLayoutIncludesOpaqueBars;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(BOOL  automaticallyAdjustsScrollViewInsets))set_automaticallyAdjustsScrollViewInsets{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  automaticallyAdjustsScrollViewInsets){
+        weakSelf.automaticallyAdjustsScrollViewInsets = automaticallyAdjustsScrollViewInsets;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(CGSize  preferredContentSize))set_preferredContentSize{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGSize  preferredContentSize){
+        weakSelf.preferredContentSize = preferredContentSize;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(CGSize  contentSizeForViewInPopover))set_contentSizeForViewInPopover{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGSize  contentSizeForViewInPopover){
+        weakSelf.contentSizeForViewInPopover = contentSizeForViewInPopover;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(BOOL  modalInPopover))set_modalInPopover{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  modalInPopover){
+        weakSelf.modalInPopover = modalInPopover;
+        return weakSelf;
+    };
+}
+
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,NSUserActivity *,userActivity)
+-(UITabBarController  *(^)(NSUserActivity *  userActivity))set_userActivity{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSUserActivity *  userActivity){
+        weakSelf.userActivity = userActivity;
+        return weakSelf;
+    };
+}
+
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(UITabBarController ,long long,accessibilityNavigationStyle)
+-(UITabBarController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(UITabBarController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(UITabBarController);
+
+-(UITabBarController *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

@@ -10,41 +10,41 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(CADisplayLink,CADisplayLink *);
+typedef void(^CADisplayLinkEasyCoderBlock) (CADisplayLink * ins);
 
 @interface CADisplayLink (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(CADisplayLink, CADisplayLink *);
-TF_EC_MINSTANCE_INT(CADisplayLink,CADisplayLink *);
++( CADisplayLink *)easyCoder:(CADisplayLinkEasyCoderBlock)block;
+-(CADisplayLink *)easyCoder:(CADisplayLinkEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(CADisplayLink ,BOOL,paused);
-TF_EC_CHAIN_PROP_INT(CADisplayLink ,long long,frameInterval);
+-(CADisplayLink  *(^)(BOOL  paused))set_paused;
+-(CADisplayLink  *(^)(long long  frameInterval))set_frameInterval;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(CADisplayLink ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(CADisplayLink ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(CADisplayLink ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(CADisplayLink ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(CADisplayLink ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(CADisplayLink ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(CADisplayLink ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(CADisplayLink ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(CADisplayLink ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(CADisplayLink ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(CADisplayLink ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(CADisplayLink ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(CADisplayLink ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(CADisplayLink ,long long,accessibilityNavigationStyle)
+-(CADisplayLink  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(CADisplayLink  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(CADisplayLink  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(CADisplayLink  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(CADisplayLink  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(CADisplayLink  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(CADisplayLink  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(CADisplayLink  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(CADisplayLink  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(CADisplayLink  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(CADisplayLink  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(CADisplayLink  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(CADisplayLink  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(CADisplayLink  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(CADisplayLink);
+-(CADisplayLink *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

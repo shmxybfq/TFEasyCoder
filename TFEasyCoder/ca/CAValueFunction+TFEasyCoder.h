@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(CAValueFunction,CAValueFunction *);
+typedef void(^CAValueFunctionEasyCoderBlock) (CAValueFunction * ins);
 
 @interface CAValueFunction (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(CAValueFunction, CAValueFunction *);
-TF_EC_MINSTANCE_INT(CAValueFunction,CAValueFunction *);
++( CAValueFunction *)easyCoder:(CAValueFunctionEasyCoderBlock)block;
+-(CAValueFunction *)easyCoder:(CAValueFunctionEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(CAValueFunction,CAValueFunction *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(CAValueFunction ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(CAValueFunction ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(CAValueFunction ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(CAValueFunction ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(CAValueFunction ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(CAValueFunction ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(CAValueFunction ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(CAValueFunction ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(CAValueFunction ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(CAValueFunction ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(CAValueFunction ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(CAValueFunction ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(CAValueFunction ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(CAValueFunction ,long long,accessibilityNavigationStyle)
+-(CAValueFunction  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(CAValueFunction  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(CAValueFunction  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(CAValueFunction  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(CAValueFunction  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(CAValueFunction  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(CAValueFunction  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(CAValueFunction  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(CAValueFunction  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(CAValueFunction  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(CAValueFunction  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(CAValueFunction  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(CAValueFunction  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(CAValueFunction  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(CAValueFunction);
+-(CAValueFunction *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

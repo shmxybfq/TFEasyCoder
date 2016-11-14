@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UITextChecker,UITextChecker *);
+typedef void(^UITextCheckerEasyCoderBlock) (UITextChecker * ins);
 
 @interface UITextChecker (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UITextChecker, UITextChecker *);
-TF_EC_MINSTANCE_INT(UITextChecker,UITextChecker *);
++( UITextChecker *)easyCoder:(UITextCheckerEasyCoderBlock)block;
+-(UITextChecker *)easyCoder:(UITextCheckerEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(UITextChecker,UITextChecker *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UITextChecker ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UITextChecker ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UITextChecker ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UITextChecker ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UITextChecker ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UITextChecker ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UITextChecker ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UITextChecker ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UITextChecker ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UITextChecker ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UITextChecker ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UITextChecker ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UITextChecker ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UITextChecker ,long long,accessibilityNavigationStyle)
+-(UITextChecker  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UITextChecker  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UITextChecker  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UITextChecker  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UITextChecker  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UITextChecker  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UITextChecker  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UITextChecker  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UITextChecker  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UITextChecker  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UITextChecker  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UITextChecker  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UITextChecker  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UITextChecker  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UITextChecker);
+-(UITextChecker *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

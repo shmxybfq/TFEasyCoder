@@ -11,40 +11,193 @@
 
 @implementation NSLayoutConstraint (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(NSLayoutConstraint, NSLayoutConstraint *);
-TF_EC_MINSTANCE_IMP(NSLayoutConstraint, NSLayoutConstraint *);
++( NSLayoutConstraint *)easyCoder:(NSLayoutConstraintEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( NSLayoutConstraint *)ins);
+        }
+    }];
+}
+
+-( NSLayoutConstraint *)easyCoder:(NSLayoutConstraintEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
 
 
-TF_EC_CHAIN_PROP_IMP(NSLayoutConstraint ,float,priority)
-TF_EC_CHAIN_PROP_IMP(NSLayoutConstraint ,BOOL,shouldBeArchived)
-TF_EC_CHAIN_PROP_IMP(NSLayoutConstraint ,double,constant)
-TF_EC_CHAIN_PROP_IMP(NSLayoutConstraint ,BOOL,active)
-TF_EC_CHAIN_PROP_IMP(NSLayoutConstraint ,NSString *,identifier)
+
+-(NSLayoutConstraint  *(^)(float  priority))set_priority{
+    __weak typeof(self) weakSelf = self;
+    return ^(float  priority){
+        weakSelf.priority = priority;
+        return weakSelf;
+    };
+}
+
+-(NSLayoutConstraint  *(^)(BOOL  shouldBeArchived))set_shouldBeArchived{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldBeArchived){
+        weakSelf.shouldBeArchived = shouldBeArchived;
+        return weakSelf;
+    };
+}
+
+-(NSLayoutConstraint  *(^)(double  constant))set_constant{
+    __weak typeof(self) weakSelf = self;
+    return ^(double  constant){
+        weakSelf.constant = constant;
+        return weakSelf;
+    };
+}
+
+-(NSLayoutConstraint  *(^)(BOOL  active))set_active{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  active){
+        weakSelf.active = active;
+        return weakSelf;
+    };
+}
+
+-(NSLayoutConstraint  *(^)(NSString *  identifier))set_identifier{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  identifier){
+        weakSelf.identifier = identifier;
+        return weakSelf;
+    };
+}
+
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(NSLayoutConstraint ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(NSLayoutConstraint ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(NSLayoutConstraint ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(NSLayoutConstraint ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(NSLayoutConstraint ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(NSLayoutConstraint ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(NSLayoutConstraint ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(NSLayoutConstraint ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(NSLayoutConstraint ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(NSLayoutConstraint ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(NSLayoutConstraint ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(NSLayoutConstraint ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(NSLayoutConstraint ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(NSLayoutConstraint ,long long,accessibilityNavigationStyle)
+-(NSLayoutConstraint  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(NSLayoutConstraint  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(NSLayoutConstraint  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(NSLayoutConstraint  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(NSLayoutConstraint  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(NSLayoutConstraint  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(NSLayoutConstraint  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(NSLayoutConstraint  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(NSLayoutConstraint  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(NSLayoutConstraint  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(NSLayoutConstraint  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(NSLayoutConstraint  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(NSLayoutConstraint  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(NSLayoutConstraint  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSLayoutConstraint);
+
+-(NSLayoutConstraint *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

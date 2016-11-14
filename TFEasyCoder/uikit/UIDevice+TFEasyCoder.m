@@ -11,37 +11,169 @@
 
 @implementation UIDevice (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(UIDevice, UIDevice *);
-TF_EC_MINSTANCE_IMP(UIDevice, UIDevice *);
++( UIDevice *)easyCoder:(UIDeviceEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( UIDevice *)ins);
+        }
+    }];
+}
+
+-( UIDevice *)easyCoder:(UIDeviceEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
 
 
-TF_EC_CHAIN_PROP_IMP(UIDevice ,BOOL,batteryMonitoringEnabled)
-TF_EC_CHAIN_PROP_IMP(UIDevice ,BOOL,proximityMonitoringEnabled)
+
+-(UIDevice  *(^)(BOOL  batteryMonitoringEnabled))set_batteryMonitoringEnabled{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  batteryMonitoringEnabled){
+        weakSelf.batteryMonitoringEnabled = batteryMonitoringEnabled;
+        return weakSelf;
+    };
+}
+
+-(UIDevice  *(^)(BOOL  proximityMonitoringEnabled))set_proximityMonitoringEnabled{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  proximityMonitoringEnabled){
+        weakSelf.proximityMonitoringEnabled = proximityMonitoringEnabled;
+        return weakSelf;
+    };
+}
+
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(UIDevice ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(UIDevice ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(UIDevice ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(UIDevice ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(UIDevice ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(UIDevice ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(UIDevice ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(UIDevice ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(UIDevice ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(UIDevice ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(UIDevice ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(UIDevice ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(UIDevice ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(UIDevice ,long long,accessibilityNavigationStyle)
+-(UIDevice  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(UIDevice  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(UIDevice  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(UIDevice  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(UIDevice  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(UIDevice  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(UIDevice  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(UIDevice  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(UIDevice  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(UIDevice  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(UIDevice  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(UIDevice  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(UIDevice  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(UIDevice  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIDevice);
+
+-(UIDevice *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

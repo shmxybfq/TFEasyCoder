@@ -10,61 +10,61 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIDocumentMenuViewController,UIDocumentMenuViewController *);
+typedef void(^UIDocumentMenuViewControllerEasyCoderBlock) (UIDocumentMenuViewController * ins);
 
 @interface UIDocumentMenuViewController (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIDocumentMenuViewController, UIDocumentMenuViewController *);
-TF_EC_MINSTANCE_INT(UIDocumentMenuViewController,UIDocumentMenuViewController *);
++( UIDocumentMenuViewController *)easyCoder:(UIDocumentMenuViewControllerEasyCoderBlock)block;
+-(UIDocumentMenuViewController *)easyCoder:(UIDocumentMenuViewControllerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,id<UIDocumentMenuDelegate> ,delegate);
+-(UIDocumentMenuViewController  *(^)(id<UIDocumentMenuDelegate>   delegate))set_delegate;
 
 
 
 
 
 //superclass pros UIViewController
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,UITabBarItem *,tabBarItem)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,BOOL,hidesBottomBarWhenPushed)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,id<UIViewControllerTransitioningDelegate>  ,transitioningDelegate)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,UIView *,view)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,NSString *,title)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,BOOL,definesPresentationContext)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,BOOL,providesPresentationContextTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,long long,modalTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,long long,modalPresentationStyle)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,BOOL,modalPresentationCapturesStatusBarAppearance)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,BOOL,wantsFullScreenLayout)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,unsigned long long,edgesForExtendedLayout)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,BOOL,extendedLayoutIncludesOpaqueBars)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,BOOL,automaticallyAdjustsScrollViewInsets)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,CGSize,preferredContentSize)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,CGSize,contentSizeForViewInPopover)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,BOOL,modalInPopover)
+-(UIDocumentMenuViewController  *(^)(UITabBarItem *  tabBarItem))set_tabBarItem;
+-(UIDocumentMenuViewController  *(^)(BOOL  hidesBottomBarWhenPushed))set_hidesBottomBarWhenPushed;
+-(UIDocumentMenuViewController  *(^)(id<UIViewControllerTransitioningDelegate>    transitioningDelegate))set_transitioningDelegate;
+-(UIDocumentMenuViewController  *(^)(UIView *  view))set_view;
+-(UIDocumentMenuViewController  *(^)(NSString *  title))set_title;
+-(UIDocumentMenuViewController  *(^)(BOOL  definesPresentationContext))set_definesPresentationContext;
+-(UIDocumentMenuViewController  *(^)(BOOL  providesPresentationContextTransitionStyle))set_providesPresentationContextTransitionStyle;
+-(UIDocumentMenuViewController  *(^)(long long  modalTransitionStyle))set_modalTransitionStyle;
+-(UIDocumentMenuViewController  *(^)(long long  modalPresentationStyle))set_modalPresentationStyle;
+-(UIDocumentMenuViewController  *(^)(BOOL  modalPresentationCapturesStatusBarAppearance))set_modalPresentationCapturesStatusBarAppearance;
+-(UIDocumentMenuViewController  *(^)(BOOL  wantsFullScreenLayout))set_wantsFullScreenLayout;
+-(UIDocumentMenuViewController  *(^)(unsigned long long  edgesForExtendedLayout))set_edgesForExtendedLayout;
+-(UIDocumentMenuViewController  *(^)(BOOL  extendedLayoutIncludesOpaqueBars))set_extendedLayoutIncludesOpaqueBars;
+-(UIDocumentMenuViewController  *(^)(BOOL  automaticallyAdjustsScrollViewInsets))set_automaticallyAdjustsScrollViewInsets;
+-(UIDocumentMenuViewController  *(^)(CGSize  preferredContentSize))set_preferredContentSize;
+-(UIDocumentMenuViewController  *(^)(CGSize  contentSizeForViewInPopover))set_contentSizeForViewInPopover;
+-(UIDocumentMenuViewController  *(^)(BOOL  modalInPopover))set_modalInPopover;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,NSUserActivity *,userActivity);
+-(UIDocumentMenuViewController  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIDocumentMenuViewController ,long long,accessibilityNavigationStyle)
+-(UIDocumentMenuViewController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIDocumentMenuViewController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIDocumentMenuViewController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIDocumentMenuViewController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIDocumentMenuViewController  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIDocumentMenuViewController  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIDocumentMenuViewController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIDocumentMenuViewController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIDocumentMenuViewController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIDocumentMenuViewController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIDocumentMenuViewController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIDocumentMenuViewController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIDocumentMenuViewController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIDocumentMenuViewController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIDocumentMenuViewController);
+-(UIDocumentMenuViewController *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -10,17 +10,17 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIScreen,UIScreen *);
+typedef void(^UIScreenEasyCoderBlock) (UIScreen * ins);
 
 @interface UIScreen (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIScreen, UIScreen *);
-TF_EC_MINSTANCE_INT(UIScreen,UIScreen *);
++( UIScreen *)easyCoder:(UIScreenEasyCoderBlock)block;
+-(UIScreen *)easyCoder:(UIScreenEasyCoderBlock)block;
 
-TF_EC_CHAIN_PROP_INT(UIScreen ,UIScreenMode *,currentMode)
-TF_EC_CHAIN_PROP_INT(UIScreen ,long long,overscanCompensation)
-TF_EC_CHAIN_PROP_INT(UIScreen ,double,brightness)
-TF_EC_CHAIN_PROP_INT(UIScreen ,BOOL,wantsSoftwareDimming)
+-(UIScreen  *(^)(UIScreenMode *  currentMode))set_currentMode;
+-(UIScreen  *(^)(long long  overscanCompensation))set_overscanCompensation;
+-(UIScreen  *(^)(double  brightness))set_brightness;
+-(UIScreen  *(^)(BOOL  wantsSoftwareDimming))set_wantsSoftwareDimming;
 
 
 
@@ -28,26 +28,26 @@ TF_EC_CHAIN_PROP_INT(UIScreen ,BOOL,wantsSoftwareDimming)
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIScreen ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIScreen ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIScreen ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIScreen ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIScreen ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIScreen ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIScreen ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIScreen ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIScreen ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIScreen ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIScreen ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIScreen ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIScreen ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIScreen ,long long,accessibilityNavigationStyle)
+-(UIScreen  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIScreen  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIScreen  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIScreen  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIScreen  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIScreen  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIScreen  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIScreen  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIScreen  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIScreen  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIScreen  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIScreen  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIScreen  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIScreen  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIScreen);
+-(UIScreen *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

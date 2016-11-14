@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIFocusAnimationCoordinator,UIFocusAnimationCoordinator *);
+typedef void(^UIFocusAnimationCoordinatorEasyCoderBlock) (UIFocusAnimationCoordinator * ins);
 
 @interface UIFocusAnimationCoordinator (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIFocusAnimationCoordinator, UIFocusAnimationCoordinator *);
-TF_EC_MINSTANCE_INT(UIFocusAnimationCoordinator,UIFocusAnimationCoordinator *);
++( UIFocusAnimationCoordinator *)easyCoder:(UIFocusAnimationCoordinatorEasyCoderBlock)block;
+-(UIFocusAnimationCoordinator *)easyCoder:(UIFocusAnimationCoordinatorEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(UIFocusAnimationCoordinator,UIFocusAnimationCoordinator *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIFocusAnimationCoordinator ,long long,accessibilityNavigationStyle)
+-(UIFocusAnimationCoordinator  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIFocusAnimationCoordinator  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIFocusAnimationCoordinator  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIFocusAnimationCoordinator  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIFocusAnimationCoordinator  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIFocusAnimationCoordinator  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIFocusAnimationCoordinator  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIFocusAnimationCoordinator  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIFocusAnimationCoordinator  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIFocusAnimationCoordinator  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIFocusAnimationCoordinator  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIFocusAnimationCoordinator  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIFocusAnimationCoordinator  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIFocusAnimationCoordinator  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIFocusAnimationCoordinator);
+-(UIFocusAnimationCoordinator *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

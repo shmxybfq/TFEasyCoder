@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSURLSessionUploadTask,NSURLSessionUploadTask *);
+typedef void(^NSURLSessionUploadTaskEasyCoderBlock) (NSURLSessionUploadTask * ins);
 
 @interface NSURLSessionUploadTask (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSURLSessionUploadTask, NSURLSessionUploadTask *);
-TF_EC_MINSTANCE_INT(NSURLSessionUploadTask,NSURLSessionUploadTask *);
++( NSURLSessionUploadTask *)easyCoder:(NSURLSessionUploadTaskEasyCoderBlock)block;
+-(NSURLSessionUploadTask *)easyCoder:(NSURLSessionUploadTaskEasyCoderBlock)block;
 
 
 
@@ -24,29 +24,29 @@ TF_EC_MINSTANCE_INT(NSURLSessionUploadTask,NSURLSessionUploadTask *);
 
 //superclass pros NSURLSessionDataTask
 //superclass pros NSURLSessionTask
-TF_EC_CHAIN_PROP_INT(NSURLSessionUploadTask ,NSString *,taskDescription)
-TF_EC_CHAIN_PROP_INT(NSURLSessionUploadTask ,float,priority)
+-(NSURLSessionUploadTask  *(^)(NSString *  taskDescription))set_taskDescription;
+-(NSURLSessionUploadTask  *(^)(float  priority))set_priority;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSURLSessionUploadTask ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSURLSessionUploadTask ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSURLSessionUploadTask ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSURLSessionUploadTask ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSURLSessionUploadTask ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSURLSessionUploadTask ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSURLSessionUploadTask ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSURLSessionUploadTask ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSURLSessionUploadTask ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSURLSessionUploadTask ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSURLSessionUploadTask ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSURLSessionUploadTask ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSURLSessionUploadTask ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSURLSessionUploadTask ,long long,accessibilityNavigationStyle)
+-(NSURLSessionUploadTask  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSURLSessionUploadTask  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSURLSessionUploadTask  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSURLSessionUploadTask  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSURLSessionUploadTask  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSURLSessionUploadTask  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSURLSessionUploadTask  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSURLSessionUploadTask  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSURLSessionUploadTask  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSURLSessionUploadTask  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSURLSessionUploadTask  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSURLSessionUploadTask  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSURLSessionUploadTask  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSURLSessionUploadTask  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSURLSessionUploadTask);
+-(NSURLSessionUploadTask *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

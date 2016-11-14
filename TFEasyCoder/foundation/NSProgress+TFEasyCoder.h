@@ -10,47 +10,47 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSProgress,NSProgress *);
+typedef void(^NSProgressEasyCoderBlock) (NSProgress * ins);
 
 @interface NSProgress (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSProgress, NSProgress *);
-TF_EC_MINSTANCE_INT(NSProgress,NSProgress *);
++( NSProgress *)easyCoder:(NSProgressEasyCoderBlock)block;
+-(NSProgress *)easyCoder:(NSProgressEasyCoderBlock)block;
 
 
 
-TF_EC_CHAIN_PROP_INT(NSProgress ,long long,totalUnitCount);
-TF_EC_CHAIN_PROP_INT(NSProgress ,long long,completedUnitCount);
-TF_EC_CHAIN_PROP_INT(NSProgress ,NSString *,localizedDescription);
-TF_EC_CHAIN_PROP_INT(NSProgress ,NSString *,localizedAdditionalDescription);
-TF_EC_CHAIN_PROP_INT(NSProgress ,BOOL,cancellable);
-TF_EC_CHAIN_PROP_INT(NSProgress ,BOOL,pausable);
-TF_EC_CHAIN_PROP_INT(NSProgress ,NSString *,kind);
+-(NSProgress  *(^)(long long  totalUnitCount))set_totalUnitCount;
+-(NSProgress  *(^)(long long  completedUnitCount))set_completedUnitCount;
+-(NSProgress  *(^)(NSString *  localizedDescription))set_localizedDescription;
+-(NSProgress  *(^)(NSString *  localizedAdditionalDescription))set_localizedAdditionalDescription;
+-(NSProgress  *(^)(BOOL  cancellable))set_cancellable;
+-(NSProgress  *(^)(BOOL  pausable))set_pausable;
+-(NSProgress  *(^)(NSString *  kind))set_kind;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSProgress ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSProgress ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSProgress ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSProgress ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSProgress ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSProgress ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSProgress ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSProgress ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSProgress ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSProgress ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSProgress ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSProgress ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSProgress ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSProgress ,long long,accessibilityNavigationStyle)
+-(NSProgress  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSProgress  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSProgress  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSProgress  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSProgress  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSProgress  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSProgress  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSProgress  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSProgress  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSProgress  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSProgress  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSProgress  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSProgress  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSProgress  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSProgress);
+-(NSProgress *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

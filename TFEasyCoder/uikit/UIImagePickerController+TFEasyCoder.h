@@ -10,81 +10,81 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIImagePickerController,UIImagePickerController *);
+typedef void(^UIImagePickerControllerEasyCoderBlock) (UIImagePickerController * ins);
 
 @interface UIImagePickerController (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIImagePickerController, UIImagePickerController *);
-TF_EC_MINSTANCE_INT(UIImagePickerController,UIImagePickerController *);
++( UIImagePickerController *)easyCoder:(UIImagePickerControllerEasyCoderBlock)block;
+-(UIImagePickerController *)easyCoder:(UIImagePickerControllerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,id ,delegate)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,long long,sourceType);
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,NSArray *,mediaTypes);
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,allowsEditing);
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,allowsImageEditing);
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,double,videoMaximumDuration);
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,long long,videoQuality);
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,showsCameraControls);
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,UIView *,cameraOverlayView);
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,CGAffineTransform,cameraViewTransform);
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,long long,cameraCaptureMode);
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,long long,cameraDevice);
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,long long,cameraFlashMode);
+-(UIImagePickerController  *(^)(id   delegate))set_delegate;
+-(UIImagePickerController  *(^)(long long  sourceType))set_sourceType;
+-(UIImagePickerController  *(^)(NSArray *  mediaTypes))set_mediaTypes;
+-(UIImagePickerController  *(^)(BOOL  allowsEditing))set_allowsEditing;
+-(UIImagePickerController  *(^)(BOOL  allowsImageEditing))set_allowsImageEditing;
+-(UIImagePickerController  *(^)(double  videoMaximumDuration))set_videoMaximumDuration;
+-(UIImagePickerController  *(^)(long long  videoQuality))set_videoQuality;
+-(UIImagePickerController  *(^)(BOOL  showsCameraControls))set_showsCameraControls;
+-(UIImagePickerController  *(^)(UIView *  cameraOverlayView))set_cameraOverlayView;
+-(UIImagePickerController  *(^)(CGAffineTransform  cameraViewTransform))set_cameraViewTransform;
+-(UIImagePickerController  *(^)(long long  cameraCaptureMode))set_cameraCaptureMode;
+-(UIImagePickerController  *(^)(long long  cameraDevice))set_cameraDevice;
+-(UIImagePickerController  *(^)(long long  cameraFlashMode))set_cameraFlashMode;
 
 
 
 
 //superclass pros UINavigationController
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,NSArray *,viewControllers)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,navigationBarHidden)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,toolbarHidden)
+-(UIImagePickerController  *(^)(NSArray *  viewControllers))set_viewControllers;
+-(UIImagePickerController  *(^)(BOOL  navigationBarHidden))set_navigationBarHidden;
+-(UIImagePickerController  *(^)(BOOL  toolbarHidden))set_toolbarHidden;
 //TF_EC_CHAIN_PROP_INT(UIImagePickerController ,id<UINavigationControllerDelegate>  ,delegate)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,hidesBarsWhenKeyboardAppears)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,hidesBarsOnSwipe)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,hidesBarsWhenVerticallyCompact)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,hidesBarsOnTap)
+-(UIImagePickerController  *(^)(BOOL  hidesBarsWhenKeyboardAppears))set_hidesBarsWhenKeyboardAppears;
+-(UIImagePickerController  *(^)(BOOL  hidesBarsOnSwipe))set_hidesBarsOnSwipe;
+-(UIImagePickerController  *(^)(BOOL  hidesBarsWhenVerticallyCompact))set_hidesBarsWhenVerticallyCompact;
+-(UIImagePickerController  *(^)(BOOL  hidesBarsOnTap))set_hidesBarsOnTap;
 //superclass pros UIViewController
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,UITabBarItem *,tabBarItem)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,hidesBottomBarWhenPushed)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,id<UIViewControllerTransitioningDelegate>  ,transitioningDelegate)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,UIView *,view)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,NSString *,title)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,definesPresentationContext)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,providesPresentationContextTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,long long,modalTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,long long,modalPresentationStyle)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,modalPresentationCapturesStatusBarAppearance)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,wantsFullScreenLayout)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,unsigned long long,edgesForExtendedLayout)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,extendedLayoutIncludesOpaqueBars)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,automaticallyAdjustsScrollViewInsets)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,CGSize,preferredContentSize)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,CGSize,contentSizeForViewInPopover)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,modalInPopover)
+-(UIImagePickerController  *(^)(UITabBarItem *  tabBarItem))set_tabBarItem;
+-(UIImagePickerController  *(^)(BOOL  hidesBottomBarWhenPushed))set_hidesBottomBarWhenPushed;
+-(UIImagePickerController  *(^)(id<UIViewControllerTransitioningDelegate>    transitioningDelegate))set_transitioningDelegate;
+-(UIImagePickerController  *(^)(UIView *  view))set_view;
+-(UIImagePickerController  *(^)(NSString *  title))set_title;
+-(UIImagePickerController  *(^)(BOOL  definesPresentationContext))set_definesPresentationContext;
+-(UIImagePickerController  *(^)(BOOL  providesPresentationContextTransitionStyle))set_providesPresentationContextTransitionStyle;
+-(UIImagePickerController  *(^)(long long  modalTransitionStyle))set_modalTransitionStyle;
+-(UIImagePickerController  *(^)(long long  modalPresentationStyle))set_modalPresentationStyle;
+-(UIImagePickerController  *(^)(BOOL  modalPresentationCapturesStatusBarAppearance))set_modalPresentationCapturesStatusBarAppearance;
+-(UIImagePickerController  *(^)(BOOL  wantsFullScreenLayout))set_wantsFullScreenLayout;
+-(UIImagePickerController  *(^)(unsigned long long  edgesForExtendedLayout))set_edgesForExtendedLayout;
+-(UIImagePickerController  *(^)(BOOL  extendedLayoutIncludesOpaqueBars))set_extendedLayoutIncludesOpaqueBars;
+-(UIImagePickerController  *(^)(BOOL  automaticallyAdjustsScrollViewInsets))set_automaticallyAdjustsScrollViewInsets;
+-(UIImagePickerController  *(^)(CGSize  preferredContentSize))set_preferredContentSize;
+-(UIImagePickerController  *(^)(CGSize  contentSizeForViewInPopover))set_contentSizeForViewInPopover;
+-(UIImagePickerController  *(^)(BOOL  modalInPopover))set_modalInPopover;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,NSUserActivity *,userActivity);
+-(UIImagePickerController  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIImagePickerController ,long long,accessibilityNavigationStyle)
+-(UIImagePickerController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIImagePickerController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIImagePickerController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIImagePickerController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIImagePickerController  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIImagePickerController  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIImagePickerController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIImagePickerController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIImagePickerController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIImagePickerController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIImagePickerController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIImagePickerController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIImagePickerController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIImagePickerController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIImagePickerController);
+-(UIImagePickerController *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

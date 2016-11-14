@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIStoryboardUnwindSegueSource,UIStoryboardUnwindSegueSource *);
+typedef void(^UIStoryboardUnwindSegueSourceEasyCoderBlock) (UIStoryboardUnwindSegueSource * ins);
 
 @interface UIStoryboardUnwindSegueSource (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIStoryboardUnwindSegueSource, UIStoryboardUnwindSegueSource *);
-TF_EC_MINSTANCE_INT(UIStoryboardUnwindSegueSource,UIStoryboardUnwindSegueSource *);
++( UIStoryboardUnwindSegueSource *)easyCoder:(UIStoryboardUnwindSegueSourceEasyCoderBlock)block;
+-(UIStoryboardUnwindSegueSource *)easyCoder:(UIStoryboardUnwindSegueSourceEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(UIStoryboardUnwindSegueSource,UIStoryboardUnwindSegueSource 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIStoryboardUnwindSegueSource ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIStoryboardUnwindSegueSource ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIStoryboardUnwindSegueSource ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIStoryboardUnwindSegueSource ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIStoryboardUnwindSegueSource ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIStoryboardUnwindSegueSource ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIStoryboardUnwindSegueSource ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIStoryboardUnwindSegueSource ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIStoryboardUnwindSegueSource ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIStoryboardUnwindSegueSource ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIStoryboardUnwindSegueSource ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIStoryboardUnwindSegueSource ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIStoryboardUnwindSegueSource ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIStoryboardUnwindSegueSource ,long long,accessibilityNavigationStyle)
+-(UIStoryboardUnwindSegueSource  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIStoryboardUnwindSegueSource  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIStoryboardUnwindSegueSource  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIStoryboardUnwindSegueSource  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIStoryboardUnwindSegueSource  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIStoryboardUnwindSegueSource  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIStoryboardUnwindSegueSource  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIStoryboardUnwindSegueSource  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIStoryboardUnwindSegueSource  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIStoryboardUnwindSegueSource  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIStoryboardUnwindSegueSource  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIStoryboardUnwindSegueSource  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIStoryboardUnwindSegueSource  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIStoryboardUnwindSegueSource  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIStoryboardUnwindSegueSource);
+-(UIStoryboardUnwindSegueSource *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

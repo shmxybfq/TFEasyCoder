@@ -10,40 +10,40 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSShadow,NSShadow *);
+typedef void(^NSShadowEasyCoderBlock) (NSShadow * ins);
 
 @interface NSShadow (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSShadow, NSShadow *);
-TF_EC_MINSTANCE_INT(NSShadow,NSShadow *);
++( NSShadow *)easyCoder:(NSShadowEasyCoderBlock)block;
+-(NSShadow *)easyCoder:(NSShadowEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSShadow ,CGSize,shadowOffset);
+-(NSShadow  *(^)(CGSize  shadowOffset))set_shadowOffset;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSShadow ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSShadow ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSShadow ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSShadow ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSShadow ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSShadow ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSShadow ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSShadow ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSShadow ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSShadow ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSShadow ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSShadow ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSShadow ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSShadow ,long long,accessibilityNavigationStyle)
+-(NSShadow  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSShadow  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSShadow  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSShadow  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSShadow  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSShadow  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSShadow  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSShadow  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSShadow  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSShadow  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSShadow  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSShadow  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSShadow  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSShadow  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSShadow);
+-(NSShadow *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

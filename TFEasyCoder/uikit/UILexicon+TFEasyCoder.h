@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UILexicon,UILexicon *);
+typedef void(^UILexiconEasyCoderBlock) (UILexicon * ins);
 
 @interface UILexicon (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UILexicon, UILexicon *);
-TF_EC_MINSTANCE_INT(UILexicon,UILexicon *);
++( UILexicon *)easyCoder:(UILexiconEasyCoderBlock)block;
+-(UILexicon *)easyCoder:(UILexiconEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(UILexicon,UILexicon *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UILexicon ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UILexicon ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UILexicon ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UILexicon ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UILexicon ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UILexicon ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UILexicon ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UILexicon ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UILexicon ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UILexicon ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UILexicon ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UILexicon ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UILexicon ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UILexicon ,long long,accessibilityNavigationStyle)
+-(UILexicon  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UILexicon  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UILexicon  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UILexicon  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UILexicon  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UILexicon  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UILexicon  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UILexicon  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UILexicon  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UILexicon  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UILexicon  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UILexicon  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UILexicon  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UILexicon  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UILexicon);
+-(UILexicon *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

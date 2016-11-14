@@ -10,67 +10,67 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UISplitViewController,UISplitViewController *);
+typedef void(^UISplitViewControllerEasyCoderBlock) (UISplitViewController * ins);
 
 @interface UISplitViewController (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UISplitViewController, UISplitViewController *);
-TF_EC_MINSTANCE_INT(UISplitViewController,UISplitViewController *);
++( UISplitViewController *)easyCoder:(UISplitViewControllerEasyCoderBlock)block;
+-(UISplitViewController *)easyCoder:(UISplitViewControllerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,NSArray *,viewControllers);
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,id<UISplitViewControllerDelegate> ,delegate);
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,BOOL,presentsWithGesture);
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,long long,preferredDisplayMode);
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,double,preferredPrimaryColumnWidthFraction);
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,double,minimumPrimaryColumnWidth);
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,double,maximumPrimaryColumnWidth);
+-(UISplitViewController  *(^)(NSArray *  viewControllers))set_viewControllers;
+-(UISplitViewController  *(^)(id<UISplitViewControllerDelegate>   delegate))set_delegate;
+-(UISplitViewController  *(^)(BOOL  presentsWithGesture))set_presentsWithGesture;
+-(UISplitViewController  *(^)(long long  preferredDisplayMode))set_preferredDisplayMode;
+-(UISplitViewController  *(^)(double  preferredPrimaryColumnWidthFraction))set_preferredPrimaryColumnWidthFraction;
+-(UISplitViewController  *(^)(double  minimumPrimaryColumnWidth))set_minimumPrimaryColumnWidth;
+-(UISplitViewController  *(^)(double  maximumPrimaryColumnWidth))set_maximumPrimaryColumnWidth;
 
 
 
 
 
 //superclass pros UIViewController
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,UITabBarItem *,tabBarItem)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,BOOL,hidesBottomBarWhenPushed)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,id<UIViewControllerTransitioningDelegate>  ,transitioningDelegate)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,UIView *,view)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,NSString *,title)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,BOOL,definesPresentationContext)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,BOOL,providesPresentationContextTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,long long,modalTransitionStyle)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,long long,modalPresentationStyle)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,BOOL,modalPresentationCapturesStatusBarAppearance)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,BOOL,wantsFullScreenLayout)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,unsigned long long,edgesForExtendedLayout)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,BOOL,extendedLayoutIncludesOpaqueBars)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,BOOL,automaticallyAdjustsScrollViewInsets)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,CGSize,preferredContentSize)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,CGSize,contentSizeForViewInPopover)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,BOOL,modalInPopover)
+-(UISplitViewController  *(^)(UITabBarItem *  tabBarItem))set_tabBarItem;
+-(UISplitViewController  *(^)(BOOL  hidesBottomBarWhenPushed))set_hidesBottomBarWhenPushed;
+-(UISplitViewController  *(^)(id<UIViewControllerTransitioningDelegate>    transitioningDelegate))set_transitioningDelegate;
+-(UISplitViewController  *(^)(UIView *  view))set_view;
+-(UISplitViewController  *(^)(NSString *  title))set_title;
+-(UISplitViewController  *(^)(BOOL  definesPresentationContext))set_definesPresentationContext;
+-(UISplitViewController  *(^)(BOOL  providesPresentationContextTransitionStyle))set_providesPresentationContextTransitionStyle;
+-(UISplitViewController  *(^)(long long  modalTransitionStyle))set_modalTransitionStyle;
+-(UISplitViewController  *(^)(long long  modalPresentationStyle))set_modalPresentationStyle;
+-(UISplitViewController  *(^)(BOOL  modalPresentationCapturesStatusBarAppearance))set_modalPresentationCapturesStatusBarAppearance;
+-(UISplitViewController  *(^)(BOOL  wantsFullScreenLayout))set_wantsFullScreenLayout;
+-(UISplitViewController  *(^)(unsigned long long  edgesForExtendedLayout))set_edgesForExtendedLayout;
+-(UISplitViewController  *(^)(BOOL  extendedLayoutIncludesOpaqueBars))set_extendedLayoutIncludesOpaqueBars;
+-(UISplitViewController  *(^)(BOOL  automaticallyAdjustsScrollViewInsets))set_automaticallyAdjustsScrollViewInsets;
+-(UISplitViewController  *(^)(CGSize  preferredContentSize))set_preferredContentSize;
+-(UISplitViewController  *(^)(CGSize  contentSizeForViewInPopover))set_contentSizeForViewInPopover;
+-(UISplitViewController  *(^)(BOOL  modalInPopover))set_modalInPopover;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,NSUserActivity *,userActivity);
+-(UISplitViewController  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UISplitViewController ,long long,accessibilityNavigationStyle)
+-(UISplitViewController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UISplitViewController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UISplitViewController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UISplitViewController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UISplitViewController  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UISplitViewController  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UISplitViewController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UISplitViewController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UISplitViewController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UISplitViewController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UISplitViewController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UISplitViewController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UISplitViewController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UISplitViewController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UISplitViewController);
+-(UISplitViewController *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

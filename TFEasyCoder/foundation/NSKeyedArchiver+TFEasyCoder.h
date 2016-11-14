@@ -10,43 +10,43 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSKeyedArchiver,NSKeyedArchiver *);
+typedef void(^NSKeyedArchiverEasyCoderBlock) (NSKeyedArchiver * ins);
 
 @interface NSKeyedArchiver (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSKeyedArchiver, NSKeyedArchiver *);
-TF_EC_MINSTANCE_INT(NSKeyedArchiver,NSKeyedArchiver *);
++( NSKeyedArchiver *)easyCoder:(NSKeyedArchiverEasyCoderBlock)block;
+-(NSKeyedArchiver *)easyCoder:(NSKeyedArchiverEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSKeyedArchiver ,id<NSKeyedArchiverDelegate> ,delegate);
-TF_EC_CHAIN_PROP_INT(NSKeyedArchiver ,unsigned long long,outputFormat);
-TF_EC_CHAIN_PROP_INT(NSKeyedArchiver ,BOOL,requiresSecureCoding);
+-(NSKeyedArchiver  *(^)(id<NSKeyedArchiverDelegate>   delegate))set_delegate;
+-(NSKeyedArchiver  *(^)(unsigned long long  outputFormat))set_outputFormat;
+-(NSKeyedArchiver  *(^)(BOOL  requiresSecureCoding))set_requiresSecureCoding;
 
 
 
 
 //superclass pros NSCoder
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSKeyedArchiver ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSKeyedArchiver ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSKeyedArchiver ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSKeyedArchiver ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSKeyedArchiver ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSKeyedArchiver ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSKeyedArchiver ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSKeyedArchiver ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSKeyedArchiver ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSKeyedArchiver ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSKeyedArchiver ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSKeyedArchiver ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSKeyedArchiver ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSKeyedArchiver ,long long,accessibilityNavigationStyle)
+-(NSKeyedArchiver  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSKeyedArchiver  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSKeyedArchiver  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSKeyedArchiver  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSKeyedArchiver  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSKeyedArchiver  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSKeyedArchiver  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSKeyedArchiver  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSKeyedArchiver  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSKeyedArchiver  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSKeyedArchiver  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSKeyedArchiver  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSKeyedArchiver  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSKeyedArchiver  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSKeyedArchiver);
+-(NSKeyedArchiver *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -10,40 +10,40 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIPrinterPickerController,UIPrinterPickerController *);
+typedef void(^UIPrinterPickerControllerEasyCoderBlock) (UIPrinterPickerController * ins);
 
 @interface UIPrinterPickerController (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIPrinterPickerController, UIPrinterPickerController *);
-TF_EC_MINSTANCE_INT(UIPrinterPickerController,UIPrinterPickerController *);
++( UIPrinterPickerController *)easyCoder:(UIPrinterPickerControllerEasyCoderBlock)block;
+-(UIPrinterPickerController *)easyCoder:(UIPrinterPickerControllerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIPrinterPickerController ,id<UIPrinterPickerControllerDelegate> ,delegate);
+-(UIPrinterPickerController  *(^)(id<UIPrinterPickerControllerDelegate>   delegate))set_delegate;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIPrinterPickerController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIPrinterPickerController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIPrinterPickerController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIPrinterPickerController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIPrinterPickerController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIPrinterPickerController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIPrinterPickerController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIPrinterPickerController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIPrinterPickerController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIPrinterPickerController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIPrinterPickerController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIPrinterPickerController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIPrinterPickerController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIPrinterPickerController ,long long,accessibilityNavigationStyle)
+-(UIPrinterPickerController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIPrinterPickerController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIPrinterPickerController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIPrinterPickerController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIPrinterPickerController  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIPrinterPickerController  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIPrinterPickerController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIPrinterPickerController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIPrinterPickerController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIPrinterPickerController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIPrinterPickerController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIPrinterPickerController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIPrinterPickerController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIPrinterPickerController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIPrinterPickerController);
+-(UIPrinterPickerController *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

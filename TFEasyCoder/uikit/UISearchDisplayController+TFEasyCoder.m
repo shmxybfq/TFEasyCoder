@@ -11,42 +11,202 @@
 
 @implementation UISearchDisplayController (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(UISearchDisplayController, UISearchDisplayController *);
-TF_EC_MINSTANCE_IMP(UISearchDisplayController, UISearchDisplayController *);
++( UISearchDisplayController *)easyCoder:(UISearchDisplayControllerEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( UISearchDisplayController *)ins);
+        }
+    }];
+}
+
+-( UISearchDisplayController *)easyCoder:(UISearchDisplayControllerEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
 
 
-TF_EC_CHAIN_PROP_IMP(UISearchDisplayController ,id<UISearchDisplayDelegate>  ,delegate)
-TF_EC_CHAIN_PROP_IMP(UISearchDisplayController ,BOOL,active)
-TF_EC_CHAIN_PROP_IMP(UISearchDisplayController ,id<UITableViewDataSource>  ,searchResultsDataSource)
-TF_EC_CHAIN_PROP_IMP(UISearchDisplayController ,id<UITableViewDelegate>  ,searchResultsDelegate)
-TF_EC_CHAIN_PROP_IMP(UISearchDisplayController ,NSString *,searchResultsTitle)
-TF_EC_CHAIN_PROP_IMP(UISearchDisplayController ,BOOL,displaysSearchBarInNavigationBar)
+
+-(UISearchDisplayController  *(^)(id<UISearchDisplayDelegate>    delegate))set_delegate{
+    __weak typeof(self) weakSelf = self;
+    return ^(id<UISearchDisplayDelegate>    delegate){
+        weakSelf.delegate = delegate;
+        return weakSelf;
+    };
+}
+
+-(UISearchDisplayController  *(^)(BOOL  active))set_active{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  active){
+        weakSelf.active = active;
+        return weakSelf;
+    };
+}
+
+-(UISearchDisplayController  *(^)(id<UITableViewDataSource>    searchResultsDataSource))set_searchResultsDataSource{
+    __weak typeof(self) weakSelf = self;
+    return ^(id<UITableViewDataSource>    searchResultsDataSource){
+        weakSelf.searchResultsDataSource = searchResultsDataSource;
+        return weakSelf;
+    };
+}
+
+-(UISearchDisplayController  *(^)(id<UITableViewDelegate>    searchResultsDelegate))set_searchResultsDelegate{
+    __weak typeof(self) weakSelf = self;
+    return ^(id<UITableViewDelegate>    searchResultsDelegate){
+        weakSelf.searchResultsDelegate = searchResultsDelegate;
+        return weakSelf;
+    };
+}
+
+-(UISearchDisplayController  *(^)(NSString *  searchResultsTitle))set_searchResultsTitle{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  searchResultsTitle){
+        weakSelf.searchResultsTitle = searchResultsTitle;
+        return weakSelf;
+    };
+}
+
+-(UISearchDisplayController  *(^)(BOOL  displaysSearchBarInNavigationBar))set_displaysSearchBarInNavigationBar{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  displaysSearchBarInNavigationBar){
+        weakSelf.displaysSearchBarInNavigationBar = displaysSearchBarInNavigationBar;
+        return weakSelf;
+    };
+}
+
 
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(UISearchDisplayController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(UISearchDisplayController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(UISearchDisplayController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(UISearchDisplayController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(UISearchDisplayController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(UISearchDisplayController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(UISearchDisplayController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(UISearchDisplayController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(UISearchDisplayController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(UISearchDisplayController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(UISearchDisplayController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(UISearchDisplayController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(UISearchDisplayController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(UISearchDisplayController ,long long,accessibilityNavigationStyle)
+-(UISearchDisplayController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(UISearchDisplayController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(UISearchDisplayController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(UISearchDisplayController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(UISearchDisplayController  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(UISearchDisplayController  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(UISearchDisplayController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(UISearchDisplayController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(UISearchDisplayController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(UISearchDisplayController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(UISearchDisplayController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(UISearchDisplayController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(UISearchDisplayController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(UISearchDisplayController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(UISearchDisplayController);
+
+-(UISearchDisplayController *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

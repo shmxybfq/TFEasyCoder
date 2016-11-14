@@ -10,92 +10,92 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(CATiledLayer,CATiledLayer *);
+typedef void(^CATiledLayerEasyCoderBlock) (CATiledLayer * ins);
 
 @interface CATiledLayer (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(CATiledLayer, CATiledLayer *);
-TF_EC_MINSTANCE_INT(CATiledLayer,CATiledLayer *);
++( CATiledLayer *)easyCoder:(CATiledLayerEasyCoderBlock)block;
+-(CATiledLayer *)easyCoder:(CATiledLayerEasyCoderBlock)block;
 
 
 
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,unsigned long long,levelsOfDetail);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,unsigned long long,levelsOfDetailBias);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,CGSize,tileSize);
+-(CATiledLayer  *(^)(unsigned long long  levelsOfDetail))set_levelsOfDetail;
+-(CATiledLayer  *(^)(unsigned long long  levelsOfDetailBias))set_levelsOfDetailBias;
+-(CATiledLayer  *(^)(CGSize  tileSize))set_tileSize;
 
 
 
 
 //superclass pros CALayer
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,CGPoint,position);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,double,zPosition);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,CGPoint,anchorPoint);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,double,anchorPointZ);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,CATransform3D,transform);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,BOOL,hidden);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,BOOL,doubleSided);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,BOOL,geometryFlipped);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,NSArray *,sublayers);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,CATransform3D,sublayerTransform);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,CALayer *,mask);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,BOOL,masksToBounds);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,NSString *,contentsGravity);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,double,contentsScale);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,NSString *,minificationFilter);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,NSString *,magnificationFilter);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,float,minificationFilterBias);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,BOOL,opaque);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,BOOL,needsDisplayOnBoundsChange);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,BOOL,drawsAsynchronously);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,unsigned int,edgeAntialiasingMask);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,BOOL,allowsEdgeAntialiasing);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,CGColorRef,backgroundColor);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,double,cornerRadius);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,double,borderWidth);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,CGColorRef,borderColor);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,float,opacity);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,BOOL,allowsGroupOpacity);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,NSArray *,filters);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,NSArray *,backgroundFilters);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,BOOL,shouldRasterize);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,double,rasterizationScale);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,CGColorRef,shadowColor);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,float,shadowOpacity);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,CGSize,shadowOffset);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,double,shadowRadius);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,CGPathRef,shadowPath);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,NSDictionary *,actions);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,NSString *,name);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,NSDictionary *,style);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,double,beginTime);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,double,duration);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,float,speed);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,double,timeOffset);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,float,repeatCount);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,double,repeatDuration);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,BOOL,autoreverses);
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,NSString *,fillMode);
+-(CATiledLayer  *(^)(CGPoint  position))set_position;
+-(CATiledLayer  *(^)(double  zPosition))set_zPosition;
+-(CATiledLayer  *(^)(CGPoint  anchorPoint))set_anchorPoint;
+-(CATiledLayer  *(^)(double  anchorPointZ))set_anchorPointZ;
+-(CATiledLayer  *(^)(CATransform3D  transform))set_transform;
+-(CATiledLayer  *(^)(BOOL  hidden))set_hidden;
+-(CATiledLayer  *(^)(BOOL  doubleSided))set_doubleSided;
+-(CATiledLayer  *(^)(BOOL  geometryFlipped))set_geometryFlipped;
+-(CATiledLayer  *(^)(NSArray *  sublayers))set_sublayers;
+-(CATiledLayer  *(^)(CATransform3D  sublayerTransform))set_sublayerTransform;
+-(CATiledLayer  *(^)(CALayer *  mask))set_mask;
+-(CATiledLayer  *(^)(BOOL  masksToBounds))set_masksToBounds;
+-(CATiledLayer  *(^)(NSString *  contentsGravity))set_contentsGravity;
+-(CATiledLayer  *(^)(double  contentsScale))set_contentsScale;
+-(CATiledLayer  *(^)(NSString *  minificationFilter))set_minificationFilter;
+-(CATiledLayer  *(^)(NSString *  magnificationFilter))set_magnificationFilter;
+-(CATiledLayer  *(^)(float  minificationFilterBias))set_minificationFilterBias;
+-(CATiledLayer  *(^)(BOOL  opaque))set_opaque;
+-(CATiledLayer  *(^)(BOOL  needsDisplayOnBoundsChange))set_needsDisplayOnBoundsChange;
+-(CATiledLayer  *(^)(BOOL  drawsAsynchronously))set_drawsAsynchronously;
+-(CATiledLayer  *(^)(unsigned int  edgeAntialiasingMask))set_edgeAntialiasingMask;
+-(CATiledLayer  *(^)(BOOL  allowsEdgeAntialiasing))set_allowsEdgeAntialiasing;
+-(CATiledLayer  *(^)(CGColorRef  backgroundColor))set_backgroundColor;
+-(CATiledLayer  *(^)(double  cornerRadius))set_cornerRadius;
+-(CATiledLayer  *(^)(double  borderWidth))set_borderWidth;
+-(CATiledLayer  *(^)(CGColorRef  borderColor))set_borderColor;
+-(CATiledLayer  *(^)(float  opacity))set_opacity;
+-(CATiledLayer  *(^)(BOOL  allowsGroupOpacity))set_allowsGroupOpacity;
+-(CATiledLayer  *(^)(NSArray *  filters))set_filters;
+-(CATiledLayer  *(^)(NSArray *  backgroundFilters))set_backgroundFilters;
+-(CATiledLayer  *(^)(BOOL  shouldRasterize))set_shouldRasterize;
+-(CATiledLayer  *(^)(double  rasterizationScale))set_rasterizationScale;
+-(CATiledLayer  *(^)(CGColorRef  shadowColor))set_shadowColor;
+-(CATiledLayer  *(^)(float  shadowOpacity))set_shadowOpacity;
+-(CATiledLayer  *(^)(CGSize  shadowOffset))set_shadowOffset;
+-(CATiledLayer  *(^)(double  shadowRadius))set_shadowRadius;
+-(CATiledLayer  *(^)(CGPathRef  shadowPath))set_shadowPath;
+-(CATiledLayer  *(^)(NSDictionary *  actions))set_actions;
+-(CATiledLayer  *(^)(NSString *  name))set_name;
+-(CATiledLayer  *(^)(NSDictionary *  style))set_style;
+-(CATiledLayer  *(^)(double  beginTime))set_beginTime;
+-(CATiledLayer  *(^)(double  duration))set_duration;
+-(CATiledLayer  *(^)(float  speed))set_speed;
+-(CATiledLayer  *(^)(double  timeOffset))set_timeOffset;
+-(CATiledLayer  *(^)(float  repeatCount))set_repeatCount;
+-(CATiledLayer  *(^)(double  repeatDuration))set_repeatDuration;
+-(CATiledLayer  *(^)(BOOL  autoreverses))set_autoreverses;
+-(CATiledLayer  *(^)(NSString *  fillMode))set_fillMode;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(CATiledLayer ,long long,accessibilityNavigationStyle)
+-(CATiledLayer  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(CATiledLayer  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(CATiledLayer  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(CATiledLayer  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(CATiledLayer  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(CATiledLayer  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(CATiledLayer  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(CATiledLayer  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(CATiledLayer  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(CATiledLayer  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(CATiledLayer  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(CATiledLayer  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(CATiledLayer  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(CATiledLayer  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(CATiledLayer);
+-(CATiledLayer *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

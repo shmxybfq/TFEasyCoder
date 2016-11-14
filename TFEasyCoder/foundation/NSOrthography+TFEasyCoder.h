@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSOrthography,NSOrthography *);
+typedef void(^NSOrthographyEasyCoderBlock) (NSOrthography * ins);
 
 @interface NSOrthography (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSOrthography, NSOrthography *);
-TF_EC_MINSTANCE_INT(NSOrthography,NSOrthography *);
++( NSOrthography *)easyCoder:(NSOrthographyEasyCoderBlock)block;
+-(NSOrthography *)easyCoder:(NSOrthographyEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(NSOrthography,NSOrthography *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSOrthography ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSOrthography ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSOrthography ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSOrthography ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSOrthography ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSOrthography ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSOrthography ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSOrthography ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSOrthography ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSOrthography ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSOrthography ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSOrthography ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSOrthography ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSOrthography ,long long,accessibilityNavigationStyle)
+-(NSOrthography  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSOrthography  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSOrthography  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSOrthography  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSOrthography  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSOrthography  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSOrthography  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSOrthography  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSOrthography  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSOrthography  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSOrthography  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSOrthography  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSOrthography  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSOrthography  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSOrthography);
+-(NSOrthography *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

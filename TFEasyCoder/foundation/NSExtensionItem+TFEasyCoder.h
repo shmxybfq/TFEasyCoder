@@ -10,43 +10,43 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSExtensionItem,NSExtensionItem *);
+typedef void(^NSExtensionItemEasyCoderBlock) (NSExtensionItem * ins);
 
 @interface NSExtensionItem (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSExtensionItem, NSExtensionItem *);
-TF_EC_MINSTANCE_INT(NSExtensionItem,NSExtensionItem *);
++( NSExtensionItem *)easyCoder:(NSExtensionItemEasyCoderBlock)block;
+-(NSExtensionItem *)easyCoder:(NSExtensionItemEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(NSExtensionItem ,NSAttributedString *,attributedTitle);
-TF_EC_CHAIN_PROP_INT(NSExtensionItem ,NSAttributedString *,attributedContentText);
-TF_EC_CHAIN_PROP_INT(NSExtensionItem ,NSArray *,attachments);
-TF_EC_CHAIN_PROP_INT(NSExtensionItem ,NSDictionary *,userInfo);
+-(NSExtensionItem  *(^)(NSAttributedString *  attributedTitle))set_attributedTitle;
+-(NSExtensionItem  *(^)(NSAttributedString *  attributedContentText))set_attributedContentText;
+-(NSExtensionItem  *(^)(NSArray *  attachments))set_attachments;
+-(NSExtensionItem  *(^)(NSDictionary *  userInfo))set_userInfo;
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSExtensionItem ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSExtensionItem ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSExtensionItem ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSExtensionItem ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSExtensionItem ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSExtensionItem ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSExtensionItem ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSExtensionItem ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSExtensionItem ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSExtensionItem ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSExtensionItem ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSExtensionItem ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSExtensionItem ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSExtensionItem ,long long,accessibilityNavigationStyle)
+-(NSExtensionItem  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSExtensionItem  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSExtensionItem  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSExtensionItem  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSExtensionItem  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSExtensionItem  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSExtensionItem  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSExtensionItem  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSExtensionItem  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSExtensionItem  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSExtensionItem  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSExtensionItem  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSExtensionItem  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSExtensionItem  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSExtensionItem);
+-(NSExtensionItem *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

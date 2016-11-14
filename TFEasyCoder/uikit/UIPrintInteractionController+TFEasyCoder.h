@@ -10,46 +10,46 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIPrintInteractionController,UIPrintInteractionController *);
+typedef void(^UIPrintInteractionControllerEasyCoderBlock) (UIPrintInteractionController * ins);
 
 @interface UIPrintInteractionController (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIPrintInteractionController, UIPrintInteractionController *);
-TF_EC_MINSTANCE_INT(UIPrintInteractionController,UIPrintInteractionController *);
++( UIPrintInteractionController *)easyCoder:(UIPrintInteractionControllerEasyCoderBlock)block;
+-(UIPrintInteractionController *)easyCoder:(UIPrintInteractionControllerEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,UIPrintInfo *,printInfo);
-TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,id<UIPrintInteractionControllerDelegate> ,delegate);
-TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,BOOL,showsNumberOfCopies);
-TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,BOOL,showsPaperSelectionForLoadedPapers);
-TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,UIPrintFormatter *,printFormatter);
-TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,NSArray *,printingItems);
+-(UIPrintInteractionController  *(^)(UIPrintInfo *  printInfo))set_printInfo;
+-(UIPrintInteractionController  *(^)(id<UIPrintInteractionControllerDelegate>   delegate))set_delegate;
+-(UIPrintInteractionController  *(^)(BOOL  showsNumberOfCopies))set_showsNumberOfCopies;
+-(UIPrintInteractionController  *(^)(BOOL  showsPaperSelectionForLoadedPapers))set_showsPaperSelectionForLoadedPapers;
+-(UIPrintInteractionController  *(^)(UIPrintFormatter *  printFormatter))set_printFormatter;
+-(UIPrintInteractionController  *(^)(NSArray *  printingItems))set_printingItems;
 
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIPrintInteractionController ,long long,accessibilityNavigationStyle)
+-(UIPrintInteractionController  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIPrintInteractionController  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIPrintInteractionController  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIPrintInteractionController  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIPrintInteractionController  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIPrintInteractionController  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIPrintInteractionController  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIPrintInteractionController  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIPrintInteractionController  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIPrintInteractionController  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIPrintInteractionController  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIPrintInteractionController  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIPrintInteractionController  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIPrintInteractionController  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIPrintInteractionController);
+-(UIPrintInteractionController *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

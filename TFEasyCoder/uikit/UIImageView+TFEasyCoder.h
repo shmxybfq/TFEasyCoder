@@ -10,59 +10,59 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UIImageView,UIImageView *);
+typedef void(^UIImageViewEasyCoderBlock) (UIImageView * ins);
 
 @interface UIImageView (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UIImageView, UIImageView *);
-TF_EC_MINSTANCE_INT(UIImageView,UIImageView *);
++( UIImageView *)easyCoder:(UIImageViewEasyCoderBlock)block;
+-(UIImageView *)easyCoder:(UIImageViewEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UIImageView ,UIImage *,image);
-TF_EC_CHAIN_PROP_INT(UIImageView ,UIImage *,highlightedImage);
+-(UIImageView  *(^)(UIImage *  image))set_image;
+-(UIImageView  *(^)(UIImage *  highlightedImage))set_highlightedImage;
 //TF_EC_CHAIN_PROP_INT(UIImageView ,BOOL,userInteractionEnabled);
-TF_EC_CHAIN_PROP_INT(UIImageView ,BOOL,highlighted);
-TF_EC_CHAIN_PROP_INT(UIImageView ,NSArray *,animationImages);
-TF_EC_CHAIN_PROP_INT(UIImageView ,NSArray *,highlightedAnimationImages);
-TF_EC_CHAIN_PROP_INT(UIImageView ,double,animationDuration);
-TF_EC_CHAIN_PROP_INT(UIImageView ,long long,animationRepeatCount);
-TF_EC_CHAIN_PROP_INT(UIImageView ,UIColor *,tintColor);
+-(UIImageView  *(^)(BOOL  highlighted))set_highlighted;
+-(UIImageView  *(^)(NSArray *  animationImages))set_animationImages;
+-(UIImageView  *(^)(NSArray *  highlightedAnimationImages))set_highlightedAnimationImages;
+-(UIImageView  *(^)(double  animationDuration))set_animationDuration;
+-(UIImageView  *(^)(long long  animationRepeatCount))set_animationRepeatCount;
+-(UIImageView  *(^)(UIColor *  tintColor))set_tintColor;
 
 
 
 
 
 //superclass pros UIView
-TF_EC_CHAIN_PROP_INT(UIImageView ,UIView *,maskView)
-TF_EC_CHAIN_PROP_INT(UIImageView ,BOOL,userInteractionEnabled)
-TF_EC_CHAIN_PROP_INT(UIImageView ,long long,tag)
-TF_EC_CHAIN_PROP_INT(UIImageView ,long long,semanticContentAttribute)
-TF_EC_CHAIN_PROP_INT(UIImageView ,CGPoint,center)
-TF_EC_CHAIN_PROP_INT(UIImageView ,CGRect,frame)
-TF_EC_CHAIN_PROP_INT(UIImageView ,UIColor *,backgroundColor)
+-(UIImageView  *(^)(UIView *  maskView))set_maskView;
+-(UIImageView  *(^)(BOOL  userInteractionEnabled))set_userInteractionEnabled;
+-(UIImageView  *(^)(long long  tag))set_tag;
+-(UIImageView  *(^)(long long  semanticContentAttribute))set_semanticContentAttribute;
+-(UIImageView  *(^)(CGPoint  center))set_center;
+-(UIImageView  *(^)(CGRect  frame))set_frame;
+-(UIImageView  *(^)(UIColor *  backgroundColor))set_backgroundColor;
 //superclass pros UIResponder
-TF_EC_CHAIN_PROP_INT(UIImageView ,NSUserActivity *,userActivity);
+-(UIImageView  *(^)(NSUserActivity *  userActivity))set_userActivity;
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UIImageView ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UIImageView ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UIImageView ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UIImageView ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UIImageView ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UIImageView ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UIImageView ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UIImageView ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UIImageView ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UIImageView ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UIImageView ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UIImageView ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UIImageView ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UIImageView ,long long,accessibilityNavigationStyle)
+-(UIImageView  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UIImageView  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UIImageView  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UIImageView  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UIImageView  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UIImageView  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UIImageView  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UIImageView  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UIImageView  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UIImageView  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UIImageView  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UIImageView  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UIImageView  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UIImageView  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UIImageView);
+-(UIImageView *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

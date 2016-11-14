@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(NSUbiquitousKeyValueStore,NSUbiquitousKeyValueStore *);
+typedef void(^NSUbiquitousKeyValueStoreEasyCoderBlock) (NSUbiquitousKeyValueStore * ins);
 
 @interface NSUbiquitousKeyValueStore (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(NSUbiquitousKeyValueStore, NSUbiquitousKeyValueStore *);
-TF_EC_MINSTANCE_INT(NSUbiquitousKeyValueStore,NSUbiquitousKeyValueStore *);
++( NSUbiquitousKeyValueStore *)easyCoder:(NSUbiquitousKeyValueStoreEasyCoderBlock)block;
+-(NSUbiquitousKeyValueStore *)easyCoder:(NSUbiquitousKeyValueStoreEasyCoderBlock)block;
 
 
 
@@ -23,26 +23,26 @@ TF_EC_MINSTANCE_INT(NSUbiquitousKeyValueStore,NSUbiquitousKeyValueStore *);
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(NSUbiquitousKeyValueStore ,long long,accessibilityNavigationStyle)
+-(NSUbiquitousKeyValueStore  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(NSUbiquitousKeyValueStore  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(NSUbiquitousKeyValueStore  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(NSUbiquitousKeyValueStore  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(NSUbiquitousKeyValueStore  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(NSUbiquitousKeyValueStore  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(NSUbiquitousKeyValueStore  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(NSUbiquitousKeyValueStore  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(NSUbiquitousKeyValueStore  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(NSUbiquitousKeyValueStore  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(NSUbiquitousKeyValueStore  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(NSUbiquitousKeyValueStore  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(NSUbiquitousKeyValueStore  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(NSUbiquitousKeyValueStore  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(NSUbiquitousKeyValueStore);
+-(NSUbiquitousKeyValueStore *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

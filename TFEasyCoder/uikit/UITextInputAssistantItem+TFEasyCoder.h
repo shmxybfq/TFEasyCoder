@@ -10,43 +10,43 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UITextInputAssistantItem,UITextInputAssistantItem *);
+typedef void(^UITextInputAssistantItemEasyCoderBlock) (UITextInputAssistantItem * ins);
 
 @interface UITextInputAssistantItem (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UITextInputAssistantItem, UITextInputAssistantItem *);
-TF_EC_MINSTANCE_INT(UITextInputAssistantItem,UITextInputAssistantItem *);
++( UITextInputAssistantItem *)easyCoder:(UITextInputAssistantItemEasyCoderBlock)block;
+-(UITextInputAssistantItem *)easyCoder:(UITextInputAssistantItemEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,BOOL,allowsHidingShortcuts);
-TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,NSArray *,leadingBarButtonGroups);
-TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,NSArray *,trailingBarButtonGroups);
+-(UITextInputAssistantItem  *(^)(BOOL  allowsHidingShortcuts))set_allowsHidingShortcuts;
+-(UITextInputAssistantItem  *(^)(NSArray *  leadingBarButtonGroups))set_leadingBarButtonGroups;
+-(UITextInputAssistantItem  *(^)(NSArray *  trailingBarButtonGroups))set_trailingBarButtonGroups;
 
 
 
 
 
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UITextInputAssistantItem ,long long,accessibilityNavigationStyle)
+-(UITextInputAssistantItem  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UITextInputAssistantItem  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UITextInputAssistantItem  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UITextInputAssistantItem  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UITextInputAssistantItem  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UITextInputAssistantItem  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UITextInputAssistantItem  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UITextInputAssistantItem  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UITextInputAssistantItem  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UITextInputAssistantItem  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UITextInputAssistantItem  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UITextInputAssistantItem  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UITextInputAssistantItem  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UITextInputAssistantItem  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UITextInputAssistantItem);
+-(UITextInputAssistantItem *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end

@@ -11,8 +11,22 @@
 
 @implementation UIInterpolatingMotionEffect (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(UIInterpolatingMotionEffect, UIInterpolatingMotionEffect *);
-TF_EC_MINSTANCE_IMP(UIInterpolatingMotionEffect, UIInterpolatingMotionEffect *);
++( UIInterpolatingMotionEffect *)easyCoder:(UIInterpolatingMotionEffectEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( UIInterpolatingMotionEffect *)ins);
+        }
+    }];
+}
+
+-( UIInterpolatingMotionEffect *)easyCoder:(UIInterpolatingMotionEffectEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
+
 
 
 
@@ -21,26 +35,130 @@ TF_EC_MINSTANCE_IMP(UIInterpolatingMotionEffect, UIInterpolatingMotionEffect *);
 
 //superclass pros UIMotionEffect
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(UIInterpolatingMotionEffect ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(UIInterpolatingMotionEffect ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(UIInterpolatingMotionEffect ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(UIInterpolatingMotionEffect ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(UIInterpolatingMotionEffect ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(UIInterpolatingMotionEffect ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(UIInterpolatingMotionEffect ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(UIInterpolatingMotionEffect ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(UIInterpolatingMotionEffect ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(UIInterpolatingMotionEffect ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(UIInterpolatingMotionEffect ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(UIInterpolatingMotionEffect ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(UIInterpolatingMotionEffect ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(UIInterpolatingMotionEffect ,long long,accessibilityNavigationStyle)
+-(UIInterpolatingMotionEffect  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(UIInterpolatingMotionEffect  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(UIInterpolatingMotionEffect  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(UIInterpolatingMotionEffect  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(UIInterpolatingMotionEffect  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(UIInterpolatingMotionEffect  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(UIInterpolatingMotionEffect  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(UIInterpolatingMotionEffect  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(UIInterpolatingMotionEffect  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(UIInterpolatingMotionEffect  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(UIInterpolatingMotionEffect  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(UIInterpolatingMotionEffect  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(UIInterpolatingMotionEffect  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(UIInterpolatingMotionEffect  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIInterpolatingMotionEffect);
+
+-(UIInterpolatingMotionEffect *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

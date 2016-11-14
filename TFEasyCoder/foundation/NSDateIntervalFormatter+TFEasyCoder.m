@@ -11,42 +11,202 @@
 
 @implementation NSDateIntervalFormatter (TFEasyCoder)
 
-TF_EC_MSTATIC_IMP(NSDateIntervalFormatter, NSDateIntervalFormatter *);
-TF_EC_MINSTANCE_IMP(NSDateIntervalFormatter, NSDateIntervalFormatter *);
++( NSDateIntervalFormatter *)easyCoder:(NSDateIntervalFormatterEasyCoderBlock)block{
+    return [NSObject tf_execute:[self class] back:^(id ins) {
+        if (block) {
+            block(( NSDateIntervalFormatter *)ins);
+        }
+    }];
+}
+
+-( NSDateIntervalFormatter *)easyCoder:(NSDateIntervalFormatterEasyCoderBlock)block{
+    if (block) {
+        __weak typeof(self) weakSelf = self;
+        block(weakSelf);
+    }
+    return self;
+}
 
 
-TF_EC_CHAIN_PROP_IMP(NSDateIntervalFormatter ,NSLocale *,locale)
-TF_EC_CHAIN_PROP_IMP(NSDateIntervalFormatter ,NSCalendar *,calendar)
-TF_EC_CHAIN_PROP_IMP(NSDateIntervalFormatter ,NSTimeZone *,timeZone)
-TF_EC_CHAIN_PROP_IMP(NSDateIntervalFormatter ,NSString *,dateTemplate)
-TF_EC_CHAIN_PROP_IMP(NSDateIntervalFormatter ,unsigned long long,dateStyle)
-TF_EC_CHAIN_PROP_IMP(NSDateIntervalFormatter ,unsigned long long,timeStyle)
+
+-(NSDateIntervalFormatter  *(^)(NSLocale *  locale))set_locale{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSLocale *  locale){
+        weakSelf.locale = locale;
+        return weakSelf;
+    };
+}
+
+-(NSDateIntervalFormatter  *(^)(NSCalendar *  calendar))set_calendar{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSCalendar *  calendar){
+        weakSelf.calendar = calendar;
+        return weakSelf;
+    };
+}
+
+-(NSDateIntervalFormatter  *(^)(NSTimeZone *  timeZone))set_timeZone{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSTimeZone *  timeZone){
+        weakSelf.timeZone = timeZone;
+        return weakSelf;
+    };
+}
+
+-(NSDateIntervalFormatter  *(^)(NSString *  dateTemplate))set_dateTemplate{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  dateTemplate){
+        weakSelf.dateTemplate = dateTemplate;
+        return weakSelf;
+    };
+}
+
+-(NSDateIntervalFormatter  *(^)(unsigned long long  dateStyle))set_dateStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  dateStyle){
+        weakSelf.dateStyle = dateStyle;
+        return weakSelf;
+    };
+}
+
+-(NSDateIntervalFormatter  *(^)(unsigned long long  timeStyle))set_timeStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  timeStyle){
+        weakSelf.timeStyle = timeStyle;
+        return weakSelf;
+    };
+}
+
 
 
 
 
 //superclass pros NSFormatter
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_IMP(NSDateIntervalFormatter ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_IMP(NSDateIntervalFormatter ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_IMP(NSDateIntervalFormatter ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_IMP(NSDateIntervalFormatter ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_IMP(NSDateIntervalFormatter ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_IMP(NSDateIntervalFormatter ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_IMP(NSDateIntervalFormatter ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_IMP(NSDateIntervalFormatter ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_IMP(NSDateIntervalFormatter ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_IMP(NSDateIntervalFormatter ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_IMP(NSDateIntervalFormatter ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_IMP(NSDateIntervalFormatter ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_IMP(NSDateIntervalFormatter ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_IMP(NSDateIntervalFormatter ,long long,accessibilityNavigationStyle)
+-(NSDateIntervalFormatter  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityElements){
+        weakSelf.accessibilityElements = accessibilityElements;
+        return weakSelf;
+    };
+}
+
+-(NSDateIntervalFormatter  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSArray *  accessibilityCustomActions){
+        weakSelf.accessibilityCustomActions = accessibilityCustomActions;
+        return weakSelf;
+    };
+}
+
+-(NSDateIntervalFormatter  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  isAccessibilityElement){
+        weakSelf.isAccessibilityElement = isAccessibilityElement;
+        return weakSelf;
+    };
+}
+
+-(NSDateIntervalFormatter  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLabel){
+        weakSelf.accessibilityLabel = accessibilityLabel;
+        return weakSelf;
+    };
+}
+
+-(NSDateIntervalFormatter  *(^)(NSString *  accessibilityHint))set_accessibilityHint{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityHint){
+        weakSelf.accessibilityHint = accessibilityHint;
+        return weakSelf;
+    };
+}
+
+-(NSDateIntervalFormatter  *(^)(NSString *  accessibilityValue))set_accessibilityValue{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityValue){
+        weakSelf.accessibilityValue = accessibilityValue;
+        return weakSelf;
+    };
+}
+
+-(NSDateIntervalFormatter  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits{
+    __weak typeof(self) weakSelf = self;
+    return ^(unsigned long long  accessibilityTraits){
+        weakSelf.accessibilityTraits = accessibilityTraits;
+        return weakSelf;
+    };
+}
+
+-(NSDateIntervalFormatter  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath{
+    __weak typeof(self) weakSelf = self;
+    return ^(UIBezierPath *  accessibilityPath){
+        weakSelf.accessibilityPath = accessibilityPath;
+        return weakSelf;
+    };
+}
+
+-(NSDateIntervalFormatter  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint{
+    __weak typeof(self) weakSelf = self;
+    return ^(CGPoint  accessibilityActivationPoint){
+        weakSelf.accessibilityActivationPoint = accessibilityActivationPoint;
+        return weakSelf;
+    };
+}
+
+-(NSDateIntervalFormatter  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage{
+    __weak typeof(self) weakSelf = self;
+    return ^(NSString *  accessibilityLanguage){
+        weakSelf.accessibilityLanguage = accessibilityLanguage;
+        return weakSelf;
+    };
+}
+
+-(NSDateIntervalFormatter  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityElementsHidden){
+        weakSelf.accessibilityElementsHidden = accessibilityElementsHidden;
+        return weakSelf;
+    };
+}
+
+-(NSDateIntervalFormatter  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  accessibilityViewIsModal){
+        weakSelf.accessibilityViewIsModal = accessibilityViewIsModal;
+        return weakSelf;
+    };
+}
+
+-(NSDateIntervalFormatter  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren{
+    __weak typeof(self) weakSelf = self;
+    return ^(BOOL  shouldGroupAccessibilityChildren){
+        weakSelf.shouldGroupAccessibilityChildren = shouldGroupAccessibilityChildren;
+        return weakSelf;
+    };
+}
+
+-(NSDateIntervalFormatter  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle{
+    __weak typeof(self) weakSelf = self;
+    return ^(long long  accessibilityNavigationStyle){
+        weakSelf.accessibilityNavigationStyle = accessibilityNavigationStyle;
+        return weakSelf;
+    };
+}
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSDateIntervalFormatter);
+
+-(NSDateIntervalFormatter *(^)(id value,NSString *key))set_ValueKey{
+    __weak typeof(self) weakSelf = self;
+    return ^(id value,NSString *key){
+        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
+        return weakSelf;
+    };
+}
 
 
 @end

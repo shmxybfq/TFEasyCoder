@@ -10,43 +10,43 @@
 #import <Foundation/Foundation.h>
 #import "TFEasyCoderConst.h"
 
-TF_EC_BLOCK(UICollisionBehavior,UICollisionBehavior *);
+typedef void(^UICollisionBehaviorEasyCoderBlock) (UICollisionBehavior * ins);
 
 @interface UICollisionBehavior (TFEasyCoder)
 
-TF_EC_MSTATIC_INT(UICollisionBehavior, UICollisionBehavior *);
-TF_EC_MINSTANCE_INT(UICollisionBehavior,UICollisionBehavior *);
++( UICollisionBehavior *)easyCoder:(UICollisionBehaviorEasyCoderBlock)block;
+-(UICollisionBehavior *)easyCoder:(UICollisionBehaviorEasyCoderBlock)block;
 
 
-TF_EC_CHAIN_PROP_INT(UICollisionBehavior ,unsigned long long,collisionMode);
-TF_EC_CHAIN_PROP_INT(UICollisionBehavior ,BOOL,translatesReferenceBoundsIntoBoundary);
-TF_EC_CHAIN_PROP_INT(UICollisionBehavior ,id<UICollisionBehaviorDelegate> ,collisionDelegate);
+-(UICollisionBehavior  *(^)(unsigned long long  collisionMode))set_collisionMode;
+-(UICollisionBehavior  *(^)(BOOL  translatesReferenceBoundsIntoBoundary))set_translatesReferenceBoundsIntoBoundary;
+-(UICollisionBehavior  *(^)(id<UICollisionBehaviorDelegate>   collisionDelegate))set_collisionDelegate;
 
 
 
 
 //superclass pros UIDynamicBehavior
 //superclass pros NSObject
-TF_EC_CHAIN_PROP_INT(UICollisionBehavior ,NSArray *,accessibilityElements)
-TF_EC_CHAIN_PROP_INT(UICollisionBehavior ,NSArray *,accessibilityCustomActions)
-TF_EC_CHAIN_PROP_INT(UICollisionBehavior ,BOOL,isAccessibilityElement)
-TF_EC_CHAIN_PROP_INT(UICollisionBehavior ,NSString *,accessibilityLabel)
-TF_EC_CHAIN_PROP_INT(UICollisionBehavior ,NSString *,accessibilityHint)
-TF_EC_CHAIN_PROP_INT(UICollisionBehavior ,NSString *,accessibilityValue)
-TF_EC_CHAIN_PROP_INT(UICollisionBehavior ,unsigned long long,accessibilityTraits)
-TF_EC_CHAIN_PROP_INT(UICollisionBehavior ,UIBezierPath *,accessibilityPath)
-TF_EC_CHAIN_PROP_INT(UICollisionBehavior ,CGPoint,accessibilityActivationPoint)
-TF_EC_CHAIN_PROP_INT(UICollisionBehavior ,NSString *,accessibilityLanguage)
-TF_EC_CHAIN_PROP_INT(UICollisionBehavior ,BOOL,accessibilityElementsHidden)
-TF_EC_CHAIN_PROP_INT(UICollisionBehavior ,BOOL,accessibilityViewIsModal)
-TF_EC_CHAIN_PROP_INT(UICollisionBehavior ,BOOL,shouldGroupAccessibilityChildren)
-TF_EC_CHAIN_PROP_INT(UICollisionBehavior ,long long,accessibilityNavigationStyle)
+-(UICollisionBehavior  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
+-(UICollisionBehavior  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
+-(UICollisionBehavior  *(^)(BOOL  isAccessibilityElement))set_isAccessibilityElement;
+-(UICollisionBehavior  *(^)(NSString *  accessibilityLabel))set_accessibilityLabel;
+-(UICollisionBehavior  *(^)(NSString *  accessibilityHint))set_accessibilityHint;
+-(UICollisionBehavior  *(^)(NSString *  accessibilityValue))set_accessibilityValue;
+-(UICollisionBehavior  *(^)(unsigned long long  accessibilityTraits))set_accessibilityTraits;
+-(UICollisionBehavior  *(^)(UIBezierPath *  accessibilityPath))set_accessibilityPath;
+-(UICollisionBehavior  *(^)(CGPoint  accessibilityActivationPoint))set_accessibilityActivationPoint;
+-(UICollisionBehavior  *(^)(NSString *  accessibilityLanguage))set_accessibilityLanguage;
+-(UICollisionBehavior  *(^)(BOOL  accessibilityElementsHidden))set_accessibilityElementsHidden;
+-(UICollisionBehavior  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
+-(UICollisionBehavior  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
+-(UICollisionBehavior  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
 
 
 
-TF_EC_CHAIN_VALUEKYE_INT(UICollisionBehavior);
+-(UICollisionBehavior *(^)(id value,NSString *key))set_ValueKey;
 
 
 @end
