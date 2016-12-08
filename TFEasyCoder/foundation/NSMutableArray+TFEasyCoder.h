@@ -46,4 +46,5 @@ typedef void(^NSMutableArrayEasyCoderBlock) (NSMutableArray * ins);
 -(NSMutableArray *(^)(id value,NSString *key))set_ValueKey;
 
 
+
 @end

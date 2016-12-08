@@ -34,7 +34,6 @@ TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     kdeclare_weakself;
     
     /**
@@ -116,7 +115,6 @@ TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
 }
 
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.dataSource.count;
@@ -128,6 +126,30 @@ TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
     return cell;
 }
 
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    /**
+     *  打印当前已存在的视图tree(UI开发工具)
+     */
+    [self.view logSubviews:^NSArray *{
+        /**
+         *  这里返回你要在视图tree里面显示的视图属性,返回nil则默认打印 @[@"frame",@"hidden",@"backgroundColor",@"userInteractionEnabled"]
+         */
+        return @[@"frame",@"hidden",@"backgroundColor",@"userInteractionEnabled"];
+    }];
+    
+    /**
+     *  为当前已存在的视图tree 加上随机颜色(UI开发工具)
+     */
+    [self.view allSubviewsBackgroundColorRandom:0.5];
+    
+    
+    /**
+     *  获取view的所有子视图(UI开发工具)
+     */
+    NSArray *allSubviews = [self.view allSubviews];
+    NSLog(@"\n\n\n\n\n%@\n\n\n\n\n",allSubviews);
+    
+}
 
 @end

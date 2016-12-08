@@ -11,6 +11,16 @@
 
 @implementation UIButton (TFEasyCoder)
 
+-(void)addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents{
+    [self addTarget:target action:@selector(vvv) forControlEvents:controlEvents];
+}
+
+
+-(void)vvv{
+
+}
+
+
 +( UIButton *)easyCoder:(UIButtonEasyCoderBlock)block{
     return [NSObject tf_execute:[self class] back:^(id ins) {
         if (block) {

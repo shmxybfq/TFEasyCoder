@@ -19,9 +19,6 @@ typedef void(^NSArrayEasyCoderBlock) (NSArray * ins);
 
 
 
-
-
-
 //superclass pros NSObject
 -(NSArray  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
 -(NSArray  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
@@ -37,9 +34,6 @@ typedef void(^NSArrayEasyCoderBlock) (NSArray * ins);
 -(NSArray  *(^)(BOOL  accessibilityViewIsModal))set_accessibilityViewIsModal;
 -(NSArray  *(^)(BOOL  shouldGroupAccessibilityChildren))set_shouldGroupAccessibilityChildren;
 -(NSArray  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
-
-
-
 
 
 -(NSArray *(^)(id value,NSString *key))set_ValueKey;

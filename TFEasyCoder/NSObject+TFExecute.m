@@ -13,135 +13,10 @@
 
 
 
-
-#define TF_ASSOCIATED_KYE(__CLASS, __PROPERTY) static char Lazy_Associated_Key_##__CLASS##_##__PROPERTY
-
-#define TF_ASSOCIATED_OBJC_GET(__CLASS, __PROPERTY)\
-TF_ASSOCIATED_KYE(__CLASS, __PROPERTY);\
--(__CLASS *)__PROPERTY{return objc_getAssociatedObject(self, &Lazy_Associated_Key_##__CLASS##_##__PROPERTY);}
-
-#define TF_ASSOCIATED_OBJC_SET(__CLASS, __PROPERTY)\
-objc_setAssociatedObject(self,&Lazy_Associated_Key_##__CLASS##_##__PROPERTY,__PROPERTY,OBJC_ASSOCIATION_RETAIN);
-
-
-@implementation UIView (TFDevHelper)
-
-TF_ASSOCIATED_OBJC_GET(UIView,                      lgview)
-TF_ASSOCIATED_OBJC_GET(NSMutableDictionary,   lgproperties)
-TF_ASSOCIATED_OBJC_GET(NSMutableArray,          lgsubviews)
-TF_ASSOCIATED_OBJC_GET(NSMutableDictionary,     lgdesCache)
--(void)setLgview:(UIView *)lgview{TF_ASSOCIATED_OBJC_SET(UIView,lgview);}
--(void)setLgproperties:(NSMutableDictionary *)lgproperties{TF_ASSOCIATED_OBJC_SET(NSMutableDictionary,lgproperties);}
--(void)setLgsubviews:(NSMutableArray *)lgsubviews{TF_ASSOCIATED_OBJC_SET(NSMutableArray,lgsubviews);}
--(void)setLgdesCache:(NSMutableDictionary *)lgdesCache{TF_ASSOCIATED_OBJC_SET(NSMutableDictionary,lgdesCache);}
-
-
-/**
- *  打印所有子视图
- *
- *  @param block 回传需要打印的view的属性名列表
- *
- *  @return 打印信息字典
- */
--(NSDictionary *)logSubviews:(LGTreeBlock)block
-{
-    NSArray *ps = block();
-    if (ps == nil || ps.count == 0) {
-        ps = @[@"frame",@"hidden",@"backgroundColor",@"userInteractionEnabled"];
-    }
-    TFLogTreeContainer *container = [TFLogTreeContainer initWithView:self];
-    NSDictionary *log = [container descriptionContainer:ps];NSLog(@"\n\n\n\n\n%@\n\n\n\n\n",log);
-    return log;
-}
-
-/**
- *  获取所有子视图
- *
- *  @return 所有子视图数组
- */
--(NSMutableArray *)allSubviews
-{
-    NSMutableArray *allSubviews = [NSMutableArray array];
-    NSMutableArray *curSubviews = [NSMutableArray arrayWithArray:self.subviews];
-    while (curSubviews.count!=0) {
-        NSMutableArray *temSubviews = [NSMutableArray array];
-        for (UIView *view in curSubviews) {
-            [allSubviews addObject:view];
-            if (view.subviews.count !=0) {
-                [temSubviews addObjectsFromArray:view.subviews];
-            }
-        }
-        [curSubviews removeAllObjects];
-        [curSubviews addObjectsFromArray:temSubviews];
-    }
-    [allSubviews addObject:self];
-    return allSubviews;
-}
-
-/**
- *  设置所有子视图为随机色
- *
- *  @param alpha 随机色透明度
- *
- *  @return 所有的子视图
- */
--(NSMutableArray *)allSubviewsBackgroundColorRandom:(CGFloat)alpha
-{
-    NSMutableArray *allSubviews = [self allSubviews];
-    for (UIView *view in allSubviews) {
-        if ([view respondsToSelector:@selector(setBackgroundColor:)]) {
-            view.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0
-                                                   green:arc4random()%255/255.0
-                                                    blue:arc4random()%255/255.0
-                                                   alpha:alpha];
-        }
-    }
-    return allSubviews;
-}
-
-/**
- *  获取所有父视图(!注意不是子视图)
- *
- *  @return 所有父视图数组
- */
--(NSMutableArray *)allSuperviews{
-    NSMutableArray *allSuperviews = [NSMutableArray array];
-    UIView *tmpView = self;
-    while (tmpView.superview) {
-        [allSuperviews addObject:tmpView.superview];
-        tmpView = tmpView.superview;
-    }
-    return allSuperviews;
-}
-
-/**
- *  设置所有父视图为随机色(!注意不是子视图)
- *
- *  @param alpha 随机色透明度
- *
- *  @return 所有的父视图
- */
--(NSMutableArray *)allSupviewsBackgroundColorRandom:(CGFloat)alpha
-{
-    NSMutableArray *allSuperviews = [self allSuperviews];
-    for (UIView *view in allSuperviews) {
-        if ([view respondsToSelector:@selector(setBackgroundColor:)]) {
-            view.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0
-                                                   green:arc4random()%255/255.0
-                                                    blue:arc4random()%255/255.0
-                                                   alpha:alpha];
-        }
-    }
-    return allSuperviews;
-}
-
-
-
-@end
-
-
 @implementation NSObject (TFExecute)
 
+
+#pragma mark tf execute core begin --
 +(instancetype)easyCoderCustem:(ClassEasyCoderBlock)block{
     return  [NSObject tf_execute:[self class] initMethod:nil params:nil back:^(id ins) {
         if (block) {
@@ -294,6 +169,7 @@ TF_ASSOCIATED_OBJC_GET(NSMutableDictionary,     lgdesCache)
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
     invocation.target = _target;
     invocation.selector = _sel;
+    
     
     for (unsigned int i = 2; i < param_count_total; i++) {
         id param_sel = [_params objectAtIndex:i - 2];//get parameter
@@ -484,80 +360,147 @@ static inline NSString *firstCharUpper(NSString *string){
     
 }
 
+#pragma mark tf execute core end --
 
-@end
-
-
-@implementation TFLogTreeContainer
+#pragma mark category 动态添加属性实现 begin --
 
 
-
-+(instancetype)initWithView:(UIView *)view
-{
-    TFLogTreeContainer *ins = [[TFLogTreeContainer alloc]init];
-    ins.view = view;
-    [ins doWithSubViews];
-    return ins;
-}
-
--(void)doWithSubViews
-{
-    [self.subviews removeAllObjects];
-    NSArray *subviews = self.view.subviews;
-    for (UIView *subview in subviews) {
-        TFLogTreeContainer *container = [TFLogTreeContainer initWithView:subview];
-        [self.subviews addObject:container];
-    }
-}
-
--(NSMutableDictionary *)descriptionContainer:(NSArray *)propertyKeys
-{
-    [self.desCache removeAllObjects];
-    NSMutableDictionary *properties = [NSMutableDictionary dictionaryWithCapacity:propertyKeys.count];
+/**
+ *  为所有自定义属性添加setter 和getter方法
+ *  @param target 要添加方法的实例
+ */
++(void)tf_synthesizeAllCategoryPropertyForTarget:(id)target{
     
-    for (NSString *pkey in propertyKeys) {
-        id pvalue = @"";
-        @try {
-            pvalue = [self.view valueForKey:pkey];
-        } @catch (NSException *exception) {
-            pvalue = [NSString stringWithFormat:@"unknow key(%@) for class(%@)",pkey,self.view];
-        } @finally {
-            if (pvalue == nil)pvalue = @"null";
+    unsigned int pCount = 0;
+    objc_property_t *properties = class_copyPropertyList([target class], &pCount);
+    for (unsigned int i  =0; i < pCount; i++) {
+        
+        objc_property_t property = properties[i];
+        const char *pAttributes = property_getAttributes(property);
+        
+        if (property && pAttributes) {
+            
+            NSString *getter = nil;
+            NSString *setter = nil;
+            NSString *property_name = [NSString stringWithUTF8String:property_getName(property)];
+            
+            //T@"NSString",&,N,Gwahahaname,Swahahaname:,V_name
+            NSString *att_str = [NSString stringWithUTF8String:pAttributes];
+            NSArray  *att_arr = [att_str componentsSeparatedByString:@","];
+            
+            //找出改写的setter 和 getter 方法
+            NSPredicate *att_predicate1     = [NSPredicate predicateWithFormat:@"self BEGINSWITH[c] 'G' || self BEGINSWITH[c] 'S'"];
+            NSArray     *getter_setter_arr = [att_arr filteredArrayUsingPredicate:att_predicate1];
+            
+            for (NSString *compt in getter_setter_arr) {
+                if ([compt hasPrefix:@"G"])getter = [[compt substringFromIndex:1] copy];
+                if ([compt hasPrefix:@"S"])setter = [[compt substringFromIndex:1] copy];
+            }
+            
+            //如果没有改写setter 或 getter 方法就添加默认格式的方法
+            if (getter == nil) getter = [property_name copy];
+            if (setter == nil) {
+                NSString *pre = [property_name substringWithRange:NSMakeRange(0, 1)].uppercaseString;
+                NSString *suf = [property_name substringWithRange:NSMakeRange(1, property_name.length - 1)];
+                setter = [NSString stringWithFormat:@"set%@%@:",pre,suf];
+            }
+            
+            //添加 getter 方法
+            if (!class_getInstanceMethod([target class], NSSelectorFromString(getter))) {
+                BOOL added = class_addMethod([target class], NSSelectorFromString(getter), (IMP)propertyGet, "@@:");
+                NSAssert(added, @"add getter method '%@' failed!",getter);NSLog(@"add getter method:%@",getter);
+            }
+            //添加 setter 方法
+            if (!class_getInstanceMethod([target class], NSSelectorFromString(setter))) {
+                NSPredicate *att_predicate2     = [NSPredicate predicateWithFormat:@"self IN {'R'}"];
+                NSArray     *readonly_arr       = [att_arr filteredArrayUsingPredicate:att_predicate2];
+                //如果是只读属性不添加 setter 方法
+                if (!readonly_arr.count) {
+                    BOOL added = class_addMethod([target class], NSSelectorFromString(setter), (IMP)propertySet, "v@:@");
+                    NSAssert(added, @"add setter method '%@' failed!",setter);NSLog(@"add setter method:%@",getter);
+                }
+            }
         }
-        //NSLog(@">>>>>0000000000000000:%@:%@:%@",pkey,pvalue,self.view.backgroundColor);
-        [properties setObject:pvalue forKey:pkey];
     }
-    
-    NSMutableArray *subviews = [NSMutableArray arrayWithCapacity:self.subviews.count];
-    for (TFLogTreeContainer *subview in self.subviews) {
-        NSMutableDictionary *dic = [subview descriptionContainer:propertyKeys];
-        [subviews addObject:dic];
+}
+
+/**
+ *  属性的set方法
+ *  @param target   属性拥有者
+ *  @param selector 属性名
+ *  @param pvalue   属性值
+ */
+static void propertySet(id target,SEL selector,id pvalue){
+    const char *key= propertyAssociatedKey(target,selector);
+    objc_AssociationPolicy policy = OBJC_ASSOCIATION_RETAIN_NONATOMIC;
+    const char *pvalue_ctype = @encode(typeof(pvalue));
+    const char  pvalue_ctype_c = pvalue_ctype[0] == 'r' ? pvalue_ctype[1] : pvalue_ctype[0];
+    switch (pvalue_ctype_c) {
+        case 'c'://char
+        case 'C'://unsigned char
+        case 's'://short
+        case 'S'://unsigned short
+        case 'i'://int
+        case 'I'://unsigned int
+        case 'l'://long
+        case 'L'://unsigned long
+        case 'q'://long long
+        case 'Q'://unsigned long long
+        case 'f'://float
+        case 'd'://double
+        case 'B'://BOOL
+        case '{'://stuct
+        case '#'://Class
+        case ':':policy = OBJC_ASSOCIATION_ASSIGN;break;//SEL
+        case '*':
+        case '^':policy = OBJC_ASSOCIATION_RETAIN_NONATOMIC;break;//void/void *
+        case '@':policy = OBJC_ASSOCIATION_RETAIN;break;//obj/id
+        case '?':policy = OBJC_ASSOCIATION_COPY;break;//block
     }
-    
-    [self.desCache setObject:properties forKey:@"properties"];
-    [self.desCache setObject:subviews forKey:@"subviews"];
-    
-    NSMutableDictionary *front = [NSMutableDictionary dictionary];
-    [front setObject:self.desCache forKey:NSStringFromClass([self.view class])];
-    return front;
+    objc_setAssociatedObject(target, key, pvalue, policy);
+}
+/**
+ *  属性的get方法
+ *  @param target   属性拥有者
+ *  @param selector 方法名
+ *  @return 属性返回值
+ */
+static id   propertyGet(id target,SEL selector){
+    const char *key= propertyAssociatedKey(target,selector);
+    id pvalue = objc_getAssociatedObject(target,key);
+    return pvalue;
+}
+
+/**
+ *  get dynamic Associated key
+ *  获取动态绑定key,key的内存地址不能变
+ */
+static NSMutableDictionary *propertyKeys = nil;
+static const void *propertyAssociatedKey(id target,SEL selector){
+    NSString *selStr = NSStringFromSelector(selector);
+    if ([selStr hasPrefix:@"set"]) {
+        selStr = [selStr substringWithRange:NSMakeRange(3, selStr.length - 4)];
+        NSString *pre = [selStr substringWithRange:NSMakeRange(0, 1)].lowercaseString;
+        NSString *suf = [selStr substringWithRange:NSMakeRange(1, selStr.length - 1)];
+        selStr = [NSString stringWithFormat:@"%@%@",pre,suf];
+    }
+    if (!propertyKeys) propertyKeys = [[NSMutableDictionary alloc] init];
+    id key = propertyKeys[selStr];
+    if (!key) {
+        key = [selStr copy];
+        [propertyKeys setObject:key forKey:selStr];
+    }
+    return (__bridge const void *)(key);
 }
 
 
--(NSMutableDictionary *)desCache
-{
-    if (_desCache == nil) {
-        _desCache = [NSMutableDictionary dictionary];
-    }
-    return _desCache;
-}
--(NSMutableArray *)subviews
-{
-    if (_subviews == nil) {
-        _subviews = [NSMutableArray arrayWithCapacity:5];
-    }
-    return _subviews;
-}
 
+#pragma mark category 动态添加属性实现 end --
 
 @end
+
+
+
+
+
 

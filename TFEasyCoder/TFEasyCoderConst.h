@@ -7,6 +7,8 @@
 //
 
 
+
+
 /**
  *  weak self
  *  @param self     self
@@ -162,6 +164,16 @@ return _##__PROPERTY;}
  */
 #define TF_SYNTHESIZE(__PROPERTY) @synthesize __PROPERTY = _##__PROPERTY;
 
+
+/**
+ *  Dlog
+ *
+ */
+#ifdef TFLog
+#   define TFLog(fmt, ...) NSLog((@"function:%s,line:%d" fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#   define TFLog(...)
+#endif
 
 
 #endif /* TFEasyCoderConst_h */

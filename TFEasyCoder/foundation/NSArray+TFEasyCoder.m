@@ -27,12 +27,6 @@
     return self;
 }
 
-
-
-
-
-
-
 //superclass pros NSObject
 -(NSArray  *(^)(NSArray *  accessibilityElements))set_accessibilityElements{
     __weak typeof(self) weakSelf = self;
@@ -147,10 +141,6 @@
 }
 
 
-
-
-
-
 -(NSArray *(^)(id value,NSString *key))set_ValueKey{
     __weak typeof(self) weakSelf = self;
     return ^(id value,NSString *key){
@@ -158,6 +148,8 @@
         return weakSelf;
     };
 }
+
+
 
 
 @end

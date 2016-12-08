@@ -10,7 +10,7 @@
 #define TFEasyCoder_h
 
 
-
+#import "TFKit.h"
 #import "CAHeader.h"
 #import "UIKitHeader.h"
 #import "FoundationHeader.h"
