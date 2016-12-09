@@ -16,8 +16,8 @@
                                 repeats:(BOOL)yesOrNo
                                userInfo:(nullable id)userInfo
                              addRunloop:(BOOL)add
-                               delegate:(id<TFTimerDelegate>)delegate
-                             timerBlock:(TFTimerBackBlock)timerBlock{
+                               delegate:(_Nullable id<TFTimerDelegate>)delegate
+                             timerBlock:(nonnull TFTimerBackBlock)timerBlock{
     if (!timerBlock && !delegate)return nil;
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:ti
                                                       target:self
@@ -56,6 +56,8 @@
         [delegate timerRun:timer target:weakSelf];
     }
 }
+
+-(void)timerRun:(NSTimer *)timer target:(id)tareget{}
 
 -(void)stopTimer:(NSTimer *)timer{
     if (timer != nil && [timer isKindOfClass:[NSTimer class]]) {

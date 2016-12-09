@@ -120,6 +120,7 @@ typedef void(^ClassEasyCoderBlock) (id ins);
  *  为所有自定义属性添加setter 和 getter方法
  *  @param target 要添加方法的实例对象
  */
+-(void)tf_synthesizeAllCategoryPropertyForSelf;
 +(void)tf_synthesizeAllCategoryPropertyForTarget:(id)target;
 
 

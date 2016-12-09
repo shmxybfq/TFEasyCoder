@@ -369,6 +369,9 @@ static inline NSString *firstCharUpper(NSString *string){
  *  为所有自定义属性添加setter 和getter方法
  *  @param target 要添加方法的实例
  */
+-(void)tf_synthesizeAllCategoryPropertyForSelf{
+    [NSObject tf_synthesizeAllCategoryPropertyForTarget:self];
+}
 +(void)tf_synthesizeAllCategoryPropertyForTarget:(id)target{
     
     unsigned int pCount = 0;
@@ -383,7 +386,7 @@ static inline NSString *firstCharUpper(NSString *string){
             NSString *getter = nil;
             NSString *setter = nil;
             NSString *property_name = [NSString stringWithUTF8String:property_getName(property)];
-            
+            NSLog(@"TTTTTTTT;:%@",property_name);
             //T@"NSString",&,N,Gwahahaname,Swahahaname:,V_name
             NSString *att_str = [NSString stringWithUTF8String:pAttributes];
             NSArray  *att_arr = [att_str componentsSeparatedByString:@","];
@@ -408,7 +411,8 @@ static inline NSString *firstCharUpper(NSString *string){
             //添加 getter 方法
             if (!class_getInstanceMethod([target class], NSSelectorFromString(getter))) {
                 BOOL added = class_addMethod([target class], NSSelectorFromString(getter), (IMP)propertyGet, "@@:");
-                NSAssert(added, @"add getter method '%@' failed!",getter);NSLog(@"add getter method:%@",getter);
+                NSAssert(added, @"add getter method '%@' failed!",getter);
+                if (added) {NSLog(@"add getter method '%@' success!",getter);}
             }
             //添加 setter 方法
             if (!class_getInstanceMethod([target class], NSSelectorFromString(setter))) {
@@ -417,7 +421,8 @@ static inline NSString *firstCharUpper(NSString *string){
                 //如果是只读属性不添加 setter 方法
                 if (!readonly_arr.count) {
                     BOOL added = class_addMethod([target class], NSSelectorFromString(setter), (IMP)propertySet, "v@:@");
-                    NSAssert(added, @"add setter method '%@' failed!",setter);NSLog(@"add setter method:%@",getter);
+                    NSAssert(added, @"add setter method '%@' failed!",setter);
+                    if (added) {NSLog(@"add setter method '%@' success!",setter);}
                 }
             }
         }

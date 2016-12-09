@@ -8,14 +8,15 @@
 
 
 
-
-/**
- *  weak self
- *  @param self     self
- *  @param weakSelf weakSelf
- */
 #ifndef TFEasyCoderConst_h
 #define TFEasyCoderConst_h
+
+/**
+ *  代码前缀
+ *  @param code 代码
+ *  @return
+ */
+#define TFCODEPRE(code) tf_##code
 
 #ifndef kdeclare_weakself
 #define kdeclare_weakself TF_WEAK_OBJ(self,weakSelf)

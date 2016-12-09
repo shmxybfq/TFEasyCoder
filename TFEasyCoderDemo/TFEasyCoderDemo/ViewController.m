@@ -67,7 +67,7 @@ TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
         .set_rowHeight(Size6SNEW(96))
         .set_frame([UIScreen mainScreen].bounds)
         .set_separatorStyle(UITableViewCellSeparatorStyleNone)
-        .set_backgroundColor([[UIColor lightGrayColor]colorWithAlphaComponent:0.1]);        
+        .set_backgroundColor([[UIColor lightGrayColor]colorWithAlphaComponent:0.1]);
     }];
     
     /**
@@ -78,14 +78,14 @@ TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
      *  @return 操作对象
      */
     [self.dataSource easyCoder:^(NSMutableArray *ins) {
-    
+        
         [ins addObject:@{@"icon":@"home_visitor_icon",@"title":@"我的访客"}];
         [ins addObject:@{@"icon":@"home_birthday_icon",@"title":@"好友生日"}];
         [ins addObject:@{@"icon":@"home_music_icon",@"title":@"背景音乐"}];
         [ins addObject:@{@"icon":@"home_lovers_icon",@"title":@"情侣空间"}];
     }];
     
-  
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
         /**
@@ -111,7 +111,7 @@ TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
         NSLog(@"\n\n\n\n\n%@\n\n\n\n\n",allSubviews);
     });
     
- 
+    
 }
 
 

@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 #import "objc/runtime.h"
 
-typedef void(^TFTimerBackBlock)(NSTimer * timer,id target);
+typedef void(^TFTimerBackBlock)(NSTimer *timer,id target);
 
 @protocol TFTimerDelegate <NSObject>
 @required
@@ -36,8 +36,8 @@ typedef void(^TFTimerBackBlock)(NSTimer * timer,id target);
                                 repeats:(BOOL)yesOrNo
                                userInfo:(nullable id)userInfo
                              addRunloop:(BOOL)add
-                               delegate:(id<TFTimerDelegate>)delegate
-                             timerBlock:(TFTimerBackBlock)timerBlock;
+                               delegate:(_Nullable id<TFTimerDelegate>)delegate
+                             timerBlock:(nonnull TFTimerBackBlock)timerBlock;
 
 /**
  *  停止定时器
