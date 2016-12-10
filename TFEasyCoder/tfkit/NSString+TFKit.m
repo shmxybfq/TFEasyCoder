@@ -2,8 +2,8 @@
 //  NSString+TFKit.m
 //  TFEasyCoderDemo
 //
-//  Created by 融数 on 16/12/8.
-//  Copyright © 2016年 融数. All rights reserved.
+//  Created by ztf on 16/12/8.
+//  Copyright © 2016年 ztf. All rights reserved.
 //
 
 #import "NSString+TFKit.h"
@@ -102,28 +102,28 @@
 
 +(NSString *)TF_CODE_PRE(appPath){
     NSArray * paths = NSSearchPathForDirectoriesInDomains(NSApplicationDirectory, NSUserDomainMask, YES);
-    return [paths objectAtIndex:0];
+    return paths.firstObject;
 }
 -(NSString *)TF_CODE_PRE(appPath){return [NSString TF_CODE_PRE(appPath)];}
 
 
 +(NSString *)TF_CODE_PRE(documentsPath){
     NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    return [paths objectAtIndex:0];
+    return paths.firstObject;
 }
 -(NSString *)TF_CODE_PRE(documentsPath){return [NSString TF_CODE_PRE(documentsPath)];}
 
 
 +(NSString *)TF_CODE_PRE(libraryPath){
     NSArray * paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
-    return [[paths objectAtIndex:0] stringByAppendingFormat:@"/Preference"];
+    return [paths.firstObject stringByAppendingFormat:@"/Preference"];
 }
 -(NSString *)TF_CODE_PRE(libraryPath){return [NSString TF_CODE_PRE(libraryPath)];}
 
 
 +(NSString *)TF_CODE_PRE(cachePath){
     NSArray * paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
-    return [[paths objectAtIndex:0] stringByAppendingFormat:@"/Caches"];
+    return [paths.firstObject stringByAppendingFormat:@"/Caches"];
 }
 -(NSString *)TF_CODE_PRE(cachePath){return [NSString TF_CODE_PRE(cachePath)];}
 

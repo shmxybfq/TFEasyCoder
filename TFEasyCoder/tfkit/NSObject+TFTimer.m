@@ -2,8 +2,8 @@
 //  NSObject+TFTimer.m
 //  TFEasyCoderDemo
 //
-//  Created by 融数 on 16/12/8.
-//  Copyright © 2016年 融数. All rights reserved.
+//  Created by ztf on 16/12/8.
+//  Copyright © 2016年 ztf. All rights reserved.
 //
 
 #import "NSObject+TFTimer.h"

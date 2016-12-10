@@ -11,14 +11,6 @@
 
 @implementation UIButton (TFEasyCoder)
 
--(void)addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents{
-    [self addTarget:target action:@selector(vvv) forControlEvents:controlEvents];
-}
-
-
--(void)vvv{
-
-}
 
 
 +( UIButton *)easyCoder:(UIButtonEasyCoderBlock)block{

@@ -2,8 +2,8 @@
 //  UIView_TFKit.h
 //  TFEasyCoderDemo
 //
-//  Created by 融数 on 16/12/9.
-//  Copyright © 2016年 融数. All rights reserved.
+//  Created by ztf on 16/12/9.
+//  Copyright © 2016年 ztf. All rights reserved.
 //
 
 #ifndef UIView_TFKit_h

@@ -31,9 +31,12 @@
 TF_LAZYLOAD_OBJC(UITableView, tableView);
 TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+ 
+   
     kdeclare_weakself;
     
     /**
@@ -127,7 +130,6 @@ TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     /**
      *  打印当前已存在的视图tree(UI开发工具)
      */

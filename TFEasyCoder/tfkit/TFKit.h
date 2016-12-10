@@ -2,8 +2,8 @@
 //  TFKit.h
 //  TFEasyCoderDemo
 //
-//  Created by 融数 on 16/12/8.
-//  Copyright © 2016年 融数. All rights reserved.
+//  Created by ztf on 16/12/8.
+//  Copyright © 2016年 ztf. All rights reserved.
 //
 
 #ifndef TFKit_h
@@ -36,6 +36,6 @@
 
 #import "UINavigationController+TFKit.h"
 
-
+#import "UIViewController+TFKit.h"
 
 #endif /* TFKit_h */

@@ -23,6 +23,54 @@
 #endif
 
 
+
+/**
+ *  exemple :
+ *  @property (nonatomic,  copy)NSString *string;
+ *  TF_SYNTHESIZE_CATEGORY_PROPERTY(string , setString,OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+ *
+ *  TF_SYNTHESIZE_CATEGORY_PROPERTY_RETAIN retain属性
+ *  TF_SYNTHESIZE_CATEGORY_PROPERTY_COPY copy属性
+ *  TF_SYNTHESIZE_CATEGORY_PROPERTY_ASSIGN assign属性
+ *
+ *  @param GETTER getter 方法名
+ *  @param SETTER setter 方法名,不需要:
+ */
+#define TF_SYNTHESIZE_CATEGORY_PROPERTY_RETAIN(GETTER,SETTER) TF_SYNTHESIZE_CATEGORY_PROPERTY(GETTER,SETTER,OBJC_ASSOCIATION_RETAIN_NONATOMIC,id)
+#define TF_SYNTHESIZE_CATEGORY_PROPERTY_COPY(GETTER,SETTER)   TF_SYNTHESIZE_CATEGORY_PROPERTY(GETTER,SETTER,OBJC_ASSOCIATION_COPY,id)
+#define TF_SYNTHESIZE_CATEGORY_PROPERTY_ASSIGN(GETTER,SETTER) TF_SYNTHESIZE_CATEGORY_PROPERTY(GETTER,SETTER,OBJC_ASSOCIATION_ASSIGN,id)
+#define TF_SYNTHESIZE_CATEGORY_PROPERTY_BLOCK(GETTER,SETTER,TYPE)   TF_SYNTHESIZE_CATEGORY_PROPERTY(GETTER,SETTER,OBJC_ASSOCIATION_COPY,TYPE)
+
+#define TF_SYNTHESIZE_CATEGORY_PROPERTY(GETTER,SETTER,objc_AssociationPolicy,TYPE)\
+- (TYPE)GETTER{return objc_getAssociatedObject(self, @selector(GETTER));}\
+- (void)SETTER:(TYPE)obj{objc_setAssociatedObject(self, @selector(GETTER), obj, objc_AssociationPolicy);}
+
+/**
+ *  exemple :
+ *  @property (nonatomic,assign)CGPoint point;
+ *  TF_SYNTHESIZE_CATEGORY_PROPERTY_CTYPE(point,setPoint,CGPoint)
+ *
+ *  TF_SYNTHESIZE_CATEGORY_PROPERTY_CTYPE
+ *
+ *  @param GETTER getter 方法名
+ *  @param SETTER setter 方法名字
+ *  @param CTYPE 数据类型
+ *
+ */
+#define TF_SYNTHESIZE_CATEGORY_PROPERTY_CTYPE(GETTER,SETTER,CTYPE)\
+-(CTYPE)GETTER{\
+NSValue *associate_value = objc_getAssociatedObject(self, @selector(GETTER));\
+CTYPE  value;\
+[associate_value getValue:&value];\
+return value;\
+}\
+-(void)SETTER:(CTYPE)value{\
+NSValue *associate_value = [NSValue value:&value withObjCType:@encode(CTYPE)];\
+objc_setAssociatedObject(self, @selector(GETTER), associate_value, OBJC_ASSOCIATION_ASSIGN);\
+}
+
+
+
 /**
  *  weak obj
  *  @param TARGET 实例

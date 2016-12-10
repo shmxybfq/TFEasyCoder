@@ -2,8 +2,8 @@
 //  NSObject+TFKit.h
 //  TFEasyCoderDemo
 //
-//  Created by 融数 on 16/12/8.
-//  Copyright © 2016年 融数. All rights reserved.
+//  Created by ztf on 16/12/8.
+//  Copyright © 2016年 ztf. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -14,12 +14,12 @@
 /**
  *  系统版本号和app版本号,提供静态方法访问和属性访问
  */
-@property (nonatomic,  copy,readonly)NSString *TF_CODE_PRE(systemVersion);
-@property (nonatomic,  copy,readonly)NSString *TF_CODE_PRE(appVersion);
 +(NSString *)TF_CODE_PRE(systemVersion);
+@property (nonatomic,  copy,readonly)NSString *TF_CODE_PRE(systemVersion);
+
 
 +(NSString *)TF_CODE_PRE(appVersion);
-
+@property (nonatomic,  copy,readonly)NSString *TF_CODE_PRE(appVersion);
 /**
  *  获取当前机器型号
  *
