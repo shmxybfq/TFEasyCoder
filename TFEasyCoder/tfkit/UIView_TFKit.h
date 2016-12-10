@@ -8,8 +8,9 @@
 
 #ifndef UIView_TFKit_h
 #define UIView_TFKit_h
+#import "TFEasyCoderConst.h"
 
-
+#pragma mark 不同方式便捷生成CGRect --
 /**
  *  通过中心点 和 尺寸 计算 rect
  *  @param CGPoint center 值
@@ -37,7 +38,7 @@ static inline CGRect CGRectWithUIEdgeInsetsSuperView(UIEdgeInsets insets,UIView 
     return CGRectMake(x, y, w, h);
 }
 
-
+#pragma mark 屏幕适配 --
 /**
  *  计算尺寸比例（新） SIZE的屏幕尺寸为750*1334
  *  @param SIZE 6s切图的尺寸

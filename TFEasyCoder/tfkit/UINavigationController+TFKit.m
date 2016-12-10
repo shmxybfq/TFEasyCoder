@@ -16,7 +16,7 @@
  *  @param nav      操作的导航控制器
  *  @return 是否pop成功
  */
-+(BOOL)tf_popToClass:(Class)cls animated:(BOOL)animated nav:(UINavigationController *)nav{
++(BOOL)TF_CODE_PRE(popToClass):(Class)cls animated:(BOOL)animated nav:(UINavigationController *)nav{
     for (UIViewController *vc in nav.viewControllers) {
         if ([vc isKindOfClass:cls]) {
             [nav popToViewController:vc animated:animated];
@@ -25,8 +25,8 @@
     }
     return NO;
 }
--(BOOL)tf_popToClass:(Class)cls animated:(BOOL)animated{
-    return [UINavigationController tf_popToClass:cls animated:animated nav:self];
+-(BOOL)TF_CODE_PRE(popToClass):(Class)cls animated:(BOOL)animated{
+    return [UINavigationController TF_CODE_PRE(popToClass):cls animated:animated nav:self];
 }
 
 @end

@@ -10,7 +10,8 @@
 #import "TFEasyCoderConst.h"
 
 @implementation NSMutableDictionary (TFKit)
--(void)setObject_tfSafe:(id)anObject forKey:(id<NSCopying>)aKey{
+
+-(void)TF_CODE_PRE(setObjectSafe):(id)anObject forKey:(id<NSCopying>)aKey{
     
     if (anObject != nil) {
         [self setObject:anObject forKey:aKey];
@@ -19,7 +20,7 @@
     }
 }
 
--(void)addEntriesFromDictionary_tfSafe:(NSDictionary *)otherDictionary{
+-(void)TF_CODE_PRE(addEntriesFromDictionarySafe):(NSDictionary *)otherDictionary{
     if (otherDictionary != nil && [otherDictionary isKindOfClass:[NSMutableDictionary class]]) {
         [self addEntriesFromDictionary:otherDictionary];
     }else{

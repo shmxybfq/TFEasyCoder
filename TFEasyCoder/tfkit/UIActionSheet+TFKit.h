@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TFEasyCoderConst.h"
 
 typedef void(^TFUIActionSheetBackBlock) (UIActionSheet *_Nullable actionSheet, NSInteger buttonIndex,NSString *_Nullable buttonTitle);
 @interface UIActionSheet (TFKit)<UIActionSheetDelegate>
@@ -18,6 +18,7 @@ typedef void(^TFUIActionSheetBackBlock) (UIActionSheet *_Nullable actionSheet, N
  *
  *  @param block
  */
--(void)tf_showInView:(UIView *_Nullable)view block:(_Nullable TFUIActionSheetBackBlock)block;
+
+-(void)TF_CODE_PRE(showInView):(UIView *_Nullable)view block:(_Nullable TFUIActionSheetBackBlock)block;
 
 @end

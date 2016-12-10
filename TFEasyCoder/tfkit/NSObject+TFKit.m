@@ -15,21 +15,21 @@
 /**
  *  系统版本号和app版本号,提供静态方法访问和属性访问
  */
-+(NSString *)tf_systemVersion{
++(NSString *)TF_CODE_PRE(systemVersion){
     return [UIDevice currentDevice].systemVersion;
 }
--(NSString *)tf_systemVersion{
+-(NSString *)TF_CODE_PRE(systemVersion){
     return [UIDevice currentDevice].systemVersion;
 }
 
 
-+(NSString *)tf_appVersion{
++(NSString *)TF_CODE_PRE(appVersion){
     NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
     NSString *version = [info objectForKey:@"CFBundleShortVersionString"];
     return version;
 }
--(NSString *)tf_appVersion{
-    return [NSObject tf_appVersion];
+-(NSString *)TF_CODE_PRE(appVersion){
+    return [NSObject TF_CODE_PRE(appVersion)];
 }
 
 
@@ -39,8 +39,7 @@
  *  @return 当前机器型号名称
  *  需要导入框架 #include <sys/types.h>和#include <sys/sysctl.h>
  */
-+ (NSString *)tf_currentDeviceModel
-{
++ (NSString *)TF_CODE_PRE(currentDeviceModel){
     int mib[2];
     size_t len;
     char *machine;

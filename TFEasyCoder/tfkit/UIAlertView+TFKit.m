@@ -24,9 +24,9 @@
  *  @return UIAlertView
  */
 
-+(UIAlertView *)tf_showAutoDismissAlert:(CGFloat)dur
-                                  title:(NSString *)title
-                                message:(NSString *)message{
++(UIAlertView *)TF_CODE_PRE(showAutoDismissAlert):(CGFloat)dur
+                                            title:(NSString *)title
+                                          message:(NSString *)message{
     
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:title
                                                    message:message
@@ -41,7 +41,7 @@
 }
 
 
--(void)tf_showWithBlock:(TFUIAlertViewBackBlock)block{
+-(void)TF_CODE_PRE(showWithBlock):(TFUIAlertViewBackBlock)block{
     if (!block)return;
     [self tf_synthesizeAllCategoryPropertyForSelf];
     self.backBlock = block;

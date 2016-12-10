@@ -17,7 +17,7 @@
  *
  *  @param block
  */
--(void)tf_showInView:(UIView *_Nullable)view block:(_Nullable TFUIActionSheetBackBlock)block{
+-(void)TF_CODE_PRE(showInView):(UIView *_Nullable)view block:(_Nullable TFUIActionSheetBackBlock)block{
     if (!view || !block)return;
     [self tf_synthesizeAllCategoryPropertyForSelf];
     self.backBlock = block;

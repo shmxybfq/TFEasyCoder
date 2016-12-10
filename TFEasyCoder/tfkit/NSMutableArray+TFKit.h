@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TFEasyCoderConst.h"
 
 @interface NSMutableArray (TFKit)
 
@@ -15,18 +16,18 @@
  *
  *  @param index 元素下标
  */
--(void)removeObjectAtIndex_tfSafe:(NSUInteger)index;
+-(void)TF_CODE_PRE(removeObjectAtIndexSafe):(NSUInteger)index;
 /**
  *  安全添加元素
  *
  *  @param anObject 要添加的元素
  */
--(void)addObject_tfSafe:(id)anObject;
+-(void)TF_CODE_PRE(addObjectSafe):(id)anObject;
 /**
  *  安全添加数组
  *
  *  @param otherArray 要添加的数组
  */
--(void)addObjectsFromArray_tfSafe:(NSArray *)otherArray;
+-(void)TF_CODE_PRE(addObjectsFromArraySafe):(NSArray *)otherArray;
 
 @end

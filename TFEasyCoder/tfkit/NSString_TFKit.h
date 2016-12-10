@@ -9,6 +9,8 @@
 #ifndef NSString_TFKit_h
 #define NSString_TFKit_h
 
+#import "TFEasyCoderConst.h"
+
 /**
  *  判断空字符串
  *
@@ -17,7 +19,7 @@
  *  @return 是否为空
  */
 
-static inline BOOL tf_stringEmpty(NSString *string){
+static inline BOOL TF_CODE_PRE(stringEmpty)(NSString *string){
     return string == nil || [string isEqual:[NSNull null]]
     || ([string respondsToSelector:@selector(length)]
         && [(NSData *)string length] == 0)

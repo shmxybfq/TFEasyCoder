@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TFEasyCoderConst.h"
 typedef void(^TFUIAlertViewBackBlock) (UIAlertView *alertView, NSInteger buttonIndex,NSString *bottonTitle);
 
 @interface UIAlertView (TFKit)<UIAlertViewDelegate>
@@ -23,14 +23,14 @@ typedef void(^TFUIAlertViewBackBlock) (UIAlertView *alertView, NSInteger buttonI
  *  @return UIAlertView
  */
 
-+(UIAlertView *)tf_showAutoDismissAlert:(CGFloat)dur
-                                  title:(NSString *)title
-                                message:(NSString *)message;
++(UIAlertView *)TF_CODE_PRE(showAutoDismissAlert):(CGFloat)dur
+                                            title:(NSString *)title
+                                          message:(NSString *)message;
 /**
  *  block 回调点击的方法
  *
  *  @param block 
  */
--(void)tf_showWithBlock:(TFUIAlertViewBackBlock)block;
+-(void)TF_CODE_PRE(showWithBlock):(TFUIAlertViewBackBlock)block;
 
 @end

@@ -12,12 +12,12 @@
 
 @implementation NSObject (TFTimer)
 
--(NSTimer *)tf_addTimerWithTimeInterval:(NSTimeInterval)ti
-                                repeats:(BOOL)yesOrNo
-                               userInfo:(nullable id)userInfo
-                             addRunloop:(BOOL)add
-                               delegate:(_Nullable id<TFTimerDelegate>)delegate
-                             timerBlock:(nonnull TFTimerBackBlock)timerBlock{
+-(NSTimer *)TF_CODE_PRE(addTimerWithTimeInterval):(NSTimeInterval)ti
+                                          repeats:(BOOL)yesOrNo
+                                         userInfo:(nullable id)userInfo
+                                       addRunloop:(BOOL)add
+                                         delegate:(_Nullable id<TFTimerDelegate>)delegate
+                                       timerBlock:(nonnull TFTimerBackBlock)timerBlock{
     if (!timerBlock && !delegate)return nil;
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:ti
                                                       target:self
@@ -59,7 +59,7 @@
 
 -(void)timerRun:(NSTimer *)timer target:(id)tareget{}
 
--(void)stopTimer:(NSTimer *)timer{
+-(void)TF_CODE_PRE(stopTimer):(NSTimer *_Nonnull)timer{
     if (timer != nil && [timer isKindOfClass:[NSTimer class]]) {
         
         NSString *timerKey = [NSString stringWithFormat:@"%@",timer];

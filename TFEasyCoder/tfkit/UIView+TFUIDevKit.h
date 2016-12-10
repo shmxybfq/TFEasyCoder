@@ -14,6 +14,7 @@ typedef NSArray *(^LGTreeBlock) ();
 
 @interface UIView (TFUIDevKit)
 
+#pragma mark 打印视图树 --
 /**
  *  打印所有子视图
  *
@@ -23,6 +24,7 @@ typedef NSArray *(^LGTreeBlock) ();
  */
 -(NSDictionary *)logSubviews:(LGTreeBlock)block;
 
+#pragma mark 视图操作 --
 /**
  *  获取所有子视图
  *

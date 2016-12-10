@@ -16,7 +16,7 @@
  *  @param code 代码
  *  @return
  */
-#define TFCODEPRE(code) tf_##code
+#define TF_CODE_PRE(CODE) tf_##CODE
 
 #ifndef kdeclare_weakself
 #define kdeclare_weakself TF_WEAK_OBJ(self,weakSelf)

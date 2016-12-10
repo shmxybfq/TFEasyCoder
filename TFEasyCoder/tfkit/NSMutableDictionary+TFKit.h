@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TFEasyCoderConst.h"
 
 @interface NSMutableDictionary (TFKit)
 
@@ -16,13 +17,13 @@
  *  @param anObject 要插入的数据
  *  @param aKey     数据key值
  */
--(void)setObject_tfSafe:(id)anObject forKey:(id<NSCopying>)aKey;
+-(void)TF_CODE_PRE(setObjectSafe):(id)anObject forKey:(id<NSCopying>)aKey;
 /**
  *  字典安全插入字典
  *
  *  @param otherDictionary 要插入的字典
  */
--(void)addEntriesFromDictionary_tfSafe:(NSDictionary *)otherDictionary;
+-(void)TF_CODE_PRE(addEntriesFromDictionarySafe):(NSDictionary *)otherDictionary;
 
 
 

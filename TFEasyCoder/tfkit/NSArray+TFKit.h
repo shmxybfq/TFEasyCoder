@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "TFEasyCoderConst.h"
 @interface NSArray (TFKit)
 
 
@@ -18,7 +18,7 @@
  *
  *  @return 数据
  */
--(id _Nonnull)objectAtIndex_tfSafe:(NSUInteger)index;
+-(id _Nonnull)TF_CODE_PRE(objectAtIndexSafe):(NSUInteger)index;
 
 
 @end

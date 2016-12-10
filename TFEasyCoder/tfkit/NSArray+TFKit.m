@@ -7,7 +7,7 @@
 //
 
 #import "NSArray+TFKit.h"
-#import "TFEasyCoderConst.h"
+
 @implementation NSArray (TFKit)
 
 /**
@@ -17,7 +17,7 @@
  *
  *  @return 数据
  */
--(id _Nonnull)objectAtIndex_tfSafe:(NSUInteger)index{
+-(id _Nonnull)TF_CODE_PRE(objectAtIndexSafe):(NSUInteger)index{
     if (index < self.count) {
         return [self objectAtIndex:index];
     }else{

@@ -7,11 +7,11 @@
 //
 
 #import "NSMutableArray+TFKit.h"
-#import "TFEasyCoderConst.h"
+
 @implementation NSMutableArray (TFKit)
 
 
--(void)removeObjectAtIndex_tfSafe:(NSUInteger)index{
+-(void)TF_CODE_PRE(removeObjectAtIndexSafe):(NSUInteger)index{
     if (index < self.count) {
         [self removeObjectAtIndex:index];
     }else{
@@ -19,7 +19,7 @@
     }
 }
 
--(void)addObject_tfSafe:(id)anObject{
+-(void)TF_CODE_PRE(addObjectSafe):(id)anObject{
     if (anObject != nil) {
         [self addObject:anObject];
     }else{
@@ -27,7 +27,7 @@
     }
 }
 
--(void)addObjectsFromArray_tfSafe:(NSArray *)otherArray{
+-(void)TF_CODE_PRE(addObjectsFromArraySafe):(NSArray *)otherArray{
     
     if (otherArray != nil && [otherArray isKindOfClass:[NSArray class]]) {
         [self addObjectsFromArray:otherArray];

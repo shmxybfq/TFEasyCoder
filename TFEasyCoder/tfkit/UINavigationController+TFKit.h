@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TFEasyCoderConst.h"
 
 @interface UINavigationController (TFKit)
 
@@ -16,8 +17,9 @@
  *  @param nav      操作的导航控制器
  *  @return 是否pop成功
  */
--(BOOL)tf_popToClass:(Class)cls animated:(BOOL)animated;
-+(BOOL)tf_popToClass:(Class)cls animated:(BOOL)animated nav:(UINavigationController *)nav;
+
+-(BOOL)TF_CODE_PRE(popToClass):(Class)cls animated:(BOOL)animated;
++(BOOL)TF_CODE_PRE(popToClass):(Class)cls animated:(BOOL)animated nav:(UINavigationController *)nav;
 
 
 @end
