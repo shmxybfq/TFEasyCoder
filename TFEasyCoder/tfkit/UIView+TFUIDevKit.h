@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TFEasyCoderConst.h"
 
-
-typedef NSArray *(^LGTreeBlock) ();
+typedef NSArray *(^TFLogTreeBackBlock) ();
 
 
 @interface UIView (TFUIDevKit)
@@ -22,7 +22,7 @@ typedef NSArray *(^LGTreeBlock) ();
  *
  *  @return 打印信息字典
  */
--(NSDictionary *)logSubviews:(LGTreeBlock)block;
+-(NSDictionary *)TF_CODE_PRE(logSubviews):(TFLogTreeBackBlock)block;
 
 #pragma mark 视图操作 --
 /**
@@ -30,7 +30,7 @@ typedef NSArray *(^LGTreeBlock) ();
  *
  *  @return 所有子视图数组
  */
--(NSMutableArray *)allSubviews;
+-(NSMutableArray *)TF_CODE_PRE(getAllSubviews);
 /**
  *  设置所有子视图为随机色
  *
@@ -38,14 +38,14 @@ typedef NSArray *(^LGTreeBlock) ();
  *
  *  @return 所有的子视图
  */
--(NSMutableArray *)allSubviewsBackgroundColorRandom:(CGFloat)alpha;
+-(NSMutableArray *)TF_CODE_PRE(getAllSubviewsBackgroundColorRandom):(CGFloat)alpha;
 
 /**
  *  获取所有父视图(!注意不是子视图)
  *
  *  @return 所有父视图数组
  */
--(NSMutableArray *)allSuperviews;
+-(NSMutableArray *)TF_CODE_PRE(getAllSuperviews);
 /**
  *  设置所有父视图为随机色(!注意不是子视图)
  *
@@ -53,7 +53,7 @@ typedef NSArray *(^LGTreeBlock) ();
  *
  *  @return 所有的父视图
  */
--(NSMutableArray *)allSupviewsBackgroundColorRandom:(CGFloat)alpha;
+-(NSMutableArray *)TF_CODE_PRE(getAllSupviewsBackgroundColorRandom):(CGFloat)alpha;
 
 @end
 

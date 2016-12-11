@@ -94,7 +94,7 @@ TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
         /**
          *  打印当前已存在的视图tree(UI开发工具)
          */
-        [self.view logSubviews:^NSArray *{
+        [self.view tf_logSubviews:^NSArray *{
             /**
              *  这里返回你要在视图tree里面显示的视图属性,返回nil则默认打印 @[@"frame",@"hidden",@"backgroundColor",@"userInteractionEnabled"]
              */
@@ -104,13 +104,13 @@ TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
         /**
          *  为当前已存在的视图tree 加上随机颜色(UI开发工具)
          */
-        [self.view allSubviewsBackgroundColorRandom:0.5];
+        [self.view tf_getAllSubviewsBackgroundColorRandom:0.5];
         
         
         /**
          *  获取view的所有子视图(UI开发工具)
          */
-        NSArray *allSubviews = [self.view allSubviews];
+        NSArray *allSubviews = [self.view tf_getAllSubviews];
         NSLog(@"\n\n\n\n\n%@\n\n\n\n\n",allSubviews);
     });
     
@@ -133,7 +133,7 @@ TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
     /**
      *  打印当前已存在的视图tree(UI开发工具)
      */
-    [self.view logSubviews:^NSArray *{
+    [self.view tf_logSubviews:^NSArray *{
         /**
          *  这里返回你要在视图tree里面显示的视图属性,返回nil则默认打印 @[@"frame",@"hidden",@"backgroundColor",@"userInteractionEnabled"]
          */
@@ -143,13 +143,13 @@ TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
     /**
      *  为当前已存在的视图tree 加上随机颜色(UI开发工具)
      */
-    [self.view allSubviewsBackgroundColorRandom:0.5];
+    [self.view tf_getAllSubviewsBackgroundColorRandom:0.5];
     
     
     /**
      *  获取view的所有子视图(UI开发工具)
      */
-    NSArray *allSubviews = [self.view allSubviews];
+    NSArray *allSubviews = [self.view tf_getAllSubviews];
     NSLog(@"\n\n\n\n\n%@\n\n\n\n\n",allSubviews);
     
 }

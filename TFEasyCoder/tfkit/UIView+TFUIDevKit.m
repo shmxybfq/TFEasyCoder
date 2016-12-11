@@ -43,7 +43,7 @@ TF_ASSOCIATED_OBJC_GET(NSMutableDictionary,     lgdesCache)
  *
  *  @return 打印信息字典
  */
--(NSDictionary *)logSubviews:(LGTreeBlock)block
+-(NSDictionary *)TF_CODE_PRE(logSubviews):(TFLogTreeBackBlock)block
 {
     NSArray *ps = block();
     if (ps == nil || ps.count == 0) {
@@ -59,7 +59,7 @@ TF_ASSOCIATED_OBJC_GET(NSMutableDictionary,     lgdesCache)
  *
  *  @return 所有子视图数组
  */
--(NSMutableArray *)allSubviews
+-(NSMutableArray *)TF_CODE_PRE(getAllSubviews)
 {
     NSMutableArray *allSubviews = [NSMutableArray array];
     NSMutableArray *curSubviews = [NSMutableArray arrayWithArray:self.subviews];
@@ -85,9 +85,9 @@ TF_ASSOCIATED_OBJC_GET(NSMutableDictionary,     lgdesCache)
  *
  *  @return 所有的子视图
  */
--(NSMutableArray *)allSubviewsBackgroundColorRandom:(CGFloat)alpha
+-(NSMutableArray *)TF_CODE_PRE(getAllSubviewsBackgroundColorRandom):(CGFloat)alpha
 {
-    NSMutableArray *allSubviews = [self allSubviews];
+    NSMutableArray *allSubviews = [self TF_CODE_PRE(getAllSubviews)];
     for (UIView *view in allSubviews) {
         if ([view respondsToSelector:@selector(setBackgroundColor:)]) {
             view.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0
@@ -107,7 +107,7 @@ TF_ASSOCIATED_OBJC_GET(NSMutableDictionary,     lgdesCache)
  *
  *  @return 所有父视图数组
  */
--(NSMutableArray *)allSuperviews{
+-(NSMutableArray *)TF_CODE_PRE(getAllSuperviews){
     NSMutableArray *allSuperviews = [NSMutableArray array];
     UIView *tmpView = self;
     while (tmpView.superview) {
@@ -124,9 +124,9 @@ TF_ASSOCIATED_OBJC_GET(NSMutableDictionary,     lgdesCache)
  *
  *  @return 所有的父视图
  */
--(NSMutableArray *)allSupviewsBackgroundColorRandom:(CGFloat)alpha
+-(NSMutableArray *)TF_CODE_PRE(getAllSupviewsBackgroundColorRandom):(CGFloat)alpha
 {
-    NSMutableArray *allSuperviews = [self allSuperviews];
+    NSMutableArray *allSuperviews = [self TF_CODE_PRE(getAllSuperviews)];
     for (UIView *view in allSuperviews) {
         if ([view respondsToSelector:@selector(setBackgroundColor:)]) {
             view.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0
