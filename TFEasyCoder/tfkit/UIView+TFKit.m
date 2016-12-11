@@ -92,6 +92,29 @@
 -(CGFloat)TF_CODE_PRE(max_x){return self.TF_CODE_PRE(x) + self.TF_CODE_PRE(width);}
 -(CGFloat)TF_CODE_PRE(max_y){return self.TF_CODE_PRE(y) + self.TF_CODE_PRE(height);}
 
+-(CGPoint)TF_CODE_PRE(leftTop){return self.frame.origin;}
+-(void)set_leftTop:(CGPoint)tf_leftTop{
+    self.frame = CGRectMake(tf_leftTop.x, tf_leftTop.y, self.TF_CODE_PRE(height), self.TF_CODE_PRE(width));
+}
+
+-(CGPoint)TF_CODE_PRE(rightTop){return CGPointMake(self.TF_CODE_PRE(x) + self.TF_CODE_PRE(width), self.TF_CODE_PRE(y));}
+-(void)set_rightTop:(CGPoint)tf_rightTop{
+    self.frame = CGRectMake(tf_rightTop.x - self.TF_CODE_PRE(width), tf_rightTop.y, self.TF_CODE_PRE(width), self.TF_CODE_PRE(height));
+}
+
+-(CGPoint)TF_CODE_PRE(leftBottom){return CGPointMake(self.TF_CODE_PRE(x), self.TF_CODE_PRE(y) + self.TF_CODE_PRE(height));}
+-(void)set_leftBottom:(CGPoint)tf_leftBottom{
+    self.frame = CGRectMake(tf_leftBottom.x, tf_leftBottom.y - self.TF_CODE_PRE(height), self.TF_CODE_PRE(width), self.TF_CODE_PRE(height));
+}
+
+-(CGPoint)TF_CODE_PRE(rightBottom){return CGPointMake(self.TF_CODE_PRE(x) + self.TF_CODE_PRE(width), self.TF_CODE_PRE(y) + self.TF_CODE_PRE(height));}
+-(void)set_rightBottom:(CGPoint)tf_rightBottom{
+    self.frame = CGRectMake(tf_rightBottom.x - self.TF_CODE_PRE(width),
+                            tf_rightBottom.y - self.TF_CODE_PRE(height),
+                            self.TF_CODE_PRE(width),
+                            self.TF_CODE_PRE(height));
+}
+
 
 -(CGFloat)TF_CODE_PRE(width){return self.frame.size.width;}
 -(void)set_width:(CGFloat)tf_width{
@@ -315,5 +338,7 @@ static NSMutableDictionary *TF_CODE_PRE(creatBackgroundViews);
     }
 }
 
+
+#pragma mark view 加密解密 --
 
 @end

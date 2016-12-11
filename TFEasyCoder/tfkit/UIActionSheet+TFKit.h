@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "TFEasyCoderConst.h"
 
-typedef void(^TFUIActionSheetBackBlock) (UIActionSheet *_Nullable actionSheet, NSInteger buttonIndex,NSString *_Nullable buttonTitle);
+typedef void(^TFUIActionSheetBackBlock) (UIActionSheet *_Nullable actionSheet,
+                                         NSInteger buttonIndex,
+                                         NSString *_Nullable buttonTitle);
+
 @interface UIActionSheet (TFKit)<UIActionSheetDelegate>
 
 @property (nonatomic,  copy,nonnull)TFUIActionSheetBackBlock backBlock;

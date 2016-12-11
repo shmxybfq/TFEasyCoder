@@ -37,6 +37,10 @@
 @property (nonatomic,assign,setter=set_y:)CGFloat TF_CODE_PRE(y);
 @property (nonatomic,assign,readonly)CGFloat TF_CODE_PRE(max_x);
 @property (nonatomic,assign,readonly)CGFloat TF_CODE_PRE(max_y);
+@property (nonatomic,assign,setter=set_leftTop:)CGPoint TF_CODE_PRE(leftTop);
+@property (nonatomic,assign,setter=set_rightTop:)CGPoint TF_CODE_PRE(rightTop);
+@property (nonatomic,assign,setter=set_leftBottom:)CGPoint TF_CODE_PRE(leftBottom);
+@property (nonatomic,assign,setter=set_rightBottom:)CGPoint TF_CODE_PRE(rightBottom);
 
 @property (nonatomic,assign,setter=set_size:)CGSize  TF_CODE_PRE(size);
 @property (nonatomic,assign,setter=set_width:)CGFloat TF_CODE_PRE(width);

@@ -81,4 +81,13 @@
 +(BOOL)TF_CODE_PRE(existPath):(NSString *)path;
 @property (nonatomic,assign,readonly)BOOL TF_CODE_PRE(existPathSelf);
 
+
+#pragma mark 加密解密 --
+
++(NSString *)TF_CODE_PRE(md5):(NSString *)string;
+@property (nonatomic,  copy,readonly)NSString *TF_CODE_PRE(md5);
+
+
+
+
 @end
