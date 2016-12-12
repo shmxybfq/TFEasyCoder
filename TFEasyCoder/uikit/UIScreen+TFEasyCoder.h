@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIScreenEasyCoderBlock) (UIScreen * ins);
+
+
 
 @interface UIScreen (TFEasyCoder)
 
-+( UIScreen *)easyCoder:(UIScreenEasyCoderBlock)block;
--(UIScreen *)easyCoder:(UIScreenEasyCoderBlock)block;
+
+
 
 -(UIScreen  *(^)(UIScreenMode *  currentMode))set_currentMode;
 -(UIScreen  *(^)(long long  overscanCompensation))set_overscanCompensation;
@@ -47,7 +47,7 @@ typedef void(^UIScreenEasyCoderBlock) (UIScreen * ins);
 
 
 
--(UIScreen *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSKeyedUnarchiverEasyCoderBlock) (NSKeyedUnarchiver * ins);
+
+
 
 @interface NSKeyedUnarchiver (TFEasyCoder)
 
-+( NSKeyedUnarchiver *)easyCoder:(NSKeyedUnarchiverEasyCoderBlock)block;
--(NSKeyedUnarchiver *)easyCoder:(NSKeyedUnarchiverEasyCoderBlock)block;
+
+
 
 
 -(NSKeyedUnarchiver  *(^)(id<NSKeyedUnarchiverDelegate>   delegate))set_delegate;
@@ -45,7 +45,7 @@ typedef void(^NSKeyedUnarchiverEasyCoderBlock) (NSKeyedUnarchiver * ins);
 
 
 
--(NSKeyedUnarchiver *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

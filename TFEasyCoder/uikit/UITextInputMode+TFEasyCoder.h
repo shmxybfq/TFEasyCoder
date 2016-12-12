@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UITextInputModeEasyCoderBlock) (UITextInputMode * ins);
+
+
 
 @interface UITextInputMode (TFEasyCoder)
 
-+( UITextInputMode *)easyCoder:(UITextInputModeEasyCoderBlock)block;
--(UITextInputMode *)easyCoder:(UITextInputModeEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^UITextInputModeEasyCoderBlock) (UITextInputMode * ins);
 
 
 
--(UITextInputMode *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

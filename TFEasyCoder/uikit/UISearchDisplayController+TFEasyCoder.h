@@ -8,19 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
+
 
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 
-typedef void(^UISearchDisplayControllerEasyCoderBlock) (UISearchDisplayController * ins);
+
 
 @interface UISearchDisplayController (TFEasyCoder)
 
-+( UISearchDisplayController *)easyCoder:(UISearchDisplayControllerEasyCoderBlock)block;
--(UISearchDisplayController *)easyCoder:(UISearchDisplayControllerEasyCoderBlock)block;
+
+
 
 
 -(UISearchDisplayController  *(^)(id<UISearchDisplayDelegate>   delegate))set_delegate;
@@ -54,7 +54,7 @@ typedef void(^UISearchDisplayControllerEasyCoderBlock) (UISearchDisplayControlle
 
 
 
--(UISearchDisplayController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSLocaleEasyCoderBlock) (NSLocale * ins);
+
+
 
 @interface NSLocale (TFEasyCoder)
 
-+( NSLocale *)easyCoder:(NSLocaleEasyCoderBlock)block;
--(NSLocale *)easyCoder:(NSLocaleEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSLocaleEasyCoderBlock) (NSLocale * ins);
 
 
 
--(NSLocale *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

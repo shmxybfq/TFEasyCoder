@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSHTTPCookieStorageEasyCoderBlock) (NSHTTPCookieStorage * ins);
+
+
 
 @interface NSHTTPCookieStorage (TFEasyCoder)
 
-+( NSHTTPCookieStorage *)easyCoder:(NSHTTPCookieStorageEasyCoderBlock)block;
--(NSHTTPCookieStorage *)easyCoder:(NSHTTPCookieStorageEasyCoderBlock)block;
+
+
 
 
 -(NSHTTPCookieStorage  *(^)(unsigned long long  cookieAcceptPolicy))set_cookieAcceptPolicy;
@@ -43,7 +43,7 @@ typedef void(^NSHTTPCookieStorageEasyCoderBlock) (NSHTTPCookieStorage * ins);
 
 
 
--(NSHTTPCookieStorage *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

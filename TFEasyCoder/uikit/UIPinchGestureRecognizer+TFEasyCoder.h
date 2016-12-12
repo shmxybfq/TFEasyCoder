@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIPinchGestureRecognizerEasyCoderBlock) (UIPinchGestureRecognizer * ins);
+
+
 
 @interface UIPinchGestureRecognizer (TFEasyCoder)
 
-+( UIPinchGestureRecognizer *)easyCoder:(UIPinchGestureRecognizerEasyCoderBlock)block;
--(UIPinchGestureRecognizer *)easyCoder:(UIPinchGestureRecognizerEasyCoderBlock)block;
+
+
 
 
 -(UIPinchGestureRecognizer  *(^)(double  scale))set_scale;
@@ -51,7 +51,7 @@ typedef void(^UIPinchGestureRecognizerEasyCoderBlock) (UIPinchGestureRecognizer 
 
 
 
--(UIPinchGestureRecognizer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

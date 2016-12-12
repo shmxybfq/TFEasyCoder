@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UILocalNotificationEasyCoderBlock) (UILocalNotification * ins);
+
+
 
 @interface UILocalNotification (TFEasyCoder)
 
-+( UILocalNotification *)easyCoder:(UILocalNotificationEasyCoderBlock)block;
--(UILocalNotification *)easyCoder:(UILocalNotificationEasyCoderBlock)block;
+
+
 
 
 -(UILocalNotification  *(^)(NSDate *  fireDate))set_fireDate;
@@ -57,7 +57,7 @@ typedef void(^UILocalNotificationEasyCoderBlock) (UILocalNotification * ins);
 
 
 
--(UILocalNotification *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

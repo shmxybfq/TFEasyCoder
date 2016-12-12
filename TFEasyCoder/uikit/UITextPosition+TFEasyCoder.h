@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UITextPositionEasyCoderBlock) (UITextPosition * ins);
+
+
 
 @interface UITextPosition (TFEasyCoder)
 
-+( UITextPosition *)easyCoder:(UITextPositionEasyCoderBlock)block;
--(UITextPosition *)easyCoder:(UITextPositionEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^UITextPositionEasyCoderBlock) (UITextPosition * ins);
 
 
 
--(UITextPosition *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSMutableParagraphStyleEasyCoderBlock) (NSMutableParagraphStyle * ins);
+
+
 
 @interface NSMutableParagraphStyle (TFEasyCoder)
 
-+( NSMutableParagraphStyle *)easyCoder:(NSMutableParagraphStyleEasyCoderBlock)block;
--(NSMutableParagraphStyle *)easyCoder:(NSMutableParagraphStyleEasyCoderBlock)block;
+
+
 
 
 -(NSMutableParagraphStyle  *(^)(double  lineSpacing))set_lineSpacing;
@@ -59,7 +59,7 @@ typedef void(^NSMutableParagraphStyleEasyCoderBlock) (NSMutableParagraphStyle * 
 
 
 
--(NSMutableParagraphStyle *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

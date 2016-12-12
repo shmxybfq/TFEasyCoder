@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSNetServiceEasyCoderBlock) (NSNetService * ins);
+
+
 
 @interface NSNetService (TFEasyCoder)
 
-+( NSNetService *)easyCoder:(NSNetServiceEasyCoderBlock)block;
--(NSNetService *)easyCoder:(NSNetServiceEasyCoderBlock)block;
+
+
 
 
 -(NSNetService  *(^)(id<NSNetServiceDelegate>   delegate))set_delegate;
@@ -44,7 +44,7 @@ typedef void(^NSNetServiceEasyCoderBlock) (NSNetService * ins);
 
 
 
--(NSNetService *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

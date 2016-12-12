@@ -7,25 +7,11 @@
 //
 
 #import "UIDocument+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UIDocument (TFEasyCoder)
 
-+( UIDocument *)easyCoder:(UIDocumentEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIDocument *)ins);
-        }
-    }];
-}
 
--( UIDocument *)easyCoder:(UIDocumentEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -167,13 +153,7 @@
 
 
 
--(UIDocument *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

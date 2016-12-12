@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UITextInputStringTokenizerEasyCoderBlock) (UITextInputStringTokenizer * ins);
+
+
 
 @interface UITextInputStringTokenizer (TFEasyCoder)
 
-+( UITextInputStringTokenizer *)easyCoder:(UITextInputStringTokenizerEasyCoderBlock)block;
--(UITextInputStringTokenizer *)easyCoder:(UITextInputStringTokenizerEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^UITextInputStringTokenizerEasyCoderBlock) (UITextInputStringTokeni
 
 
 
--(UITextInputStringTokenizer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

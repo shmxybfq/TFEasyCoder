@@ -7,25 +7,11 @@
 //
 
 #import "NSLocale+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSLocale (TFEasyCoder)
 
-+( NSLocale *)easyCoder:(NSLocaleEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSLocale *)ins);
-        }
-    }];
-}
 
--( NSLocale *)easyCoder:(NSLocaleEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -151,13 +137,7 @@
 
 
 
--(NSLocale *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

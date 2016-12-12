@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UISliderEasyCoderBlock) (UISlider * ins);
+
+
 
 @interface UISlider (TFEasyCoder)
 
-+( UISlider *)easyCoder:(UISliderEasyCoderBlock)block;
--(UISlider *)easyCoder:(UISliderEasyCoderBlock)block;
+
+
 
 
 -(UISlider  *(^)(float  value))set_value;
@@ -67,7 +67,7 @@ typedef void(^UISliderEasyCoderBlock) (UISlider * ins);
 
 
 
--(UISlider *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

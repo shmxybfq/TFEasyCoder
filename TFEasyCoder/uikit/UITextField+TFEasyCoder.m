@@ -7,25 +7,11 @@
 //
 
 #import "UITextField+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UITextField (TFEasyCoder)
 
-+( UITextField *)easyCoder:(UITextFieldEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UITextField *)ins);
-        }
-    }];
-}
 
--( UITextField *)easyCoder:(UITextFieldEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -546,13 +532,7 @@
 
 
 
--(UITextField *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

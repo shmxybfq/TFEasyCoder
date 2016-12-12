@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSMutableURLRequestEasyCoderBlock) (NSMutableURLRequest * ins);
+
+
 
 @interface NSMutableURLRequest (TFEasyCoder)
 
-+( NSMutableURLRequest *)easyCoder:(NSMutableURLRequestEasyCoderBlock)block;
--(NSMutableURLRequest *)easyCoder:(NSMutableURLRequestEasyCoderBlock)block;
+
+
 
 
 -(NSMutableURLRequest  *(^)(NSString *  HTTPMethod))set_HTTPMethod;
@@ -53,7 +53,7 @@ typedef void(^NSMutableURLRequestEasyCoderBlock) (NSMutableURLRequest * ins);
 
 
 
--(NSMutableURLRequest *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

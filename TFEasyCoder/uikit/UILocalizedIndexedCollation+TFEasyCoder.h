@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UILocalizedIndexedCollationEasyCoderBlock) (UILocalizedIndexedCollation * ins);
+
+
 
 @interface UILocalizedIndexedCollation (TFEasyCoder)
 
-+( UILocalizedIndexedCollation *)easyCoder:(UILocalizedIndexedCollationEasyCoderBlock)block;
--(UILocalizedIndexedCollation *)easyCoder:(UILocalizedIndexedCollationEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^UILocalizedIndexedCollationEasyCoderBlock) (UILocalizedIndexedColl
 
 
 
--(UILocalizedIndexedCollation *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

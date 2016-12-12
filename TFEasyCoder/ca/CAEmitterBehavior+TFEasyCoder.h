@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^CAEmitterBehaviorEasyCoderBlock) (CAEmitterBehavior * ins);
+
+
 
 @interface CAEmitterBehavior (TFEasyCoder)
 
-+( CAEmitterBehavior *)easyCoder:(CAEmitterBehaviorEasyCoderBlock)block;
--(CAEmitterBehavior *)easyCoder:(CAEmitterBehaviorEasyCoderBlock)block;
+
+
 
 
 -(CAEmitterBehavior  *(^)(NSString *  name))set_name;
@@ -44,7 +44,7 @@ typedef void(^CAEmitterBehaviorEasyCoderBlock) (CAEmitterBehavior * ins);
 
 
 
--(CAEmitterBehavior *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

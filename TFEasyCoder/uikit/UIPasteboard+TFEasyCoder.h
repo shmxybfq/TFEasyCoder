@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIPasteboardEasyCoderBlock) (UIPasteboard * ins);
+
+
 
 @interface UIPasteboard (TFEasyCoder)
 
-+( UIPasteboard *)easyCoder:(UIPasteboardEasyCoderBlock)block;
--(UIPasteboard *)easyCoder:(UIPasteboardEasyCoderBlock)block;
+
+
 
 
 -(UIPasteboard  *(^)(NSString *  string))set_string;
@@ -51,7 +51,7 @@ typedef void(^UIPasteboardEasyCoderBlock) (UIPasteboard * ins);
 
 
 
--(UIPasteboard *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

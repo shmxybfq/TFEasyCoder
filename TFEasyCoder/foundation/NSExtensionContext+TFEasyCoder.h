@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSExtensionContextEasyCoderBlock) (NSExtensionContext * ins);
+
+
 
 @interface NSExtensionContext (TFEasyCoder)
 
-+( NSExtensionContext *)easyCoder:(NSExtensionContextEasyCoderBlock)block;
--(NSExtensionContext *)easyCoder:(NSExtensionContextEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSExtensionContextEasyCoderBlock) (NSExtensionContext * ins);
 
 
 
--(NSExtensionContext *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSComparisonPredicateEasyCoderBlock) (NSComparisonPredicate * ins);
+
+
 
 @interface NSComparisonPredicate (TFEasyCoder)
 
-+( NSComparisonPredicate *)easyCoder:(NSComparisonPredicateEasyCoderBlock)block;
--(NSComparisonPredicate *)easyCoder:(NSComparisonPredicateEasyCoderBlock)block;
+
+
 
 
 
@@ -43,7 +43,7 @@ typedef void(^NSComparisonPredicateEasyCoderBlock) (NSComparisonPredicate * ins)
 
 
 
--(NSComparisonPredicate *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

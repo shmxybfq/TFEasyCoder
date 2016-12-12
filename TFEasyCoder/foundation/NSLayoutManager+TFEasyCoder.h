@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSLayoutManagerEasyCoderBlock) (NSLayoutManager * ins);
+
+
 
 @interface NSLayoutManager (TFEasyCoder)
 
-+( NSLayoutManager *)easyCoder:(NSLayoutManagerEasyCoderBlock)block;
--(NSLayoutManager *)easyCoder:(NSLayoutManagerEasyCoderBlock)block;
+
+
 
 
 -(NSLayoutManager  *(^)(NSTextStorage *  textStorage))set_textStorage;
@@ -49,7 +49,7 @@ typedef void(^NSLayoutManagerEasyCoderBlock) (NSLayoutManager * ins);
 
 
 
--(NSLayoutManager *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

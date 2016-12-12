@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIResponderEasyCoderBlock) (UIResponder * ins);
+
+
 
 @interface UIResponder (TFEasyCoder)
 
-+( UIResponder *)easyCoder:(UIResponderEasyCoderBlock)block;
--(UIResponder *)easyCoder:(UIResponderEasyCoderBlock)block;
+
+
 
 
 -(UIResponder  *(^)(NSUserActivity *  userActivity))set_userActivity;
@@ -44,7 +44,7 @@ typedef void(^UIResponderEasyCoderBlock) (UIResponder * ins);
 
 
 
--(UIResponder *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

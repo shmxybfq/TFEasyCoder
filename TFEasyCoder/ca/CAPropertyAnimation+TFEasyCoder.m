@@ -7,25 +7,11 @@
 //
 
 #import "CAPropertyAnimation+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation CAPropertyAnimation (TFEasyCoder)
 
-+( CAPropertyAnimation *)easyCoder:(CAPropertyAnimationEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( CAPropertyAnimation *)ins);
-        }
-    }];
-}
 
--( CAPropertyAnimation *)easyCoder:(CAPropertyAnimationEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -256,13 +242,7 @@
 
 
 
--(CAPropertyAnimation *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIToolbarEasyCoderBlock) (UIToolbar * ins);
+
+
 
 @interface UIToolbar (TFEasyCoder)
 
-+( UIToolbar *)easyCoder:(UIToolbarEasyCoderBlock)block;
--(UIToolbar *)easyCoder:(UIToolbarEasyCoderBlock)block;
+
+
 
 
 -(UIToolbar  *(^)(long long  barStyle))set_barStyle;
@@ -59,7 +59,7 @@ typedef void(^UIToolbarEasyCoderBlock) (UIToolbar * ins);
 
 
 
--(UIToolbar *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -7,25 +7,11 @@
 //
 
 #import "NSShadow+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSShadow (TFEasyCoder)
 
-+( NSShadow *)easyCoder:(NSShadowEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSShadow *)ins);
-        }
-    }];
-}
 
--( NSShadow *)easyCoder:(NSShadowEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -159,13 +145,7 @@
 
 
 
--(NSShadow *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

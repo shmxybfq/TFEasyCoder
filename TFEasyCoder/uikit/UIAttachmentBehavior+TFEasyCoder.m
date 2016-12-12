@@ -7,25 +7,11 @@
 //
 
 #import "UIAttachmentBehavior+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UIAttachmentBehavior (TFEasyCoder)
 
-+( UIAttachmentBehavior *)easyCoder:(UIAttachmentBehaviorEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIAttachmentBehavior *)ins);
-        }
-    }];
-}
 
--( UIAttachmentBehavior *)easyCoder:(UIAttachmentBehaviorEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -192,13 +178,7 @@
 
 
 
--(UIAttachmentBehavior *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSTextContainerEasyCoderBlock) (NSTextContainer * ins);
+
+
 
 @interface NSTextContainer (TFEasyCoder)
 
-+( NSTextContainer *)easyCoder:(NSTextContainerEasyCoderBlock)block;
--(NSTextContainer *)easyCoder:(NSTextContainerEasyCoderBlock)block;
+
+
 
 
 -(NSTextContainer  *(^)(NSLayoutManager *  layoutManager))set_layoutManager;
@@ -50,7 +50,7 @@ typedef void(^NSTextContainerEasyCoderBlock) (NSTextContainer * ins);
 
 
 
--(NSTextContainer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

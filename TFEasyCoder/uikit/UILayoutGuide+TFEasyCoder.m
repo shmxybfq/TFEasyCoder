@@ -7,25 +7,11 @@
 //
 
 #import "UILayoutGuide+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UILayoutGuide (TFEasyCoder)
 
-+( UILayoutGuide *)easyCoder:(UILayoutGuideEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UILayoutGuide *)ins);
-        }
-    }];
-}
 
--( UILayoutGuide *)easyCoder:(UILayoutGuideEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -167,13 +153,7 @@
 
 
 
--(UILayoutGuide *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

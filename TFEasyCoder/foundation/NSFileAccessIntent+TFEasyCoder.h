@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSFileAccessIntentEasyCoderBlock) (NSFileAccessIntent * ins);
+
+
 
 @interface NSFileAccessIntent (TFEasyCoder)
 
-+( NSFileAccessIntent *)easyCoder:(NSFileAccessIntentEasyCoderBlock)block;
--(NSFileAccessIntent *)easyCoder:(NSFileAccessIntentEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSFileAccessIntentEasyCoderBlock) (NSFileAccessIntent * ins);
 
 
 
--(NSFileAccessIntent *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

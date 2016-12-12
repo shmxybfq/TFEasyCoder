@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIMenuItemEasyCoderBlock) (UIMenuItem * ins);
+
+
 
 @interface UIMenuItem (TFEasyCoder)
 
-+( UIMenuItem *)easyCoder:(UIMenuItemEasyCoderBlock)block;
--(UIMenuItem *)easyCoder:(UIMenuItemEasyCoderBlock)block;
+
+
 
 
 -(UIMenuItem  *(^)(NSString *  title))set_title;
@@ -44,7 +44,7 @@ typedef void(^UIMenuItemEasyCoderBlock) (UIMenuItem * ins);
 
 
 
--(UIMenuItem *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

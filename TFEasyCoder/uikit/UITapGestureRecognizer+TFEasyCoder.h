@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UITapGestureRecognizerEasyCoderBlock) (UITapGestureRecognizer * ins);
+
+
 
 @interface UITapGestureRecognizer (TFEasyCoder)
 
-+( UITapGestureRecognizer *)easyCoder:(UITapGestureRecognizerEasyCoderBlock)block;
--(UITapGestureRecognizer *)easyCoder:(UITapGestureRecognizerEasyCoderBlock)block;
+
+
 
 
 -(UITapGestureRecognizer  *(^)(unsigned long long  numberOfTapsRequired))set_numberOfTapsRequired;
@@ -52,7 +52,7 @@ typedef void(^UITapGestureRecognizerEasyCoderBlock) (UITapGestureRecognizer * in
 
 
 
--(UITapGestureRecognizer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

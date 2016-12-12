@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIAccessibilityCustomActionEasyCoderBlock) (UIAccessibilityCustomAction * ins);
+
+
 
 @interface UIAccessibilityCustomAction (TFEasyCoder)
 
-+( UIAccessibilityCustomAction *)easyCoder:(UIAccessibilityCustomActionEasyCoderBlock)block;
--(UIAccessibilityCustomAction *)easyCoder:(UIAccessibilityCustomActionEasyCoderBlock)block;
+
+
 
 
 -(UIAccessibilityCustomAction  *(^)(NSString *  name))set_name;
@@ -44,7 +44,7 @@ typedef void(^UIAccessibilityCustomActionEasyCoderBlock) (UIAccessibilityCustomA
 
 
 
--(UIAccessibilityCustomAction *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSUbiquitousKeyValueStoreEasyCoderBlock) (NSUbiquitousKeyValueStore * ins);
+
+
 
 @interface NSUbiquitousKeyValueStore (TFEasyCoder)
 
-+( NSUbiquitousKeyValueStore *)easyCoder:(NSUbiquitousKeyValueStoreEasyCoderBlock)block;
--(NSUbiquitousKeyValueStore *)easyCoder:(NSUbiquitousKeyValueStoreEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSUbiquitousKeyValueStoreEasyCoderBlock) (NSUbiquitousKeyValueStor
 
 
 
--(NSUbiquitousKeyValueStore *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

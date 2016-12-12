@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSURLComponentsEasyCoderBlock) (NSURLComponents * ins);
+
+
 
 @interface NSURLComponents (TFEasyCoder)
 
-+( NSURLComponents *)easyCoder:(NSURLComponentsEasyCoderBlock)block;
--(NSURLComponents *)easyCoder:(NSURLComponentsEasyCoderBlock)block;
+
+
 
 
 -(NSURLComponents  *(^)(NSString *  scheme))set_scheme;
@@ -57,7 +57,7 @@ typedef void(^NSURLComponentsEasyCoderBlock) (NSURLComponents * ins);
 
 
 
--(NSURLComponents *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

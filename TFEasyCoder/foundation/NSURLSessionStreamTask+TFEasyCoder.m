@@ -7,25 +7,11 @@
 //
 
 #import "NSURLSessionStreamTask+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSURLSessionStreamTask (TFEasyCoder)
 
-+( NSURLSessionStreamTask *)easyCoder:(NSURLSessionStreamTaskEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSURLSessionStreamTask *)ins);
-        }
-    }];
-}
 
--( NSURLSessionStreamTask *)easyCoder:(NSURLSessionStreamTaskEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -168,13 +154,7 @@
 
 
 
--(NSURLSessionStreamTask *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

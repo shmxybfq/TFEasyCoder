@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIMotionEffectGroupEasyCoderBlock) (UIMotionEffectGroup * ins);
+
+
 
 @interface UIMotionEffectGroup (TFEasyCoder)
 
-+( UIMotionEffectGroup *)easyCoder:(UIMotionEffectGroupEasyCoderBlock)block;
--(UIMotionEffectGroup *)easyCoder:(UIMotionEffectGroupEasyCoderBlock)block;
+
+
 
 
 -(UIMotionEffectGroup  *(^)(NSArray *  motionEffects))set_motionEffects;
@@ -44,7 +44,7 @@ typedef void(^UIMotionEffectGroupEasyCoderBlock) (UIMotionEffectGroup * ins);
 
 
 
--(UIMotionEffectGroup *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

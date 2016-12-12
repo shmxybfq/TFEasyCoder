@@ -7,25 +7,11 @@
 //
 
 #import "UIRefreshControl+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UIRefreshControl (TFEasyCoder)
 
-+( UIRefreshControl *)easyCoder:(UIRefreshControlEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIRefreshControl *)ins);
-        }
-    }];
-}
 
--( UIRefreshControl *)easyCoder:(UIRefreshControlEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -274,13 +260,7 @@
 
 
 
--(UIRefreshControl *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

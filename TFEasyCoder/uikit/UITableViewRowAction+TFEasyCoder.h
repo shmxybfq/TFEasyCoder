@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UITableViewRowActionEasyCoderBlock) (UITableViewRowAction * ins);
+
+
 
 @interface UITableViewRowAction (TFEasyCoder)
 
-+( UITableViewRowAction *)easyCoder:(UITableViewRowActionEasyCoderBlock)block;
--(UITableViewRowAction *)easyCoder:(UITableViewRowActionEasyCoderBlock)block;
+
+
 
 
 -(UITableViewRowAction  *(^)(NSString *  title))set_title;
@@ -45,7 +45,7 @@ typedef void(^UITableViewRowActionEasyCoderBlock) (UITableViewRowAction * ins);
 
 
 
--(UITableViewRowAction *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

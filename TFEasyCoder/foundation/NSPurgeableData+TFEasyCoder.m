@@ -7,25 +7,11 @@
 //
 
 #import "NSPurgeableData+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSPurgeableData (TFEasyCoder)
 
-+( NSPurgeableData *)easyCoder:(NSPurgeableDataEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSPurgeableData *)ins);
-        }
-    }];
-}
 
--( NSPurgeableData *)easyCoder:(NSPurgeableDataEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -161,13 +147,7 @@
 
 
 
--(NSPurgeableData *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

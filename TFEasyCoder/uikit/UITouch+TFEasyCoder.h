@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UITouchEasyCoderBlock) (UITouch * ins);
+
+
 
 @interface UITouch (TFEasyCoder)
 
-+( UITouch *)easyCoder:(UITouchEasyCoderBlock)block;
--(UITouch *)easyCoder:(UITouchEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^UITouchEasyCoderBlock) (UITouch * ins);
 
 
 
--(UITouch *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

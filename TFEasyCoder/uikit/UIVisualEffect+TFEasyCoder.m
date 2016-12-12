@@ -7,25 +7,11 @@
 //
 
 #import "UIVisualEffect+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UIVisualEffect (TFEasyCoder)
 
-+( UIVisualEffect *)easyCoder:(UIVisualEffectEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIVisualEffect *)ins);
-        }
-    }];
-}
 
--( UIVisualEffect *)easyCoder:(UIVisualEffectEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -151,13 +137,7 @@
 
 
 
--(UIVisualEffect *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

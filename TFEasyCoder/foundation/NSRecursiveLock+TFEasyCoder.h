@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSRecursiveLockEasyCoderBlock) (NSRecursiveLock * ins);
+
+
 
 @interface NSRecursiveLock (TFEasyCoder)
 
-+( NSRecursiveLock *)easyCoder:(NSRecursiveLockEasyCoderBlock)block;
--(NSRecursiveLock *)easyCoder:(NSRecursiveLockEasyCoderBlock)block;
+
+
 
 
 -(NSRecursiveLock  *(^)(NSString *  name))set_name;
@@ -43,7 +43,7 @@ typedef void(^NSRecursiveLockEasyCoderBlock) (NSRecursiveLock * ins);
 
 
 
--(NSRecursiveLock *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIPopoverPresentationControllerEasyCoderBlock) (UIPopoverPresentationController * ins);
+
+
 
 @interface UIPopoverPresentationController (TFEasyCoder)
 
-+( UIPopoverPresentationController *)easyCoder:(UIPopoverPresentationControllerEasyCoderBlock)block;
--(UIPopoverPresentationController *)easyCoder:(UIPopoverPresentationControllerEasyCoderBlock)block;
+
+
 
 -(UIPopoverPresentationController  *(^)(id<UIPopoverPresentationControllerDelegate>    delegate))set_delegate;
 -(UIPopoverPresentationController  *(^)(unsigned long long  permittedArrowDirections))set_permittedArrowDirections;
@@ -53,7 +53,7 @@ typedef void(^UIPopoverPresentationControllerEasyCoderBlock) (UIPopoverPresentat
 
 
 
--(UIPopoverPresentationController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

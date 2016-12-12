@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIWebViewEasyCoderBlock) (UIWebView * ins);
+
+
 
 @interface UIWebView (TFEasyCoder)
 
-+( UIWebView *)easyCoder:(UIWebViewEasyCoderBlock)block;
--(UIWebView *)easyCoder:(UIWebViewEasyCoderBlock)block;
+
+
 
 
 -(UIWebView  *(^)(id<UIWebViewDelegate>   delegate))set_delegate;
@@ -67,7 +67,7 @@ typedef void(^UIWebViewEasyCoderBlock) (UIWebView * ins);
 
 
 
--(UIWebView *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

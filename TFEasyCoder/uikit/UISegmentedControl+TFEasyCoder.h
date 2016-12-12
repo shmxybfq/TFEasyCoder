@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UISegmentedControlEasyCoderBlock) (UISegmentedControl * ins);
+
+
 
 @interface UISegmentedControl (TFEasyCoder)
 
-+( UISegmentedControl *)easyCoder:(UISegmentedControlEasyCoderBlock)block;
--(UISegmentedControl *)easyCoder:(UISegmentedControlEasyCoderBlock)block;
+
+
 
 
 -(UISegmentedControl  *(^)(long long  segmentedControlStyle))set_segmentedControlStyle;
@@ -63,7 +63,7 @@ typedef void(^UISegmentedControlEasyCoderBlock) (UISegmentedControl * ins);
 
 
 
--(UISegmentedControl *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

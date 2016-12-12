@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UINavigationControllerEasyCoderBlock) (UINavigationController * ins);
+
+
 
 @interface UINavigationController (TFEasyCoder)
 
-+( UINavigationController *)easyCoder:(UINavigationControllerEasyCoderBlock)block;
--(UINavigationController *)easyCoder:(UINavigationControllerEasyCoderBlock)block;
+
+
 
 
 -(UINavigationController  *(^)(NSArray *  viewControllers))set_viewControllers;
@@ -71,7 +71,7 @@ typedef void(^UINavigationControllerEasyCoderBlock) (UINavigationController * in
 
 
 
--(UINavigationController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

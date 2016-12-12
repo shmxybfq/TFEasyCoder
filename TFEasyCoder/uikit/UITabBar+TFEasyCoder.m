@@ -7,7 +7,7 @@
 //
 
 #import "UITabBar+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 
 #pragma clang diagnostic push
@@ -16,21 +16,7 @@
 
 @implementation UITabBar (TFEasyCoder)
 
-+( UITabBar *)easyCoder:(UITabBarEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UITabBar *)ins);
-        }
-    }];
-}
 
--( UITabBar *)easyCoder:(UITabBarEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -334,13 +320,7 @@
 
 
 
--(UITabBar *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

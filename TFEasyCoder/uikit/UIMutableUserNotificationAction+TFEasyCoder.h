@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIMutableUserNotificationActionEasyCoderBlock) (UIMutableUserNotificationAction * ins);
+
+
 
 @interface UIMutableUserNotificationAction (TFEasyCoder)
 
-+( UIMutableUserNotificationAction *)easyCoder:(UIMutableUserNotificationActionEasyCoderBlock)block;
--(UIMutableUserNotificationAction *)easyCoder:(UIMutableUserNotificationActionEasyCoderBlock)block;
+
+
 
 
 -(UIMutableUserNotificationAction  *(^)(NSString *  identifier))set_identifier;
@@ -49,7 +49,7 @@ typedef void(^UIMutableUserNotificationActionEasyCoderBlock) (UIMutableUserNotif
 
 
 
--(UIMutableUserNotificationAction *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

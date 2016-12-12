@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UICollectionViewLayoutAttributesEasyCoderBlock) (UICollectionViewLayoutAttributes * ins);
+
+
 
 @interface UICollectionViewLayoutAttributes (TFEasyCoder)
 
-+( UICollectionViewLayoutAttributes *)easyCoder:(UICollectionViewLayoutAttributesEasyCoderBlock)block;
--(UICollectionViewLayoutAttributes *)easyCoder:(UICollectionViewLayoutAttributesEasyCoderBlock)block;
+
+
 
 
 -(UICollectionViewLayoutAttributes  *(^)(CGPoint  center))set_center;
@@ -50,7 +50,7 @@ typedef void(^UICollectionViewLayoutAttributesEasyCoderBlock) (UICollectionViewL
 
 
 
--(UICollectionViewLayoutAttributes *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

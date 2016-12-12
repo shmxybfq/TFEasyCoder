@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSURLProtocolEasyCoderBlock) (NSURLProtocol * ins);
+
+
 
 @interface NSURLProtocol (TFEasyCoder)
 
-+( NSURLProtocol *)easyCoder:(NSURLProtocolEasyCoderBlock)block;
--(NSURLProtocol *)easyCoder:(NSURLProtocolEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSURLProtocolEasyCoderBlock) (NSURLProtocol * ins);
 
 
 
--(NSURLProtocol *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

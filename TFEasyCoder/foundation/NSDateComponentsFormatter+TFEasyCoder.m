@@ -7,25 +7,11 @@
 //
 
 #import "NSDateComponentsFormatter+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSDateComponentsFormatter (TFEasyCoder)
 
-+( NSDateComponentsFormatter *)easyCoder:(NSDateComponentsFormatterEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSDateComponentsFormatter *)ins);
-        }
-    }];
-}
 
--( NSDateComponentsFormatter *)easyCoder:(NSDateComponentsFormatterEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -232,13 +218,7 @@
 
 
 
--(NSDateComponentsFormatter *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

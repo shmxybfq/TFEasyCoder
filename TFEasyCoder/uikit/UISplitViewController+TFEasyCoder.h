@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UISplitViewControllerEasyCoderBlock) (UISplitViewController * ins);
+
+
 
 @interface UISplitViewController (TFEasyCoder)
 
-+( UISplitViewController *)easyCoder:(UISplitViewControllerEasyCoderBlock)block;
--(UISplitViewController *)easyCoder:(UISplitViewControllerEasyCoderBlock)block;
+
+
 
 
 -(UISplitViewController  *(^)(NSArray *  viewControllers))set_viewControllers;
@@ -70,7 +70,7 @@ typedef void(^UISplitViewControllerEasyCoderBlock) (UISplitViewController * ins)
 
 
 
--(UISplitViewController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

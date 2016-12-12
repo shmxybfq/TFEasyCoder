@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIDictationPhraseEasyCoderBlock) (UIDictationPhrase * ins);
+
+
 
 @interface UIDictationPhrase (TFEasyCoder)
 
-+( UIDictationPhrase *)easyCoder:(UIDictationPhraseEasyCoderBlock)block;
--(UIDictationPhrase *)easyCoder:(UIDictationPhraseEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^UIDictationPhraseEasyCoderBlock) (UIDictationPhrase * ins);
 
 
 
--(UIDictationPhrase *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

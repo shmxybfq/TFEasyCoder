@@ -7,25 +7,11 @@
 //
 
 #import "UISimpleTextPrintFormatter+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UISimpleTextPrintFormatter (TFEasyCoder)
 
-+( UISimpleTextPrintFormatter *)easyCoder:(UISimpleTextPrintFormatterEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UISimpleTextPrintFormatter *)ins);
-        }
-    }];
-}
 
--( UISimpleTextPrintFormatter *)easyCoder:(UISimpleTextPrintFormatterEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -232,13 +218,7 @@
 
 
 
--(UISimpleTextPrintFormatter *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

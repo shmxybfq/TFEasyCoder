@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSMapTableEasyCoderBlock) (NSMapTable * ins);
+
+
 
 @interface NSMapTable (TFEasyCoder)
 
-+( NSMapTable *)easyCoder:(NSMapTableEasyCoderBlock)block;
--(NSMapTable *)easyCoder:(NSMapTableEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSMapTableEasyCoderBlock) (NSMapTable * ins);
 
 
 
--(NSMapTable *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

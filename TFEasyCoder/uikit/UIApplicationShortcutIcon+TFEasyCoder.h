@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIApplicationShortcutIconEasyCoderBlock) (UIApplicationShortcutIcon * ins);
+
+
 
 @interface UIApplicationShortcutIcon (TFEasyCoder)
 
-+( UIApplicationShortcutIcon *)easyCoder:(UIApplicationShortcutIconEasyCoderBlock)block;
--(UIApplicationShortcutIcon *)easyCoder:(UIApplicationShortcutIconEasyCoderBlock)block;
+
+
 
 
 
@@ -41,7 +41,7 @@ typedef void(^UIApplicationShortcutIconEasyCoderBlock) (UIApplicationShortcutIco
 
 
 
--(UIApplicationShortcutIcon *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSTimerEasyCoderBlock) (NSTimer * ins);
+
+
 
 @interface NSTimer (TFEasyCoder)
 
-+( NSTimer *)easyCoder:(NSTimerEasyCoderBlock)block;
--(NSTimer *)easyCoder:(NSTimerEasyCoderBlock)block;
+
+
 
 
 -(NSTimer  *(^)(NSDate *  fireDate))set_fireDate;
@@ -44,7 +44,7 @@ typedef void(^NSTimerEasyCoderBlock) (NSTimer * ins);
 
 
 
--(NSTimer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

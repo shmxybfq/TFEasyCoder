@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIStoryboardSegueEasyCoderBlock) (UIStoryboardSegue * ins);
+
+
 
 @interface UIStoryboardSegue (TFEasyCoder)
 
-+( UIStoryboardSegue *)easyCoder:(UIStoryboardSegueEasyCoderBlock)block;
--(UIStoryboardSegue *)easyCoder:(UIStoryboardSegueEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^UIStoryboardSegueEasyCoderBlock) (UIStoryboardSegue * ins);
 
 
 
--(UIStoryboardSegue *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

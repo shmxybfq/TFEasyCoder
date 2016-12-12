@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIScrollViewEasyCoderBlock) (UIScrollView * ins);
+
+
 
 @interface UIScrollView (TFEasyCoder)
 
-+( UIScrollView *)easyCoder:(UIScrollViewEasyCoderBlock)block;
--(UIScrollView *)easyCoder:(UIScrollViewEasyCoderBlock)block;
+
+
 
 
 -(UIScrollView  *(^)(CGPoint  contentOffset))set_contentOffset;
@@ -76,7 +76,7 @@ typedef void(^UIScrollViewEasyCoderBlock) (UIScrollView * ins);
 
 
 
--(UIScrollView *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

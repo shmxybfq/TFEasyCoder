@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UISearchContainerViewControllerEasyCoderBlock) (UISearchContainerViewController * ins);
+
+
 
 @interface UISearchContainerViewController (TFEasyCoder)
 
-+( UISearchContainerViewController *)easyCoder:(UISearchContainerViewControllerEasyCoderBlock)block;
--(UISearchContainerViewController *)easyCoder:(UISearchContainerViewControllerEasyCoderBlock)block;
+
+
 
 
 
@@ -61,7 +61,7 @@ typedef void(^UISearchContainerViewControllerEasyCoderBlock) (UISearchContainerV
 
 
 
--(UISearchContainerViewController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

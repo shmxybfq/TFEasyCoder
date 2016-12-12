@@ -7,25 +7,11 @@
 //
 
 #import "UIDynamicBehavior+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UIDynamicBehavior (TFEasyCoder)
 
-+( UIDynamicBehavior *)easyCoder:(UIDynamicBehaviorEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIDynamicBehavior *)ins);
-        }
-    }];
-}
 
--( UIDynamicBehavior *)easyCoder:(UIDynamicBehaviorEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -151,13 +137,7 @@
 
 
 
--(UIDynamicBehavior *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

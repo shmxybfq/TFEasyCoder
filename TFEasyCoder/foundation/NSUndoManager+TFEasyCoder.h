@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSUndoManagerEasyCoderBlock) (NSUndoManager * ins);
+
+
 
 @interface NSUndoManager (TFEasyCoder)
 
-+( NSUndoManager *)easyCoder:(NSUndoManagerEasyCoderBlock)block;
--(NSUndoManager *)easyCoder:(NSUndoManagerEasyCoderBlock)block;
+
+
 
 
 -(NSUndoManager  *(^)(BOOL  groupsByEvent))set_groupsByEvent;
@@ -45,7 +45,7 @@ typedef void(^NSUndoManagerEasyCoderBlock) (NSUndoManager * ins);
 
 
 
--(NSUndoManager *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

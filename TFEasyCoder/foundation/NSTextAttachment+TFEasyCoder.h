@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSTextAttachmentEasyCoderBlock) (NSTextAttachment * ins);
+
+
 
 @interface NSTextAttachment (TFEasyCoder)
 
-+( NSTextAttachment *)easyCoder:(NSTextAttachmentEasyCoderBlock)block;
--(NSTextAttachment *)easyCoder:(NSTextAttachmentEasyCoderBlock)block;
+
+
 
 
 -(NSTextAttachment  *(^)(NSData *  contents))set_contents;
@@ -46,7 +46,7 @@ typedef void(^NSTextAttachmentEasyCoderBlock) (NSTextAttachment * ins);
 
 
 
--(NSTextAttachment *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIPickerViewEasyCoderBlock) (UIPickerView * ins);
+
+
 
 @interface UIPickerView (TFEasyCoder)
 
-+( UIPickerView *)easyCoder:(UIPickerViewEasyCoderBlock)block;
--(UIPickerView *)easyCoder:(UIPickerViewEasyCoderBlock)block;
+
+
 
 
 -(UIPickerView  *(^)(id<UIPickerViewDataSource>  dataSource))set_dataSource;
@@ -56,7 +56,7 @@ typedef void(^UIPickerViewEasyCoderBlock) (UIPickerView * ins);
 
 
 
--(UIPickerView *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

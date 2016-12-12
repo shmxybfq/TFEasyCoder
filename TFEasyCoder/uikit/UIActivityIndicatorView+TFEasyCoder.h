@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIActivityIndicatorViewEasyCoderBlock) (UIActivityIndicatorView * ins);
+
+
 
 @interface UIActivityIndicatorView (TFEasyCoder)
 
-+( UIActivityIndicatorView *)easyCoder:(UIActivityIndicatorViewEasyCoderBlock)block;
--(UIActivityIndicatorView *)easyCoder:(UIActivityIndicatorViewEasyCoderBlock)block;
+
+
 
 
 -(UIActivityIndicatorView  *(^)(long long  activityIndicatorViewStyle))set_activityIndicatorViewStyle;
@@ -56,7 +56,7 @@ typedef void(^UIActivityIndicatorViewEasyCoderBlock) (UIActivityIndicatorView * 
 
 
 
--(UIActivityIndicatorView *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

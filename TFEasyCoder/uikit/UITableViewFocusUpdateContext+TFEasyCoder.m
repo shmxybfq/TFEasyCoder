@@ -7,25 +7,11 @@
 //
 
 #import "UITableViewFocusUpdateContext+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UITableViewFocusUpdateContext (TFEasyCoder)
 
-+( UITableViewFocusUpdateContext *)easyCoder:(UITableViewFocusUpdateContextEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UITableViewFocusUpdateContext *)ins);
-        }
-    }];
-}
 
--( UITableViewFocusUpdateContext *)easyCoder:(UITableViewFocusUpdateContextEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -152,13 +138,7 @@
 
 
 
--(UITableViewFocusUpdateContext *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

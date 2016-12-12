@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIVibrancyEffectEasyCoderBlock) (UIVibrancyEffect * ins);
+
+
 
 @interface UIVibrancyEffect (TFEasyCoder)
 
-+( UIVibrancyEffect *)easyCoder:(UIVibrancyEffectEasyCoderBlock)block;
--(UIVibrancyEffect *)easyCoder:(UIVibrancyEffectEasyCoderBlock)block;
+
+
 
 
 
@@ -43,7 +43,7 @@ typedef void(^UIVibrancyEffectEasyCoderBlock) (UIVibrancyEffect * ins);
 
 
 
--(UIVibrancyEffect *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

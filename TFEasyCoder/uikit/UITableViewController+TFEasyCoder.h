@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UITableViewControllerEasyCoderBlock) (UITableViewController * ins);
+
+
 
 @interface UITableViewController (TFEasyCoder)
 
-+( UITableViewController *)easyCoder:(UITableViewControllerEasyCoderBlock)block;
--(UITableViewController *)easyCoder:(UITableViewControllerEasyCoderBlock)block;
+
+
 
 
 -(UITableViewController  *(^)(UITableView *  tableView))set_tableView;
@@ -64,7 +64,7 @@ typedef void(^UITableViewControllerEasyCoderBlock) (UITableViewController * ins)
 
 
 
--(UITableViewController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

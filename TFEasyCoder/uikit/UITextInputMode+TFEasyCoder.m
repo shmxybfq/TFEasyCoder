@@ -7,25 +7,11 @@
 //
 
 #import "UITextInputMode+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UITextInputMode (TFEasyCoder)
 
-+( UITextInputMode *)easyCoder:(UITextInputModeEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UITextInputMode *)ins);
-        }
-    }];
-}
 
--( UITextInputMode *)easyCoder:(UITextInputModeEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -151,13 +137,7 @@
 
 
 
--(UITextInputMode *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

@@ -7,25 +7,11 @@
 //
 
 #import "UIResponder+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UIResponder (TFEasyCoder)
 
-+( UIResponder *)easyCoder:(UIResponderEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIResponder *)ins);
-        }
-    }];
-}
 
--( UIResponder *)easyCoder:(UIResponderEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -160,13 +146,7 @@
 
 
 
--(UIResponder *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

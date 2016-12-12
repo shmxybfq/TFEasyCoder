@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSStringDrawingContextEasyCoderBlock) (NSStringDrawingContext * ins);
+
+
 
 @interface NSStringDrawingContext (TFEasyCoder)
 
-+( NSStringDrawingContext *)easyCoder:(NSStringDrawingContextEasyCoderBlock)block;
--(NSStringDrawingContext *)easyCoder:(NSStringDrawingContextEasyCoderBlock)block;
+
+
 
 -(NSStringDrawingContext  *(^)(double  minimumTrackingAdjustment))set_minimumTrackingAdjustment;
 -(NSStringDrawingContext  *(^)(double  minimumScaleFactor))set_minimumScaleFactor;
@@ -43,7 +43,7 @@ typedef void(^NSStringDrawingContextEasyCoderBlock) (NSStringDrawingContext * in
 
 
 
--(NSStringDrawingContext *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

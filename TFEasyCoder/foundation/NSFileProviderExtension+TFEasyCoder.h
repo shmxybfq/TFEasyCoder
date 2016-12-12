@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSFileProviderExtensionEasyCoderBlock) (NSFileProviderExtension * ins);
+
+
 
 @interface NSFileProviderExtension (TFEasyCoder)
 
-+( NSFileProviderExtension *)easyCoder:(NSFileProviderExtensionEasyCoderBlock)block;
--(NSFileProviderExtension *)easyCoder:(NSFileProviderExtensionEasyCoderBlock)block;
+
+
 
 
 
@@ -41,7 +41,7 @@ typedef void(^NSFileProviderExtensionEasyCoderBlock) (NSFileProviderExtension * 
 
 
 
--(NSFileProviderExtension *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

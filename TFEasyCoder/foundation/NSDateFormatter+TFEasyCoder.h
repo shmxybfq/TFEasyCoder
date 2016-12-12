@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSDateFormatterEasyCoderBlock) (NSDateFormatter * ins);
+
+
 
 @interface NSDateFormatter (TFEasyCoder)
 
-+( NSDateFormatter *)easyCoder:(NSDateFormatterEasyCoderBlock)block;
--(NSDateFormatter *)easyCoder:(NSDateFormatterEasyCoderBlock)block;
+
+
 
 
 -(NSDateFormatter  *(^)(long long  formattingContext))set_formattingContext;
@@ -77,7 +77,7 @@ typedef void(^NSDateFormatterEasyCoderBlock) (NSDateFormatter * ins);
 
 
 
--(NSDateFormatter *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

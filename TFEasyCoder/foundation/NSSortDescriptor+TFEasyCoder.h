@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSSortDescriptorEasyCoderBlock) (NSSortDescriptor * ins);
+
+
 
 @interface NSSortDescriptor (TFEasyCoder)
 
-+( NSSortDescriptor *)easyCoder:(NSSortDescriptorEasyCoderBlock)block;
--(NSSortDescriptor *)easyCoder:(NSSortDescriptorEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSSortDescriptorEasyCoderBlock) (NSSortDescriptor * ins);
 
 
 
--(NSSortDescriptor *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSMetadataQueryAttributeValueTupleEasyCoderBlock) (NSMetadataQueryAttributeValueTuple * ins);
+
+
 
 @interface NSMetadataQueryAttributeValueTuple (TFEasyCoder)
 
-+( NSMetadataQueryAttributeValueTuple *)easyCoder:(NSMetadataQueryAttributeValueTupleEasyCoderBlock)block;
--(NSMetadataQueryAttributeValueTuple *)easyCoder:(NSMetadataQueryAttributeValueTupleEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSMetadataQueryAttributeValueTupleEasyCoderBlock) (NSMetadataQuery
 
 
 
--(NSMetadataQueryAttributeValueTuple *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

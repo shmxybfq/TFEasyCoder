@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIStoryboardEasyCoderBlock) (UIStoryboard * ins);
+
+
 
 @interface UIStoryboard (TFEasyCoder)
 
-+( UIStoryboard *)easyCoder:(UIStoryboardEasyCoderBlock)block;
--(UIStoryboard *)easyCoder:(UIStoryboardEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^UIStoryboardEasyCoderBlock) (UIStoryboard * ins);
 
 
 
--(UIStoryboard *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

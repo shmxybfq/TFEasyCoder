@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIColorEasyCoderBlock) (UIColor * ins);
+
+
 
 @interface UIColor (TFEasyCoder)
 
-+( UIColor *)easyCoder:(UIColorEasyCoderBlock)block;
--(UIColor *)easyCoder:(UIColorEasyCoderBlock)block;
+
+
 
 
 
@@ -41,7 +41,7 @@ typedef void(^UIColorEasyCoderBlock) (UIColor * ins);
 
 
 
--(UIColor *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

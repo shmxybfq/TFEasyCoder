@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIPrinterEasyCoderBlock) (UIPrinter * ins);
+
+
 
 @interface UIPrinter (TFEasyCoder)
 
-+( UIPrinter *)easyCoder:(UIPrinterEasyCoderBlock)block;
--(UIPrinter *)easyCoder:(UIPrinterEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^UIPrinterEasyCoderBlock) (UIPrinter * ins);
 
 
 
--(UIPrinter *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

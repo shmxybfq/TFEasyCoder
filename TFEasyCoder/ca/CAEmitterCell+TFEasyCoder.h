@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^CAEmitterCellEasyCoderBlock) (CAEmitterCell * ins);
+
+
 
 @interface CAEmitterCell (TFEasyCoder)
 
-+( CAEmitterCell *)easyCoder:(CAEmitterCellEasyCoderBlock)block;
--(CAEmitterCell *)easyCoder:(CAEmitterCellEasyCoderBlock)block;
+
+
 
 
 
@@ -84,7 +84,7 @@ typedef void(^CAEmitterCellEasyCoderBlock) (CAEmitterCell * ins);
 
 
 
--(CAEmitterCell *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -7,25 +7,11 @@
 //
 
 #import "NSURLSessionConfiguration+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSURLSessionConfiguration (TFEasyCoder)
 
-+( NSURLSessionConfiguration *)easyCoder:(NSURLSessionConfigurationEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSURLSessionConfiguration *)ins);
-        }
-    }];
-}
 
--( NSURLSessionConfiguration *)easyCoder:(NSURLSessionConfigurationEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -304,13 +290,7 @@
 
 
 
--(NSURLSessionConfiguration *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

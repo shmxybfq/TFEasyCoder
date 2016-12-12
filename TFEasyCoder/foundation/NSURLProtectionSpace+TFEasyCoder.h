@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSURLProtectionSpaceEasyCoderBlock) (NSURLProtectionSpace * ins);
+
+
 
 @interface NSURLProtectionSpace (TFEasyCoder)
 
-+( NSURLProtectionSpace *)easyCoder:(NSURLProtectionSpaceEasyCoderBlock)block;
--(NSURLProtectionSpace *)easyCoder:(NSURLProtectionSpaceEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSURLProtectionSpaceEasyCoderBlock) (NSURLProtectionSpace * ins);
 
 
 
--(NSURLProtectionSpace *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

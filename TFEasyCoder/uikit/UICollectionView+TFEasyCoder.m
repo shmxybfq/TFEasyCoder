@@ -7,25 +7,11 @@
 //
 
 #import "UICollectionView+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UICollectionView (TFEasyCoder)
 
-+( UICollectionView *)easyCoder:(UICollectionViewEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UICollectionView *)ins);
-        }
-    }];
-}
 
--( UICollectionView *)easyCoder:(UICollectionViewEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -452,13 +438,7 @@
 
 
 
--(UICollectionView *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

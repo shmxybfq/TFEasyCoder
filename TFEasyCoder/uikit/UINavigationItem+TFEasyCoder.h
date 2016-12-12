@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UINavigationItemEasyCoderBlock) (UINavigationItem * ins);
+
+
 
 @interface UINavigationItem (TFEasyCoder)
 
-+( UINavigationItem *)easyCoder:(UINavigationItemEasyCoderBlock)block;
--(UINavigationItem *)easyCoder:(UINavigationItemEasyCoderBlock)block;
+
+
 
 
 -(UINavigationItem  *(^)(NSString *  title))set_title;
@@ -52,7 +52,7 @@ typedef void(^UINavigationItemEasyCoderBlock) (UINavigationItem * ins);
 
 
 
--(UINavigationItem *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

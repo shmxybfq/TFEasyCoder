@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UITextRangeEasyCoderBlock) (UITextRange * ins);
+
+
 
 @interface UITextRange (TFEasyCoder)
 
-+( UITextRange *)easyCoder:(UITextRangeEasyCoderBlock)block;
--(UITextRange *)easyCoder:(UITextRangeEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^UITextRangeEasyCoderBlock) (UITextRange * ins);
 
 
 
--(UITextRange *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

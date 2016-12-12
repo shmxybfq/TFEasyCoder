@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSCalendarEasyCoderBlock) (NSCalendar * ins);
+
+
 
 @interface NSCalendar (TFEasyCoder)
 
-+( NSCalendar *)easyCoder:(NSCalendarEasyCoderBlock)block;
--(NSCalendar *)easyCoder:(NSCalendarEasyCoderBlock)block;
+
+
 
 
 -(NSCalendar  *(^)(NSLocale *  locale))set_locale;
@@ -46,7 +46,7 @@ typedef void(^NSCalendarEasyCoderBlock) (NSCalendar * ins);
 
 
 
--(NSCalendar *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

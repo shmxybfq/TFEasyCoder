@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSMetadataQueryEasyCoderBlock) (NSMetadataQuery * ins);
+
+
 
 @interface NSMetadataQuery (TFEasyCoder)
 
-+( NSMetadataQuery *)easyCoder:(NSMetadataQueryEasyCoderBlock)block;
--(NSMetadataQuery *)easyCoder:(NSMetadataQueryEasyCoderBlock)block;
+
+
 
 
 -(NSMetadataQuery  *(^)(id<NSMetadataQueryDelegate>   delegate))set_delegate;
@@ -51,7 +51,7 @@ typedef void(^NSMetadataQueryEasyCoderBlock) (NSMetadataQuery * ins);
 
 
 
--(NSMetadataQuery *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

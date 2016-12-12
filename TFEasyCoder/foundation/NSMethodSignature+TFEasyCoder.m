@@ -7,25 +7,11 @@
 //
 
 #import "NSMethodSignature+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSMethodSignature (TFEasyCoder)
 
-+( NSMethodSignature *)easyCoder:(NSMethodSignatureEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSMethodSignature *)ins);
-        }
-    }];
-}
 
--( NSMethodSignature *)easyCoder:(NSMethodSignatureEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -151,13 +137,7 @@
 
 
 
--(NSMethodSignature *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSOperationQueueEasyCoderBlock) (NSOperationQueue * ins);
+
+
 
 @interface NSOperationQueue (TFEasyCoder)
 
-+( NSOperationQueue *)easyCoder:(NSOperationQueueEasyCoderBlock)block;
--(NSOperationQueue *)easyCoder:(NSOperationQueueEasyCoderBlock)block;
+
+
 
 -(NSOperationQueue  *(^)(long long  maxConcurrentOperationCount))set_maxConcurrentOperationCount;
 -(NSOperationQueue  *(^)(BOOL  suspended))set_suspended;
@@ -47,7 +47,7 @@ typedef void(^NSOperationQueueEasyCoderBlock) (NSOperationQueue * ins);
 
 
 
--(NSOperationQueue *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

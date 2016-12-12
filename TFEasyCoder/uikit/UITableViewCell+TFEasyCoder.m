@@ -7,25 +7,11 @@
 //
 
 #import "UITableViewCell+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UITableViewCell (TFEasyCoder)
 
-+( UITableViewCell *)easyCoder:(UITableViewCellEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UITableViewCell *)ins);
-        }
-    }];
-}
 
--( UITableViewCell *)easyCoder:(UITableViewCellEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -353,13 +339,7 @@
 
 
 
--(UITableViewCell *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIPrintFormatterEasyCoderBlock) (UIPrintFormatter * ins);
+
+
 
 @interface UIPrintFormatter (TFEasyCoder)
 
-+( UIPrintFormatter *)easyCoder:(UIPrintFormatterEasyCoderBlock)block;
--(UIPrintFormatter *)easyCoder:(UIPrintFormatterEasyCoderBlock)block;
+
+
 
 
 -(UIPrintFormatter  *(^)(double  maximumContentHeight))set_maximumContentHeight;
@@ -47,7 +47,7 @@ typedef void(^UIPrintFormatterEasyCoderBlock) (UIPrintFormatter * ins);
 
 
 
--(UIPrintFormatter *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

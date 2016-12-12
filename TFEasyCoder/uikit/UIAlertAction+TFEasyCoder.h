@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIAlertActionEasyCoderBlock) (UIAlertAction * ins);
+
+
 
 @interface UIAlertAction (TFEasyCoder)
 
-+( UIAlertAction *)easyCoder:(UIAlertActionEasyCoderBlock)block;
--(UIAlertAction *)easyCoder:(UIAlertActionEasyCoderBlock)block;
+
+
 
 -(UIAlertAction  *(^)(BOOL  enabled))set_enabled;
 
@@ -43,7 +43,7 @@ typedef void(^UIAlertActionEasyCoderBlock) (UIAlertAction * ins);
 
 
 
--(UIAlertAction *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSUserActivityEasyCoderBlock) (NSUserActivity * ins);
+
+
 
 @interface NSUserActivity (TFEasyCoder)
 
-+( NSUserActivity *)easyCoder:(NSUserActivityEasyCoderBlock)block;
--(NSUserActivity *)easyCoder:(NSUserActivityEasyCoderBlock)block;
+
+
 
 
 -(NSUserActivity  *(^)(NSString *  title))set_title;
@@ -53,7 +53,7 @@ typedef void(^NSUserActivityEasyCoderBlock) (NSUserActivity * ins);
 
 
 
--(NSUserActivity *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

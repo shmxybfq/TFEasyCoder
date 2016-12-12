@@ -7,25 +7,11 @@
 //
 
 #import "NSCountedSet+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSCountedSet (TFEasyCoder)
 
-+( NSCountedSet *)easyCoder:(NSCountedSetEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSCountedSet *)ins);
-        }
-    }];
-}
 
--( NSCountedSet *)easyCoder:(NSCountedSetEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -153,13 +139,7 @@
 
 
 
--(NSCountedSet *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

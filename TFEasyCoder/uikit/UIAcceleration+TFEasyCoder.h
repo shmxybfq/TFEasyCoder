@@ -8,18 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
+
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 
-typedef void(^UIAccelerationEasyCoderBlock) (UIAcceleration * ins);
+
 
 @interface UIAcceleration (TFEasyCoder)
 
-+( UIAcceleration *)easyCoder:(UIAccelerationEasyCoderBlock)block;
--(UIAcceleration *)easyCoder:(UIAccelerationEasyCoderBlock)block;
+
+
 
 
 //superclass pros NSObject
@@ -41,7 +41,7 @@ typedef void(^UIAccelerationEasyCoderBlock) (UIAcceleration * ins);
 
 
 
--(UIAcceleration *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

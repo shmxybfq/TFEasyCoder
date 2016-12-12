@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^CAScrollLayerEasyCoderBlock) (CAScrollLayer * ins);
+
+
 
 @interface CAScrollLayer (TFEasyCoder)
 
-+( CAScrollLayer *)easyCoder:(CAScrollLayerEasyCoderBlock)block;
--(CAScrollLayer *)easyCoder:(CAScrollLayerEasyCoderBlock)block;
+
+
 
 
 -(CAScrollLayer  *(^)(NSString *  scrollMode))set_scrollMode;
@@ -92,7 +92,7 @@ typedef void(^CAScrollLayerEasyCoderBlock) (CAScrollLayer * ins);
 
 
 
--(CAScrollLayer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

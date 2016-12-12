@@ -7,25 +7,11 @@
 //
 
 #import "UITabBarItem+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UITabBarItem (TFEasyCoder)
 
-+( UITabBarItem *)easyCoder:(UITabBarItemEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UITabBarItem *)ins);
-        }
-    }];
-}
 
--( UITabBarItem *)easyCoder:(UITabBarItemEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -233,13 +219,7 @@
 
 
 
--(UITabBarItem *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

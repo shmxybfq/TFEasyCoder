@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIVisualEffectViewEasyCoderBlock) (UIVisualEffectView * ins);
+
+
 
 @interface UIVisualEffectView (TFEasyCoder)
 
-+( UIVisualEffectView *)easyCoder:(UIVisualEffectViewEasyCoderBlock)block;
--(UIVisualEffectView *)easyCoder:(UIVisualEffectViewEasyCoderBlock)block;
+
+
 
 
 -(UIVisualEffectView  *(^)(UIVisualEffect *  effect))set_effect;
@@ -54,7 +54,7 @@ typedef void(^UIVisualEffectViewEasyCoderBlock) (UIVisualEffectView * ins);
 
 
 
--(UIVisualEffectView *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

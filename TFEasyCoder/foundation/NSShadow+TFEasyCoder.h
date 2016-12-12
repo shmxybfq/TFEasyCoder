@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSShadowEasyCoderBlock) (NSShadow * ins);
+
+
 
 @interface NSShadow (TFEasyCoder)
 
-+( NSShadow *)easyCoder:(NSShadowEasyCoderBlock)block;
--(NSShadow *)easyCoder:(NSShadowEasyCoderBlock)block;
+
+
 
 
 -(NSShadow  *(^)(CGSize  shadowOffset))set_shadowOffset;
@@ -43,7 +43,7 @@ typedef void(^NSShadowEasyCoderBlock) (NSShadow * ins);
 
 
 
--(NSShadow *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

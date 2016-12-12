@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSPersonNameComponentsEasyCoderBlock) (NSPersonNameComponents * ins);
+
+
 
 @interface NSPersonNameComponents (TFEasyCoder)
 
-+( NSPersonNameComponents *)easyCoder:(NSPersonNameComponentsEasyCoderBlock)block;
--(NSPersonNameComponents *)easyCoder:(NSPersonNameComponentsEasyCoderBlock)block;
+
+
 
 
 -(NSPersonNameComponents  *(^)(NSString *  namePrefix))set_namePrefix;
@@ -49,7 +49,7 @@ typedef void(^NSPersonNameComponentsEasyCoderBlock) (NSPersonNameComponents * in
 
 
 
--(NSPersonNameComponents *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

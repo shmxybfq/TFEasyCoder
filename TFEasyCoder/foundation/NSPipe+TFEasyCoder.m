@@ -7,25 +7,11 @@
 //
 
 #import "NSPipe+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSPipe (TFEasyCoder)
 
-+( NSPipe *)easyCoder:(NSPipeEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSPipe *)ins);
-        }
-    }];
-}
 
--( NSPipe *)easyCoder:(NSPipeEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -151,13 +137,7 @@
 
 
 
--(NSPipe *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

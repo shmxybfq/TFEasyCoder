@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSParagraphStyleEasyCoderBlock) (NSParagraphStyle * ins);
+
+
 
 @interface NSParagraphStyle (TFEasyCoder)
 
-+( NSParagraphStyle *)easyCoder:(NSParagraphStyleEasyCoderBlock)block;
--(NSParagraphStyle *)easyCoder:(NSParagraphStyleEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSParagraphStyleEasyCoderBlock) (NSParagraphStyle * ins);
 
 
 
--(NSParagraphStyle *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UITabBarControllerEasyCoderBlock) (UITabBarController * ins);
+
+
 
 @interface UITabBarController (TFEasyCoder)
 
-+( UITabBarController *)easyCoder:(UITabBarControllerEasyCoderBlock)block;
--(UITabBarController *)easyCoder:(UITabBarControllerEasyCoderBlock)block;
+
+
 
 
 -(UITabBarController  *(^)(NSArray *  viewControllers))set_viewControllers;
@@ -68,7 +68,7 @@ typedef void(^UITabBarControllerEasyCoderBlock) (UITabBarController * ins);
 
 
 
--(UITabBarController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

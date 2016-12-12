@@ -7,25 +7,11 @@
 //
 
 #import "NSURLCredential+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSURLCredential (TFEasyCoder)
 
-+( NSURLCredential *)easyCoder:(NSURLCredentialEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSURLCredential *)ins);
-        }
-    }];
-}
 
--( NSURLCredential *)easyCoder:(NSURLCredentialEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -151,13 +137,7 @@
 
 
 
--(NSURLCredential *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

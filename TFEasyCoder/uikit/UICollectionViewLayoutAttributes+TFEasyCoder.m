@@ -7,25 +7,11 @@
 //
 
 #import "UICollectionViewLayoutAttributes+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UICollectionViewLayoutAttributes (TFEasyCoder)
 
-+( UICollectionViewLayoutAttributes *)easyCoder:(UICollectionViewLayoutAttributesEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UICollectionViewLayoutAttributes *)ins);
-        }
-    }];
-}
 
--( UICollectionViewLayoutAttributes *)easyCoder:(UICollectionViewLayoutAttributesEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -215,13 +201,7 @@
 
 
 
--(UICollectionViewLayoutAttributes *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

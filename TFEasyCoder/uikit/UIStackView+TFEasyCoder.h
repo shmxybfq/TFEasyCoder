@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIStackViewEasyCoderBlock) (UIStackView * ins);
+
+
 
 @interface UIStackView (TFEasyCoder)
 
-+( UIStackView *)easyCoder:(UIStackViewEasyCoderBlock)block;
--(UIStackView *)easyCoder:(UIStackViewEasyCoderBlock)block;
+
+
 
 
 -(UIStackView  *(^)(long long  axis))set_axis;
@@ -56,7 +56,7 @@ typedef void(^UIStackViewEasyCoderBlock) (UIStackView * ins);
 
 
 
--(UIStackView *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

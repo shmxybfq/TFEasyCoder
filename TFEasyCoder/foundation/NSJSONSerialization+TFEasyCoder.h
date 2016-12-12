@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSJSONSerializationEasyCoderBlock) (NSJSONSerialization * ins);
+
+
 
 @interface NSJSONSerialization (TFEasyCoder)
 
-+( NSJSONSerialization *)easyCoder:(NSJSONSerializationEasyCoderBlock)block;
--(NSJSONSerialization *)easyCoder:(NSJSONSerializationEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSJSONSerializationEasyCoderBlock) (NSJSONSerialization * ins);
 
 
 
--(NSJSONSerialization *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

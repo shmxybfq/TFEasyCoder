@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UILayoutGuideEasyCoderBlock) (UILayoutGuide * ins);
+
+
 
 @interface UILayoutGuide (TFEasyCoder)
 
-+( UILayoutGuide *)easyCoder:(UILayoutGuideEasyCoderBlock)block;
--(UILayoutGuide *)easyCoder:(UILayoutGuideEasyCoderBlock)block;
+
+
 
 
 -(UILayoutGuide  *(^)(UIView *  owningView))set_owningView;
@@ -44,7 +44,7 @@ typedef void(^UILayoutGuideEasyCoderBlock) (UILayoutGuide * ins);
 
 
 
--(UILayoutGuide *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

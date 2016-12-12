@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIDynamicAnimatorEasyCoderBlock) (UIDynamicAnimator * ins);
+
+
 
 @interface UIDynamicAnimator (TFEasyCoder)
 
-+( UIDynamicAnimator *)easyCoder:(UIDynamicAnimatorEasyCoderBlock)block;
--(UIDynamicAnimator *)easyCoder:(UIDynamicAnimatorEasyCoderBlock)block;
+
+
 
 
 -(UIDynamicAnimator  *(^)(id<UIDynamicAnimatorDelegate>   delegate))set_delegate;
@@ -44,7 +44,7 @@ typedef void(^UIDynamicAnimatorEasyCoderBlock) (UIDynamicAnimator * ins);
 
 
 
--(UIDynamicAnimator *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

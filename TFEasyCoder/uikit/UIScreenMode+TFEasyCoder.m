@@ -7,25 +7,11 @@
 //
 
 #import "UIScreenMode+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UIScreenMode (TFEasyCoder)
 
-+( UIScreenMode *)easyCoder:(UIScreenModeEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIScreenMode *)ins);
-        }
-    }];
-}
 
--( UIScreenMode *)easyCoder:(UIScreenModeEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -151,13 +137,7 @@
 
 
 
--(UIScreenMode *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

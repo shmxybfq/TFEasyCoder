@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^CADisplayLinkEasyCoderBlock) (CADisplayLink * ins);
+
+
 
 @interface CADisplayLink (TFEasyCoder)
 
-+( CADisplayLink *)easyCoder:(CADisplayLinkEasyCoderBlock)block;
--(CADisplayLink *)easyCoder:(CADisplayLinkEasyCoderBlock)block;
+
+
 
 
 -(CADisplayLink  *(^)(BOOL  paused))set_paused;
@@ -44,7 +44,7 @@ typedef void(^CADisplayLinkEasyCoderBlock) (CADisplayLink * ins);
 
 
 
--(CADisplayLink *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

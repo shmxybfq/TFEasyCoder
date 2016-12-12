@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIImageViewEasyCoderBlock) (UIImageView * ins);
+
+
 
 @interface UIImageView (TFEasyCoder)
 
-+( UIImageView *)easyCoder:(UIImageViewEasyCoderBlock)block;
--(UIImageView *)easyCoder:(UIImageViewEasyCoderBlock)block;
+
+
 
 
 -(UIImageView  *(^)(UIImage *  image))set_image;
@@ -62,7 +62,7 @@ typedef void(^UIImageViewEasyCoderBlock) (UIImageView * ins);
 
 
 
--(UIImageView *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

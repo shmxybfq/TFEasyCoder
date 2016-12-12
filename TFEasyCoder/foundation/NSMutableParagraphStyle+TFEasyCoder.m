@@ -7,25 +7,11 @@
 //
 
 #import "NSMutableParagraphStyle+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSMutableParagraphStyle (TFEasyCoder)
 
-+( NSMutableParagraphStyle *)easyCoder:(NSMutableParagraphStyleEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSMutableParagraphStyle *)ins);
-        }
-    }];
-}
 
--( NSMutableParagraphStyle *)easyCoder:(NSMutableParagraphStyleEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -280,13 +266,7 @@
 
 
 
--(NSMutableParagraphStyle *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

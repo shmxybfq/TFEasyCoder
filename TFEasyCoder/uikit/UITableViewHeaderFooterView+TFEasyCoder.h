@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UITableViewHeaderFooterViewEasyCoderBlock) (UITableViewHeaderFooterView * ins);
+
+
 
 @interface UITableViewHeaderFooterView (TFEasyCoder)
 
-+( UITableViewHeaderFooterView *)easyCoder:(UITableViewHeaderFooterViewEasyCoderBlock)block;
--(UITableViewHeaderFooterView *)easyCoder:(UITableViewHeaderFooterViewEasyCoderBlock)block;
+
+
 
 
 -(UITableViewHeaderFooterView  *(^)(UIColor *  tintColor))set_tintColor;
@@ -54,7 +54,7 @@ typedef void(^UITableViewHeaderFooterViewEasyCoderBlock) (UITableViewHeaderFoote
 
 
 
--(UITableViewHeaderFooterView *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

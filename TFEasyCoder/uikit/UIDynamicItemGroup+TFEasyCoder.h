@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIDynamicItemGroupEasyCoderBlock) (UIDynamicItemGroup * ins);
+
+
 
 @interface UIDynamicItemGroup (TFEasyCoder)
 
-+( UIDynamicItemGroup *)easyCoder:(UIDynamicItemGroupEasyCoderBlock)block;
--(UIDynamicItemGroup *)easyCoder:(UIDynamicItemGroupEasyCoderBlock)block;
+
+
 
 
 -(UIDynamicItemGroup  *(^)(CGPoint  center))set_center;
@@ -44,7 +44,7 @@ typedef void(^UIDynamicItemGroupEasyCoderBlock) (UIDynamicItemGroup * ins);
 
 
 
--(UIDynamicItemGroup *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^CASpringAnimationEasyCoderBlock) (CASpringAnimation * ins);
+
+
 
 @interface CASpringAnimation (TFEasyCoder)
 
-+( CASpringAnimation *)easyCoder:(CASpringAnimationEasyCoderBlock)block;
--(CASpringAnimation *)easyCoder:(CASpringAnimationEasyCoderBlock)block;
+
+
 
 
 -(CASpringAnimation  *(^)(double  mass))set_mass;
@@ -62,7 +62,7 @@ typedef void(^CASpringAnimationEasyCoderBlock) (CASpringAnimation * ins);
 
 
 
--(CASpringAnimation *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

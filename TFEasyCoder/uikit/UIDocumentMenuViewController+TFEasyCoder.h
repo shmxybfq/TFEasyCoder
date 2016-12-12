@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIDocumentMenuViewControllerEasyCoderBlock) (UIDocumentMenuViewController * ins);
+
+
 
 @interface UIDocumentMenuViewController (TFEasyCoder)
 
-+( UIDocumentMenuViewController *)easyCoder:(UIDocumentMenuViewControllerEasyCoderBlock)block;
--(UIDocumentMenuViewController *)easyCoder:(UIDocumentMenuViewControllerEasyCoderBlock)block;
+
+
 
 
 -(UIDocumentMenuViewController  *(^)(id<UIDocumentMenuDelegate>   delegate))set_delegate;
@@ -64,7 +64,7 @@ typedef void(^UIDocumentMenuViewControllerEasyCoderBlock) (UIDocumentMenuViewCon
 
 
 
--(UIDocumentMenuViewController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

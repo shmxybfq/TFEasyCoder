@@ -8,14 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSArrayEasyCoderBlock) (NSArray * ins);
+
+
 
 @interface NSArray (TFEasyCoder)
 
-+( NSArray *)easyCoder:(NSArrayEasyCoderBlock)block;
--(NSArray *)easyCoder:(NSArrayEasyCoderBlock)block;
+
+
+
+
+
 
 
 
@@ -36,7 +39,10 @@ typedef void(^NSArrayEasyCoderBlock) (NSArray * ins);
 -(NSArray  *(^)(long long  accessibilityNavigationStyle))set_accessibilityNavigationStyle;
 
 
--(NSArray *(^)(id value,NSString *key))set_ValueKey;
+
+
+
+
 
 
 @end

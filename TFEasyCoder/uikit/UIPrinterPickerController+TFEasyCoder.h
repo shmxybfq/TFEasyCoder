@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIPrinterPickerControllerEasyCoderBlock) (UIPrinterPickerController * ins);
+
+
 
 @interface UIPrinterPickerController (TFEasyCoder)
 
-+( UIPrinterPickerController *)easyCoder:(UIPrinterPickerControllerEasyCoderBlock)block;
--(UIPrinterPickerController *)easyCoder:(UIPrinterPickerControllerEasyCoderBlock)block;
+
+
 
 
 -(UIPrinterPickerController  *(^)(id<UIPrinterPickerControllerDelegate>   delegate))set_delegate;
@@ -43,7 +43,7 @@ typedef void(^UIPrinterPickerControllerEasyCoderBlock) (UIPrinterPickerControlle
 
 
 
--(UIPrinterPickerController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

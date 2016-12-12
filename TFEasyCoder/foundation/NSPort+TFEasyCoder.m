@@ -7,25 +7,11 @@
 //
 
 #import "NSPort+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSPort (TFEasyCoder)
 
-+( NSPort *)easyCoder:(NSPortEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSPort *)ins);
-        }
-    }];
-}
 
--( NSPort *)easyCoder:(NSPortEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -151,13 +137,7 @@
 
 
 
--(NSPort *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

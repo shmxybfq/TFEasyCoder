@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSMutableSetEasyCoderBlock) (NSMutableSet * ins);
+
+
 
 @interface NSMutableSet (TFEasyCoder)
 
-+( NSMutableSet *)easyCoder:(NSMutableSetEasyCoderBlock)block;
--(NSMutableSet *)easyCoder:(NSMutableSetEasyCoderBlock)block;
+
+
 
 
 
@@ -43,7 +43,7 @@ typedef void(^NSMutableSetEasyCoderBlock) (NSMutableSet * ins);
 
 
 
--(NSMutableSet *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

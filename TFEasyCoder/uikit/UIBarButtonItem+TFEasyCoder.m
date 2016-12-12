@@ -7,25 +7,11 @@
 //
 
 #import "UIBarButtonItem+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UIBarButtonItem (TFEasyCoder)
 
-+( UIBarButtonItem *)easyCoder:(UIBarButtonItemEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIBarButtonItem *)ins);
-        }
-    }];
-}
 
--( UIBarButtonItem *)easyCoder:(UIBarButtonItemEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -260,13 +246,7 @@
 
 
 
--(UIBarButtonItem *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

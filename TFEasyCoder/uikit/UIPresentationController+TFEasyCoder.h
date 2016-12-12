@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIPresentationControllerEasyCoderBlock) (UIPresentationController * ins);
+
+
 
 @interface UIPresentationController (TFEasyCoder)
 
-+( UIPresentationController *)easyCoder:(UIPresentationControllerEasyCoderBlock)block;
--(UIPresentationController *)easyCoder:(UIPresentationControllerEasyCoderBlock)block;
+
+
 
 
 -(UIPresentationController  *(^)(id<UIAdaptivePresentationControllerDelegate>    delegate))set_delegate;
@@ -45,7 +45,7 @@ typedef void(^UIPresentationControllerEasyCoderBlock) (UIPresentationController 
 
 
 
--(UIPresentationController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

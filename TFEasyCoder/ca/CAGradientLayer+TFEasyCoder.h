@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^CAGradientLayerEasyCoderBlock) (CAGradientLayer * ins);
+
+
 
 @interface CAGradientLayer (TFEasyCoder)
 
-+( CAGradientLayer *)easyCoder:(CAGradientLayerEasyCoderBlock)block;
--(CAGradientLayer *)easyCoder:(CAGradientLayerEasyCoderBlock)block;
+
+
 
 
 -(CAGradientLayer  *(^)(NSArray *  colors))set_colors;
@@ -96,7 +96,7 @@ typedef void(^CAGradientLayerEasyCoderBlock) (CAGradientLayer * ins);
 
 
 
--(CAGradientLayer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

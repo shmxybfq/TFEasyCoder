@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIPercentDrivenInteractiveTransitionEasyCoderBlock) (UIPercentDrivenInteractiveTransition * ins);
+
+
 
 @interface UIPercentDrivenInteractiveTransition (TFEasyCoder)
 
-+( UIPercentDrivenInteractiveTransition *)easyCoder:(UIPercentDrivenInteractiveTransitionEasyCoderBlock)block;
--(UIPercentDrivenInteractiveTransition *)easyCoder:(UIPercentDrivenInteractiveTransitionEasyCoderBlock)block;
+
+
 
 
 -(UIPercentDrivenInteractiveTransition  *(^)(double  completionSpeed))set_completionSpeed;
@@ -44,7 +44,7 @@ typedef void(^UIPercentDrivenInteractiveTransitionEasyCoderBlock) (UIPercentDriv
 
 
 
--(UIPercentDrivenInteractiveTransition *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

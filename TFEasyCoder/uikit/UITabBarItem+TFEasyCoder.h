@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UITabBarItemEasyCoderBlock) (UITabBarItem * ins);
+
+
 
 @interface UITabBarItem (TFEasyCoder)
 
-+( UITabBarItem *)easyCoder:(UITabBarItemEasyCoderBlock)block;
--(UITabBarItem *)easyCoder:(UITabBarItemEasyCoderBlock)block;
+
+
 
 
 
@@ -54,7 +54,7 @@ typedef void(^UITabBarItemEasyCoderBlock) (UITabBarItem * ins);
 
 
 
--(UITabBarItem *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

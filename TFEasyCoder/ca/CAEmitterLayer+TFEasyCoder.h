@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^CAEmitterLayerEasyCoderBlock) (CAEmitterLayer * ins);
+
+
 
 @interface CAEmitterLayer (TFEasyCoder)
 
-+( CAEmitterLayer *)easyCoder:(CAEmitterLayerEasyCoderBlock)block;
--(CAEmitterLayer *)easyCoder:(CAEmitterLayerEasyCoderBlock)block;
+
+
 
 
 
@@ -107,7 +107,7 @@ typedef void(^CAEmitterLayerEasyCoderBlock) (CAEmitterLayer * ins);
 
 
 
--(CAEmitterLayer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

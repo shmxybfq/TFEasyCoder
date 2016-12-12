@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSLayoutDimensionEasyCoderBlock) (NSLayoutDimension * ins);
+
+
 
 @interface NSLayoutDimension (TFEasyCoder)
 
-+( NSLayoutDimension *)easyCoder:(NSLayoutDimensionEasyCoderBlock)block;
--(NSLayoutDimension *)easyCoder:(NSLayoutDimensionEasyCoderBlock)block;
+
+
 
 
 
@@ -43,7 +43,7 @@ typedef void(^NSLayoutDimensionEasyCoderBlock) (NSLayoutDimension * ins);
 
 
 
--(NSLayoutDimension *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UICollectionViewCellEasyCoderBlock) (UICollectionViewCell * ins);
+
+
 
 @interface UICollectionViewCell (TFEasyCoder)
 
-+( UICollectionViewCell *)easyCoder:(UICollectionViewCellEasyCoderBlock)block;
--(UICollectionViewCell *)easyCoder:(UICollectionViewCellEasyCoderBlock)block;
+
+
 
 
 -(UICollectionViewCell  *(^)(BOOL  selected))set_selected;
@@ -57,7 +57,7 @@ typedef void(^UICollectionViewCellEasyCoderBlock) (UICollectionViewCell * ins);
 
 
 
--(UICollectionViewCell *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

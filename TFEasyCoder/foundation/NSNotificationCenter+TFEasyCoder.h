@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSNotificationCenterEasyCoderBlock) (NSNotificationCenter * ins);
+
+
 
 @interface NSNotificationCenter (TFEasyCoder)
 
-+( NSNotificationCenter *)easyCoder:(NSNotificationCenterEasyCoderBlock)block;
--(NSNotificationCenter *)easyCoder:(NSNotificationCenterEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSNotificationCenterEasyCoderBlock) (NSNotificationCenter * ins);
 
 
 
--(NSNotificationCenter *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

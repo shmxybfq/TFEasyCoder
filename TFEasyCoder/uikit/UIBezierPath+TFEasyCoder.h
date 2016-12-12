@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIBezierPathEasyCoderBlock) (UIBezierPath * ins);
+
+
 
 @interface UIBezierPath (TFEasyCoder)
 
-+( UIBezierPath *)easyCoder:(UIBezierPathEasyCoderBlock)block;
--(UIBezierPath *)easyCoder:(UIBezierPathEasyCoderBlock)block;
+
+
 
 -(UIBezierPath  *(^)(CGPathRef  CGPath))set_CGPath;
 -(UIBezierPath  *(^)(double  lineWidth))set_lineWidth;
@@ -47,7 +47,7 @@ typedef void(^UIBezierPathEasyCoderBlock) (UIBezierPath * ins);
 
 
 
--(UIBezierPath *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

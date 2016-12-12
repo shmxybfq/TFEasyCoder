@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSMethodSignatureEasyCoderBlock) (NSMethodSignature * ins);
+
+
 
 @interface NSMethodSignature (TFEasyCoder)
 
-+( NSMethodSignature *)easyCoder:(NSMethodSignatureEasyCoderBlock)block;
--(NSMethodSignature *)easyCoder:(NSMethodSignatureEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSMethodSignatureEasyCoderBlock) (NSMethodSignature * ins);
 
 
 
--(NSMethodSignature *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

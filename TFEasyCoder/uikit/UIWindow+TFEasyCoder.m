@@ -7,25 +7,11 @@
 //
 
 #import "UIWindow+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UIWindow (TFEasyCoder)
 
-+( UIWindow *)easyCoder:(UIWindowEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIWindow *)ins);
-        }
-    }];
-}
 
--( UIWindow *)easyCoder:(UIWindowEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -243,13 +229,7 @@
 
 
 
--(UIWindow *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

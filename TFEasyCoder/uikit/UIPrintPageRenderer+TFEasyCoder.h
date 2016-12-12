@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIPrintPageRendererEasyCoderBlock) (UIPrintPageRenderer * ins);
+
+
 
 @interface UIPrintPageRenderer (TFEasyCoder)
 
-+( UIPrintPageRenderer *)easyCoder:(UIPrintPageRendererEasyCoderBlock)block;
--(UIPrintPageRenderer *)easyCoder:(UIPrintPageRendererEasyCoderBlock)block;
+
+
 
 
 -(UIPrintPageRenderer  *(^)(double  headerHeight))set_headerHeight;
@@ -45,7 +45,7 @@ typedef void(^UIPrintPageRendererEasyCoderBlock) (UIPrintPageRenderer * ins);
 
 
 
--(UIPrintPageRenderer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -7,25 +7,11 @@
 //
 
 #import "UIAcceleration+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UIAcceleration (TFEasyCoder)
 
-+( UIAcceleration *)easyCoder:(UIAccelerationEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIAcceleration *)ins);
-        }
-    }];
-}
 
--( UIAcceleration *)easyCoder:(UIAccelerationEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -146,13 +132,7 @@
 
 
 
--(UIAcceleration *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

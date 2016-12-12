@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSLinguisticTaggerEasyCoderBlock) (NSLinguisticTagger * ins);
+
+
 
 @interface NSLinguisticTagger (TFEasyCoder)
 
-+( NSLinguisticTagger *)easyCoder:(NSLinguisticTaggerEasyCoderBlock)block;
--(NSLinguisticTagger *)easyCoder:(NSLinguisticTaggerEasyCoderBlock)block;
+
+
 
 
 -(NSLinguisticTagger  *(^)(NSString *  string))set_string;
@@ -43,7 +43,7 @@ typedef void(^NSLinguisticTaggerEasyCoderBlock) (NSLinguisticTagger * ins);
 
 
 
--(NSLinguisticTagger *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIMutableApplicationShortcutItemEasyCoderBlock) (UIMutableApplicationShortcutItem * ins);
+
+
 
 @interface UIMutableApplicationShortcutItem (TFEasyCoder)
 
-+( UIMutableApplicationShortcutItem *)easyCoder:(UIMutableApplicationShortcutItemEasyCoderBlock)block;
--(UIMutableApplicationShortcutItem *)easyCoder:(UIMutableApplicationShortcutItemEasyCoderBlock)block;
+
+
 
 
 -(UIMutableApplicationShortcutItem  *(^)(NSString *  type))set_type;
@@ -49,7 +49,7 @@ typedef void(^UIMutableApplicationShortcutItemEasyCoderBlock) (UIMutableApplicat
 
 
 
--(UIMutableApplicationShortcutItem *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

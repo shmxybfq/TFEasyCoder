@@ -7,25 +7,11 @@
 //
 
 #import "UITableViewHeaderFooterView+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UITableViewHeaderFooterView (TFEasyCoder)
 
-+( UITableViewHeaderFooterView *)easyCoder:(UITableViewHeaderFooterViewEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UITableViewHeaderFooterView *)ins);
-        }
-    }];
-}
 
--( UITableViewHeaderFooterView *)easyCoder:(UITableViewHeaderFooterViewEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -234,13 +220,7 @@
 
 
 
--(UITableViewHeaderFooterView *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

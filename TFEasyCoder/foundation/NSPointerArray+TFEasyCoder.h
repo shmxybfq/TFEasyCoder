@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSPointerArrayEasyCoderBlock) (NSPointerArray * ins);
+
+
 
 @interface NSPointerArray (TFEasyCoder)
 
-+( NSPointerArray *)easyCoder:(NSPointerArrayEasyCoderBlock)block;
--(NSPointerArray *)easyCoder:(NSPointerArrayEasyCoderBlock)block;
+
+
 
 
 -(NSPointerArray  *(^)(unsigned long long  count))set_count;
@@ -43,7 +43,7 @@ typedef void(^NSPointerArrayEasyCoderBlock) (NSPointerArray * ins);
 
 
 
--(NSPointerArray *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

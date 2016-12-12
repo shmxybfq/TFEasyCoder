@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSObjectEasyCoderBlock) (NSObject * ins);
+
+
 
 @interface NSObject (TFEasyCoder)
 
-+( NSObject *)easyCoder:(NSObjectEasyCoderBlock)block;
--(NSObject *)easyCoder:(NSObjectEasyCoderBlock)block;
+
+
 
 -(NSObject  *(^)(NSArray *  accessibilityElements))set_accessibilityElements;
 -(NSObject  *(^)(NSArray *  accessibilityCustomActions))set_accessibilityCustomActions;
@@ -34,7 +34,7 @@ typedef void(^NSObjectEasyCoderBlock) (NSObject * ins);
 
 
 
--(NSObject *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

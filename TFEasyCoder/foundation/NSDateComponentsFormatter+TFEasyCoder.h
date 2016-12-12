@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSDateComponentsFormatterEasyCoderBlock) (NSDateComponentsFormatter * ins);
+
+
 
 @interface NSDateComponentsFormatter (TFEasyCoder)
 
-+( NSDateComponentsFormatter *)easyCoder:(NSDateComponentsFormatterEasyCoderBlock)block;
--(NSDateComponentsFormatter *)easyCoder:(NSDateComponentsFormatterEasyCoderBlock)block;
+
+
 
 
 -(NSDateComponentsFormatter  *(^)(long long  unitsStyle))set_unitsStyle;
@@ -53,7 +53,7 @@ typedef void(^NSDateComponentsFormatterEasyCoderBlock) (NSDateComponentsFormatte
 
 
 
--(NSDateComponentsFormatter *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

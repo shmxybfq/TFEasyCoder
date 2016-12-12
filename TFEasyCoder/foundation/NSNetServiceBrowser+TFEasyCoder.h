@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSNetServiceBrowserEasyCoderBlock) (NSNetServiceBrowser * ins);
+
+
 
 @interface NSNetServiceBrowser (TFEasyCoder)
 
-+( NSNetServiceBrowser *)easyCoder:(NSNetServiceBrowserEasyCoderBlock)block;
--(NSNetServiceBrowser *)easyCoder:(NSNetServiceBrowserEasyCoderBlock)block;
+
+
 
 
 -(NSNetServiceBrowser  *(^)(id<NSNetServiceBrowserDelegate>   delegate))set_delegate;
@@ -44,7 +44,7 @@ typedef void(^NSNetServiceBrowserEasyCoderBlock) (NSNetServiceBrowser * ins);
 
 
 
--(NSNetServiceBrowser *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

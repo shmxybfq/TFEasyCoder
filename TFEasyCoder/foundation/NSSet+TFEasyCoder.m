@@ -7,25 +7,11 @@
 //
 
 #import "NSSet+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSSet (TFEasyCoder)
 
-+( NSSet *)easyCoder:(NSSetEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSSet *)ins);
-        }
-    }];
-}
 
--( NSSet *)easyCoder:(NSSetEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -151,13 +137,7 @@
 
 
 
--(NSSet *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

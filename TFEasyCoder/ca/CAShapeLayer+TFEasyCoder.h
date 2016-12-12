@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^CAShapeLayerEasyCoderBlock) (CAShapeLayer * ins);
+
+
 
 @interface CAShapeLayer (TFEasyCoder)
 
-+( CAShapeLayer *)easyCoder:(CAShapeLayerEasyCoderBlock)block;
--(CAShapeLayer *)easyCoder:(CAShapeLayerEasyCoderBlock)block;
+
+
 
 
 -(CAShapeLayer  *(^)(CGPathRef  path))set_path;
@@ -103,7 +103,7 @@ typedef void(^CAShapeLayerEasyCoderBlock) (CAShapeLayer * ins);
 
 
 
--(CAShapeLayer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

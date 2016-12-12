@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSProcessInfoEasyCoderBlock) (NSProcessInfo * ins);
+
+
 
 @interface NSProcessInfo (TFEasyCoder)
 
-+( NSProcessInfo *)easyCoder:(NSProcessInfoEasyCoderBlock)block;
--(NSProcessInfo *)easyCoder:(NSProcessInfoEasyCoderBlock)block;
+
+
 
 
 -(NSProcessInfo  *(^)(NSString *  processName))set_processName;
@@ -44,7 +44,7 @@ typedef void(^NSProcessInfoEasyCoderBlock) (NSProcessInfo * ins);
 
 
 
--(NSProcessInfo *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

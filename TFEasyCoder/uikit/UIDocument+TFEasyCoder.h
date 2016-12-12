@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIDocumentEasyCoderBlock) (UIDocument * ins);
+
+
 
 @interface UIDocument (TFEasyCoder)
 
-+( UIDocument *)easyCoder:(UIDocumentEasyCoderBlock)block;
--(UIDocument *)easyCoder:(UIDocumentEasyCoderBlock)block;
+
+
 
 
 -(UIDocument  *(^)(NSDate *  fileModificationDate))set_fileModificationDate;
@@ -45,7 +45,7 @@ typedef void(^UIDocumentEasyCoderBlock) (UIDocument * ins);
 
 
 
--(UIDocument *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

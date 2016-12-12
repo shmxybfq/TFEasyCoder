@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UITextViewEasyCoderBlock) (UITextView * ins);
+
+
 
 @interface UITextView (TFEasyCoder)
 
-+( UITextView *)easyCoder:(UITextViewEasyCoderBlock)block;
--(UITextView *)easyCoder:(UITextViewEasyCoderBlock)block;
+
+
 
 
 -(UITextView  *(^)(id<UITextViewDelegate>    delegate))set_delegate;
@@ -104,7 +104,7 @@ typedef void(^UITextViewEasyCoderBlock) (UITextView * ins);
 
 
 
--(UITextView *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

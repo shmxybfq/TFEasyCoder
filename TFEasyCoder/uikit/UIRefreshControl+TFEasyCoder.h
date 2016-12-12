@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIRefreshControlEasyCoderBlock) (UIRefreshControl * ins);
+
+
 
 @interface UIRefreshControl (TFEasyCoder)
 
-+( UIRefreshControl *)easyCoder:(UIRefreshControlEasyCoderBlock)block;
--(UIRefreshControl *)easyCoder:(UIRefreshControlEasyCoderBlock)block;
+
+
 
 
 -(UIRefreshControl  *(^)(UIColor *  tintColor))set_tintColor;
@@ -60,7 +60,7 @@ typedef void(^UIRefreshControlEasyCoderBlock) (UIRefreshControl * ins);
 
 
 
--(UIRefreshControl *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

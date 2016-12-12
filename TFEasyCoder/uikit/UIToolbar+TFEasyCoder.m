@@ -7,25 +7,11 @@
 //
 
 #import "UIToolbar+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UIToolbar (TFEasyCoder)
 
-+( UIToolbar *)easyCoder:(UIToolbarEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIToolbar *)ins);
-        }
-    }];
-}
 
--( UIToolbar *)easyCoder:(UIToolbarEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -267,13 +253,7 @@
 
 
 
--(UIToolbar *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIScreenModeEasyCoderBlock) (UIScreenMode * ins);
+
+
 
 @interface UIScreenMode (TFEasyCoder)
 
-+( UIScreenMode *)easyCoder:(UIScreenModeEasyCoderBlock)block;
--(UIScreenMode *)easyCoder:(UIScreenModeEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^UIScreenModeEasyCoderBlock) (UIScreenMode * ins);
 
 
 
--(UIScreenMode *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

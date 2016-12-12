@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIDocumentPickerExtensionViewControllerEasyCoderBlock) (UIDocumentPickerExtensionViewController * ins);
+
+
 
 @interface UIDocumentPickerExtensionViewController (TFEasyCoder)
 
-+( UIDocumentPickerExtensionViewController *)easyCoder:(UIDocumentPickerExtensionViewControllerEasyCoderBlock)block;
--(UIDocumentPickerExtensionViewController *)easyCoder:(UIDocumentPickerExtensionViewControllerEasyCoderBlock)block;
+
+
 
 
 
@@ -61,7 +61,7 @@ typedef void(^UIDocumentPickerExtensionViewControllerEasyCoderBlock) (UIDocument
 
 
 
--(UIDocumentPickerExtensionViewController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -7,25 +7,11 @@
 //
 
 #import "NSKeyedUnarchiver+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSKeyedUnarchiver (TFEasyCoder)
 
-+( NSKeyedUnarchiver *)easyCoder:(NSKeyedUnarchiverEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSKeyedUnarchiver *)ins);
-        }
-    }];
-}
 
--( NSKeyedUnarchiver *)easyCoder:(NSKeyedUnarchiverEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -168,13 +154,7 @@
 
 
 
--(NSKeyedUnarchiver *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

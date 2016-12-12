@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSOrthographyEasyCoderBlock) (NSOrthography * ins);
+
+
 
 @interface NSOrthography (TFEasyCoder)
 
-+( NSOrthography *)easyCoder:(NSOrthographyEasyCoderBlock)block;
--(NSOrthography *)easyCoder:(NSOrthographyEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSOrthographyEasyCoderBlock) (NSOrthography * ins);
 
 
 
--(NSOrthography *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

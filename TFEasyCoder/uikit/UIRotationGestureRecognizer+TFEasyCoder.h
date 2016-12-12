@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIRotationGestureRecognizerEasyCoderBlock) (UIRotationGestureRecognizer * ins);
+
+
 
 @interface UIRotationGestureRecognizer (TFEasyCoder)
 
-+( UIRotationGestureRecognizer *)easyCoder:(UIRotationGestureRecognizerEasyCoderBlock)block;
--(UIRotationGestureRecognizer *)easyCoder:(UIRotationGestureRecognizerEasyCoderBlock)block;
+
+
 
 
 -(UIRotationGestureRecognizer  *(^)(double  rotation))set_rotation;
@@ -50,7 +50,7 @@ typedef void(^UIRotationGestureRecognizerEasyCoderBlock) (UIRotationGestureRecog
 
 
 
--(UIRotationGestureRecognizer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

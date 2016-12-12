@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIPrintInfoEasyCoderBlock) (UIPrintInfo * ins);
+
+
 
 @interface UIPrintInfo (TFEasyCoder)
 
-+( UIPrintInfo *)easyCoder:(UIPrintInfoEasyCoderBlock)block;
--(UIPrintInfo *)easyCoder:(UIPrintInfoEasyCoderBlock)block;
+
+
 
 
 -(UIPrintInfo  *(^)(NSString *  printerID))set_printerID;
@@ -48,7 +48,7 @@ typedef void(^UIPrintInfoEasyCoderBlock) (UIPrintInfo * ins);
 
 
 
--(UIPrintInfo *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

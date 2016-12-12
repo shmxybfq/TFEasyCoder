@@ -7,25 +7,11 @@
 //
 
 #import "NSPersonNameComponents+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSPersonNameComponents (TFEasyCoder)
 
-+( NSPersonNameComponents *)easyCoder:(NSPersonNameComponentsEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSPersonNameComponents *)ins);
-        }
-    }];
-}
 
--( NSPersonNameComponents *)easyCoder:(NSPersonNameComponentsEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -207,13 +193,7 @@
 
 
 
--(NSPersonNameComponents *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

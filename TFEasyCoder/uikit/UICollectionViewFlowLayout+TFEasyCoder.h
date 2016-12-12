@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UICollectionViewFlowLayoutEasyCoderBlock) (UICollectionViewFlowLayout * ins);
+
+
 
 @interface UICollectionViewFlowLayout (TFEasyCoder)
 
-+( UICollectionViewFlowLayout *)easyCoder:(UICollectionViewFlowLayoutEasyCoderBlock)block;
--(UICollectionViewFlowLayout *)easyCoder:(UICollectionViewFlowLayoutEasyCoderBlock)block;
+
+
 
 
 -(UICollectionViewFlowLayout  *(^)(double  minimumLineSpacing))set_minimumLineSpacing;
@@ -51,7 +51,7 @@ typedef void(^UICollectionViewFlowLayoutEasyCoderBlock) (UICollectionViewFlowLay
 
 
 
--(UICollectionViewFlowLayout *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIManagedDocumentEasyCoderBlock) (UIManagedDocument * ins);
+
+
 
 @interface UIManagedDocument (TFEasyCoder)
 
-+( UIManagedDocument *)easyCoder:(UIManagedDocumentEasyCoderBlock)block;
--(UIManagedDocument *)easyCoder:(UIManagedDocumentEasyCoderBlock)block;
+
+
 
 
 -(UIManagedDocument  *(^)(NSDictionary *  persistentStoreOptions))set_persistentStoreOptions;
@@ -47,7 +47,7 @@ typedef void(^UIManagedDocumentEasyCoderBlock) (UIManagedDocument * ins);
 
 
 
--(UIManagedDocument *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

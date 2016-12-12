@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UITextInputAssistantItemEasyCoderBlock) (UITextInputAssistantItem * ins);
+
+
 
 @interface UITextInputAssistantItem (TFEasyCoder)
 
-+( UITextInputAssistantItem *)easyCoder:(UITextInputAssistantItemEasyCoderBlock)block;
--(UITextInputAssistantItem *)easyCoder:(UITextInputAssistantItemEasyCoderBlock)block;
+
+
 
 
 -(UITextInputAssistantItem  *(^)(BOOL  allowsHidingShortcuts))set_allowsHidingShortcuts;
@@ -46,7 +46,7 @@ typedef void(^UITextInputAssistantItemEasyCoderBlock) (UITextInputAssistantItem 
 
 
 
--(UITextInputAssistantItem *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

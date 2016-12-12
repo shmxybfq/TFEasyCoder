@@ -7,7 +7,7 @@
 //
 
 #import "UITableViewController+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
@@ -15,21 +15,7 @@
 
 @implementation UITableViewController (TFEasyCoder)
 
-+( UITableViewController *)easyCoder:(UITableViewControllerEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UITableViewController *)ins);
-        }
-    }];
-}
 
--( UITableViewController *)easyCoder:(UITableViewControllerEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -317,13 +303,7 @@
 
 
 
--(UITableViewController *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

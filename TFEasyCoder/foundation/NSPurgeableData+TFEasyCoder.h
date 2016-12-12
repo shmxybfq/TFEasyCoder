@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSPurgeableDataEasyCoderBlock) (NSPurgeableData * ins);
+
+
 
 @interface NSPurgeableData (TFEasyCoder)
 
-+( NSPurgeableData *)easyCoder:(NSPurgeableDataEasyCoderBlock)block;
--(NSPurgeableData *)easyCoder:(NSPurgeableDataEasyCoderBlock)block;
+
+
 
 
 
@@ -45,7 +45,7 @@ typedef void(^NSPurgeableDataEasyCoderBlock) (NSPurgeableData * ins);
 
 
 
--(NSPurgeableData *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSFileCoordinatorEasyCoderBlock) (NSFileCoordinator * ins);
+
+
 
 @interface NSFileCoordinator (TFEasyCoder)
 
-+( NSFileCoordinator *)easyCoder:(NSFileCoordinatorEasyCoderBlock)block;
--(NSFileCoordinator *)easyCoder:(NSFileCoordinatorEasyCoderBlock)block;
+
+
 
 
 -(NSFileCoordinator  *(^)(NSString *  purposeIdentifier))set_purposeIdentifier;
@@ -43,7 +43,7 @@ typedef void(^NSFileCoordinatorEasyCoderBlock) (NSFileCoordinator * ins);
 
 
 
--(NSFileCoordinator *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

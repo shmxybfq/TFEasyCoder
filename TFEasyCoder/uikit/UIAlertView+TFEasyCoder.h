@@ -8,19 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
+
 
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 
-typedef void(^UIAlertViewEasyCoderBlock) (UIAlertView * ins);
+
 
 @interface UIAlertView (TFEasyCoder)
 
-+( UIAlertView *)easyCoder:(UIAlertViewEasyCoderBlock)block;
--(UIAlertView *)easyCoder:(UIAlertViewEasyCoderBlock)block;
+
+
 
 
 -(UIAlertView  *(^)(NSString *  title))set_title;
@@ -61,7 +61,7 @@ typedef void(^UIAlertViewEasyCoderBlock) (UIAlertView * ins);
 
 
 
--(UIAlertView *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UISearchBarEasyCoderBlock) (UISearchBar * ins);
+
+
 
 @interface UISearchBar (TFEasyCoder)
 
-+( UISearchBar *)easyCoder:(UISearchBarEasyCoderBlock)block;
--(UISearchBar *)easyCoder:(UISearchBarEasyCoderBlock)block;
+
+
 
 
 
@@ -82,7 +82,7 @@ typedef void(^UISearchBarEasyCoderBlock) (UISearchBar * ins);
 
 
 
--(UISearchBar *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

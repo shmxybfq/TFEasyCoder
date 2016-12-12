@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSDateIntervalFormatterEasyCoderBlock) (NSDateIntervalFormatter * ins);
+
+
 
 @interface NSDateIntervalFormatter (TFEasyCoder)
 
-+( NSDateIntervalFormatter *)easyCoder:(NSDateIntervalFormatterEasyCoderBlock)block;
--(NSDateIntervalFormatter *)easyCoder:(NSDateIntervalFormatterEasyCoderBlock)block;
+
+
 
 
 -(NSDateIntervalFormatter  *(^)(NSLocale *  locale))set_locale;
@@ -49,7 +49,7 @@ typedef void(^NSDateIntervalFormatterEasyCoderBlock) (NSDateIntervalFormatter * 
 
 
 
--(NSDateIntervalFormatter *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UISwitchEasyCoderBlock) (UISwitch * ins);
+
+
 
 @interface UISwitch (TFEasyCoder)
 
-+( UISwitch *)easyCoder:(UISwitchEasyCoderBlock)block;
--(UISwitch *)easyCoder:(UISwitchEasyCoderBlock)block;
+
+
 
 
 -(UISwitch  *(^)(UIColor *  onTintColor))set_onTintColor;
@@ -65,7 +65,7 @@ typedef void(^UISwitchEasyCoderBlock) (UISwitch * ins);
 
 
 
--(UISwitch *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSPropertyListSerializationEasyCoderBlock) (NSPropertyListSerialization * ins);
+
+
 
 @interface NSPropertyListSerialization (TFEasyCoder)
 
-+( NSPropertyListSerialization *)easyCoder:(NSPropertyListSerializationEasyCoderBlock)block;
--(NSPropertyListSerialization *)easyCoder:(NSPropertyListSerializationEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSPropertyListSerializationEasyCoderBlock) (NSPropertyListSerializ
 
 
 
--(NSPropertyListSerialization *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

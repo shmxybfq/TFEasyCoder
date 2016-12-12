@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UITableViewCellEasyCoderBlock) (UITableViewCell * ins);
+
+
 
 @interface UITableViewCell (TFEasyCoder)
 
-+( UITableViewCell *)easyCoder:(UITableViewCellEasyCoderBlock)block;
--(UITableViewCell *)easyCoder:(UITableViewCellEasyCoderBlock)block;
+
+
 
 
 -(UITableViewCell  *(^)(UIView *  backgroundView))set_backgroundView;
@@ -69,7 +69,7 @@ typedef void(^UITableViewCellEasyCoderBlock) (UITableViewCell * ins);
 
 
 
--(UITableViewCell *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

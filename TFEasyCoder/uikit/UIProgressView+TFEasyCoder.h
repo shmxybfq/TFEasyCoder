@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIProgressViewEasyCoderBlock) (UIProgressView * ins);
+
+
 
 @interface UIProgressView (TFEasyCoder)
 
-+( UIProgressView *)easyCoder:(UIProgressViewEasyCoderBlock)block;
--(UIProgressView *)easyCoder:(UIProgressViewEasyCoderBlock)block;
+
+
 
 
 -(UIProgressView  *(^)(long long  progressViewStyle))set_progressViewStyle;
@@ -59,7 +59,7 @@ typedef void(^UIProgressViewEasyCoderBlock) (UIProgressView * ins);
 
 
 
--(UIProgressView *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

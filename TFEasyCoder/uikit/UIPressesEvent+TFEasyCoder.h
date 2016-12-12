@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIPressesEventEasyCoderBlock) (UIPressesEvent * ins);
+
+
 
 @interface UIPressesEvent (TFEasyCoder)
 
-+( UIPressesEvent *)easyCoder:(UIPressesEventEasyCoderBlock)block;
--(UIPressesEvent *)easyCoder:(UIPressesEventEasyCoderBlock)block;
+
+
 
 
 
@@ -43,7 +43,7 @@ typedef void(^UIPressesEventEasyCoderBlock) (UIPressesEvent * ins);
 
 
 
--(UIPressesEvent *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

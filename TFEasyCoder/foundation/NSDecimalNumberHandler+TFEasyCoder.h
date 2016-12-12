@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSDecimalNumberHandlerEasyCoderBlock) (NSDecimalNumberHandler * ins);
+
+
 
 @interface NSDecimalNumberHandler (TFEasyCoder)
 
-+( NSDecimalNumberHandler *)easyCoder:(NSDecimalNumberHandlerEasyCoderBlock)block;
--(NSDecimalNumberHandler *)easyCoder:(NSDecimalNumberHandlerEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSDecimalNumberHandlerEasyCoderBlock) (NSDecimalNumberHandler * in
 
 
 
--(NSDecimalNumberHandler *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

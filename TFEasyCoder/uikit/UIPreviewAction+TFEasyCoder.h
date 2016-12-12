@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIPreviewActionEasyCoderBlock) (UIPreviewAction * ins);
+
+
 
 @interface UIPreviewAction (TFEasyCoder)
 
-+( UIPreviewAction *)easyCoder:(UIPreviewActionEasyCoderBlock)block;
--(UIPreviewAction *)easyCoder:(UIPreviewActionEasyCoderBlock)block;
+
+
 
 
 
@@ -43,7 +43,7 @@ typedef void(^UIPreviewActionEasyCoderBlock) (UIPreviewAction * ins);
 
 
 
--(UIPreviewAction *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

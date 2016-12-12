@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIVideoEditorControllerEasyCoderBlock) (UIVideoEditorController * ins);
+
+
 
 @interface UIVideoEditorController (TFEasyCoder)
 
-+( UIVideoEditorController *)easyCoder:(UIVideoEditorControllerEasyCoderBlock)block;
--(UIVideoEditorController *)easyCoder:(UIVideoEditorControllerEasyCoderBlock)block;
+
+
 
 
 -(UIVideoEditorController  *(^)(id   delegate))set_delegate;
@@ -75,7 +75,7 @@ typedef void(^UIVideoEditorControllerEasyCoderBlock) (UIVideoEditorController * 
 
 
 
--(UIVideoEditorController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIPanGestureRecognizerEasyCoderBlock) (UIPanGestureRecognizer * ins);
+
+
 
 @interface UIPanGestureRecognizer (TFEasyCoder)
 
-+( UIPanGestureRecognizer *)easyCoder:(UIPanGestureRecognizerEasyCoderBlock)block;
--(UIPanGestureRecognizer *)easyCoder:(UIPanGestureRecognizerEasyCoderBlock)block;
+
+
 
 
 -(UIPanGestureRecognizer  *(^)(unsigned long long  minimumNumberOfTouches))set_minimumNumberOfTouches;
@@ -51,7 +51,7 @@ typedef void(^UIPanGestureRecognizerEasyCoderBlock) (UIPanGestureRecognizer * in
 
 
 
--(UIPanGestureRecognizer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

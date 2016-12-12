@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIActivityViewControllerEasyCoderBlock) (UIActivityViewController * ins);
+
+
 
 @interface UIActivityViewController (TFEasyCoder)
 
-+( UIActivityViewController *)easyCoder:(UIActivityViewControllerEasyCoderBlock)block;
--(UIActivityViewController *)easyCoder:(UIActivityViewControllerEasyCoderBlock)block;
+
+
 
 -(UIActivityViewController  *(^)(NSArray *  excludedActivityTypes))set_excludedActivityTypes;
 
@@ -63,7 +63,7 @@ typedef void(^UIActivityViewControllerEasyCoderBlock) (UIActivityViewController 
 
 
 
--(UIActivityViewController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

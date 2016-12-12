@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSHTTPCookieEasyCoderBlock) (NSHTTPCookie * ins);
+
+
 
 @interface NSHTTPCookie (TFEasyCoder)
 
-+( NSHTTPCookie *)easyCoder:(NSHTTPCookieEasyCoderBlock)block;
--(NSHTTPCookie *)easyCoder:(NSHTTPCookieEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSHTTPCookieEasyCoderBlock) (NSHTTPCookie * ins);
 
 
 
--(NSHTTPCookie *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

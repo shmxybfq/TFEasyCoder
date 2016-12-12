@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSThreadEasyCoderBlock) (NSThread * ins);
+
+
 
 @interface NSThread (TFEasyCoder)
 
-+( NSThread *)easyCoder:(NSThreadEasyCoderBlock)block;
--(NSThread *)easyCoder:(NSThreadEasyCoderBlock)block;
+
+
 
 
 -(NSThread  *(^)(double  threadPriority))set_threadPriority;
@@ -46,7 +46,7 @@ typedef void(^NSThreadEasyCoderBlock) (NSThread * ins);
 
 
 
--(NSThread *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

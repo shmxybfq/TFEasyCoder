@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSTextTabEasyCoderBlock) (NSTextTab * ins);
+
+
 
 @interface NSTextTab (TFEasyCoder)
 
-+( NSTextTab *)easyCoder:(NSTextTabEasyCoderBlock)block;
--(NSTextTab *)easyCoder:(NSTextTabEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSTextTabEasyCoderBlock) (NSTextTab * ins);
 
 
 
--(NSTextTab *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

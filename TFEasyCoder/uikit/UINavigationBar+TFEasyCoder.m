@@ -7,26 +7,12 @@
 //
 
 #import "UINavigationBar+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 
 @implementation UINavigationBar (TFEasyCoder)
 
-+( UINavigationBar *)easyCoder:(UINavigationBarEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UINavigationBar *)ins);
-        }
-    }];
-}
 
--( UINavigationBar *)easyCoder:(UINavigationBarEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -298,13 +284,7 @@
 
 
 
--(UINavigationBar *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

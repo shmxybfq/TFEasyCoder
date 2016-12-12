@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^CATransformLayerEasyCoderBlock) (CATransformLayer * ins);
+
+
 
 @interface CATransformLayer (TFEasyCoder)
 
-+( CATransformLayer *)easyCoder:(CATransformLayerEasyCoderBlock)block;
--(CATransformLayer *)easyCoder:(CATransformLayerEasyCoderBlock)block;
+
+
 
 
 
@@ -91,7 +91,7 @@ typedef void(^CATransformLayerEasyCoderBlock) (CATransformLayer * ins);
 
 
 
--(CATransformLayer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

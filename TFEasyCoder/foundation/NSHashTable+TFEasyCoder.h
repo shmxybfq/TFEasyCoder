@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSHashTableEasyCoderBlock) (NSHashTable * ins);
+
+
 
 @interface NSHashTable (TFEasyCoder)
 
-+( NSHashTable *)easyCoder:(NSHashTableEasyCoderBlock)block;
--(NSHashTable *)easyCoder:(NSHashTableEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSHashTableEasyCoderBlock) (NSHashTable * ins);
 
 
 
--(NSHashTable *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

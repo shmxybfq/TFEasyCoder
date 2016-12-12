@@ -8,18 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
+
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 
-typedef void(^NSInvocationOperationEasyCoderBlock) (NSInvocationOperation * ins);
+
 
 @interface NSInvocationOperation (TFEasyCoder)
 
-+( NSInvocationOperation *)easyCoder:(NSInvocationOperationEasyCoderBlock)block;
--(NSInvocationOperation *)easyCoder:(NSInvocationOperationEasyCoderBlock)block;
+
+
 
 
 
@@ -51,7 +51,7 @@ typedef void(^NSInvocationOperationEasyCoderBlock) (NSInvocationOperation * ins)
 
 
 
--(NSInvocationOperation *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

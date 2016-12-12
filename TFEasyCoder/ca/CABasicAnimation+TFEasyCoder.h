@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^CABasicAnimationEasyCoderBlock) (CABasicAnimation * ins);
+
+
 
 @interface CABasicAnimation (TFEasyCoder)
 
-+( CABasicAnimation *)easyCoder:(CABasicAnimationEasyCoderBlock)block;
--(CABasicAnimation *)easyCoder:(CABasicAnimationEasyCoderBlock)block;
+
+
 
 
 
@@ -58,7 +58,7 @@ typedef void(^CABasicAnimationEasyCoderBlock) (CABasicAnimation * ins);
 
 
 
--(CABasicAnimation *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

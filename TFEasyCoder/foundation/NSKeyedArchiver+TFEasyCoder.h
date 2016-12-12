@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSKeyedArchiverEasyCoderBlock) (NSKeyedArchiver * ins);
+
+
 
 @interface NSKeyedArchiver (TFEasyCoder)
 
-+( NSKeyedArchiver *)easyCoder:(NSKeyedArchiverEasyCoderBlock)block;
--(NSKeyedArchiver *)easyCoder:(NSKeyedArchiverEasyCoderBlock)block;
+
+
 
 
 -(NSKeyedArchiver  *(^)(id<NSKeyedArchiverDelegate>   delegate))set_delegate;
@@ -46,7 +46,7 @@ typedef void(^NSKeyedArchiverEasyCoderBlock) (NSKeyedArchiver * ins);
 
 
 
--(NSKeyedArchiver *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

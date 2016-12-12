@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIDeviceEasyCoderBlock) (UIDevice * ins);
+
+
 
 @interface UIDevice (TFEasyCoder)
 
-+( UIDevice *)easyCoder:(UIDeviceEasyCoderBlock)block;
--(UIDevice *)easyCoder:(UIDeviceEasyCoderBlock)block;
+
+
 
 
 -(UIDevice  *(^)(BOOL  batteryMonitoringEnabled))set_batteryMonitoringEnabled;
@@ -44,7 +44,7 @@ typedef void(^UIDeviceEasyCoderBlock) (UIDevice * ins);
 
 
 
--(UIDevice *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

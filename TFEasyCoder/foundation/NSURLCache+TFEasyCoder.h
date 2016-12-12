@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSURLCacheEasyCoderBlock) (NSURLCache * ins);
+
+
 
 @interface NSURLCache (TFEasyCoder)
 
-+( NSURLCache *)easyCoder:(NSURLCacheEasyCoderBlock)block;
--(NSURLCache *)easyCoder:(NSURLCacheEasyCoderBlock)block;
+
+
 
 
 -(NSURLCache  *(^)(unsigned long long  memoryCapacity))set_memoryCapacity;
@@ -44,7 +44,7 @@ typedef void(^NSURLCacheEasyCoderBlock) (NSURLCache * ins);
 
 
 
--(NSURLCache *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

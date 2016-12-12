@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSCharacterSetEasyCoderBlock) (NSCharacterSet * ins);
+
+
 
 @interface NSCharacterSet (TFEasyCoder)
 
-+( NSCharacterSet *)easyCoder:(NSCharacterSetEasyCoderBlock)block;
--(NSCharacterSet *)easyCoder:(NSCharacterSetEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSCharacterSetEasyCoderBlock) (NSCharacterSet * ins);
 
 
 
--(NSCharacterSet *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

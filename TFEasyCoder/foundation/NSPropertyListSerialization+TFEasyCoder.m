@@ -7,25 +7,11 @@
 //
 
 #import "NSPropertyListSerialization+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSPropertyListSerialization (TFEasyCoder)
 
-+( NSPropertyListSerialization *)easyCoder:(NSPropertyListSerializationEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSPropertyListSerialization *)ins);
-        }
-    }];
-}
 
--( NSPropertyListSerialization *)easyCoder:(NSPropertyListSerializationEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -151,13 +137,7 @@
 
 
 
--(NSPropertyListSerialization *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

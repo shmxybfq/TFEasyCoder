@@ -7,7 +7,7 @@
 //
 
 #import "UIPageViewController+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 
 #pragma clang diagnostic push
@@ -16,21 +16,7 @@
 
 @implementation UIPageViewController (TFEasyCoder)
 
-+( UIPageViewController *)easyCoder:(UIPageViewControllerEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIPageViewController *)ins);
-        }
-    }];
-}
 
--( UIPageViewController *)easyCoder:(UIPageViewControllerEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -326,13 +312,7 @@
 
 
 
--(UIPageViewController *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

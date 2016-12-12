@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIPopoverBackgroundViewEasyCoderBlock) (UIPopoverBackgroundView * ins);
+
+
 
 @interface UIPopoverBackgroundView (TFEasyCoder)
 
-+( UIPopoverBackgroundView *)easyCoder:(UIPopoverBackgroundViewEasyCoderBlock)block;
--(UIPopoverBackgroundView *)easyCoder:(UIPopoverBackgroundViewEasyCoderBlock)block;
+
+
 
 
 -(UIPopoverBackgroundView  *(^)(double  arrowOffset))set_arrowOffset;
@@ -54,7 +54,7 @@ typedef void(^UIPopoverBackgroundViewEasyCoderBlock) (UIPopoverBackgroundView * 
 
 
 
--(UIPopoverBackgroundView *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

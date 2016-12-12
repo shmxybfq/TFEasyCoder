@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSProgressEasyCoderBlock) (NSProgress * ins);
+
+
 
 @interface NSProgress (TFEasyCoder)
 
-+( NSProgress *)easyCoder:(NSProgressEasyCoderBlock)block;
--(NSProgress *)easyCoder:(NSProgressEasyCoderBlock)block;
+
+
 
 
 
@@ -50,7 +50,7 @@ typedef void(^NSProgressEasyCoderBlock) (NSProgress * ins);
 
 
 
--(NSProgress *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

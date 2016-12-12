@@ -7,25 +7,11 @@
 //
 
 #import "UIScrollView+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UIScrollView (TFEasyCoder)
 
-+( UIScrollView *)easyCoder:(UIScrollViewEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIScrollView *)ins);
-        }
-    }];
-}
 
--( UIScrollView *)easyCoder:(UIScrollViewEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -402,13 +388,7 @@
 
 
 
--(UIScrollView *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

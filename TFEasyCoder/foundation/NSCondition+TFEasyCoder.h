@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSConditionEasyCoderBlock) (NSCondition * ins);
+
+
 
 @interface NSCondition (TFEasyCoder)
 
-+( NSCondition *)easyCoder:(NSConditionEasyCoderBlock)block;
--(NSCondition *)easyCoder:(NSConditionEasyCoderBlock)block;
+
+
 
 
 -(NSCondition  *(^)(NSString *  name))set_name;
@@ -43,7 +43,7 @@ typedef void(^NSConditionEasyCoderBlock) (NSCondition * ins);
 
 
 
--(NSCondition *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

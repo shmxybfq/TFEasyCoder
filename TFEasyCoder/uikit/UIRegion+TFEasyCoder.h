@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIRegionEasyCoderBlock) (UIRegion * ins);
+
+
 
 @interface UIRegion (TFEasyCoder)
 
-+( UIRegion *)easyCoder:(UIRegionEasyCoderBlock)block;
--(UIRegion *)easyCoder:(UIRegionEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^UIRegionEasyCoderBlock) (UIRegion * ins);
 
 
 
--(UIRegion *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

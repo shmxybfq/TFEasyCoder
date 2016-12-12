@@ -1,5 +1,4 @@
 //
-//
 //  UIView+TFEasyCoder.m
 //  TFEasyCoder
 //
@@ -8,25 +7,11 @@
 //
 
 #import "UIView+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UIView (TFEasyCoder)
 
-+( UIView *)easyCoder:(UIViewEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIView *)ins);
-        }
-    }];
-}
 
--( UIView *)easyCoder:(UIViewEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -216,13 +201,7 @@
 
 
 
--(UIView *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

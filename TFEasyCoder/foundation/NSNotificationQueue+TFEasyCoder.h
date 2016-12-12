@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSNotificationQueueEasyCoderBlock) (NSNotificationQueue * ins);
+
+
 
 @interface NSNotificationQueue (TFEasyCoder)
 
-+( NSNotificationQueue *)easyCoder:(NSNotificationQueueEasyCoderBlock)block;
--(NSNotificationQueue *)easyCoder:(NSNotificationQueueEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSNotificationQueueEasyCoderBlock) (NSNotificationQueue * ins);
 
 
 
--(NSNotificationQueue *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

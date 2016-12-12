@@ -7,7 +7,7 @@
 //
 
 #import "UIAlertController+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
@@ -15,21 +15,7 @@
 
 @implementation UIAlertController (TFEasyCoder)
 
-+( UIAlertController *)easyCoder:(UIAlertControllerEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIAlertController *)ins);
-        }
-    }];
-}
 
--( UIAlertController *)easyCoder:(UIAlertControllerEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -320,13 +306,7 @@
 
 
 
--(UIAlertController *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

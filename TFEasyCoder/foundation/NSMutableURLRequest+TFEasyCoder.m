@@ -7,25 +7,11 @@
 //
 
 #import "NSMutableURLRequest+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSMutableURLRequest (TFEasyCoder)
 
-+( NSMutableURLRequest *)easyCoder:(NSMutableURLRequestEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSMutableURLRequest *)ins);
-        }
-    }];
-}
 
--( NSMutableURLRequest *)easyCoder:(NSMutableURLRequestEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -232,13 +218,7 @@
 
 
 
--(NSMutableURLRequest *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

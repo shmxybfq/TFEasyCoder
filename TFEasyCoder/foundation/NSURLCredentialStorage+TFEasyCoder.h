@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSURLCredentialStorageEasyCoderBlock) (NSURLCredentialStorage * ins);
+
+
 
 @interface NSURLCredentialStorage (TFEasyCoder)
 
-+( NSURLCredentialStorage *)easyCoder:(NSURLCredentialStorageEasyCoderBlock)block;
--(NSURLCredentialStorage *)easyCoder:(NSURLCredentialStorageEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSURLCredentialStorageEasyCoderBlock) (NSURLCredentialStorage * in
 
 
 
--(NSURLCredentialStorage *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

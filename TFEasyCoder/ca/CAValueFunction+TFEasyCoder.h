@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^CAValueFunctionEasyCoderBlock) (CAValueFunction * ins);
+
+
 
 @interface CAValueFunction (TFEasyCoder)
 
-+( CAValueFunction *)easyCoder:(CAValueFunctionEasyCoderBlock)block;
--(CAValueFunction *)easyCoder:(CAValueFunctionEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^CAValueFunctionEasyCoderBlock) (CAValueFunction * ins);
 
 
 
--(CAValueFunction *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

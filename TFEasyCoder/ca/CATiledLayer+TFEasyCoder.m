@@ -7,25 +7,11 @@
 //
 
 #import "CATiledLayer+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation CATiledLayer (TFEasyCoder)
 
-+( CATiledLayer *)easyCoder:(CATiledLayerEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( CATiledLayer *)ins);
-        }
-    }];
-}
 
--( CATiledLayer *)easyCoder:(CATiledLayerEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -561,13 +547,7 @@
 
 
 
--(CATiledLayer *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

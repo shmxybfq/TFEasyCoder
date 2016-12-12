@@ -7,25 +7,11 @@
 //
 
 #import "UIStoryboardUnwindSegueSource+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UIStoryboardUnwindSegueSource (TFEasyCoder)
 
-+( UIStoryboardUnwindSegueSource *)easyCoder:(UIStoryboardUnwindSegueSourceEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIStoryboardUnwindSegueSource *)ins);
-        }
-    }];
-}
 
--( UIStoryboardUnwindSegueSource *)easyCoder:(UIStoryboardUnwindSegueSourceEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -151,13 +137,7 @@
 
 
 
--(UIStoryboardUnwindSegueSource *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

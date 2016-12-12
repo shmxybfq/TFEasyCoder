@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UILexiconEntryEasyCoderBlock) (UILexiconEntry * ins);
+
+
 
 @interface UILexiconEntry (TFEasyCoder)
 
-+( UILexiconEntry *)easyCoder:(UILexiconEntryEasyCoderBlock)block;
--(UILexiconEntry *)easyCoder:(UILexiconEntryEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^UILexiconEntryEasyCoderBlock) (UILexiconEntry * ins);
 
 
 
--(UILexiconEntry *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

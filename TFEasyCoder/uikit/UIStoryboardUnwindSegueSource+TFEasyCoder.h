@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIStoryboardUnwindSegueSourceEasyCoderBlock) (UIStoryboardUnwindSegueSource * ins);
+
+
 
 @interface UIStoryboardUnwindSegueSource (TFEasyCoder)
 
-+( UIStoryboardUnwindSegueSource *)easyCoder:(UIStoryboardUnwindSegueSourceEasyCoderBlock)block;
--(UIStoryboardUnwindSegueSource *)easyCoder:(UIStoryboardUnwindSegueSourceEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^UIStoryboardUnwindSegueSourceEasyCoderBlock) (UIStoryboardUnwindSe
 
 
 
--(UIStoryboardUnwindSegueSource *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIBarButtonItemGroupEasyCoderBlock) (UIBarButtonItemGroup * ins);
+
+
 
 @interface UIBarButtonItemGroup (TFEasyCoder)
 
-+( UIBarButtonItemGroup *)easyCoder:(UIBarButtonItemGroupEasyCoderBlock)block;
--(UIBarButtonItemGroup *)easyCoder:(UIBarButtonItemGroupEasyCoderBlock)block;
+
+
 
 
 -(UIBarButtonItemGroup  *(^)(NSArray *  barButtonItems))set_barButtonItems;
@@ -45,7 +45,7 @@ typedef void(^UIBarButtonItemGroupEasyCoderBlock) (UIBarButtonItemGroup * ins);
 
 
 
--(UIBarButtonItemGroup *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

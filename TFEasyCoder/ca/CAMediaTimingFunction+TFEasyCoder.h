@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^CAMediaTimingFunctionEasyCoderBlock) (CAMediaTimingFunction * ins);
+
+
 
 @interface CAMediaTimingFunction (TFEasyCoder)
 
-+( CAMediaTimingFunction *)easyCoder:(CAMediaTimingFunctionEasyCoderBlock)block;
--(CAMediaTimingFunction *)easyCoder:(CAMediaTimingFunctionEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^CAMediaTimingFunctionEasyCoderBlock) (CAMediaTimingFunction * ins)
 
 
 
--(CAMediaTimingFunction *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

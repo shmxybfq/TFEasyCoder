@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^CAReplicatorLayerEasyCoderBlock) (CAReplicatorLayer * ins);
+
+
 
 @interface CAReplicatorLayer (TFEasyCoder)
 
-+( CAReplicatorLayer *)easyCoder:(CAReplicatorLayerEasyCoderBlock)block;
--(CAReplicatorLayer *)easyCoder:(CAReplicatorLayerEasyCoderBlock)block;
+
+
 
 
 -(CAReplicatorLayer  *(^)(long long  instanceCount))set_instanceCount;
@@ -100,7 +100,7 @@ typedef void(^CAReplicatorLayerEasyCoderBlock) (CAReplicatorLayer * ins);
 
 
 
--(CAReplicatorLayer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

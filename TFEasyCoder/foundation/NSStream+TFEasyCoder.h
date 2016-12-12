@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSStreamEasyCoderBlock) (NSStream * ins);
+
+
 
 @interface NSStream (TFEasyCoder)
 
-+( NSStream *)easyCoder:(NSStreamEasyCoderBlock)block;
--(NSStream *)easyCoder:(NSStreamEasyCoderBlock)block;
+
+
 
 
 -(NSStream  *(^)(id<NSStreamDelegate>   delegate))set_delegate;
@@ -43,7 +43,7 @@ typedef void(^NSStreamEasyCoderBlock) (NSStream * ins);
 
 
 
--(NSStream *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

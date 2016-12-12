@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UISwipeGestureRecognizerEasyCoderBlock) (UISwipeGestureRecognizer * ins);
+
+
 
 @interface UISwipeGestureRecognizer (TFEasyCoder)
 
-+( UISwipeGestureRecognizer *)easyCoder:(UISwipeGestureRecognizerEasyCoderBlock)block;
--(UISwipeGestureRecognizer *)easyCoder:(UISwipeGestureRecognizerEasyCoderBlock)block;
+
+
 
 
 -(UISwipeGestureRecognizer  *(^)(unsigned long long  direction))set_direction;
@@ -51,7 +51,7 @@ typedef void(^UISwipeGestureRecognizerEasyCoderBlock) (UISwipeGestureRecognizer 
 
 
 
--(UISwipeGestureRecognizer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

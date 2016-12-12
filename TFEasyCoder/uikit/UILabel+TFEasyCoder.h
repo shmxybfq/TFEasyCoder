@@ -8,14 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UILabelEasyCoderBlock) (UILabel * ins);
+
 
 @interface UILabel (TFEasyCoder)
-
-+( UILabel *)easyCoder:(UILabelEasyCoderBlock)block;
--(UILabel *)easyCoder:(UILabelEasyCoderBlock)block;
 
 
 -(UILabel  *(^)(NSString *  text))set_text;
@@ -28,6 +24,7 @@ typedef void(^UILabelEasyCoderBlock) (UILabel * ins);
 -(UILabel  *(^)(NSAttributedString *  attributedText))set_attributedText;
 -(UILabel  *(^)(UIColor *  highlightedTextColor))set_highlightedTextColor;
 -(UILabel  *(^)(BOOL  highlighted))set_highlighted;
+//TF_EC_CHAIN_PROP_INT(UILabel ,BOOL,userInteractionEnabled);
 -(UILabel  *(^)(BOOL  enabled))set_enabled;
 -(UILabel  *(^)(long long  numberOfLines))set_numberOfLines;
 -(UILabel  *(^)(BOOL  adjustsFontSizeToFitWidth))set_adjustsFontSizeToFitWidth;
@@ -71,7 +68,7 @@ typedef void(^UILabelEasyCoderBlock) (UILabel * ins);
 
 
 
--(UILabel *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

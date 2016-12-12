@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSLayoutConstraintEasyCoderBlock) (NSLayoutConstraint * ins);
+
+
 
 @interface NSLayoutConstraint (TFEasyCoder)
 
-+( NSLayoutConstraint *)easyCoder:(NSLayoutConstraintEasyCoderBlock)block;
--(NSLayoutConstraint *)easyCoder:(NSLayoutConstraintEasyCoderBlock)block;
+
+
 
 -(NSLayoutConstraint  *(^)(float  priority))set_priority;
 -(NSLayoutConstraint  *(^)(BOOL  shouldBeArchived))set_shouldBeArchived;
@@ -46,7 +46,7 @@ typedef void(^NSLayoutConstraintEasyCoderBlock) (NSLayoutConstraint * ins);
 
 
 
--(NSLayoutConstraint *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

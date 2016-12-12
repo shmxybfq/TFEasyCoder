@@ -7,25 +7,11 @@
 //
 
 #import "UIMenuItem+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UIMenuItem (TFEasyCoder)
 
-+( UIMenuItem *)easyCoder:(UIMenuItemEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIMenuItem *)ins);
-        }
-    }];
-}
 
--( UIMenuItem *)easyCoder:(UIMenuItemEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -168,13 +154,7 @@
 
 
 
--(UIMenuItem *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

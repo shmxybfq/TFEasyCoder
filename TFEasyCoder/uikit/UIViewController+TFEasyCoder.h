@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIViewControllerEasyCoderBlock) (UIViewController * ins);
+
+
 
 @interface UIViewController (TFEasyCoder)
 
-+( UIViewController *)easyCoder:(UIViewControllerEasyCoderBlock)block;
--(UIViewController *)easyCoder:(UIViewControllerEasyCoderBlock)block;
+
+
 
 -(UIViewController  *(^)(UITabBarItem *  tabBarItem))set_tabBarItem;
 -(UIViewController  *(^)(BOOL  hidesBottomBarWhenPushed))set_hidesBottomBarWhenPushed;
@@ -61,7 +61,7 @@ typedef void(^UIViewControllerEasyCoderBlock) (UIViewController * ins);
 
 
 
--(UIViewController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

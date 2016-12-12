@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIInterpolatingMotionEffectEasyCoderBlock) (UIInterpolatingMotionEffect * ins);
+
+
 
 @interface UIInterpolatingMotionEffect (TFEasyCoder)
 
-+( UIInterpolatingMotionEffect *)easyCoder:(UIInterpolatingMotionEffectEasyCoderBlock)block;
--(UIInterpolatingMotionEffect *)easyCoder:(UIInterpolatingMotionEffectEasyCoderBlock)block;
+
+
 
 
 
@@ -43,7 +43,7 @@ typedef void(^UIInterpolatingMotionEffectEasyCoderBlock) (UIInterpolatingMotionE
 
 
 
--(UIInterpolatingMotionEffect *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

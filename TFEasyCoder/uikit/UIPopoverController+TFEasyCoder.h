@@ -8,19 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
+
 
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 
-typedef void(^UIPopoverControllerEasyCoderBlock) (UIPopoverController * ins);
+
 
 @interface UIPopoverController (TFEasyCoder)
 
-+( UIPopoverController *)easyCoder:(UIPopoverControllerEasyCoderBlock)block;
--(UIPopoverController *)easyCoder:(UIPopoverControllerEasyCoderBlock)block;
+
+
 
 -(UIPopoverController  *(^)(id<UIPopoverControllerDelegate>    delegate))set_delegate;
 -(UIPopoverController  *(^)(UIViewController *  contentViewController))set_contentViewController;
@@ -54,7 +54,7 @@ typedef void(^UIPopoverControllerEasyCoderBlock) (UIPopoverController * ins);
 
 
 
--(UIPopoverController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

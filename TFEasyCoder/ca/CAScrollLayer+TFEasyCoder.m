@@ -7,25 +7,11 @@
 //
 
 #import "CAScrollLayer+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation CAScrollLayer (TFEasyCoder)
 
-+( CAScrollLayer *)easyCoder:(CAScrollLayerEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( CAScrollLayer *)ins);
-        }
-    }];
-}
 
--( CAScrollLayer *)easyCoder:(CAScrollLayerEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -544,13 +530,7 @@
 
 
 
--(CAScrollLayer *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

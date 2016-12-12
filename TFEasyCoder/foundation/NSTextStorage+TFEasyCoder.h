@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSTextStorageEasyCoderBlock) (NSTextStorage * ins);
+
+
 
 @interface NSTextStorage (TFEasyCoder)
 
-+( NSTextStorage *)easyCoder:(NSTextStorageEasyCoderBlock)block;
--(NSTextStorage *)easyCoder:(NSTextStorageEasyCoderBlock)block;
+
+
 
 
 -(NSTextStorage  *(^)(id<NSTextStorageDelegate>   delegate))set_delegate;
@@ -45,7 +45,7 @@ typedef void(^NSTextStorageEasyCoderBlock) (NSTextStorage * ins);
 
 
 
--(NSTextStorage *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UINavigationBarEasyCoderBlock) (UINavigationBar * ins);
+
+
 
 @interface UINavigationBar (TFEasyCoder)
 
-+( UINavigationBar *)easyCoder:(UINavigationBarEasyCoderBlock)block;
--(UINavigationBar *)easyCoder:(UINavigationBarEasyCoderBlock)block;
+
+
 
 
 -(UINavigationBar  *(^)(long long  barStyle))set_barStyle;
@@ -62,7 +62,7 @@ typedef void(^UINavigationBarEasyCoderBlock) (UINavigationBar * ins);
 
 
 
--(UINavigationBar *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

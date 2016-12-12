@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSURLAuthenticationChallengeEasyCoderBlock) (NSURLAuthenticationChallenge * ins);
+
+
 
 @interface NSURLAuthenticationChallenge (TFEasyCoder)
 
-+( NSURLAuthenticationChallenge *)easyCoder:(NSURLAuthenticationChallengeEasyCoderBlock)block;
--(NSURLAuthenticationChallenge *)easyCoder:(NSURLAuthenticationChallengeEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSURLAuthenticationChallengeEasyCoderBlock) (NSURLAuthenticationCh
 
 
 
--(NSURLAuthenticationChallenge *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

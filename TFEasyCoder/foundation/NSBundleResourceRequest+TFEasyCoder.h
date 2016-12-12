@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSBundleResourceRequestEasyCoderBlock) (NSBundleResourceRequest * ins);
+
+
 
 @interface NSBundleResourceRequest (TFEasyCoder)
 
-+( NSBundleResourceRequest *)easyCoder:(NSBundleResourceRequestEasyCoderBlock)block;
--(NSBundleResourceRequest *)easyCoder:(NSBundleResourceRequestEasyCoderBlock)block;
+
+
 
 
 -(NSBundleResourceRequest  *(^)(double  loadingPriority))set_loadingPriority;
@@ -43,7 +43,7 @@ typedef void(^NSBundleResourceRequestEasyCoderBlock) (NSBundleResourceRequest * 
 
 
 
--(NSBundleResourceRequest *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

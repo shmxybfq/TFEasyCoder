@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIFocusGuideEasyCoderBlock) (UIFocusGuide * ins);
+
+
 
 @interface UIFocusGuide (TFEasyCoder)
 
-+( UIFocusGuide *)easyCoder:(UIFocusGuideEasyCoderBlock)block;
--(UIFocusGuide *)easyCoder:(UIFocusGuideEasyCoderBlock)block;
+
+
 
 
 -(UIFocusGuide  *(^)(BOOL  enabled))set_enabled;
@@ -47,7 +47,7 @@ typedef void(^UIFocusGuideEasyCoderBlock) (UIFocusGuide * ins);
 
 
 
--(UIFocusGuide *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

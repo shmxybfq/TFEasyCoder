@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIActivityItemProviderEasyCoderBlock) (UIActivityItemProvider * ins);
+
+
 
 @interface UIActivityItemProvider (TFEasyCoder)
 
-+( UIActivityItemProvider *)easyCoder:(UIActivityItemProviderEasyCoderBlock)block;
--(UIActivityItemProvider *)easyCoder:(UIActivityItemProviderEasyCoderBlock)block;
+
+
 
 
 
@@ -47,7 +47,7 @@ typedef void(^UIActivityItemProviderEasyCoderBlock) (UIActivityItemProvider * in
 
 
 
--(UIActivityItemProvider *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

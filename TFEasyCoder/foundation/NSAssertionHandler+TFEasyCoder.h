@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSAssertionHandlerEasyCoderBlock) (NSAssertionHandler * ins);
+
+
 
 @interface NSAssertionHandler (TFEasyCoder)
 
-+( NSAssertionHandler *)easyCoder:(NSAssertionHandlerEasyCoderBlock)block;
--(NSAssertionHandler *)easyCoder:(NSAssertionHandlerEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSAssertionHandlerEasyCoderBlock) (NSAssertionHandler * ins);
 
 
 
--(NSAssertionHandler *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

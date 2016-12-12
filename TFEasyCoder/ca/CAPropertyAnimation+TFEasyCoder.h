@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^CAPropertyAnimationEasyCoderBlock) (CAPropertyAnimation * ins);
+
+
 
 @interface CAPropertyAnimation (TFEasyCoder)
 
-+( CAPropertyAnimation *)easyCoder:(CAPropertyAnimationEasyCoderBlock)block;
--(CAPropertyAnimation *)easyCoder:(CAPropertyAnimationEasyCoderBlock)block;
+
+
 
 
 -(CAPropertyAnimation  *(^)(NSString *  keyPath))set_keyPath;
@@ -56,7 +56,7 @@ typedef void(^CAPropertyAnimationEasyCoderBlock) (CAPropertyAnimation * ins);
 
 
 
--(CAPropertyAnimation *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

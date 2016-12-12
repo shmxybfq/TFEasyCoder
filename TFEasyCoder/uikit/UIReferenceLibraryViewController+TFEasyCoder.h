@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIReferenceLibraryViewControllerEasyCoderBlock) (UIReferenceLibraryViewController * ins);
+
+
 
 @interface UIReferenceLibraryViewController (TFEasyCoder)
 
-+( UIReferenceLibraryViewController *)easyCoder:(UIReferenceLibraryViewControllerEasyCoderBlock)block;
--(UIReferenceLibraryViewController *)easyCoder:(UIReferenceLibraryViewControllerEasyCoderBlock)block;
+
+
 
 
 
@@ -62,7 +62,7 @@ typedef void(^UIReferenceLibraryViewControllerEasyCoderBlock) (UIReferenceLibrar
 
 
 
--(UIReferenceLibraryViewController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

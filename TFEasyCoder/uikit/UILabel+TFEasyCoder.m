@@ -7,30 +7,13 @@
 //
 
 #import "UILabel+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 
 @implementation UILabel (TFEasyCoder)
-
-+( UILabel *)easyCoder:(UILabelEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UILabel *)ins);
-        }
-    }];
-}
-
--( UILabel *)easyCoder:(UILabelEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
-
 
 
 -(UILabel *(^)(NSString *  text))set_text{
@@ -113,6 +96,7 @@
     };
 }
 
+//TF_EC_CHAIN_PROP_IMP(UILabel ,BOOL,userInteractionEnabled)
 -(UILabel  *(^)(BOOL  enabled))set_enabled{
     __weak typeof(self) weakSelf = self;
     return ^(BOOL  enabled){
@@ -372,14 +356,5 @@
 
 
 
-
-
--(UILabel *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
 
 @end

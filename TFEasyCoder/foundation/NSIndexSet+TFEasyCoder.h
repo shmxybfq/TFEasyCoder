@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSIndexSetEasyCoderBlock) (NSIndexSet * ins);
+
+
 
 @interface NSIndexSet (TFEasyCoder)
 
-+( NSIndexSet *)easyCoder:(NSIndexSetEasyCoderBlock)block;
--(NSIndexSet *)easyCoder:(NSIndexSetEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSIndexSetEasyCoderBlock) (NSIndexSet * ins);
 
 
 
--(NSIndexSet *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

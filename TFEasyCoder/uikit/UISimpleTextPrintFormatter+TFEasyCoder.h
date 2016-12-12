@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UISimpleTextPrintFormatterEasyCoderBlock) (UISimpleTextPrintFormatter * ins);
+
+
 
 @interface UISimpleTextPrintFormatter (TFEasyCoder)
 
-+( UISimpleTextPrintFormatter *)easyCoder:(UISimpleTextPrintFormatterEasyCoderBlock)block;
--(UISimpleTextPrintFormatter *)easyCoder:(UISimpleTextPrintFormatterEasyCoderBlock)block;
+
+
 
 
 -(UISimpleTextPrintFormatter  *(^)(NSString *  text))set_text;
@@ -53,7 +53,7 @@ typedef void(^UISimpleTextPrintFormatterEasyCoderBlock) (UISimpleTextPrintFormat
 
 
 
--(UISimpleTextPrintFormatter *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

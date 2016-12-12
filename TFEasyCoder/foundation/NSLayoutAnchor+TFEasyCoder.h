@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSLayoutAnchorEasyCoderBlock) (NSLayoutAnchor * ins);
+
+
 
 @interface NSLayoutAnchor (TFEasyCoder)
 
-+( NSLayoutAnchor *)easyCoder:(NSLayoutAnchorEasyCoderBlock)block;
--(NSLayoutAnchor *)easyCoder:(NSLayoutAnchorEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSLayoutAnchorEasyCoderBlock) (NSLayoutAnchor * ins);
 
 
 
--(NSLayoutAnchor *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

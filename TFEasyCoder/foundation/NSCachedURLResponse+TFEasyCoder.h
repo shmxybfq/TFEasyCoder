@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSCachedURLResponseEasyCoderBlock) (NSCachedURLResponse * ins);
+
+
 
 @interface NSCachedURLResponse (TFEasyCoder)
 
-+( NSCachedURLResponse *)easyCoder:(NSCachedURLResponseEasyCoderBlock)block;
--(NSCachedURLResponse *)easyCoder:(NSCachedURLResponseEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSCachedURLResponseEasyCoderBlock) (NSCachedURLResponse * ins);
 
 
 
--(NSCachedURLResponse *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

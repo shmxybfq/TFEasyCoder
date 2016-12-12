@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSFileWrapperEasyCoderBlock) (NSFileWrapper * ins);
+
+
 
 @interface NSFileWrapper (TFEasyCoder)
 
-+( NSFileWrapper *)easyCoder:(NSFileWrapperEasyCoderBlock)block;
--(NSFileWrapper *)easyCoder:(NSFileWrapperEasyCoderBlock)block;
+
+
 
 
 -(NSFileWrapper  *(^)(NSString *  preferredFilename))set_preferredFilename;
@@ -45,7 +45,7 @@ typedef void(^NSFileWrapperEasyCoderBlock) (NSFileWrapper * ins);
 
 
 
--(NSFileWrapper *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

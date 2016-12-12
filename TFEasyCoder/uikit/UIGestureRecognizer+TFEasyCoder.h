@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIGestureRecognizerEasyCoderBlock) (UIGestureRecognizer * ins);
+
+
 
 @interface UIGestureRecognizer (TFEasyCoder)
 
-+( UIGestureRecognizer *)easyCoder:(UIGestureRecognizerEasyCoderBlock)block;
--(UIGestureRecognizer *)easyCoder:(UIGestureRecognizerEasyCoderBlock)block;
+
+
 
 
 -(UIGestureRecognizer  *(^)(BOOL  enabled))set_enabled;
@@ -48,7 +48,7 @@ typedef void(^UIGestureRecognizerEasyCoderBlock) (UIGestureRecognizer * ins);
 
 
 
--(UIGestureRecognizer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

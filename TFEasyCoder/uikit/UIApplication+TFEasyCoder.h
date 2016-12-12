@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIApplicationEasyCoderBlock) (UIApplication * ins);
+
+
 
 @interface UIApplication (TFEasyCoder)
 
-+( UIApplication *)easyCoder:(UIApplicationEasyCoderBlock)block;
--(UIApplication *)easyCoder:(UIApplicationEasyCoderBlock)block;
+
+
 
 
 -(UIApplication  *(^)(id<UIApplicationDelegate>    delegate))set_delegate;
@@ -49,7 +49,7 @@ typedef void(^UIApplicationEasyCoderBlock) (UIApplication * ins);
 
 
 
--(UIApplication *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

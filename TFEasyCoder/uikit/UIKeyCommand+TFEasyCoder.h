@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIKeyCommandEasyCoderBlock) (UIKeyCommand * ins);
+
+
 
 @interface UIKeyCommand (TFEasyCoder)
 
-+( UIKeyCommand *)easyCoder:(UIKeyCommandEasyCoderBlock)block;
--(UIKeyCommand *)easyCoder:(UIKeyCommandEasyCoderBlock)block;
+
+
 
 
 -(UIKeyCommand  *(^)(NSString *  discoverabilityTitle))set_discoverabilityTitle;
@@ -43,7 +43,7 @@ typedef void(^UIKeyCommandEasyCoderBlock) (UIKeyCommand * ins);
 
 
 
--(UIKeyCommand *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

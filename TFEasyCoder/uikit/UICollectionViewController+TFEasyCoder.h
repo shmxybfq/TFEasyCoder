@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UICollectionViewControllerEasyCoderBlock) (UICollectionViewController * ins);
+
+
 
 @interface UICollectionViewController (TFEasyCoder)
 
-+( UICollectionViewController *)easyCoder:(UICollectionViewControllerEasyCoderBlock)block;
--(UICollectionViewController *)easyCoder:(UICollectionViewControllerEasyCoderBlock)block;
+
+
 
 
 -(UICollectionViewController  *(^)(UICollectionView *  collectionView))set_collectionView;
@@ -66,7 +66,7 @@ typedef void(^UICollectionViewControllerEasyCoderBlock) (UICollectionViewControl
 
 
 
--(UICollectionViewController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

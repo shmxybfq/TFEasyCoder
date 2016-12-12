@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^CATextLayerEasyCoderBlock) (CATextLayer * ins);
+
+
 
 @interface CATextLayer (TFEasyCoder)
 
-+( CATextLayer *)easyCoder:(CATextLayerEasyCoderBlock)block;
--(CATextLayer *)easyCoder:(CATextLayerEasyCoderBlock)block;
+
+
 
 
 -(CATextLayer  *(^)(CFTypeRef  font))set_font;
@@ -98,7 +98,7 @@ typedef void(^CATextLayerEasyCoderBlock) (CATextLayer * ins);
 
 
 
--(CATextLayer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

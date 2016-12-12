@@ -7,7 +7,7 @@
 //
 
 #import "UIWebView+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 
 #pragma clang diagnostic push
@@ -16,21 +16,7 @@
 
 @implementation UIWebView (TFEasyCoder)
 
-+( UIWebView *)easyCoder:(UIWebViewEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIWebView *)ins);
-        }
-    }];
-}
 
--( UIWebView *)easyCoder:(UIWebViewEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -342,13 +328,7 @@
 
 
 
--(UIWebView *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

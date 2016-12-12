@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSXMLParserEasyCoderBlock) (NSXMLParser * ins);
+
+
 
 @interface NSXMLParser (TFEasyCoder)
 
-+( NSXMLParser *)easyCoder:(NSXMLParserEasyCoderBlock)block;
--(NSXMLParser *)easyCoder:(NSXMLParserEasyCoderBlock)block;
+
+
 
 
 -(NSXMLParser  *(^)(id<NSXMLParserDelegate>   delegate))set_delegate;
@@ -48,7 +48,7 @@ typedef void(^NSXMLParserEasyCoderBlock) (NSXMLParser * ins);
 
 
 
--(NSXMLParser *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

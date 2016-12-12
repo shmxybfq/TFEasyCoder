@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIGravityBehaviorEasyCoderBlock) (UIGravityBehavior * ins);
+
+
 
 @interface UIGravityBehavior (TFEasyCoder)
 
-+( UIGravityBehavior *)easyCoder:(UIGravityBehaviorEasyCoderBlock)block;
--(UIGravityBehavior *)easyCoder:(UIGravityBehaviorEasyCoderBlock)block;
+
+
 
 
 -(UIGravityBehavior  *(^)(CGVector  gravityDirection))set_gravityDirection;
@@ -46,7 +46,7 @@ typedef void(^UIGravityBehaviorEasyCoderBlock) (UIGravityBehavior * ins);
 
 
 
--(UIGravityBehavior *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

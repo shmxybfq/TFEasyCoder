@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIMenuControllerEasyCoderBlock) (UIMenuController * ins);
+
+
 
 @interface UIMenuController (TFEasyCoder)
 
-+( UIMenuController *)easyCoder:(UIMenuControllerEasyCoderBlock)block;
--(UIMenuController *)easyCoder:(UIMenuControllerEasyCoderBlock)block;
+
+
 
 
 -(UIMenuController  *(^)(BOOL  menuVisible))set_menuVisible;
@@ -45,7 +45,7 @@ typedef void(^UIMenuControllerEasyCoderBlock) (UIMenuController * ins);
 
 
 
--(UIMenuController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^CATransactionEasyCoderBlock) (CATransaction * ins);
+
+
 
 @interface CATransaction (TFEasyCoder)
 
-+( CATransaction *)easyCoder:(CATransactionEasyCoderBlock)block;
--(CATransaction *)easyCoder:(CATransactionEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^CATransactionEasyCoderBlock) (CATransaction * ins);
 
 
 
--(CATransaction *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

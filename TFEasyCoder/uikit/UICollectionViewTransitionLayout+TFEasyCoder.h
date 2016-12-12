@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UICollectionViewTransitionLayoutEasyCoderBlock) (UICollectionViewTransitionLayout * ins);
+
+
 
 @interface UICollectionViewTransitionLayout (TFEasyCoder)
 
-+( UICollectionViewTransitionLayout *)easyCoder:(UICollectionViewTransitionLayoutEasyCoderBlock)block;
--(UICollectionViewTransitionLayout *)easyCoder:(UICollectionViewTransitionLayoutEasyCoderBlock)block;
+
+
 
 
 -(UICollectionViewTransitionLayout  *(^)(double  transitionProgress))set_transitionProgress;
@@ -44,7 +44,7 @@ typedef void(^UICollectionViewTransitionLayoutEasyCoderBlock) (UICollectionViewT
 
 
 
--(UICollectionViewTransitionLayout *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

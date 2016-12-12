@@ -7,7 +7,7 @@
 //
 
 #import "UIDocumentPickerExtensionViewController+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
@@ -15,21 +15,7 @@
 
 @implementation UIDocumentPickerExtensionViewController (TFEasyCoder)
 
-+( UIDocumentPickerExtensionViewController *)easyCoder:(UIDocumentPickerExtensionViewControllerEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIDocumentPickerExtensionViewController *)ins);
-        }
-    }];
-}
 
--( UIDocumentPickerExtensionViewController *)easyCoder:(UIDocumentPickerExtensionViewControllerEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -300,13 +286,7 @@
 
 
 
--(UIDocumentPickerExtensionViewController *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIPageControlEasyCoderBlock) (UIPageControl * ins);
+
+
 
 @interface UIPageControl (TFEasyCoder)
 
-+( UIPageControl *)easyCoder:(UIPageControlEasyCoderBlock)block;
--(UIPageControl *)easyCoder:(UIPageControlEasyCoderBlock)block;
+
+
 
 
 -(UIPageControl  *(^)(long long  numberOfPages))set_numberOfPages;
@@ -65,7 +65,7 @@ typedef void(^UIPageControlEasyCoderBlock) (UIPageControl * ins);
 
 
 
--(UIPageControl *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

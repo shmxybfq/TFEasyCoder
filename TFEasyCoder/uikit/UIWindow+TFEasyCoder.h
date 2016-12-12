@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIWindowEasyCoderBlock) (UIWindow * ins);
+
+
 
 @interface UIWindow (TFEasyCoder)
 
-+( UIWindow *)easyCoder:(UIWindowEasyCoderBlock)block;
--(UIWindow *)easyCoder:(UIWindowEasyCoderBlock)block;
+
+
 
 
 -(UIWindow  *(^)(UIScreen *  screen))set_screen;
@@ -57,7 +57,7 @@ typedef void(^UIWindowEasyCoderBlock) (UIWindow * ins);
 
 
 
--(UIWindow *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

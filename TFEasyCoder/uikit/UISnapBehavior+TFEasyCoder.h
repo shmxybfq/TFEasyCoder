@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UISnapBehaviorEasyCoderBlock) (UISnapBehavior * ins);
+
+
 
 @interface UISnapBehavior (TFEasyCoder)
 
-+( UISnapBehavior *)easyCoder:(UISnapBehaviorEasyCoderBlock)block;
--(UISnapBehavior *)easyCoder:(UISnapBehaviorEasyCoderBlock)block;
+
+
 
 
 -(UISnapBehavior  *(^)(CGPoint  snapPoint))set_snapPoint;
@@ -45,7 +45,7 @@ typedef void(^UISnapBehaviorEasyCoderBlock) (UISnapBehavior * ins);
 
 
 
--(UISnapBehavior *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

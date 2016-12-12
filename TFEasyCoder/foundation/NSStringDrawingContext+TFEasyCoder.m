@@ -7,7 +7,7 @@
 //
 
 #import "NSStringDrawingContext+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
@@ -15,21 +15,7 @@
 
 @implementation NSStringDrawingContext (TFEasyCoder)
 
-+( NSStringDrawingContext *)easyCoder:(NSStringDrawingContextEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSStringDrawingContext *)ins);
-        }
-    }];
-}
 
--( NSStringDrawingContext *)easyCoder:(NSStringDrawingContextEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -172,13 +158,7 @@
 
 
 
--(NSStringDrawingContext *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

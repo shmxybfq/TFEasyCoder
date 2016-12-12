@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIControlEasyCoderBlock) (UIControl * ins);
+
+
 
 @interface UIControl (TFEasyCoder)
 
-+( UIControl *)easyCoder:(UIControlEasyCoderBlock)block;
--(UIControl *)easyCoder:(UIControlEasyCoderBlock)block;
+
+
 
 
 -(UIControl  *(^)(BOOL  enabled))set_enabled;
@@ -57,7 +57,7 @@ typedef void(^UIControlEasyCoderBlock) (UIControl * ins);
 
 
 
--(UIControl *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

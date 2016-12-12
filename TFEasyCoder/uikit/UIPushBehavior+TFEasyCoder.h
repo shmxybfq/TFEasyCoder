@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIPushBehaviorEasyCoderBlock) (UIPushBehavior * ins);
+
+
 
 @interface UIPushBehavior (TFEasyCoder)
 
-+( UIPushBehavior *)easyCoder:(UIPushBehaviorEasyCoderBlock)block;
--(UIPushBehavior *)easyCoder:(UIPushBehaviorEasyCoderBlock)block;
+
+
 
 
 -(UIPushBehavior  *(^)(BOOL  active))set_active;
@@ -47,7 +47,7 @@ typedef void(^UIPushBehaviorEasyCoderBlock) (UIPushBehavior * ins);
 
 
 
--(UIPushBehavior *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

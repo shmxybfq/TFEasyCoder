@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIInputViewEasyCoderBlock) (UIInputView * ins);
+
+
 
 @interface UIInputView (TFEasyCoder)
 
-+( UIInputView *)easyCoder:(UIInputViewEasyCoderBlock)block;
--(UIInputView *)easyCoder:(UIInputViewEasyCoderBlock)block;
+
+
 
 
 -(UIInputView  *(^)(BOOL  allowsSelfSizing))set_allowsSelfSizing;
@@ -54,7 +54,7 @@ typedef void(^UIInputViewEasyCoderBlock) (UIInputView * ins);
 
 
 
--(UIInputView *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

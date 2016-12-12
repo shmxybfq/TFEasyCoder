@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSOrderedSetEasyCoderBlock) (NSOrderedSet * ins);
+
+
 
 @interface NSOrderedSet (TFEasyCoder)
 
-+( NSOrderedSet *)easyCoder:(NSOrderedSetEasyCoderBlock)block;
--(NSOrderedSet *)easyCoder:(NSOrderedSetEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSOrderedSetEasyCoderBlock) (NSOrderedSet * ins);
 
 
 
--(NSOrderedSet *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

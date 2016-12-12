@@ -7,25 +7,11 @@
 //
 
 #import "NSMutableArray+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSMutableArray (TFEasyCoder)
 
-+( NSMutableArray *)easyCoder:(NSMutableArrayEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSMutableArray *)ins);
-        }
-    }];
-}
 
--( NSMutableArray *)easyCoder:(NSMutableArrayEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -151,14 +137,6 @@
 
 
 
-
--(NSMutableArray *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
 
 
 

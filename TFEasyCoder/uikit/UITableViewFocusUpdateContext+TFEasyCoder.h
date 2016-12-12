@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UITableViewFocusUpdateContextEasyCoderBlock) (UITableViewFocusUpdateContext * ins);
+
+
 
 @interface UITableViewFocusUpdateContext (TFEasyCoder)
 
-+( UITableViewFocusUpdateContext *)easyCoder:(UITableViewFocusUpdateContextEasyCoderBlock)block;
--(UITableViewFocusUpdateContext *)easyCoder:(UITableViewFocusUpdateContextEasyCoderBlock)block;
+
+
 
 
 
@@ -43,7 +43,7 @@ typedef void(^UITableViewFocusUpdateContextEasyCoderBlock) (UITableViewFocusUpda
 
 
 
--(UITableViewFocusUpdateContext *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

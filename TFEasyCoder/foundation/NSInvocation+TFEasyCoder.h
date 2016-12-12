@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSInvocationEasyCoderBlock) (NSInvocation * ins);
+
+
 
 @interface NSInvocation (TFEasyCoder)
 
-+( NSInvocation *)easyCoder:(NSInvocationEasyCoderBlock)block;
--(NSInvocation *)easyCoder:(NSInvocationEasyCoderBlock)block;
+
+
 
 
 -(NSInvocation  *(^)(SEL  selector))set_selector;
@@ -43,7 +43,7 @@ typedef void(^NSInvocationEasyCoderBlock) (NSInvocation * ins);
 
 
 
--(NSInvocation *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

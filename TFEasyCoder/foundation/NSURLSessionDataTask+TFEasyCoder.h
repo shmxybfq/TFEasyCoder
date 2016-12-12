@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSURLSessionDataTaskEasyCoderBlock) (NSURLSessionDataTask * ins);
+
+
 
 @interface NSURLSessionDataTask (TFEasyCoder)
 
-+( NSURLSessionDataTask *)easyCoder:(NSURLSessionDataTaskEasyCoderBlock)block;
--(NSURLSessionDataTask *)easyCoder:(NSURLSessionDataTaskEasyCoderBlock)block;
+
+
 
 
 
@@ -45,7 +45,7 @@ typedef void(^NSURLSessionDataTaskEasyCoderBlock) (NSURLSessionDataTask * ins);
 
 
 
--(NSURLSessionDataTask *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

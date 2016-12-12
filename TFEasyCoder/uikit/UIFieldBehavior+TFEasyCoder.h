@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIFieldBehaviorEasyCoderBlock) (UIFieldBehavior * ins);
+
+
 
 @interface UIFieldBehavior (TFEasyCoder)
 
-+( UIFieldBehavior *)easyCoder:(UIFieldBehaviorEasyCoderBlock)block;
--(UIFieldBehavior *)easyCoder:(UIFieldBehaviorEasyCoderBlock)block;
+
+
 
 
 -(UIFieldBehavior  *(^)(CGPoint  position))set_position;
@@ -50,7 +50,7 @@ typedef void(^UIFieldBehaviorEasyCoderBlock) (UIFieldBehavior * ins);
 
 
 
--(UIFieldBehavior *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

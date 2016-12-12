@@ -7,25 +7,11 @@
 //
 
 #import "NSURLProtectionSpace+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSURLProtectionSpace (TFEasyCoder)
 
-+( NSURLProtectionSpace *)easyCoder:(NSURLProtectionSpaceEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSURLProtectionSpace *)ins);
-        }
-    }];
-}
 
--( NSURLProtectionSpace *)easyCoder:(NSURLProtectionSpaceEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -151,13 +137,7 @@
 
 
 
--(NSURLProtectionSpace *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

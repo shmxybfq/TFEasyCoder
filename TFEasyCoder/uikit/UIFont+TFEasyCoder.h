@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIFontEasyCoderBlock) (UIFont * ins);
+
+
 
 @interface UIFont (TFEasyCoder)
 
-+( UIFont *)easyCoder:(UIFontEasyCoderBlock)block;
--(UIFont *)easyCoder:(UIFontEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^UIFontEasyCoderBlock) (UIFont * ins);
 
 
 
--(UIFont *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

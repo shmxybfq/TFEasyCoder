@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSURLRequestEasyCoderBlock) (NSURLRequest * ins);
+
+
 
 @interface NSURLRequest (TFEasyCoder)
 
-+( NSURLRequest *)easyCoder:(NSURLRequestEasyCoderBlock)block;
--(NSURLRequest *)easyCoder:(NSURLRequestEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSURLRequestEasyCoderBlock) (NSURLRequest * ins);
 
 
 
--(NSURLRequest *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -7,25 +7,11 @@
 //
 
 #import "NSNotificationQueue+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSNotificationQueue (TFEasyCoder)
 
-+( NSNotificationQueue *)easyCoder:(NSNotificationQueueEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSNotificationQueue *)ins);
-        }
-    }];
-}
 
--( NSNotificationQueue *)easyCoder:(NSNotificationQueueEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -151,13 +137,7 @@
 
 
 
--(NSNotificationQueue *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

@@ -384,6 +384,9 @@
 		CD922DD51DD1966900CABEFA /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CD922DC81DD1966900CABEFA /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		CD922DD61DD1966900CABEFA /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CD922DCA1DD1966900CABEFA /* View+MASAdditions.m */; };
 		CD922DD71DD1966900CABEFA /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CD922DCD1DD1966900CABEFA /* ViewController+MASAdditions.m */; };
+		CD964FB21DFE917C005381E7 /* TFEasyCoder_CA.m in Sources */ = {isa = PBXBuildFile; fileRef = CD964FB11DFE917C005381E7 /* TFEasyCoder_CA.m */; };
+		CD964FB51DFE953F005381E7 /* TFEasyCoder_UI.m in Sources */ = {isa = PBXBuildFile; fileRef = CD964FB41DFE953F005381E7 /* TFEasyCoder_UI.m */; };
+		CD964FB81DFE95D8005381E7 /* TFEasyCoder_NS.m in Sources */ = {isa = PBXBuildFile; fileRef = CD964FB71DFE95D8005381E7 /* TFEasyCoder_NS.m */; };
 		CDA6F0EE1DC33CEC001330D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA6F0ED1DC33CEC001330D3 /* main.m */; };
 		CDA6F0F11DC33CEC001330D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA6F0F01DC33CEC001330D3 /* AppDelegate.m */; };
 		CDA6F0F41DC33CEC001330D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA6F0F31DC33CEC001330D3 /* ViewController.m */; };
@@ -1173,6 +1176,12 @@
 		CD922DCB1DD1966900CABEFA /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		CD922DCC1DD1966900CABEFA /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		CD922DCD1DD1966900CABEFA /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		CD964FB01DFE917C005381E7 /* TFEasyCoder_CA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFEasyCoder_CA.h; sourceTree = "<group>"; };
+		CD964FB11DFE917C005381E7 /* TFEasyCoder_CA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFEasyCoder_CA.m; sourceTree = "<group>"; };
+		CD964FB31DFE953F005381E7 /* TFEasyCoder_UI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFEasyCoder_UI.h; sourceTree = "<group>"; };
+		CD964FB41DFE953F005381E7 /* TFEasyCoder_UI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFEasyCoder_UI.m; sourceTree = "<group>"; };
+		CD964FB61DFE95D8005381E7 /* TFEasyCoder_NS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFEasyCoder_NS.h; sourceTree = "<group>"; };
+		CD964FB71DFE95D8005381E7 /* TFEasyCoder_NS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFEasyCoder_NS.m; sourceTree = "<group>"; };
 		CDA6F0E91DC33CEC001330D3 /* TFEasyCoderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFEasyCoderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA6F0ED1DC33CEC001330D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CDA6F0EF1DC33CEC001330D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1215,6 +1224,12 @@
 				CD1674041DC87BCF00969C21 /* TFEasyCoder.h */,
 				CD1674021DC87BCF00969C21 /* NSObject+TFExecute.h */,
 				CD1674031DC87BCF00969C21 /* NSObject+TFExecute.m */,
+				CD964FB01DFE917C005381E7 /* TFEasyCoder_CA.h */,
+				CD964FB11DFE917C005381E7 /* TFEasyCoder_CA.m */,
+				CD964FB31DFE953F005381E7 /* TFEasyCoder_UI.h */,
+				CD964FB41DFE953F005381E7 /* TFEasyCoder_UI.m */,
+				CD964FB61DFE95D8005381E7 /* TFEasyCoder_NS.h */,
+				CD964FB71DFE95D8005381E7 /* TFEasyCoder_NS.m */,
 				CD1674051DC87BCF00969C21 /* TFEasyCoderConst.h */,
 				CD5A7F231DF90D7000A0A789 /* tfkit */,
 				CD16728A1DC87BCE00969C21 /* ca */,
@@ -2356,6 +2371,7 @@
 				CD1675711DC87BCF00969C21 /* NSAttributedString+TFEasyCoder.m in Sources */,
 				CD1675AD1DC87BCF00969C21 /* NSLayoutManager+TFEasyCoder.m in Sources */,
 				CD1675EE1DC87BD000969C21 /* NSStringDrawingContext+TFEasyCoder.m in Sources */,
+				CD964FB81DFE95D8005381E7 /* TFEasyCoder_NS.m in Sources */,
 				CD1676421DC87BD000969C21 /* UIEvent+TFEasyCoder.m in Sources */,
 				CD1676261DC87BD000969C21 /* UIBezierPath+TFEasyCoder.m in Sources */,
 				CD1676151DC87BD000969C21 /* UIAccessibilityCustomAction+TFEasyCoder.m in Sources */,
@@ -2385,6 +2401,7 @@
 				CD1675C41DC87BCF00969C21 /* NSMutableParagraphStyle+TFEasyCoder.m in Sources */,
 				CDBC7EBD1DF9669E0004A819 /* NSObject+TFKit.m in Sources */,
 				CD1675C61DC87BCF00969C21 /* NSMutableString+TFEasyCoder.m in Sources */,
+				CD964FB21DFE917C005381E7 /* TFEasyCoder_CA.m in Sources */,
 				CD1675F61DC87BD000969C21 /* NSTimeZone+TFEasyCoder.m in Sources */,
 				CD1676B81DC87BD000969C21 /* UIVisualEffectView+TFEasyCoder.m in Sources */,
 				CD1675B61DC87BCF00969C21 /* NSMassFormatter+TFEasyCoder.m in Sources */,
@@ -2417,6 +2434,7 @@
 				CD1675B21DC87BCF00969C21 /* NSLocale+TFEasyCoder.m in Sources */,
 				CD16760D1DC87BD000969C21 /* NSUserDefaults+TFEasyCoder.m in Sources */,
 				CDA6F0F11DC33CEC001330D3 /* AppDelegate.m in Sources */,
+				CD964FB51DFE953F005381E7 /* TFEasyCoder_UI.m in Sources */,
 				CD1675901DC87BCF00969C21 /* NSException+TFEasyCoder.m in Sources */,
 				CD1676B61DC87BD000969C21 /* UIViewPrintFormatter+TFEasyCoder.m in Sources */,
 				CD1675E41DC87BD000969C21 /* NSRegularExpression+TFEasyCoder.m in Sources */,

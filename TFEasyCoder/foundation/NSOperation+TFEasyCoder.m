@@ -7,7 +7,7 @@
 //
 
 #import "NSOperation+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
@@ -15,21 +15,7 @@
 
 @implementation NSOperation (TFEasyCoder)
 
-+( NSOperation *)easyCoder:(NSOperationEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSOperation *)ins);
-        }
-    }];
-}
 
--( NSOperation *)easyCoder:(NSOperationEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -187,13 +173,7 @@
 
 
 
--(NSOperation *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

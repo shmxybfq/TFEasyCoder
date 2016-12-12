@@ -7,25 +7,11 @@
 //
 
 #import "UIPrinterPickerController+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UIPrinterPickerController (TFEasyCoder)
 
-+( UIPrinterPickerController *)easyCoder:(UIPrinterPickerControllerEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIPrinterPickerController *)ins);
-        }
-    }];
-}
 
--( UIPrinterPickerController *)easyCoder:(UIPrinterPickerControllerEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -159,13 +145,7 @@
 
 
 
--(UIPrinterPickerController *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

@@ -7,25 +7,11 @@
 //
 
 #import "NSMassFormatter+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSMassFormatter (TFEasyCoder)
 
-+( NSMassFormatter *)easyCoder:(NSMassFormatterEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSMassFormatter *)ins);
-        }
-    }];
-}
 
--( NSMassFormatter *)easyCoder:(NSMassFormatterEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -176,13 +162,7 @@
 
 
 
--(NSMassFormatter *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

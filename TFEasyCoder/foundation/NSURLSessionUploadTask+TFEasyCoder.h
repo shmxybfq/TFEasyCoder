@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSURLSessionUploadTaskEasyCoderBlock) (NSURLSessionUploadTask * ins);
+
+
 
 @interface NSURLSessionUploadTask (TFEasyCoder)
 
-+( NSURLSessionUploadTask *)easyCoder:(NSURLSessionUploadTaskEasyCoderBlock)block;
--(NSURLSessionUploadTask *)easyCoder:(NSURLSessionUploadTaskEasyCoderBlock)block;
+
+
 
 
 
@@ -46,7 +46,7 @@ typedef void(^NSURLSessionUploadTaskEasyCoderBlock) (NSURLSessionUploadTask * in
 
 
 
--(NSURLSessionUploadTask *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

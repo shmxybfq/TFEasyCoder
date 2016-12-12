@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UICollisionBehaviorEasyCoderBlock) (UICollisionBehavior * ins);
+
+
 
 @interface UICollisionBehavior (TFEasyCoder)
 
-+( UICollisionBehavior *)easyCoder:(UICollisionBehaviorEasyCoderBlock)block;
--(UICollisionBehavior *)easyCoder:(UICollisionBehaviorEasyCoderBlock)block;
+
+
 
 
 -(UICollisionBehavior  *(^)(unsigned long long  collisionMode))set_collisionMode;
@@ -46,7 +46,7 @@ typedef void(^UICollisionBehaviorEasyCoderBlock) (UICollisionBehavior * ins);
 
 
 
--(UICollisionBehavior *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

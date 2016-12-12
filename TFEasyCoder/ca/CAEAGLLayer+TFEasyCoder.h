@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^CAEAGLLayerEasyCoderBlock) (CAEAGLLayer * ins);
+
+
 
 @interface CAEAGLLayer (TFEasyCoder)
 
-+( CAEAGLLayer *)easyCoder:(CAEAGLLayerEasyCoderBlock)block;
--(CAEAGLLayer *)easyCoder:(CAEAGLLayerEasyCoderBlock)block;
+
+
 
 
 
@@ -94,7 +94,7 @@ typedef void(^CAEAGLLayerEasyCoderBlock) (CAEAGLLayer * ins);
 
 
 
--(CAEAGLLayer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

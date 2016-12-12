@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSFileSecurityEasyCoderBlock) (NSFileSecurity * ins);
+
+
 
 @interface NSFileSecurity (TFEasyCoder)
 
-+( NSFileSecurity *)easyCoder:(NSFileSecurityEasyCoderBlock)block;
--(NSFileSecurity *)easyCoder:(NSFileSecurityEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSFileSecurityEasyCoderBlock) (NSFileSecurity * ins);
 
 
 
--(NSFileSecurity *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

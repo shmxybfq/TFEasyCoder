@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSDirectoryEnumeratorEasyCoderBlock) (NSDirectoryEnumerator * ins);
+
+
 
 @interface NSDirectoryEnumerator (TFEasyCoder)
 
-+( NSDirectoryEnumerator *)easyCoder:(NSDirectoryEnumeratorEasyCoderBlock)block;
--(NSDirectoryEnumerator *)easyCoder:(NSDirectoryEnumeratorEasyCoderBlock)block;
+
+
 
 
 
@@ -43,7 +43,7 @@ typedef void(^NSDirectoryEnumeratorEasyCoderBlock) (NSDirectoryEnumerator * ins)
 
 
 
--(NSDirectoryEnumerator *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

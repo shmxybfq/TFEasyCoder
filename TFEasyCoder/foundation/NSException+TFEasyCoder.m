@@ -7,25 +7,11 @@
 //
 
 #import "NSException+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSException (TFEasyCoder)
 
-+( NSException *)easyCoder:(NSExceptionEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSException *)ins);
-        }
-    }];
-}
 
--( NSException *)easyCoder:(NSExceptionEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -151,13 +137,7 @@
 
 
 
--(NSException *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSDictionaryEasyCoderBlock) (NSDictionary * ins);
+
+
 
 @interface NSDictionary (TFEasyCoder)
 
-+( NSDictionary *)easyCoder:(NSDictionaryEasyCoderBlock)block;
--(NSDictionary *)easyCoder:(NSDictionaryEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSDictionaryEasyCoderBlock) (NSDictionary * ins);
 
 
 
--(NSDictionary *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

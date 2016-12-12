@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIPrintInteractionControllerEasyCoderBlock) (UIPrintInteractionController * ins);
+
+
 
 @interface UIPrintInteractionController (TFEasyCoder)
 
-+( UIPrintInteractionController *)easyCoder:(UIPrintInteractionControllerEasyCoderBlock)block;
--(UIPrintInteractionController *)easyCoder:(UIPrintInteractionControllerEasyCoderBlock)block;
+
+
 
 
 -(UIPrintInteractionController  *(^)(UIPrintInfo *  printInfo))set_printInfo;
@@ -49,7 +49,7 @@ typedef void(^UIPrintInteractionControllerEasyCoderBlock) (UIPrintInteractionCon
 
 
 
--(UIPrintInteractionController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

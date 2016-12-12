@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIScreenEdgePanGestureRecognizerEasyCoderBlock) (UIScreenEdgePanGestureRecognizer * ins);
+
+
 
 @interface UIScreenEdgePanGestureRecognizer (TFEasyCoder)
 
-+( UIScreenEdgePanGestureRecognizer *)easyCoder:(UIScreenEdgePanGestureRecognizerEasyCoderBlock)block;
--(UIScreenEdgePanGestureRecognizer *)easyCoder:(UIScreenEdgePanGestureRecognizerEasyCoderBlock)block;
+
+
 
 
 -(UIScreenEdgePanGestureRecognizer  *(^)(unsigned long long  edges))set_edges;
@@ -53,7 +53,7 @@ typedef void(^UIScreenEdgePanGestureRecognizerEasyCoderBlock) (UIScreenEdgePanGe
 
 
 
--(UIScreenEdgePanGestureRecognizer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

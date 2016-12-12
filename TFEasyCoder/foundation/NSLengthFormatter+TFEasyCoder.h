@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSLengthFormatterEasyCoderBlock) (NSLengthFormatter * ins);
+
+
 
 @interface NSLengthFormatter (TFEasyCoder)
 
-+( NSLengthFormatter *)easyCoder:(NSLengthFormatterEasyCoderBlock)block;
--(NSLengthFormatter *)easyCoder:(NSLengthFormatterEasyCoderBlock)block;
+
+
 
 
 -(NSLengthFormatter  *(^)(NSNumberFormatter *  numberFormatter))set_numberFormatter;
@@ -46,7 +46,7 @@ typedef void(^NSLengthFormatterEasyCoderBlock) (NSLengthFormatter * ins);
 
 
 
--(NSLengthFormatter *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

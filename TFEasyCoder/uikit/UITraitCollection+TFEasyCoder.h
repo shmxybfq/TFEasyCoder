@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UITraitCollectionEasyCoderBlock) (UITraitCollection * ins);
+
+
 
 @interface UITraitCollection (TFEasyCoder)
 
-+( UITraitCollection *)easyCoder:(UITraitCollectionEasyCoderBlock)block;
--(UITraitCollection *)easyCoder:(UITraitCollectionEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^UITraitCollectionEasyCoderBlock) (UITraitCollection * ins);
 
 
 
--(UITraitCollection *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

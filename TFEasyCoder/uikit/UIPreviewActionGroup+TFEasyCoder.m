@@ -7,25 +7,11 @@
 //
 
 #import "UIPreviewActionGroup+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UIPreviewActionGroup (TFEasyCoder)
 
-+( UIPreviewActionGroup *)easyCoder:(UIPreviewActionGroupEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIPreviewActionGroup *)ins);
-        }
-    }];
-}
 
--( UIPreviewActionGroup *)easyCoder:(UIPreviewActionGroupEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -151,13 +137,7 @@
 
 
 
--(UIPreviewActionGroup *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

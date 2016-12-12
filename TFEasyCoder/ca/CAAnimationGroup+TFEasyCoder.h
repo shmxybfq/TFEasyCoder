@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^CAAnimationGroupEasyCoderBlock) (CAAnimationGroup * ins);
+
+
 
 @interface CAAnimationGroup (TFEasyCoder)
 
-+( CAAnimationGroup *)easyCoder:(CAAnimationGroupEasyCoderBlock)block;
--(CAAnimationGroup *)easyCoder:(CAAnimationGroupEasyCoderBlock)block;
+
+
 
 
 -(CAAnimationGroup  *(^)(NSArray *  animations))set_animations;
@@ -53,7 +53,7 @@ typedef void(^CAAnimationGroupEasyCoderBlock) (CAAnimationGroup * ins);
 
 
 
--(CAAnimationGroup *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

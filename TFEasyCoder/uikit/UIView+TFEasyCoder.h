@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIViewEasyCoderBlock) (UIView * ins);
+
+
 
 @interface UIView (TFEasyCoder)
 
-+( UIView *)easyCoder:(UIViewEasyCoderBlock)block;
--(UIView *)easyCoder:(UIViewEasyCoderBlock)block;
+
+
 
 
 -(UIView  *(^)(UIView *  maskView))set_maskView;
@@ -50,7 +50,7 @@ typedef void(^UIViewEasyCoderBlock) (UIView * ins);
 
 
 
--(UIView *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

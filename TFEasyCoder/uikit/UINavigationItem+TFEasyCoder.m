@@ -7,25 +7,11 @@
 //
 
 #import "UINavigationItem+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UINavigationItem (TFEasyCoder)
 
-+( UINavigationItem *)easyCoder:(UINavigationItemEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UINavigationItem *)ins);
-        }
-    }];
-}
 
--( UINavigationItem *)easyCoder:(UINavigationItemEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -231,13 +217,7 @@
 
 
 
--(UINavigationItem *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

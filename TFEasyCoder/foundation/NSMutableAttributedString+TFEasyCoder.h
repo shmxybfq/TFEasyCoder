@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSMutableAttributedStringEasyCoderBlock) (NSMutableAttributedString * ins);
+
+
 
 @interface NSMutableAttributedString (TFEasyCoder)
 
-+( NSMutableAttributedString *)easyCoder:(NSMutableAttributedStringEasyCoderBlock)block;
--(NSMutableAttributedString *)easyCoder:(NSMutableAttributedStringEasyCoderBlock)block;
+
+
 
 
 
@@ -43,7 +43,7 @@ typedef void(^NSMutableAttributedStringEasyCoderBlock) (NSMutableAttributedStrin
 
 
 
--(NSMutableAttributedString *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

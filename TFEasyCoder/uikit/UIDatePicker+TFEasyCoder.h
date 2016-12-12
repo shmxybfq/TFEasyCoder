@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIDatePickerEasyCoderBlock) (UIDatePicker * ins);
+
+
 
 @interface UIDatePicker (TFEasyCoder)
 
-+( UIDatePicker *)easyCoder:(UIDatePickerEasyCoderBlock)block;
--(UIDatePicker *)easyCoder:(UIDatePickerEasyCoderBlock)block;
+
+
 
 
 -(UIDatePicker  *(^)(UIColor *  tintColor))set_tintColor;
@@ -69,7 +69,7 @@ typedef void(^UIDatePickerEasyCoderBlock) (UIDatePicker * ins);
 
 
 
--(UIDatePicker *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -7,25 +7,11 @@
 //
 
 #import "UIImage+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UIImage (TFEasyCoder)
 
-+( UIImage *)easyCoder:(UIImageEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIImage *)ins);
-        }
-    }];
-}
 
--( UIImage *)easyCoder:(UIImageEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -151,13 +137,7 @@
 
 
 
--(UIImage *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

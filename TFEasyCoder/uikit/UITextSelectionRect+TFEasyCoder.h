@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UITextSelectionRectEasyCoderBlock) (UITextSelectionRect * ins);
+
+
 
 @interface UITextSelectionRect (TFEasyCoder)
 
-+( UITextSelectionRect *)easyCoder:(UITextSelectionRectEasyCoderBlock)block;
--(UITextSelectionRect *)easyCoder:(UITextSelectionRectEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^UITextSelectionRectEasyCoderBlock) (UITextSelectionRect * ins);
 
 
 
--(UITextSelectionRect *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

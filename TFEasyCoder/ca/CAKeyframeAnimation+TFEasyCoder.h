@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^CAKeyframeAnimationEasyCoderBlock) (CAKeyframeAnimation * ins);
+
+
 
 @interface CAKeyframeAnimation (TFEasyCoder)
 
-+( CAKeyframeAnimation *)easyCoder:(CAKeyframeAnimationEasyCoderBlock)block;
--(CAKeyframeAnimation *)easyCoder:(CAKeyframeAnimationEasyCoderBlock)block;
+
+
 
 
 -(CAKeyframeAnimation  *(^)(NSArray *  values))set_values;
@@ -66,7 +66,7 @@ typedef void(^CAKeyframeAnimationEasyCoderBlock) (CAKeyframeAnimation * ins);
 
 
 
--(CAKeyframeAnimation *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

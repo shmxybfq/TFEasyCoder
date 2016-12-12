@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSConditionLockEasyCoderBlock) (NSConditionLock * ins);
+
+
 
 @interface NSConditionLock (TFEasyCoder)
 
-+( NSConditionLock *)easyCoder:(NSConditionLockEasyCoderBlock)block;
--(NSConditionLock *)easyCoder:(NSConditionLockEasyCoderBlock)block;
+
+
 
 
 -(NSConditionLock  *(^)(NSString *  name))set_name;
@@ -43,7 +43,7 @@ typedef void(^NSConditionLockEasyCoderBlock) (NSConditionLock * ins);
 
 
 
--(NSConditionLock *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

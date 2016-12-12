@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIDocumentInteractionControllerEasyCoderBlock) (UIDocumentInteractionController * ins);
+
+
 
 @interface UIDocumentInteractionController (TFEasyCoder)
 
-+( UIDocumentInteractionController *)easyCoder:(UIDocumentInteractionControllerEasyCoderBlock)block;
--(UIDocumentInteractionController *)easyCoder:(UIDocumentInteractionControllerEasyCoderBlock)block;
+
+
 
 
 
@@ -46,7 +46,7 @@ typedef void(^UIDocumentInteractionControllerEasyCoderBlock) (UIDocumentInteract
 
 
 
--(UIDocumentInteractionController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

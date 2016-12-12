@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^CATransitionEasyCoderBlock) (CATransition * ins);
+
+
 
 @interface CATransition (TFEasyCoder)
 
-+( CATransition *)easyCoder:(CATransitionEasyCoderBlock)block;
--(CATransition *)easyCoder:(CATransitionEasyCoderBlock)block;
+
+
 
 
 -(CATransition  *(^)(NSString *  type))set_type;
@@ -56,7 +56,7 @@ typedef void(^CATransitionEasyCoderBlock) (CATransition * ins);
 
 
 
--(CATransition *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

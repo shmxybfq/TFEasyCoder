@@ -8,17 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
+
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
-typedef void(^UIAccelerometerEasyCoderBlock) (UIAccelerometer * ins);
+
 
 @interface UIAccelerometer (TFEasyCoder)
 
-+( UIAccelerometer *)easyCoder:(UIAccelerometerEasyCoderBlock)block;
--(UIAccelerometer *)easyCoder:(UIAccelerometerEasyCoderBlock)block;
+
+
 
 
 -(UIAccelerometer  *(^)(double  updateInterval))set_updateInterval;
@@ -47,7 +47,7 @@ typedef void(^UIAccelerometerEasyCoderBlock) (UIAccelerometer * ins);
 
 
 
--(UIAccelerometer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSCacheEasyCoderBlock) (NSCache * ins);
+
+
 
 @interface NSCache (TFEasyCoder)
 
-+( NSCache *)easyCoder:(NSCacheEasyCoderBlock)block;
--(NSCache *)easyCoder:(NSCacheEasyCoderBlock)block;
+
+
 
 
 -(NSCache  *(^)(NSString *  name))set_name;
@@ -47,7 +47,7 @@ typedef void(^NSCacheEasyCoderBlock) (NSCache * ins);
 
 
 
--(NSCache *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

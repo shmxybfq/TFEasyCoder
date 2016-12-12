@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UILongPressGestureRecognizerEasyCoderBlock) (UILongPressGestureRecognizer * ins);
+
+
 
 @interface UILongPressGestureRecognizer (TFEasyCoder)
 
-+( UILongPressGestureRecognizer *)easyCoder:(UILongPressGestureRecognizerEasyCoderBlock)block;
--(UILongPressGestureRecognizer *)easyCoder:(UILongPressGestureRecognizerEasyCoderBlock)block;
+
+
 
 
 -(UILongPressGestureRecognizer  *(^)(unsigned long long  numberOfTapsRequired))set_numberOfTapsRequired;
@@ -53,7 +53,7 @@ typedef void(^UILongPressGestureRecognizerEasyCoderBlock) (UILongPressGestureRec
 
 
 
--(UILongPressGestureRecognizer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

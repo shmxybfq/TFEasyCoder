@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSByteCountFormatterEasyCoderBlock) (NSByteCountFormatter * ins);
+
+
 
 @interface NSByteCountFormatter (TFEasyCoder)
 
-+( NSByteCountFormatter *)easyCoder:(NSByteCountFormatterEasyCoderBlock)block;
--(NSByteCountFormatter *)easyCoder:(NSByteCountFormatterEasyCoderBlock)block;
+
+
 
 
 -(NSByteCountFormatter  *(^)(unsigned long long  allowedUnits))set_allowedUnits;
@@ -52,7 +52,7 @@ typedef void(^NSByteCountFormatterEasyCoderBlock) (NSByteCountFormatter * ins);
 
 
 
--(NSByteCountFormatter *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

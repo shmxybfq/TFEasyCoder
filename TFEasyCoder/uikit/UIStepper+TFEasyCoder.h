@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIStepperEasyCoderBlock) (UIStepper * ins);
+
+
 
 @interface UIStepper (TFEasyCoder)
 
-+( UIStepper *)easyCoder:(UIStepperEasyCoderBlock)block;
--(UIStepper *)easyCoder:(UIStepperEasyCoderBlock)block;
+
+
 
 
 -(UIStepper  *(^)(BOOL  continuous))set_continuous;
@@ -66,7 +66,7 @@ typedef void(^UIStepperEasyCoderBlock) (UIStepper * ins);
 
 
 
--(UIStepper *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

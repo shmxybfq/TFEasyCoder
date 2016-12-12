@@ -7,25 +7,11 @@
 //
 
 #import "UITableViewRowAction+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UITableViewRowAction (TFEasyCoder)
 
-+( UITableViewRowAction *)easyCoder:(UITableViewRowActionEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UITableViewRowAction *)ins);
-        }
-    }];
-}
 
--( UITableViewRowAction *)easyCoder:(UITableViewRowActionEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -175,13 +161,7 @@
 
 
 
--(UITableViewRowAction *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

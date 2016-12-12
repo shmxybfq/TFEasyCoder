@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIImagePickerControllerEasyCoderBlock) (UIImagePickerController * ins);
+
+
 
 @interface UIImagePickerController (TFEasyCoder)
 
-+( UIImagePickerController *)easyCoder:(UIImagePickerControllerEasyCoderBlock)block;
--(UIImagePickerController *)easyCoder:(UIImagePickerControllerEasyCoderBlock)block;
+
+
 
 
 -(UIImagePickerController  *(^)(id   delegate))set_delegate;
@@ -84,7 +84,7 @@ typedef void(^UIImagePickerControllerEasyCoderBlock) (UIImagePickerController * 
 
 
 
--(UIImagePickerController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

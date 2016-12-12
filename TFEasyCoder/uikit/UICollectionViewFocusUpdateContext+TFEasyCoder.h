@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UICollectionViewFocusUpdateContextEasyCoderBlock) (UICollectionViewFocusUpdateContext * ins);
+
+
 
 @interface UICollectionViewFocusUpdateContext (TFEasyCoder)
 
-+( UICollectionViewFocusUpdateContext *)easyCoder:(UICollectionViewFocusUpdateContextEasyCoderBlock)block;
--(UICollectionViewFocusUpdateContext *)easyCoder:(UICollectionViewFocusUpdateContextEasyCoderBlock)block;
+
+
 
 
 
@@ -43,7 +43,7 @@ typedef void(^UICollectionViewFocusUpdateContextEasyCoderBlock) (UICollectionVie
 
 
 
--(UICollectionViewFocusUpdateContext *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

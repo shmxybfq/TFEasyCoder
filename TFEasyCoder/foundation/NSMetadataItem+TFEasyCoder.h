@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSMetadataItemEasyCoderBlock) (NSMetadataItem * ins);
+
+
 
 @interface NSMetadataItem (TFEasyCoder)
 
-+( NSMetadataItem *)easyCoder:(NSMetadataItemEasyCoderBlock)block;
--(NSMetadataItem *)easyCoder:(NSMetadataItemEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSMetadataItemEasyCoderBlock) (NSMetadataItem * ins);
 
 
 
--(NSMetadataItem *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

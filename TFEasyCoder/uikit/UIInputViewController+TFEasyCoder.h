@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIInputViewControllerEasyCoderBlock) (UIInputViewController * ins);
+
+
 
 @interface UIInputViewController (TFEasyCoder)
 
-+( UIInputViewController *)easyCoder:(UIInputViewControllerEasyCoderBlock)block;
--(UIInputViewController *)easyCoder:(UIInputViewControllerEasyCoderBlock)block;
+
+
 
 
 -(UIInputViewController  *(^)(UIInputView *  inputView))set_inputView;
@@ -64,7 +64,7 @@ typedef void(^UIInputViewControllerEasyCoderBlock) (UIInputViewController * ins)
 
 
 
--(UIInputViewController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

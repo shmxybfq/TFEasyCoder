@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIDynamicBehaviorEasyCoderBlock) (UIDynamicBehavior * ins);
+
+
 
 @interface UIDynamicBehavior (TFEasyCoder)
 
-+( UIDynamicBehavior *)easyCoder:(UIDynamicBehaviorEasyCoderBlock)block;
--(UIDynamicBehavior *)easyCoder:(UIDynamicBehaviorEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^UIDynamicBehaviorEasyCoderBlock) (UIDynamicBehavior * ins);
 
 
 
--(UIDynamicBehavior *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

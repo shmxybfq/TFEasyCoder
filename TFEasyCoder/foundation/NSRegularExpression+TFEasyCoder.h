@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSRegularExpressionEasyCoderBlock) (NSRegularExpression * ins);
+
+
 
 @interface NSRegularExpression (TFEasyCoder)
 
-+( NSRegularExpression *)easyCoder:(NSRegularExpressionEasyCoderBlock)block;
--(NSRegularExpression *)easyCoder:(NSRegularExpressionEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSRegularExpressionEasyCoderBlock) (NSRegularExpression * ins);
 
 
 
--(NSRegularExpression *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

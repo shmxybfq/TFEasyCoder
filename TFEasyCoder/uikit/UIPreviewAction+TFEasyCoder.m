@@ -7,25 +7,11 @@
 //
 
 #import "UIPreviewAction+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UIPreviewAction (TFEasyCoder)
 
-+( UIPreviewAction *)easyCoder:(UIPreviewActionEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIPreviewAction *)ins);
-        }
-    }];
-}
 
--( UIPreviewAction *)easyCoder:(UIPreviewActionEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -152,13 +138,7 @@
 
 
 
--(UIPreviewAction *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSPointerFunctionsEasyCoderBlock) (NSPointerFunctions * ins);
+
+
 
 @interface NSPointerFunctions (TFEasyCoder)
 
-+( NSPointerFunctions *)easyCoder:(NSPointerFunctionsEasyCoderBlock)block;
--(NSPointerFunctions *)easyCoder:(NSPointerFunctionsEasyCoderBlock)block;
+
+
 
 
 -(NSPointerFunctions  *(^)(BOOL  usesStrongWriteBarrier))set_usesStrongWriteBarrier;
@@ -45,7 +45,7 @@ typedef void(^NSPointerFunctionsEasyCoderBlock) (NSPointerFunctions * ins);
 
 
 
--(NSPointerFunctions *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

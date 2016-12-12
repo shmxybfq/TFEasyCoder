@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSDataDetectorEasyCoderBlock) (NSDataDetector * ins);
+
+
 
 @interface NSDataDetector (TFEasyCoder)
 
-+( NSDataDetector *)easyCoder:(NSDataDetectorEasyCoderBlock)block;
--(NSDataDetector *)easyCoder:(NSDataDetectorEasyCoderBlock)block;
+
+
 
 
 
@@ -43,7 +43,7 @@ typedef void(^NSDataDetectorEasyCoderBlock) (NSDataDetector * ins);
 
 
 
--(NSDataDetector *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

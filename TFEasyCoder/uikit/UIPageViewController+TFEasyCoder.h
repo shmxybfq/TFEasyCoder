@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIPageViewControllerEasyCoderBlock) (UIPageViewController * ins);
+
+
 
 @interface UIPageViewController (TFEasyCoder)
 
-+( UIPageViewController *)easyCoder:(UIPageViewControllerEasyCoderBlock)block;
--(UIPageViewController *)easyCoder:(UIPageViewControllerEasyCoderBlock)block;
+
+
 
 
 -(UIPageViewController  *(^)(id<UIPageViewControllerDelegate>  delegate))set_delegate;
@@ -65,7 +65,7 @@ typedef void(^UIPageViewControllerEasyCoderBlock) (UIPageViewController * ins);
 
 
 
--(UIPageViewController *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

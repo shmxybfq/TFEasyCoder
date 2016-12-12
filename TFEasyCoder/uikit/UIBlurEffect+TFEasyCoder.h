@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIBlurEffectEasyCoderBlock) (UIBlurEffect * ins);
+
+
 
 @interface UIBlurEffect (TFEasyCoder)
 
-+( UIBlurEffect *)easyCoder:(UIBlurEffectEasyCoderBlock)block;
--(UIBlurEffect *)easyCoder:(UIBlurEffectEasyCoderBlock)block;
+
+
 
 
 
@@ -43,7 +43,7 @@ typedef void(^UIBlurEffectEasyCoderBlock) (UIBlurEffect * ins);
 
 
 
--(UIBlurEffect *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -7,25 +7,11 @@
 //
 
 #import "NSDataDetector+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation NSDataDetector (TFEasyCoder)
 
-+( NSDataDetector *)easyCoder:(NSDataDetectorEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( NSDataDetector *)ins);
-        }
-    }];
-}
 
--( NSDataDetector *)easyCoder:(NSDataDetectorEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -152,13 +138,7 @@
 
 
 
--(NSDataDetector *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

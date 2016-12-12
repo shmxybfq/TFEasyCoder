@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^CATiledLayerEasyCoderBlock) (CATiledLayer * ins);
+
+
 
 @interface CATiledLayer (TFEasyCoder)
 
-+( CATiledLayer *)easyCoder:(CATiledLayerEasyCoderBlock)block;
--(CATiledLayer *)easyCoder:(CATiledLayerEasyCoderBlock)block;
+
+
 
 
 
@@ -95,7 +95,7 @@ typedef void(^CATiledLayerEasyCoderBlock) (CATiledLayer * ins);
 
 
 
--(CATiledLayer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

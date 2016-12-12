@@ -8,18 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
+
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 
-typedef void(^UIStoryboardPopoverSegueEasyCoderBlock) (UIStoryboardPopoverSegue * ins);
+
 
 @interface UIStoryboardPopoverSegue (TFEasyCoder)
 
-+( UIStoryboardPopoverSegue *)easyCoder:(UIStoryboardPopoverSegueEasyCoderBlock)block;
--(UIStoryboardPopoverSegue *)easyCoder:(UIStoryboardPopoverSegueEasyCoderBlock)block;
+
+
 
 
 
@@ -47,7 +47,7 @@ typedef void(^UIStoryboardPopoverSegueEasyCoderBlock) (UIStoryboardPopoverSegue 
 
 
 
--(UIStoryboardPopoverSegue *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

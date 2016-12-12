@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSOutputStreamEasyCoderBlock) (NSOutputStream * ins);
+
+
 
 @interface NSOutputStream (TFEasyCoder)
 
-+( NSOutputStream *)easyCoder:(NSOutputStreamEasyCoderBlock)block;
--(NSOutputStream *)easyCoder:(NSOutputStreamEasyCoderBlock)block;
+
+
 
 
 
@@ -44,7 +44,7 @@ typedef void(^NSOutputStreamEasyCoderBlock) (NSOutputStream * ins);
 
 
 
--(NSOutputStream *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

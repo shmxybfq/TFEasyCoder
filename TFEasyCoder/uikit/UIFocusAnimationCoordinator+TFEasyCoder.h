@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIFocusAnimationCoordinatorEasyCoderBlock) (UIFocusAnimationCoordinator * ins);
+
+
 
 @interface UIFocusAnimationCoordinator (TFEasyCoder)
 
-+( UIFocusAnimationCoordinator *)easyCoder:(UIFocusAnimationCoordinatorEasyCoderBlock)block;
--(UIFocusAnimationCoordinator *)easyCoder:(UIFocusAnimationCoordinatorEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^UIFocusAnimationCoordinatorEasyCoderBlock) (UIFocusAnimationCoordi
 
 
 
--(UIFocusAnimationCoordinator *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

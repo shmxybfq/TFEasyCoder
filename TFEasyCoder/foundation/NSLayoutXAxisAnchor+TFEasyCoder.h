@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSLayoutXAxisAnchorEasyCoderBlock) (NSLayoutXAxisAnchor * ins);
+
+
 
 @interface NSLayoutXAxisAnchor (TFEasyCoder)
 
-+( NSLayoutXAxisAnchor *)easyCoder:(NSLayoutXAxisAnchorEasyCoderBlock)block;
--(NSLayoutXAxisAnchor *)easyCoder:(NSLayoutXAxisAnchorEasyCoderBlock)block;
+
+
 
 
 
@@ -43,7 +43,7 @@ typedef void(^NSLayoutXAxisAnchorEasyCoderBlock) (NSLayoutXAxisAnchor * ins);
 
 
 
--(NSLayoutXAxisAnchor *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -7,25 +7,11 @@
 //
 
 #import "UIDocumentInteractionController+TFEasyCoder.h"
-#import "NSObject+TFExecute.h"
+
 
 @implementation UIDocumentInteractionController (TFEasyCoder)
 
-+( UIDocumentInteractionController *)easyCoder:(UIDocumentInteractionControllerEasyCoderBlock)block{
-    return [NSObject tf_execute:[self class] back:^(id ins) {
-        if (block) {
-            block(( UIDocumentInteractionController *)ins);
-        }
-    }];
-}
 
--( UIDocumentInteractionController *)easyCoder:(UIDocumentInteractionControllerEasyCoderBlock)block{
-    if (block) {
-        __weak typeof(self) weakSelf = self;
-        block(weakSelf);
-    }
-    return self;
-}
 
 
 
@@ -177,13 +163,7 @@
 
 
 
--(UIDocumentInteractionController *(^)(id value,NSString *key))set_ValueKey{
-    __weak typeof(self) weakSelf = self;
-    return ^(id value,NSString *key){
-        [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];
-        return weakSelf;
-    };
-}
+
 
 
 @end

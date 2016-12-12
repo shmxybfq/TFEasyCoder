@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSScannerEasyCoderBlock) (NSScanner * ins);
+
+
 
 @interface NSScanner (TFEasyCoder)
 
-+( NSScanner *)easyCoder:(NSScannerEasyCoderBlock)block;
--(NSScanner *)easyCoder:(NSScannerEasyCoderBlock)block;
+
+
 
 
 -(NSScanner  *(^)(unsigned long long  scanLocation))set_scanLocation;
@@ -45,7 +45,7 @@ typedef void(^NSScannerEasyCoderBlock) (NSScanner * ins);
 
 
 
--(NSScanner *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^CALayerEasyCoderBlock) (CALayer * ins);
+
+
 
 @interface CALayer (TFEasyCoder)
 
-+( CALayer *)easyCoder:(CALayerEasyCoderBlock)block;
--(CALayer *)easyCoder:(CALayerEasyCoderBlock)block;
+
+
 
 
 
@@ -94,7 +94,7 @@ typedef void(^CALayerEasyCoderBlock) (CALayer * ins);
 
 
 
--(CALayer *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

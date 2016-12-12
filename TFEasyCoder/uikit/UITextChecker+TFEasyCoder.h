@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UITextCheckerEasyCoderBlock) (UITextChecker * ins);
+
+
 
 @interface UITextChecker (TFEasyCoder)
 
-+( UITextChecker *)easyCoder:(UITextCheckerEasyCoderBlock)block;
--(UITextChecker *)easyCoder:(UITextCheckerEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^UITextCheckerEasyCoderBlock) (UITextChecker * ins);
 
 
 
--(UITextChecker *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

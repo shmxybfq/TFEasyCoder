@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIButtonEasyCoderBlock) (UIButton * ins);
+
+
 
 @interface UIButton (TFEasyCoder)
 
-+( UIButton *)easyCoder:(UIButtonEasyCoderBlock)block;
--(UIButton *)easyCoder:(UIButtonEasyCoderBlock)block;
+
+
 
 
 -(UIButton  *(^)(UIEdgeInsets  contentEdgeInsets))set_contentEdgeInsets;
@@ -70,7 +70,7 @@ typedef void(^UIButtonEasyCoderBlock) (UIButton * ins);
 
 
 
--(UIButton *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

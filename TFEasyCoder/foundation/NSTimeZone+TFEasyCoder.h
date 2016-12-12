@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^NSTimeZoneEasyCoderBlock) (NSTimeZone * ins);
+
+
 
 @interface NSTimeZone (TFEasyCoder)
 
-+( NSTimeZone *)easyCoder:(NSTimeZoneEasyCoderBlock)block;
--(NSTimeZone *)easyCoder:(NSTimeZoneEasyCoderBlock)block;
+
+
 
 
 
@@ -42,7 +42,7 @@ typedef void(^NSTimeZoneEasyCoderBlock) (NSTimeZone * ins);
 
 
 
--(NSTimeZone *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end

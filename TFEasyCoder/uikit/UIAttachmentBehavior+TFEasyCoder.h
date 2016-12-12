@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "TFEasyCoderConst.h"
 
-typedef void(^UIAttachmentBehaviorEasyCoderBlock) (UIAttachmentBehavior * ins);
+
+
 
 @interface UIAttachmentBehavior (TFEasyCoder)
 
-+( UIAttachmentBehavior *)easyCoder:(UIAttachmentBehaviorEasyCoderBlock)block;
--(UIAttachmentBehavior *)easyCoder:(UIAttachmentBehaviorEasyCoderBlock)block;
+
+
 
 
 -(UIAttachmentBehavior  *(^)(CGPoint  anchorPoint))set_anchorPoint;
@@ -48,7 +48,7 @@ typedef void(^UIAttachmentBehaviorEasyCoderBlock) (UIAttachmentBehavior * ins);
 
 
 
--(UIAttachmentBehavior *(^)(id value,NSString *key))set_ValueKey;
+
 
 
 @end
