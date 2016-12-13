@@ -11,6 +11,12 @@
 #import "TFEasyCoderConst.h"
 #import "NSObject+TFExecute.h"
 
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
+
+
 @interface TFEasyCoder_UI : NSObject
 
 @end

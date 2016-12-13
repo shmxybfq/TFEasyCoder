@@ -8,6 +8,12 @@
 
 #import "TFEasyCoder_UI.h"
 
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
+
+
 @implementation TFEasyCoder_UI
 
 @end

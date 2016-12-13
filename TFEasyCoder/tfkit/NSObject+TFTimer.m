@@ -74,7 +74,7 @@
 
 /**
  *  get dynamic Associated key
- *  获取动态绑定key,key的内存地址不能变
+ *  获取动态绑定key,key的内存地址不变
  */
 static NSMutableDictionary *_timerBackBlockKeyContainer = nil;
 static const void *timerBackBlockKey(NSString *key){
@@ -87,8 +87,5 @@ static const void *timerBackBlockKey(NSString *key){
     return (__bridge const void *)(associatedKey);
 }
 
--(void)dealloc{
-    objc_removeAssociatedObjects(self);
-}
 
 @end
