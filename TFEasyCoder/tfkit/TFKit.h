@@ -38,7 +38,7 @@
 
 #import "UIViewController+TFKit.h"
 
-
+#import "NSObject+TFGCDKit.h"
 
 
 #endif /* TFKit_h */

@@ -372,6 +372,7 @@
 		CD5A7F301DF90F8100A0A789 /* NSArray+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5A7F2F1DF90F8100A0A789 /* NSArray+TFKit.m */; };
 		CD5A7F331DF90F9400A0A789 /* NSMutableArray+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5A7F321DF90F9400A0A789 /* NSMutableArray+TFKit.m */; };
 		CD5A7F361DF90FA300A0A789 /* NSMutableDictionary+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5A7F351DF90FA300A0A789 /* NSMutableDictionary+TFKit.m */; };
+		CD813BFE1E004BA100CFBFC0 /* NSObject+TFGCDKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD813BFD1E004BA100CFBFC0 /* NSObject+TFGCDKit.m */; };
 		CD922DB01DD195B000CABEFA /* TableviewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CD922DAF1DD195B000CABEFA /* TableviewHeader.m */; };
 		CD922DB31DD195C400CABEFA /* TableviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD922DB21DD195C400CABEFA /* TableviewCell.m */; };
 		CD922DCE1DD1966900CABEFA /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = CD922DB61DD1966900CABEFA /* MASCompositeConstraint.m */; };
@@ -1147,6 +1148,8 @@
 		CD5A7F321DF90F9400A0A789 /* NSMutableArray+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+TFKit.m"; sourceTree = "<group>"; };
 		CD5A7F341DF90FA300A0A789 /* NSMutableDictionary+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+TFKit.h"; sourceTree = "<group>"; };
 		CD5A7F351DF90FA300A0A789 /* NSMutableDictionary+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+TFKit.m"; sourceTree = "<group>"; };
+		CD813BFC1E004BA100CFBFC0 /* NSObject+TFGCDKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TFGCDKit.h"; sourceTree = "<group>"; };
+		CD813BFD1E004BA100CFBFC0 /* NSObject+TFGCDKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TFGCDKit.m"; sourceTree = "<group>"; };
 		CD922DAE1DD195B000CABEFA /* TableviewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableviewHeader.h; sourceTree = "<group>"; };
 		CD922DAF1DD195B000CABEFA /* TableviewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableviewHeader.m; sourceTree = "<group>"; };
 		CD922DB11DD195C400CABEFA /* TableviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableviewCell.h; sourceTree = "<group>"; };
@@ -1972,6 +1975,8 @@
 				CD5A7F2A1DF90E4E00A0A789 /* TFKit.h */,
 				CD5A7F271DF90DB700A0A789 /* UIView+TFUIDevKit.h */,
 				CD5A7F281DF90DB700A0A789 /* UIView+TFUIDevKit.m */,
+				CD813BFC1E004BA100CFBFC0 /* NSObject+TFGCDKit.h */,
+				CD813BFD1E004BA100CFBFC0 /* NSObject+TFGCDKit.m */,
 				CD5A7F2B1DF90F4200A0A789 /* NSObject+TFTimer.h */,
 				CD5A7F2C1DF90F4200A0A789 /* NSObject+TFTimer.m */,
 				CDBC7EBB1DF9669E0004A819 /* NSObject+TFKit.h */,
@@ -2243,6 +2248,7 @@
 				CD1676A21DC87BD000969C21 /* UITapGestureRecognizer+TFEasyCoder.m in Sources */,
 				CD1676451DC87BD000969C21 /* UIFocusGuide+TFEasyCoder.m in Sources */,
 				CD1675941DC87BCF00969C21 /* NSFileAccessIntent+TFEasyCoder.m in Sources */,
+				CD813BFE1E004BA100CFBFC0 /* NSObject+TFGCDKit.m in Sources */,
 				CD1675CC1DC87BCF00969C21 /* NSNotificationQueue+TFEasyCoder.m in Sources */,
 				CD1676611DC87BD000969C21 /* UIMutableUserNotificationAction+TFEasyCoder.m in Sources */,
 				CD1676971DC87BD000969C21 /* UISwipeGestureRecognizer+TFEasyCoder.m in Sources */,
