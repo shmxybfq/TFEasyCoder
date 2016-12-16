@@ -367,6 +367,7 @@
 		CD2C1AC81DFA96BD005C65E7 /* UIImage+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2C1AC71DFA96BD005C65E7 /* UIImage+TFKit.m */; };
 		CD2C1ACB1DFA9FA0005C65E7 /* UINavigationController+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2C1ACA1DFA9FA0005C65E7 /* UINavigationController+TFKit.m */; };
 		CD2C1ACE1DFBDA24005C65E7 /* UIViewController+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2C1ACD1DFBDA24005C65E7 /* UIViewController+TFKit.m */; };
+		CD2C40991E02DF5A00EFE237 /* UIBarButtonItem+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2C40981E02DF5A00EFE237 /* UIBarButtonItem+TFKit.m */; };
 		CD5A7F291DF90DB700A0A789 /* UIView+TFUIDevKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5A7F281DF90DB700A0A789 /* UIView+TFUIDevKit.m */; };
 		CD5A7F2D1DF90F4200A0A789 /* NSObject+TFTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5A7F2C1DF90F4200A0A789 /* NSObject+TFTimer.m */; };
 		CD5A7F301DF90F8100A0A789 /* NSArray+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5A7F2F1DF90F8100A0A789 /* NSArray+TFKit.m */; };
@@ -1137,6 +1138,8 @@
 		CD2C1ACA1DFA9FA0005C65E7 /* UINavigationController+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+TFKit.m"; sourceTree = "<group>"; };
 		CD2C1ACC1DFBDA24005C65E7 /* UIViewController+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TFKit.h"; sourceTree = "<group>"; };
 		CD2C1ACD1DFBDA24005C65E7 /* UIViewController+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TFKit.m"; sourceTree = "<group>"; };
+		CD2C40971E02DF5A00EFE237 /* UIBarButtonItem+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+TFKit.h"; sourceTree = "<group>"; };
+		CD2C40981E02DF5A00EFE237 /* UIBarButtonItem+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+TFKit.m"; sourceTree = "<group>"; };
 		CD5A7F271DF90DB700A0A789 /* UIView+TFUIDevKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TFUIDevKit.h"; sourceTree = "<group>"; };
 		CD5A7F281DF90DB700A0A789 /* UIView+TFUIDevKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TFUIDevKit.m"; sourceTree = "<group>"; };
 		CD5A7F2A1DF90E4E00A0A789 /* TFKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFKit.h; sourceTree = "<group>"; };
@@ -2006,6 +2009,8 @@
 				CD2C1ACA1DFA9FA0005C65E7 /* UINavigationController+TFKit.m */,
 				CD2C1ACC1DFBDA24005C65E7 /* UIViewController+TFKit.h */,
 				CD2C1ACD1DFBDA24005C65E7 /* UIViewController+TFKit.m */,
+				CD2C40971E02DF5A00EFE237 /* UIBarButtonItem+TFKit.h */,
+				CD2C40981E02DF5A00EFE237 /* UIBarButtonItem+TFKit.m */,
 			);
 			path = tfkit;
 			sourceTree = "<group>";
@@ -2521,6 +2526,7 @@
 				CD1676B21DC87BD000969C21 /* UIVibrancyEffect+TFEasyCoder.m in Sources */,
 				CD16764E1DC87BD000969C21 /* UIImageView+TFEasyCoder.m in Sources */,
 				CD1675BA1DC87BCF00969C21 /* NSMetadataQueryAttributeValueTuple+TFEasyCoder.m in Sources */,
+				CD2C40991E02DF5A00EFE237 /* UIBarButtonItem+TFKit.m in Sources */,
 				CD16757F1DC87BCF00969C21 /* NSConstantString+TFEasyCoder.m in Sources */,
 				CD1675C81DC87BCF00969C21 /* NSNetService+TFEasyCoder.m in Sources */,
 				CD16759C1DC87BCF00969C21 /* NSFormatter+TFEasyCoder.m in Sources */,

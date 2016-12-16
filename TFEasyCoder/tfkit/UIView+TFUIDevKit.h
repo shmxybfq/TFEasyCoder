@@ -55,6 +55,14 @@ typedef NSArray *(^TFLogTreeBackBlock) ();
  */
 -(NSMutableArray *)TF_CODE_PRE(getAllSupviewsBackgroundColorRandom):(CGFloat)alpha;
 
+/**
+ *  在所有子视图中获取视图树种最上层的一个类型的view
+ *
+ *  @param cls view类型
+ *
+ *  @return 获取到的view
+ */
+-(UIView *)TF_CODE_PRE(getSubviewOfClass):(Class)cls;
 @end
 
 

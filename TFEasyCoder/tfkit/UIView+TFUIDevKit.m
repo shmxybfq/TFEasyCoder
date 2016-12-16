@@ -141,7 +141,26 @@ TF_ASSOCIATED_OBJC_GET(NSMutableDictionary,     lgdesCache)
 }
 
 
-
+/**
+ *  在所有子视图中获取视图树种最上层的一个类型的view
+ *
+ *  @param cls view类型
+ *
+ *  @return 获取到的view
+ */
+-(UIView *)TF_CODE_PRE(getSubviewOfClass):(Class)cls{
+    NSMutableArray *subs = [NSMutableArray arrayWithArray:self.subviews];
+    while (subs.count) {
+        NSArray *subsTmp = [NSArray arrayWithArray:subs];[subs removeAllObjects];
+        for (UIView *subview in subsTmp) {
+            if ([subview isKindOfClass:cls]) {
+                return subview;
+            }
+            [subs addObjectsFromArray:subview.subviews];
+        }
+    }
+    return nil;
+}
 @end
 
 
