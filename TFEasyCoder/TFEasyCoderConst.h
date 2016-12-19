@@ -88,13 +88,13 @@ objc_setAssociatedObject(self, @selector(GETTER), associate_value, OBJC_ASSOCIAT
  *  @return null
  */
 #define TF_EC_BLOCK(CLASS_NAME,CLASS_TYPE) typedef void(^CLASS_NAME##EasyCoderBlock) (CLASS_TYPE ins)
-
 /**
  *  +(UILabel *)easyCoder:(UILabelEasyCoderBlock)block;
  */
-#define TF_EC_MSTATIC_INT(CLASS_NAME,CLASS_TYPE) +(CLASS_TYPE)easyCoder:(CLASS_NAME##EasyCoderBlock)block
+#define TF_EC_MNAME easyCoder
+#define TF_EC_MSTATIC_INT(CLASS_NAME,CLASS_TYPE) +(CLASS_TYPE)TF_EC_MNAME:(CLASS_NAME##EasyCoderBlock)block
 #define TF_EC_MSTATIC_IMP(CLASS_NAME,CLASS_TYPE)\
-+(CLASS_TYPE)easyCoder:(CLASS_NAME##EasyCoderBlock)block{\
++(CLASS_TYPE)TF_EC_MNAME:(CLASS_NAME##EasyCoderBlock)block{\
 return [NSObject tf_execute:[self class] back:^(id ins) {\
 if (block) {\
 block((CLASS_TYPE)ins);\
@@ -102,13 +102,12 @@ block((CLASS_TYPE)ins);\
 }];\
 }
 
-
 /**
  *  -(UILabel *)easyCoder:(UILabelEasyCoderBlock)block;
  */
-#define TF_EC_MINSTANCE_INT(CLASS_NAME,CLASS_TYPE) -(CLASS_TYPE)easyCoder:(CLASS_NAME##EasyCoderBlock)block
+#define TF_EC_MINSTANCE_INT(CLASS_NAME,CLASS_TYPE) -(CLASS_TYPE)TF_EC_MNAME:(CLASS_NAME##EasyCoderBlock)block
 #define TF_EC_MINSTANCE_IMP(CLASS_NAME,CLASS_TYPE)\
--(CLASS_TYPE)easyCoder:(CLASS_NAME##EasyCoderBlock)block{\
+-(CLASS_TYPE)TF_EC_MNAME:(CLASS_NAME##EasyCoderBlock)block{\
 if (block) {\
 __weak typeof(self) weakSelf = self;\
 block(weakSelf);\
@@ -155,6 +154,25 @@ return weakSelf;\
 }
 
 
+/**
+ *  为你的类添加easyCoder方法(.h文件中调用)
+ *  @return
+ */
+#define TF_DEFINE_TFEASYCODER_INT(CLASS_NAME,CLASS_TYPE)\
+TF_EC_BLOCK(CLASS_NAME,CLASS_TYPE);\
+TF_EC_MSTATIC_INT(CLASS_NAME, CLASS_TYPE);\
+TF_EC_MINSTANCE_INT(CLASS_NAME,CLASS_TYPE);\
+TF_EC_CHAIN_VALUEKYE_INT(CLASS_NAME);
+/**
+ *  为你的类添加easyCoder方法(.m文件中调用)
+ *  @return
+ */
+#define TF_DEFINE_TFEASYCODER_IMP(CLASS_NAME,CLASS_TYPE)\
+TF_EC_MSTATIC_IMP(CLASS_NAME, CLASS_TYPE);\
+TF_EC_MINSTANCE_IMP(CLASS_NAME, CLASS_TYPE);\
+TF_EC_CHAIN_VALUEKYE_IMP(CLASS_NAME);\
+
+
 
 /**
  *  参数崩溃断言
@@ -190,11 +208,9 @@ return weakSelf;\
 #endif
 
 /**
- *  懒加载属性,class 初始化方法为init
- *
+ *  懒加载属性,class 初始化方法为init,使用方法见github
  *  @param __CLASS    属性类型
  *  @param __PROPERTY 属性定义值
- *
  *  @return 属性
  */
 
@@ -204,6 +220,21 @@ TF_SYNTHESIZE(__PROPERTY);\
 if (!_##__PROPERTY)\
 _##__PROPERTY = [[__CLASS alloc]init];\
 return _##__PROPERTY;}
+
+/**
+ *  懒加载属性,class 初始化方法为init,使用方法见github
+ *  @param __CLASS    属性类型
+ *  @param __PROPERTY 属性定义值
+ *  @param __BLOCK 一个返回属性
+ *  @return 属性
+ */
+#define TF_LAZYLOAD_OBJC_CUS(__CLASS,__PROPERTY,__BLOCK)\
+TF_SYNTHESIZE(__PROPERTY);\
+-(__CLASS *)__PROPERTY{\
+if (!_##__PROPERTY)\
+_##__PROPERTY = [[__CLASS alloc]init];\
+__BLOCK(_##__PROPERTY);\
+return _##__PROPERTY;}\
 
 
 /**
@@ -215,7 +246,7 @@ return _##__PROPERTY;}
 
 
 /**
- *  Dlog
+ *  TFlog
  *
  */
 #ifdef TFLog
@@ -225,4 +256,66 @@ return _##__PROPERTY;}
 #endif
 
 
+
+/**
+ *  调试工具开关
+ */
+#define TFDebug_NSArrayLogChinese YES//调试时,打印NSArray是否将里面的中文转码至显示
+#define TFDebug_NSDictionaryLogChinese YES//调试时,打印NSDictionary是否将里面的中文转码至显示
+#define TFDebug_VCDidAppearSubviewRandomColor YES//调试时,在viewDidAppear中是否让view的子视图显示随机色
+#define TFDebug_VCDidAppearSubviewDisplayBorder YES//调试时,在viewDidAppear中是否让view的子视图显示边框
+#define TFDebug_VCDidAppearLogVCName YES//调试时,在viewDidAppear中是否打印控制器名称
+#define TFDebug_VCDidAppearLogSubview YES//调试时,在viewDidAppear中是否打印view所有子视图
+#define TFDebug_VCDidAppearLogSubviewTree YES//调试时,在viewDidAppear中是否打印view视图树结构
+
 #endif /* TFEasyCoderConst_h */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -373,6 +373,9 @@
 		CD5A7F301DF90F8100A0A789 /* NSArray+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5A7F2F1DF90F8100A0A789 /* NSArray+TFKit.m */; };
 		CD5A7F331DF90F9400A0A789 /* NSMutableArray+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5A7F321DF90F9400A0A789 /* NSMutableArray+TFKit.m */; };
 		CD5A7F361DF90FA300A0A789 /* NSMutableDictionary+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5A7F351DF90FA300A0A789 /* NSMutableDictionary+TFKit.m */; };
+		CD77369F1E0697C20020D7EE /* NSDictionary+TFLogChinese.m in Sources */ = {isa = PBXBuildFile; fileRef = CD77369E1E0697C20020D7EE /* NSDictionary+TFLogChinese.m */; };
+		CD7736A21E0698A00020D7EE /* NSArray+TFLogChinese.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7736A11E0698A00020D7EE /* NSArray+TFLogChinese.m */; };
+		CD7736A51E06CE9C0020D7EE /* UIViewController+TFDebugKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7736A41E06CE9C0020D7EE /* UIViewController+TFDebugKit.m */; };
 		CD813BFE1E004BA100CFBFC0 /* NSObject+TFGCDKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD813BFD1E004BA100CFBFC0 /* NSObject+TFGCDKit.m */; };
 		CD922DB01DD195B000CABEFA /* TableviewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CD922DAF1DD195B000CABEFA /* TableviewHeader.m */; };
 		CD922DB31DD195C400CABEFA /* TableviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD922DB21DD195C400CABEFA /* TableviewCell.m */; };
@@ -407,6 +410,9 @@
 		CDBC7EB91DF965840004A819 /* yellowdiamond_openvip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDBC7EAE1DF965830004A819 /* yellowdiamond_openvip@2x.png */; };
 		CDBC7EBA1DF965840004A819 /* yellowdiamond_riband@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDBC7EAF1DF965830004A819 /* yellowdiamond_riband@2x.png */; };
 		CDBC7EBD1DF9669E0004A819 /* NSObject+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBC7EBC1DF9669E0004A819 /* NSObject+TFKit.m */; };
+		CDCC52BC1E058CE200764CD3 /* TmpObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCC52BB1E058CE200764CD3 /* TmpObject.m */; };
+		CDCC52BF1E065D2700764CD3 /* NSObject+TestCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCC52BE1E065D2700764CD3 /* NSObject+TestCategory.m */; };
+		CDCC52C21E0663CC00764CD3 /* Tmp2Object.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCC52C11E0663CC00764CD3 /* Tmp2Object.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1151,6 +1157,12 @@
 		CD5A7F321DF90F9400A0A789 /* NSMutableArray+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+TFKit.m"; sourceTree = "<group>"; };
 		CD5A7F341DF90FA300A0A789 /* NSMutableDictionary+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+TFKit.h"; sourceTree = "<group>"; };
 		CD5A7F351DF90FA300A0A789 /* NSMutableDictionary+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+TFKit.m"; sourceTree = "<group>"; };
+		CD77369D1E0697C20020D7EE /* NSDictionary+TFLogChinese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+TFLogChinese.h"; sourceTree = "<group>"; };
+		CD77369E1E0697C20020D7EE /* NSDictionary+TFLogChinese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+TFLogChinese.m"; sourceTree = "<group>"; };
+		CD7736A01E0698A00020D7EE /* NSArray+TFLogChinese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+TFLogChinese.h"; sourceTree = "<group>"; };
+		CD7736A11E0698A00020D7EE /* NSArray+TFLogChinese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+TFLogChinese.m"; sourceTree = "<group>"; };
+		CD7736A31E06CE9C0020D7EE /* UIViewController+TFDebugKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TFDebugKit.h"; sourceTree = "<group>"; };
+		CD7736A41E06CE9C0020D7EE /* UIViewController+TFDebugKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TFDebugKit.m"; sourceTree = "<group>"; };
 		CD813BFC1E004BA100CFBFC0 /* NSObject+TFGCDKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TFGCDKit.h"; sourceTree = "<group>"; };
 		CD813BFD1E004BA100CFBFC0 /* NSObject+TFGCDKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TFGCDKit.m"; sourceTree = "<group>"; };
 		CD922DAE1DD195B000CABEFA /* TableviewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableviewHeader.h; sourceTree = "<group>"; };
@@ -1211,6 +1223,12 @@
 		CDBC7EAF1DF965830004A819 /* yellowdiamond_riband@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowdiamond_riband@2x.png"; sourceTree = "<group>"; };
 		CDBC7EBB1DF9669E0004A819 /* NSObject+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TFKit.h"; sourceTree = "<group>"; };
 		CDBC7EBC1DF9669E0004A819 /* NSObject+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TFKit.m"; sourceTree = "<group>"; };
+		CDCC52BA1E058CE200764CD3 /* TmpObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmpObject.h; sourceTree = "<group>"; };
+		CDCC52BB1E058CE200764CD3 /* TmpObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TmpObject.m; sourceTree = "<group>"; };
+		CDCC52BD1E065D2700764CD3 /* NSObject+TestCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TestCategory.h"; sourceTree = "<group>"; };
+		CDCC52BE1E065D2700764CD3 /* NSObject+TestCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TestCategory.m"; sourceTree = "<group>"; };
+		CDCC52C01E0663CC00764CD3 /* Tmp2Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tmp2Object.h; sourceTree = "<group>"; };
+		CDCC52C11E0663CC00764CD3 /* Tmp2Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tmp2Object.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1229,14 +1247,14 @@
 			children = (
 				CD1674041DC87BCF00969C21 /* TFEasyCoder.h */,
 				CD1674051DC87BCF00969C21 /* TFEasyCoderConst.h */,
+				CD1674021DC87BCF00969C21 /* NSObject+TFExecute.h */,
+				CD1674031DC87BCF00969C21 /* NSObject+TFExecute.m */,
 				CD964FB01DFE917C005381E7 /* TFEasyCoder_CA.h */,
 				CD964FB11DFE917C005381E7 /* TFEasyCoder_CA.m */,
 				CD964FB31DFE953F005381E7 /* TFEasyCoder_UI.h */,
 				CD964FB41DFE953F005381E7 /* TFEasyCoder_UI.m */,
 				CD964FB61DFE95D8005381E7 /* TFEasyCoder_NS.h */,
 				CD964FB71DFE95D8005381E7 /* TFEasyCoder_NS.m */,
-				CD1674021DC87BCF00969C21 /* NSObject+TFExecute.h */,
-				CD1674031DC87BCF00969C21 /* NSObject+TFExecute.m */,
 				CD5A7F231DF90D7000A0A789 /* tfkit */,
 				CD16728A1DC87BCE00969C21 /* ca */,
 				CD1672BA1DC87BCE00969C21 /* foundation */,
@@ -1986,6 +2004,15 @@
 				CDBC7EBC1DF9669E0004A819 /* NSObject+TFKit.m */,
 				CD5A7F2E1DF90F8100A0A789 /* NSArray+TFKit.h */,
 				CD5A7F2F1DF90F8100A0A789 /* NSArray+TFKit.m */,
+				CD2C1ABF1DFA491A005C65E7 /* UIView_TFKit.h */,
+				CD2C1ABC1DF9B4FC005C65E7 /* UIView+TFKit.h */,
+				CD2C1ABD1DF9B4FC005C65E7 /* UIView+TFKit.m */,
+				CD77369D1E0697C20020D7EE /* NSDictionary+TFLogChinese.h */,
+				CD77369E1E0697C20020D7EE /* NSDictionary+TFLogChinese.m */,
+				CD7736A01E0698A00020D7EE /* NSArray+TFLogChinese.h */,
+				CD7736A11E0698A00020D7EE /* NSArray+TFLogChinese.m */,
+				CD7736A31E06CE9C0020D7EE /* UIViewController+TFDebugKit.h */,
+				CD7736A41E06CE9C0020D7EE /* UIViewController+TFDebugKit.m */,
 				CD5A7F311DF90F9400A0A789 /* NSMutableArray+TFKit.h */,
 				CD5A7F321DF90F9400A0A789 /* NSMutableArray+TFKit.m */,
 				CD5A7F341DF90FA300A0A789 /* NSMutableDictionary+TFKit.h */,
@@ -1996,9 +2023,6 @@
 				CD2C1ABB1DF9A8CB005C65E7 /* UIColor_TFKit.h */,
 				CD2C1AB81DF99A16005C65E7 /* UIColor+TFKit.h */,
 				CD2C1AB91DF99A16005C65E7 /* UIColor+TFKit.m */,
-				CD2C1ABF1DFA491A005C65E7 /* UIView_TFKit.h */,
-				CD2C1ABC1DF9B4FC005C65E7 /* UIView+TFKit.h */,
-				CD2C1ABD1DF9B4FC005C65E7 /* UIView+TFKit.m */,
 				CD2C1AC01DFA51EC005C65E7 /* UIAlertView+TFKit.h */,
 				CD2C1AC11DFA51EC005C65E7 /* UIAlertView+TFKit.m */,
 				CD2C1AC31DFA90CF005C65E7 /* UIActionSheet+TFKit.h */,
@@ -2076,6 +2100,12 @@
 				CD922DB21DD195C400CABEFA /* TableviewCell.m */,
 				CDA6F0F21DC33CEC001330D3 /* ViewController.h */,
 				CDA6F0F31DC33CEC001330D3 /* ViewController.m */,
+				CDCC52BD1E065D2700764CD3 /* NSObject+TestCategory.h */,
+				CDCC52BE1E065D2700764CD3 /* NSObject+TestCategory.m */,
+				CDCC52BA1E058CE200764CD3 /* TmpObject.h */,
+				CDCC52BB1E058CE200764CD3 /* TmpObject.m */,
+				CDCC52C01E0663CC00764CD3 /* Tmp2Object.h */,
+				CDCC52C11E0663CC00764CD3 /* Tmp2Object.m */,
 				CDA6F0F51DC33CEC001330D3 /* Main.storyboard */,
 				CDA6F0F81DC33CEC001330D3 /* Assets.xcassets */,
 				CDA6F0FA1DC33CEC001330D3 /* LaunchScreen.storyboard */,
@@ -2324,6 +2354,7 @@
 				CD1676271DC87BD000969C21 /* UIBlurEffect+TFEasyCoder.m in Sources */,
 				CD1675A11DC87BCF00969C21 /* NSIndexPath+TFEasyCoder.m in Sources */,
 				CD1675A71DC87BCF00969C21 /* NSJSONSerialization+TFEasyCoder.m in Sources */,
+				CDCC52BF1E065D2700764CD3 /* NSObject+TestCategory.m in Sources */,
 				CD1676761DC87BD000969C21 /* UIPrinter+TFEasyCoder.m in Sources */,
 				CD1676131DC87BD000969C21 /* UIAcceleration+TFEasyCoder.m in Sources */,
 				CD1675D41DC87BCF00969C21 /* NSOrthography+TFEasyCoder.m in Sources */,
@@ -2407,6 +2438,7 @@
 				CD16767A1DC87BD000969C21 /* UIPrintInteractionController+TFEasyCoder.m in Sources */,
 				CD1675791DC87BCF00969C21 /* NSCharacterSet+TFEasyCoder.m in Sources */,
 				CD16761C1DC87BD000969C21 /* UIAlertAction+TFEasyCoder.m in Sources */,
+				CD7736A21E0698A00020D7EE /* NSArray+TFLogChinese.m in Sources */,
 				CD16766E1DC87BD000969C21 /* UIPopoverBackgroundView+TFEasyCoder.m in Sources */,
 				CD1675741DC87BCF00969C21 /* NSBundleResourceRequest+TFEasyCoder.m in Sources */,
 				CD1675C41DC87BCF00969C21 /* NSMutableParagraphStyle+TFEasyCoder.m in Sources */,
@@ -2416,6 +2448,7 @@
 				CD1675F61DC87BD000969C21 /* NSTimeZone+TFEasyCoder.m in Sources */,
 				CD1676B81DC87BD000969C21 /* UIVisualEffectView+TFEasyCoder.m in Sources */,
 				CD1675B61DC87BCF00969C21 /* NSMassFormatter+TFEasyCoder.m in Sources */,
+				CD7736A51E06CE9C0020D7EE /* UIViewController+TFDebugKit.m in Sources */,
 				CD1676A71DC87BD000969C21 /* UITextInputStringTokenizer+TFEasyCoder.m in Sources */,
 				CD1675811DC87BCF00969C21 /* NSData+TFEasyCoder.m in Sources */,
 				CD1675D11DC87BCF00969C21 /* NSOperation+TFEasyCoder.m in Sources */,
@@ -2424,6 +2457,7 @@
 				CD1676A01DC87BD000969C21 /* UITableViewHeaderFooterView+TFEasyCoder.m in Sources */,
 				CD922DB31DD195C400CABEFA /* TableviewCell.m in Sources */,
 				CD1675A31DC87BCF00969C21 /* NSInputStream+TFEasyCoder.m in Sources */,
+				CDCC52BC1E058CE200764CD3 /* TmpObject.m in Sources */,
 				CD1676301DC87BD000969C21 /* UICollectionViewLayoutAttributes+TFEasyCoder.m in Sources */,
 				CD1675EC1DC87BD000969C21 /* NSStream+TFEasyCoder.m in Sources */,
 				CD1676581DC87BD000969C21 /* UILocalNotification+TFEasyCoder.m in Sources */,
@@ -2488,6 +2522,7 @@
 				CD1676911DC87BD000969C21 /* UIStackView+TFEasyCoder.m in Sources */,
 				CD2C1AC81DFA96BD005C65E7 /* UIImage+TFKit.m in Sources */,
 				CD1675801DC87BCF00969C21 /* NSCountedSet+TFEasyCoder.m in Sources */,
+				CD77369F1E0697C20020D7EE /* NSDictionary+TFLogChinese.m in Sources */,
 				CD16767B1DC87BD000969C21 /* UIPrintPageRenderer+TFEasyCoder.m in Sources */,
 				CD16763C1DC87BD000969C21 /* UIDocumentMenuViewController+TFEasyCoder.m in Sources */,
 				CD1676251DC87BD000969C21 /* UIBarItem+TFEasyCoder.m in Sources */,
@@ -2506,6 +2541,7 @@
 				CD1676621DC87BD000969C21 /* UIMutableUserNotificationCategory+TFEasyCoder.m in Sources */,
 				CD1675EB1DC87BD000969C21 /* NSSortDescriptor+TFEasyCoder.m in Sources */,
 				CD5A7F361DF90FA300A0A789 /* NSMutableDictionary+TFKit.m in Sources */,
+				CDCC52C21E0663CC00764CD3 /* Tmp2Object.m in Sources */,
 				CD1676521DC87BD000969C21 /* UIKeyCommand+TFEasyCoder.m in Sources */,
 				CD1676681DC87BD000969C21 /* UIPageViewController+TFEasyCoder.m in Sources */,
 				CD16769C1DC87BD000969C21 /* UITableView+TFEasyCoder.m in Sources */,

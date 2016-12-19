@@ -85,7 +85,7 @@ TF_ASSOCIATED_OBJC_GET(NSMutableDictionary,     lgdesCache)
  *
  *  @return 所有的子视图
  */
--(NSMutableArray *)TF_CODE_PRE(getAllSubviewsBackgroundColorRandom):(CGFloat)alpha
+-(NSMutableArray *)TF_CODE_PRE(setAllSubviewsBackgroundColorRandom):(CGFloat)alpha
 {
     NSMutableArray *allSubviews = [self TF_CODE_PRE(getAllSubviews)];
     for (UIView *view in allSubviews) {
@@ -94,14 +94,30 @@ TF_ASSOCIATED_OBJC_GET(NSMutableDictionary,     lgdesCache)
                                                    green:arc4random()%255/255.0
                                                     blue:arc4random()%255/255.0
                                                    alpha:alpha];
-            view.layer.borderColor = [UIColor redColor].CGColor;
-            view.layer.borderWidth = 1.0;
         }
         
     }
     return allSubviews;
 }
 
+/**
+ *  为所有子视图加上border red
+ *
+ *  @param alpha 随机色透明度
+ *
+ *  @return 所有的子视图
+ */
+-(NSMutableArray *)TF_CODE_PRE(setAllSubviewsBorderRed)
+{
+    NSMutableArray *allSubviews = [self TF_CODE_PRE(getAllSubviews)];
+    for (UIView *view in allSubviews) {
+        if ([view isKindOfClass:[UIView class]]) {
+            view.layer.borderColor = [UIColor redColor].CGColor;
+            view.layer.borderWidth = 1.0;
+        }
+    }
+    return allSubviews;
+}
 /**
  *  获取所有父视图(!注意不是子视图)
  *
@@ -124,7 +140,7 @@ TF_ASSOCIATED_OBJC_GET(NSMutableDictionary,     lgdesCache)
  *
  *  @return 所有的父视图
  */
--(NSMutableArray *)TF_CODE_PRE(getAllSupviewsBackgroundColorRandom):(CGFloat)alpha
+-(NSMutableArray *)TF_CODE_PRE(setAllSupviewsBackgroundColorRandom):(CGFloat)alpha
 {
     NSMutableArray *allSuperviews = [self TF_CODE_PRE(getAllSuperviews)];
     for (UIView *view in allSuperviews) {

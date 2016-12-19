@@ -11,15 +11,14 @@
 #import "TFEasyCoder.h"
 #import "TableviewCell.h"
 #import "TableviewHeader.h"
-
+#import "Tmp2Object.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong)UITableView *tableView;
-@property (nonatomic,strong)NSMutableArray *dataSource;
 @property (nonatomic,strong)TableviewHeader *tableHeader;
 
-
+@property (nonatomic,strong)NSMutableArray *dataSource;
 
 @end
 
@@ -31,14 +30,11 @@
 TF_LAZYLOAD_OBJC(UITableView, tableView);
 TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
- 
-   
     kdeclare_weakself;
-    
+
+
     /**
      *  创建自定义对象
      *
@@ -75,45 +71,16 @@ TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
     
     /**
      *  快速操作已有对象
-     *
      *  @param ins 操作对象
-     *
      *  @return 操作对象
      */
     [self.dataSource easyCoder:^(NSMutableArray *ins) {
-        
         [ins addObject:@{@"icon":@"home_visitor_icon",@"title":@"我的访客"}];
         [ins addObject:@{@"icon":@"home_birthday_icon",@"title":@"好友生日"}];
         [ins addObject:@{@"icon":@"home_music_icon",@"title":@"背景音乐"}];
         [ins addObject:@{@"icon":@"home_lovers_icon",@"title":@"情侣空间"}];
     }];
-    
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        /**
-         *  打印当前已存在的视图tree(UI开发工具)
-         */
-        [self.view tf_logSubviews:^NSArray *{
-            /**
-             *  这里返回你要在视图tree里面显示的视图属性,返回nil则默认打印 @[@"frame",@"hidden",@"backgroundColor",@"userInteractionEnabled"]
-             */
-            return @[@"frame",@"hidden",@"backgroundColor",@"userInteractionEnabled"];
-        }];
-        
-        /**
-         *  为当前已存在的视图tree 加上随机颜色(UI开发工具)
-         */
-        [self.view tf_getAllSubviewsBackgroundColorRandom:0.5];
-        
-        
-        /**
-         *  获取view的所有子视图(UI开发工具)
-         */
-        NSArray *allSubviews = [self.view tf_getAllSubviews];
-        NSLog(@"\n\n\n\n\n%@\n\n\n\n\n",allSubviews);
-    });
-    
+
     
 }
 
@@ -143,7 +110,7 @@ TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
     /**
      *  为当前已存在的视图tree 加上随机颜色(UI开发工具)
      */
-    [self.view tf_getAllSubviewsBackgroundColorRandom:0.5];
+    [self.view tf_setAllSubviewsBackgroundColorRandom:0.5];
     
     
     /**
@@ -153,5 +120,6 @@ TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
     NSLog(@"\n\n\n\n\n%@\n\n\n\n\n",allSubviews);
     
 }
+
 
 @end

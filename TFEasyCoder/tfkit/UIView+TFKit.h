@@ -28,7 +28,7 @@
 +(CGFloat)TF_CODE_PRE(screenWidth);
 +(CGFloat)TF_CODE_PRE(screenHeight);
 
-#pragma mark view尺寸便捷操作 --
+#pragma mark view尺寸操作 --
 /**
  *  当前view一些Frame值
  */

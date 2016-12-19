@@ -40,5 +40,7 @@
 
 #import "NSObject+TFGCDKit.h"
 
-
+#import "NSDictionary+TFLogChinese.h"
+#import "NSArray+TFLogChinese.h"
+#import "UIViewController+TFDebugKit.h"
 #endif /* TFKit_h */

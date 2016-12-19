@@ -38,8 +38,15 @@ typedef NSArray *(^TFLogTreeBackBlock) ();
  *
  *  @return 所有的子视图
  */
--(NSMutableArray *)TF_CODE_PRE(getAllSubviewsBackgroundColorRandom):(CGFloat)alpha;
-
+-(NSMutableArray *)TF_CODE_PRE(setAllSubviewsBackgroundColorRandom):(CGFloat)alpha;
+/**
+ *  为所有子视图加上border red
+ *
+ *  @param alpha 随机色透明度
+ *
+ *  @return 所有的子视图
+ */
+-(NSMutableArray *)TF_CODE_PRE(setAllSubviewsBorderRed);
 /**
  *  获取所有父视图(!注意不是子视图)
  *
@@ -53,7 +60,7 @@ typedef NSArray *(^TFLogTreeBackBlock) ();
  *
  *  @return 所有的父视图
  */
--(NSMutableArray *)TF_CODE_PRE(getAllSupviewsBackgroundColorRandom):(CGFloat)alpha;
+-(NSMutableArray *)TF_CODE_PRE(setAllSupviewsBackgroundColorRandom):(CGFloat)alpha;
 
 /**
  *  在所有子视图中获取视图树种最上层的一个类型的view
