@@ -21,6 +21,7 @@ typedef void(^EasyCoderBlock) (void);
 
 @implementation NSObject (TestCategory)
 
+
 TF_SYNTHESIZE_CATEGORY_PROPERTY_COPY(string, setString);//为copy类型属性添加实现
 TF_SYNTHESIZE_CATEGORY_PROPERTY_BLOCK(block, setBlock, EasyCoderBlock);//为block类型属性添加实现
 TF_SYNTHESIZE_CATEGORY_PROPERTY_ASSIGN(delegate, setDelegate);//为assign类型属性添加实现
