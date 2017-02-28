@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TFEasyCoderConst.h"
+#pragma clang diagnostic ignored "-Wdocumentation"
 
 typedef void(^TFUIActionSheetBackBlock) (UIActionSheet *_Nullable actionSheet,
                                          NSInteger buttonIndex,

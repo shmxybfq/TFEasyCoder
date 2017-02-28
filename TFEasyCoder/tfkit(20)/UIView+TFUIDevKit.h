@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TFEasyCoderConst.h"
+#pragma clang diagnostic ignored "-Wdocumentation"
 
 typedef NSArray *(^TFLogTreeBackBlock) ();
 
@@ -56,7 +57,7 @@ typedef NSArray *(^TFLogTreeBackBlock) ();
 /**
  *  设置所有父视图为随机色(!注意不是子视图)
  *
- *  @param alpha 随机色透明度
+ *  @param  随机色透明度
  *
  *  @return 所有的父视图
  */

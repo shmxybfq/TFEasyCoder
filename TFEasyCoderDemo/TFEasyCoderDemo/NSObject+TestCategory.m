@@ -7,7 +7,9 @@
 //
 
 #import "NSObject+TestCategory.h"
+
 typedef void(^EasyCoderBlock) (void);
+
 @interface NSObject ()
 
 @property (nonatomic,  copy)NSString *string;
