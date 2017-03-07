@@ -8,6 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		CD1676121DC87BD000969C21 /* NSObject+TFExecute.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1674031DC87BCF00969C21 /* NSObject+TFExecute.m */; };
+		CD410FC61E6EAD1B0062012E /* NSArray+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410F9A1E6EAD1B0062012E /* NSArray+TFKit.m */; };
+		CD410FC71E6EAD1B0062012E /* NSArray+TFLogChinese.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410F9C1E6EAD1B0062012E /* NSArray+TFLogChinese.m */; };
+		CD410FC81E6EAD1B0062012E /* NSDictionary+TFLogChinese.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410F9E1E6EAD1B0062012E /* NSDictionary+TFLogChinese.m */; };
+		CD410FC91E6EAD1B0062012E /* NSMutableArray+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410FA01E6EAD1B0062012E /* NSMutableArray+TFKit.m */; };
+		CD410FCA1E6EAD1B0062012E /* NSMutableDictionary+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410FA21E6EAD1B0062012E /* NSMutableDictionary+TFKit.m */; };
+		CD410FCB1E6EAD1B0062012E /* NSObject+TFGCDKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410FA41E6EAD1B0062012E /* NSObject+TFGCDKit.m */; };
+		CD410FCC1E6EAD1B0062012E /* NSObject+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410FA61E6EAD1B0062012E /* NSObject+TFKit.m */; };
+		CD410FCD1E6EAD1B0062012E /* NSObject+TFTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410FA81E6EAD1B0062012E /* NSObject+TFTimer.m */; };
+		CD410FCE1E6EAD1B0062012E /* NSString+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410FAB1E6EAD1B0062012E /* NSString+TFKit.m */; };
+		CD410FCF1E6EAD1B0062012E /* UIActionSheet+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410FAF1E6EAD1B0062012E /* UIActionSheet+TFKit.m */; };
+		CD410FD01E6EAD1B0062012E /* UIAlertView+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410FB11E6EAD1B0062012E /* UIAlertView+TFKit.m */; };
+		CD410FD11E6EAD1B0062012E /* UIBarButtonItem+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410FB31E6EAD1B0062012E /* UIBarButtonItem+TFKit.m */; };
+		CD410FD21E6EAD1B0062012E /* UIColor+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410FB51E6EAD1B0062012E /* UIColor+TFKit.m */; };
+		CD410FD31E6EAD1B0062012E /* UIImage+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410FB81E6EAD1B0062012E /* UIImage+TFKit.m */; };
+		CD410FD41E6EAD1B0062012E /* UINavigationBar+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410FBA1E6EAD1B0062012E /* UINavigationBar+TFKit.m */; };
+		CD410FD51E6EAD1B0062012E /* UINavigationController+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410FBC1E6EAD1B0062012E /* UINavigationController+TFKit.m */; };
+		CD410FD61E6EAD1B0062012E /* UIView+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410FBE1E6EAD1B0062012E /* UIView+TFKit.m */; };
+		CD410FD71E6EAD1B0062012E /* UIView+TFUIDevKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410FC01E6EAD1B0062012E /* UIView+TFUIDevKit.m */; };
+		CD410FD81E6EAD1B0062012E /* UIViewController+TFDebugKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410FC31E6EAD1B0062012E /* UIViewController+TFDebugKit.m */; };
+		CD410FD91E6EAD1B0062012E /* UIViewController+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410FC51E6EAD1B0062012E /* UIViewController+TFKit.m */; };
 		CD7739951E078A050020D7EE /* CAAnimation+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7736A81E078A040020D7EE /* CAAnimation+TFEasyCoder.m */; };
 		CD7739961E078A050020D7EE /* CAAnimationGroup+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7736AA1E078A040020D7EE /* CAAnimationGroup+TFEasyCoder.m */; };
 		CD7739971E078A050020D7EE /* CABasicAnimation+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7736AC1E078A040020D7EE /* CABasicAnimation+TFEasyCoder.m */; };
@@ -191,25 +211,6 @@
 		CD773A491E078A050020D7EE /* NSValue+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7738131E078A040020D7EE /* NSValue+TFEasyCoder.m */; };
 		CD773A4A1E078A050020D7EE /* NSValueTransformer+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7738151E078A040020D7EE /* NSValueTransformer+TFEasyCoder.m */; };
 		CD773A4B1E078A050020D7EE /* NSXMLParser+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7738171E078A050020D7EE /* NSXMLParser+TFEasyCoder.m */; };
-		CD773A4C1E078A050020D7EE /* NSArray+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD77381A1E078A050020D7EE /* NSArray+TFKit.m */; };
-		CD773A4D1E078A050020D7EE /* NSArray+TFLogChinese.m in Sources */ = {isa = PBXBuildFile; fileRef = CD77381C1E078A050020D7EE /* NSArray+TFLogChinese.m */; };
-		CD773A4E1E078A060020D7EE /* NSDictionary+TFLogChinese.m in Sources */ = {isa = PBXBuildFile; fileRef = CD77381E1E078A050020D7EE /* NSDictionary+TFLogChinese.m */; };
-		CD773A4F1E078A060020D7EE /* NSMutableArray+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7738201E078A050020D7EE /* NSMutableArray+TFKit.m */; };
-		CD773A501E078A060020D7EE /* NSMutableDictionary+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7738221E078A050020D7EE /* NSMutableDictionary+TFKit.m */; };
-		CD773A511E078A060020D7EE /* NSObject+TFGCDKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7738241E078A050020D7EE /* NSObject+TFGCDKit.m */; };
-		CD773A521E078A060020D7EE /* NSObject+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7738261E078A050020D7EE /* NSObject+TFKit.m */; };
-		CD773A531E078A060020D7EE /* NSObject+TFTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7738281E078A050020D7EE /* NSObject+TFTimer.m */; };
-		CD773A541E078A060020D7EE /* NSString+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD77382A1E078A050020D7EE /* NSString+TFKit.m */; };
-		CD773A551E078A060020D7EE /* UIActionSheet+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD77382E1E078A050020D7EE /* UIActionSheet+TFKit.m */; };
-		CD773A561E078A060020D7EE /* UIAlertView+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7738301E078A050020D7EE /* UIAlertView+TFKit.m */; };
-		CD773A571E078A060020D7EE /* UIBarButtonItem+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7738321E078A050020D7EE /* UIBarButtonItem+TFKit.m */; };
-		CD773A581E078A060020D7EE /* UIColor+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7738341E078A050020D7EE /* UIColor+TFKit.m */; };
-		CD773A591E078A060020D7EE /* UIImage+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7738371E078A050020D7EE /* UIImage+TFKit.m */; };
-		CD773A5A1E078A060020D7EE /* UINavigationController+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7738391E078A050020D7EE /* UINavigationController+TFKit.m */; };
-		CD773A5B1E078A060020D7EE /* UIView+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD77383B1E078A050020D7EE /* UIView+TFKit.m */; };
-		CD773A5C1E078A060020D7EE /* UIView+TFUIDevKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD77383D1E078A050020D7EE /* UIView+TFUIDevKit.m */; };
-		CD773A5D1E078A060020D7EE /* UIViewController+TFDebugKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7738401E078A050020D7EE /* UIViewController+TFDebugKit.m */; };
-		CD773A5E1E078A060020D7EE /* UIViewController+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7738421E078A050020D7EE /* UIViewController+TFKit.m */; };
 		CD773A5F1E078A060020D7EE /* UIAcceleration+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7738451E078A050020D7EE /* UIAcceleration+TFEasyCoder.m */; };
 		CD773A601E078A060020D7EE /* UIAccelerometer+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7738471E078A050020D7EE /* UIAccelerometer+TFEasyCoder.m */; };
 		CD773A611E078A060020D7EE /* UIAccessibilityCustomAction+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7738491E078A050020D7EE /* UIAccessibilityCustomAction+TFEasyCoder.m */; };
@@ -420,6 +421,51 @@
 		CD1674031DC87BCF00969C21 /* NSObject+TFExecute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TFExecute.m"; sourceTree = "<group>"; };
 		CD1674041DC87BCF00969C21 /* TFEasyCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFEasyCoder.h; sourceTree = "<group>"; };
 		CD1674051DC87BCF00969C21 /* TFEasyCoderConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFEasyCoderConst.h; sourceTree = "<group>"; };
+		CD410F991E6EAD1B0062012E /* NSArray+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+TFKit.h"; sourceTree = "<group>"; };
+		CD410F9A1E6EAD1B0062012E /* NSArray+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+TFKit.m"; sourceTree = "<group>"; };
+		CD410F9B1E6EAD1B0062012E /* NSArray+TFLogChinese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+TFLogChinese.h"; sourceTree = "<group>"; };
+		CD410F9C1E6EAD1B0062012E /* NSArray+TFLogChinese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+TFLogChinese.m"; sourceTree = "<group>"; };
+		CD410F9D1E6EAD1B0062012E /* NSDictionary+TFLogChinese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+TFLogChinese.h"; sourceTree = "<group>"; };
+		CD410F9E1E6EAD1B0062012E /* NSDictionary+TFLogChinese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+TFLogChinese.m"; sourceTree = "<group>"; };
+		CD410F9F1E6EAD1B0062012E /* NSMutableArray+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+TFKit.h"; sourceTree = "<group>"; };
+		CD410FA01E6EAD1B0062012E /* NSMutableArray+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+TFKit.m"; sourceTree = "<group>"; };
+		CD410FA11E6EAD1B0062012E /* NSMutableDictionary+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+TFKit.h"; sourceTree = "<group>"; };
+		CD410FA21E6EAD1B0062012E /* NSMutableDictionary+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+TFKit.m"; sourceTree = "<group>"; };
+		CD410FA31E6EAD1B0062012E /* NSObject+TFGCDKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TFGCDKit.h"; sourceTree = "<group>"; };
+		CD410FA41E6EAD1B0062012E /* NSObject+TFGCDKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TFGCDKit.m"; sourceTree = "<group>"; };
+		CD410FA51E6EAD1B0062012E /* NSObject+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TFKit.h"; sourceTree = "<group>"; };
+		CD410FA61E6EAD1B0062012E /* NSObject+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TFKit.m"; sourceTree = "<group>"; };
+		CD410FA71E6EAD1B0062012E /* NSObject+TFTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TFTimer.h"; sourceTree = "<group>"; };
+		CD410FA81E6EAD1B0062012E /* NSObject+TFTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TFTimer.m"; sourceTree = "<group>"; };
+		CD410FA91E6EAD1B0062012E /* NSObject_TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObject_TFKit.h; sourceTree = "<group>"; };
+		CD410FAA1E6EAD1B0062012E /* NSString+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TFKit.h"; sourceTree = "<group>"; };
+		CD410FAB1E6EAD1B0062012E /* NSString+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TFKit.m"; sourceTree = "<group>"; };
+		CD410FAC1E6EAD1B0062012E /* NSString_TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSString_TFKit.h; sourceTree = "<group>"; };
+		CD410FAD1E6EAD1B0062012E /* TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFKit.h; sourceTree = "<group>"; };
+		CD410FAE1E6EAD1B0062012E /* UIActionSheet+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+TFKit.h"; sourceTree = "<group>"; };
+		CD410FAF1E6EAD1B0062012E /* UIActionSheet+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+TFKit.m"; sourceTree = "<group>"; };
+		CD410FB01E6EAD1B0062012E /* UIAlertView+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+TFKit.h"; sourceTree = "<group>"; };
+		CD410FB11E6EAD1B0062012E /* UIAlertView+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+TFKit.m"; sourceTree = "<group>"; };
+		CD410FB21E6EAD1B0062012E /* UIBarButtonItem+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+TFKit.h"; sourceTree = "<group>"; };
+		CD410FB31E6EAD1B0062012E /* UIBarButtonItem+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+TFKit.m"; sourceTree = "<group>"; };
+		CD410FB41E6EAD1B0062012E /* UIColor+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TFKit.h"; sourceTree = "<group>"; };
+		CD410FB51E6EAD1B0062012E /* UIColor+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TFKit.m"; sourceTree = "<group>"; };
+		CD410FB61E6EAD1B0062012E /* UIColor_TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColor_TFKit.h; sourceTree = "<group>"; };
+		CD410FB71E6EAD1B0062012E /* UIImage+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TFKit.h"; sourceTree = "<group>"; };
+		CD410FB81E6EAD1B0062012E /* UIImage+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TFKit.m"; sourceTree = "<group>"; };
+		CD410FB91E6EAD1B0062012E /* UINavigationBar+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+TFKit.h"; sourceTree = "<group>"; };
+		CD410FBA1E6EAD1B0062012E /* UINavigationBar+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+TFKit.m"; sourceTree = "<group>"; };
+		CD410FBB1E6EAD1B0062012E /* UINavigationController+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+TFKit.h"; sourceTree = "<group>"; };
+		CD410FBC1E6EAD1B0062012E /* UINavigationController+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+TFKit.m"; sourceTree = "<group>"; };
+		CD410FBD1E6EAD1B0062012E /* UIView+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TFKit.h"; sourceTree = "<group>"; };
+		CD410FBE1E6EAD1B0062012E /* UIView+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TFKit.m"; sourceTree = "<group>"; };
+		CD410FBF1E6EAD1B0062012E /* UIView+TFUIDevKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TFUIDevKit.h"; sourceTree = "<group>"; };
+		CD410FC01E6EAD1B0062012E /* UIView+TFUIDevKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TFUIDevKit.m"; sourceTree = "<group>"; };
+		CD410FC11E6EAD1B0062012E /* UIView_TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView_TFKit.h; sourceTree = "<group>"; };
+		CD410FC21E6EAD1B0062012E /* UIViewController+TFDebugKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TFDebugKit.h"; sourceTree = "<group>"; };
+		CD410FC31E6EAD1B0062012E /* UIViewController+TFDebugKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TFDebugKit.m"; sourceTree = "<group>"; };
+		CD410FC41E6EAD1B0062012E /* UIViewController+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TFKit.h"; sourceTree = "<group>"; };
+		CD410FC51E6EAD1B0062012E /* UIViewController+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TFKit.m"; sourceTree = "<group>"; };
 		CD7736A71E078A040020D7EE /* CAAnimation+TFEasyCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+TFEasyCoder.h"; sourceTree = "<group>"; };
 		CD7736A81E078A040020D7EE /* CAAnimation+TFEasyCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+TFEasyCoder.m"; sourceTree = "<group>"; };
 		CD7736A91E078A040020D7EE /* CAAnimationGroup+TFEasyCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimationGroup+TFEasyCoder.h"; sourceTree = "<group>"; };
@@ -788,48 +834,6 @@
 		CD7738151E078A040020D7EE /* NSValueTransformer+TFEasyCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+TFEasyCoder.m"; sourceTree = "<group>"; };
 		CD7738161E078A050020D7EE /* NSXMLParser+TFEasyCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSXMLParser+TFEasyCoder.h"; sourceTree = "<group>"; };
 		CD7738171E078A050020D7EE /* NSXMLParser+TFEasyCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSXMLParser+TFEasyCoder.m"; sourceTree = "<group>"; };
-		CD7738191E078A050020D7EE /* NSArray+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+TFKit.h"; sourceTree = "<group>"; };
-		CD77381A1E078A050020D7EE /* NSArray+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+TFKit.m"; sourceTree = "<group>"; };
-		CD77381B1E078A050020D7EE /* NSArray+TFLogChinese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+TFLogChinese.h"; sourceTree = "<group>"; };
-		CD77381C1E078A050020D7EE /* NSArray+TFLogChinese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+TFLogChinese.m"; sourceTree = "<group>"; };
-		CD77381D1E078A050020D7EE /* NSDictionary+TFLogChinese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+TFLogChinese.h"; sourceTree = "<group>"; };
-		CD77381E1E078A050020D7EE /* NSDictionary+TFLogChinese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+TFLogChinese.m"; sourceTree = "<group>"; };
-		CD77381F1E078A050020D7EE /* NSMutableArray+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+TFKit.h"; sourceTree = "<group>"; };
-		CD7738201E078A050020D7EE /* NSMutableArray+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+TFKit.m"; sourceTree = "<group>"; };
-		CD7738211E078A050020D7EE /* NSMutableDictionary+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+TFKit.h"; sourceTree = "<group>"; };
-		CD7738221E078A050020D7EE /* NSMutableDictionary+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+TFKit.m"; sourceTree = "<group>"; };
-		CD7738231E078A050020D7EE /* NSObject+TFGCDKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TFGCDKit.h"; sourceTree = "<group>"; };
-		CD7738241E078A050020D7EE /* NSObject+TFGCDKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TFGCDKit.m"; sourceTree = "<group>"; };
-		CD7738251E078A050020D7EE /* NSObject+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TFKit.h"; sourceTree = "<group>"; };
-		CD7738261E078A050020D7EE /* NSObject+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TFKit.m"; sourceTree = "<group>"; };
-		CD7738271E078A050020D7EE /* NSObject+TFTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TFTimer.h"; sourceTree = "<group>"; };
-		CD7738281E078A050020D7EE /* NSObject+TFTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TFTimer.m"; sourceTree = "<group>"; };
-		CD7738291E078A050020D7EE /* NSString+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TFKit.h"; sourceTree = "<group>"; };
-		CD77382A1E078A050020D7EE /* NSString+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TFKit.m"; sourceTree = "<group>"; };
-		CD77382B1E078A050020D7EE /* NSString_TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSString_TFKit.h; sourceTree = "<group>"; };
-		CD77382C1E078A050020D7EE /* TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFKit.h; sourceTree = "<group>"; };
-		CD77382D1E078A050020D7EE /* UIActionSheet+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+TFKit.h"; sourceTree = "<group>"; };
-		CD77382E1E078A050020D7EE /* UIActionSheet+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+TFKit.m"; sourceTree = "<group>"; };
-		CD77382F1E078A050020D7EE /* UIAlertView+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+TFKit.h"; sourceTree = "<group>"; };
-		CD7738301E078A050020D7EE /* UIAlertView+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+TFKit.m"; sourceTree = "<group>"; };
-		CD7738311E078A050020D7EE /* UIBarButtonItem+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+TFKit.h"; sourceTree = "<group>"; };
-		CD7738321E078A050020D7EE /* UIBarButtonItem+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+TFKit.m"; sourceTree = "<group>"; };
-		CD7738331E078A050020D7EE /* UIColor+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TFKit.h"; sourceTree = "<group>"; };
-		CD7738341E078A050020D7EE /* UIColor+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TFKit.m"; sourceTree = "<group>"; };
-		CD7738351E078A050020D7EE /* UIColor_TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColor_TFKit.h; sourceTree = "<group>"; };
-		CD7738361E078A050020D7EE /* UIImage+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TFKit.h"; sourceTree = "<group>"; };
-		CD7738371E078A050020D7EE /* UIImage+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TFKit.m"; sourceTree = "<group>"; };
-		CD7738381E078A050020D7EE /* UINavigationController+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+TFKit.h"; sourceTree = "<group>"; };
-		CD7738391E078A050020D7EE /* UINavigationController+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+TFKit.m"; sourceTree = "<group>"; };
-		CD77383A1E078A050020D7EE /* UIView+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TFKit.h"; sourceTree = "<group>"; };
-		CD77383B1E078A050020D7EE /* UIView+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TFKit.m"; sourceTree = "<group>"; };
-		CD77383C1E078A050020D7EE /* UIView+TFUIDevKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TFUIDevKit.h"; sourceTree = "<group>"; };
-		CD77383D1E078A050020D7EE /* UIView+TFUIDevKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TFUIDevKit.m"; sourceTree = "<group>"; };
-		CD77383E1E078A050020D7EE /* UIView_TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView_TFKit.h; sourceTree = "<group>"; };
-		CD77383F1E078A050020D7EE /* UIViewController+TFDebugKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TFDebugKit.h"; sourceTree = "<group>"; };
-		CD7738401E078A050020D7EE /* UIViewController+TFDebugKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TFDebugKit.m"; sourceTree = "<group>"; };
-		CD7738411E078A050020D7EE /* UIViewController+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TFKit.h"; sourceTree = "<group>"; };
-		CD7738421E078A050020D7EE /* UIViewController+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TFKit.m"; sourceTree = "<group>"; };
 		CD7738441E078A050020D7EE /* UIAcceleration+TFEasyCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAcceleration+TFEasyCoder.h"; sourceTree = "<group>"; };
 		CD7738451E078A050020D7EE /* UIAcceleration+TFEasyCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAcceleration+TFEasyCoder.m"; sourceTree = "<group>"; };
 		CD7738461E078A050020D7EE /* UIAccelerometer+TFEasyCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAccelerometer+TFEasyCoder.h"; sourceTree = "<group>"; };
@@ -1255,13 +1259,65 @@
 				CD964FB41DFE953F005381E7 /* TFEasyCoder_UI.m */,
 				CD964FB61DFE95D8005381E7 /* TFEasyCoder_NS.h */,
 				CD964FB71DFE95D8005381E7 /* TFEasyCoder_NS.m */,
+				CD410F981E6EAD1B0062012E /* tfkit(20) */,
 				CD7736A61E078A040020D7EE /* ca(23) */,
 				CD7736D61E078A040020D7EE /* foundation(160) */,
-				CD7738181E078A050020D7EE /* tfkit(20) */,
 				CD7738431E078A050020D7EE /* uikit(168) */,
 			);
 			name = TFEasyCoder;
 			path = ../../TFEasyCoder;
+			sourceTree = "<group>";
+		};
+		CD410F981E6EAD1B0062012E /* tfkit(20) */ = {
+			isa = PBXGroup;
+			children = (
+				CD410F991E6EAD1B0062012E /* NSArray+TFKit.h */,
+				CD410F9A1E6EAD1B0062012E /* NSArray+TFKit.m */,
+				CD410F9B1E6EAD1B0062012E /* NSArray+TFLogChinese.h */,
+				CD410F9C1E6EAD1B0062012E /* NSArray+TFLogChinese.m */,
+				CD410F9D1E6EAD1B0062012E /* NSDictionary+TFLogChinese.h */,
+				CD410F9E1E6EAD1B0062012E /* NSDictionary+TFLogChinese.m */,
+				CD410F9F1E6EAD1B0062012E /* NSMutableArray+TFKit.h */,
+				CD410FA01E6EAD1B0062012E /* NSMutableArray+TFKit.m */,
+				CD410FA11E6EAD1B0062012E /* NSMutableDictionary+TFKit.h */,
+				CD410FA21E6EAD1B0062012E /* NSMutableDictionary+TFKit.m */,
+				CD410FA31E6EAD1B0062012E /* NSObject+TFGCDKit.h */,
+				CD410FA41E6EAD1B0062012E /* NSObject+TFGCDKit.m */,
+				CD410FA51E6EAD1B0062012E /* NSObject+TFKit.h */,
+				CD410FA61E6EAD1B0062012E /* NSObject+TFKit.m */,
+				CD410FA71E6EAD1B0062012E /* NSObject+TFTimer.h */,
+				CD410FA81E6EAD1B0062012E /* NSObject+TFTimer.m */,
+				CD410FA91E6EAD1B0062012E /* NSObject_TFKit.h */,
+				CD410FAA1E6EAD1B0062012E /* NSString+TFKit.h */,
+				CD410FAB1E6EAD1B0062012E /* NSString+TFKit.m */,
+				CD410FAC1E6EAD1B0062012E /* NSString_TFKit.h */,
+				CD410FAD1E6EAD1B0062012E /* TFKit.h */,
+				CD410FAE1E6EAD1B0062012E /* UIActionSheet+TFKit.h */,
+				CD410FAF1E6EAD1B0062012E /* UIActionSheet+TFKit.m */,
+				CD410FB01E6EAD1B0062012E /* UIAlertView+TFKit.h */,
+				CD410FB11E6EAD1B0062012E /* UIAlertView+TFKit.m */,
+				CD410FB21E6EAD1B0062012E /* UIBarButtonItem+TFKit.h */,
+				CD410FB31E6EAD1B0062012E /* UIBarButtonItem+TFKit.m */,
+				CD410FB41E6EAD1B0062012E /* UIColor+TFKit.h */,
+				CD410FB51E6EAD1B0062012E /* UIColor+TFKit.m */,
+				CD410FB61E6EAD1B0062012E /* UIColor_TFKit.h */,
+				CD410FB71E6EAD1B0062012E /* UIImage+TFKit.h */,
+				CD410FB81E6EAD1B0062012E /* UIImage+TFKit.m */,
+				CD410FB91E6EAD1B0062012E /* UINavigationBar+TFKit.h */,
+				CD410FBA1E6EAD1B0062012E /* UINavigationBar+TFKit.m */,
+				CD410FBB1E6EAD1B0062012E /* UINavigationController+TFKit.h */,
+				CD410FBC1E6EAD1B0062012E /* UINavigationController+TFKit.m */,
+				CD410FBD1E6EAD1B0062012E /* UIView+TFKit.h */,
+				CD410FBE1E6EAD1B0062012E /* UIView+TFKit.m */,
+				CD410FBF1E6EAD1B0062012E /* UIView+TFUIDevKit.h */,
+				CD410FC01E6EAD1B0062012E /* UIView+TFUIDevKit.m */,
+				CD410FC11E6EAD1B0062012E /* UIView_TFKit.h */,
+				CD410FC21E6EAD1B0062012E /* UIViewController+TFDebugKit.h */,
+				CD410FC31E6EAD1B0062012E /* UIViewController+TFDebugKit.m */,
+				CD410FC41E6EAD1B0062012E /* UIViewController+TFKit.h */,
+				CD410FC51E6EAD1B0062012E /* UIViewController+TFKit.m */,
+			);
+			path = "tfkit(20)";
 			sourceTree = "<group>";
 		};
 		CD7736A61E078A040020D7EE /* ca(23) */ = {
@@ -1644,55 +1700,6 @@
 				CD7738171E078A050020D7EE /* NSXMLParser+TFEasyCoder.m */,
 			);
 			path = "foundation(160)";
-			sourceTree = "<group>";
-		};
-		CD7738181E078A050020D7EE /* tfkit(20) */ = {
-			isa = PBXGroup;
-			children = (
-				CD7738191E078A050020D7EE /* NSArray+TFKit.h */,
-				CD77381A1E078A050020D7EE /* NSArray+TFKit.m */,
-				CD77381B1E078A050020D7EE /* NSArray+TFLogChinese.h */,
-				CD77381C1E078A050020D7EE /* NSArray+TFLogChinese.m */,
-				CD77381D1E078A050020D7EE /* NSDictionary+TFLogChinese.h */,
-				CD77381E1E078A050020D7EE /* NSDictionary+TFLogChinese.m */,
-				CD77381F1E078A050020D7EE /* NSMutableArray+TFKit.h */,
-				CD7738201E078A050020D7EE /* NSMutableArray+TFKit.m */,
-				CD7738211E078A050020D7EE /* NSMutableDictionary+TFKit.h */,
-				CD7738221E078A050020D7EE /* NSMutableDictionary+TFKit.m */,
-				CD7738231E078A050020D7EE /* NSObject+TFGCDKit.h */,
-				CD7738241E078A050020D7EE /* NSObject+TFGCDKit.m */,
-				CD7738251E078A050020D7EE /* NSObject+TFKit.h */,
-				CD7738261E078A050020D7EE /* NSObject+TFKit.m */,
-				CD7738271E078A050020D7EE /* NSObject+TFTimer.h */,
-				CD7738281E078A050020D7EE /* NSObject+TFTimer.m */,
-				CD7738291E078A050020D7EE /* NSString+TFKit.h */,
-				CD77382A1E078A050020D7EE /* NSString+TFKit.m */,
-				CD77382B1E078A050020D7EE /* NSString_TFKit.h */,
-				CD77382C1E078A050020D7EE /* TFKit.h */,
-				CD77382D1E078A050020D7EE /* UIActionSheet+TFKit.h */,
-				CD77382E1E078A050020D7EE /* UIActionSheet+TFKit.m */,
-				CD77382F1E078A050020D7EE /* UIAlertView+TFKit.h */,
-				CD7738301E078A050020D7EE /* UIAlertView+TFKit.m */,
-				CD7738311E078A050020D7EE /* UIBarButtonItem+TFKit.h */,
-				CD7738321E078A050020D7EE /* UIBarButtonItem+TFKit.m */,
-				CD7738331E078A050020D7EE /* UIColor+TFKit.h */,
-				CD7738341E078A050020D7EE /* UIColor+TFKit.m */,
-				CD7738351E078A050020D7EE /* UIColor_TFKit.h */,
-				CD7738361E078A050020D7EE /* UIImage+TFKit.h */,
-				CD7738371E078A050020D7EE /* UIImage+TFKit.m */,
-				CD7738381E078A050020D7EE /* UINavigationController+TFKit.h */,
-				CD7738391E078A050020D7EE /* UINavigationController+TFKit.m */,
-				CD77383A1E078A050020D7EE /* UIView+TFKit.h */,
-				CD77383B1E078A050020D7EE /* UIView+TFKit.m */,
-				CD77383C1E078A050020D7EE /* UIView+TFUIDevKit.h */,
-				CD77383D1E078A050020D7EE /* UIView+TFUIDevKit.m */,
-				CD77383E1E078A050020D7EE /* UIView_TFKit.h */,
-				CD77383F1E078A050020D7EE /* UIViewController+TFDebugKit.h */,
-				CD7738401E078A050020D7EE /* UIViewController+TFDebugKit.m */,
-				CD7738411E078A050020D7EE /* UIViewController+TFKit.h */,
-				CD7738421E078A050020D7EE /* UIViewController+TFKit.m */,
-			);
-			path = "tfkit(20)";
 			sourceTree = "<group>";
 		};
 		CD7738431E078A050020D7EE /* uikit(168) */ = {
@@ -2229,6 +2236,7 @@
 				CD773AA01E078A060020D7EE /* UILayoutGuide+TFEasyCoder.m in Sources */,
 				CD773AFD1E078A060020D7EE /* UIUserNotificationSettings+TFEasyCoder.m in Sources */,
 				CD773A1D1E078A050020D7EE /* NSPurgeableData+TFEasyCoder.m in Sources */,
+				CD410FD61E6EAD1B0062012E /* UIView+TFKit.m in Sources */,
 				CD773A8C1E078A060020D7EE /* UIDynamicItemBehavior+TFEasyCoder.m in Sources */,
 				CD773A751E078A060020D7EE /* UICollectionReusableView+TFEasyCoder.m in Sources */,
 				CD7739B81E078A050020D7EE /* NSComparisonPredicate+TFEasyCoder.m in Sources */,
@@ -2240,7 +2248,9 @@
 				CD773A811E078A060020D7EE /* UIColor+TFEasyCoder.m in Sources */,
 				CD773ABF1E078A060020D7EE /* UIPressesEvent+TFEasyCoder.m in Sources */,
 				CD773AE11E078A060020D7EE /* UIStoryboardSegue+TFEasyCoder.m in Sources */,
+				CD410FCB1E6EAD1B0062012E /* NSObject+TFGCDKit.m in Sources */,
 				CD7739CA1E078A050020D7EE /* NSEnergyFormatter+TFEasyCoder.m in Sources */,
+				CD410FD21E6EAD1B0062012E /* UIColor+TFKit.m in Sources */,
 				CD773A421E078A050020D7EE /* NSURLSessionDownloadTask+TFEasyCoder.m in Sources */,
 				CD7739A51E078A050020D7EE /* CASpringAnimation+TFEasyCoder.m in Sources */,
 				CD773B061E078A060020D7EE /* UIWindow+TFEasyCoder.m in Sources */,
@@ -2248,8 +2258,8 @@
 				CD773A901E078A060020D7EE /* UIFocusAnimationCoordinator+TFEasyCoder.m in Sources */,
 				CD7739F71E078A050020D7EE /* NSMethodSignature+TFEasyCoder.m in Sources */,
 				CD773A8E1E078A060020D7EE /* UIEvent+TFEasyCoder.m in Sources */,
-				CD773A591E078A060020D7EE /* UIImage+TFKit.m in Sources */,
 				CD7739F31E078A050020D7EE /* NSMetadataItem+TFEasyCoder.m in Sources */,
+				CD410FCE1E6EAD1B0062012E /* NSString+TFKit.m in Sources */,
 				CD773A351E078A050020D7EE /* NSURLCache+TFEasyCoder.m in Sources */,
 				CD7739EE1E078A050020D7EE /* NSLinguisticTagger+TFEasyCoder.m in Sources */,
 				CD773ABC1E078A060020D7EE /* UIPopoverPresentationController+TFEasyCoder.m in Sources */,
@@ -2258,9 +2268,10 @@
 				CD773AB21E078A060020D7EE /* UINib+TFEasyCoder.m in Sources */,
 				CD773AFE1E078A060020D7EE /* UIVibrancyEffect+TFEasyCoder.m in Sources */,
 				CD773AA71E078A060020D7EE /* UIMarkupTextPrintFormatter+TFEasyCoder.m in Sources */,
-				CD773A4E1E078A060020D7EE /* NSDictionary+TFLogChinese.m in Sources */,
+				CD410FD71E6EAD1B0062012E /* UIView+TFUIDevKit.m in Sources */,
 				CD773AA41E078A060020D7EE /* UILocalNotification+TFEasyCoder.m in Sources */,
 				CD7739C41E078A050020D7EE /* NSDateFormatter+TFEasyCoder.m in Sources */,
+				CD410FCD1E6EAD1B0062012E /* NSObject+TFTimer.m in Sources */,
 				CD773A0C1E078A050020D7EE /* NSOperation+TFEasyCoder.m in Sources */,
 				CD7739CE1E078A050020D7EE /* NSExpression+TFEasyCoder.m in Sources */,
 				CD773AF91E078A060020D7EE /* UITouch+TFEasyCoder.m in Sources */,
@@ -2283,24 +2294,24 @@
 				CD773A971E078A060020D7EE /* UIImage+TFEasyCoder.m in Sources */,
 				CD773A981E078A060020D7EE /* UIImageAsset+TFEasyCoder.m in Sources */,
 				CD7739FE1E078A050020D7EE /* NSMutableOrderedSet+TFEasyCoder.m in Sources */,
+				CD410FC71E6EAD1B0062012E /* NSArray+TFLogChinese.m in Sources */,
 				CD773AB81E078A060020D7EE /* UIPickerView+TFEasyCoder.m in Sources */,
 				CD773A961E078A060020D7EE /* UIGravityBehavior+TFEasyCoder.m in Sources */,
 				CD773AF31E078A060020D7EE /* UITextInputStringTokenizer+TFEasyCoder.m in Sources */,
 				CD773A411E078A050020D7EE /* NSURLSessionDataTask+TFEasyCoder.m in Sources */,
 				CD7739EC1E078A050020D7EE /* NSLayoutYAxisAnchor+TFEasyCoder.m in Sources */,
 				CD773AD61E078A060020D7EE /* UISearchController+TFEasyCoder.m in Sources */,
-				CD773A531E078A060020D7EE /* NSObject+TFTimer.m in Sources */,
 				CD7739B51E078A050020D7EE /* NSCalendar+TFEasyCoder.m in Sources */,
+				CD410FD01E6EAD1B0062012E /* UIAlertView+TFKit.m in Sources */,
 				CD773ADB1E078A060020D7EE /* UISnapBehavior+TFEasyCoder.m in Sources */,
 				CD773AAF1E078A060020D7EE /* UINavigationBar+TFEasyCoder.m in Sources */,
 				CD77399D1E078A050020D7EE /* CAGradientLayer+TFEasyCoder.m in Sources */,
 				CD773AFF1E078A060020D7EE /* UIVideoEditorController+TFEasyCoder.m in Sources */,
+				CD410FC91E6EAD1B0062012E /* NSMutableArray+TFKit.m in Sources */,
 				CD7739FA1E078A050020D7EE /* NSMutableCharacterSet+TFEasyCoder.m in Sources */,
 				CD7739EB1E078A050020D7EE /* NSLayoutXAxisAnchor+TFEasyCoder.m in Sources */,
-				CD773A571E078A060020D7EE /* UIBarButtonItem+TFKit.m in Sources */,
 				CD773A1E1E078A050020D7EE /* NSRecursiveLock+TFEasyCoder.m in Sources */,
-				CD773A521E078A060020D7EE /* NSObject+TFKit.m in Sources */,
-				CD773A511E078A060020D7EE /* NSObject+TFGCDKit.m in Sources */,
+				CD410FD41E6EAD1B0062012E /* UINavigationBar+TFKit.m in Sources */,
 				CD773AEB1E078A060020D7EE /* UITableViewFocusUpdateContext+TFEasyCoder.m in Sources */,
 				CD7739E91E078A050020D7EE /* NSLayoutDimension+TFEasyCoder.m in Sources */,
 				CD773A931E078A060020D7EE /* UIFont+TFEasyCoder.m in Sources */,
@@ -2311,9 +2322,10 @@
 				CD7739A41E078A050020D7EE /* CAShapeLayer+TFEasyCoder.m in Sources */,
 				CD7739AA1E078A050020D7EE /* CATransition+TFEasyCoder.m in Sources */,
 				CD773A221E078A050020D7EE /* NSSet+TFEasyCoder.m in Sources */,
+				CD410FCC1E6EAD1B0062012E /* NSObject+TFKit.m in Sources */,
+				CD410FD11E6EAD1B0062012E /* UIBarButtonItem+TFKit.m in Sources */,
 				CD773A1A1E078A050020D7EE /* NSProgress+TFEasyCoder.m in Sources */,
 				CD7739DF1E078A050020D7EE /* NSIndexSet+TFEasyCoder.m in Sources */,
-				CD773A561E078A060020D7EE /* UIAlertView+TFKit.m in Sources */,
 				CD7739BD1E078A050020D7EE /* NSCountedSet+TFEasyCoder.m in Sources */,
 				CD773A181E078A050020D7EE /* NSPredicate+TFEasyCoder.m in Sources */,
 				CD7739E41E078A050020D7EE /* NSJSONSerialization+TFEasyCoder.m in Sources */,
@@ -2322,7 +2334,6 @@
 				CD7739BE1E078A050020D7EE /* NSData+TFEasyCoder.m in Sources */,
 				CD773A7C1E078A060020D7EE /* UICollectionViewLayoutAttributes+TFEasyCoder.m in Sources */,
 				CD773A8D1E078A060020D7EE /* UIDynamicItemGroup+TFEasyCoder.m in Sources */,
-				CD773A5E1E078A060020D7EE /* UIViewController+TFKit.m in Sources */,
 				CD773A8A1E078A060020D7EE /* UIDynamicAnimator+TFEasyCoder.m in Sources */,
 				CD922DD51DD1966900CABEFA /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				CD7739BF1E078A050020D7EE /* NSDataAsset+TFEasyCoder.m in Sources */,
@@ -2340,9 +2351,7 @@
 				CD7739CB1E078A050020D7EE /* NSEnumerator+TFEasyCoder.m in Sources */,
 				CD773AE71E078A060020D7EE /* UITabBarItem+TFEasyCoder.m in Sources */,
 				CD773A091E078A050020D7EE /* NSNumber+TFEasyCoder.m in Sources */,
-				CD773A541E078A060020D7EE /* NSString+TFKit.m in Sources */,
 				CD7739AC1E078A050020D7EE /* NSArray+TFEasyCoder.m in Sources */,
-				CD773A5C1E078A060020D7EE /* UIView+TFUIDevKit.m in Sources */,
 				CD773A6C1E078A060020D7EE /* UIApplicationShortcutIcon+TFEasyCoder.m in Sources */,
 				CD773A121E078A050020D7EE /* NSPersonNameComponents+TFEasyCoder.m in Sources */,
 				CD773A211E078A050020D7EE /* NSScanner+TFEasyCoder.m in Sources */,
@@ -2371,6 +2380,7 @@
 				CD773A851E078A060020D7EE /* UIDictationPhrase+TFEasyCoder.m in Sources */,
 				CD773A711E078A060020D7EE /* UIBarItem+TFEasyCoder.m in Sources */,
 				CD773A7D1E078A060020D7EE /* UICollectionViewLayoutInvalidationContext+TFEasyCoder.m in Sources */,
+				CD410FC61E6EAD1B0062012E /* NSArray+TFKit.m in Sources */,
 				CD773B041E078A060020D7EE /* UIVisualEffectView+TFEasyCoder.m in Sources */,
 				CD773A821E078A060020D7EE /* UIControl+TFEasyCoder.m in Sources */,
 				CD773ACB1E078A060020D7EE /* UIReferenceLibraryViewController+TFEasyCoder.m in Sources */,
@@ -2416,7 +2426,6 @@
 				CD773A051E078A050020D7EE /* NSNotification+TFEasyCoder.m in Sources */,
 				CD7739A21E078A050020D7EE /* CAReplicatorLayer+TFEasyCoder.m in Sources */,
 				CD773A361E078A050020D7EE /* NSURLComponents+TFEasyCoder.m in Sources */,
-				CD773A5A1E078A060020D7EE /* UINavigationController+TFKit.m in Sources */,
 				CD7739C71E078A050020D7EE /* NSDecimalNumberHandler+TFEasyCoder.m in Sources */,
 				CD773AE61E078A060020D7EE /* UITabBarController+TFEasyCoder.m in Sources */,
 				CD7739D81E078A050020D7EE /* NSFileWrapper+TFEasyCoder.m in Sources */,
@@ -2445,7 +2454,9 @@
 				CD7739E11E078A050020D7EE /* NSInvocation+TFEasyCoder.m in Sources */,
 				CD773A911E078A060020D7EE /* UIFocusGuide+TFEasyCoder.m in Sources */,
 				CD7739C21E078A050020D7EE /* NSDateComponents+TFEasyCoder.m in Sources */,
+				CD410FD51E6EAD1B0062012E /* UINavigationController+TFKit.m in Sources */,
 				CD773A6E1E078A060020D7EE /* UIAttachmentBehavior+TFEasyCoder.m in Sources */,
+				CD410FD81E6EAD1B0062012E /* UIViewController+TFDebugKit.m in Sources */,
 				CD922DD31DD1966900CABEFA /* MASViewConstraint.m in Sources */,
 				CD773AD71E078A060020D7EE /* UISearchDisplayController+TFEasyCoder.m in Sources */,
 				CD7739D01E078A050020D7EE /* NSExtensionItem+TFEasyCoder.m in Sources */,
@@ -2469,10 +2480,10 @@
 				CD773AE31E078A060020D7EE /* UISwipeGestureRecognizer+TFEasyCoder.m in Sources */,
 				CD773A6F1E078A060020D7EE /* UIBarButtonItem+TFEasyCoder.m in Sources */,
 				CD773B051E078A060020D7EE /* UIWebView+TFEasyCoder.m in Sources */,
-				CD773A4D1E078A050020D7EE /* NSArray+TFLogChinese.m in Sources */,
 				CD773A651E078A060020D7EE /* UIActivityIndicatorView+TFEasyCoder.m in Sources */,
 				CD773AF81E078A060020D7EE /* UIToolbar+TFEasyCoder.m in Sources */,
 				CD7739BB1E078A050020D7EE /* NSConditionLock+TFEasyCoder.m in Sources */,
+				CD410FD91E6EAD1B0062012E /* UIViewController+TFKit.m in Sources */,
 				CD773A781E078A060020D7EE /* UICollectionViewController+TFEasyCoder.m in Sources */,
 				CD773A081E078A050020D7EE /* NSNull+TFEasyCoder.m in Sources */,
 				CD773A4B1E078A050020D7EE /* NSXMLParser+TFEasyCoder.m in Sources */,
@@ -2497,7 +2508,6 @@
 				CD922DB31DD195C400CABEFA /* TableviewCell.m in Sources */,
 				CD773ADE1E078A060020D7EE /* UIStepper+TFEasyCoder.m in Sources */,
 				CD773B011E078A060020D7EE /* UIViewController+TFEasyCoder.m in Sources */,
-				CD773A5D1E078A060020D7EE /* UIViewController+TFDebugKit.m in Sources */,
 				CD773A1B1E078A050020D7EE /* NSPropertyListSerialization+TFEasyCoder.m in Sources */,
 				CD773A0A1E078A050020D7EE /* NSNumberFormatter+TFEasyCoder.m in Sources */,
 				CD773AD31E078A060020D7EE /* UIScrollView+TFEasyCoder.m in Sources */,
@@ -2505,12 +2515,12 @@
 				CDCC52BC1E058CE200764CD3 /* TmpObject.m in Sources */,
 				CD773AAE1E078A060020D7EE /* UIMutableUserNotificationCategory+TFEasyCoder.m in Sources */,
 				CD773A5F1E078A060020D7EE /* UIAcceleration+TFEasyCoder.m in Sources */,
-				CD773A4F1E078A060020D7EE /* NSMutableArray+TFKit.m in Sources */,
 				CD773AF21E078A060020D7EE /* UITextInputMode+TFEasyCoder.m in Sources */,
 				CD773A801E078A060020D7EE /* UICollisionBehavior+TFEasyCoder.m in Sources */,
 				CD7739D41E078A050020D7EE /* NSFileManager+TFEasyCoder.m in Sources */,
 				CD773A841E078A060020D7EE /* UIDevice+TFEasyCoder.m in Sources */,
 				CD773AB31E078A060020D7EE /* UIPageControl+TFEasyCoder.m in Sources */,
+				CD410FCA1E6EAD1B0062012E /* NSMutableDictionary+TFKit.m in Sources */,
 				CDA6F0F11DC33CEC001330D3 /* AppDelegate.m in Sources */,
 				CD7739E01E078A050020D7EE /* NSInputStream+TFEasyCoder.m in Sources */,
 				CD773A631E078A060020D7EE /* UIActionSheet+TFEasyCoder.m in Sources */,
@@ -2520,7 +2530,6 @@
 				CD773A271E078A050020D7EE /* NSString+TFEasyCoder.m in Sources */,
 				CD773A391E078A050020D7EE /* NSURLCredentialStorage+TFEasyCoder.m in Sources */,
 				CD773A2B1E078A050020D7EE /* NSTextContainer+TFEasyCoder.m in Sources */,
-				CD773A501E078A060020D7EE /* NSMutableDictionary+TFKit.m in Sources */,
 				CD7739BC1E078A050020D7EE /* NSConstantString+TFEasyCoder.m in Sources */,
 				CD7739ED1E078A050020D7EE /* NSLengthFormatter+TFEasyCoder.m in Sources */,
 				CD773AD01E078A060020D7EE /* UIScreen+TFEasyCoder.m in Sources */,
@@ -2528,6 +2537,7 @@
 				CD773AA51E078A060020D7EE /* UILongPressGestureRecognizer+TFEasyCoder.m in Sources */,
 				CD773AAB1E078A060020D7EE /* UIMotionEffectGroup+TFEasyCoder.m in Sources */,
 				CD773A471E078A050020D7EE /* NSUserDefaults+TFEasyCoder.m in Sources */,
+				CD410FC81E6EAD1B0062012E /* NSDictionary+TFLogChinese.m in Sources */,
 				CD7739C91E078A050020D7EE /* NSDirectoryEnumerator+TFEasyCoder.m in Sources */,
 				CD7739B11E078A050020D7EE /* NSBundleResourceRequest+TFEasyCoder.m in Sources */,
 				CD773A151E078A050020D7EE /* NSPointerArray+TFEasyCoder.m in Sources */,
@@ -2541,6 +2551,7 @@
 				CD7739EF1E078A050020D7EE /* NSLocale+TFEasyCoder.m in Sources */,
 				CD773A9A1E078A060020D7EE /* UIImageView+TFEasyCoder.m in Sources */,
 				CD773ACD1E078A060020D7EE /* UIRegion+TFEasyCoder.m in Sources */,
+				CD410FCF1E6EAD1B0062012E /* UIActionSheet+TFKit.m in Sources */,
 				CD773A3D1E078A050020D7EE /* NSURLRequest+TFEasyCoder.m in Sources */,
 				CD7739981E078A050020D7EE /* CADisplayLink+TFEasyCoder.m in Sources */,
 				CD773A921E078A060020D7EE /* UIFocusUpdateContext+TFEasyCoder.m in Sources */,
@@ -2549,14 +2560,12 @@
 				CD7739C31E078A050020D7EE /* NSDateComponentsFormatter+TFEasyCoder.m in Sources */,
 				CD773AF01E078A060020D7EE /* UITextField+TFEasyCoder.m in Sources */,
 				CD7739F61E078A050020D7EE /* NSMetadataQueryResultGroup+TFEasyCoder.m in Sources */,
-				CD773A4C1E078A050020D7EE /* NSArray+TFKit.m in Sources */,
 				CD7739BA1E078A050020D7EE /* NSCondition+TFEasyCoder.m in Sources */,
 				CD773AB91E078A060020D7EE /* UIPinchGestureRecognizer+TFEasyCoder.m in Sources */,
 				CD773A201E078A050020D7EE /* NSRunLoop+TFEasyCoder.m in Sources */,
 				CD773A671E078A060020D7EE /* UIActivityViewController+TFEasyCoder.m in Sources */,
 				CD773A441E078A050020D7EE /* NSURLSessionTask+TFEasyCoder.m in Sources */,
 				CD7739E61E078A050020D7EE /* NSKeyedUnarchiver+TFEasyCoder.m in Sources */,
-				CD773A581E078A060020D7EE /* UIColor+TFKit.m in Sources */,
 				CD773A681E078A060020D7EE /* UIAlertAction+TFEasyCoder.m in Sources */,
 				CD773AA11E078A060020D7EE /* UILexicon+TFEasyCoder.m in Sources */,
 				CD773A061E078A050020D7EE /* NSNotificationCenter+TFEasyCoder.m in Sources */,
@@ -2568,7 +2577,6 @@
 				CD922DCF1DD1966900CABEFA /* MASConstraint.m in Sources */,
 				CD7739AD1E078A050020D7EE /* NSAssertionHandler+TFEasyCoder.m in Sources */,
 				CD773A881E078A060020D7EE /* UIDocumentMenuViewController+TFEasyCoder.m in Sources */,
-				CD773A551E078A060020D7EE /* UIActionSheet+TFKit.m in Sources */,
 				CD773A2E1E078A050020D7EE /* NSThread+TFEasyCoder.m in Sources */,
 				CD7739FD1E078A050020D7EE /* NSMutableIndexSet+TFEasyCoder.m in Sources */,
 				CD7739F51E078A050020D7EE /* NSMetadataQueryAttributeValueTuple+TFEasyCoder.m in Sources */,
@@ -2576,6 +2584,7 @@
 				CD7739A91E078A050020D7EE /* CATransformLayer+TFEasyCoder.m in Sources */,
 				CD773A891E078A060020D7EE /* UIDocumentPickerExtensionViewController+TFEasyCoder.m in Sources */,
 				CD773A9C1E078A060020D7EE /* UIInputViewController+TFEasyCoder.m in Sources */,
+				CD410FD31E6EAD1B0062012E /* UIImage+TFKit.m in Sources */,
 				CD773A2F1E078A050020D7EE /* NSTimer+TFEasyCoder.m in Sources */,
 				CDA6F0EE1DC33CEC001330D3 /* main.m in Sources */,
 				CD773AB51E078A060020D7EE /* UIPanGestureRecognizer+TFEasyCoder.m in Sources */,
@@ -2587,7 +2596,6 @@
 				CD773A021E078A050020D7EE /* NSMutableURLRequest+TFEasyCoder.m in Sources */,
 				CD773AA91E078A060020D7EE /* UIMenuItem+TFEasyCoder.m in Sources */,
 				CD773ABB1E078A060020D7EE /* UIPopoverController+TFEasyCoder.m in Sources */,
-				CD773A5B1E078A060020D7EE /* UIView+TFKit.m in Sources */,
 				CDCC52C21E0663CC00764CD3 /* Tmp2Object.m in Sources */,
 				CD922DD21DD1966900CABEFA /* MASViewAttribute.m in Sources */,
 				CD773A3B1E078A050020D7EE /* NSURLProtocol+TFEasyCoder.m in Sources */,

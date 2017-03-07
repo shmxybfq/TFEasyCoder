@@ -21,12 +21,25 @@
 @property (nonatomic,assign,readonly)CGPoint TF_CODE_PRE(screenOrigin);
 @property (nonatomic,assign,readonly)CGFloat TF_CODE_PRE(screenWidth);
 @property (nonatomic,assign,readonly)CGFloat TF_CODE_PRE(screenHeight);
-
 +(CGRect)TF_CODE_PRE(screenBounds);
 +(CGSize)TF_CODE_PRE(screenSize);
 +(CGPoint)TF_CODE_PRE(screenOrigin);
 +(CGFloat)TF_CODE_PRE(screenWidth);
 +(CGFloat)TF_CODE_PRE(screenHeight);
+
+/**
+ *  zsl-wdl
+ *  各种bar 的高度
+ */
+@property (nonatomic,assign,readonly)CGFloat TF_CODE_PRE(statusBarHeight);
+@property (nonatomic,assign,readonly)CGFloat TF_CODE_PRE(navigationBarHeight);
+@property (nonatomic,assign,readonly)CGFloat TF_CODE_PRE(tabBarHeight);
+@property (nonatomic,assign,readonly)CGFloat TF_CODE_PRE(navStatusBarHeight);
++(CGFloat)TF_CODE_PRE(statusBarHeight);
++(CGFloat)TF_CODE_PRE(navigationBarHeight);
++(CGFloat)TF_CODE_PRE(tabBarHeight);
++(CGFloat)TF_CODE_PRE(navStatusBarHeight);
+
 
 #pragma mark view尺寸操作 --
 /**
@@ -55,14 +68,16 @@
 @property (nonatomic,assign,readonly)CGFloat TF_CODE_PRE(center_abs_y);
 
 
+
+
 #pragma mark view 分割线操作 --
 /**
  *  四个默认的分割线,需要先调用xx_creatLineImageView0 方法
  */
-@property (nonatomic,strong)UIImageView *TF_CODE_PRE(lineImageView0);
-@property (nonatomic,strong)UIImageView *TF_CODE_PRE(lineImageView1);
-@property (nonatomic,strong)UIImageView *TF_CODE_PRE(lineImageView2);
-@property (nonatomic,strong)UIImageView *TF_CODE_PRE(lineImageView3);
+@property (nonatomic,strong,setter=set_lineImageView0:)UIImageView *TF_CODE_PRE(lineImageView0);
+@property (nonatomic,strong,setter=set_lineImageView1:)UIImageView *TF_CODE_PRE(lineImageView1);
+@property (nonatomic,strong,setter=set_lineImageView2:)UIImageView *TF_CODE_PRE(lineImageView2);
+@property (nonatomic,strong,setter=set_lineImageView3:)UIImageView *TF_CODE_PRE(lineImageView3);
 
 /**
  *  实例化默认提供的四条分割线,每个布尔值分别对应上面属性的每一条线
@@ -110,10 +125,10 @@
 
 
 #pragma mark view backgroundView 操作 --
-@property (nonatomic,strong)UIImageView *TF_CODE_PRE(backgroundView0);
-@property (nonatomic,strong)UIImageView *TF_CODE_PRE(backgroundView1);
-@property (nonatomic,strong)UIImageView *TF_CODE_PRE(backgroundView2);
-@property (nonatomic,strong)UIImageView *TF_CODE_PRE(backgroundView3);
+@property (nonatomic,strong,setter=set_backgroundView0:)UIImageView *TF_CODE_PRE(backgroundView0);
+@property (nonatomic,strong,setter=set_backgroundView1:)UIImageView *TF_CODE_PRE(backgroundView1);
+@property (nonatomic,strong,setter=set_backgroundView2:)UIImageView *TF_CODE_PRE(backgroundView2);
+@property (nonatomic,strong,setter=set_backgroundView3:)UIImageView *TF_CODE_PRE(backgroundView3);
 
 -(void)TF_CODE_PRE(creatBackgroundView0):(BOOL)backgroundView0
                          BackgroundView1:(BOOL)backgroundView1

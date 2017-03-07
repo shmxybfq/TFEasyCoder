@@ -11,12 +11,10 @@
 @implementation UIBarButtonItem (TFKit)
 
 
-+ (UIBarButtonItem *)itemWithImage:(NSString *)normalImage
-                   higlightedImage:(NSString *)higlightedImage
-                            target:(id)target
-                            action:(SEL)action{
-    
-    
++ (UIBarButtonItem *)TF_CODE_PRE(itemWithImage):(NSString *)normalImage
+                                higlightedImage:(NSString *)higlightedImage
+                                         target:(id)target
+                                         action:(SEL)action{
     UIImage *normal = [UIImage imageNamed:normalImage];
     UIImage *higlighted = [UIImage imageNamed:higlightedImage];
     
@@ -33,12 +31,12 @@
     return barbutton;
 }
 
-+ (UIBarButtonItem *)barButtonItemTitle:(NSString *)title
-                         withTitleColor:(UIColor *)titleColor
-                               withFont:(int)fontSize
-                             withTarget:(id)target
-                           withSelector:(SEL)selector
-                          withAlignMent:(NSTextAlignment)alignment
++ (UIBarButtonItem *)TF_CODE_PRE(barButtonItemTitle):(NSString *)title
+                                      withTitleColor:(UIColor *)titleColor
+                                            withFont:(int)fontSize
+                                          withTarget:(id)target
+                                        withSelector:(SEL)selector
+                                       withAlignMent:(NSTextAlignment)alignment
 {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.bounds = CGRectMake(0, 0, 100, 44);

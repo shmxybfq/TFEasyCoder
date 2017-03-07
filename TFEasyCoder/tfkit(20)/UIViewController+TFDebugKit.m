@@ -21,15 +21,16 @@
         Method swizzledMethod = class_getInstanceMethod(cls, swizzledSelector);
         method_exchangeImplementations(originalMethod, swizzledMethod);
     });
+    
 }
 
 -(void)tf_debug_viewDidAppear:(BOOL)animated{
     
-    if(TFDebug_VCDidAppearSubviewRandomColor)[self.view tf_setAllSubviewsBackgroundColorRandom:0.5];
-    if(TFDebug_VCDidAppearSubviewDisplayBorder)[self.view tf_setAllSubviewsBorderRed];
+    if(TFDebug_VCDidAppearSubviewRandomColor)[self.view TF_CODE_PRE(setAllSubviewsBackgroundColorRandom):0.5];
+    if(TFDebug_VCDidAppearSubviewDisplayBorder)[self.view TF_CODE_PRE(setAllSubviewsBorderRed)];
     if(TFDebug_VCDidAppearLogVCName)NSLog(@"当前控制器:%@",NSStringFromClass([self class]));
-    if(TFDebug_VCDidAppearLogSubview)NSLog(@"%@-subviews:%@",NSStringFromClass([self class]),[self.view tf_getAllSubviews]);
-    if(TFDebug_VCDidAppearLogSubviewTree)[self.view tf_logSubviews:^NSArray *{return @[@"frame",@"hidden",@"backgroundColor",@"userInteractionEnabled"];}];
+    if(TFDebug_VCDidAppearLogSubview)NSLog(@"%@-subviews:%@",NSStringFromClass([self class]),[self.view TF_CODE_PRE(getAllSubviews)]);
+    if(TFDebug_VCDidAppearLogSubviewTree)[self.view TF_CODE_PRE(logSubviews):^NSArray *{return @[@"frame",@"hidden",@"backgroundColor",@"userInteractionEnabled"];}];
     [self tf_debug_viewDidAppear:animated];
 }
 @end

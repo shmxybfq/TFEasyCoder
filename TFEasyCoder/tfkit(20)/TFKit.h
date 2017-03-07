@@ -22,6 +22,9 @@
 #import "NSString_TFKit.h"
 #import "NSString+TFKit.h"
 
+#import "NSObject_TFKit.h"
+#import "NSObject+TFKit.h"
+
 #import "UIColor_TFKit.h"
 #import "UIColor+TFKit.h"
 
@@ -43,4 +46,7 @@
 #import "NSDictionary+TFLogChinese.h"
 #import "NSArray+TFLogChinese.h"
 #import "UIViewController+TFDebugKit.h"
+
+#import "UIBarButtonItem+TFKit.h"
+#import "UINavigationBar+TFKit.h"
 #endif /* TFKit_h */

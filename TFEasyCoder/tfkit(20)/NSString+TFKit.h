@@ -87,7 +87,14 @@
 +(NSString *)TF_CODE_PRE(md5):(NSString *)string;
 @property (nonatomic,  copy,readonly)NSString *TF_CODE_PRE(md5);
 
-
-
+#pragma mark 判断字符串是否为空 --
+/**
+ *  判断输入框输入是否为空
+ *
+ *  @param str 输入框文字
+ *
+ *  @return 空 YES 有值 NO
+ */
+-(BOOL)TF_CODE_PRE(isInputEmpty);
 
 @end

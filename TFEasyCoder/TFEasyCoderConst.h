@@ -11,6 +11,8 @@
 #ifndef TFEasyCoderConst_h
 #define TFEasyCoderConst_h
 
+#import <objc/runtime.h>
+
 /**
  *  代码前缀
  *  @param code 代码

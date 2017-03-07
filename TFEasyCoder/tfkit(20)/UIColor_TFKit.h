@@ -9,6 +9,7 @@
 #ifndef UIColor_TFKit_h
 #define UIColor_TFKit_h
 
+#ifdef __OBJC__
 #import "TFEasyCoderConst.h"
 /**
  *  十六进制颜色,自定义透明度
@@ -36,14 +37,14 @@ static inline UIColor * TF_CODE_PRE(ColorHex)(int hex){
  *  @return UIColor
  */
 static inline UIColor * TF_CODE_PRE(ColorRGB)(float red,float green,float blue){
-    return  [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
+    return  [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:1.0];
 }
 /**
  *  RGB颜色,自定义透明度
  *  @return UIColor
  */
 static inline UIColor * TF_CODE_PRE(ColorRGBA)(float red,float green,float blue,float alpha){
-    return  [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
+    return  [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:alpha];
 }
 /**
  *  随机色,透明度默认1.0
@@ -67,5 +68,5 @@ static inline UIColor * TF_CODE_PRE(ColorRandomAlpha)(float alpha){
 }
 
 
-
+#endif
 #endif /* UIColor_TFKit_h */

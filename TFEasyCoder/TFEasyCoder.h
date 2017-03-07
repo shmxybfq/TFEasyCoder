@@ -24,5 +24,4 @@
 #import "FoundationHeader.h"
 
 
-
 #endif /* TFEasyCoder_h */

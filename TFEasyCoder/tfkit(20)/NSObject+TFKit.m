@@ -13,11 +13,23 @@
 @implementation NSObject (TFKit)
 
 /**
+ *  快速创建实例
+ */
++(instancetype)creatInstance{
+    return [[[self class]alloc]init];
+}
+/**
  *  系统版本号和app版本号,提供静态方法访问和属性访问
  */
 +(NSString *)TF_CODE_PRE(systemVersion){
     return [UIDevice currentDevice].systemVersion;
 }
++(BOOL)TF_CODE_PRE(systemVersionBigOrEqual):(CGFloat)version{
+    return ([[[UIDevice currentDevice] systemVersion] floatValue] >= version);
+}
+/**
+ *  app版本号,提供静态方法访问和属性访问
+ */
 -(NSString *)TF_CODE_PRE(systemVersion){
     return [UIDevice currentDevice].systemVersion;
 }
@@ -30,6 +42,71 @@
 }
 -(NSString *)TF_CODE_PRE(appVersion){
     return [NSObject TF_CODE_PRE(appVersion)];
+}
+
+
+/**
+ *  zsl-wdl
+ *  机型尺寸判断
+ */
++(BOOL)TF_CODE_PRE(isIphone6pSize){
+    return ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(1125, 2001), [[UIScreen mainScreen] currentMode].size) || CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size)) : NO);
+}
+-(BOOL)TF_CODE_PRE(isIphone6pSize){
+    return ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(1125, 2001), [[UIScreen mainScreen] currentMode].size) || CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size)) : NO);
+}
++(BOOL)TF_CODE_PRE(isIphone6Size){
+    return ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO);
+}
+-(BOOL)TF_CODE_PRE(isIphone6Size){
+    return ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO);
+}
++(BOOL)TF_CODE_PRE(isIphone5Size){
+    return ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO);
+}
+-(BOOL)TF_CODE_PRE(isIphone5Size){
+    return ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO);
+}
++(BOOL)TF_CODE_PRE(isIphone4Size){
+    return ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO);
+}
+-(BOOL)TF_CODE_PRE(isIphone4Size){
+    return ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO);
+}
+
+/**
+ *  zsl-wdl
+ *  常用单利对象
+ */
++(NSNotificationCenter *)TF_CODE_PRE(notificationCenter){
+    return [NSNotificationCenter defaultCenter];
+}
+-(NSNotificationCenter *)TF_CODE_PRE(notificationCenter){
+    return [NSNotificationCenter defaultCenter];
+}
++(UIWindow *)TF_CODE_PRE(keyWindow){
+    return [UIApplication sharedApplication].keyWindow;
+}
+-(UIWindow *)TF_CODE_PRE(keyWindow){
+    return [UIApplication sharedApplication].keyWindow;
+}
++(NSUserDefaults *)TF_CODE_PRE(userDefault){
+    return [NSUserDefaults standardUserDefaults];
+}
+-(NSUserDefaults *)TF_CODE_PRE(userDefault){
+    return [NSUserDefaults standardUserDefaults];
+}
++(UIApplication *)TF_CODE_PRE(application){
+    return [UIApplication sharedApplication];
+}
+-(UIApplication *)TF_CODE_PRE(application){
+    return [UIApplication sharedApplication];
+}
++(id)TF_CODE_PRE(appDelegate){
+    return [UIApplication sharedApplication].delegate;
+}
+-(id)TF_CODE_PRE(appDelegate){
+    return [UIApplication sharedApplication].delegate;
 }
 
 
@@ -130,7 +207,7 @@
     if ([platform isEqualToString:@"iPad6,4"])   return @"iPad Pro (9.7 inch)";
     if ([platform isEqualToString:@"iPad6,7"])   return @"iPad Pro (12.9 inch)";
     if ([platform isEqualToString:@"iPad6,8"])   return @"iPad Pro (12.9 inch)";
-
+    
     //appletv
     if ([platform isEqualToString:@"AppleTV2,1"])   return @"Apple TV 2";
     if ([platform isEqualToString:@"AppleTV3,1"])   return @"Apple TV 3";

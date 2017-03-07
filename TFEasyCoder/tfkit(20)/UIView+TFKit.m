@@ -69,6 +69,23 @@
 
 
 /**
+ *  zsl-wdl
+ *  各种bar 的高度
+ */
++(CGFloat)TF_CODE_PRE(statusBarHeight){return 20;}
+-(CGFloat)TF_CODE_PRE(statusBarHeight){return 20;}
+
++(CGFloat)TF_CODE_PRE(navigationBarHeight){return 44;}
+-(CGFloat)TF_CODE_PRE(navigationBarHeight){return 44;}
+
++(CGFloat)TF_CODE_PRE(tabBarHeight){return 49;}
+-(CGFloat)TF_CODE_PRE(tabBarHeight){return 49;}
+
++(CGFloat)TF_CODE_PRE(navStatusBarHeight){return 64;}
+-(CGFloat)TF_CODE_PRE(navStatusBarHeight){return 64;}
+
+
+/**
  *  view尺寸操作
  */
 -(CGPoint)TF_CODE_PRE(origin){return  self.frame.origin;}
@@ -200,6 +217,7 @@ static NSMutableDictionary *TF_CODE_PRE(creatLineImageViews);
     }
     return NO;
 }
+
 -(void)TF_CODE_PRE(creatLineImageView0):(BOOL)lineImageView0
                          LineImageView1:(BOOL)lineImageView1
                          LineImageView2:(BOOL)lineImageView2
@@ -243,6 +261,10 @@ static NSMutableDictionary *TF_CODE_PRE(creatLineImageViews);
         self.TF_CODE_PRE(lineImageView3) = nil;
     }
 }
+TF_SYNTHESIZE_CATEGORY_PROPERTY_RETAIN(TF_CODE_PRE(lineImageView0), set_lineImageView0);
+TF_SYNTHESIZE_CATEGORY_PROPERTY_RETAIN(TF_CODE_PRE(lineImageView1), set_lineImageView1);
+TF_SYNTHESIZE_CATEGORY_PROPERTY_RETAIN(TF_CODE_PRE(lineImageView2), set_lineImageView2);
+TF_SYNTHESIZE_CATEGORY_PROPERTY_RETAIN(TF_CODE_PRE(lineImageView3), set_lineImageView3);
 
 
 -(UIImageView *)TF_CODE_PRE(creatBackgroundView){
@@ -337,6 +359,10 @@ static NSMutableDictionary *TF_CODE_PRE(creatBackgroundViews);
         self.TF_CODE_PRE(backgroundView3) = nil;
     }
 }
+TF_SYNTHESIZE_CATEGORY_PROPERTY_RETAIN(TF_CODE_PRE(backgroundView0), set_backgroundView0);
+TF_SYNTHESIZE_CATEGORY_PROPERTY_RETAIN(TF_CODE_PRE(backgroundView1), set_backgroundView1);
+TF_SYNTHESIZE_CATEGORY_PROPERTY_RETAIN(TF_CODE_PRE(backgroundView2), set_backgroundView2);
+TF_SYNTHESIZE_CATEGORY_PROPERTY_RETAIN(TF_CODE_PRE(backgroundView3), set_backgroundView3);
 
 
 #pragma mark view 加密解密 --

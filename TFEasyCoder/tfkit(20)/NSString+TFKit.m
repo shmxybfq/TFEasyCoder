@@ -160,5 +160,29 @@
             ];
 }
 
+#pragma mark 判断字符串是否为空 --
+/**
+ *  判断输入框输入是否为空
+ *
+ *  @param str 输入框文字
+ *
+ *  @return 空 YES 有值 NO
+ */
+-(BOOL)TF_CODE_PRE(isInputEmpty)
+{
+    if([self isEqualToString:@""]){
+        return YES;
+    }else if (!self) {
+        return YES;
+    }else {
+        NSCharacterSet *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+        NSString *trimedString = [self stringByTrimmingCharactersInSet:set];
+        if ([trimedString length] == 0) {
+            return YES;
+        } else {
+            return NO;
+        }
+    }
+}
 
 @end
