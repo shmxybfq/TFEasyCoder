@@ -11,7 +11,6 @@
 #import <UIKit/UIKit.h>
 #import "TFEasyCoderConst.h"
 
-#import "ViewController.h"
 
 @implementation NSObject (TFExecute)
 
@@ -375,7 +374,7 @@ static inline NSString *firstCharUpper(NSString *string){
 +(void)tf_synthesizeAllCategoryPropertyForTarget:(id)target{
     
     unsigned int pCount = 0;
-    objc_property_t *properties = class_copyPropertyList([ViewController class], &pCount);
+    objc_property_t *properties = class_copyPropertyList([target class], &pCount);
     for (unsigned int i  =0; i < pCount; i++) {
         
         objc_property_t property = properties[i];

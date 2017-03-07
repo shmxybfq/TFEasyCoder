@@ -21,7 +21,6 @@
         Method swizzledMethod = class_getInstanceMethod(cls, swizzledSelector);
         method_exchangeImplementations(originalMethod, swizzledMethod);
     });
-    
 }
 
 -(void)tf_debug_viewDidAppear:(BOOL)animated{

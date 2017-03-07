@@ -12,7 +12,7 @@
 #import "TableviewCell.h"
 #import "TableviewHeader.h"
 #import "Tmp2Object.h"
-
+#import "Masonry.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong)UITableView *tableView;
@@ -35,11 +35,6 @@ TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
 - (void)viewDidLoad {
     [super viewDidLoad];
     kdeclare_weakself;
-
-
-    NSMutableArray *array = [NSMutableArray array];
-    self.set_ValueKey(array,@"dataSource");
-    
     /**
      *  创建自定义对象
      *
@@ -53,32 +48,8 @@ TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
         weakSelf.tableView.tableHeaderView = ins;
         ins.frame = CGRectMake(0, 0, Size6SNEW([UIScreen mainScreen].bounds.size.width), Size6SNEW(550));
     }];
-    
 
-    [UILabel easyCoder:^(UILabel *ins) {
-        ins
-        .set_text(@"haha")
-        .set_textAlignment(NSTextAlignmentLeft)
-        .set_font([UIFont systemFontOfSize:12]);
-    }];
     
-    
-    [UILabel easyCoder:^(UILabel *ins) {
-        ins
-        .set_text(@"haha")
-        .set_text(@"haha")
-        .set_text(@"haha")
-        .set_text(@"haha2")
-        .set_textAlignment(NSTextAlignmentLeft)
-        .set_text(@"haha")
-        .set_textAlignment(NSTextAlignmentLeft)
-        .set_text(@"haha")
-        .set_textAlignment(NSTextAlignmentLeft)
-        .set_text(@"haha5")
-        .set_textAlignment(NSTextAlignmentLeft)
-        .set_font([UIFont systemFontOfSize:12]);
-    }];
-
     
     /**
      *  快速操作已有对象 + 链式属性
