@@ -264,11 +264,11 @@ return _##__PROPERTY;}\
  */
 #define TFDebug_NSArrayLogChinese YES//调试时,打印NSArray是否将里面的中文转码至显示
 #define TFDebug_NSDictionaryLogChinese YES//调试时,打印NSDictionary是否将里面的中文转码至显示
-#define TFDebug_VCDidAppearSubviewRandomColor YES//调试时,在viewDidAppear中是否让view的子视图显示随机色
-#define TFDebug_VCDidAppearSubviewDisplayBorder YES//调试时,在viewDidAppear中是否让view的子视图显示边框
+#define TFDebug_VCDidAppearSubviewRandomColor NO//调试时,在viewDidAppear中是否让view的子视图显示随机色
+#define TFDebug_VCDidAppearSubviewDisplayBorder NO//调试时,在viewDidAppear中是否让view的子视图显示边框
 #define TFDebug_VCDidAppearLogVCName YES//调试时,在viewDidAppear中是否打印控制器名称
-#define TFDebug_VCDidAppearLogSubview YES//调试时,在viewDidAppear中是否打印view所有子视图
-#define TFDebug_VCDidAppearLogSubviewTree YES//调试时,在viewDidAppear中是否打印view视图树结构
+#define TFDebug_VCDidAppearLogSubview NO//调试时,在viewDidAppear中是否打印view所有子视图
+#define TFDebug_VCDidAppearLogSubviewTree NO//调试时,在viewDidAppear中是否打印view视图树结构
 
 #endif /* TFEasyCoderConst_h */
 
