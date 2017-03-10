@@ -13,8 +13,11 @@
 
 #import <objc/runtime.h>
 
+#define TFKitPre tf_
+
 /**
  *  代码前缀
+ *  修改下方的"tf_"以全局修改TFKit中所有方法的调用前缀
  *  @param code 代码
  *  @return
  */
@@ -85,12 +88,20 @@ objc_setAssociatedObject(self, @selector(GETTER), associate_value, OBJC_ASSOCIAT
 
 /**
  *  typedef void(^UIViewEasyCoderBlock) (UIView * ins)
+ *  修改下方的"ins"以全局修改TFEasyCoder中所有方法回调的变量名ins，例如下面的示例代码
+ *  [UIView easyCoder:^(UIView *ins) {
+ *
+ *  }];
  *  @param CLASS_NAME UIView
  *  @param CLASS_TYPE UIView *
  *  @return null
  */
 #define TF_EC_BLOCK(CLASS_NAME,CLASS_TYPE) typedef void(^CLASS_NAME##EasyCoderBlock) (CLASS_TYPE ins)
 /**
+ *  修改下方的"easyCoder"以全局修改TFEasyCoder中所有方法的调用方式，例如下面的示例代码
+ *  [UIView easyCoder:^(UIView *ins) {
+ *
+ *  }];
  *  +(UILabel *)easyCoder:(UILabelEasyCoderBlock)block;
  */
 #define TF_EC_MNAME easyCoder

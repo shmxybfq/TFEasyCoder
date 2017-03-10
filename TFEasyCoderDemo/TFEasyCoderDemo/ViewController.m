@@ -38,6 +38,9 @@ TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
     kdeclare_weakself;
     
   
+    [UIView easyCoder:^(UIView *ins) {
+        
+    }];
     /**
      *  创建自定义对象
      *
