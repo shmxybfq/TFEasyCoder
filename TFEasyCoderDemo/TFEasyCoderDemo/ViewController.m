@@ -36,11 +36,9 @@ TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
     [super viewDidLoad];
     [TFEasyCoderConfigue shareInstance].TFDebug_VCDidAppearSubviewRandomColor = YES;
     kdeclare_weakself;
+  
     
   
-    [UIView easyCoder:^(UIView *ins) {
-        
-    }];
     /**
      *  创建自定义对象
      *
