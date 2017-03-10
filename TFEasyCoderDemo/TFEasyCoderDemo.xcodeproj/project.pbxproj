@@ -28,6 +28,7 @@
 		CD410FD71E6EAD1B0062012E /* UIView+TFUIDevKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410FC01E6EAD1B0062012E /* UIView+TFUIDevKit.m */; };
 		CD410FD81E6EAD1B0062012E /* UIViewController+TFDebugKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410FC31E6EAD1B0062012E /* UIViewController+TFDebugKit.m */; };
 		CD410FD91E6EAD1B0062012E /* UIViewController+TFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD410FC51E6EAD1B0062012E /* UIViewController+TFKit.m */; };
+		CD4114EA1E724C380062012E /* TFEasyCoderConfigue.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4114E91E724C380062012E /* TFEasyCoderConfigue.m */; };
 		CD7739951E078A050020D7EE /* CAAnimation+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7736A81E078A040020D7EE /* CAAnimation+TFEasyCoder.m */; };
 		CD7739961E078A050020D7EE /* CAAnimationGroup+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7736AA1E078A040020D7EE /* CAAnimationGroup+TFEasyCoder.m */; };
 		CD7739971E078A050020D7EE /* CABasicAnimation+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7736AC1E078A040020D7EE /* CABasicAnimation+TFEasyCoder.m */; };
@@ -466,6 +467,8 @@
 		CD410FC31E6EAD1B0062012E /* UIViewController+TFDebugKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TFDebugKit.m"; sourceTree = "<group>"; };
 		CD410FC41E6EAD1B0062012E /* UIViewController+TFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TFKit.h"; sourceTree = "<group>"; };
 		CD410FC51E6EAD1B0062012E /* UIViewController+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TFKit.m"; sourceTree = "<group>"; };
+		CD4114E81E724C380062012E /* TFEasyCoderConfigue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFEasyCoderConfigue.h; sourceTree = "<group>"; };
+		CD4114E91E724C380062012E /* TFEasyCoderConfigue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFEasyCoderConfigue.m; sourceTree = "<group>"; };
 		CD7736A71E078A040020D7EE /* CAAnimation+TFEasyCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+TFEasyCoder.h"; sourceTree = "<group>"; };
 		CD7736A81E078A040020D7EE /* CAAnimation+TFEasyCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+TFEasyCoder.m"; sourceTree = "<group>"; };
 		CD7736A91E078A040020D7EE /* CAAnimationGroup+TFEasyCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimationGroup+TFEasyCoder.h"; sourceTree = "<group>"; };
@@ -1253,6 +1256,8 @@
 				CD1674051DC87BCF00969C21 /* TFEasyCoderConst.h */,
 				CD1674021DC87BCF00969C21 /* NSObject+TFExecute.h */,
 				CD1674031DC87BCF00969C21 /* NSObject+TFExecute.m */,
+				CD4114E81E724C380062012E /* TFEasyCoderConfigue.h */,
+				CD4114E91E724C380062012E /* TFEasyCoderConfigue.m */,
 				CD964FB01DFE917C005381E7 /* TFEasyCoder_CA.h */,
 				CD964FB11DFE917C005381E7 /* TFEasyCoder_CA.m */,
 				CD964FB31DFE953F005381E7 /* TFEasyCoder_UI.h */,
@@ -2532,6 +2537,7 @@
 				CD773A2B1E078A050020D7EE /* NSTextContainer+TFEasyCoder.m in Sources */,
 				CD7739BC1E078A050020D7EE /* NSConstantString+TFEasyCoder.m in Sources */,
 				CD7739ED1E078A050020D7EE /* NSLengthFormatter+TFEasyCoder.m in Sources */,
+				CD4114EA1E724C380062012E /* TFEasyCoderConfigue.m in Sources */,
 				CD773AD01E078A060020D7EE /* UIScreen+TFEasyCoder.m in Sources */,
 				CD773A0E1E078A050020D7EE /* NSOrderedSet+TFEasyCoder.m in Sources */,
 				CD773AA51E078A060020D7EE /* UILongPressGestureRecognizer+TFEasyCoder.m in Sources */,

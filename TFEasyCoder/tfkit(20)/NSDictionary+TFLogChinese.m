@@ -9,11 +9,13 @@
 #import "NSDictionary+TFLogChinese.h"
 #import <objc/runtime.h>
 #import "TFEasyCoderConst.h"
+#import "TFEasyCoderConfigue.h"
+#import "NSObject+TFKit.h"
 @implementation NSDictionary (TFLogChinese)
 
 
 +(void)load{
-    if (TFDebug_NSDictionaryLogChinese) {
+    if ([TFEasyCoderConfigue shareInstance].TFDebug_NSDictionaryLogChinese) {
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
             Class cls = [self class];

@@ -14,6 +14,7 @@
 
 #import "TFEasyCoderConst.h"
 #import "NSObject+TFExecute.h"
+#import "TFEasyCoderConfigue.h"
 
 #import "TFEasyCoder_CA.h"
 #import "TFEasyCoder_UI.h"

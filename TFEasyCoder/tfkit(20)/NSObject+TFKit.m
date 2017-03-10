@@ -6,7 +6,7 @@
 //  Copyright © 2016年 ztf. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+
 #import "NSObject+TFKit.h"
 #include <sys/types.h>
 #include <sys/sysctl.h>
@@ -17,6 +17,18 @@
  */
 +(instancetype)creatInstance{
     return [[[self class]alloc]init];
+}
+/**
+ *  快速创建实例
+ */
+static id _shareInstance;
++(instancetype)shareInstance{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _shareInstance = [[[self class] alloc]init];
+        
+    });
+    return _shareInstance;
 }
 /**
  *  系统版本号和app版本号,提供静态方法访问和属性访问

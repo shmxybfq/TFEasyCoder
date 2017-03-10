@@ -9,10 +9,13 @@
 #import "NSArray+TFLogChinese.h"
 #import <objc/runtime.h>
 #import "TFEasyCoderConst.h"
+#import "TFEasyCoderConfigue.h"
+#import "NSObject+TFKit.h"
 @implementation NSArray (TFLogChinese)
 
 +(void)load{
-    if (TFDebug_NSArrayLogChinese) {
+    
+    if ([TFEasyCoderConfigue shareInstance].TFDebug_NSArrayLogChinese) {
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
             Class cls = [self class];
