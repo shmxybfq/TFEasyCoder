@@ -8,11 +8,20 @@
 详细的说明请看我的简书:[OC快速开发工具集-TFEasyCoder](http://www.jianshu.com/p/4c276f5c338c)
 
 
+###使用(Usage)
+####cocoapod(不建议):
+```
+    pod 'TFEasyCoder', '~> 1.1.1'
+```
+
+####手动导入(建议)：
+请看我的简书:[OC快速开发工具集-TFEasyCoder](http://www.jianshu.com/p/4c276f5c338c)
 
 
 ##关于作者
 * GitHub:[shmxybfq](https://github.com/shmxybfq "shmxybfq's github")
 * SinaBlog:[守候ztf](http://blog.sina.com.cn/u/3481024997 "shmxybfq's sinablog")
+* 简书:[抱紧我的小鲤鱼](http://www.jianshu.com/u/8c1cc9143ec6)
 
 
 
