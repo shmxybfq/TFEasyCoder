@@ -9,12 +9,20 @@
 
 
 ###使用(Usage)
-####cocoapod(不建议):
+####cocoapod(如果在使用过程中不改源码的情况下建议使用):
 ```
-    pod 'TFEasyCoder', '~> 1.1.1'
+    pod 'TFEasyCoder', '~> 1.1.3'
+```
+导入框架:
+```
+#import <TFEasyCoder/TFEasyCoder.h>
 ```
 
-####手动导入(建议)：
+####手动导入(如果在使用过程中需要改源码的情况下建议使用)：
+导入框架:
+```
+#import "TFEasyCoder.h"
+```
 请看我的简书:[OC快速开发工具集-TFEasyCoder](http://www.jianshu.com/p/4c276f5c338c)
 
 
