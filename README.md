@@ -15,7 +15,7 @@
 ```
 #import <TFEasyCoder/TFEasyCoder.h>
 ```
-**手动导入(如果在使用过程中需要改源码的情况下建议使用)：**
+**手动导入(如果在使用过程中需要改源码的情况下建议使用)：**<br/>
 导入框架:
 ```
 #import "TFEasyCoder.h"
