@@ -8,8 +8,7 @@
 详细的说明请看我的简书:[OC快速开发工具集-TFEasyCoder](http://www.jianshu.com/p/4c276f5c338c)
 
 
-###使用(Usage)
-####cocoapod(如果在使用过程中不改源码的情况下建议使用):
+###使用(Usage)cocoapod(如果在使用过程中不改源码的情况下建议使用):
 ```
     pod 'TFEasyCoder', '~> 1.1.3'
 ```
