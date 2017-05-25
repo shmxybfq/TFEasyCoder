@@ -8,14 +8,22 @@
 
 #import "UIViewController+TFKit.h"
 #import <objc/runtime.h>
-#import "NSObject+TFExecute.h"
+
 
 
 @implementation UIViewController (TFKit)
 
-TF_SYNTHESIZE_CATEGORY_PROPERTY_BLOCK(cameraBackBlock, setCameraBackBlock,TFShowCameraCallBackBlock);
-TF_SYNTHESIZE_CATEGORY_PROPERTY_BLOCK(saveBackBlock, setSaveBackBlock,TFSaveToPhotosAlbumCallBackBlock);
+@dynamic cameraBackBlock;
+@dynamic saveBackBlock;
 
+TF_SYNTHESIZE_CATEGORY_PROPERTY(cameraBackBlock,
+                                setCameraBackBlock,
+                                OBJC_ASSOCIATION_COPY,
+                                TFShowCameraCallBackBlock);
+TF_SYNTHESIZE_CATEGORY_PROPERTY(saveBackBlock,
+                                setSaveBackBlock,
+                                OBJC_ASSOCIATION_COPY,
+                                TFSaveToPhotosAlbumCallBackBlock);
 
 /**
  *  显示照片/照相机选择照片
@@ -23,7 +31,7 @@ TF_SYNTHESIZE_CATEGORY_PROPERTY_BLOCK(saveBackBlock, setSaveBackBlock,TFSaveToPh
  *  @param sourceType
  *  @param backBlock
  */
--(void)TF_CODE_PRE(showCameraSourceType):(UIImagePickerControllerSourceType)sourceType backBlock:(TFShowCameraCallBackBlock)backBlock{
+-(void)TF_CODE_PRE(showCameraSourceType):(UIImagePickerControllerSourceType)sourceType allowsEditing:(BOOL)allowsEditing backBlock:(TFShowCameraCallBackBlock)backBlock{
     
     self.cameraBackBlock = backBlock;
     if ([UIImagePickerController isSourceTypeAvailable:sourceType]) {
@@ -31,7 +39,7 @@ TF_SYNTHESIZE_CATEGORY_PROPERTY_BLOCK(saveBackBlock, setSaveBackBlock,TFSaveToPh
         UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
         imagePickerController.sourceType = sourceType;
         imagePickerController.delegate = self;
-        imagePickerController.allowsEditing = NO;
+        imagePickerController.allowsEditing = allowsEditing;
         
         if (sourceType==UIImagePickerControllerSourceTypeCamera) {
             imagePickerController.showsCameraControls  = (sourceType==UIImagePickerControllerSourceTypeCamera);
@@ -40,26 +48,30 @@ TF_SYNTHESIZE_CATEGORY_PROPERTY_BLOCK(saveBackBlock, setSaveBackBlock,TFSaveToPh
     }else{
         if (self.cameraBackBlock) {
             self.cameraBackBlock(NO,nil,nil,nil);
+            [self dismissViewControllerAnimated:YES completion:^{}];
         }
     }
 }
 
--(void)TF_CODE_PRE(imageWriteToSavedPhotosAlbum):(UIImage *)image backBlock:(TFSaveToPhotosAlbumCallBackBlock)backBlock{    
+-(void)TF_CODE_PRE(imageWriteToSavedPhotosAlbum):(UIImage *)image backBlock:(TFSaveToPhotosAlbumCallBackBlock)backBlock{
     self.saveBackBlock = backBlock;
     UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
 }
 
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
-    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
     NSData *imageData = [info objectForKey:UIImagePickerControllerMediaMetadata];
     if (self.cameraBackBlock) {
         self.cameraBackBlock(YES,image,imageData,info);
-        [picker dismissViewControllerAnimated:YES completion:^{}];
     }
+    [picker dismissViewControllerAnimated:YES completion:^{}];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    if (self.cameraBackBlock) {
+        self.cameraBackBlock(NO,nil,nil,nil);
+    }
     [self dismissViewControllerAnimated:YES completion:^{}];
 }
 

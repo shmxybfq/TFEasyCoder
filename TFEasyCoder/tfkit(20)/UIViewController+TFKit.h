@@ -29,8 +29,8 @@ typedef void(^TFSaveToPhotosAlbumCallBackBlock)(UIImage *image,
  *  @param sourceType
  *  @param backBlock
  */
+-(void)TF_CODE_PRE(showCameraSourceType):(UIImagePickerControllerSourceType)sourceType allowsEditing:(BOOL)allowsEditing backBlock:(TFShowCameraCallBackBlock)backBlock;
 
--(void)TF_CODE_PRE(showCameraSourceType):(UIImagePickerControllerSourceType)sourceType backBlock:(TFShowCameraCallBackBlock)backBlock;
 /**
  *  保存图片到相册
  *
