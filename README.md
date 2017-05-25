@@ -7,7 +7,6 @@
 
 **详细的使用请看我的简书:[OC快速开发工具集-TFEasyCoder](http://www.jianshu.com/p/4c276f5c338c)**
 <br>
-**好用框架大家一块写才更有意义:TFEasyCoder共同开发群:546711612**
 
 **使用(Usage)cocoapod(如果在使用过程中不改源码的情况下建议使用):**
 ```
