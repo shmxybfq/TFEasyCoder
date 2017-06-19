@@ -11,20 +11,21 @@
 
 
 @implementation UIActionSheet (TFKit)
-@dynamic backBlock;
+
+TF_SYNTHESIZE_CATEGORY_PROPERTY(backBlock, setBackBlock, OBJC_ASSOCIATION_COPY, TFUIActionSheetBackBlock)
 
 +(UIActionSheet *_Nullable)TF_CODE_PRE(showWithTitle):(NSString *_Nullable)title
-                                               inView:(UIView   *_Nullable)inView
-                                    cancelButtonTitle:(NSString *_Nullable)cancle
-                               destructiveButtonTitle:(NSString *_Nullable)des
-                                    otherButtonTitles:(NSArray  *_Nullable)othter
-                                                block:(_Nullable TFUIActionSheetBackBlock)block{
+inView:(UIView   *_Nullable)inView
+cancelButtonTitle:(NSString *_Nullable)cancle
+destructiveButtonTitle:(NSString *_Nullable)des
+otherButtonTitles:(NSArray  *_Nullable)othter
+block:(_Nullable TFUIActionSheetBackBlock)block{
     
     int btCount = 0;
     UIActionSheet *sheet = [[UIActionSheet alloc]init];
     sheet.delegate = (id)self;
     sheet.title = title;
-    
+    sheet.backBlock = block;
     if (cancle) {
         sheet.cancelButtonIndex = btCount;
         [sheet addButtonWithTitle:cancle];
@@ -49,7 +50,6 @@
  */
 -(void)TF_CODE_PRE(showInView):(UIView *_Nullable)view block:(_Nullable TFUIActionSheetBackBlock)block{
     if (!view || !block)return;
-    [self tf_synthesizeAllCategoryPropertyForSelf];
     self.backBlock = block;
     self.delegate = self;
     [self showInView:view];

@@ -10,8 +10,8 @@
 #import "TFEasyCoderConst.h"
 #pragma clang diagnostic ignored "-Wdocumentation"
 typedef void(^TFUIActionSheetBackBlock) (UIActionSheet *_Nullable actionSheet,
-                                         NSInteger buttonIndex,
-                                         NSString *_Nullable buttonTitle);
+NSInteger buttonIndex,
+NSString *_Nullable buttonTitle);
 
 @interface UIActionSheet (TFKit)<UIActionSheetDelegate>
 
@@ -35,11 +35,11 @@ typedef void(^TFUIActionSheetBackBlock) (UIActionSheet *_Nullable actionSheet,
  *  @return
  */
 +(UIActionSheet *_Nullable)TF_CODE_PRE(showWithTitle):(NSString *_Nullable)title
-                                               inView:(UIView   *_Nullable)inView
-                                    cancelButtonTitle:(NSString *_Nullable)cancle
-                               destructiveButtonTitle:(NSString *_Nullable)des
-                                    otherButtonTitles:(NSArray  *_Nullable)othter
-                                                block:(_Nullable TFUIActionSheetBackBlock)block;
+inView:(UIView   *_Nullable)inView
+cancelButtonTitle:(NSString *_Nullable)cancle
+destructiveButtonTitle:(NSString *_Nullable)des
+otherButtonTitles:(NSArray  *_Nullable)othter
+block:(_Nullable TFUIActionSheetBackBlock)block;
 
 
 @end
