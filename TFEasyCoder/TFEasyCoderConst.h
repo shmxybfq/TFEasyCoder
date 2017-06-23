@@ -244,9 +244,9 @@ return _##__PROPERTY;}
 #define TF_LAZYLOAD_OBJC_CUS(__CLASS,__PROPERTY,__BLOCK)\
 TF_SYNTHESIZE(__PROPERTY);\
 -(__CLASS *)__PROPERTY{\
-if (!_##__PROPERTY)\
+if (!_##__PROPERTY){\
 _##__PROPERTY = [[__CLASS alloc]init];\
-__BLOCK(_##__PROPERTY);\
+__BLOCK(_##__PROPERTY);}\
 return _##__PROPERTY;}\
 
 
