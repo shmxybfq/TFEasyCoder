@@ -19,99 +19,12 @@
 @end
 
 
-
-
-
-@implementation UIAcceleration (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIAcceleration, UIAcceleration *);
-TF_EC_MINSTANCE_IMP(UIAcceleration, UIAcceleration *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIAcceleration);
-
-@end
-
-
-
-
-@implementation UIAccelerometer (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIAccelerometer, UIAccelerometer *);
-TF_EC_MINSTANCE_IMP(UIAccelerometer, UIAccelerometer *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIAccelerometer);
-
-@end
-
-
-
-
-@implementation UIAccessibilityCustomAction (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIAccessibilityCustomAction, UIAccessibilityCustomAction *);
-TF_EC_MINSTANCE_IMP(UIAccessibilityCustomAction, UIAccessibilityCustomAction *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIAccessibilityCustomAction);
-
-@end
-
-
-
-
-@implementation UIAccessibilityElement (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIAccessibilityElement, UIAccessibilityElement *);
-TF_EC_MINSTANCE_IMP(UIAccessibilityElement, UIAccessibilityElement *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIAccessibilityElement);
-
-@end
-
-
-
-
 @implementation UIActionSheet (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIActionSheet, UIActionSheet *);
-TF_EC_MINSTANCE_IMP(UIActionSheet, UIActionSheet *);
+tf_ec_mstatic_imp(UIActionSheet, UIActionSheet *);
+tf_ec_minstance_imp(UIActionSheet, UIActionSheet *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIActionSheet);
-
-@end
-
-
-
-
-@implementation UIActivity (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIActivity, UIActivity *);
-TF_EC_MINSTANCE_IMP(UIActivity, UIActivity *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIActivity);
-
-@end
-
-
-
-
-@implementation UIActivityIndicatorView (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIActivityIndicatorView, UIActivityIndicatorView *);
-TF_EC_MINSTANCE_IMP(UIActivityIndicatorView, UIActivityIndicatorView *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIActivityIndicatorView);
-
-@end
-
-
-
-
-@implementation UIActivityItemProvider (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIActivityItemProvider, UIActivityItemProvider *);
-TF_EC_MINSTANCE_IMP(UIActivityItemProvider, UIActivityItemProvider *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIActivityItemProvider);
+tf_ec_chain_valuekey_imp(UIActionSheet);
 
 @end
 
@@ -120,10 +33,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIActivityItemProvider);
 
 @implementation UIActivityViewController (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIActivityViewController, UIActivityViewController *);
-TF_EC_MINSTANCE_IMP(UIActivityViewController, UIActivityViewController *);
+tf_ec_mstatic_imp(UIActivityViewController, UIActivityViewController *);
+tf_ec_minstance_imp(UIActivityViewController, UIActivityViewController *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIActivityViewController);
+tf_ec_chain_valuekey_imp(UIActivityViewController);
 
 @end
 
@@ -132,10 +45,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIActivityViewController);
 
 @implementation UIAlertAction (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIAlertAction, UIAlertAction *);
-TF_EC_MINSTANCE_IMP(UIAlertAction, UIAlertAction *);
+tf_ec_mstatic_imp(UIAlertAction, UIAlertAction *);
+tf_ec_minstance_imp(UIAlertAction, UIAlertAction *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIAlertAction);
+tf_ec_chain_valuekey_imp(UIAlertAction);
 
 @end
 
@@ -144,10 +57,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIAlertAction);
 
 @implementation UIAlertController (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIAlertController, UIAlertController *);
-TF_EC_MINSTANCE_IMP(UIAlertController, UIAlertController *);
+tf_ec_mstatic_imp(UIAlertController, UIAlertController *);
+tf_ec_minstance_imp(UIAlertController, UIAlertController *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIAlertController);
+tf_ec_chain_valuekey_imp(UIAlertController);
 
 @end
 
@@ -156,94 +69,36 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIAlertController);
 
 @implementation UIAlertView (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIAlertView, UIAlertView *);
-TF_EC_MINSTANCE_IMP(UIAlertView, UIAlertView *);
+tf_ec_mstatic_imp(UIAlertView, UIAlertView *);
+tf_ec_minstance_imp(UIAlertView, UIAlertView *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIAlertView);
-
-@end
-
-
-
-
-@implementation UIApplication (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIApplication, UIApplication *);
-TF_EC_MINSTANCE_IMP(UIApplication, UIApplication *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIApplication);
+tf_ec_chain_valuekey_imp(UIAlertView);
 
 @end
-
-
-
-
-@implementation UIApplicationShortcutIcon (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIApplicationShortcutIcon, UIApplicationShortcutIcon *);
-TF_EC_MINSTANCE_IMP(UIApplicationShortcutIcon, UIApplicationShortcutIcon *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIApplicationShortcutIcon);
-
-@end
-
-
-
-
-@implementation UIApplicationShortcutItem (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIApplicationShortcutItem, UIApplicationShortcutItem *);
-TF_EC_MINSTANCE_IMP(UIApplicationShortcutItem, UIApplicationShortcutItem *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIApplicationShortcutItem);
-
-@end
-
-
-
-
-@implementation UIAttachmentBehavior (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIAttachmentBehavior, UIAttachmentBehavior *);
-TF_EC_MINSTANCE_IMP(UIAttachmentBehavior, UIAttachmentBehavior *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIAttachmentBehavior);
-
-@end
-
 
 
 
 @implementation UIBarButtonItem (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIBarButtonItem, UIBarButtonItem *);
-TF_EC_MINSTANCE_IMP(UIBarButtonItem, UIBarButtonItem *);
+tf_ec_mstatic_imp(UIBarButtonItem, UIBarButtonItem *);
+tf_ec_minstance_imp(UIBarButtonItem, UIBarButtonItem *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIBarButtonItem);
-
-@end
-
-
-
-
-@implementation UIBarButtonItemGroup (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIBarButtonItemGroup, UIBarButtonItemGroup *);
-TF_EC_MINSTANCE_IMP(UIBarButtonItemGroup, UIBarButtonItemGroup *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIBarButtonItemGroup);
+tf_ec_chain_valuekey_imp(UIBarButtonItem);
 
 @end
+
+
+
 
 
 
 
 @implementation UIBarItem (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIBarItem, UIBarItem *);
-TF_EC_MINSTANCE_IMP(UIBarItem, UIBarItem *);
+tf_ec_mstatic_imp(UIBarItem, UIBarItem *);
+tf_ec_minstance_imp(UIBarItem, UIBarItem *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIBarItem);
+tf_ec_chain_valuekey_imp(UIBarItem);
 
 @end
 
@@ -252,58 +107,38 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIBarItem);
 
 @implementation UIBezierPath (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIBezierPath, UIBezierPath *);
-TF_EC_MINSTANCE_IMP(UIBezierPath, UIBezierPath *);
+tf_ec_mstatic_imp(UIBezierPath, UIBezierPath *);
+tf_ec_minstance_imp(UIBezierPath, UIBezierPath *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIBezierPath);
-
-@end
-
-
-
-
-@implementation UIBlurEffect (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIBlurEffect, UIBlurEffect *);
-TF_EC_MINSTANCE_IMP(UIBlurEffect, UIBlurEffect *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIBlurEffect);
+tf_ec_chain_valuekey_imp(UIBezierPath);
 
 @end
+
 
 
 
 
 @implementation UIButton (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIButton, UIButton *);
-TF_EC_MINSTANCE_IMP(UIButton, UIButton *);
+tf_ec_mstatic_imp(UIButton, UIButton *);
+tf_ec_minstance_imp(UIButton, UIButton *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIButton);
-
-@end
-
-
-
-
-@implementation UICollectionReusableView (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UICollectionReusableView, UICollectionReusableView *);
-TF_EC_MINSTANCE_IMP(UICollectionReusableView, UICollectionReusableView *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UICollectionReusableView);
+tf_ec_chain_valuekey_imp(UIButton);
 
 @end
+
+
+
 
 
 
 
 @implementation UICollectionView (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UICollectionView, UICollectionView *);
-TF_EC_MINSTANCE_IMP(UICollectionView, UICollectionView *);
+tf_ec_mstatic_imp(UICollectionView, UICollectionView *);
+tf_ec_minstance_imp(UICollectionView, UICollectionView *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UICollectionView);
+tf_ec_chain_valuekey_imp(UICollectionView);
 
 @end
 
@@ -312,10 +147,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UICollectionView);
 
 @implementation UICollectionViewCell (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UICollectionViewCell, UICollectionViewCell *);
-TF_EC_MINSTANCE_IMP(UICollectionViewCell, UICollectionViewCell *);
+tf_ec_mstatic_imp(UICollectionViewCell, UICollectionViewCell *);
+tf_ec_minstance_imp(UICollectionViewCell, UICollectionViewCell *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UICollectionViewCell);
+tf_ec_chain_valuekey_imp(UICollectionViewCell);
 
 @end
 
@@ -324,10 +159,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UICollectionViewCell);
 
 @implementation UICollectionViewController (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UICollectionViewController, UICollectionViewController *);
-TF_EC_MINSTANCE_IMP(UICollectionViewController, UICollectionViewController *);
+tf_ec_mstatic_imp(UICollectionViewController, UICollectionViewController *);
+tf_ec_minstance_imp(UICollectionViewController, UICollectionViewController *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UICollectionViewController);
+tf_ec_chain_valuekey_imp(UICollectionViewController);
 
 @end
 
@@ -336,22 +171,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UICollectionViewController);
 
 @implementation UICollectionViewFlowLayout (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UICollectionViewFlowLayout, UICollectionViewFlowLayout *);
-TF_EC_MINSTANCE_IMP(UICollectionViewFlowLayout, UICollectionViewFlowLayout *);
+tf_ec_mstatic_imp(UICollectionViewFlowLayout, UICollectionViewFlowLayout *);
+tf_ec_minstance_imp(UICollectionViewFlowLayout, UICollectionViewFlowLayout *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UICollectionViewFlowLayout);
-
-@end
-
-
-
-
-@implementation UICollectionViewFocusUpdateContext (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UICollectionViewFocusUpdateContext, UICollectionViewFocusUpdateContext *);
-TF_EC_MINSTANCE_IMP(UICollectionViewFocusUpdateContext, UICollectionViewFocusUpdateContext *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UICollectionViewFocusUpdateContext);
+tf_ec_chain_valuekey_imp(UICollectionViewFlowLayout);
 
 @end
 
@@ -360,70 +183,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UICollectionViewFocusUpdateContext);
 
 @implementation UICollectionViewLayout (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UICollectionViewLayout, UICollectionViewLayout *);
-TF_EC_MINSTANCE_IMP(UICollectionViewLayout, UICollectionViewLayout *);
+tf_ec_mstatic_imp(UICollectionViewLayout, UICollectionViewLayout *);
+tf_ec_minstance_imp(UICollectionViewLayout, UICollectionViewLayout *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UICollectionViewLayout);
-
-@end
-
-
-
-
-@implementation UICollectionViewLayoutAttributes (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UICollectionViewLayoutAttributes, UICollectionViewLayoutAttributes *);
-TF_EC_MINSTANCE_IMP(UICollectionViewLayoutAttributes, UICollectionViewLayoutAttributes *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UICollectionViewLayoutAttributes);
-
-@end
-
-
-
-
-@implementation UICollectionViewLayoutInvalidationContext (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UICollectionViewLayoutInvalidationContext, UICollectionViewLayoutInvalidationContext *);
-TF_EC_MINSTANCE_IMP(UICollectionViewLayoutInvalidationContext, UICollectionViewLayoutInvalidationContext *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UICollectionViewLayoutInvalidationContext);
-
-@end
-
-
-
-
-@implementation UICollectionViewTransitionLayout (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UICollectionViewTransitionLayout, UICollectionViewTransitionLayout *);
-TF_EC_MINSTANCE_IMP(UICollectionViewTransitionLayout, UICollectionViewTransitionLayout *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UICollectionViewTransitionLayout);
-
-@end
-
-
-
-
-@implementation UICollectionViewUpdateItem (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UICollectionViewUpdateItem, UICollectionViewUpdateItem *);
-TF_EC_MINSTANCE_IMP(UICollectionViewUpdateItem, UICollectionViewUpdateItem *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UICollectionViewUpdateItem);
-
-@end
-
-
-
-
-@implementation UICollisionBehavior (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UICollisionBehavior, UICollisionBehavior *);
-TF_EC_MINSTANCE_IMP(UICollisionBehavior, UICollisionBehavior *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UICollisionBehavior);
+tf_ec_chain_valuekey_imp(UICollectionViewLayout);
 
 @end
 
@@ -432,10 +195,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UICollisionBehavior);
 
 @implementation UIColor (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIColor, UIColor *);
-TF_EC_MINSTANCE_IMP(UIColor, UIColor *);
+tf_ec_mstatic_imp(UIColor, UIColor *);
+tf_ec_minstance_imp(UIColor, UIColor *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIColor);
+tf_ec_chain_valuekey_imp(UIColor);
 
 @end
 
@@ -444,10 +207,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIColor);
 
 @implementation UIControl (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIControl, UIControl *);
-TF_EC_MINSTANCE_IMP(UIControl, UIControl *);
+tf_ec_mstatic_imp(UIControl, UIControl *);
+tf_ec_minstance_imp(UIControl, UIControl *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIControl);
+tf_ec_chain_valuekey_imp(UIControl);
 
 @end
 
@@ -456,10 +219,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIControl);
 
 @implementation UIDatePicker (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIDatePicker, UIDatePicker *);
-TF_EC_MINSTANCE_IMP(UIDatePicker, UIDatePicker *);
+tf_ec_mstatic_imp(UIDatePicker, UIDatePicker *);
+tf_ec_minstance_imp(UIDatePicker, UIDatePicker *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIDatePicker);
+tf_ec_chain_valuekey_imp(UIDatePicker);
 
 @end
 
@@ -468,226 +231,49 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIDatePicker);
 
 @implementation UIDevice (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIDevice, UIDevice *);
-TF_EC_MINSTANCE_IMP(UIDevice, UIDevice *);
+tf_ec_mstatic_imp(UIDevice, UIDevice *);
+tf_ec_minstance_imp(UIDevice, UIDevice *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIDevice);
-
-@end
-
-
-
-
-@implementation UIDictationPhrase (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIDictationPhrase, UIDictationPhrase *);
-TF_EC_MINSTANCE_IMP(UIDictationPhrase, UIDictationPhrase *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIDictationPhrase);
+tf_ec_chain_valuekey_imp(UIDevice);
 
 @end
 
-
-
-
-@implementation UIDocument (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIDocument, UIDocument *);
-TF_EC_MINSTANCE_IMP(UIDocument, UIDocument *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIDocument);
-
-@end
-
-
-
-
-@implementation UIDocumentInteractionController (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIDocumentInteractionController, UIDocumentInteractionController *);
-TF_EC_MINSTANCE_IMP(UIDocumentInteractionController, UIDocumentInteractionController *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIDocumentInteractionController);
-
-@end
-
-
-
-
-@implementation UIDocumentMenuViewController (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIDocumentMenuViewController, UIDocumentMenuViewController *);
-TF_EC_MINSTANCE_IMP(UIDocumentMenuViewController, UIDocumentMenuViewController *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIDocumentMenuViewController);
-
-@end
-
-
-
-
-@implementation UIDocumentPickerExtensionViewController (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIDocumentPickerExtensionViewController, UIDocumentPickerExtensionViewController *);
-TF_EC_MINSTANCE_IMP(UIDocumentPickerExtensionViewController, UIDocumentPickerExtensionViewController *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIDocumentPickerExtensionViewController);
-
-@end
-
-
-
-
-@implementation UIDynamicAnimator (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIDynamicAnimator, UIDynamicAnimator *);
-TF_EC_MINSTANCE_IMP(UIDynamicAnimator, UIDynamicAnimator *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIDynamicAnimator);
-
-@end
-
-
-
-
-@implementation UIDynamicBehavior (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIDynamicBehavior, UIDynamicBehavior *);
-TF_EC_MINSTANCE_IMP(UIDynamicBehavior, UIDynamicBehavior *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIDynamicBehavior);
-
-@end
-
-
-
-
-@implementation UIDynamicItemBehavior (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIDynamicItemBehavior, UIDynamicItemBehavior *);
-TF_EC_MINSTANCE_IMP(UIDynamicItemBehavior, UIDynamicItemBehavior *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIDynamicItemBehavior);
-
-@end
-
-
-
-
-@implementation UIDynamicItemGroup (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIDynamicItemGroup, UIDynamicItemGroup *);
-TF_EC_MINSTANCE_IMP(UIDynamicItemGroup, UIDynamicItemGroup *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIDynamicItemGroup);
-
-@end
 
 
 
 
 @implementation UIEvent (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIEvent, UIEvent *);
-TF_EC_MINSTANCE_IMP(UIEvent, UIEvent *);
+tf_ec_mstatic_imp(UIEvent, UIEvent *);
+tf_ec_minstance_imp(UIEvent, UIEvent *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIEvent);
-
-@end
-
-
-
-
-@implementation UIFieldBehavior (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIFieldBehavior, UIFieldBehavior *);
-TF_EC_MINSTANCE_IMP(UIFieldBehavior, UIFieldBehavior *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIFieldBehavior);
+tf_ec_chain_valuekey_imp(UIEvent);
 
 @end
-
-
-
-
-@implementation UIFocusAnimationCoordinator (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIFocusAnimationCoordinator, UIFocusAnimationCoordinator *);
-TF_EC_MINSTANCE_IMP(UIFocusAnimationCoordinator, UIFocusAnimationCoordinator *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIFocusAnimationCoordinator);
-
-@end
-
-
-
-
-@implementation UIFocusGuide (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIFocusGuide, UIFocusGuide *);
-TF_EC_MINSTANCE_IMP(UIFocusGuide, UIFocusGuide *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIFocusGuide);
-
-@end
-
-
-
-
-@implementation UIFocusUpdateContext (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIFocusUpdateContext, UIFocusUpdateContext *);
-TF_EC_MINSTANCE_IMP(UIFocusUpdateContext, UIFocusUpdateContext *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIFocusUpdateContext);
-
-@end
-
 
 
 
 @implementation UIFont (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIFont, UIFont *);
-TF_EC_MINSTANCE_IMP(UIFont, UIFont *);
+tf_ec_mstatic_imp(UIFont, UIFont *);
+tf_ec_minstance_imp(UIFont, UIFont *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIFont);
-
-@end
-
-
-
-
-@implementation UIFontDescriptor (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIFontDescriptor, UIFontDescriptor *);
-TF_EC_MINSTANCE_IMP(UIFontDescriptor, UIFontDescriptor *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIFontDescriptor);
+tf_ec_chain_valuekey_imp(UIFont);
 
 @end
+
+
+
 
 
 
 
 @implementation UIGestureRecognizer (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIGestureRecognizer, UIGestureRecognizer *);
-TF_EC_MINSTANCE_IMP(UIGestureRecognizer, UIGestureRecognizer *);
+tf_ec_mstatic_imp(UIGestureRecognizer, UIGestureRecognizer *);
+tf_ec_minstance_imp(UIGestureRecognizer, UIGestureRecognizer *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIGestureRecognizer);
-
-@end
-
-
-
-
-@implementation UIGravityBehavior (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIGravityBehavior, UIGravityBehavior *);
-TF_EC_MINSTANCE_IMP(UIGravityBehavior, UIGravityBehavior *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIGravityBehavior);
+tf_ec_chain_valuekey_imp(UIGestureRecognizer);
 
 @end
 
@@ -696,34 +282,24 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIGravityBehavior);
 
 @implementation UIImage (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIImage, UIImage *);
-TF_EC_MINSTANCE_IMP(UIImage, UIImage *);
+tf_ec_mstatic_imp(UIImage, UIImage *);
+tf_ec_minstance_imp(UIImage, UIImage *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIImage);
-
-@end
-
-
-
-
-@implementation UIImageAsset (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIImageAsset, UIImageAsset *);
-TF_EC_MINSTANCE_IMP(UIImageAsset, UIImageAsset *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIImageAsset);
+tf_ec_chain_valuekey_imp(UIImage);
 
 @end
+
+
 
 
 
 
 @implementation UIImagePickerController (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIImagePickerController, UIImagePickerController *);
-TF_EC_MINSTANCE_IMP(UIImagePickerController, UIImagePickerController *);
+tf_ec_mstatic_imp(UIImagePickerController, UIImagePickerController *);
+tf_ec_minstance_imp(UIImagePickerController, UIImagePickerController *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIImagePickerController);
+tf_ec_chain_valuekey_imp(UIImagePickerController);
 
 @end
 
@@ -732,130 +308,23 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIImagePickerController);
 
 @implementation UIImageView (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIImageView, UIImageView *);
-TF_EC_MINSTANCE_IMP(UIImageView, UIImageView *);
+tf_ec_mstatic_imp(UIImageView, UIImageView *);
+tf_ec_minstance_imp(UIImageView, UIImageView *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIImageView);
-
-@end
-
-
-
-
-@implementation UIInputView (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIInputView, UIInputView *);
-TF_EC_MINSTANCE_IMP(UIInputView, UIInputView *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIInputView);
+tf_ec_chain_valuekey_imp(UIImageView);
 
 @end
 
-
-
-
-@implementation UIInputViewController (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIInputViewController, UIInputViewController *);
-TF_EC_MINSTANCE_IMP(UIInputViewController, UIInputViewController *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIInputViewController);
-
-@end
-
-
-
-
-@implementation UIInterpolatingMotionEffect (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIInterpolatingMotionEffect, UIInterpolatingMotionEffect *);
-TF_EC_MINSTANCE_IMP(UIInterpolatingMotionEffect, UIInterpolatingMotionEffect *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIInterpolatingMotionEffect);
-
-@end
-
-
-
-
-@implementation UIKeyCommand (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIKeyCommand, UIKeyCommand *);
-TF_EC_MINSTANCE_IMP(UIKeyCommand, UIKeyCommand *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIKeyCommand);
-
-@end
 
 
 
 
 @implementation UILabel (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UILabel, UILabel *);
-TF_EC_MINSTANCE_IMP(UILabel, UILabel *);
+tf_ec_mstatic_imp(UILabel, UILabel *);
+tf_ec_minstance_imp(UILabel, UILabel *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UILabel);
-
-@end
-
-
-
-
-@implementation UILayoutGuide (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UILayoutGuide, UILayoutGuide *);
-TF_EC_MINSTANCE_IMP(UILayoutGuide, UILayoutGuide *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UILayoutGuide);
-
-@end
-
-
-
-
-@implementation UILexicon (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UILexicon, UILexicon *);
-TF_EC_MINSTANCE_IMP(UILexicon, UILexicon *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UILexicon);
-
-@end
-
-
-
-
-@implementation UILexiconEntry (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UILexiconEntry, UILexiconEntry *);
-TF_EC_MINSTANCE_IMP(UILexiconEntry, UILexiconEntry *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UILexiconEntry);
-
-@end
-
-
-
-
-@implementation UILocalizedIndexedCollation (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UILocalizedIndexedCollation, UILocalizedIndexedCollation *);
-TF_EC_MINSTANCE_IMP(UILocalizedIndexedCollation, UILocalizedIndexedCollation *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UILocalizedIndexedCollation);
-
-@end
-
-
-
-
-@implementation UILocalNotification (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UILocalNotification, UILocalNotification *);
-TF_EC_MINSTANCE_IMP(UILocalNotification, UILocalNotification *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UILocalNotification);
+tf_ec_chain_valuekey_imp(UILabel);
 
 @end
 
@@ -864,46 +333,23 @@ TF_EC_CHAIN_VALUEKYE_IMP(UILocalNotification);
 
 @implementation UILongPressGestureRecognizer (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UILongPressGestureRecognizer, UILongPressGestureRecognizer *);
-TF_EC_MINSTANCE_IMP(UILongPressGestureRecognizer, UILongPressGestureRecognizer *);
+tf_ec_mstatic_imp(UILongPressGestureRecognizer, UILongPressGestureRecognizer *);
+tf_ec_minstance_imp(UILongPressGestureRecognizer, UILongPressGestureRecognizer *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UILongPressGestureRecognizer);
-
-@end
-
-
-
-
-@implementation UIManagedDocument (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIManagedDocument, UIManagedDocument *);
-TF_EC_MINSTANCE_IMP(UIManagedDocument, UIManagedDocument *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIManagedDocument);
+tf_ec_chain_valuekey_imp(UILongPressGestureRecognizer);
 
 @end
 
-
-
-
-@implementation UIMarkupTextPrintFormatter (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIMarkupTextPrintFormatter, UIMarkupTextPrintFormatter *);
-TF_EC_MINSTANCE_IMP(UIMarkupTextPrintFormatter, UIMarkupTextPrintFormatter *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIMarkupTextPrintFormatter);
-
-@end
 
 
 
 
 @implementation UIMenuController (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIMenuController, UIMenuController *);
-TF_EC_MINSTANCE_IMP(UIMenuController, UIMenuController *);
+tf_ec_mstatic_imp(UIMenuController, UIMenuController *);
+tf_ec_minstance_imp(UIMenuController, UIMenuController *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIMenuController);
+tf_ec_chain_valuekey_imp(UIMenuController);
 
 @end
 
@@ -912,82 +358,24 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIMenuController);
 
 @implementation UIMenuItem (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIMenuItem, UIMenuItem *);
-TF_EC_MINSTANCE_IMP(UIMenuItem, UIMenuItem *);
+tf_ec_mstatic_imp(UIMenuItem, UIMenuItem *);
+tf_ec_minstance_imp(UIMenuItem, UIMenuItem *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIMenuItem);
-
-@end
-
-
-
-
-@implementation UIMotionEffect (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIMotionEffect, UIMotionEffect *);
-TF_EC_MINSTANCE_IMP(UIMotionEffect, UIMotionEffect *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIMotionEffect);
+tf_ec_chain_valuekey_imp(UIMenuItem);
 
 @end
 
 
-
-
-@implementation UIMotionEffectGroup (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIMotionEffectGroup, UIMotionEffectGroup *);
-TF_EC_MINSTANCE_IMP(UIMotionEffectGroup, UIMotionEffectGroup *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIMotionEffectGroup);
-
-@end
-
-
-
-
-@implementation UIMutableApplicationShortcutItem (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIMutableApplicationShortcutItem, UIMutableApplicationShortcutItem *);
-TF_EC_MINSTANCE_IMP(UIMutableApplicationShortcutItem, UIMutableApplicationShortcutItem *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIMutableApplicationShortcutItem);
-
-@end
-
-
-
-
-@implementation UIMutableUserNotificationAction (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIMutableUserNotificationAction, UIMutableUserNotificationAction *);
-TF_EC_MINSTANCE_IMP(UIMutableUserNotificationAction, UIMutableUserNotificationAction *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIMutableUserNotificationAction);
-
-@end
-
-
-
-
-@implementation UIMutableUserNotificationCategory (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIMutableUserNotificationCategory, UIMutableUserNotificationCategory *);
-TF_EC_MINSTANCE_IMP(UIMutableUserNotificationCategory, UIMutableUserNotificationCategory *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIMutableUserNotificationCategory);
-
-@end
 
 
 
 
 @implementation UINavigationBar (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UINavigationBar, UINavigationBar *);
-TF_EC_MINSTANCE_IMP(UINavigationBar, UINavigationBar *);
+tf_ec_mstatic_imp(UINavigationBar, UINavigationBar *);
+tf_ec_minstance_imp(UINavigationBar, UINavigationBar *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UINavigationBar);
+tf_ec_chain_valuekey_imp(UINavigationBar);
 
 @end
 
@@ -996,10 +384,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UINavigationBar);
 
 @implementation UINavigationController (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UINavigationController, UINavigationController *);
-TF_EC_MINSTANCE_IMP(UINavigationController, UINavigationController *);
+tf_ec_mstatic_imp(UINavigationController, UINavigationController *);
+tf_ec_minstance_imp(UINavigationController, UINavigationController *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UINavigationController);
+tf_ec_chain_valuekey_imp(UINavigationController);
 
 @end
 
@@ -1008,10 +396,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UINavigationController);
 
 @implementation UINavigationItem (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UINavigationItem, UINavigationItem *);
-TF_EC_MINSTANCE_IMP(UINavigationItem, UINavigationItem *);
+tf_ec_mstatic_imp(UINavigationItem, UINavigationItem *);
+tf_ec_minstance_imp(UINavigationItem, UINavigationItem *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UINavigationItem);
+tf_ec_chain_valuekey_imp(UINavigationItem);
 
 @end
 
@@ -1020,10 +408,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UINavigationItem);
 
 @implementation UINib (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UINib, UINib *);
-TF_EC_MINSTANCE_IMP(UINib, UINib *);
+tf_ec_mstatic_imp(UINib, UINib *);
+tf_ec_minstance_imp(UINib, UINib *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UINib);
+tf_ec_chain_valuekey_imp(UINib);
 
 @end
 
@@ -1032,10 +420,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UINib);
 
 @implementation UIPageControl (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIPageControl, UIPageControl *);
-TF_EC_MINSTANCE_IMP(UIPageControl, UIPageControl *);
+tf_ec_mstatic_imp(UIPageControl, UIPageControl *);
+tf_ec_minstance_imp(UIPageControl, UIPageControl *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIPageControl);
+tf_ec_chain_valuekey_imp(UIPageControl);
 
 @end
 
@@ -1044,10 +432,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIPageControl);
 
 @implementation UIPageViewController (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIPageViewController, UIPageViewController *);
-TF_EC_MINSTANCE_IMP(UIPageViewController, UIPageViewController *);
+tf_ec_mstatic_imp(UIPageViewController, UIPageViewController *);
+tf_ec_minstance_imp(UIPageViewController, UIPageViewController *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIPageViewController);
+tf_ec_chain_valuekey_imp(UIPageViewController);
 
 @end
 
@@ -1056,34 +444,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIPageViewController);
 
 @implementation UIPanGestureRecognizer (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIPanGestureRecognizer, UIPanGestureRecognizer *);
-TF_EC_MINSTANCE_IMP(UIPanGestureRecognizer, UIPanGestureRecognizer *);
+tf_ec_mstatic_imp(UIPanGestureRecognizer, UIPanGestureRecognizer *);
+tf_ec_minstance_imp(UIPanGestureRecognizer, UIPanGestureRecognizer *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIPanGestureRecognizer);
-
-@end
-
-
-
-
-@implementation UIPasteboard (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIPasteboard, UIPasteboard *);
-TF_EC_MINSTANCE_IMP(UIPasteboard, UIPasteboard *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIPasteboard);
-
-@end
-
-
-
-
-@implementation UIPercentDrivenInteractiveTransition (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIPercentDrivenInteractiveTransition, UIPercentDrivenInteractiveTransition *);
-TF_EC_MINSTANCE_IMP(UIPercentDrivenInteractiveTransition, UIPercentDrivenInteractiveTransition *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIPercentDrivenInteractiveTransition);
+tf_ec_chain_valuekey_imp(UIPanGestureRecognizer);
 
 @end
 
@@ -1092,10 +456,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIPercentDrivenInteractiveTransition);
 
 @implementation UIPickerView (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIPickerView, UIPickerView *);
-TF_EC_MINSTANCE_IMP(UIPickerView, UIPickerView *);
+tf_ec_mstatic_imp(UIPickerView, UIPickerView *);
+tf_ec_minstance_imp(UIPickerView, UIPickerView *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIPickerView);
+tf_ec_chain_valuekey_imp(UIPickerView);
 
 @end
 
@@ -1104,22 +468,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIPickerView);
 
 @implementation UIPinchGestureRecognizer (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIPinchGestureRecognizer, UIPinchGestureRecognizer *);
-TF_EC_MINSTANCE_IMP(UIPinchGestureRecognizer, UIPinchGestureRecognizer *);
+tf_ec_mstatic_imp(UIPinchGestureRecognizer, UIPinchGestureRecognizer *);
+tf_ec_minstance_imp(UIPinchGestureRecognizer, UIPinchGestureRecognizer *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIPinchGestureRecognizer);
-
-@end
-
-
-
-
-@implementation UIPopoverBackgroundView (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIPopoverBackgroundView, UIPopoverBackgroundView *);
-TF_EC_MINSTANCE_IMP(UIPopoverBackgroundView, UIPopoverBackgroundView *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIPopoverBackgroundView);
+tf_ec_chain_valuekey_imp(UIPinchGestureRecognizer);
 
 @end
 
@@ -1128,22 +480,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIPopoverBackgroundView);
 
 @implementation UIPopoverController (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIPopoverController, UIPopoverController *);
-TF_EC_MINSTANCE_IMP(UIPopoverController, UIPopoverController *);
+tf_ec_mstatic_imp(UIPopoverController, UIPopoverController *);
+tf_ec_minstance_imp(UIPopoverController, UIPopoverController *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIPopoverController);
-
-@end
-
-
-
-
-@implementation UIPopoverPresentationController (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIPopoverPresentationController, UIPopoverPresentationController *);
-TF_EC_MINSTANCE_IMP(UIPopoverPresentationController, UIPopoverPresentationController *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIPopoverPresentationController);
+tf_ec_chain_valuekey_imp(UIPopoverController);
 
 @end
 
@@ -1152,142 +492,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIPopoverPresentationController);
 
 @implementation UIPresentationController (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIPresentationController, UIPresentationController *);
-TF_EC_MINSTANCE_IMP(UIPresentationController, UIPresentationController *);
+tf_ec_mstatic_imp(UIPresentationController, UIPresentationController *);
+tf_ec_minstance_imp(UIPresentationController, UIPresentationController *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIPresentationController);
-
-@end
-
-
-
-
-@implementation UIPress (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIPress, UIPress *);
-TF_EC_MINSTANCE_IMP(UIPress, UIPress *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIPress);
-
-@end
-
-
-
-
-@implementation UIPressesEvent (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIPressesEvent, UIPressesEvent *);
-TF_EC_MINSTANCE_IMP(UIPressesEvent, UIPressesEvent *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIPressesEvent);
-
-@end
-
-
-
-
-@implementation UIPreviewAction (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIPreviewAction, UIPreviewAction *);
-TF_EC_MINSTANCE_IMP(UIPreviewAction, UIPreviewAction *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIPreviewAction);
-
-@end
-
-
-
-
-@implementation UIPreviewActionGroup (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIPreviewActionGroup, UIPreviewActionGroup *);
-TF_EC_MINSTANCE_IMP(UIPreviewActionGroup, UIPreviewActionGroup *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIPreviewActionGroup);
-
-@end
-
-
-
-
-@implementation UIPrinter (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIPrinter, UIPrinter *);
-TF_EC_MINSTANCE_IMP(UIPrinter, UIPrinter *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIPrinter);
-
-@end
-
-
-
-
-@implementation UIPrinterPickerController (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIPrinterPickerController, UIPrinterPickerController *);
-TF_EC_MINSTANCE_IMP(UIPrinterPickerController, UIPrinterPickerController *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIPrinterPickerController);
-
-@end
-
-
-
-
-@implementation UIPrintFormatter (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIPrintFormatter, UIPrintFormatter *);
-TF_EC_MINSTANCE_IMP(UIPrintFormatter, UIPrintFormatter *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIPrintFormatter);
-
-@end
-
-
-
-
-@implementation UIPrintInfo (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIPrintInfo, UIPrintInfo *);
-TF_EC_MINSTANCE_IMP(UIPrintInfo, UIPrintInfo *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIPrintInfo);
-
-@end
-
-
-
-
-@implementation UIPrintInteractionController (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIPrintInteractionController, UIPrintInteractionController *);
-TF_EC_MINSTANCE_IMP(UIPrintInteractionController, UIPrintInteractionController *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIPrintInteractionController);
-
-@end
-
-
-
-
-@implementation UIPrintPageRenderer (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIPrintPageRenderer, UIPrintPageRenderer *);
-TF_EC_MINSTANCE_IMP(UIPrintPageRenderer, UIPrintPageRenderer *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIPrintPageRenderer);
-
-@end
-
-
-
-
-@implementation UIPrintPaper (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIPrintPaper, UIPrintPaper *);
-TF_EC_MINSTANCE_IMP(UIPrintPaper, UIPrintPaper *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIPrintPaper);
+tf_ec_chain_valuekey_imp(UIPresentationController);
 
 @end
 
@@ -1296,34 +504,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIPrintPaper);
 
 @implementation UIProgressView (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIProgressView, UIProgressView *);
-TF_EC_MINSTANCE_IMP(UIProgressView, UIProgressView *);
+tf_ec_mstatic_imp(UIProgressView, UIProgressView *);
+tf_ec_minstance_imp(UIProgressView, UIProgressView *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIProgressView);
-
-@end
-
-
-
-
-@implementation UIPushBehavior (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIPushBehavior, UIPushBehavior *);
-TF_EC_MINSTANCE_IMP(UIPushBehavior, UIPushBehavior *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIPushBehavior);
-
-@end
-
-
-
-
-@implementation UIReferenceLibraryViewController (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIReferenceLibraryViewController, UIReferenceLibraryViewController *);
-TF_EC_MINSTANCE_IMP(UIReferenceLibraryViewController, UIReferenceLibraryViewController *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIReferenceLibraryViewController);
+tf_ec_chain_valuekey_imp(UIProgressView);
 
 @end
 
@@ -1332,94 +516,40 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIReferenceLibraryViewController);
 
 @implementation UIRefreshControl (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIRefreshControl, UIRefreshControl *);
-TF_EC_MINSTANCE_IMP(UIRefreshControl, UIRefreshControl *);
+tf_ec_mstatic_imp(UIRefreshControl, UIRefreshControl *);
+tf_ec_minstance_imp(UIRefreshControl, UIRefreshControl *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIRefreshControl);
-
-@end
-
-
-
-
-@implementation UIRegion (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIRegion, UIRegion *);
-TF_EC_MINSTANCE_IMP(UIRegion, UIRegion *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIRegion);
+tf_ec_chain_valuekey_imp(UIRefreshControl);
 
 @end
 
 
 
 
-@implementation UIResponder (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIResponder, UIResponder *);
-TF_EC_MINSTANCE_IMP(UIResponder, UIResponder *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIResponder);
-
-@end
-
-
-
-
-@implementation UIRotationGestureRecognizer (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIRotationGestureRecognizer, UIRotationGestureRecognizer *);
-TF_EC_MINSTANCE_IMP(UIRotationGestureRecognizer, UIRotationGestureRecognizer *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIRotationGestureRecognizer);
-
-@end
 
 
 
 
 @implementation UIScreen (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIScreen, UIScreen *);
-TF_EC_MINSTANCE_IMP(UIScreen, UIScreen *);
+tf_ec_mstatic_imp(UIScreen, UIScreen *);
+tf_ec_minstance_imp(UIScreen, UIScreen *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIScreen);
-
-@end
-
-
-
-
-@implementation UIScreenEdgePanGestureRecognizer (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIScreenEdgePanGestureRecognizer, UIScreenEdgePanGestureRecognizer *);
-TF_EC_MINSTANCE_IMP(UIScreenEdgePanGestureRecognizer, UIScreenEdgePanGestureRecognizer *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIScreenEdgePanGestureRecognizer);
+tf_ec_chain_valuekey_imp(UIScreen);
 
 @end
 
 
-
-
-@implementation UIScreenMode (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIScreenMode, UIScreenMode *);
-TF_EC_MINSTANCE_IMP(UIScreenMode, UIScreenMode *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIScreenMode);
-
-@end
 
 
 
 
 @implementation UIScrollView (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIScrollView, UIScrollView *);
-TF_EC_MINSTANCE_IMP(UIScrollView, UIScrollView *);
+tf_ec_mstatic_imp(UIScrollView, UIScrollView *);
+tf_ec_minstance_imp(UIScrollView, UIScrollView *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIScrollView);
+tf_ec_chain_valuekey_imp(UIScrollView);
 
 @end
 
@@ -1428,190 +558,79 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIScrollView);
 
 @implementation UISearchBar (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UISearchBar, UISearchBar *);
-TF_EC_MINSTANCE_IMP(UISearchBar, UISearchBar *);
+tf_ec_mstatic_imp(UISearchBar, UISearchBar *);
+tf_ec_minstance_imp(UISearchBar, UISearchBar *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UISearchBar);
-
-@end
-
-
-
-
-@implementation UISearchContainerViewController (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UISearchContainerViewController, UISearchContainerViewController *);
-TF_EC_MINSTANCE_IMP(UISearchContainerViewController, UISearchContainerViewController *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UISearchContainerViewController);
+tf_ec_chain_valuekey_imp(UISearchBar);
 
 @end
+
+
 
 
 
 
 @implementation UISearchController (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UISearchController, UISearchController *);
-TF_EC_MINSTANCE_IMP(UISearchController, UISearchController *);
+tf_ec_mstatic_imp(UISearchController, UISearchController *);
+tf_ec_minstance_imp(UISearchController, UISearchController *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UISearchController);
-
-@end
-
-
-
-
-@implementation UISearchDisplayController (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UISearchDisplayController, UISearchDisplayController *);
-TF_EC_MINSTANCE_IMP(UISearchDisplayController, UISearchDisplayController *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UISearchDisplayController);
+tf_ec_chain_valuekey_imp(UISearchController);
 
 @end
+
+
 
 
 
 
 @implementation UISegmentedControl (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UISegmentedControl, UISegmentedControl *);
-TF_EC_MINSTANCE_IMP(UISegmentedControl, UISegmentedControl *);
+tf_ec_mstatic_imp(UISegmentedControl, UISegmentedControl *);
+tf_ec_minstance_imp(UISegmentedControl, UISegmentedControl *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UISegmentedControl);
-
-@end
-
-
-
-
-@implementation UISimpleTextPrintFormatter (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UISimpleTextPrintFormatter, UISimpleTextPrintFormatter *);
-TF_EC_MINSTANCE_IMP(UISimpleTextPrintFormatter, UISimpleTextPrintFormatter *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UISimpleTextPrintFormatter);
+tf_ec_chain_valuekey_imp(UISegmentedControl);
 
 @end
+
 
 
 
 
 @implementation UISlider (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UISlider, UISlider *);
-TF_EC_MINSTANCE_IMP(UISlider, UISlider *);
+tf_ec_mstatic_imp(UISlider, UISlider *);
+tf_ec_minstance_imp(UISlider, UISlider *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UISlider);
-
-@end
-
-
-
-
-@implementation UISnapBehavior (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UISnapBehavior, UISnapBehavior *);
-TF_EC_MINSTANCE_IMP(UISnapBehavior, UISnapBehavior *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UISnapBehavior);
+tf_ec_chain_valuekey_imp(UISlider);
 
 @end
 
-
-
-
-@implementation UISplitViewController (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UISplitViewController, UISplitViewController *);
-TF_EC_MINSTANCE_IMP(UISplitViewController, UISplitViewController *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UISplitViewController);
-
-@end
-
-
-
-
-@implementation UIStackView (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIStackView, UIStackView *);
-TF_EC_MINSTANCE_IMP(UIStackView, UIStackView *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIStackView);
-
-@end
-
-
-
-
-@implementation UIStepper (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIStepper, UIStepper *);
-TF_EC_MINSTANCE_IMP(UIStepper, UIStepper *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIStepper);
-
-@end
 
 
 
 
 @implementation UIStoryboard (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIStoryboard, UIStoryboard *);
-TF_EC_MINSTANCE_IMP(UIStoryboard, UIStoryboard *);
+tf_ec_mstatic_imp(UIStoryboard, UIStoryboard *);
+tf_ec_minstance_imp(UIStoryboard, UIStoryboard *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIStoryboard);
-
-@end
-
-
-
-
-@implementation UIStoryboardPopoverSegue (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIStoryboardPopoverSegue, UIStoryboardPopoverSegue *);
-TF_EC_MINSTANCE_IMP(UIStoryboardPopoverSegue, UIStoryboardPopoverSegue *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIStoryboardPopoverSegue);
+tf_ec_chain_valuekey_imp(UIStoryboard);
 
 @end
 
 
 
-
-@implementation UIStoryboardSegue (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIStoryboardSegue, UIStoryboardSegue *);
-TF_EC_MINSTANCE_IMP(UIStoryboardSegue, UIStoryboardSegue *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIStoryboardSegue);
-
-@end
-
-
-
-
-@implementation UIStoryboardUnwindSegueSource (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIStoryboardUnwindSegueSource, UIStoryboardUnwindSegueSource *);
-TF_EC_MINSTANCE_IMP(UIStoryboardUnwindSegueSource, UIStoryboardUnwindSegueSource *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIStoryboardUnwindSegueSource);
-
-@end
 
 
 
 
 @implementation UISwipeGestureRecognizer (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UISwipeGestureRecognizer, UISwipeGestureRecognizer *);
-TF_EC_MINSTANCE_IMP(UISwipeGestureRecognizer, UISwipeGestureRecognizer *);
+tf_ec_mstatic_imp(UISwipeGestureRecognizer, UISwipeGestureRecognizer *);
+tf_ec_minstance_imp(UISwipeGestureRecognizer, UISwipeGestureRecognizer *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UISwipeGestureRecognizer);
+tf_ec_chain_valuekey_imp(UISwipeGestureRecognizer);
 
 @end
 
@@ -1620,10 +639,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UISwipeGestureRecognizer);
 
 @implementation UISwitch (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UISwitch, UISwitch *);
-TF_EC_MINSTANCE_IMP(UISwitch, UISwitch *);
+tf_ec_mstatic_imp(UISwitch, UISwitch *);
+tf_ec_minstance_imp(UISwitch, UISwitch *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UISwitch);
+tf_ec_chain_valuekey_imp(UISwitch);
 
 @end
 
@@ -1632,10 +651,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UISwitch);
 
 @implementation UITabBar (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UITabBar, UITabBar *);
-TF_EC_MINSTANCE_IMP(UITabBar, UITabBar *);
+tf_ec_mstatic_imp(UITabBar, UITabBar *);
+tf_ec_minstance_imp(UITabBar, UITabBar *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UITabBar);
+tf_ec_chain_valuekey_imp(UITabBar);
 
 @end
 
@@ -1644,10 +663,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UITabBar);
 
 @implementation UITabBarController (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UITabBarController, UITabBarController *);
-TF_EC_MINSTANCE_IMP(UITabBarController, UITabBarController *);
+tf_ec_mstatic_imp(UITabBarController, UITabBarController *);
+tf_ec_minstance_imp(UITabBarController, UITabBarController *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UITabBarController);
+tf_ec_chain_valuekey_imp(UITabBarController);
 
 @end
 
@@ -1656,10 +675,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UITabBarController);
 
 @implementation UITabBarItem (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UITabBarItem, UITabBarItem *);
-TF_EC_MINSTANCE_IMP(UITabBarItem, UITabBarItem *);
+tf_ec_mstatic_imp(UITabBarItem, UITabBarItem *);
+tf_ec_minstance_imp(UITabBarItem, UITabBarItem *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UITabBarItem);
+tf_ec_chain_valuekey_imp(UITabBarItem);
 
 @end
 
@@ -1668,10 +687,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UITabBarItem);
 
 @implementation UITableView (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UITableView, UITableView *);
-TF_EC_MINSTANCE_IMP(UITableView, UITableView *);
+tf_ec_mstatic_imp(UITableView, UITableView *);
+tf_ec_minstance_imp(UITableView, UITableView *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UITableView);
+tf_ec_chain_valuekey_imp(UITableView);
 
 @end
 
@@ -1680,10 +699,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UITableView);
 
 @implementation UITableViewCell (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UITableViewCell, UITableViewCell *);
-TF_EC_MINSTANCE_IMP(UITableViewCell, UITableViewCell *);
+tf_ec_mstatic_imp(UITableViewCell, UITableViewCell *);
+tf_ec_minstance_imp(UITableViewCell, UITableViewCell *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UITableViewCell);
+tf_ec_chain_valuekey_imp(UITableViewCell);
 
 @end
 
@@ -1692,166 +711,64 @@ TF_EC_CHAIN_VALUEKYE_IMP(UITableViewCell);
 
 @implementation UITableViewController (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UITableViewController, UITableViewController *);
-TF_EC_MINSTANCE_IMP(UITableViewController, UITableViewController *);
+tf_ec_mstatic_imp(UITableViewController, UITableViewController *);
+tf_ec_minstance_imp(UITableViewController, UITableViewController *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UITableViewController);
-
-@end
-
-
-
-
-@implementation UITableViewFocusUpdateContext (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UITableViewFocusUpdateContext, UITableViewFocusUpdateContext *);
-TF_EC_MINSTANCE_IMP(UITableViewFocusUpdateContext, UITableViewFocusUpdateContext *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UITableViewFocusUpdateContext);
+tf_ec_chain_valuekey_imp(UITableViewController);
 
 @end
+
 
 
 
 
 @implementation UITableViewHeaderFooterView (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UITableViewHeaderFooterView, UITableViewHeaderFooterView *);
-TF_EC_MINSTANCE_IMP(UITableViewHeaderFooterView, UITableViewHeaderFooterView *);
+tf_ec_mstatic_imp(UITableViewHeaderFooterView, UITableViewHeaderFooterView *);
+tf_ec_minstance_imp(UITableViewHeaderFooterView, UITableViewHeaderFooterView *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UITableViewHeaderFooterView);
-
-@end
-
-
-
-
-@implementation UITableViewRowAction (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UITableViewRowAction, UITableViewRowAction *);
-TF_EC_MINSTANCE_IMP(UITableViewRowAction, UITableViewRowAction *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UITableViewRowAction);
+tf_ec_chain_valuekey_imp(UITableViewHeaderFooterView);
 
 @end
+
+
 
 
 
 
 @implementation UITapGestureRecognizer (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UITapGestureRecognizer, UITapGestureRecognizer *);
-TF_EC_MINSTANCE_IMP(UITapGestureRecognizer, UITapGestureRecognizer *);
+tf_ec_mstatic_imp(UITapGestureRecognizer, UITapGestureRecognizer *);
+tf_ec_minstance_imp(UITapGestureRecognizer, UITapGestureRecognizer *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UITapGestureRecognizer);
-
-@end
-
-
-
-
-@implementation UITextChecker (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UITextChecker, UITextChecker *);
-TF_EC_MINSTANCE_IMP(UITextChecker, UITextChecker *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UITextChecker);
+tf_ec_chain_valuekey_imp(UITapGestureRecognizer);
 
 @end
+
+
 
 
 
 
 @implementation UITextField (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UITextField, UITextField *);
-TF_EC_MINSTANCE_IMP(UITextField, UITextField *);
+tf_ec_mstatic_imp(UITextField, UITextField *);
+tf_ec_minstance_imp(UITextField, UITextField *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UITextField);
-
-@end
-
-
-
-
-@implementation UITextInputAssistantItem (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UITextInputAssistantItem, UITextInputAssistantItem *);
-TF_EC_MINSTANCE_IMP(UITextInputAssistantItem, UITextInputAssistantItem *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UITextInputAssistantItem);
+tf_ec_chain_valuekey_imp(UITextField);
 
 @end
 
-
-
-
-@implementation UITextInputMode (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UITextInputMode, UITextInputMode *);
-TF_EC_MINSTANCE_IMP(UITextInputMode, UITextInputMode *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UITextInputMode);
-
-@end
-
-
-
-
-@implementation UITextInputStringTokenizer (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UITextInputStringTokenizer, UITextInputStringTokenizer *);
-TF_EC_MINSTANCE_IMP(UITextInputStringTokenizer, UITextInputStringTokenizer *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UITextInputStringTokenizer);
-
-@end
-
-
-
-
-@implementation UITextPosition (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UITextPosition, UITextPosition *);
-TF_EC_MINSTANCE_IMP(UITextPosition, UITextPosition *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UITextPosition);
-
-@end
-
-
-
-
-@implementation UITextRange (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UITextRange, UITextRange *);
-TF_EC_MINSTANCE_IMP(UITextRange, UITextRange *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UITextRange);
-
-@end
-
-
-
-
-@implementation UITextSelectionRect (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UITextSelectionRect, UITextSelectionRect *);
-TF_EC_MINSTANCE_IMP(UITextSelectionRect, UITextSelectionRect *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UITextSelectionRect);
-
-@end
 
 
 
 
 @implementation UITextView (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UITextView, UITextView *);
-TF_EC_MINSTANCE_IMP(UITextView, UITextView *);
+tf_ec_mstatic_imp(UITextView, UITextView *);
+tf_ec_minstance_imp(UITextView, UITextView *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UITextView);
+tf_ec_chain_valuekey_imp(UITextView);
 
 @end
 
@@ -1860,10 +777,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UITextView);
 
 @implementation UIToolbar (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIToolbar, UIToolbar *);
-TF_EC_MINSTANCE_IMP(UIToolbar, UIToolbar *);
+tf_ec_mstatic_imp(UIToolbar, UIToolbar *);
+tf_ec_minstance_imp(UIToolbar, UIToolbar *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIToolbar);
+tf_ec_chain_valuekey_imp(UIToolbar);
 
 @end
 
@@ -1872,94 +789,24 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIToolbar);
 
 @implementation UITouch (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UITouch, UITouch *);
-TF_EC_MINSTANCE_IMP(UITouch, UITouch *);
+tf_ec_mstatic_imp(UITouch, UITouch *);
+tf_ec_minstance_imp(UITouch, UITouch *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UITouch);
-
-@end
-
-
-
-
-@implementation UITraitCollection (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UITraitCollection, UITraitCollection *);
-TF_EC_MINSTANCE_IMP(UITraitCollection, UITraitCollection *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UITraitCollection);
+tf_ec_chain_valuekey_imp(UITouch);
 
 @end
 
 
-
-
-@implementation UIUserNotificationAction (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIUserNotificationAction, UIUserNotificationAction *);
-TF_EC_MINSTANCE_IMP(UIUserNotificationAction, UIUserNotificationAction *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIUserNotificationAction);
-
-@end
-
-
-
-
-@implementation UIUserNotificationCategory (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIUserNotificationCategory, UIUserNotificationCategory *);
-TF_EC_MINSTANCE_IMP(UIUserNotificationCategory, UIUserNotificationCategory *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIUserNotificationCategory);
-
-@end
-
-
-
-
-@implementation UIUserNotificationSettings (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIUserNotificationSettings, UIUserNotificationSettings *);
-TF_EC_MINSTANCE_IMP(UIUserNotificationSettings, UIUserNotificationSettings *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIUserNotificationSettings);
-
-@end
-
-
-
-
-@implementation UIVibrancyEffect (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIVibrancyEffect, UIVibrancyEffect *);
-TF_EC_MINSTANCE_IMP(UIVibrancyEffect, UIVibrancyEffect *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIVibrancyEffect);
-
-@end
-
-
-
-
-@implementation UIVideoEditorController (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIVideoEditorController, UIVideoEditorController *);
-TF_EC_MINSTANCE_IMP(UIVideoEditorController, UIVideoEditorController *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIVideoEditorController);
-
-@end
 
 
 
 
 @implementation UIView (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIView, UIView *);
-TF_EC_MINSTANCE_IMP(UIView, UIView *);
+tf_ec_mstatic_imp(UIView, UIView *);
+tf_ec_minstance_imp(UIView, UIView *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIView);
+tf_ec_chain_valuekey_imp(UIView);
 
 @end
 
@@ -1968,46 +815,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIView);
 
 @implementation UIViewController (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIViewController, UIViewController *);
-TF_EC_MINSTANCE_IMP(UIViewController, UIViewController *);
+tf_ec_mstatic_imp(UIViewController, UIViewController *);
+tf_ec_minstance_imp(UIViewController, UIViewController *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIViewController);
-
-@end
-
-
-
-
-@implementation UIViewPrintFormatter (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIViewPrintFormatter, UIViewPrintFormatter *);
-TF_EC_MINSTANCE_IMP(UIViewPrintFormatter, UIViewPrintFormatter *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIViewPrintFormatter);
-
-@end
-
-
-
-
-@implementation UIVisualEffect (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIVisualEffect, UIVisualEffect *);
-TF_EC_MINSTANCE_IMP(UIVisualEffect, UIVisualEffect *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIVisualEffect);
-
-@end
-
-
-
-
-@implementation UIVisualEffectView (TFEasyCoder_UI)
-
-TF_EC_MSTATIC_IMP(UIVisualEffectView, UIVisualEffectView *);
-TF_EC_MINSTANCE_IMP(UIVisualEffectView, UIVisualEffectView *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(UIVisualEffectView);
+tf_ec_chain_valuekey_imp(UIViewController);
 
 @end
 
@@ -2016,10 +827,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIVisualEffectView);
 
 @implementation UIWebView (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIWebView, UIWebView *);
-TF_EC_MINSTANCE_IMP(UIWebView, UIWebView *);
+tf_ec_mstatic_imp(UIWebView, UIWebView *);
+tf_ec_minstance_imp(UIWebView, UIWebView *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIWebView);
+tf_ec_chain_valuekey_imp(UIWebView);
 
 @end
 
@@ -2028,10 +839,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(UIWebView);
 
 @implementation UIWindow (TFEasyCoder_UI)
 
-TF_EC_MSTATIC_IMP(UIWindow, UIWindow *);
-TF_EC_MINSTANCE_IMP(UIWindow, UIWindow *);
+tf_ec_mstatic_imp(UIWindow, UIWindow *);
+tf_ec_minstance_imp(UIWindow, UIWindow *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(UIWindow);
+tf_ec_chain_valuekey_imp(UIWindow);
 
 @end
 

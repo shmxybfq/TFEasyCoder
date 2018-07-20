@@ -16,17 +16,18 @@
  */
 -(instancetype)init{
     if (self = [super init]) {
+#ifdef DEBUG
         /**
          * 调试工具配置
          * 调试时,打印NSArray是否将里面的中文转码至显示
          */
-        self.TFDebug_NSArrayLogChinese = YES;
+        self.TFDebug_NSArrayLogChinese = NO;
         /**
          * 调试工具配置
          * 调试时,打印NSDictionary是否将里面的中文转码至显示
          */
         
-        self.TFDebug_NSDictionaryLogChinese = YES;
+        self.TFDebug_NSDictionaryLogChinese = NO;
         /**
          * 调试工具配置
          * 调试时,在viewDidAppear中是否让view的子视图显示随机色
@@ -52,6 +53,8 @@
          * 调试时,在viewDidAppear中是否打印view视图树结构
          */
         self.TFDebug_VCDidAppearLogSubviewTree = NO;
+        
+#endif
     }
     return self;
 }

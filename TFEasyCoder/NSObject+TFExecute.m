@@ -32,7 +32,7 @@
 
 -(instancetype)easyCoderCustem:(ClassEasyCoderBlock)block{
     if (block) {
-        TF_WEAK_OBJ(self, weakSelf);
+        tf_weak_obj(self, weakSelf);
         block(weakSelf);
     }
     return self;
@@ -57,7 +57,7 @@
                                     withTarget:[cls alloc]
                                withParamsArray:param];
     else ins =[[cls alloc]init];
-    TF_WEAK_OBJ(ins, weakIns);
+    tf_weak_obj(ins, weakIns);
     if (block)
         block(weakIns);
     return weakIns;
@@ -384,7 +384,7 @@ static inline NSString *firstCharUpper(NSString *string){
             NSString *getter = nil;
             NSString *setter = nil;
             NSString *property_name = [NSString stringWithUTF8String:property_getName(property)];
-            NSLog(@"TTTTTTTT;:%@",property_name);
+            TFLog(@"TTTTTTTT;:%@",property_name);
             //T@"NSString",&,N,Gwahahaname,Swahahaname:,V_name
             NSString *att_str = [NSString stringWithUTF8String:pAttributes];
             NSArray  *att_arr = [att_str componentsSeparatedByString:@","];
@@ -410,7 +410,7 @@ static inline NSString *firstCharUpper(NSString *string){
             if (!class_getInstanceMethod([target class], NSSelectorFromString(getter))) {
                 BOOL added = class_addMethod([target class], NSSelectorFromString(getter), (IMP)propertyGet, "@@:");
                 NSAssert(added, @"add getter method '%@' failed!",getter);
-                if (added) {NSLog(@"add getter method '%@' success!",getter);}
+                if (added) {TFLog(@"add getter method '%@' success!",getter);}
             }
             //添加 setter 方法
             if (!class_getInstanceMethod([target class], NSSelectorFromString(setter))) {
@@ -420,7 +420,7 @@ static inline NSString *firstCharUpper(NSString *string){
                 if (!readonly_arr.count) {
                     BOOL added = class_addMethod([target class], NSSelectorFromString(setter), (IMP)propertySet, "v@:@");
                     NSAssert(added, @"add setter method '%@' failed!",setter);
-                    if (added) {NSLog(@"add setter method '%@' success!",setter);}
+                    if (added) {TFLog(@"add setter method '%@' success!",setter);}
                 }
             }
         }

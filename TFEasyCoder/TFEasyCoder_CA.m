@@ -19,10 +19,10 @@
 
 @implementation CAAnimation (TFEasyCoder_CA)
 
-TF_EC_MSTATIC_IMP(CAAnimation, CAAnimation *);
-TF_EC_MINSTANCE_IMP(CAAnimation, CAAnimation *);
+tf_ec_mstatic_imp(CAAnimation, CAAnimation *);
+tf_ec_minstance_imp(CAAnimation, CAAnimation *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(CAAnimation);
+tf_ec_chain_valuekey_imp(CAAnimation);
 
 @end
 
@@ -31,10 +31,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(CAAnimation);
 
 @implementation CAAnimationGroup (TFEasyCoder_CA)
 
-TF_EC_MSTATIC_IMP(CAAnimationGroup, CAAnimationGroup *);
-TF_EC_MINSTANCE_IMP(CAAnimationGroup, CAAnimationGroup *);
+tf_ec_mstatic_imp(CAAnimationGroup, CAAnimationGroup *);
+tf_ec_minstance_imp(CAAnimationGroup, CAAnimationGroup *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(CAAnimationGroup);
+tf_ec_chain_valuekey_imp(CAAnimationGroup);
 
 @end
 
@@ -43,10 +43,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(CAAnimationGroup);
 
 @implementation CABasicAnimation (TFEasyCoder_CA)
 
-TF_EC_MSTATIC_IMP(CABasicAnimation, CABasicAnimation *);
-TF_EC_MINSTANCE_IMP(CABasicAnimation, CABasicAnimation *);
+tf_ec_mstatic_imp(CABasicAnimation, CABasicAnimation *);
+tf_ec_minstance_imp(CABasicAnimation, CABasicAnimation *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(CABasicAnimation);
+tf_ec_chain_valuekey_imp(CABasicAnimation);
 
 @end
 
@@ -55,10 +55,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(CABasicAnimation);
 
 @implementation CADisplayLink (TFEasyCoder_CA)
 
-TF_EC_MSTATIC_IMP(CADisplayLink, CADisplayLink *);
-TF_EC_MINSTANCE_IMP(CADisplayLink, CADisplayLink *);
+tf_ec_mstatic_imp(CADisplayLink, CADisplayLink *);
+tf_ec_minstance_imp(CADisplayLink, CADisplayLink *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(CADisplayLink);
+tf_ec_chain_valuekey_imp(CADisplayLink);
 
 @end
 
@@ -67,34 +67,23 @@ TF_EC_CHAIN_VALUEKYE_IMP(CADisplayLink);
 
 @implementation CAEAGLLayer (TFEasyCoder_CA)
 
-TF_EC_MSTATIC_IMP(CAEAGLLayer, CAEAGLLayer *);
-TF_EC_MINSTANCE_IMP(CAEAGLLayer, CAEAGLLayer *);
+tf_ec_mstatic_imp(CAEAGLLayer, CAEAGLLayer *);
+tf_ec_minstance_imp(CAEAGLLayer, CAEAGLLayer *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(CAEAGLLayer);
-
-@end
-
-
-
-
-@implementation CAEmitterBehavior (TFEasyCoder_CA)
-
-TF_EC_MSTATIC_IMP(CAEmitterBehavior, CAEmitterBehavior *);
-TF_EC_MINSTANCE_IMP(CAEmitterBehavior, CAEmitterBehavior *);
-
-TF_EC_CHAIN_VALUEKYE_IMP(CAEmitterBehavior);
+tf_ec_chain_valuekey_imp(CAEAGLLayer);
 
 @end
+
 
 
 
 
 @implementation CAEmitterCell (TFEasyCoder_CA)
 
-TF_EC_MSTATIC_IMP(CAEmitterCell, CAEmitterCell *);
-TF_EC_MINSTANCE_IMP(CAEmitterCell, CAEmitterCell *);
+tf_ec_mstatic_imp(CAEmitterCell, CAEmitterCell *);
+tf_ec_minstance_imp(CAEmitterCell, CAEmitterCell *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(CAEmitterCell);
+tf_ec_chain_valuekey_imp(CAEmitterCell);
 
 @end
 
@@ -103,10 +92,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(CAEmitterCell);
 
 @implementation CAEmitterLayer (TFEasyCoder_CA)
 
-TF_EC_MSTATIC_IMP(CAEmitterLayer, CAEmitterLayer *);
-TF_EC_MINSTANCE_IMP(CAEmitterLayer, CAEmitterLayer *);
+tf_ec_mstatic_imp(CAEmitterLayer, CAEmitterLayer *);
+tf_ec_minstance_imp(CAEmitterLayer, CAEmitterLayer *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(CAEmitterLayer);
+tf_ec_chain_valuekey_imp(CAEmitterLayer);
 
 @end
 
@@ -115,10 +104,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(CAEmitterLayer);
 
 @implementation CAGradientLayer (TFEasyCoder_CA)
 
-TF_EC_MSTATIC_IMP(CAGradientLayer, CAGradientLayer *);
-TF_EC_MINSTANCE_IMP(CAGradientLayer, CAGradientLayer *);
+tf_ec_mstatic_imp(CAGradientLayer, CAGradientLayer *);
+tf_ec_minstance_imp(CAGradientLayer, CAGradientLayer *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(CAGradientLayer);
+tf_ec_chain_valuekey_imp(CAGradientLayer);
 
 @end
 
@@ -127,10 +116,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(CAGradientLayer);
 
 @implementation CAKeyframeAnimation (TFEasyCoder_CA)
 
-TF_EC_MSTATIC_IMP(CAKeyframeAnimation, CAKeyframeAnimation *);
-TF_EC_MINSTANCE_IMP(CAKeyframeAnimation, CAKeyframeAnimation *);
+tf_ec_mstatic_imp(CAKeyframeAnimation, CAKeyframeAnimation *);
+tf_ec_minstance_imp(CAKeyframeAnimation, CAKeyframeAnimation *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(CAKeyframeAnimation);
+tf_ec_chain_valuekey_imp(CAKeyframeAnimation);
 
 @end
 
@@ -139,10 +128,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(CAKeyframeAnimation);
 
 @implementation CALayer (TFEasyCoder_CA)
 
-TF_EC_MSTATIC_IMP(CALayer, CALayer *);
-TF_EC_MINSTANCE_IMP(CALayer, CALayer *);
+tf_ec_mstatic_imp(CALayer, CALayer *);
+tf_ec_minstance_imp(CALayer, CALayer *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(CALayer);
+tf_ec_chain_valuekey_imp(CALayer);
 
 @end
 
@@ -151,10 +140,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(CALayer);
 
 @implementation CAMediaTimingFunction (TFEasyCoder_CA)
 
-TF_EC_MSTATIC_IMP(CAMediaTimingFunction, CAMediaTimingFunction *);
-TF_EC_MINSTANCE_IMP(CAMediaTimingFunction, CAMediaTimingFunction *);
+tf_ec_mstatic_imp(CAMediaTimingFunction, CAMediaTimingFunction *);
+tf_ec_minstance_imp(CAMediaTimingFunction, CAMediaTimingFunction *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(CAMediaTimingFunction);
+tf_ec_chain_valuekey_imp(CAMediaTimingFunction);
 
 @end
 
@@ -163,10 +152,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(CAMediaTimingFunction);
 
 @implementation CAPropertyAnimation (TFEasyCoder_CA)
 
-TF_EC_MSTATIC_IMP(CAPropertyAnimation, CAPropertyAnimation *);
-TF_EC_MINSTANCE_IMP(CAPropertyAnimation, CAPropertyAnimation *);
+tf_ec_mstatic_imp(CAPropertyAnimation, CAPropertyAnimation *);
+tf_ec_minstance_imp(CAPropertyAnimation, CAPropertyAnimation *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(CAPropertyAnimation);
+tf_ec_chain_valuekey_imp(CAPropertyAnimation);
 
 @end
 
@@ -175,10 +164,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(CAPropertyAnimation);
 
 @implementation CAReplicatorLayer (TFEasyCoder_CA)
 
-TF_EC_MSTATIC_IMP(CAReplicatorLayer, CAReplicatorLayer *);
-TF_EC_MINSTANCE_IMP(CAReplicatorLayer, CAReplicatorLayer *);
+tf_ec_mstatic_imp(CAReplicatorLayer, CAReplicatorLayer *);
+tf_ec_minstance_imp(CAReplicatorLayer, CAReplicatorLayer *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(CAReplicatorLayer);
+tf_ec_chain_valuekey_imp(CAReplicatorLayer);
 
 @end
 
@@ -187,10 +176,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(CAReplicatorLayer);
 
 @implementation CAScrollLayer (TFEasyCoder_CA)
 
-TF_EC_MSTATIC_IMP(CAScrollLayer, CAScrollLayer *);
-TF_EC_MINSTANCE_IMP(CAScrollLayer, CAScrollLayer *);
+tf_ec_mstatic_imp(CAScrollLayer, CAScrollLayer *);
+tf_ec_minstance_imp(CAScrollLayer, CAScrollLayer *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(CAScrollLayer);
+tf_ec_chain_valuekey_imp(CAScrollLayer);
 
 @end
 
@@ -199,10 +188,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(CAScrollLayer);
 
 @implementation CAShapeLayer (TFEasyCoder_CA)
 
-TF_EC_MSTATIC_IMP(CAShapeLayer, CAShapeLayer *);
-TF_EC_MINSTANCE_IMP(CAShapeLayer, CAShapeLayer *);
+tf_ec_mstatic_imp(CAShapeLayer, CAShapeLayer *);
+tf_ec_minstance_imp(CAShapeLayer, CAShapeLayer *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(CAShapeLayer);
+tf_ec_chain_valuekey_imp(CAShapeLayer);
 
 @end
 
@@ -211,10 +200,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(CAShapeLayer);
 
 @implementation CASpringAnimation (TFEasyCoder_CA)
 
-TF_EC_MSTATIC_IMP(CASpringAnimation, CASpringAnimation *);
-TF_EC_MINSTANCE_IMP(CASpringAnimation, CASpringAnimation *);
+tf_ec_mstatic_imp(CASpringAnimation, CASpringAnimation *);
+tf_ec_minstance_imp(CASpringAnimation, CASpringAnimation *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(CASpringAnimation);
+tf_ec_chain_valuekey_imp(CASpringAnimation);
 
 @end
 
@@ -223,10 +212,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(CASpringAnimation);
 
 @implementation CATextLayer (TFEasyCoder_CA)
 
-TF_EC_MSTATIC_IMP(CATextLayer, CATextLayer *);
-TF_EC_MINSTANCE_IMP(CATextLayer, CATextLayer *);
+tf_ec_mstatic_imp(CATextLayer, CATextLayer *);
+tf_ec_minstance_imp(CATextLayer, CATextLayer *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(CATextLayer);
+tf_ec_chain_valuekey_imp(CATextLayer);
 
 @end
 
@@ -235,10 +224,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(CATextLayer);
 
 @implementation CATiledLayer (TFEasyCoder_CA)
 
-TF_EC_MSTATIC_IMP(CATiledLayer, CATiledLayer *);
-TF_EC_MINSTANCE_IMP(CATiledLayer, CATiledLayer *);
+tf_ec_mstatic_imp(CATiledLayer, CATiledLayer *);
+tf_ec_minstance_imp(CATiledLayer, CATiledLayer *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(CATiledLayer);
+tf_ec_chain_valuekey_imp(CATiledLayer);
 
 @end
 
@@ -247,10 +236,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(CATiledLayer);
 
 @implementation CATransaction (TFEasyCoder_CA)
 
-TF_EC_MSTATIC_IMP(CATransaction, CATransaction *);
-TF_EC_MINSTANCE_IMP(CATransaction, CATransaction *);
+tf_ec_mstatic_imp(CATransaction, CATransaction *);
+tf_ec_minstance_imp(CATransaction, CATransaction *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(CATransaction);
+tf_ec_chain_valuekey_imp(CATransaction);
 
 @end
 
@@ -259,10 +248,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(CATransaction);
 
 @implementation CATransformLayer (TFEasyCoder_CA)
 
-TF_EC_MSTATIC_IMP(CATransformLayer, CATransformLayer *);
-TF_EC_MINSTANCE_IMP(CATransformLayer, CATransformLayer *);
+tf_ec_mstatic_imp(CATransformLayer, CATransformLayer *);
+tf_ec_minstance_imp(CATransformLayer, CATransformLayer *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(CATransformLayer);
+tf_ec_chain_valuekey_imp(CATransformLayer);
 
 @end
 
@@ -271,10 +260,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(CATransformLayer);
 
 @implementation CATransition (TFEasyCoder_CA)
 
-TF_EC_MSTATIC_IMP(CATransition, CATransition *);
-TF_EC_MINSTANCE_IMP(CATransition, CATransition *);
+tf_ec_mstatic_imp(CATransition, CATransition *);
+tf_ec_minstance_imp(CATransition, CATransition *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(CATransition);
+tf_ec_chain_valuekey_imp(CATransition);
 
 @end
 
@@ -283,10 +272,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(CATransition);
 
 @implementation CAValueFunction (TFEasyCoder_CA)
 
-TF_EC_MSTATIC_IMP(CAValueFunction, CAValueFunction *);
-TF_EC_MINSTANCE_IMP(CAValueFunction, CAValueFunction *);
+tf_ec_mstatic_imp(CAValueFunction, CAValueFunction *);
+tf_ec_minstance_imp(CAValueFunction, CAValueFunction *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(CAValueFunction);
+tf_ec_chain_valuekey_imp(CAValueFunction);
 
 @end
 

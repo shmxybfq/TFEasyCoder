@@ -12,17 +12,13 @@
 
 #import "TFKit.h"
 
+#import "TFKit.h"
+#import "TFEasyCoder_UI.h"
+#import "TFEasyCoder_CA.h"
+#import "TFEasyCoder_NS.h"
 #import "TFEasyCoderConst.h"
 #import "NSObject+TFExecute.h"
 #import "TFEasyCoderConfigue.h"
-
-#import "TFEasyCoder_CA.h"
-#import "TFEasyCoder_UI.h"
-#import "TFEasyCoder_NS.h"
-
-#import "CAHeader.h"
-#import "UIKitHeader.h"
-#import "FoundationHeader.h"
 
 
 #endif /* TFEasyCoder_h */

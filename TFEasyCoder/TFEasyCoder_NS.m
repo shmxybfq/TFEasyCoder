@@ -17,10 +17,10 @@
 
 @implementation NSArray (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSArray, NSArray *);
-TF_EC_MINSTANCE_IMP(NSArray, NSArray *);
+tf_ec_mstatic_imp(NSArray, NSArray *);
+tf_ec_minstance_imp(NSArray, NSArray *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSArray);
+tf_ec_chain_valuekey_imp(NSArray);
 
 @end
 
@@ -29,10 +29,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSArray);
 
 @implementation NSAssertionHandler (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSAssertionHandler, NSAssertionHandler *);
-TF_EC_MINSTANCE_IMP(NSAssertionHandler, NSAssertionHandler *);
+tf_ec_mstatic_imp(NSAssertionHandler, NSAssertionHandler *);
+tf_ec_minstance_imp(NSAssertionHandler, NSAssertionHandler *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSAssertionHandler);
+tf_ec_chain_valuekey_imp(NSAssertionHandler);
 
 @end
 
@@ -41,10 +41,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSAssertionHandler);
 
 @implementation NSAttributedString (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSAttributedString, NSAttributedString *);
-TF_EC_MINSTANCE_IMP(NSAttributedString, NSAttributedString *);
+tf_ec_mstatic_imp(NSAttributedString, NSAttributedString *);
+tf_ec_minstance_imp(NSAttributedString, NSAttributedString *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSAttributedString);
+tf_ec_chain_valuekey_imp(NSAttributedString);
 
 @end
 
@@ -53,10 +53,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSAttributedString);
 
 @implementation NSBlockOperation (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSBlockOperation, NSBlockOperation *);
-TF_EC_MINSTANCE_IMP(NSBlockOperation, NSBlockOperation *);
+tf_ec_mstatic_imp(NSBlockOperation, NSBlockOperation *);
+tf_ec_minstance_imp(NSBlockOperation, NSBlockOperation *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSBlockOperation);
+tf_ec_chain_valuekey_imp(NSBlockOperation);
 
 @end
 
@@ -65,10 +65,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSBlockOperation);
 
 @implementation NSBundle (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSBundle, NSBundle *);
-TF_EC_MINSTANCE_IMP(NSBundle, NSBundle *);
+tf_ec_mstatic_imp(NSBundle, NSBundle *);
+tf_ec_minstance_imp(NSBundle, NSBundle *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSBundle);
+tf_ec_chain_valuekey_imp(NSBundle);
 
 @end
 
@@ -77,10 +77,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSBundle);
 
 @implementation NSBundleResourceRequest (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSBundleResourceRequest, NSBundleResourceRequest *);
-TF_EC_MINSTANCE_IMP(NSBundleResourceRequest, NSBundleResourceRequest *);
+tf_ec_mstatic_imp(NSBundleResourceRequest, NSBundleResourceRequest *);
+tf_ec_minstance_imp(NSBundleResourceRequest, NSBundleResourceRequest *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSBundleResourceRequest);
+tf_ec_chain_valuekey_imp(NSBundleResourceRequest);
 
 @end
 
@@ -89,10 +89,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSBundleResourceRequest);
 
 @implementation NSByteCountFormatter (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSByteCountFormatter, NSByteCountFormatter *);
-TF_EC_MINSTANCE_IMP(NSByteCountFormatter, NSByteCountFormatter *);
+tf_ec_mstatic_imp(NSByteCountFormatter, NSByteCountFormatter *);
+tf_ec_minstance_imp(NSByteCountFormatter, NSByteCountFormatter *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSByteCountFormatter);
+tf_ec_chain_valuekey_imp(NSByteCountFormatter);
 
 @end
 
@@ -101,10 +101,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSByteCountFormatter);
 
 @implementation NSCache (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSCache, NSCache *);
-TF_EC_MINSTANCE_IMP(NSCache, NSCache *);
+tf_ec_mstatic_imp(NSCache, NSCache *);
+tf_ec_minstance_imp(NSCache, NSCache *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSCache);
+tf_ec_chain_valuekey_imp(NSCache);
 
 @end
 
@@ -113,10 +113,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSCache);
 
 @implementation NSCachedURLResponse (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSCachedURLResponse, NSCachedURLResponse *);
-TF_EC_MINSTANCE_IMP(NSCachedURLResponse, NSCachedURLResponse *);
+tf_ec_mstatic_imp(NSCachedURLResponse, NSCachedURLResponse *);
+tf_ec_minstance_imp(NSCachedURLResponse, NSCachedURLResponse *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSCachedURLResponse);
+tf_ec_chain_valuekey_imp(NSCachedURLResponse);
 
 @end
 
@@ -125,10 +125,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSCachedURLResponse);
 
 @implementation NSCalendar (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSCalendar, NSCalendar *);
-TF_EC_MINSTANCE_IMP(NSCalendar, NSCalendar *);
+tf_ec_mstatic_imp(NSCalendar, NSCalendar *);
+tf_ec_minstance_imp(NSCalendar, NSCalendar *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSCalendar);
+tf_ec_chain_valuekey_imp(NSCalendar);
 
 @end
 
@@ -137,10 +137,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSCalendar);
 
 @implementation NSCharacterSet (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSCharacterSet, NSCharacterSet *);
-TF_EC_MINSTANCE_IMP(NSCharacterSet, NSCharacterSet *);
+tf_ec_mstatic_imp(NSCharacterSet, NSCharacterSet *);
+tf_ec_minstance_imp(NSCharacterSet, NSCharacterSet *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSCharacterSet);
+tf_ec_chain_valuekey_imp(NSCharacterSet);
 
 @end
 
@@ -149,10 +149,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSCharacterSet);
 
 @implementation NSCoder (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSCoder, NSCoder *);
-TF_EC_MINSTANCE_IMP(NSCoder, NSCoder *);
+tf_ec_mstatic_imp(NSCoder, NSCoder *);
+tf_ec_minstance_imp(NSCoder, NSCoder *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSCoder);
+tf_ec_chain_valuekey_imp(NSCoder);
 
 @end
 
@@ -161,10 +161,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSCoder);
 
 @implementation NSComparisonPredicate (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSComparisonPredicate, NSComparisonPredicate *);
-TF_EC_MINSTANCE_IMP(NSComparisonPredicate, NSComparisonPredicate *);
+tf_ec_mstatic_imp(NSComparisonPredicate, NSComparisonPredicate *);
+tf_ec_minstance_imp(NSComparisonPredicate, NSComparisonPredicate *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSComparisonPredicate);
+tf_ec_chain_valuekey_imp(NSComparisonPredicate);
 
 @end
 
@@ -173,10 +173,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSComparisonPredicate);
 
 @implementation NSCompoundPredicate (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSCompoundPredicate, NSCompoundPredicate *);
-TF_EC_MINSTANCE_IMP(NSCompoundPredicate, NSCompoundPredicate *);
+tf_ec_mstatic_imp(NSCompoundPredicate, NSCompoundPredicate *);
+tf_ec_minstance_imp(NSCompoundPredicate, NSCompoundPredicate *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSCompoundPredicate);
+tf_ec_chain_valuekey_imp(NSCompoundPredicate);
 
 @end
 
@@ -185,10 +185,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSCompoundPredicate);
 
 @implementation NSCondition (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSCondition, NSCondition *);
-TF_EC_MINSTANCE_IMP(NSCondition, NSCondition *);
+tf_ec_mstatic_imp(NSCondition, NSCondition *);
+tf_ec_minstance_imp(NSCondition, NSCondition *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSCondition);
+tf_ec_chain_valuekey_imp(NSCondition);
 
 @end
 
@@ -197,10 +197,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSCondition);
 
 @implementation NSConditionLock (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSConditionLock, NSConditionLock *);
-TF_EC_MINSTANCE_IMP(NSConditionLock, NSConditionLock *);
+tf_ec_mstatic_imp(NSConditionLock, NSConditionLock *);
+tf_ec_minstance_imp(NSConditionLock, NSConditionLock *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSConditionLock);
+tf_ec_chain_valuekey_imp(NSConditionLock);
 
 @end
 
@@ -209,10 +209,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSConditionLock);
 
 @implementation NSConstantString (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSConstantString, NSConstantString *);
-TF_EC_MINSTANCE_IMP(NSConstantString, NSConstantString *);
+tf_ec_mstatic_imp(NSConstantString, NSConstantString *);
+tf_ec_minstance_imp(NSConstantString, NSConstantString *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSConstantString);
+tf_ec_chain_valuekey_imp(NSConstantString);
 
 @end
 
@@ -221,10 +221,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSConstantString);
 
 @implementation NSCountedSet (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSCountedSet, NSCountedSet *);
-TF_EC_MINSTANCE_IMP(NSCountedSet, NSCountedSet *);
+tf_ec_mstatic_imp(NSCountedSet, NSCountedSet *);
+tf_ec_minstance_imp(NSCountedSet, NSCountedSet *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSCountedSet);
+tf_ec_chain_valuekey_imp(NSCountedSet);
 
 @end
 
@@ -233,10 +233,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSCountedSet);
 
 @implementation NSData (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSData, NSData *);
-TF_EC_MINSTANCE_IMP(NSData, NSData *);
+tf_ec_mstatic_imp(NSData, NSData *);
+tf_ec_minstance_imp(NSData, NSData *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSData);
+tf_ec_chain_valuekey_imp(NSData);
 
 @end
 
@@ -245,10 +245,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSData);
 
 @implementation NSDataAsset (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSDataAsset, NSDataAsset *);
-TF_EC_MINSTANCE_IMP(NSDataAsset, NSDataAsset *);
+tf_ec_mstatic_imp(NSDataAsset, NSDataAsset *);
+tf_ec_minstance_imp(NSDataAsset, NSDataAsset *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSDataAsset);
+tf_ec_chain_valuekey_imp(NSDataAsset);
 
 @end
 
@@ -257,10 +257,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSDataAsset);
 
 @implementation NSDataDetector (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSDataDetector, NSDataDetector *);
-TF_EC_MINSTANCE_IMP(NSDataDetector, NSDataDetector *);
+tf_ec_mstatic_imp(NSDataDetector, NSDataDetector *);
+tf_ec_minstance_imp(NSDataDetector, NSDataDetector *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSDataDetector);
+tf_ec_chain_valuekey_imp(NSDataDetector);
 
 @end
 
@@ -269,10 +269,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSDataDetector);
 
 @implementation NSDate (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSDate, NSDate *);
-TF_EC_MINSTANCE_IMP(NSDate, NSDate *);
+tf_ec_mstatic_imp(NSDate, NSDate *);
+tf_ec_minstance_imp(NSDate, NSDate *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSDate);
+tf_ec_chain_valuekey_imp(NSDate);
 
 @end
 
@@ -281,10 +281,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSDate);
 
 @implementation NSDateComponents (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSDateComponents, NSDateComponents *);
-TF_EC_MINSTANCE_IMP(NSDateComponents, NSDateComponents *);
+tf_ec_mstatic_imp(NSDateComponents, NSDateComponents *);
+tf_ec_minstance_imp(NSDateComponents, NSDateComponents *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSDateComponents);
+tf_ec_chain_valuekey_imp(NSDateComponents);
 
 @end
 
@@ -293,10 +293,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSDateComponents);
 
 @implementation NSDateComponentsFormatter (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSDateComponentsFormatter, NSDateComponentsFormatter *);
-TF_EC_MINSTANCE_IMP(NSDateComponentsFormatter, NSDateComponentsFormatter *);
+tf_ec_mstatic_imp(NSDateComponentsFormatter, NSDateComponentsFormatter *);
+tf_ec_minstance_imp(NSDateComponentsFormatter, NSDateComponentsFormatter *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSDateComponentsFormatter);
+tf_ec_chain_valuekey_imp(NSDateComponentsFormatter);
 
 @end
 
@@ -305,10 +305,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSDateComponentsFormatter);
 
 @implementation NSDateFormatter (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSDateFormatter, NSDateFormatter *);
-TF_EC_MINSTANCE_IMP(NSDateFormatter, NSDateFormatter *);
+tf_ec_mstatic_imp(NSDateFormatter, NSDateFormatter *);
+tf_ec_minstance_imp(NSDateFormatter, NSDateFormatter *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSDateFormatter);
+tf_ec_chain_valuekey_imp(NSDateFormatter);
 
 @end
 
@@ -317,10 +317,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSDateFormatter);
 
 @implementation NSDateIntervalFormatter (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSDateIntervalFormatter, NSDateIntervalFormatter *);
-TF_EC_MINSTANCE_IMP(NSDateIntervalFormatter, NSDateIntervalFormatter *);
+tf_ec_mstatic_imp(NSDateIntervalFormatter, NSDateIntervalFormatter *);
+tf_ec_minstance_imp(NSDateIntervalFormatter, NSDateIntervalFormatter *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSDateIntervalFormatter);
+tf_ec_chain_valuekey_imp(NSDateIntervalFormatter);
 
 @end
 
@@ -329,10 +329,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSDateIntervalFormatter);
 
 @implementation NSDecimalNumber (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSDecimalNumber, NSDecimalNumber *);
-TF_EC_MINSTANCE_IMP(NSDecimalNumber, NSDecimalNumber *);
+tf_ec_mstatic_imp(NSDecimalNumber, NSDecimalNumber *);
+tf_ec_minstance_imp(NSDecimalNumber, NSDecimalNumber *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSDecimalNumber);
+tf_ec_chain_valuekey_imp(NSDecimalNumber);
 
 @end
 
@@ -341,10 +341,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSDecimalNumber);
 
 @implementation NSDecimalNumberHandler (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSDecimalNumberHandler, NSDecimalNumberHandler *);
-TF_EC_MINSTANCE_IMP(NSDecimalNumberHandler, NSDecimalNumberHandler *);
+tf_ec_mstatic_imp(NSDecimalNumberHandler, NSDecimalNumberHandler *);
+tf_ec_minstance_imp(NSDecimalNumberHandler, NSDecimalNumberHandler *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSDecimalNumberHandler);
+tf_ec_chain_valuekey_imp(NSDecimalNumberHandler);
 
 @end
 
@@ -353,10 +353,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSDecimalNumberHandler);
 
 @implementation NSDictionary (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSDictionary, NSDictionary *);
-TF_EC_MINSTANCE_IMP(NSDictionary, NSDictionary *);
+tf_ec_mstatic_imp(NSDictionary, NSDictionary *);
+tf_ec_minstance_imp(NSDictionary, NSDictionary *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSDictionary);
+tf_ec_chain_valuekey_imp(NSDictionary);
 
 @end
 
@@ -365,10 +365,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSDictionary);
 
 @implementation NSDirectoryEnumerator (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSDirectoryEnumerator, NSDirectoryEnumerator *);
-TF_EC_MINSTANCE_IMP(NSDirectoryEnumerator, NSDirectoryEnumerator *);
+tf_ec_mstatic_imp(NSDirectoryEnumerator, NSDirectoryEnumerator *);
+tf_ec_minstance_imp(NSDirectoryEnumerator, NSDirectoryEnumerator *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSDirectoryEnumerator);
+tf_ec_chain_valuekey_imp(NSDirectoryEnumerator);
 
 @end
 
@@ -377,10 +377,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSDirectoryEnumerator);
 
 @implementation NSEnergyFormatter (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSEnergyFormatter, NSEnergyFormatter *);
-TF_EC_MINSTANCE_IMP(NSEnergyFormatter, NSEnergyFormatter *);
+tf_ec_mstatic_imp(NSEnergyFormatter, NSEnergyFormatter *);
+tf_ec_minstance_imp(NSEnergyFormatter, NSEnergyFormatter *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSEnergyFormatter);
+tf_ec_chain_valuekey_imp(NSEnergyFormatter);
 
 @end
 
@@ -389,10 +389,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSEnergyFormatter);
 
 @implementation NSEnumerator (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSEnumerator, NSEnumerator *);
-TF_EC_MINSTANCE_IMP(NSEnumerator, NSEnumerator *);
+tf_ec_mstatic_imp(NSEnumerator, NSEnumerator *);
+tf_ec_minstance_imp(NSEnumerator, NSEnumerator *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSEnumerator);
+tf_ec_chain_valuekey_imp(NSEnumerator);
 
 @end
 
@@ -401,10 +401,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSEnumerator);
 
 @implementation NSError (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSError, NSError *);
-TF_EC_MINSTANCE_IMP(NSError, NSError *);
+tf_ec_mstatic_imp(NSError, NSError *);
+tf_ec_minstance_imp(NSError, NSError *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSError);
+tf_ec_chain_valuekey_imp(NSError);
 
 @end
 
@@ -413,10 +413,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSError);
 
 @implementation NSException (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSException, NSException *);
-TF_EC_MINSTANCE_IMP(NSException, NSException *);
+tf_ec_mstatic_imp(NSException, NSException *);
+tf_ec_minstance_imp(NSException, NSException *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSException);
+tf_ec_chain_valuekey_imp(NSException);
 
 @end
 
@@ -425,10 +425,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSException);
 
 @implementation NSExpression (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSExpression, NSExpression *);
-TF_EC_MINSTANCE_IMP(NSExpression, NSExpression *);
+tf_ec_mstatic_imp(NSExpression, NSExpression *);
+tf_ec_minstance_imp(NSExpression, NSExpression *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSExpression);
+tf_ec_chain_valuekey_imp(NSExpression);
 
 @end
 
@@ -437,10 +437,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSExpression);
 
 @implementation NSExtensionContext (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSExtensionContext, NSExtensionContext *);
-TF_EC_MINSTANCE_IMP(NSExtensionContext, NSExtensionContext *);
+tf_ec_mstatic_imp(NSExtensionContext, NSExtensionContext *);
+tf_ec_minstance_imp(NSExtensionContext, NSExtensionContext *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSExtensionContext);
+tf_ec_chain_valuekey_imp(NSExtensionContext);
 
 @end
 
@@ -449,10 +449,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSExtensionContext);
 
 @implementation NSExtensionItem (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSExtensionItem, NSExtensionItem *);
-TF_EC_MINSTANCE_IMP(NSExtensionItem, NSExtensionItem *);
+tf_ec_mstatic_imp(NSExtensionItem, NSExtensionItem *);
+tf_ec_minstance_imp(NSExtensionItem, NSExtensionItem *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSExtensionItem);
+tf_ec_chain_valuekey_imp(NSExtensionItem);
 
 @end
 
@@ -461,10 +461,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSExtensionItem);
 
 @implementation NSFileAccessIntent (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSFileAccessIntent, NSFileAccessIntent *);
-TF_EC_MINSTANCE_IMP(NSFileAccessIntent, NSFileAccessIntent *);
+tf_ec_mstatic_imp(NSFileAccessIntent, NSFileAccessIntent *);
+tf_ec_minstance_imp(NSFileAccessIntent, NSFileAccessIntent *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSFileAccessIntent);
+tf_ec_chain_valuekey_imp(NSFileAccessIntent);
 
 @end
 
@@ -473,10 +473,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSFileAccessIntent);
 
 @implementation NSFileCoordinator (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSFileCoordinator, NSFileCoordinator *);
-TF_EC_MINSTANCE_IMP(NSFileCoordinator, NSFileCoordinator *);
+tf_ec_mstatic_imp(NSFileCoordinator, NSFileCoordinator *);
+tf_ec_minstance_imp(NSFileCoordinator, NSFileCoordinator *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSFileCoordinator);
+tf_ec_chain_valuekey_imp(NSFileCoordinator);
 
 @end
 
@@ -485,10 +485,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSFileCoordinator);
 
 @implementation NSFileHandle (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSFileHandle, NSFileHandle *);
-TF_EC_MINSTANCE_IMP(NSFileHandle, NSFileHandle *);
+tf_ec_mstatic_imp(NSFileHandle, NSFileHandle *);
+tf_ec_minstance_imp(NSFileHandle, NSFileHandle *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSFileHandle);
+tf_ec_chain_valuekey_imp(NSFileHandle);
 
 @end
 
@@ -497,10 +497,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSFileHandle);
 
 @implementation NSFileManager (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSFileManager, NSFileManager *);
-TF_EC_MINSTANCE_IMP(NSFileManager, NSFileManager *);
+tf_ec_mstatic_imp(NSFileManager, NSFileManager *);
+tf_ec_minstance_imp(NSFileManager, NSFileManager *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSFileManager);
+tf_ec_chain_valuekey_imp(NSFileManager);
 
 @end
 
@@ -509,10 +509,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSFileManager);
 
 @implementation NSFileProviderExtension (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSFileProviderExtension, NSFileProviderExtension *);
-TF_EC_MINSTANCE_IMP(NSFileProviderExtension, NSFileProviderExtension *);
+tf_ec_mstatic_imp(NSFileProviderExtension, NSFileProviderExtension *);
+tf_ec_minstance_imp(NSFileProviderExtension, NSFileProviderExtension *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSFileProviderExtension);
+tf_ec_chain_valuekey_imp(NSFileProviderExtension);
 
 @end
 
@@ -521,10 +521,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSFileProviderExtension);
 
 @implementation NSFileSecurity (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSFileSecurity, NSFileSecurity *);
-TF_EC_MINSTANCE_IMP(NSFileSecurity, NSFileSecurity *);
+tf_ec_mstatic_imp(NSFileSecurity, NSFileSecurity *);
+tf_ec_minstance_imp(NSFileSecurity, NSFileSecurity *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSFileSecurity);
+tf_ec_chain_valuekey_imp(NSFileSecurity);
 
 @end
 
@@ -533,10 +533,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSFileSecurity);
 
 @implementation NSFileVersion (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSFileVersion, NSFileVersion *);
-TF_EC_MINSTANCE_IMP(NSFileVersion, NSFileVersion *);
+tf_ec_mstatic_imp(NSFileVersion, NSFileVersion *);
+tf_ec_minstance_imp(NSFileVersion, NSFileVersion *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSFileVersion);
+tf_ec_chain_valuekey_imp(NSFileVersion);
 
 @end
 
@@ -545,10 +545,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSFileVersion);
 
 @implementation NSFileWrapper (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSFileWrapper, NSFileWrapper *);
-TF_EC_MINSTANCE_IMP(NSFileWrapper, NSFileWrapper *);
+tf_ec_mstatic_imp(NSFileWrapper, NSFileWrapper *);
+tf_ec_minstance_imp(NSFileWrapper, NSFileWrapper *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSFileWrapper);
+tf_ec_chain_valuekey_imp(NSFileWrapper);
 
 @end
 
@@ -557,10 +557,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSFileWrapper);
 
 @implementation NSFormatter (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSFormatter, NSFormatter *);
-TF_EC_MINSTANCE_IMP(NSFormatter, NSFormatter *);
+tf_ec_mstatic_imp(NSFormatter, NSFormatter *);
+tf_ec_minstance_imp(NSFormatter, NSFormatter *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSFormatter);
+tf_ec_chain_valuekey_imp(NSFormatter);
 
 @end
 
@@ -569,10 +569,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSFormatter);
 
 @implementation NSHashTable (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSHashTable, NSHashTable *);
-TF_EC_MINSTANCE_IMP(NSHashTable, NSHashTable *);
+tf_ec_mstatic_imp(NSHashTable, NSHashTable *);
+tf_ec_minstance_imp(NSHashTable, NSHashTable *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSHashTable);
+tf_ec_chain_valuekey_imp(NSHashTable);
 
 @end
 
@@ -581,10 +581,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSHashTable);
 
 @implementation NSHTTPCookie (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSHTTPCookie, NSHTTPCookie *);
-TF_EC_MINSTANCE_IMP(NSHTTPCookie, NSHTTPCookie *);
+tf_ec_mstatic_imp(NSHTTPCookie, NSHTTPCookie *);
+tf_ec_minstance_imp(NSHTTPCookie, NSHTTPCookie *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSHTTPCookie);
+tf_ec_chain_valuekey_imp(NSHTTPCookie);
 
 @end
 
@@ -593,10 +593,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSHTTPCookie);
 
 @implementation NSHTTPCookieStorage (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSHTTPCookieStorage, NSHTTPCookieStorage *);
-TF_EC_MINSTANCE_IMP(NSHTTPCookieStorage, NSHTTPCookieStorage *);
+tf_ec_mstatic_imp(NSHTTPCookieStorage, NSHTTPCookieStorage *);
+tf_ec_minstance_imp(NSHTTPCookieStorage, NSHTTPCookieStorage *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSHTTPCookieStorage);
+tf_ec_chain_valuekey_imp(NSHTTPCookieStorage);
 
 @end
 
@@ -605,10 +605,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSHTTPCookieStorage);
 
 @implementation NSHTTPURLResponse (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSHTTPURLResponse, NSHTTPURLResponse *);
-TF_EC_MINSTANCE_IMP(NSHTTPURLResponse, NSHTTPURLResponse *);
+tf_ec_mstatic_imp(NSHTTPURLResponse, NSHTTPURLResponse *);
+tf_ec_minstance_imp(NSHTTPURLResponse, NSHTTPURLResponse *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSHTTPURLResponse);
+tf_ec_chain_valuekey_imp(NSHTTPURLResponse);
 
 @end
 
@@ -617,10 +617,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSHTTPURLResponse);
 
 @implementation NSIndexPath (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSIndexPath, NSIndexPath *);
-TF_EC_MINSTANCE_IMP(NSIndexPath, NSIndexPath *);
+tf_ec_mstatic_imp(NSIndexPath, NSIndexPath *);
+tf_ec_minstance_imp(NSIndexPath, NSIndexPath *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSIndexPath);
+tf_ec_chain_valuekey_imp(NSIndexPath);
 
 @end
 
@@ -629,10 +629,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSIndexPath);
 
 @implementation NSIndexSet (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSIndexSet, NSIndexSet *);
-TF_EC_MINSTANCE_IMP(NSIndexSet, NSIndexSet *);
+tf_ec_mstatic_imp(NSIndexSet, NSIndexSet *);
+tf_ec_minstance_imp(NSIndexSet, NSIndexSet *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSIndexSet);
+tf_ec_chain_valuekey_imp(NSIndexSet);
 
 @end
 
@@ -641,10 +641,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSIndexSet);
 
 @implementation NSInputStream (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSInputStream, NSInputStream *);
-TF_EC_MINSTANCE_IMP(NSInputStream, NSInputStream *);
+tf_ec_mstatic_imp(NSInputStream, NSInputStream *);
+tf_ec_minstance_imp(NSInputStream, NSInputStream *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSInputStream);
+tf_ec_chain_valuekey_imp(NSInputStream);
 
 @end
 
@@ -653,10 +653,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSInputStream);
 
 @implementation NSInvocation (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSInvocation, NSInvocation *);
-TF_EC_MINSTANCE_IMP(NSInvocation, NSInvocation *);
+tf_ec_mstatic_imp(NSInvocation, NSInvocation *);
+tf_ec_minstance_imp(NSInvocation, NSInvocation *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSInvocation);
+tf_ec_chain_valuekey_imp(NSInvocation);
 
 @end
 
@@ -665,10 +665,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSInvocation);
 
 @implementation NSInvocationOperation (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSInvocationOperation, NSInvocationOperation *);
-TF_EC_MINSTANCE_IMP(NSInvocationOperation, NSInvocationOperation *);
+tf_ec_mstatic_imp(NSInvocationOperation, NSInvocationOperation *);
+tf_ec_minstance_imp(NSInvocationOperation, NSInvocationOperation *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSInvocationOperation);
+tf_ec_chain_valuekey_imp(NSInvocationOperation);
 
 @end
 
@@ -677,10 +677,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSInvocationOperation);
 
 @implementation NSItemProvider (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSItemProvider, NSItemProvider *);
-TF_EC_MINSTANCE_IMP(NSItemProvider, NSItemProvider *);
+tf_ec_mstatic_imp(NSItemProvider, NSItemProvider *);
+tf_ec_minstance_imp(NSItemProvider, NSItemProvider *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSItemProvider);
+tf_ec_chain_valuekey_imp(NSItemProvider);
 
 @end
 
@@ -689,10 +689,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSItemProvider);
 
 @implementation NSJSONSerialization (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSJSONSerialization, NSJSONSerialization *);
-TF_EC_MINSTANCE_IMP(NSJSONSerialization, NSJSONSerialization *);
+tf_ec_mstatic_imp(NSJSONSerialization, NSJSONSerialization *);
+tf_ec_minstance_imp(NSJSONSerialization, NSJSONSerialization *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSJSONSerialization);
+tf_ec_chain_valuekey_imp(NSJSONSerialization);
 
 @end
 
@@ -701,10 +701,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSJSONSerialization);
 
 @implementation NSKeyedArchiver (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSKeyedArchiver, NSKeyedArchiver *);
-TF_EC_MINSTANCE_IMP(NSKeyedArchiver, NSKeyedArchiver *);
+tf_ec_mstatic_imp(NSKeyedArchiver, NSKeyedArchiver *);
+tf_ec_minstance_imp(NSKeyedArchiver, NSKeyedArchiver *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSKeyedArchiver);
+tf_ec_chain_valuekey_imp(NSKeyedArchiver);
 
 @end
 
@@ -713,10 +713,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSKeyedArchiver);
 
 @implementation NSKeyedUnarchiver (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSKeyedUnarchiver, NSKeyedUnarchiver *);
-TF_EC_MINSTANCE_IMP(NSKeyedUnarchiver, NSKeyedUnarchiver *);
+tf_ec_mstatic_imp(NSKeyedUnarchiver, NSKeyedUnarchiver *);
+tf_ec_minstance_imp(NSKeyedUnarchiver, NSKeyedUnarchiver *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSKeyedUnarchiver);
+tf_ec_chain_valuekey_imp(NSKeyedUnarchiver);
 
 @end
 
@@ -725,10 +725,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSKeyedUnarchiver);
 
 @implementation NSLayoutAnchor (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSLayoutAnchor, NSLayoutAnchor *);
-TF_EC_MINSTANCE_IMP(NSLayoutAnchor, NSLayoutAnchor *);
+tf_ec_mstatic_imp(NSLayoutAnchor, NSLayoutAnchor *);
+tf_ec_minstance_imp(NSLayoutAnchor, NSLayoutAnchor *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSLayoutAnchor);
+tf_ec_chain_valuekey_imp(NSLayoutAnchor);
 
 @end
 
@@ -737,10 +737,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSLayoutAnchor);
 
 @implementation NSLayoutConstraint (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSLayoutConstraint, NSLayoutConstraint *);
-TF_EC_MINSTANCE_IMP(NSLayoutConstraint, NSLayoutConstraint *);
+tf_ec_mstatic_imp(NSLayoutConstraint, NSLayoutConstraint *);
+tf_ec_minstance_imp(NSLayoutConstraint, NSLayoutConstraint *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSLayoutConstraint);
+tf_ec_chain_valuekey_imp(NSLayoutConstraint);
 
 @end
 
@@ -749,10 +749,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSLayoutConstraint);
 
 @implementation NSLayoutDimension (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSLayoutDimension, NSLayoutDimension *);
-TF_EC_MINSTANCE_IMP(NSLayoutDimension, NSLayoutDimension *);
+tf_ec_mstatic_imp(NSLayoutDimension, NSLayoutDimension *);
+tf_ec_minstance_imp(NSLayoutDimension, NSLayoutDimension *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSLayoutDimension);
+tf_ec_chain_valuekey_imp(NSLayoutDimension);
 
 @end
 
@@ -761,10 +761,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSLayoutDimension);
 
 @implementation NSLayoutManager (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSLayoutManager, NSLayoutManager *);
-TF_EC_MINSTANCE_IMP(NSLayoutManager, NSLayoutManager *);
+tf_ec_mstatic_imp(NSLayoutManager, NSLayoutManager *);
+tf_ec_minstance_imp(NSLayoutManager, NSLayoutManager *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSLayoutManager);
+tf_ec_chain_valuekey_imp(NSLayoutManager);
 
 @end
 
@@ -773,10 +773,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSLayoutManager);
 
 @implementation NSLayoutXAxisAnchor (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSLayoutXAxisAnchor, NSLayoutXAxisAnchor *);
-TF_EC_MINSTANCE_IMP(NSLayoutXAxisAnchor, NSLayoutXAxisAnchor *);
+tf_ec_mstatic_imp(NSLayoutXAxisAnchor, NSLayoutXAxisAnchor *);
+tf_ec_minstance_imp(NSLayoutXAxisAnchor, NSLayoutXAxisAnchor *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSLayoutXAxisAnchor);
+tf_ec_chain_valuekey_imp(NSLayoutXAxisAnchor);
 
 @end
 
@@ -785,10 +785,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSLayoutXAxisAnchor);
 
 @implementation NSLayoutYAxisAnchor (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSLayoutYAxisAnchor, NSLayoutYAxisAnchor *);
-TF_EC_MINSTANCE_IMP(NSLayoutYAxisAnchor, NSLayoutYAxisAnchor *);
+tf_ec_mstatic_imp(NSLayoutYAxisAnchor, NSLayoutYAxisAnchor *);
+tf_ec_minstance_imp(NSLayoutYAxisAnchor, NSLayoutYAxisAnchor *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSLayoutYAxisAnchor);
+tf_ec_chain_valuekey_imp(NSLayoutYAxisAnchor);
 
 @end
 
@@ -797,10 +797,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSLayoutYAxisAnchor);
 
 @implementation NSLengthFormatter (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSLengthFormatter, NSLengthFormatter *);
-TF_EC_MINSTANCE_IMP(NSLengthFormatter, NSLengthFormatter *);
+tf_ec_mstatic_imp(NSLengthFormatter, NSLengthFormatter *);
+tf_ec_minstance_imp(NSLengthFormatter, NSLengthFormatter *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSLengthFormatter);
+tf_ec_chain_valuekey_imp(NSLengthFormatter);
 
 @end
 
@@ -809,10 +809,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSLengthFormatter);
 
 @implementation NSLinguisticTagger (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSLinguisticTagger, NSLinguisticTagger *);
-TF_EC_MINSTANCE_IMP(NSLinguisticTagger, NSLinguisticTagger *);
+tf_ec_mstatic_imp(NSLinguisticTagger, NSLinguisticTagger *);
+tf_ec_minstance_imp(NSLinguisticTagger, NSLinguisticTagger *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSLinguisticTagger);
+tf_ec_chain_valuekey_imp(NSLinguisticTagger);
 
 @end
 
@@ -821,10 +821,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSLinguisticTagger);
 
 @implementation NSLocale (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSLocale, NSLocale *);
-TF_EC_MINSTANCE_IMP(NSLocale, NSLocale *);
+tf_ec_mstatic_imp(NSLocale, NSLocale *);
+tf_ec_minstance_imp(NSLocale, NSLocale *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSLocale);
+tf_ec_chain_valuekey_imp(NSLocale);
 
 @end
 
@@ -833,10 +833,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSLocale);
 
 @implementation NSLock (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSLock, NSLock *);
-TF_EC_MINSTANCE_IMP(NSLock, NSLock *);
+tf_ec_mstatic_imp(NSLock, NSLock *);
+tf_ec_minstance_imp(NSLock, NSLock *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSLock);
+tf_ec_chain_valuekey_imp(NSLock);
 
 @end
 
@@ -845,10 +845,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSLock);
 
 @implementation NSMapTable (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSMapTable, NSMapTable *);
-TF_EC_MINSTANCE_IMP(NSMapTable, NSMapTable *);
+tf_ec_mstatic_imp(NSMapTable, NSMapTable *);
+tf_ec_minstance_imp(NSMapTable, NSMapTable *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSMapTable);
+tf_ec_chain_valuekey_imp(NSMapTable);
 
 @end
 
@@ -857,10 +857,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSMapTable);
 
 @implementation NSMassFormatter (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSMassFormatter, NSMassFormatter *);
-TF_EC_MINSTANCE_IMP(NSMassFormatter, NSMassFormatter *);
+tf_ec_mstatic_imp(NSMassFormatter, NSMassFormatter *);
+tf_ec_minstance_imp(NSMassFormatter, NSMassFormatter *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSMassFormatter);
+tf_ec_chain_valuekey_imp(NSMassFormatter);
 
 @end
 
@@ -869,10 +869,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSMassFormatter);
 
 @implementation NSMetadataItem (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSMetadataItem, NSMetadataItem *);
-TF_EC_MINSTANCE_IMP(NSMetadataItem, NSMetadataItem *);
+tf_ec_mstatic_imp(NSMetadataItem, NSMetadataItem *);
+tf_ec_minstance_imp(NSMetadataItem, NSMetadataItem *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSMetadataItem);
+tf_ec_chain_valuekey_imp(NSMetadataItem);
 
 @end
 
@@ -881,10 +881,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSMetadataItem);
 
 @implementation NSMetadataQuery (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSMetadataQuery, NSMetadataQuery *);
-TF_EC_MINSTANCE_IMP(NSMetadataQuery, NSMetadataQuery *);
+tf_ec_mstatic_imp(NSMetadataQuery, NSMetadataQuery *);
+tf_ec_minstance_imp(NSMetadataQuery, NSMetadataQuery *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSMetadataQuery);
+tf_ec_chain_valuekey_imp(NSMetadataQuery);
 
 @end
 
@@ -893,10 +893,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSMetadataQuery);
 
 @implementation NSMetadataQueryAttributeValueTuple (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSMetadataQueryAttributeValueTuple, NSMetadataQueryAttributeValueTuple *);
-TF_EC_MINSTANCE_IMP(NSMetadataQueryAttributeValueTuple, NSMetadataQueryAttributeValueTuple *);
+tf_ec_mstatic_imp(NSMetadataQueryAttributeValueTuple, NSMetadataQueryAttributeValueTuple *);
+tf_ec_minstance_imp(NSMetadataQueryAttributeValueTuple, NSMetadataQueryAttributeValueTuple *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSMetadataQueryAttributeValueTuple);
+tf_ec_chain_valuekey_imp(NSMetadataQueryAttributeValueTuple);
 
 @end
 
@@ -905,10 +905,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSMetadataQueryAttributeValueTuple);
 
 @implementation NSMetadataQueryResultGroup (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSMetadataQueryResultGroup, NSMetadataQueryResultGroup *);
-TF_EC_MINSTANCE_IMP(NSMetadataQueryResultGroup, NSMetadataQueryResultGroup *);
+tf_ec_mstatic_imp(NSMetadataQueryResultGroup, NSMetadataQueryResultGroup *);
+tf_ec_minstance_imp(NSMetadataQueryResultGroup, NSMetadataQueryResultGroup *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSMetadataQueryResultGroup);
+tf_ec_chain_valuekey_imp(NSMetadataQueryResultGroup);
 
 @end
 
@@ -917,10 +917,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSMetadataQueryResultGroup);
 
 @implementation NSMethodSignature (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSMethodSignature, NSMethodSignature *);
-TF_EC_MINSTANCE_IMP(NSMethodSignature, NSMethodSignature *);
+tf_ec_mstatic_imp(NSMethodSignature, NSMethodSignature *);
+tf_ec_minstance_imp(NSMethodSignature, NSMethodSignature *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSMethodSignature);
+tf_ec_chain_valuekey_imp(NSMethodSignature);
 
 @end
 
@@ -929,10 +929,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSMethodSignature);
 
 @implementation NSMutableArray (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSMutableArray, NSMutableArray *);
-TF_EC_MINSTANCE_IMP(NSMutableArray, NSMutableArray *);
+tf_ec_mstatic_imp(NSMutableArray, NSMutableArray *);
+tf_ec_minstance_imp(NSMutableArray, NSMutableArray *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSMutableArray);
+tf_ec_chain_valuekey_imp(NSMutableArray);
 
 @end
 
@@ -941,10 +941,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSMutableArray);
 
 @implementation NSMutableAttributedString (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSMutableAttributedString, NSMutableAttributedString *);
-TF_EC_MINSTANCE_IMP(NSMutableAttributedString, NSMutableAttributedString *);
+tf_ec_mstatic_imp(NSMutableAttributedString, NSMutableAttributedString *);
+tf_ec_minstance_imp(NSMutableAttributedString, NSMutableAttributedString *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSMutableAttributedString);
+tf_ec_chain_valuekey_imp(NSMutableAttributedString);
 
 @end
 
@@ -953,10 +953,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSMutableAttributedString);
 
 @implementation NSMutableCharacterSet (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSMutableCharacterSet, NSMutableCharacterSet *);
-TF_EC_MINSTANCE_IMP(NSMutableCharacterSet, NSMutableCharacterSet *);
+tf_ec_mstatic_imp(NSMutableCharacterSet, NSMutableCharacterSet *);
+tf_ec_minstance_imp(NSMutableCharacterSet, NSMutableCharacterSet *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSMutableCharacterSet);
+tf_ec_chain_valuekey_imp(NSMutableCharacterSet);
 
 @end
 
@@ -965,10 +965,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSMutableCharacterSet);
 
 @implementation NSMutableData (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSMutableData, NSMutableData *);
-TF_EC_MINSTANCE_IMP(NSMutableData, NSMutableData *);
+tf_ec_mstatic_imp(NSMutableData, NSMutableData *);
+tf_ec_minstance_imp(NSMutableData, NSMutableData *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSMutableData);
+tf_ec_chain_valuekey_imp(NSMutableData);
 
 @end
 
@@ -977,10 +977,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSMutableData);
 
 @implementation NSMutableDictionary (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSMutableDictionary, NSMutableDictionary *);
-TF_EC_MINSTANCE_IMP(NSMutableDictionary, NSMutableDictionary *);
+tf_ec_mstatic_imp(NSMutableDictionary, NSMutableDictionary *);
+tf_ec_minstance_imp(NSMutableDictionary, NSMutableDictionary *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSMutableDictionary);
+tf_ec_chain_valuekey_imp(NSMutableDictionary);
 
 @end
 
@@ -989,10 +989,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSMutableDictionary);
 
 @implementation NSMutableIndexSet (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSMutableIndexSet, NSMutableIndexSet *);
-TF_EC_MINSTANCE_IMP(NSMutableIndexSet, NSMutableIndexSet *);
+tf_ec_mstatic_imp(NSMutableIndexSet, NSMutableIndexSet *);
+tf_ec_minstance_imp(NSMutableIndexSet, NSMutableIndexSet *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSMutableIndexSet);
+tf_ec_chain_valuekey_imp(NSMutableIndexSet);
 
 @end
 
@@ -1001,10 +1001,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSMutableIndexSet);
 
 @implementation NSMutableOrderedSet (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSMutableOrderedSet, NSMutableOrderedSet *);
-TF_EC_MINSTANCE_IMP(NSMutableOrderedSet, NSMutableOrderedSet *);
+tf_ec_mstatic_imp(NSMutableOrderedSet, NSMutableOrderedSet *);
+tf_ec_minstance_imp(NSMutableOrderedSet, NSMutableOrderedSet *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSMutableOrderedSet);
+tf_ec_chain_valuekey_imp(NSMutableOrderedSet);
 
 @end
 
@@ -1013,10 +1013,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSMutableOrderedSet);
 
 @implementation NSMutableParagraphStyle (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSMutableParagraphStyle, NSMutableParagraphStyle *);
-TF_EC_MINSTANCE_IMP(NSMutableParagraphStyle, NSMutableParagraphStyle *);
+tf_ec_mstatic_imp(NSMutableParagraphStyle, NSMutableParagraphStyle *);
+tf_ec_minstance_imp(NSMutableParagraphStyle, NSMutableParagraphStyle *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSMutableParagraphStyle);
+tf_ec_chain_valuekey_imp(NSMutableParagraphStyle);
 
 @end
 
@@ -1025,10 +1025,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSMutableParagraphStyle);
 
 @implementation NSMutableSet (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSMutableSet, NSMutableSet *);
-TF_EC_MINSTANCE_IMP(NSMutableSet, NSMutableSet *);
+tf_ec_mstatic_imp(NSMutableSet, NSMutableSet *);
+tf_ec_minstance_imp(NSMutableSet, NSMutableSet *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSMutableSet);
+tf_ec_chain_valuekey_imp(NSMutableSet);
 
 @end
 
@@ -1037,10 +1037,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSMutableSet);
 
 @implementation NSMutableString (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSMutableString, NSMutableString *);
-TF_EC_MINSTANCE_IMP(NSMutableString, NSMutableString *);
+tf_ec_mstatic_imp(NSMutableString, NSMutableString *);
+tf_ec_minstance_imp(NSMutableString, NSMutableString *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSMutableString);
+tf_ec_chain_valuekey_imp(NSMutableString);
 
 @end
 
@@ -1049,10 +1049,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSMutableString);
 
 @implementation NSMutableURLRequest (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSMutableURLRequest, NSMutableURLRequest *);
-TF_EC_MINSTANCE_IMP(NSMutableURLRequest, NSMutableURLRequest *);
+tf_ec_mstatic_imp(NSMutableURLRequest, NSMutableURLRequest *);
+tf_ec_minstance_imp(NSMutableURLRequest, NSMutableURLRequest *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSMutableURLRequest);
+tf_ec_chain_valuekey_imp(NSMutableURLRequest);
 
 @end
 
@@ -1061,10 +1061,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSMutableURLRequest);
 
 @implementation NSNetService (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSNetService, NSNetService *);
-TF_EC_MINSTANCE_IMP(NSNetService, NSNetService *);
+tf_ec_mstatic_imp(NSNetService, NSNetService *);
+tf_ec_minstance_imp(NSNetService, NSNetService *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSNetService);
+tf_ec_chain_valuekey_imp(NSNetService);
 
 @end
 
@@ -1073,10 +1073,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSNetService);
 
 @implementation NSNetServiceBrowser (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSNetServiceBrowser, NSNetServiceBrowser *);
-TF_EC_MINSTANCE_IMP(NSNetServiceBrowser, NSNetServiceBrowser *);
+tf_ec_mstatic_imp(NSNetServiceBrowser, NSNetServiceBrowser *);
+tf_ec_minstance_imp(NSNetServiceBrowser, NSNetServiceBrowser *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSNetServiceBrowser);
+tf_ec_chain_valuekey_imp(NSNetServiceBrowser);
 
 @end
 
@@ -1085,10 +1085,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSNetServiceBrowser);
 
 @implementation NSNotification (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSNotification, NSNotification *);
-TF_EC_MINSTANCE_IMP(NSNotification, NSNotification *);
+tf_ec_mstatic_imp(NSNotification, NSNotification *);
+tf_ec_minstance_imp(NSNotification, NSNotification *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSNotification);
+tf_ec_chain_valuekey_imp(NSNotification);
 
 @end
 
@@ -1097,10 +1097,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSNotification);
 
 @implementation NSNotificationCenter (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSNotificationCenter, NSNotificationCenter *);
-TF_EC_MINSTANCE_IMP(NSNotificationCenter, NSNotificationCenter *);
+tf_ec_mstatic_imp(NSNotificationCenter, NSNotificationCenter *);
+tf_ec_minstance_imp(NSNotificationCenter, NSNotificationCenter *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSNotificationCenter);
+tf_ec_chain_valuekey_imp(NSNotificationCenter);
 
 @end
 
@@ -1109,10 +1109,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSNotificationCenter);
 
 @implementation NSNotificationQueue (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSNotificationQueue, NSNotificationQueue *);
-TF_EC_MINSTANCE_IMP(NSNotificationQueue, NSNotificationQueue *);
+tf_ec_mstatic_imp(NSNotificationQueue, NSNotificationQueue *);
+tf_ec_minstance_imp(NSNotificationQueue, NSNotificationQueue *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSNotificationQueue);
+tf_ec_chain_valuekey_imp(NSNotificationQueue);
 
 @end
 
@@ -1121,10 +1121,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSNotificationQueue);
 
 @implementation NSNull (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSNull, NSNull *);
-TF_EC_MINSTANCE_IMP(NSNull, NSNull *);
+tf_ec_mstatic_imp(NSNull, NSNull *);
+tf_ec_minstance_imp(NSNull, NSNull *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSNull);
+tf_ec_chain_valuekey_imp(NSNull);
 
 @end
 
@@ -1133,10 +1133,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSNull);
 
 @implementation NSNumber (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSNumber, NSNumber *);
-TF_EC_MINSTANCE_IMP(NSNumber, NSNumber *);
+tf_ec_mstatic_imp(NSNumber, NSNumber *);
+tf_ec_minstance_imp(NSNumber, NSNumber *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSNumber);
+tf_ec_chain_valuekey_imp(NSNumber);
 
 @end
 
@@ -1145,10 +1145,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSNumber);
 
 @implementation NSNumberFormatter (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSNumberFormatter, NSNumberFormatter *);
-TF_EC_MINSTANCE_IMP(NSNumberFormatter, NSNumberFormatter *);
+tf_ec_mstatic_imp(NSNumberFormatter, NSNumberFormatter *);
+tf_ec_minstance_imp(NSNumberFormatter, NSNumberFormatter *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSNumberFormatter);
+tf_ec_chain_valuekey_imp(NSNumberFormatter);
 
 @end
 
@@ -1157,10 +1157,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSNumberFormatter);
 
 @implementation NSObject (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSObject, NSObject *);
-TF_EC_MINSTANCE_IMP(NSObject, NSObject *);
+tf_ec_mstatic_imp(NSObject, NSObject *);
+tf_ec_minstance_imp(NSObject, NSObject *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSObject);
+tf_ec_chain_valuekey_imp(NSObject);
 
 @end
 
@@ -1169,10 +1169,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSObject);
 
 @implementation NSOperation (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSOperation, NSOperation *);
-TF_EC_MINSTANCE_IMP(NSOperation, NSOperation *);
+tf_ec_mstatic_imp(NSOperation, NSOperation *);
+tf_ec_minstance_imp(NSOperation, NSOperation *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSOperation);
+tf_ec_chain_valuekey_imp(NSOperation);
 
 @end
 
@@ -1181,10 +1181,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSOperation);
 
 @implementation NSOperationQueue (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSOperationQueue, NSOperationQueue *);
-TF_EC_MINSTANCE_IMP(NSOperationQueue, NSOperationQueue *);
+tf_ec_mstatic_imp(NSOperationQueue, NSOperationQueue *);
+tf_ec_minstance_imp(NSOperationQueue, NSOperationQueue *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSOperationQueue);
+tf_ec_chain_valuekey_imp(NSOperationQueue);
 
 @end
 
@@ -1193,10 +1193,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSOperationQueue);
 
 @implementation NSOrderedSet (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSOrderedSet, NSOrderedSet *);
-TF_EC_MINSTANCE_IMP(NSOrderedSet, NSOrderedSet *);
+tf_ec_mstatic_imp(NSOrderedSet, NSOrderedSet *);
+tf_ec_minstance_imp(NSOrderedSet, NSOrderedSet *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSOrderedSet);
+tf_ec_chain_valuekey_imp(NSOrderedSet);
 
 @end
 
@@ -1205,10 +1205,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSOrderedSet);
 
 @implementation NSOrthography (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSOrthography, NSOrthography *);
-TF_EC_MINSTANCE_IMP(NSOrthography, NSOrthography *);
+tf_ec_mstatic_imp(NSOrthography, NSOrthography *);
+tf_ec_minstance_imp(NSOrthography, NSOrthography *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSOrthography);
+tf_ec_chain_valuekey_imp(NSOrthography);
 
 @end
 
@@ -1217,10 +1217,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSOrthography);
 
 @implementation NSOutputStream (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSOutputStream, NSOutputStream *);
-TF_EC_MINSTANCE_IMP(NSOutputStream, NSOutputStream *);
+tf_ec_mstatic_imp(NSOutputStream, NSOutputStream *);
+tf_ec_minstance_imp(NSOutputStream, NSOutputStream *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSOutputStream);
+tf_ec_chain_valuekey_imp(NSOutputStream);
 
 @end
 
@@ -1229,10 +1229,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSOutputStream);
 
 @implementation NSParagraphStyle (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSParagraphStyle, NSParagraphStyle *);
-TF_EC_MINSTANCE_IMP(NSParagraphStyle, NSParagraphStyle *);
+tf_ec_mstatic_imp(NSParagraphStyle, NSParagraphStyle *);
+tf_ec_minstance_imp(NSParagraphStyle, NSParagraphStyle *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSParagraphStyle);
+tf_ec_chain_valuekey_imp(NSParagraphStyle);
 
 @end
 
@@ -1241,10 +1241,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSParagraphStyle);
 
 @implementation NSPersonNameComponents (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSPersonNameComponents, NSPersonNameComponents *);
-TF_EC_MINSTANCE_IMP(NSPersonNameComponents, NSPersonNameComponents *);
+tf_ec_mstatic_imp(NSPersonNameComponents, NSPersonNameComponents *);
+tf_ec_minstance_imp(NSPersonNameComponents, NSPersonNameComponents *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSPersonNameComponents);
+tf_ec_chain_valuekey_imp(NSPersonNameComponents);
 
 @end
 
@@ -1253,10 +1253,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSPersonNameComponents);
 
 @implementation NSPersonNameComponentsFormatter (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSPersonNameComponentsFormatter, NSPersonNameComponentsFormatter *);
-TF_EC_MINSTANCE_IMP(NSPersonNameComponentsFormatter, NSPersonNameComponentsFormatter *);
+tf_ec_mstatic_imp(NSPersonNameComponentsFormatter, NSPersonNameComponentsFormatter *);
+tf_ec_minstance_imp(NSPersonNameComponentsFormatter, NSPersonNameComponentsFormatter *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSPersonNameComponentsFormatter);
+tf_ec_chain_valuekey_imp(NSPersonNameComponentsFormatter);
 
 @end
 
@@ -1265,10 +1265,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSPersonNameComponentsFormatter);
 
 @implementation NSPipe (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSPipe, NSPipe *);
-TF_EC_MINSTANCE_IMP(NSPipe, NSPipe *);
+tf_ec_mstatic_imp(NSPipe, NSPipe *);
+tf_ec_minstance_imp(NSPipe, NSPipe *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSPipe);
+tf_ec_chain_valuekey_imp(NSPipe);
 
 @end
 
@@ -1277,10 +1277,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSPipe);
 
 @implementation NSPointerArray (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSPointerArray, NSPointerArray *);
-TF_EC_MINSTANCE_IMP(NSPointerArray, NSPointerArray *);
+tf_ec_mstatic_imp(NSPointerArray, NSPointerArray *);
+tf_ec_minstance_imp(NSPointerArray, NSPointerArray *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSPointerArray);
+tf_ec_chain_valuekey_imp(NSPointerArray);
 
 @end
 
@@ -1289,10 +1289,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSPointerArray);
 
 @implementation NSPointerFunctions (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSPointerFunctions, NSPointerFunctions *);
-TF_EC_MINSTANCE_IMP(NSPointerFunctions, NSPointerFunctions *);
+tf_ec_mstatic_imp(NSPointerFunctions, NSPointerFunctions *);
+tf_ec_minstance_imp(NSPointerFunctions, NSPointerFunctions *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSPointerFunctions);
+tf_ec_chain_valuekey_imp(NSPointerFunctions);
 
 @end
 
@@ -1301,10 +1301,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSPointerFunctions);
 
 @implementation NSPort (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSPort, NSPort *);
-TF_EC_MINSTANCE_IMP(NSPort, NSPort *);
+tf_ec_mstatic_imp(NSPort, NSPort *);
+tf_ec_minstance_imp(NSPort, NSPort *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSPort);
+tf_ec_chain_valuekey_imp(NSPort);
 
 @end
 
@@ -1313,10 +1313,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSPort);
 
 @implementation NSPredicate (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSPredicate, NSPredicate *);
-TF_EC_MINSTANCE_IMP(NSPredicate, NSPredicate *);
+tf_ec_mstatic_imp(NSPredicate, NSPredicate *);
+tf_ec_minstance_imp(NSPredicate, NSPredicate *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSPredicate);
+tf_ec_chain_valuekey_imp(NSPredicate);
 
 @end
 
@@ -1325,10 +1325,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSPredicate);
 
 @implementation NSProcessInfo (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSProcessInfo, NSProcessInfo *);
-TF_EC_MINSTANCE_IMP(NSProcessInfo, NSProcessInfo *);
+tf_ec_mstatic_imp(NSProcessInfo, NSProcessInfo *);
+tf_ec_minstance_imp(NSProcessInfo, NSProcessInfo *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSProcessInfo);
+tf_ec_chain_valuekey_imp(NSProcessInfo);
 
 @end
 
@@ -1337,10 +1337,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSProcessInfo);
 
 @implementation NSProgress (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSProgress, NSProgress *);
-TF_EC_MINSTANCE_IMP(NSProgress, NSProgress *);
+tf_ec_mstatic_imp(NSProgress, NSProgress *);
+tf_ec_minstance_imp(NSProgress, NSProgress *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSProgress);
+tf_ec_chain_valuekey_imp(NSProgress);
 
 @end
 
@@ -1349,10 +1349,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSProgress);
 
 @implementation NSPropertyListSerialization (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSPropertyListSerialization, NSPropertyListSerialization *);
-TF_EC_MINSTANCE_IMP(NSPropertyListSerialization, NSPropertyListSerialization *);
+tf_ec_mstatic_imp(NSPropertyListSerialization, NSPropertyListSerialization *);
+tf_ec_minstance_imp(NSPropertyListSerialization, NSPropertyListSerialization *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSPropertyListSerialization);
+tf_ec_chain_valuekey_imp(NSPropertyListSerialization);
 
 @end
 
@@ -1361,10 +1361,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSPropertyListSerialization);
 
 @implementation NSProxy (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSProxy, NSProxy *);
-TF_EC_MINSTANCE_IMP(NSProxy, NSProxy *);
+tf_ec_mstatic_imp(NSProxy, NSProxy *);
+tf_ec_minstance_imp(NSProxy, NSProxy *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSProxy);
+tf_ec_chain_valuekey_imp(NSProxy);
 
 @end
 
@@ -1373,10 +1373,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSProxy);
 
 @implementation NSPurgeableData (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSPurgeableData, NSPurgeableData *);
-TF_EC_MINSTANCE_IMP(NSPurgeableData, NSPurgeableData *);
+tf_ec_mstatic_imp(NSPurgeableData, NSPurgeableData *);
+tf_ec_minstance_imp(NSPurgeableData, NSPurgeableData *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSPurgeableData);
+tf_ec_chain_valuekey_imp(NSPurgeableData);
 
 @end
 
@@ -1385,10 +1385,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSPurgeableData);
 
 @implementation NSRecursiveLock (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSRecursiveLock, NSRecursiveLock *);
-TF_EC_MINSTANCE_IMP(NSRecursiveLock, NSRecursiveLock *);
+tf_ec_mstatic_imp(NSRecursiveLock, NSRecursiveLock *);
+tf_ec_minstance_imp(NSRecursiveLock, NSRecursiveLock *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSRecursiveLock);
+tf_ec_chain_valuekey_imp(NSRecursiveLock);
 
 @end
 
@@ -1397,10 +1397,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSRecursiveLock);
 
 @implementation NSRegularExpression (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSRegularExpression, NSRegularExpression *);
-TF_EC_MINSTANCE_IMP(NSRegularExpression, NSRegularExpression *);
+tf_ec_mstatic_imp(NSRegularExpression, NSRegularExpression *);
+tf_ec_minstance_imp(NSRegularExpression, NSRegularExpression *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSRegularExpression);
+tf_ec_chain_valuekey_imp(NSRegularExpression);
 
 @end
 
@@ -1409,10 +1409,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSRegularExpression);
 
 @implementation NSRunLoop (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSRunLoop, NSRunLoop *);
-TF_EC_MINSTANCE_IMP(NSRunLoop, NSRunLoop *);
+tf_ec_mstatic_imp(NSRunLoop, NSRunLoop *);
+tf_ec_minstance_imp(NSRunLoop, NSRunLoop *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSRunLoop);
+tf_ec_chain_valuekey_imp(NSRunLoop);
 
 @end
 
@@ -1421,10 +1421,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSRunLoop);
 
 @implementation NSScanner (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSScanner, NSScanner *);
-TF_EC_MINSTANCE_IMP(NSScanner, NSScanner *);
+tf_ec_mstatic_imp(NSScanner, NSScanner *);
+tf_ec_minstance_imp(NSScanner, NSScanner *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSScanner);
+tf_ec_chain_valuekey_imp(NSScanner);
 
 @end
 
@@ -1433,10 +1433,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSScanner);
 
 @implementation NSSet (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSSet, NSSet *);
-TF_EC_MINSTANCE_IMP(NSSet, NSSet *);
+tf_ec_mstatic_imp(NSSet, NSSet *);
+tf_ec_minstance_imp(NSSet, NSSet *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSSet);
+tf_ec_chain_valuekey_imp(NSSet);
 
 @end
 
@@ -1445,10 +1445,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSSet);
 
 @implementation NSShadow (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSShadow, NSShadow *);
-TF_EC_MINSTANCE_IMP(NSShadow, NSShadow *);
+tf_ec_mstatic_imp(NSShadow, NSShadow *);
+tf_ec_minstance_imp(NSShadow, NSShadow *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSShadow);
+tf_ec_chain_valuekey_imp(NSShadow);
 
 @end
 
@@ -1457,10 +1457,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSShadow);
 
 @implementation NSSimpleCString (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSSimpleCString, NSSimpleCString *);
-TF_EC_MINSTANCE_IMP(NSSimpleCString, NSSimpleCString *);
+tf_ec_mstatic_imp(NSSimpleCString, NSSimpleCString *);
+tf_ec_minstance_imp(NSSimpleCString, NSSimpleCString *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSSimpleCString);
+tf_ec_chain_valuekey_imp(NSSimpleCString);
 
 @end
 
@@ -1469,10 +1469,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSSimpleCString);
 
 @implementation NSSortDescriptor (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSSortDescriptor, NSSortDescriptor *);
-TF_EC_MINSTANCE_IMP(NSSortDescriptor, NSSortDescriptor *);
+tf_ec_mstatic_imp(NSSortDescriptor, NSSortDescriptor *);
+tf_ec_minstance_imp(NSSortDescriptor, NSSortDescriptor *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSSortDescriptor);
+tf_ec_chain_valuekey_imp(NSSortDescriptor);
 
 @end
 
@@ -1481,10 +1481,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSSortDescriptor);
 
 @implementation NSStream (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSStream, NSStream *);
-TF_EC_MINSTANCE_IMP(NSStream, NSStream *);
+tf_ec_mstatic_imp(NSStream, NSStream *);
+tf_ec_minstance_imp(NSStream, NSStream *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSStream);
+tf_ec_chain_valuekey_imp(NSStream);
 
 @end
 
@@ -1493,10 +1493,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSStream);
 
 @implementation NSString (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSString, NSString *);
-TF_EC_MINSTANCE_IMP(NSString, NSString *);
+tf_ec_mstatic_imp(NSString, NSString *);
+tf_ec_minstance_imp(NSString, NSString *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSString);
+tf_ec_chain_valuekey_imp(NSString);
 
 @end
 
@@ -1505,10 +1505,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSString);
 
 @implementation NSStringDrawingContext (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSStringDrawingContext, NSStringDrawingContext *);
-TF_EC_MINSTANCE_IMP(NSStringDrawingContext, NSStringDrawingContext *);
+tf_ec_mstatic_imp(NSStringDrawingContext, NSStringDrawingContext *);
+tf_ec_minstance_imp(NSStringDrawingContext, NSStringDrawingContext *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSStringDrawingContext);
+tf_ec_chain_valuekey_imp(NSStringDrawingContext);
 
 @end
 
@@ -1517,10 +1517,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSStringDrawingContext);
 
 @implementation NSTextAttachment (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSTextAttachment, NSTextAttachment *);
-TF_EC_MINSTANCE_IMP(NSTextAttachment, NSTextAttachment *);
+tf_ec_mstatic_imp(NSTextAttachment, NSTextAttachment *);
+tf_ec_minstance_imp(NSTextAttachment, NSTextAttachment *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSTextAttachment);
+tf_ec_chain_valuekey_imp(NSTextAttachment);
 
 @end
 
@@ -1529,10 +1529,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSTextAttachment);
 
 @implementation NSTextCheckingResult (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSTextCheckingResult, NSTextCheckingResult *);
-TF_EC_MINSTANCE_IMP(NSTextCheckingResult, NSTextCheckingResult *);
+tf_ec_mstatic_imp(NSTextCheckingResult, NSTextCheckingResult *);
+tf_ec_minstance_imp(NSTextCheckingResult, NSTextCheckingResult *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSTextCheckingResult);
+tf_ec_chain_valuekey_imp(NSTextCheckingResult);
 
 @end
 
@@ -1541,10 +1541,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSTextCheckingResult);
 
 @implementation NSTextContainer (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSTextContainer, NSTextContainer *);
-TF_EC_MINSTANCE_IMP(NSTextContainer, NSTextContainer *);
+tf_ec_mstatic_imp(NSTextContainer, NSTextContainer *);
+tf_ec_minstance_imp(NSTextContainer, NSTextContainer *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSTextContainer);
+tf_ec_chain_valuekey_imp(NSTextContainer);
 
 @end
 
@@ -1553,10 +1553,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSTextContainer);
 
 @implementation NSTextStorage (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSTextStorage, NSTextStorage *);
-TF_EC_MINSTANCE_IMP(NSTextStorage, NSTextStorage *);
+tf_ec_mstatic_imp(NSTextStorage, NSTextStorage *);
+tf_ec_minstance_imp(NSTextStorage, NSTextStorage *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSTextStorage);
+tf_ec_chain_valuekey_imp(NSTextStorage);
 
 @end
 
@@ -1565,10 +1565,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSTextStorage);
 
 @implementation NSTextTab (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSTextTab, NSTextTab *);
-TF_EC_MINSTANCE_IMP(NSTextTab, NSTextTab *);
+tf_ec_mstatic_imp(NSTextTab, NSTextTab *);
+tf_ec_minstance_imp(NSTextTab, NSTextTab *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSTextTab);
+tf_ec_chain_valuekey_imp(NSTextTab);
 
 @end
 
@@ -1577,10 +1577,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSTextTab);
 
 @implementation NSThread (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSThread, NSThread *);
-TF_EC_MINSTANCE_IMP(NSThread, NSThread *);
+tf_ec_mstatic_imp(NSThread, NSThread *);
+tf_ec_minstance_imp(NSThread, NSThread *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSThread);
+tf_ec_chain_valuekey_imp(NSThread);
 
 @end
 
@@ -1589,10 +1589,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSThread);
 
 @implementation NSTimer (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSTimer, NSTimer *);
-TF_EC_MINSTANCE_IMP(NSTimer, NSTimer *);
+tf_ec_mstatic_imp(NSTimer, NSTimer *);
+tf_ec_minstance_imp(NSTimer, NSTimer *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSTimer);
+tf_ec_chain_valuekey_imp(NSTimer);
 
 @end
 
@@ -1601,10 +1601,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSTimer);
 
 @implementation NSTimeZone (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSTimeZone, NSTimeZone *);
-TF_EC_MINSTANCE_IMP(NSTimeZone, NSTimeZone *);
+tf_ec_mstatic_imp(NSTimeZone, NSTimeZone *);
+tf_ec_minstance_imp(NSTimeZone, NSTimeZone *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSTimeZone);
+tf_ec_chain_valuekey_imp(NSTimeZone);
 
 @end
 
@@ -1613,10 +1613,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSTimeZone);
 
 @implementation NSUbiquitousKeyValueStore (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSUbiquitousKeyValueStore, NSUbiquitousKeyValueStore *);
-TF_EC_MINSTANCE_IMP(NSUbiquitousKeyValueStore, NSUbiquitousKeyValueStore *);
+tf_ec_mstatic_imp(NSUbiquitousKeyValueStore, NSUbiquitousKeyValueStore *);
+tf_ec_minstance_imp(NSUbiquitousKeyValueStore, NSUbiquitousKeyValueStore *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSUbiquitousKeyValueStore);
+tf_ec_chain_valuekey_imp(NSUbiquitousKeyValueStore);
 
 @end
 
@@ -1625,10 +1625,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSUbiquitousKeyValueStore);
 
 @implementation NSUndoManager (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSUndoManager, NSUndoManager *);
-TF_EC_MINSTANCE_IMP(NSUndoManager, NSUndoManager *);
+tf_ec_mstatic_imp(NSUndoManager, NSUndoManager *);
+tf_ec_minstance_imp(NSUndoManager, NSUndoManager *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSUndoManager);
+tf_ec_chain_valuekey_imp(NSUndoManager);
 
 @end
 
@@ -1637,10 +1637,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSUndoManager);
 
 @implementation NSURL (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSURL, NSURL *);
-TF_EC_MINSTANCE_IMP(NSURL, NSURL *);
+tf_ec_mstatic_imp(NSURL, NSURL *);
+tf_ec_minstance_imp(NSURL, NSURL *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSURL);
+tf_ec_chain_valuekey_imp(NSURL);
 
 @end
 
@@ -1649,10 +1649,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSURL);
 
 @implementation NSURLAuthenticationChallenge (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSURLAuthenticationChallenge, NSURLAuthenticationChallenge *);
-TF_EC_MINSTANCE_IMP(NSURLAuthenticationChallenge, NSURLAuthenticationChallenge *);
+tf_ec_mstatic_imp(NSURLAuthenticationChallenge, NSURLAuthenticationChallenge *);
+tf_ec_minstance_imp(NSURLAuthenticationChallenge, NSURLAuthenticationChallenge *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSURLAuthenticationChallenge);
+tf_ec_chain_valuekey_imp(NSURLAuthenticationChallenge);
 
 @end
 
@@ -1661,10 +1661,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSURLAuthenticationChallenge);
 
 @implementation NSURLCache (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSURLCache, NSURLCache *);
-TF_EC_MINSTANCE_IMP(NSURLCache, NSURLCache *);
+tf_ec_mstatic_imp(NSURLCache, NSURLCache *);
+tf_ec_minstance_imp(NSURLCache, NSURLCache *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSURLCache);
+tf_ec_chain_valuekey_imp(NSURLCache);
 
 @end
 
@@ -1673,10 +1673,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSURLCache);
 
 @implementation NSURLComponents (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSURLComponents, NSURLComponents *);
-TF_EC_MINSTANCE_IMP(NSURLComponents, NSURLComponents *);
+tf_ec_mstatic_imp(NSURLComponents, NSURLComponents *);
+tf_ec_minstance_imp(NSURLComponents, NSURLComponents *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSURLComponents);
+tf_ec_chain_valuekey_imp(NSURLComponents);
 
 @end
 
@@ -1685,10 +1685,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSURLComponents);
 
 @implementation NSURLConnection (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSURLConnection, NSURLConnection *);
-TF_EC_MINSTANCE_IMP(NSURLConnection, NSURLConnection *);
+tf_ec_mstatic_imp(NSURLConnection, NSURLConnection *);
+tf_ec_minstance_imp(NSURLConnection, NSURLConnection *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSURLConnection);
+tf_ec_chain_valuekey_imp(NSURLConnection);
 
 @end
 
@@ -1697,10 +1697,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSURLConnection);
 
 @implementation NSURLCredential (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSURLCredential, NSURLCredential *);
-TF_EC_MINSTANCE_IMP(NSURLCredential, NSURLCredential *);
+tf_ec_mstatic_imp(NSURLCredential, NSURLCredential *);
+tf_ec_minstance_imp(NSURLCredential, NSURLCredential *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSURLCredential);
+tf_ec_chain_valuekey_imp(NSURLCredential);
 
 @end
 
@@ -1709,10 +1709,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSURLCredential);
 
 @implementation NSURLCredentialStorage (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSURLCredentialStorage, NSURLCredentialStorage *);
-TF_EC_MINSTANCE_IMP(NSURLCredentialStorage, NSURLCredentialStorage *);
+tf_ec_mstatic_imp(NSURLCredentialStorage, NSURLCredentialStorage *);
+tf_ec_minstance_imp(NSURLCredentialStorage, NSURLCredentialStorage *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSURLCredentialStorage);
+tf_ec_chain_valuekey_imp(NSURLCredentialStorage);
 
 @end
 
@@ -1721,10 +1721,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSURLCredentialStorage);
 
 @implementation NSURLProtectionSpace (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSURLProtectionSpace, NSURLProtectionSpace *);
-TF_EC_MINSTANCE_IMP(NSURLProtectionSpace, NSURLProtectionSpace *);
+tf_ec_mstatic_imp(NSURLProtectionSpace, NSURLProtectionSpace *);
+tf_ec_minstance_imp(NSURLProtectionSpace, NSURLProtectionSpace *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSURLProtectionSpace);
+tf_ec_chain_valuekey_imp(NSURLProtectionSpace);
 
 @end
 
@@ -1733,10 +1733,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSURLProtectionSpace);
 
 @implementation NSURLProtocol (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSURLProtocol, NSURLProtocol *);
-TF_EC_MINSTANCE_IMP(NSURLProtocol, NSURLProtocol *);
+tf_ec_mstatic_imp(NSURLProtocol, NSURLProtocol *);
+tf_ec_minstance_imp(NSURLProtocol, NSURLProtocol *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSURLProtocol);
+tf_ec_chain_valuekey_imp(NSURLProtocol);
 
 @end
 
@@ -1745,10 +1745,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSURLProtocol);
 
 @implementation NSURLQueryItem (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSURLQueryItem, NSURLQueryItem *);
-TF_EC_MINSTANCE_IMP(NSURLQueryItem, NSURLQueryItem *);
+tf_ec_mstatic_imp(NSURLQueryItem, NSURLQueryItem *);
+tf_ec_minstance_imp(NSURLQueryItem, NSURLQueryItem *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSURLQueryItem);
+tf_ec_chain_valuekey_imp(NSURLQueryItem);
 
 @end
 
@@ -1757,10 +1757,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSURLQueryItem);
 
 @implementation NSURLRequest (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSURLRequest, NSURLRequest *);
-TF_EC_MINSTANCE_IMP(NSURLRequest, NSURLRequest *);
+tf_ec_mstatic_imp(NSURLRequest, NSURLRequest *);
+tf_ec_minstance_imp(NSURLRequest, NSURLRequest *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSURLRequest);
+tf_ec_chain_valuekey_imp(NSURLRequest);
 
 @end
 
@@ -1769,10 +1769,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSURLRequest);
 
 @implementation NSURLResponse (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSURLResponse, NSURLResponse *);
-TF_EC_MINSTANCE_IMP(NSURLResponse, NSURLResponse *);
+tf_ec_mstatic_imp(NSURLResponse, NSURLResponse *);
+tf_ec_minstance_imp(NSURLResponse, NSURLResponse *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSURLResponse);
+tf_ec_chain_valuekey_imp(NSURLResponse);
 
 @end
 
@@ -1781,10 +1781,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSURLResponse);
 
 @implementation NSURLSession (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSURLSession, NSURLSession *);
-TF_EC_MINSTANCE_IMP(NSURLSession, NSURLSession *);
+tf_ec_mstatic_imp(NSURLSession, NSURLSession *);
+tf_ec_minstance_imp(NSURLSession, NSURLSession *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSURLSession);
+tf_ec_chain_valuekey_imp(NSURLSession);
 
 @end
 
@@ -1793,10 +1793,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSURLSession);
 
 @implementation NSURLSessionConfiguration (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSURLSessionConfiguration, NSURLSessionConfiguration *);
-TF_EC_MINSTANCE_IMP(NSURLSessionConfiguration, NSURLSessionConfiguration *);
+tf_ec_mstatic_imp(NSURLSessionConfiguration, NSURLSessionConfiguration *);
+tf_ec_minstance_imp(NSURLSessionConfiguration, NSURLSessionConfiguration *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSURLSessionConfiguration);
+tf_ec_chain_valuekey_imp(NSURLSessionConfiguration);
 
 @end
 
@@ -1805,10 +1805,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSURLSessionConfiguration);
 
 @implementation NSURLSessionDataTask (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSURLSessionDataTask, NSURLSessionDataTask *);
-TF_EC_MINSTANCE_IMP(NSURLSessionDataTask, NSURLSessionDataTask *);
+tf_ec_mstatic_imp(NSURLSessionDataTask, NSURLSessionDataTask *);
+tf_ec_minstance_imp(NSURLSessionDataTask, NSURLSessionDataTask *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSURLSessionDataTask);
+tf_ec_chain_valuekey_imp(NSURLSessionDataTask);
 
 @end
 
@@ -1817,10 +1817,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSURLSessionDataTask);
 
 @implementation NSURLSessionDownloadTask (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSURLSessionDownloadTask, NSURLSessionDownloadTask *);
-TF_EC_MINSTANCE_IMP(NSURLSessionDownloadTask, NSURLSessionDownloadTask *);
+tf_ec_mstatic_imp(NSURLSessionDownloadTask, NSURLSessionDownloadTask *);
+tf_ec_minstance_imp(NSURLSessionDownloadTask, NSURLSessionDownloadTask *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSURLSessionDownloadTask);
+tf_ec_chain_valuekey_imp(NSURLSessionDownloadTask);
 
 @end
 
@@ -1829,10 +1829,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSURLSessionDownloadTask);
 
 @implementation NSURLSessionStreamTask (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSURLSessionStreamTask, NSURLSessionStreamTask *);
-TF_EC_MINSTANCE_IMP(NSURLSessionStreamTask, NSURLSessionStreamTask *);
+tf_ec_mstatic_imp(NSURLSessionStreamTask, NSURLSessionStreamTask *);
+tf_ec_minstance_imp(NSURLSessionStreamTask, NSURLSessionStreamTask *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSURLSessionStreamTask);
+tf_ec_chain_valuekey_imp(NSURLSessionStreamTask);
 
 @end
 
@@ -1841,10 +1841,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSURLSessionStreamTask);
 
 @implementation NSURLSessionTask (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSURLSessionTask, NSURLSessionTask *);
-TF_EC_MINSTANCE_IMP(NSURLSessionTask, NSURLSessionTask *);
+tf_ec_mstatic_imp(NSURLSessionTask, NSURLSessionTask *);
+tf_ec_minstance_imp(NSURLSessionTask, NSURLSessionTask *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSURLSessionTask);
+tf_ec_chain_valuekey_imp(NSURLSessionTask);
 
 @end
 
@@ -1853,10 +1853,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSURLSessionTask);
 
 @implementation NSURLSessionUploadTask (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSURLSessionUploadTask, NSURLSessionUploadTask *);
-TF_EC_MINSTANCE_IMP(NSURLSessionUploadTask, NSURLSessionUploadTask *);
+tf_ec_mstatic_imp(NSURLSessionUploadTask, NSURLSessionUploadTask *);
+tf_ec_minstance_imp(NSURLSessionUploadTask, NSURLSessionUploadTask *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSURLSessionUploadTask);
+tf_ec_chain_valuekey_imp(NSURLSessionUploadTask);
 
 @end
 
@@ -1865,10 +1865,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSURLSessionUploadTask);
 
 @implementation NSUserActivity (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSUserActivity, NSUserActivity *);
-TF_EC_MINSTANCE_IMP(NSUserActivity, NSUserActivity *);
+tf_ec_mstatic_imp(NSUserActivity, NSUserActivity *);
+tf_ec_minstance_imp(NSUserActivity, NSUserActivity *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSUserActivity);
+tf_ec_chain_valuekey_imp(NSUserActivity);
 
 @end
 
@@ -1877,10 +1877,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSUserActivity);
 
 @implementation NSUserDefaults (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSUserDefaults, NSUserDefaults *);
-TF_EC_MINSTANCE_IMP(NSUserDefaults, NSUserDefaults *);
+tf_ec_mstatic_imp(NSUserDefaults, NSUserDefaults *);
+tf_ec_minstance_imp(NSUserDefaults, NSUserDefaults *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSUserDefaults);
+tf_ec_chain_valuekey_imp(NSUserDefaults);
 
 @end
 
@@ -1889,10 +1889,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSUserDefaults);
 
 @implementation NSUUID (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSUUID, NSUUID *);
-TF_EC_MINSTANCE_IMP(NSUUID, NSUUID *);
+tf_ec_mstatic_imp(NSUUID, NSUUID *);
+tf_ec_minstance_imp(NSUUID, NSUUID *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSUUID);
+tf_ec_chain_valuekey_imp(NSUUID);
 
 @end
 
@@ -1901,10 +1901,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSUUID);
 
 @implementation NSValue (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSValue, NSValue *);
-TF_EC_MINSTANCE_IMP(NSValue, NSValue *);
+tf_ec_mstatic_imp(NSValue, NSValue *);
+tf_ec_minstance_imp(NSValue, NSValue *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSValue);
+tf_ec_chain_valuekey_imp(NSValue);
 
 @end
 
@@ -1913,10 +1913,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSValue);
 
 @implementation NSValueTransformer (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSValueTransformer, NSValueTransformer *);
-TF_EC_MINSTANCE_IMP(NSValueTransformer, NSValueTransformer *);
+tf_ec_mstatic_imp(NSValueTransformer, NSValueTransformer *);
+tf_ec_minstance_imp(NSValueTransformer, NSValueTransformer *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSValueTransformer);
+tf_ec_chain_valuekey_imp(NSValueTransformer);
 
 @end
 
@@ -1925,10 +1925,10 @@ TF_EC_CHAIN_VALUEKYE_IMP(NSValueTransformer);
 
 @implementation NSXMLParser (TFEasyCoder_NS)
 
-TF_EC_MSTATIC_IMP(NSXMLParser, NSXMLParser *);
-TF_EC_MINSTANCE_IMP(NSXMLParser, NSXMLParser *);
+tf_ec_mstatic_imp(NSXMLParser, NSXMLParser *);
+tf_ec_minstance_imp(NSXMLParser, NSXMLParser *);
 
-TF_EC_CHAIN_VALUEKYE_IMP(NSXMLParser);
+tf_ec_chain_valuekey_imp(NSXMLParser);
 
 @end
 

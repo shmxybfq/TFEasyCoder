@@ -13,7 +13,7 @@
 
 #import <objc/runtime.h>
 
-#define TFKitPre tf_
+#define tf_kit_pre tf_
 
 /**
  *  代码前缀
@@ -21,10 +21,10 @@
  *  @param code 代码
  *  @return
  */
-#define TF_CODE_PRE(CODE) tf_##CODE
+#define tf_code_pre(code) tf_kit_pre##code
 
 #ifndef kdeclare_weakself
-#define kdeclare_weakself TF_WEAK_OBJ(self,weakSelf)
+#define kdeclare_weakself tf_weak_obj(self,weakSelf)
 #endif
 
 
@@ -32,46 +32,49 @@
 /**
  *  exemple :
  *  @property (nonatomic,  copy)NSString *string;
- *  TF_SYNTHESIZE_CATEGORY_PROPERTY(string , setString,OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+ *  tf_synthesize_category_property(string , setString,OBJC_ASSOCIATION_RETAIN_NONATOMIC)
  *
- *  TF_SYNTHESIZE_CATEGORY_PROPERTY_RETAIN retain属性
- *  TF_SYNTHESIZE_CATEGORY_PROPERTY_COPY copy属性
- *  TF_SYNTHESIZE_CATEGORY_PROPERTY_ASSIGN assign属性
+ *  tf_synthesize_category_property_retain retain属性
+ *  tf_synthesize_category_property_copy copy属性
+ *  tf_synthesize_category_property_assign assign属性
  *
- *  @param GETTER getter 方法名
- *  @param SETTER setter 方法名,不需要:
+ *  @param getter getter 方法名
+ *  @param settter settter 方法名,不需要:
  */
-#define TF_SYNTHESIZE_CATEGORY_PROPERTY_RETAIN(GETTER,SETTER) TF_SYNTHESIZE_CATEGORY_PROPERTY(GETTER,SETTER,OBJC_ASSOCIATION_RETAIN_NONATOMIC,id)
-#define TF_SYNTHESIZE_CATEGORY_PROPERTY_COPY(GETTER,SETTER)   TF_SYNTHESIZE_CATEGORY_PROPERTY(GETTER,SETTER,OBJC_ASSOCIATION_COPY,id)
-#define TF_SYNTHESIZE_CATEGORY_PROPERTY_ASSIGN(GETTER,SETTER) TF_SYNTHESIZE_CATEGORY_PROPERTY(GETTER,SETTER,OBJC_ASSOCIATION_ASSIGN,id)
-#define TF_SYNTHESIZE_CATEGORY_PROPERTY_BLOCK(GETTER,SETTER,TYPE)   TF_SYNTHESIZE_CATEGORY_PROPERTY(GETTER,SETTER,OBJC_ASSOCIATION_COPY,TYPE)
+#define tf_synthesize_category_property_retain(getter,settter) tf_synthesize_category_property(getter,settter,OBJC_ASSOCIATION_RETAIN_NONATOMIC,id)
 
-#define TF_SYNTHESIZE_CATEGORY_PROPERTY(GETTER,SETTER,objc_AssociationPolicy,TYPE)\
-- (TYPE)GETTER{return objc_getAssociatedObject(self, @selector(GETTER));}\
-- (void)SETTER:(TYPE)obj{objc_setAssociatedObject(self, @selector(GETTER), obj, objc_AssociationPolicy);}
+#define tf_synthesize_category_property_copy(getter,settter)   tf_synthesize_category_property(getter,settter,OBJC_ASSOCIATION_COPY,id)
+
+#define tf_synthesize_category_property_assign(getter,settter) tf_synthesize_category_property(getter,settter,OBJC_ASSOCIATION_ASSIGN,id)
+
+#define tf_synthesize_category_property_block(getter,settter,TYPE)   tf_synthesize_category_property(getter,settter,OBJC_ASSOCIATION_COPY,TYPE)
+
+#define tf_synthesize_category_property(getter,settter,objc_AssociationPolicy,TYPE)\
+- (TYPE)getter{return objc_getAssociatedObject(self, @selector(getter));}\
+- (void)settter:(TYPE)obj{objc_setAssociatedObject(self, @selector(getter), obj, objc_AssociationPolicy);}
 
 /**
  *  exemple :
  *  @property (nonatomic,assign)CGPoint point;
- *  TF_SYNTHESIZE_CATEGORY_PROPERTY_CTYPE(point,setPoint,CGPoint)
+ *  tf_synthesize_category_property_ctype(point,setPoint,CGPoint)
  *
- *  TF_SYNTHESIZE_CATEGORY_PROPERTY_CTYPE
+ *  tf_synthesize_category_property_ctype
  *
- *  @param GETTER getter 方法名
- *  @param SETTER setter 方法名字
+ *  @param getter getter 方法名
+ *  @param settter settter 方法名字
  *  @param CTYPE 数据类型
  *
  */
-#define TF_SYNTHESIZE_CATEGORY_PROPERTY_CTYPE(GETTER,SETTER,CTYPE)\
--(CTYPE)GETTER{\
-NSValue *associate_value = objc_getAssociatedObject(self, @selector(GETTER));\
-CTYPE  value;\
+#define tf_synthesize_category_property_ctype(getter,settter,ctype)\
+-(ctype)getter{\
+NSValue *associate_value = objc_getAssociatedObject(self, @selector(getter));\
+ctype  value;\
 [associate_value getValue:&value];\
 return value;\
 }\
--(void)SETTER:(CTYPE)value{\
-NSValue *associate_value = [NSValue value:&value withObjCType:@encode(CTYPE)];\
-objc_setAssociatedObject(self, @selector(GETTER), associate_value, OBJC_ASSOCIATION_ASSIGN);\
+-(void)settter:(ctype)value{\
+NSValue *associate_value = [NSValue value:&value withObjCType:@encode(ctype)];\
+objc_setAssociatedObject(self, @selector(getter), associate_value, OBJC_ASSOCIATION_ASSIGN);\
 }
 
 
@@ -81,8 +84,8 @@ objc_setAssociatedObject(self, @selector(GETTER), associate_value, OBJC_ASSOCIAT
  *  @param TARGET 实例
  *  @param NAME   弱实例名字
  */
-#ifndef TF_WEAK_OBJ
-#define TF_WEAK_OBJ(TARGET,NAME)  __weak typeof(TARGET) NAME = TARGET;
+#ifndef tf_weak_obj
+#define tf_weak_obj(target,name)  __weak typeof(target) name = target;
 #endif
 
 
@@ -92,11 +95,11 @@ objc_setAssociatedObject(self, @selector(GETTER), associate_value, OBJC_ASSOCIAT
  *  [UIView easyCoder:^(UIView *ins) {
  *
  *  }];
- *  @param CLASS_NAME UIView
- *  @param CLASS_TYPE UIView *
+ *  @param class_name UIView
+ *  @param class_type UIView *
  *  @return null
  */
-#define TF_EC_BLOCK(CLASS_NAME,CLASS_TYPE) typedef void(^CLASS_NAME##EasyCoderBlock) (CLASS_TYPE ins)
+#define tf_ec_block(class_name,class_type) typedef void(^class_name##EasyCoderBlock) (class_type ins)
 /**
  *  修改下方的"easyCoder"以全局修改TFEasyCoder中所有方法的调用方式，例如下面的示例代码
  *  [UIView easyCoder:^(UIView *ins) {
@@ -104,13 +107,13 @@ objc_setAssociatedObject(self, @selector(GETTER), associate_value, OBJC_ASSOCIAT
  *  }];
  *  +(UILabel *)easyCoder:(UILabelEasyCoderBlock)block;
  */
-#define TF_EC_MNAME easyCoder
-#define TF_EC_MSTATIC_INT(CLASS_NAME,CLASS_TYPE) +(CLASS_TYPE)TF_EC_MNAME:(CLASS_NAME##EasyCoderBlock)block
-#define TF_EC_MSTATIC_IMP(CLASS_NAME,CLASS_TYPE)\
-+(CLASS_TYPE)TF_EC_MNAME:(CLASS_NAME##EasyCoderBlock)block{\
+#define tf_ec_mname easyCoder
+#define tf_ec_mstatic_int(class_name,class_type) +(class_type)tf_ec_mname:(class_name##EasyCoderBlock)block
+#define tf_ec_mstatic_imp(class_name,class_type)\
++(class_type)tf_ec_mname:(class_name##EasyCoderBlock)block{\
 return [NSObject tf_execute:[self class] back:^(id ins) {\
 if (block) {\
-block((CLASS_TYPE)ins);\
+block((class_type)ins);\
 }\
 }];\
 }
@@ -118,9 +121,9 @@ block((CLASS_TYPE)ins);\
 /**
  *  -(UILabel *)easyCoder:(UILabelEasyCoderBlock)block;
  */
-#define TF_EC_MINSTANCE_INT(CLASS_NAME,CLASS_TYPE) -(CLASS_TYPE)TF_EC_MNAME:(CLASS_NAME##EasyCoderBlock)block
-#define TF_EC_MINSTANCE_IMP(CLASS_NAME,CLASS_TYPE)\
--(CLASS_TYPE)TF_EC_MNAME:(CLASS_NAME##EasyCoderBlock)block{\
+#define tf_ec_minstance_int(class_name,class_type) -(class_type)tf_ec_mname:(class_name##EasyCoderBlock)block
+#define tf_ec_minstance_imp(class_name,class_type)\
+-(class_type)tf_ec_mname:(class_name##EasyCoderBlock)block{\
 if (block) {\
 __weak typeof(self) weakSelf = self;\
 block(weakSelf);\
@@ -139,12 +142,12 @@ return self;\
  *       };
  *   }
  */
-#define TF_EC_CHAIN_PROP_INT(CLASS,PTYPE,PROPERTY) -(CLASS *(^)(PTYPE  PROPERTY))set_##PROPERTY;
-#define TF_EC_CHAIN_PROP_IMP(CLASS,PTYPE,PROPERTY) \
--(CLASS *(^)(PTYPE  PROPERTY))set_##PROPERTY{\
+#define tf_ec_chain_prop_int(class,ptype,property) -(class *(^)(ptype  property))set_##property;
+#define tf_ec_chain_prop_imp(class,ptype,property) \
+-(class *(^)(ptype  property))set_##property{\
 __weak typeof(self) weakSelf = self;\
-return ^(PTYPE  PROPERTY){\
-weakSelf.PROPERTY = PROPERTY;\
+return ^(ptype  property){\
+weakSelf.property = property;\
 return weakSelf;\
 };\
 }
@@ -152,13 +155,13 @@ return weakSelf;\
 /**
  *  
  *
- *  @param CLASS <#CLASS description#>
+ *  @param CLASS
  *
- *  @return <#return value description#>
+ *  @return 
  */
-#define TF_EC_CHAIN_VALUEKYE_INT(CLASS) -(CLASS *(^)(id value,NSString *key))set_ValueKey;
-#define TF_EC_CHAIN_VALUEKYE_IMP(CLASS)\
--(CLASS *(^)(id value,NSString *key))set_ValueKey{\
+#define tf_ec_chain_valuekey_int(class) -(class *(^)(id value,NSString *key))set_ValueKey;
+#define tf_ec_chain_valuekey_imp(class)\
+-(class *(^)(id value,NSString *key))set_ValueKey{\
 __weak typeof(self) weakSelf = self;\
 return ^(id value,NSString *key){\
 [NSObject tf_setTargetValue:weakSelf withValue:value forKey:key];\
@@ -171,19 +174,18 @@ return weakSelf;\
  *  为你的类添加easyCoder方法(.h文件中调用)
  *  @return
  */
-#define TF_DEFINE_TFEASYCODER_INT(CLASS_NAME,CLASS_TYPE)\
-TF_EC_BLOCK(CLASS_NAME,CLASS_TYPE);\
-TF_EC_MSTATIC_INT(CLASS_NAME, CLASS_TYPE);\
-TF_EC_MINSTANCE_INT(CLASS_NAME,CLASS_TYPE);\
-TF_EC_CHAIN_VALUEKYE_INT(CLASS_NAME);
+#define tf_define_tfeasycoder_int(class_name,class_type)\
+tf_ec_mstatic_int(class_name, class_type);\
+tf_ec_minstance_int(class_name,class_type);\
+tf_ec_chain_valuekey_int(class_name);
 /**
  *  为你的类添加easyCoder方法(.m文件中调用)
  *  @return
  */
-#define TF_DEFINE_TFEASYCODER_IMP(CLASS_NAME,CLASS_TYPE)\
-TF_EC_MSTATIC_IMP(CLASS_NAME, CLASS_TYPE);\
-TF_EC_MINSTANCE_IMP(CLASS_NAME, CLASS_TYPE);\
-TF_EC_CHAIN_VALUEKYE_IMP(CLASS_NAME);\
+#define tf_define_tfeasycoder_imp(class_name,class_type)\
+tf_ec_mstatic_imp(class_name, class_type);\
+tf_ec_minstance_imp(class_name, class_type);\
+tf_ec_chain_valuekey_imp(class_name);\
 
 
 
@@ -194,7 +196,7 @@ TF_EC_CHAIN_VALUEKYE_IMP(CLASS_NAME);\
  *  @param REASON 异常原因
  */
 #ifndef TFAssertParamNil
-#define TFAssertParamNil(FLOG,REASON) TFAssert(FLOG,@"unknown name",REASON)
+#define TFAssertParamNil(flog,reason) TFAssert(flog,@"unknown name",reason)
 #endif
 
 
@@ -206,7 +208,7 @@ TF_EC_CHAIN_VALUEKYE_IMP(CLASS_NAME);\
  *
  */
 #ifndef TFAssertWarning
-#define TFAssertWarning(FLOG,REASON) if (!FLOG) NSLog(@"************TFUIWarning:reason %@",REASON);
+#define TFAssertWarning(flog,reason) if (!flog) NSLog(@"************TFUIWarning:reason %@",reason);
 #endif
 
 /**
@@ -217,7 +219,7 @@ TF_EC_CHAIN_VALUEKYE_IMP(CLASS_NAME);\
  *  @param REASON 异常原因
  */
 #ifndef TFAssert
-#define TFAssert(FLOG,NAME,REASON) if (!FLOG)@throw [NSException exceptionWithName:NAME reason:REASON userInfo:nil];
+#define TFAssert(flog,name,reason) if (!flog)@throw [NSException exceptionWithName:name reason:reason userInfo:nil];
 #endif
 
 /**
@@ -227,12 +229,12 @@ TF_EC_CHAIN_VALUEKYE_IMP(CLASS_NAME);\
  *  @return 属性
  */
 
-#define TF_LAZYLOAD_OBJC(__CLASS,__PROPERTY)\
-TF_SYNTHESIZE(__PROPERTY);\
--(__CLASS *)__PROPERTY{\
-if (!_##__PROPERTY)\
-_##__PROPERTY = [[__CLASS alloc]init];\
-return _##__PROPERTY;}
+#define tf_lazyload_objc(class,property)\
+tf_synthesize(property);\
+-(class *)property{\
+if (!_##property)\
+_##property = [[class alloc]init];\
+return _##property;}
 
 /**
  *  懒加载属性,class 初始化方法为init,使用方法见github
@@ -241,13 +243,13 @@ return _##__PROPERTY;}
  *  @param __BLOCK 一个返回属性
  *  @return 属性
  */
-#define TF_LAZYLOAD_OBJC_CUS(__CLASS,__PROPERTY,__BLOCK)\
-TF_SYNTHESIZE(__PROPERTY);\
--(__CLASS *)__PROPERTY{\
-if (!_##__PROPERTY)\
-_##__PROPERTY = [[__CLASS alloc]init];\
-__BLOCK(_##__PROPERTY);\
-return _##__PROPERTY;}\
+#define tf_lazyload_objc_cus(class,property,block)\
+tf_synthesize(property);\
+-(class *)property{\
+if (!_##property)\
+_##property = [[class alloc]init];\
+block(_##property);\
+return _##property;}\
 
 
 /**
@@ -255,17 +257,15 @@ return _##__PROPERTY;}\
  *
  *  @param __PROPERTY 属性
  */
-#define TF_SYNTHESIZE(__PROPERTY) @synthesize __PROPERTY = _##__PROPERTY;
+#define tf_synthesize(property) @synthesize property = _##property;
 
 
 /**
  *  TFlog
  *
  */
-#ifdef TFLog
+#ifndef TFLog
 #   define TFLog(fmt, ...) NSLog((@"function:%s,line:%d" fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
-#else
-#   define TFLog(...)
 #endif
 
 
