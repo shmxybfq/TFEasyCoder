@@ -17,13 +17,13 @@
 
 @implementation TmpObject
 
-TF_LAZYLOAD_OBJC_CUS(UILabel, titleLabel1, ^(UILabel *ins){
+tf_lazyload_objc_cus(UILabel, titleLabel1, ^(UILabel *ins){
     ins.text = @"text1";
     ins.textColor = [UIColor redColor];
     ins.textAlignment = NSTextAlignmentRight;
 });
 
-TF_LAZYLOAD_OBJC_CUS(UILabel, titleLabel2, ^(UILabel *ins){
+tf_lazyload_objc_cus(UILabel, titleLabel2, ^(UILabel *ins){
     ins.text = @"text2";
     ins.textColor = [UIColor lightGrayColor];
     ins.textAlignment = NSTextAlignmentLeft;

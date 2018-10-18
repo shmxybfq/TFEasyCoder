@@ -13,15 +13,19 @@
 
 #import <objc/runtime.h>
 
-#define tf_kit_pre tf_
-
 /**
  *  代码前缀
- *  修改下方的"tf_"以全局修改TFKit中所有方法的调用前缀
+ *  框架默认以tf_作为代码前缀,如果你想自定义代码前缀,请在引入框架前重新定一个新的代码前缀宏定义,类似下面
+ 
+ #define tf_code_pre(code) xxx_##code //将xxx_换成你自己的前缀
+ #import "TFKit.h"
+ 
  *  @param code 代码
  *  @return
  */
-#define tf_code_pre(code) tf_kit_pre##code
+#ifndef tf_code_pre
+#define tf_code_pre(code) tf_##code
+#endif
 
 #ifndef kdeclare_weakself
 #define kdeclare_weakself tf_weak_obj(self,weakSelf)

@@ -29,13 +29,14 @@
 /**
  *  懒加载宏
  */
-TF_LAZYLOAD_OBJC(UIImageView, background);
 
-TF_LAZYLOAD_OBJC(UIImageView, icon);
-TF_LAZYLOAD_OBJC(UIImageView, iconCover);
-TF_LAZYLOAD_OBJC(UIImageView, iconSign);
+tf_lazyload_objc(UIImageView, background);
 
-TF_LAZYLOAD_OBJC(UIImageView, diamondSign);
+tf_lazyload_objc(UIImageView, icon);
+tf_lazyload_objc(UIImageView, iconCover);
+tf_lazyload_objc(UIImageView, iconSign);
+
+tf_lazyload_objc(UIImageView, diamondSign);
 
 -(instancetype)init
 {
