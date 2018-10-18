@@ -24,12 +24,12 @@ typedef void(^EasyCoderBlock) (void);
 @implementation NSObject (TestCategory)
 
 
-TF_SYNTHESIZE_CATEGORY_PROPERTY_COPY(string, setString);//为copy类型属性添加实现
-TF_SYNTHESIZE_CATEGORY_PROPERTY_BLOCK(block, setBlock, EasyCoderBlock);//为block类型属性添加实现
-TF_SYNTHESIZE_CATEGORY_PROPERTY_ASSIGN(delegate, setDelegate);//为assign类型属性添加实现
-TF_SYNTHESIZE_CATEGORY_PROPERTY_RETAIN(dataSource, setDataSource);//为strong类型属性添加实现
-TF_SYNTHESIZE_CATEGORY_PROPERTY_CTYPE(frame, setFrame, typeof(CGRect));//为特殊类型属性添加实现(比如stuct)
-TF_SYNTHESIZE_CATEGORY_PROPERTY(isSelected, setIsSelected, OBJC_ASSOCIATION_RETAIN_NONATOMIC, NSNumber*);//为自定义类型属性添加实现
+tf_synthesize_category_property_copy(string, setString);//为copy类型属性添加实现
+tf_synthesize_category_property_block(block, setBlock, EasyCoderBlock);//为block类型属性添加实现
+tf_synthesize_category_property_assign(delegate, setDelegate);//为assign类型属性添加实现
+tf_synthesize_category_property_retain(dataSource, setDataSource);//为strong类型属性添加实现
+tf_synthesize_category_property_ctype(frame, setFrame, typeof(CGRect));//为特殊类型属性添加实现(比如stuct)
+tf_synthesize_category_property(isSelected, setIsSelected, OBJC_ASSOCIATION_RETAIN_NONATOMIC, NSNumber*);//为自定义类型属性添加实现
 
 @end
 

@@ -22,14 +22,17 @@
 
 @end
 
+
+
 @implementation ViewController
 
 
 /**
  *  懒加载宏
  */
-TF_LAZYLOAD_OBJC(UITableView, tableView);
-TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
+
+tf_lazyload_objc(UITableView, tableView);
+tf_lazyload_objc(NSMutableArray, dataSource);
 
 
 - (void)viewDidLoad {
@@ -65,14 +68,14 @@ TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
     [self.tableView easyCoder:^(UITableView *ins) {
         
         [weakSelf.view addSubview:ins];
-        ins
-        .set_tableHeaderView(weakSelf.tableHeader)
-        .set_delegate(weakSelf)
-        .set_dataSource(weakSelf)
-        .set_rowHeight(Size6SNEW(96))
-        .set_frame([UIScreen mainScreen].bounds)
-        .set_separatorStyle(UITableViewCellSeparatorStyleNone)
-        .set_backgroundColor([[UIColor lightGrayColor]colorWithAlphaComponent:0.1]);
+//        ins
+//        .set_tableHeaderView(weakSelf.tableHeader)
+//        .set_delegate(weakSelf)
+//        .set_dataSource(weakSelf)
+//        .set_rowHeight(Size6SNEW(96))
+//        .set_frame([UIScreen mainScreen].bounds)
+//        .set_separatorStyle(UITableViewCellSeparatorStyleNone)
+//        .set_backgroundColor([[UIColor lightGrayColor]colorWithAlphaComponent:0.1]);
     }];
     
     /**
@@ -106,6 +109,7 @@ TF_LAZYLOAD_OBJC(NSMutableArray, dataSource);
     /**
      *  打印当前已存在的视图tree(UI开发工具)
      */
+    
     [self.view tf_logSubviews:^NSArray *{
         /**
          *  这里返回你要在视图tree里面显示的视图属性,返回nil则默认打印 @[@"frame",@"hidden",@"backgroundColor",@"userInteractionEnabled"]

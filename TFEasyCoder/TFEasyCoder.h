@@ -9,7 +9,6 @@
 #ifndef TFEasyCoder_h
 #define TFEasyCoder_h
 
-
 #import "TFKit.h"
 
 #import "TFKit.h"
