@@ -18,8 +18,12 @@
  *
  */
 +(NSString *)tf_code_pre(clearString):(NSString *)string{
-    NSString *clearString = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    return clearString;
+    NSCharacterSet *whitespaces = [NSCharacterSet whitespaceCharacterSet];
+    NSPredicate *noEmptyStrings = [NSPredicate predicateWithFormat:@"SELF != ''"];
+    NSArray *parts = [string componentsSeparatedByCharactersInSet:whitespaces];
+    NSArray *filteredArray = [parts filteredArrayUsingPredicate:noEmptyStrings];
+    string = [filteredArray componentsJoinedByString:@" "];
+    return string;
 }
 -(NSString *)tf_code_pre(clearString){
     return  [NSString tf_code_pre(clearString):self];
