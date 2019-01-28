@@ -39,6 +39,9 @@
 +(NSString *)tf_code_pre(appVersion);
 @property (nonatomic,  copy,readonly)NSString *tf_code_pre(appVersion);
 
++(NSString *)tf_code_pre(appBundleVersion);
+@property (nonatomic,  copy,readonly)NSString *tf_code_pre(appBundleVersion);
+
 #pragma mark 屏幕尺寸的获取 --
 /**
  *  zsl-wdl

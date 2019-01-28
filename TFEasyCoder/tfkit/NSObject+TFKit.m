@@ -56,6 +56,14 @@ static id _shareInstance;
     return [NSObject tf_code_pre(appVersion)];
 }
 
++(NSString *)tf_code_pre(appBundleVersion){
+    NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
+    NSString *version = [info objectForKey:@"CFBundleVersion"];
+    return version;
+}
+-(NSString *)tf_code_pre(appBundleVersion){
+    return [NSObject tf_code_pre(appBundleVersion)];
+}
 
 /**
  *  zsl-wdl
@@ -167,6 +175,17 @@ static id _shareInstance;
     if ([platform isEqualToString:@"iPhone9,3"]) return @"iPhone 7";
     if ([platform isEqualToString:@"iPhone9,4"]) return @"iPhone 7 Plus";
     
+    if ([platform isEqualToString:@"iPhone10,1"]) return @"iPhone 8 (A1863/A1906/A1907)";         // Global
+    if ([platform isEqualToString:@"iPhone10,2"]) return @"iPhone 8 Plus (A1864/A1898/A1899)";    // Global
+    if ([platform isEqualToString:@"iPhone10,3"]) return @"iPhone X (A1865/A1902)";         // Global
+    if ([platform isEqualToString:@"iPhone10,4"]) return @"iPhone 8 (A1905)";         // GSM
+    if ([platform isEqualToString:@"iPhone10,5"]) return @"iPhone 8 Plus (A1897)";    // GSM
+    if ([platform isEqualToString:@"iPhone10,6"]) return @"iPhone X (A1901)";         // GSM
+    if ([platform isEqualToString:@"iPhone11,2"]) return @"iPhone XS (A1920/A2097/A2098/A2100)";
+    if ([platform isEqualToString:@"iPhone11,4"]) return @"iPhone XS Max";
+    if ([platform isEqualToString:@"iPhone11,6"]) return @"iPhone XS Max (A1921/A2101/A2102/A2104)";
+    if ([platform isEqualToString:@"iPhone11,8"]) return @"iPhone XR (A1984/A2105/A2106/A2108)";
+    
     //iwatch
     if ([platform isEqualToString:@"Watch1,1"]) return @"Apple Watch 38mm";
     if ([platform isEqualToString:@"Watch1,2"]) return @"Apple Watch 42mm";
@@ -219,6 +238,9 @@ static id _shareInstance;
     if ([platform isEqualToString:@"iPad6,4"])   return @"iPad Pro (9.7 inch)";
     if ([platform isEqualToString:@"iPad6,7"])   return @"iPad Pro (12.9 inch)";
     if ([platform isEqualToString:@"iPad6,8"])   return @"iPad Pro (12.9 inch)";
+    
+    if ([platform isEqualToString:@"iPad6,11"])   return @"iPad (5th generation) (A1822)";
+    if ([platform isEqualToString:@"iPad6,12"])   return @"iPad (5th generation) (A1823)";
     
     //appletv
     if ([platform isEqualToString:@"AppleTV2,1"])   return @"Apple TV 2";
