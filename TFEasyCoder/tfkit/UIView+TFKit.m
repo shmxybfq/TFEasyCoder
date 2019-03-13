@@ -44,6 +44,14 @@
 @dynamic tf_code_pre(backgroundView2);
 @dynamic tf_code_pre(backgroundView3);
 
+#pragma mark view操作 --
++(instancetype)tf_code_pre(xib){
+    NSString *cls = NSStringFromClass([self class]);
+    UIView *ins = [[NSBundle mainBundle]loadNibNamed:cls
+                                               owner:nil
+                                             options:nil].firstObject;
+    return ins;
+}
 
 /**
  *  设备尺寸操作,提供静态方法访问和属性访问

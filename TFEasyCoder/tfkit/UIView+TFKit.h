@@ -18,6 +18,8 @@ typedef NS_ENUM(NSInteger,LineDirection) {
 
 @interface UIView (TFKit)
 
+#pragma mark view操作 --
++(instancetype)tf_code_pre(xib);
 
 #pragma mark 屏幕尺寸的获取 --
 /**
