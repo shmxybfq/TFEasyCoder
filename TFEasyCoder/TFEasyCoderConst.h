@@ -24,7 +24,7 @@
  *  @return
  */
 #ifndef tf_code_pre
-#define tf_code_pre(code) x_##code
+#define tf_code_pre(code) tf_##code
 #endif
 
 #ifndef kdeclare_weakself
