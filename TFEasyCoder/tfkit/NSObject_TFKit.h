@@ -9,6 +9,38 @@
 #ifndef NSObject_TFKit_h
 #define NSObject_TFKit_h
 
+
+//判断系统
+#define x_iOS7    ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+#define x_iOS8    ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0)
+#define x_iOS9    ([[UIDevice currentDevice].systemVersion doubleValue] >= 9.0)
+#define x_iOS10   ([[UIDevice currentDevice].systemVersion doubleValue] >= 10.0)
+#define x_iOS11   ([[UIDevice currentDevice].systemVersion doubleValue] >= 11.0)
+#define x_iOS12   ([[UIDevice currentDevice].systemVersion doubleValue] >= 12.0)
+#define x_iOS(Version)   ([[UIDevice currentDevice].systemVersion doubleValue] >= Version)
+
+//判断机型
+#define x_iPhoneX (([[UIApplication sharedApplication] statusBarFrame].size.height == 44.0f))
+#define x_iPad ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+
+//常用尺寸
+#define x_statusBarHeight (x_iPhoneX?44:20)
+#define x_navBarHeight (x_iPhoneX?88:64)
+#define x_tabBarHeight (x_iPhoneX?83:49)
+#define x_sb [UIScreen mainScreen].bounds
+#define x_sbs [UIScreen mainScreen].bounds.size
+#define x_sbo [UIScreen mainScreen].bounds.origin
+#define x_sbw [UIScreen mainScreen].bounds.size.width
+#define x_sbh [UIScreen mainScreen].bounds.size.height
+
+//判断屏幕尺寸
+#define inch3_5 (MAX(x_sbw, x_sbh) == 480)
+#define inch4_0 (MAX(x_sbw, x_sbh) == 568)
+#define inch4_7 (MAX(x_sbw, x_sbh) == 667)
+#define inch5_5 (MAX(x_sbw, x_sbh) == 736)
+#define inch5_8 (MAX(x_sbw, x_sbh) == 812)
+
+
 /**
  *  zsl-wdl
  *  系统版本号和提供静态方法访问和属性访问
@@ -36,5 +68,7 @@ static inline UIApplication * tf_code_pre(application)(){
 static inline id tf_code_pre(appDelegate)(){
     return [UIApplication sharedApplication].delegate;
 }
+
+
 
 #endif /* NSObject_TFKit_h */
