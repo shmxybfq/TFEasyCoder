@@ -277,9 +277,9 @@ return _##property;}\
  *
  */
 #ifdef DEBUG
-#   define x_Log(fmt, ...) NSLog((@"\nfunction:%s,line:%d\n" fmt @"\n"), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#   define x_log(fmt, ...) NSLog((@"\nfunction:%s,line:%d\n" fmt @"\n"), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #else
-#   define XLog(...)
+#   define x_log(...)
 #endif
 
 
