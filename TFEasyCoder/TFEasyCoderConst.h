@@ -272,6 +272,16 @@ return _##property;}\
 #   define TFLog(fmt, ...) NSLog((@"function:%s,line:%d" fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #endif
 
+/**
+ *  TFlog
+ *
+ */
+#ifdef DEBUG
+#   define x_Log(fmt, ...) NSLog((@"\nfunction:%s,line:%d\n" fmt @"\n"), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#   define XLog(...)
+#endif
+
 
 
 #endif /* TFEasyCoderConst_h */
