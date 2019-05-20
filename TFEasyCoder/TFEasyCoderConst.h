@@ -27,10 +27,6 @@
 #define tf_code_pre(code) tf_##code
 #endif
 
-#ifndef kdeclare_weakself
-#define kdeclare_weakself tf_weak_obj(self,weakSelf)
-#endif
-
 
 
 /**
@@ -90,6 +86,23 @@ objc_setAssociatedObject(self, @selector(getter), associate_value, OBJC_ASSOCIAT
  */
 #ifndef tf_weak_obj
 #define tf_weak_obj(target,name)  __weak typeof(target) name = target;
+#endif
+
+/**
+ *  weak obj
+ *  @param TARGET 实例
+ *  @param NAME   弱实例名字
+ */
+#ifndef tf_weak
+#define tf_weak(target)  __weak typeof(target) weak##target = target;
+#endif
+
+//#ifndef tf_weak_obj
+//#define kdeclare_weakself tf_weak_obj(self,weakSelf)
+//#endif
+
+#ifndef kdeclare_weakself
+#define kdeclare_weakself tf_weak_obj(self,weakSelf)
 #endif
 
 

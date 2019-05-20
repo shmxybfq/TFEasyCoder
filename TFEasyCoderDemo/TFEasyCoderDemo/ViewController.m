@@ -40,8 +40,6 @@ tf_lazyload_objc(NSMutableArray, dataSource);
     [TFEasyCoderConfigue shareInstance].TFDebug_VCDidAppearSubviewRandomColor = YES;
     kdeclare_weakself;
   
-    
-  
     /**
      *  创建自定义对象
      *
