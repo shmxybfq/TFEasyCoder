@@ -13,7 +13,7 @@
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-
+#import "TFEasyCoderConst.h"
 /**
  *  UserDefaults 获取对象
  *  UserDefaultsGet 查
@@ -24,16 +24,16 @@
 #define UserDefaults [NSUserDefaults standardUserDefaults]
 #endif
 
-#ifndef UserDefaults
-#define UserDefaultsGet(key) [UserDefaults objectForKey:key]
+#ifndef UserDefaultsGet
+#define UserDefaultsGet(key) [UserDefaults objectForKey:key];
 #endif
 
-#ifndef UserDefaults
+#ifndef UserDefaultsSet
 #define UserDefaultsSet(obj,key) [UserDefaults setObject:obj forKey:key];\
 [UserDefaults synchronize];
 #endif
 
-#ifndef UserDefaults
+#ifndef UserDefaultsRemove
 #define UserDefaultsRemove(key) [UserDefaults removeObjectForKey:key];\
 [UserDefaults synchronize];
 #endif
@@ -46,7 +46,7 @@
  *  @param min 分页最小值
  *  @return 处理完成字符串
  */
-static inline NSString * x_pageIndex(NSUInteger count,NSUInteger countPerPage,NSUInteger min){
+static inline NSString * tf_code_pre(pageIndex)(NSUInteger count,NSUInteger countPerPage,NSUInteger min){
     if (count <= 0) return [NSString stringWithFormat:@"%@",@(min)];
     double page = count / [[NSString stringWithFormat:@"%@",@(countPerPage)]doubleValue];
     double pageNow = ceil(page);
