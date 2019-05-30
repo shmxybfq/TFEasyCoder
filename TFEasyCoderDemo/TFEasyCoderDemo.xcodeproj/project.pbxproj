@@ -104,6 +104,8 @@
 		20023684217895D700CBC446 /* UIActionSheet+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+TFKit.m"; sourceTree = "<group>"; };
 		20023685217895D700CBC446 /* UIAlertView+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+TFKit.m"; sourceTree = "<group>"; };
 		20023686217895D700CBC446 /* UIViewController+TFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TFKit.m"; sourceTree = "<group>"; };
+		90AF69F0229F72400081946A /* TFGCDKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFGCDKit.h; sourceTree = "<group>"; };
+		90AF69F2229F74C30081946A /* TFDevKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFDevKit.h; sourceTree = "<group>"; };
 		CD1674021DC87BCF00969C21 /* NSObject+TFExecute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TFExecute.h"; sourceTree = "<group>"; };
 		CD1674031DC87BCF00969C21 /* NSObject+TFExecute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TFExecute.m"; sourceTree = "<group>"; };
 		CD1674041DC87BCF00969C21 /* TFEasyCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFEasyCoder.h; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				20023681217895D700CBC446 /* NSDictionary+TFLogChinese.h */,
 				2002366F217895D700CBC446 /* NSDictionary+TFLogChinese.m */,
 				2002367C217895D700CBC446 /* NSObject_TFKit.h */,
+				90AF69F0229F72400081946A /* TFGCDKit.h */,
 				20023678217895D700CBC446 /* NSObject+TFGCDKit.h */,
 				20023668217895D700CBC446 /* NSObject+TFGCDKit.m */,
 				20023680217895D700CBC446 /* NSObject+TFKit.h */,
@@ -222,6 +225,7 @@
 				2002367E217895D700CBC446 /* UIView_TFKit.h */,
 				2002367D217895D700CBC446 /* UIView+TFKit.h */,
 				20023661217895D700CBC446 /* UIView+TFKit.m */,
+				90AF69F2229F74C30081946A /* TFDevKit.h */,
 				2002365F217895D700CBC446 /* UIView+TFUIDevKit.h */,
 				20023674217895D700CBC446 /* UIView+TFUIDevKit.m */,
 				20023683217895D700CBC446 /* UIViewController+TFDebugKit.h */,

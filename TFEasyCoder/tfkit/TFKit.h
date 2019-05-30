@@ -9,6 +9,7 @@
 #ifndef TFKit_h
 #define TFKit_h
 
+#import "TFDevKit.h"
 #import "UIView+TFUIDevKit.h"
 
 #import "NSObject+TFTimer.h"
@@ -35,6 +36,7 @@
 
 #import "UIViewController+TFKit.h"
 
+#import "TFGCDKit.h"
 #import "NSObject+TFGCDKit.h"
 
 #import "NSDictionary+TFLogChinese.h"

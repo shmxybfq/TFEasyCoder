@@ -11,6 +11,26 @@
 
 #import "TFEasyCoderConst.h"
 
+
+
+
+/**
+ *  判断是否是符串对象
+ *
+ *  @param thing 要判断的字符串
+ *
+ *  @return 是否是字符串对象
+ */
+
+static inline BOOL tf_code_pre(stringObj)(NSString *string){
+    return string == nil || [string isEqual:[NSNull null]]
+    || ([string respondsToSelector:@selector(length)]
+        && [(NSData *)string length] == 0)
+    || ([string respondsToSelector:@selector(count)]
+        && [(NSArray *)string count] == 0);
+}
+
+
 /**
  *  判断空字符串
  *
@@ -20,13 +40,8 @@
  */
 
 static inline BOOL tf_code_pre(stringEmpty)(NSString *string){
-    return string == nil || [string isEqual:[NSNull null]]
-    || ([string respondsToSelector:@selector(length)]
-        && [(NSData *)string length] == 0)
-    || ([string respondsToSelector:@selector(count)]
-        && [(NSArray *)string count] == 0);
+    return (tf_code_pre(stringObj) || [string isEqual:@""] || [string isEqual:@"(null)"]);
 }
-
 
 /**
  *  base64加密
