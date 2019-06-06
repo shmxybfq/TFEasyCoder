@@ -82,6 +82,10 @@
 + (NSString *)tf_code_pre(currentDeviceModel);
 
 
-
+/**
+ *  交换类方法和交换实例方法
+ */
++(BOOL)tf_code_pre(classMethodExchange):(SEL)originSel toClass:(Class)toClass toSel:(SEL)toSel;
++(BOOL)tf_code_pre(instanceMethodExchange):(SEL)originSel toClass:(Class)toClass toSel:(SEL)toSel;
 
 @end
