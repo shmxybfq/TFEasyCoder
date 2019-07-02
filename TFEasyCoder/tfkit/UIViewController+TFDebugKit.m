@@ -31,7 +31,7 @@
 
 
 -(void)tf_debug_viewDidAppear:(BOOL)animated{
-    
+#ifdef DEBUG
     if([TFEasyCoderConfigue shareInstance].TFDebug_VCDidAppearSubviewRandomColor)
         [self.view tf_code_pre(setAllSubviewsBackgroundColorRandom):0.5];
     if([TFEasyCoderConfigue shareInstance].TFDebug_VCDidAppearSubviewDisplayBorder)
@@ -44,21 +44,28 @@
         TFLog(@"%@-subviews:%@",NSStringFromClass([self class]),[self.view tf_code_pre(getAllSubviews)]);
     if([TFEasyCoderConfigue shareInstance].TFDebug_VCDidAppearLogSubviewTree)
         [self.view tf_code_pre(logSubviews):^NSArray *{return @[@"frame",@"hidden",@"backgroundColor",@"userInteractionEnabled"];}];
+#endif
     [self tf_debug_viewDidAppear:animated];
 }
 
 
 -(void)tf_debug_viewDidDisappear:(BOOL)animated{
-    
+#ifdef DEBUG
     kdeclare_weakself;
     tf_code_pre(delay)(1.0,^{
         if (!weakSelf) return;
+        if (![NSStringFromClass([weakSelf class])hasPrefix:@"UI"]) return;
         if (!(weakSelf.presentedViewController ||
              [weakSelf.navigationController.viewControllers containsObject:weakSelf])) {
             NSString *warning = [NSString stringWithFormat:@"警告!控制未释放!%@",NSStringFromClass([weakSelf class])];
-            NSLog(@"\n\n%@\n\n",kWarningSign(warning));
+            NSString *info0 = [NSString stringWithFormat:@"self:【%@】",weakSelf?:@""];
+            NSString *info1 = [NSString stringWithFormat:@"self.presentedViewController:【%@】",weakSelf.presentedViewController?:@""];
+            NSString *info2 = [NSString stringWithFormat:@"self.parentViewController:【%@】",weakSelf.parentViewController?:@""];
+            NSString *info3 = [NSString stringWithFormat:@"self.navigationController.viewControllers:【%@】",weakSelf.navigationController.viewControllers?:@""];
+            NSLog(@"\n\n%@\n%@\n%@\n%@\n%@\n\n",kWarningSign(warning),info0,info1,info2,info3);
         }
     });
+#endif
     [self tf_debug_viewDidDisappear:animated];
 }
 

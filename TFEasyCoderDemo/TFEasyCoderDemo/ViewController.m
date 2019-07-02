@@ -96,19 +96,6 @@ tf_lazyload_objc(NSMutableArray, dataSource);
         [ins addObject:@{@"icon":@"home_lovers_icon",@"title":@"情侣空间"}];
     }];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        
-        UIViewController *contro = [[UIViewController alloc]init];
-        [self presentViewController:contro animated:YES completion:nil];
-        
-        static id ccc = nil;
-        ccc = contro;
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [contro dismissViewControllerAnimated:YES completion:nil];
-        });
-    });
-    
 }
 
 
