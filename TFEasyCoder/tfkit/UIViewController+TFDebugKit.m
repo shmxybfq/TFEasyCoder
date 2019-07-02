@@ -38,7 +38,7 @@
         [self.view tf_code_pre(setAllSubviewsBorderRed)];
     if([TFEasyCoderConfigue shareInstance].TFDebug_VCDidAppearLogVCName){
         NSString *warning = [NSString stringWithFormat:@"当前控制器 %@",NSStringFromClass([self class])];
-        NSLog(@"%@",kWarningSign(warning));
+        NSLog(@"\n%@\n",kWarningSign(warning));
     }
     if([TFEasyCoderConfigue shareInstance].TFDebug_VCDidAppearLogSubview)
         TFLog(@"%@-subviews:%@",NSStringFromClass([self class]),[self.view tf_code_pre(getAllSubviews)]);
@@ -52,10 +52,11 @@
     
     kdeclare_weakself;
     tf_code_pre(delay)(1.0,^{
+        if (!weakSelf) return;
         if (!(weakSelf.presentedViewController ||
              [weakSelf.navigationController.viewControllers containsObject:weakSelf])) {
             NSString *warning = [NSString stringWithFormat:@"警告!控制未释放!%@",NSStringFromClass([weakSelf class])];
-            NSLog(@"%@",kWarningSign(warning));
+            NSLog(@"\n\n%@\n\n",kWarningSign(warning));
         }
     });
     [self tf_debug_viewDidDisappear:animated];
