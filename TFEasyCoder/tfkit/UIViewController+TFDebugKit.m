@@ -54,7 +54,7 @@
     kdeclare_weakself;
     tf_code_pre(delay)(1.0,^{
         if (!weakSelf) return;
-        if (![NSStringFromClass([weakSelf class])hasPrefix:@"UI"]) return;
+        if ([NSStringFromClass([weakSelf class])hasPrefix:@"UI"]) return;
         if (!(weakSelf.presentedViewController ||
              [weakSelf.navigationController.viewControllers containsObject:weakSelf])) {
             NSString *warning = [NSString stringWithFormat:@"警告!控制未释放!%@",NSStringFromClass([weakSelf class])];
