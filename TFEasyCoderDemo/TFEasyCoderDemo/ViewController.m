@@ -37,7 +37,7 @@ tf_lazyload_objc(NSMutableArray, dataSource);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [TFEasyCoderConfigue shareInstance].TFDebug_VCDidAppearSubviewRandomColor = YES;
+//    [TFEasyCoderConfigue shareInstance].TFDebug_VCDidAppearSubviewRandomColor = YES;
     kdeclare_weakself;
   
     /**
@@ -66,6 +66,14 @@ tf_lazyload_objc(NSMutableArray, dataSource);
     [self.tableView easyCoder:^(UITableView *ins) {
         
         [weakSelf.view addSubview:ins];
+        ins.tableHeaderView = weakSelf.tableHeader;
+        ins.delegate = weakSelf;
+        ins.dataSource = weakSelf;
+        ins.rowHeight = Size6SNEW(96);
+        ins.frame = [UIScreen mainScreen].bounds;
+        ins.separatorStyle = UITableViewCellSeparatorStyleNone;
+        ins.backgroundColor = [[UIColor lightGrayColor]colorWithAlphaComponent:0.1];
+
 //        ins
 //        .set_tableHeaderView(weakSelf.tableHeader)
 //        .set_delegate(weakSelf)
@@ -87,7 +95,19 @@ tf_lazyload_objc(NSMutableArray, dataSource);
         [ins addObject:@{@"icon":@"home_music_icon",@"title":@"背景音乐"}];
         [ins addObject:@{@"icon":@"home_lovers_icon",@"title":@"情侣空间"}];
     }];
-
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        
+        UIViewController *contro = [[UIViewController alloc]init];
+        [self presentViewController:contro animated:YES completion:nil];
+        
+        static id ccc = nil;
+        ccc = contro;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [contro dismissViewControllerAnimated:YES completion:nil];
+        });
+    });
     
 }
 

@@ -12,27 +12,53 @@
 #import "UIView+TFUIDevKit.h"
 #import "TFEasyCoderConfigue.h"
 #import "NSObject+TFKit.h"
+#import "TFGCDKit.h"
+
+#ifndef kWarningSign
+#define kWarningSign(String)\
+[NSString stringWithFormat:@"\n****************** %@ ******************",String]
+#endif
+
 @implementation UIViewController (TFDebugKit)
 +(void)load{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        Class cls = [self class];
-        SEL originalSelector = @selector(viewDidAppear:);
-        SEL swizzledSelector = @selector(tf_debug_viewDidAppear:);
-        Method originalMethod = class_getInstanceMethod(cls, originalSelector);
-        Method swizzledMethod = class_getInstanceMethod(cls, swizzledSelector);
-        method_exchangeImplementations(originalMethod, swizzledMethod);
+        [UIViewController tf_code_pre(instanceMethodExchange):@selector(viewDidAppear:) toClass:[self class] toSel:@selector(tf_debug_viewDidAppear:)];
+        
+        [UIViewController tf_code_pre(instanceMethodExchange):@selector(viewDidDisappear:) toClass:[self class] toSel:@selector(tf_debug_viewDidDisappear:)];
     });
-    
 }
+
 
 -(void)tf_debug_viewDidAppear:(BOOL)animated{
     
-    if([TFEasyCoderConfigue shareInstance].TFDebug_VCDidAppearSubviewRandomColor)[self.view tf_code_pre(setAllSubviewsBackgroundColorRandom):0.5];
-    if([TFEasyCoderConfigue shareInstance].TFDebug_VCDidAppearSubviewDisplayBorder)[self.view tf_code_pre(setAllSubviewsBorderRed)];
-    if([TFEasyCoderConfigue shareInstance].TFDebug_VCDidAppearLogVCName)TFLog(@"当前控制器:%@",NSStringFromClass([self class]));
-    if([TFEasyCoderConfigue shareInstance].TFDebug_VCDidAppearLogSubview)TFLog(@"%@-subviews:%@",NSStringFromClass([self class]),[self.view tf_code_pre(getAllSubviews)]);
-    if([TFEasyCoderConfigue shareInstance].TFDebug_VCDidAppearLogSubviewTree)[self.view tf_code_pre(logSubviews):^NSArray *{return @[@"frame",@"hidden",@"backgroundColor",@"userInteractionEnabled"];}];
+    if([TFEasyCoderConfigue shareInstance].TFDebug_VCDidAppearSubviewRandomColor)
+        [self.view tf_code_pre(setAllSubviewsBackgroundColorRandom):0.5];
+    if([TFEasyCoderConfigue shareInstance].TFDebug_VCDidAppearSubviewDisplayBorder)
+        [self.view tf_code_pre(setAllSubviewsBorderRed)];
+    if([TFEasyCoderConfigue shareInstance].TFDebug_VCDidAppearLogVCName){
+        NSString *warning = [NSString stringWithFormat:@"当前控制器 %@",NSStringFromClass([self class])];
+        NSLog(@"%@",kWarningSign(warning));
+    }
+    if([TFEasyCoderConfigue shareInstance].TFDebug_VCDidAppearLogSubview)
+        TFLog(@"%@-subviews:%@",NSStringFromClass([self class]),[self.view tf_code_pre(getAllSubviews)]);
+    if([TFEasyCoderConfigue shareInstance].TFDebug_VCDidAppearLogSubviewTree)
+        [self.view tf_code_pre(logSubviews):^NSArray *{return @[@"frame",@"hidden",@"backgroundColor",@"userInteractionEnabled"];}];
     [self tf_debug_viewDidAppear:animated];
 }
+
+
+-(void)tf_debug_viewDidDisappear:(BOOL)animated{
+    
+    kdeclare_weakself;
+    tf_code_pre(delay)(1.0,^{
+        if (!(weakSelf.presentedViewController ||
+             [weakSelf.navigationController.viewControllers containsObject:weakSelf])) {
+            NSString *warning = [NSString stringWithFormat:@"警告!控制未释放!%@",NSStringFromClass([weakSelf class])];
+            NSLog(@"%@",kWarningSign(warning));
+        }
+    });
+    [self tf_debug_viewDidDisappear:animated];
+}
+
 @end
