@@ -11,14 +11,6 @@
 #import "TFEasyCoderConst.h"
 @interface NSObject (TFKit)
 
-/**
- *  快速创建实例
- */
-+(instancetype)creatInstance;
-/**
- *  快速创建实例
- */
-+(instancetype)shareInstance;
 #pragma mark 系统信息 --
 /**
  *  系统版本号和提供静态方法访问和属性访问

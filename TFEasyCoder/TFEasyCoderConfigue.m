@@ -10,6 +10,16 @@
 
 @implementation TFEasyCoderConfigue
 
+
+static TFEasyCoderConfigue *_easyCoderConfigue = nil;
++(instancetype)shareInstance{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _easyCoderConfigue = [[TFEasyCoderConfigue alloc]init];
+    });
+    return _easyCoderConfigue;
+}
+
 /**
  * 配置初值
  *

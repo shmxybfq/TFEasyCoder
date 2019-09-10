@@ -10,6 +10,8 @@
 
 @interface TFEasyCoderConfigue : NSObject
 
++(instancetype)shareInstance;
+
 /**
  * 调试工具配置
  * 调试时,打印NSArray是否将里面的中文转码至显示
