@@ -825,14 +825,14 @@ tf_ec_chain_valuekey_imp(UIViewController);
 
 
 
-@implementation UIWebView (TFEasyCoder_UI)
-
-tf_ec_mstatic_imp(UIWebView, UIWebView *);
-tf_ec_minstance_imp(UIWebView, UIWebView *);
-
-tf_ec_chain_valuekey_imp(UIWebView);
-
-@end
+//@implementation UIWebView (TFEasyCoder_UI)
+//
+//tf_ec_mstatic_imp(UIWebView, UIWebView *);
+//tf_ec_minstance_imp(UIWebView, UIWebView *);
+//
+//tf_ec_chain_valuekey_imp(UIWebView);
+//
+//@end
 
 
 

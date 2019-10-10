@@ -928,15 +928,15 @@ tf_ec_chain_valuekey_int(UIViewController);
 
 
 
-tf_ec_block(UIWebView,UIWebView *);
-@interface UIWebView (TFEasyCoder_UI)
-
-tf_ec_mstatic_int(UIWebView, UIWebView *);
-tf_ec_minstance_int(UIWebView,UIWebView *);
-
-tf_ec_chain_valuekey_int(UIWebView);
-
-@end
+//tf_ec_block(UIWebView,UIWebView *);
+//@interface UIWebView (TFEasyCoder_UI)
+//
+//tf_ec_mstatic_int(UIWebView, UIWebView *);
+//tf_ec_minstance_int(UIWebView,UIWebView *);
+//
+//tf_ec_chain_valuekey_int(UIWebView);
+//
+//@end
 
 
 

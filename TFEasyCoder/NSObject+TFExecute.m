@@ -97,15 +97,37 @@
                             [NSObject tf_executeSelector:NSSelectorFromString(pro_setter)
                                               withTarget:_target
                                          withParamsArray:@[_value]];
-                        }else[_target setValue:_value forKey:_key];
+                        }else{
+                            if (@available(iOS 13, *)) {
+                                object_setIvar(_target, ivar, _value);
+                            }else{
+                                [_target setValue:_value forKey:_key];
+                            }
+                        }
                         return;
                     }
                 }
-                [_target setValue:_value forKey:_key];return;
-            }else[_target setValue:_value forKey:_key];return;
+                if (@available(iOS 13, *)) {
+                    object_setIvar(_target, ivar, _value);
+                }else{
+                    [_target setValue:_value forKey:_key];
+                }
+                return;
+            }else{
+                if (@available(iOS 13, *)) {
+                    object_setIvar(_target, ivar, _value);
+                }else{
+                    [_target setValue:_value forKey:_key];
+                }
+            }
+            return;
         }
     }
-    [_target setValue:_value forKey:_key];
+    if (@available(iOS 13, *)) {
+        object_setIvar(_target, ivar, _value);
+    }else{
+        [_target setValue:_value forKey:_key];
+    }
 }
 
 
