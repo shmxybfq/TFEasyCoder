@@ -57,7 +57,9 @@
         if (!weakSelf) return;
         if ([NSStringFromClass([weakSelf class])hasPrefix:@"UI"]) return;
         if (!(weakSelf.presentedViewController ||
-             [weakSelf.navigationController.viewControllers containsObject:weakSelf])) {
+              [weakSelf.navigationController.viewControllers containsObject:weakSelf] ||
+              weakSelf.parentViewController ||
+              weakSelf.tabBarController)) {
             NSString *warning = [NSString stringWithFormat:@"警告!控制未释放!%@",NSStringFromClass([weakSelf class])];
             NSString *info0 = [NSString stringWithFormat:@"self:【%@】",weakSelf?:@""];
             NSString *info1 = [NSString stringWithFormat:@"self.presentedViewController:【%@】",weakSelf.presentedViewController?:@""];
