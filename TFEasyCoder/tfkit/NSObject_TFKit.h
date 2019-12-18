@@ -20,7 +20,7 @@
 #define x_iOS(Version)   ([[UIDevice currentDevice].systemVersion doubleValue] >= Version)
 
 //判断机型
-#define x_iPhoneX (([[UIApplication sharedApplication] statusBarFrame].size.height == 44.0f))
+#define x_iPhoneX inch5_8
 #define x_iPad ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 
 //常用尺寸
