@@ -38,7 +38,7 @@
 #define inch4_0 (MAX(x_sbw, x_sbh) == 568)
 #define inch4_7 (MAX(x_sbw, x_sbh) == 667)
 #define inch5_5 (MAX(x_sbw, x_sbh) == 736)
-#define inch5_8 (MAX(x_sbw, x_sbh) == 812)
+#define inch5_8 (MAX(x_sbw, x_sbh) == 812 || MAX(x_sbw, x_sbh) == 896)
 
 
 /**
