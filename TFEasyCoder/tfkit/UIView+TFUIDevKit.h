@@ -49,6 +49,14 @@ typedef NSArray *(^TFLogTreeBackBlock) (void);
  */
 -(NSMutableArray *)tf_code_pre(setAllSubviewsBorderRed);
 /**
+ *  为所有子视图加上border 随机色
+ *
+ *  @param alpha 随机色透明度
+ *
+ *  @return 所有的子视图
+ */
+-(NSMutableArray *)tf_code_pre(setAllSubviewsBorderColorRandom);
+/**
  *  获取所有父视图(!注意不是子视图)
  *
  *  @return 所有父视图数组

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TFEasyCoder"
-  s.version      = "1.5.3"
+  s.version      = "1.5.5"
   s.ios.deployment_target = '7.0'
   s.summary      = "A fast development framework for oc"
   s.homepage     = "https://github.com/shmxybfq/TFEasyCoder"

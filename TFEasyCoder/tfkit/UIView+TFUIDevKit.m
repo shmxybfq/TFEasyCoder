@@ -119,6 +119,27 @@ TF_ASSOCIATED_OBJC_GET(NSMutableDictionary,     lgdesCache)
     return allSubviews;
 }
 /**
+ *  为所有子视图加上border 随机色
+ *
+ *  @param alpha 随机色透明度
+ *
+ *  @return 所有的子视图
+ */
+-(NSMutableArray *)tf_code_pre(setAllSubviewsBorderColorRandom)
+{
+    NSMutableArray *allSubviews = [self tf_code_pre(getAllSubviews)];
+    for (UIView *view in allSubviews) {
+        if ([view isKindOfClass:[UIView class]]) {
+            view.layer.borderColor = [UIColor colorWithRed:arc4random()%255/255.0
+                                                     green:arc4random()%255/255.0
+                                                      blue:arc4random()%255/255.0
+                                                     alpha:1].CGColor;
+            view.layer.borderWidth = 1.0;
+        }
+    }
+    return allSubviews;
+}
+/**
  *  获取所有父视图(!注意不是子视图)
  *
  *  @return 所有父视图数组

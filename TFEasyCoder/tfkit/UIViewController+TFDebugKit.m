@@ -24,9 +24,9 @@
 +(void)load{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [UIViewController tf_code_pre(instanceMethodExchange):@selector(viewDidAppear:) toClass:[self class] toSel:@selector(tf_debug_viewDidAppear:)];
+        [[self class] tf_code_pre(instanceMethodExchange):@selector(viewDidAppear:) toClass:[self class] toSel:@selector(tf_debug_viewDidAppear:)];
         
-        [UIViewController tf_code_pre(instanceMethodExchange):@selector(viewDidDisappear:) toClass:[self class] toSel:@selector(tf_debug_viewDidDisappear:)];
+        [[self class] tf_code_pre(instanceMethodExchange):@selector(viewDidDisappear:) toClass:[self class] toSel:@selector(tf_debug_viewDidDisappear:)];
     });
 }
 
