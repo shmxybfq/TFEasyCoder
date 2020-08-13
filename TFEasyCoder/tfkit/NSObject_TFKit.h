@@ -24,9 +24,12 @@
 #define x_iPad ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 
 //常用尺寸
-#define x_statusBarHeight (x_iPhoneX?44:20)
-#define x_navBarHeight (x_iPhoneX?88:64)
-#define x_tabBarHeight (x_iPhoneX?83:49)
+#define x_bangHeight (x_iPhoneX?24:0)//刘海
+#define x_statusBarHeight (x_iPhoneX?44:20)//状态栏
+#define x_navBarHeight (x_iPhoneX?88:64)//导航栏
+#define x_jawHeight (x_iPhoneX?34:0)//下巴栏
+#define x_tabBarHeight (x_iPhoneX?83:49)//tabbar
+
 #define x_sb [UIScreen mainScreen].bounds
 #define x_sbs [UIScreen mainScreen].bounds.size
 #define x_sbo [UIScreen mainScreen].bounds.origin
