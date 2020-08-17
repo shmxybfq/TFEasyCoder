@@ -61,6 +61,7 @@
 		CDCC52BC1E058CE200764CD3 /* TmpObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCC52BB1E058CE200764CD3 /* TmpObject.m */; };
 		CDCC52BF1E065D2700764CD3 /* NSObject+TestCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCC52BE1E065D2700764CD3 /* NSObject+TestCategory.m */; };
 		CDCC52C21E0663CC00764CD3 /* Tmp2Object.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCC52C11E0663CC00764CD3 /* Tmp2Object.m */; };
+		EE13FCBE24EA584A00CD0DE7 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE13FCBC24EA584A00CD0DE7 /* BaseTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -174,6 +175,8 @@
 		CDCC52BE1E065D2700764CD3 /* NSObject+TestCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TestCategory.m"; sourceTree = "<group>"; };
 		CDCC52C01E0663CC00764CD3 /* Tmp2Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tmp2Object.h; sourceTree = "<group>"; };
 		CDCC52C11E0663CC00764CD3 /* Tmp2Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tmp2Object.m; sourceTree = "<group>"; };
+		EE13FCBC24EA584A00CD0DE7 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		EE13FCBD24EA584A00CD0DE7 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +242,7 @@
 		CD1672891DC87BCE00969C21 /* TFEasyCoder */ = {
 			isa = PBXGroup;
 			children = (
+				EE13FCBB24EA584A00CD0DE7 /* base */,
 				2002365E217895D700CBC446 /* tfkit */,
 				CD1674041DC87BCF00969C21 /* TFEasyCoder.h */,
 				CD1674051DC87BCF00969C21 /* TFEasyCoderConst.h */,
@@ -352,6 +356,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EE13FCBB24EA584A00CD0DE7 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				EE13FCBC24EA584A00CD0DE7 /* BaseTableViewCell.m */,
+				EE13FCBD24EA584A00CD0DE7 /* BaseTableViewCell.h */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -392,6 +405,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -471,6 +485,7 @@
 				CDCC52C21E0663CC00764CD3 /* Tmp2Object.m in Sources */,
 				20023689217895D700CBC446 /* UIBarButtonItem+TFKit.m in Sources */,
 				2002368C217895D700CBC446 /* UINavigationController+TFKit.m in Sources */,
+				EE13FCBE24EA584A00CD0DE7 /* BaseTableViewCell.m in Sources */,
 				CD922DD21DD1966900CABEFA /* MASViewAttribute.m in Sources */,
 				20023696217895D700CBC446 /* UIAlertView+TFKit.m in Sources */,
 				CD922DD01DD1966900CABEFA /* MASConstraintMaker.m in Sources */,
