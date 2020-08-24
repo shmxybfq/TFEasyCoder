@@ -18,6 +18,7 @@
 #import "TFEasyCoderConst.h"
 #import "NSObject+TFExecute.h"
 #import "TFEasyCoderConfigue.h"
-
+#import "TFBase.h"
+#import "TFTools.h"
 
 #endif /* TFEasyCoder_h */

@@ -62,6 +62,7 @@
 		CDCC52BF1E065D2700764CD3 /* NSObject+TestCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCC52BE1E065D2700764CD3 /* NSObject+TestCategory.m */; };
 		CDCC52C21E0663CC00764CD3 /* Tmp2Object.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCC52C11E0663CC00764CD3 /* Tmp2Object.m */; };
 		EE13FCBE24EA584A00CD0DE7 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE13FCBC24EA584A00CD0DE7 /* BaseTableViewCell.m */; };
+		EE50020F24F39D7600BCFB98 /* NSDate+TFTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EE50020E24F39D7600BCFB98 /* NSDate+TFTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -177,6 +178,11 @@
 		CDCC52C11E0663CC00764CD3 /* Tmp2Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tmp2Object.m; sourceTree = "<group>"; };
 		EE13FCBC24EA584A00CD0DE7 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		EE13FCBD24EA584A00CD0DE7 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		EE50020B24F39CC400BCFB98 /* TFBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFBase.h; sourceTree = "<group>"; };
+		EE50020D24F39D7600BCFB98 /* NSDate+TFTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+TFTool.h"; sourceTree = "<group>"; };
+		EE50020E24F39D7600BCFB98 /* NSDate+TFTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TFTool.m"; sourceTree = "<group>"; };
+		EE50021024F39E5600BCFB98 /* NSDateTFTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSDateTFTool.h; sourceTree = "<group>"; };
+		EE50021124F39E8400BCFB98 /* TFTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFTools.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +248,7 @@
 		CD1672891DC87BCE00969C21 /* TFEasyCoder */ = {
 			isa = PBXGroup;
 			children = (
+				EE50020C24F39D0000BCFB98 /* tools */,
 				EE13FCBB24EA584A00CD0DE7 /* base */,
 				2002365E217895D700CBC446 /* tfkit */,
 				CD1674041DC87BCF00969C21 /* TFEasyCoder.h */,
@@ -361,8 +368,20 @@
 			children = (
 				EE13FCBC24EA584A00CD0DE7 /* BaseTableViewCell.m */,
 				EE13FCBD24EA584A00CD0DE7 /* BaseTableViewCell.h */,
+				EE50020B24F39CC400BCFB98 /* TFBase.h */,
 			);
 			path = base;
+			sourceTree = "<group>";
+		};
+		EE50020C24F39D0000BCFB98 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				EE50020D24F39D7600BCFB98 /* NSDate+TFTool.h */,
+				EE50020E24F39D7600BCFB98 /* NSDate+TFTool.m */,
+				EE50021024F39E5600BCFB98 /* NSDateTFTool.h */,
+				EE50021124F39E8400BCFB98 /* TFTools.h */,
+			);
+			path = tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -478,6 +497,7 @@
 				CD4114EA1E724C380062012E /* TFEasyCoderConfigue.m in Sources */,
 				CD964FB51DFE953F005381E7 /* TFEasyCoder_UI.m in Sources */,
 				20023695217895D700CBC446 /* UIActionSheet+TFKit.m in Sources */,
+				EE50020F24F39D7600BCFB98 /* NSDate+TFTool.m in Sources */,
 				CD922DCF1DD1966900CABEFA /* MASConstraint.m in Sources */,
 				CDA6F0EE1DC33CEC001330D3 /* main.m in Sources */,
 				2002368D217895D700CBC446 /* NSObject+TFGCDKit.m in Sources */,
