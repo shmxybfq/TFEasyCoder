@@ -167,6 +167,12 @@
     if ([platform isEqualToString:@"iPhone11,4"]) return @"iPhone XS Max";
     if ([platform isEqualToString:@"iPhone11,6"]) return @"iPhone XS Max (A1921/A2101/A2102/A2104)";
     if ([platform isEqualToString:@"iPhone11,8"]) return @"iPhone XR (A1984/A2105/A2106/A2108)";
+    //2019年9月发布，更新三种机型：iPhone 11、iPhone 11 Pro、iPhone 11 Pro Max
+    if ([platform isEqualToString:@"iPhone12,1"])  return  @"iPhone 11";
+    if ([platform isEqualToString:@"iPhone12,3"])  return  @"iPhone 11 Pro";
+    if ([platform isEqualToString:@"iPhone12,5"])  return  @"iPhone 11 Pro Max";
+    //2020年4月发布，更新一种机型：iPhone SE2
+    if ([platform isEqualToString:@"iPhone12,8"])  return  @"iPhone SE2";
     
     //iwatch
     if ([platform isEqualToString:@"Watch1,1"]) return @"Apple Watch 38mm";
