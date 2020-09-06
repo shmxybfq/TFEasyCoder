@@ -22,6 +22,10 @@ typedef void(^TFSaveToPhotosAlbumCallBackBlock)(UIImage *image,
 @property (nonatomic,  copy)TFShowCameraCallBackBlock cameraBackBlock;
 @property (nonatomic,  copy)TFSaveToPhotosAlbumCallBackBlock saveBackBlock;
 
+/**
+*  通过xib创建控制器
+*/
++(instancetype)tf_code_pre(xib);
 
 /**
  *  显示照片/照相机选择照片

@@ -26,6 +26,16 @@ tf_synthesize_category_property(saveBackBlock,
                                 TFSaveToPhotosAlbumCallBackBlock);
 
 /**
+*  通过xib创建控制器
+*/
++(instancetype)tf_code_pre(xib){
+    NSString *cls = NSStringFromClass([self class]);
+    id ins = [[[self class] alloc]initWithNibName:cls bundle:nil];
+    return ins;
+}
+
+
+/**
  *  显示照片/照相机选择照片
  *
  *  @param sourceType
