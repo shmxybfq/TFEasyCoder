@@ -174,6 +174,10 @@
     //2020年4月发布，更新一种机型：iPhone SE2
     if ([platform isEqualToString:@"iPhone12,8"])  return  @"iPhone SE2";
     
+    if ([platform isEqualToString:@"iPhone13,1"]) return @"iPhone 12 mini";
+    if ([platform isEqualToString:@"iPhone13,2"]) return @"iPhone 12";
+    if ([platform isEqualToString:@"iPhone13,3"]) return @"iPhone 12 Pro";
+    if ([platform isEqualToString:@"iPhone13,4"]) return @"iPhone 12 Pro Max";
     //iwatch
     if ([platform isEqualToString:@"Watch1,1"]) return @"Apple Watch 38mm";
     if ([platform isEqualToString:@"Watch1,2"]) return @"Apple Watch 42mm";

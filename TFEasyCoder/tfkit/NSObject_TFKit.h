@@ -17,10 +17,15 @@
 #define x_iOS10   ([[UIDevice currentDevice].systemVersion doubleValue] >= 10.0)
 #define x_iOS11   ([[UIDevice currentDevice].systemVersion doubleValue] >= 11.0)
 #define x_iOS12   ([[UIDevice currentDevice].systemVersion doubleValue] >= 12.0)
+#define x_iOS13   ([[UIDevice currentDevice].systemVersion doubleValue] >= 13.0)
+#define x_iOS14   ([[UIDevice currentDevice].systemVersion doubleValue] >= 14.0)
+#define x_iOS15   ([[UIDevice currentDevice].systemVersion doubleValue] >= 15.0)
+
 #define x_iOS(Version)   ([[UIDevice currentDevice].systemVersion doubleValue] >= Version)
 
 //判断机型
 #define x_iPhoneX inch5_8
+#define x_iPhone12 inch5_9
 #define x_iPad ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 
 //常用尺寸
@@ -41,7 +46,8 @@
 #define inch4_0 (MAX(x_sbw, x_sbh) == 568)
 #define inch4_7 (MAX(x_sbw, x_sbh) == 667)
 #define inch5_5 (MAX(x_sbw, x_sbh) == 736)
-#define inch5_8 (MAX(x_sbw, x_sbh) == 812 || MAX(x_sbw, x_sbh) == 896)
+#define inch5_8 (MAX(x_sbw, x_sbh) == 812 || MAX(x_sbw, x_sbh) == 896 || MAX(x_sbw, x_sbh) == 926 || MAX(x_sbw, x_sbh) == 844 || MAX(x_sbw, x_sbh) == 780)
+#define inch5_9 (MAX(x_sbw, x_sbh) == 926 || MAX(x_sbw, x_sbh) == 844 || MAX(x_sbw, x_sbh) == 780)
 
 
 /**
@@ -72,6 +78,15 @@ static inline id tf_code_pre(appDelegate)(){
     return [UIApplication sharedApplication].delegate;
 }
 
-
+static inline float tf_code_pre(statusBarHeight)(){
+    float statusBarHeight = 0;
+    if (@available(iOS 13.0, *)) {
+        UIStatusBarManager *statusBarManager = [UIApplication sharedApplication].windows.firstObject.windowScene.statusBarManager;
+        statusBarHeight = statusBarManager.statusBarFrame.size.height;
+    }else {
+        statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+    }
+    return statusBarHeight;
+}
 
 #endif /* NSObject_TFKit_h */

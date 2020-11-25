@@ -411,6 +411,43 @@ tf_synthesize_category_property_retain(tf_code_pre(backgroundView2), set_backgro
 tf_synthesize_category_property_retain(tf_code_pre(backgroundView3), set_backgroundView3);
 
 
-#pragma mark view 加密解密 --
+#pragma mark view 手势 --
+
+-(UITapGestureRecognizer *)e_tapGes{
+    id value = objc_getAssociatedObject(self, @selector(e_tapGes));
+    if (!value){
+        UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc]init];
+        [self addGestureRecognizer:tapGes];
+        self.e_tapGes = tapGes;
+        value = tapGes;
+        self.userInteractionEnabled = YES;
+        return value;
+    }
+    return value;
+}
+
+-(void)setE_tapGes:(UITapGestureRecognizer *)e_tapGes{
+     objc_setAssociatedObject(self, @selector(e_tapGes), e_tapGes, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+
+
+-(UILongPressGestureRecognizer *)e_longPressGes{
+    id value = objc_getAssociatedObject(self, @selector(e_longPressGes));
+    if (!value){
+        UILongPressGestureRecognizer *longPressGes = [[UILongPressGestureRecognizer alloc]init];
+        longPressGes.minimumPressDuration = 1;
+        [self addGestureRecognizer:longPressGes];
+        self.e_longPressGes = longPressGes;
+        value = longPressGes;
+        self.userInteractionEnabled = YES;
+        return value;
+    }
+    return value;
+}
+
+-(void)setE_longPressGes:(UILongPressGestureRecognizer *)e_longPressGes{
+     objc_setAssociatedObject(self, @selector(e_longPressGes), e_longPressGes, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
 
 @end

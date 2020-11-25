@@ -162,5 +162,10 @@ typedef NS_ENUM(NSInteger,LineDirection) {
 -(BOOL)tf_code_pre(removeBackgroundView):(UIView *)view;
 
 
+#pragma mark view 手势 --
+@property(nonatomic, strong) UITapGestureRecognizer *e_tapGes;
+@property(nonatomic, strong) UILongPressGestureRecognizer *e_longPressGes;
+
+
 
 @end
