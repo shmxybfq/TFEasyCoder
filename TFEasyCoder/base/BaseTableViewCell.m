@@ -37,12 +37,27 @@
         [self sendSubviewToBack:self.contentView];
     }
 }
+-(void)setData:(id)data other:(id)other indexPath:(NSIndexPath *)indexPath delegate:(id)delegate{
+    self.indexPath = indexPath;
+    self.delegate = delegate;
+    
+    if(@available(iOS 9.0, *)) {
+        [self sendSubviewToBack:self.contentView];
+    }
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self initView];
 }
 
++ (CGFloat)getManualHeightWithData:(id)data{
+    return 60;
+}
+
++ (CGFloat)getManualHeightWithData:(id)data other:(id)other{
+    return 60;
+}
 + (CGFloat)getManualHeightWithTableView:(UITableView *)tableView cellSourceType:(CellSourceType)type{
     return 44;
 }

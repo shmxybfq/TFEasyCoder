@@ -35,8 +35,11 @@ typedef NS_ENUM(NSInteger, CoinTradeDetailCellTitleType) {
 -(void)setData:(id)data;
 -(void)setData:(id)data indexPath:(NSIndexPath *)indexPath;
 -(void)setData:(id)data indexPath:(NSIndexPath *)indexPath delegate:(id)delegate;
+-(void)setData:(id)data other:(id)other indexPath:(NSIndexPath *)indexPath delegate:(id)delegate;
 
 //获取手动计算高度,子类需要重写
++ (CGFloat)getManualHeightWithData:(id)data;
++ (CGFloat)getManualHeightWithData:(id)data other:(id)other;
 + (CGFloat)getManualHeightWithTableView:(UITableView *)tableView cellSourceType:(CellSourceType)type;
 //获取手动计算高度,子类不重写
 + (CGFloat)getAutoHeightWithTableView:(UITableView *)tableView cellSourceType:(CellSourceType)type;
